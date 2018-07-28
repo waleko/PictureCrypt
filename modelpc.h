@@ -4,12 +4,13 @@
 #include <QObject>
 #include <QFile>
 #include <QImage>
-#include <algorithm>
 #include <QByteArray>
 #include <QColor>
 #include <QPoint>
 #include <QVector>
 #include <QThread>
+#include <QBitArray>
+#include <bitset>
 /*! \file modelpc.h
  * Header of ModelPC class
  * \sa ControllerPC, ModelPC, ViewPC
@@ -51,7 +52,7 @@ signals:
      */
     setProgress(int val);
 public slots:
-    void encrypt(QByteArray encr_data, QString imagePath);
+    void encrypt(QByteArray encr_data, QString imagePath, int mode);
     void decrypt(QString inputFileName);
 public:
     /*!
@@ -63,11 +64,16 @@ public:
      * \brief version Version of the app
      */
     long version;
+    /*!
+     * \brief curMode Mode of en- or decryption
+     */
+    int curMode;
+    int bitsUsed;
     QByteArray unzip(QByteArray data, long long key);
     void alert(QString message, bool isWarning = false);
 protected:
     void circuit(QImage * image, QByteArray * data, long long int countBytes);
-    void processPixel(QPoint pos, QVector<QPoint> *were, long long cur, bool isEncrypt);
+    void processPixel(QPoint pos, QVector<QPoint> *were, bool isEncrypt);
 private:
     QByteArray bytes(long long n);
     unsigned int mod(int input);
@@ -76,6 +82,13 @@ private:
     QByteArray * circuitData;
     QImage * circuitImage;
     long long circuitCountBytes;
+    long cur;
+    bool mustGoOn(bool isEncrypt);
+
+    QVector <bool> bitsBuffer;
+    long pop(int bits = -1);
+    void push(int data, int bits = -1);
+
     QString generateVersionString(long ver);
 };
 

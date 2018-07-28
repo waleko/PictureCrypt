@@ -27,10 +27,9 @@ public:
      * \brief versionString Version of the app as QString.
      */
     QString versionString;
-signals:
-
 public slots:
     void abortCircuit();
+    void setBitsUsed(int bitsUsed);
 private:
     ViewPC * view;
     ModelPC * model;

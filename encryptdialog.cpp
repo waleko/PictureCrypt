@@ -20,6 +20,7 @@ EncryptDialog::EncryptDialog(QByteArray _data, QWidget *parent) :
     long long int compr_data_size = compr_data.size();
     ui->zippedBytes->setText(QString::number(compr_data_size));
     goodPercentage = false;
+    bitsUsed = 8;
 }
 
 EncryptDialog::~EncryptDialog()
@@ -76,7 +77,7 @@ void EncryptDialog::on_fileButton_clicked()
         ui->percentage->setText("-");
         return;
     }
-    double perc = (compr_data_size + 16) * 100 / (size * 3);
+    double perc = (compr_data_size + 16) * 100 / (size * 3) * bitsUsed / 8;
     ui->percentage->setText(QString::number(perc) + "%");
     goodPercentage = perc < 70;
 }
@@ -116,4 +117,14 @@ void EncryptDialog::on_horizontalSlider_valueChanged(int value)
     key = qrand() % key_size + 1;
     val = value;
     ui->keyLabel->setText(QString::number(value));
+}
+
+void EncryptDialog::on_bitsSlider_valueChanged(int value)
+{
+    bitsUsed = value;
+    ui->bitsUsedLbl->setText(QString::number(value));
+    if(ui->percentage->text() == "-")
+        return;
+    double perc = (compr_data.size() + 16) * 100 / (size * 3) * 8 / bitsUsed;
+    ui->percentage->setText(QString::number(perc) + "%");
 }

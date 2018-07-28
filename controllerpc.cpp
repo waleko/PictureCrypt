@@ -11,7 +11,7 @@
 ControllerPC::ControllerPC()
 {
     // Version control
-    QString _version = "1.0.0";
+    QString _version = "1.0.1";
     versionString = _version;
     auto ver = _version.split(".");
     version = ver[0].toInt() * pow(2, 16) + ver[1].toInt() * pow(2, 8) + ver[2].toInt();
@@ -24,9 +24,10 @@ ControllerPC::ControllerPC()
 
     view->show();
     // Layer Connection
-    connect(view, SIGNAL(encrypt(QByteArray,QString)), model, SLOT(encrypt(QByteArray,QString)));
+    connect(view, SIGNAL(encrypt(QByteArray,QString,int)), model, SLOT(encrypt(QByteArray,QString, int)));
     connect(view, SIGNAL(decrypt(QString)), model, SLOT(decrypt(QString)));
     connect(view, SIGNAL(abortModel()), this, SLOT(abortCircuit()));
+    connect(view, SIGNAL(setBitsUsed(int)), this, SLOT(setBitsUsed(int)));
 
     connect(model, SIGNAL(alertView(QString,bool)), view, SLOT(alert(QString,bool)));
     connect(model, SIGNAL(saveData(QByteArray)), view, SLOT(saveData(QByteArray)));
@@ -40,4 +41,9 @@ ControllerPC::ControllerPC()
 void ControllerPC::abortCircuit()
 {
     model->success = false;
+}
+
+void ControllerPC::setBitsUsed(int bitsUsed)
+{
+    model->bitsUsed = bitsUsed;
 }

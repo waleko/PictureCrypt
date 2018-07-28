@@ -60,7 +60,7 @@ signals:
      * \param data Data to write
      * \param imagePath Filename of the image
      */
-    encrypt(QByteArray data, QString imagePath);
+    encrypt(QByteArray data, QString imagePath, int mode);
     /*!
      * \brief decrypt Signal calling ModelPC::decrypt
      * \param inputFileName Filename of image for decryption
@@ -70,6 +70,7 @@ signals:
      * \brief abortModel Signal calling to stop ModelPC::circuit
      */
     abortModel();
+    setBitsUsed(int bitsUsed);
 public:
     /*!
      * \brief dialog ProgressDialog used.

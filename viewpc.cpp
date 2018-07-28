@@ -102,7 +102,9 @@ void ViewPC::on_startButton_clicked()
         key_data += bytes(key % 256);
 
         encr_data = key_data + encr_data;
-        emit encrypt(encr_data, dialog->inputFileName);
+        // TODO do the mode thing
+        emit setBitsUsed(dialog->bitsUsed);
+        emit encrypt(encr_data, dialog->inputFileName, 0);
     }
     else
     {

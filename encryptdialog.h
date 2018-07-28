@@ -68,7 +68,15 @@ public:
      * \brief val Value of the slider
      */
     int val;
+    /*!
+     * \brief bitsUsed Bits used per byte of pixel.
+     * \sa ModelPC::circuit
+     */
+    int bitsUsed;
     QByteArray zip();
+private slots:
+    void on_bitsSlider_valueChanged(int value);
+
 private:
     Ui::EncryptDialog *ui;
     void alert(QString text);
