@@ -9,7 +9,7 @@
 ControllerPC::ControllerPC()
 {
     // Version control
-    QString _version = "1.2.4";
+    QString _version = "1.2.5";
     versionString = _version;
     auto ver = _version.split(".");
     version = ver[0].toInt() * pow(2, 16) + ver[1].toInt() * pow(2, 8) + ver[2].toInt();

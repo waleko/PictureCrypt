@@ -66,7 +66,7 @@ signals:
     encrypt(QByteArray data, QImage * image, int mode);
     /*!
      * \brief decrypt Signal calling ModelPC::decrypt
-     * \param image Image for decryption
+     * \param _image Image for decryption
      */
     decrypt(QImage * _image);
     /*!
