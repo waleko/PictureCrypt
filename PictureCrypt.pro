@@ -29,14 +29,16 @@ SOURCES += \
     controllerpc.cpp \
     modelpc.cpp \
     encryptdialog.cpp \
-    aboutpc.cpp
+    aboutpc.cpp \
+    aes/qaesencryption.cpp
 
 HEADERS += \
         viewpc.h \
     controllerpc.h \
     modelpc.h \
     encryptdialog.h \
-    aboutpc.h
+    aboutpc.h \
+    aes/qaesencryption.h
 
 FORMS += \
         viewpc.ui \

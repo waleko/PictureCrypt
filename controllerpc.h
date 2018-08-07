@@ -2,9 +2,11 @@
 #define CONTROLLERPC_H
 
 #include <QObject>
+#include <QString>
+#include <QThread>
+
 #include <modelpc.h>
 #include <viewpc.h>
-#include <QString>
 /*! \file controllerpc.h
  * Header of ControllerPC class
  * \sa ControllerPC, ModelPC, ViewPC
@@ -27,10 +29,10 @@ public:
      * \brief versionString Version of the app as QString.
      */
     QString versionString;
-signals:
-
 public slots:
     void abortCircuit();
+    void setBitsUsed(int bitsUsed);
+    void setJPHSDir(QString dir);
 private:
     ViewPC * view;
     ModelPC * model;
