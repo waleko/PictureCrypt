@@ -38,6 +38,8 @@ private slots:
 
     void on_decryptMode_clicked();
 
+    void on_actionJPHS_path_triggered();
+
 protected slots:
     void on_fileButton_clicked();
 
@@ -58,19 +60,30 @@ signals:
     /*!
      * \brief encrypt Signal calling ModelPC::encrypt
      * \param data Data to write
-     * \param imagePath Filename of the image
+     * \param image Image to be encrypted into.
+     * \param mode Mode of encryption
      */
-    encrypt(QByteArray data, QString imagePath, int mode);
+    encrypt(QByteArray data, QImage * image, int mode);
     /*!
      * \brief decrypt Signal calling ModelPC::decrypt
-     * \param inputFileName Filename of image for decryption
+     * \param image Image for decryption
      */
-    decrypt(QString inputFileName);
+    decrypt(QImage * _image);
     /*!
      * \brief abortModel Signal calling to stop ModelPC::circuit
      */
     abortModel();
+    /*!
+     * \brief setBitsUsed Sets bits used in ModelPC
+     * \param bitsUsed The new value
+     * \sa ModelPC::bitsUsed
+     */
     setBitsUsed(int bitsUsed);
+    /*!
+     * \brief setJPHSPath Sets the default JPHS directory
+     * \param dir Directory
+     */
+    setJPHSDir(QString dir);
 public:
     /*!
      * \brief dialog ProgressDialog used.

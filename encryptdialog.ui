@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>292</width>
-    <height>278</height>
+    <width>301</width>
+    <height>244</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -78,10 +78,19 @@
         </item>
         <item>
          <widget class="QSlider" name="horizontalSlider">
+          <property name="cursor">
+           <cursorShape>OpenHandCursor</cursorShape>
+          </property>
           <property name="minimum">
-           <number>3</number>
+           <number>1</number>
           </property>
           <property name="maximum">
+           <number>255</number>
+          </property>
+          <property name="pageStep">
+           <number>25</number>
+          </property>
+          <property name="value">
            <number>24</number>
           </property>
           <property name="orientation">
@@ -92,7 +101,7 @@
         <item>
          <widget class="QLabel" name="keyLabel">
           <property name="text">
-           <string>3</string>
+           <string>24</string>
           </property>
          </widget>
         </item>
@@ -198,11 +207,17 @@
           </item>
           <item>
            <widget class="QSlider" name="bitsSlider">
+            <property name="cursor">
+             <cursorShape>OpenHandCursor</cursorShape>
+            </property>
             <property name="minimum">
              <number>1</number>
             </property>
             <property name="maximum">
              <number>8</number>
+            </property>
+            <property name="pageStep">
+             <number>4</number>
             </property>
             <property name="value">
              <number>8</number>

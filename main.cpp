@@ -43,6 +43,8 @@
  * See source on https://github.com/AlexKovrigin/PictureCrypt
  * If you still have questions, contact us!
  *
+ * \note QAESEncryption class done by Bricke
+ *
  * Visit our site: http://alex.unaux.com
  * Email me at a.kovrigin0@gmail.com
  * \author Alex Kovrigin
@@ -50,7 +52,6 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-
     ControllerPC w;
 
     return a.exec();

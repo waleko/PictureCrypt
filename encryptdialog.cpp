@@ -15,7 +15,10 @@ EncryptDialog::EncryptDialog(QByteArray _data, QWidget *parent) :
     success = false;
     // UI setup
     ui->totalBytes->setText(QString::number(data.size()));
-    key = qrand() % 256;
+    key.clear();
+    for(int i = 0; i < 24; i++)
+        key.append(48 + qrand() % 75);
+    val = 24;
     compr_data = zip();
     long long int compr_data_size = compr_data.size();
     ui->zippedBytes->setText(QString::number(compr_data_size));
@@ -46,17 +49,10 @@ void EncryptDialog::alert(QString text)
 QByteArray EncryptDialog::zip()
 {
     // Zip
-    QByteArray new_data;
-    QByteArray p_data = data;
-    if(key)
-        p_data = qCompress(data, 9);
-    else
-        key = data.size();
-    // Encrypt
-    QByteArray bkey = QByteArray::fromHex(QByteArray::number(key, 16));
-    for(long long int i = 0; i < p_data.size(); i++)
-        new_data.append(p_data.at(i) ^ bkey.at(i % bkey.size()));
-    return new_data;
+    QByteArray c_data = qCompress(data, 9);
+    // Encryption
+    QByteArray hashKey = QCryptographicHash::hash(key.toUtf8(), QCryptographicHash::Sha256);
+    return QAESEncryption::Crypt(QAESEncryption::AES_256, QAESEncryption::ECB, c_data, hashKey);
 }
 /*!
  * \brief EncryptDialog::on_fileButton_clicked Slot to select the image.
@@ -67,17 +63,18 @@ void EncryptDialog::on_fileButton_clicked()
     inputFileName = QFileDialog::getOpenFileName(this, tr("Open File"), "/", tr("Images (*.png *.xpm *.jpg *.jpeg)"));
     ui->fileLabel->setText(inputFileName);
     // Open image
-    QPixmap pixmap(inputFileName);
+    QImage img(inputFileName);
+    image = img;
     // Get size
-    size = pixmap.width() * pixmap.height();
+    size = img.width() * img.height();
     // UI setup
     long long int compr_data_size = compr_data.size();
     ui->zippedBytes->setText(QString::number(compr_data_size));
     if(inputFileName.isEmpty()) {
-        ui->percentage->setText("-");
+        ui->percentage->setText("");
         return;
     }
-    double perc = (compr_data_size + 16) * 100 / (size * 3) * bitsUsed / 8;
+    double perc = (compr_data_size + 14 + val) * 100 / (size * 3) * bitsUsed / 8;
     ui->percentage->setText(QString::number(perc) + "%");
     goodPercentage = perc < 70;
 }
@@ -106,25 +103,29 @@ void EncryptDialog::on_buttonBox_rejected()
     close();
 }
 /*!
- * \brief EncryptDialog::on_horizontalSlider_valueChanged Slot if value of the slider is changded.
+ * \brief EncryptDialog::on_horizontalSlider_valueChanged Slot if value of the slider is changed.
  * Key is generated here.
  * \param value Value of the slider.
  */
 void EncryptDialog::on_horizontalSlider_valueChanged(int value)
 {
-    // Key generate
-    key_size = pow(2, value);
-    key = qrand() % key_size + 1;
+    // Key generator with value of charachters
+    key.clear();
+    for(int i = 0; i < value; i++)
+        key.append(48 + qrand() % 75);
     val = value;
     ui->keyLabel->setText(QString::number(value));
 }
-
+/*!
+ * \brief EncryptDialog::on_bitsSlider_valueChanged Slot if value of the bits slider is changed
+ * \param value Well, value
+ */
 void EncryptDialog::on_bitsSlider_valueChanged(int value)
 {
     bitsUsed = value;
     ui->bitsUsedLbl->setText(QString::number(value));
-    if(ui->percentage->text() == "-")
+    if(ui->percentage->text().isEmpty())
         return;
-    double perc = (compr_data.size() + 16) * 100 / (size * 3) * 8 / bitsUsed;
+    double perc = (compr_data.size() + 14 + val) * 100 / (size * 3) * 8 / bitsUsed;
     ui->percentage->setText(QString::number(perc) + "%");
 }

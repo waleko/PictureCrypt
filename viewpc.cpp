@@ -90,21 +90,14 @@ void ViewPC::on_startButton_clicked()
 
         // Get the data
         QByteArray encr_data = dialog->compr_data;
-        long long key = dialog->key;
 
-        // Check the key
-        if(key > pow(2, 24)) {
-            alert("Key is too big. Limit is 2^24. Cannot continue!", true);
-            return;
-        }
         // Save the key
-        QByteArray key_data = bytes((long int) (key / 65536)) + bytes((long int) (key / 256) % 256);
-        key_data += bytes(key % 256);
+        QByteArray key_data = dialog->key.toUtf8();
 
-        encr_data = key_data + encr_data;
+        encr_data = bytes(key_data.size()) + key_data + encr_data;
         // TODO do the mode thing
         emit setBitsUsed(dialog->bitsUsed);
-        emit encrypt(encr_data, dialog->inputFileName, 0);
+        emit encrypt(encr_data, &dialog->image, 0);
     }
     else
     {
@@ -115,7 +108,8 @@ void ViewPC::on_startButton_clicked()
             alert("File not selected. Cannot continue!", true);
             return;
         }
-        emit decrypt(inputFileName);
+        QImage * res_image = new QImage(inputFileName);
+        emit decrypt(res_image);
     }
 }
 /*!
@@ -168,7 +162,7 @@ void ViewPC::saveImage(QImage * image)
     QString outputFileName = QFileDialog::getSaveFileName(this, tr("Save Image"),
                                "/untitled.png",
                                tr("Images(*.png)"));
-    if(!image->save(outputFileName, nullptr, 100)) {
+    if(!image->save(outputFileName)) {
         alert("Cannot save file. Unable to continue!", true);
         return;
     }
@@ -255,4 +249,13 @@ void ViewPC::on_actionHelp_triggered()
 {
     QUrl docLink("http://doc.alex.unaux.com/picturecrypt");
     QDesktopServices::openUrl(docLink);
+}
+
+void ViewPC::on_actionJPHS_path_triggered()
+{
+    QString dir = QFileDialog::getExistingDirectory(this, tr("Open JPHS folder"),
+                                                    "/home",
+                                                    QFileDialog::ShowDirsOnly
+                                                    | QFileDialog::DontResolveSymlinks);
+    emit setJPHSDir(dir);
 }

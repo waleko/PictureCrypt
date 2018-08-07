@@ -2,15 +2,17 @@
 #define MODELPC_H
 
 #include <QObject>
-#include <QFile>
 #include <QImage>
 #include <QByteArray>
 #include <QColor>
 #include <QPoint>
 #include <QVector>
-#include <QThread>
-#include <QBitArray>
-#include <bitset>
+#include <QProcess>
+#include <QTime>
+#include <QFileInfo>
+
+#include <aes/qaesencryption.h>
+#include <QCryptographicHash>
 /*! \file modelpc.h
  * Header of ModelPC class
  * \sa ControllerPC, ModelPC, ViewPC
@@ -25,7 +27,7 @@ class ModelPC : public QObject
 {
     Q_OBJECT
 public:
-    ModelPC(long _version);
+    ModelPC(long _version = 131072);
 
 signals:
     /*!
@@ -52,8 +54,11 @@ signals:
      */
     setProgress(int val);
 public slots:
-    void encrypt(QByteArray encr_data, QString imagePath, int mode);
-    void decrypt(QString inputFileName);
+    void start(QByteArray data, QImage image, int mode = 0, QString key = "", int _bitsUsed = 8);
+    void encrypt(QByteArray encr_data, QImage * image, int mode = 0);
+    void decrypt(QImage * image);
+    void fail(QString message);
+
 public:
     /*!
      * \brief success Flag that true by default,
@@ -68,17 +73,30 @@ public:
      * \brief curMode Mode of en- or decryption
      */
     int curMode;
+    /*!
+     * \brief bitsUsed Bits per byte used in pixel
+     */
     int bitsUsed;
-    QByteArray unzip(QByteArray data, long long key);
+    /*!
+     * \brief defaultJPHSDir Default JPHS directory
+     */
+    QString defaultJPHSDir;
+    QByteArray unzip(QByteArray data, QByteArray key);
     void alert(QString message, bool isWarning = false);
 protected:
     void circuit(QImage * image, QByteArray * data, long long int countBytes);
+    void jphs(QImage * image, QByteArray * data);
     void processPixel(QPoint pos, QVector<QPoint> *were, bool isEncrypt);
+    QByteArray zip(QByteArray data, QByteArray key);
 private:
+    bool fileExists(QString path);
     QByteArray bytes(long long n);
     unsigned int mod(int input);
     QByteArray ver_byte;
     QColor RGBbytes(long long byte);
+    QString generateVersionString(long ver);
+    uint randSeed();
+
     QByteArray * circuitData;
     QImage * circuitImage;
     long long circuitCountBytes;
@@ -89,7 +107,6 @@ private:
     long pop(int bits = -1);
     void push(int data, int bits = -1);
 
-    QString generateVersionString(long ver);
 };
 
 #endif // MODELPC_H

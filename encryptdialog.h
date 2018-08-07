@@ -3,8 +3,12 @@
 
 #include <QDialog>
 #include <QFileDialog>
-#include <QPixmap>
+#include <QImage>
 #include <QMessageBox>
+#include <QString>
+
+#include <aes/qaesencryption.h>
+#include <QCryptographicHash>
 
 namespace Ui {
 class EncryptDialog;
@@ -37,10 +41,6 @@ public:
      */
     QByteArray data;
     /*!
-     * \brief key_size Size of the key used to encrypt EncryptDialog::data
-     */
-    long long int key_size;
-    /*!
      * \brief success Flag, if image was successfully selected and data was encrypted.
      */
     bool success;
@@ -59,7 +59,7 @@ public:
     /*!
      * \brief key Key to be used for encryption in EncrytDialog::zip
      */
-    long long int key;
+    QString key;
     /*!
      * \brief goodPercentage Flag if area of the used data via encryption is less than 70% of the area of the image.
      */
@@ -73,6 +73,10 @@ public:
      * \sa ModelPC::circuit
      */
     int bitsUsed;
+    /*!
+     * \brief image Inputted image
+     */
+    QImage image;
     QByteArray zip();
 private slots:
     void on_bitsSlider_valueChanged(int value);
