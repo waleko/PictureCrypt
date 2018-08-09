@@ -92,15 +92,13 @@ message    Message for user
 model->fail(QString message);
 ```
 
-## Avaible modes of embedding
+## Available modes of embedding
 * 0 - Standard, created by me
-* 1 - JPHS, requires manually installed JPHS and specified directory.
+* 1 - JPHS, requires manually installed JPHS and specified directory (not currently available).
 
 ## Documentation
-Doxygen Documentation avaible [here](http://doc.alex.unaux.com/picturecrypt)
+Doxygen Documentation avaible [here](https://waleko.github.io/doc/picturecrypt)
 
-## Windows Installer
-Windows installer for release v1.0.0 [here](http://bit.ly/PictureCryptProject)
 
 ## Dependencies
 * qtcore
