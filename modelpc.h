@@ -13,6 +13,7 @@
 
 #include <aes/qaesencryption.h>
 #include <QCryptographicHash>
+
 /*! \file modelpc.h
  * Header of ModelPC class
  * \sa ControllerPC, ModelPC, ViewPC
@@ -27,7 +28,7 @@ class ModelPC : public QObject
 {
     Q_OBJECT
 public:
-    ModelPC(long _version = 131072);
+    ModelPC();
 
 signals:
     /*!
@@ -66,9 +67,13 @@ public:
      */
     bool success;
     /*!
-     * \brief version Version of the app
+     * \brief version Version of the class
      */
     long version;
+    /*!
+     * \brief versionString Version as string
+     */
+    QString versionString;
     /*!
      * \brief curMode Mode of en- or decryption
      */

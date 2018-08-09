@@ -30,7 +30,8 @@ SOURCES += \
     modelpc.cpp \
     encryptdialog.cpp \
     aboutpc.cpp \
-    aes/qaesencryption.cpp
+    aes/qaesencryption.cpp \
+    unit_tests/testpc.cpp
 
 HEADERS += \
         viewpc.h \
@@ -38,7 +39,8 @@ HEADERS += \
     modelpc.h \
     encryptdialog.h \
     aboutpc.h \
-    aes/qaesencryption.h
+    aes/qaesencryption.h \
+    unit_tests/testpc.h
 
 FORMS += \
         viewpc.ui \
@@ -48,13 +50,13 @@ FORMS += \
 RESOURCES += \
     resource.qrc
 
-CONFIG(debug, debug|release) {
+#CONFIG(debug, debug|release) {
 
-    DESTDIR         = $$OUT_PWD/build/Debug
+#    DESTDIR         = $$OUT_PWD/build/Debug
 
-}else {
+#}else {
 
-    DESTDIR         = $$OUT_PWD/build/Release
+#    DESTDIR         = $$OUT_PWD/build/Release
 
-}
-win32:QMAKE_POST_LINK += windeployqt $$DESTDIR $$escape_expand(\\n)
+#}
+#win32:QMAKE_POST_LINK += windeployqt $$DESTDIR $$escape_expand(\\n)

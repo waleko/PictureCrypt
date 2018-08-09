@@ -2,25 +2,24 @@
 
 /*! Controller class
  * \brief ControllerPC::ControllerPC Constructor of controller
- * Constructor checks the version of the app and creates Model Class (ModelPC) and View Class (ViewPC).
+ * Constructor runs auto-test for ModelPC, creates Model Class (ModelPC) and View Class (ViewPC).
  * All signals and slots are connected here.
  * \note Version of the app is specified here.
  */
 ControllerPC::ControllerPC()
 {
-    // Version control
-    QString _version = "1.2.5";
-    versionString = _version;
-    auto ver = _version.split(".");
-    version = ver[0].toInt() * pow(2, 16) + ver[1].toInt() * pow(2, 8) + ver[2].toInt();
+    // ModelPC auto-test
+
+
     // Layer creation
     view = new ViewPC();
-    model = new ModelPC(version);
+    model = new ModelPC();
     QThread * modelThread = new QThread();
     model->moveToThread(modelThread);
     modelThread->start();
 
-    view->setVersion(versionString);
+
+    view->setVersion(model->versionString);
     view->show();
     // Layer Connection
     connect(view, SIGNAL(encrypt(QByteArray,QImage*,int)), model, SLOT(encrypt(QByteArray,QImage*,int)));

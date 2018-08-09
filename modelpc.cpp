@@ -2,15 +2,18 @@
 #include <QDebug>
 /*!
  * \brief ModelPC::ModelPC Constructor
- * \param _version Version of the app from Controller.
+ * Unit tests are run here.
  * \sa ControllerPC, ViewPC
  */
-ModelPC::ModelPC(long _version)
+ModelPC::ModelPC()
 {
     // Version control
-    version = _version;
+    versionString = "1.2.6";
+    auto ver = versionString.split(".");
+    version = ver[0].toInt() * pow(2, 16) + ver[1].toInt() * pow(2, 8) + ver[2].toInt();
     ver_byte = bytes((long int) (version / 65536)) + bytes((long int) (version / 256) % 256);
     ver_byte += bytes(version % 256);
+    // Random seed
     qsrand(randSeed());
 }
 /*!
@@ -25,6 +28,14 @@ ModelPC::ModelPC(long _version)
  */
 void ModelPC::start(QByteArray data, QImage image, int _bitsUsed, QString key, int mode)
 {
+    if(data.isEmpty()) {
+        alert("No data given!", true);
+        return;
+    }
+    if(image.isNull()) {
+        alert("Image not valid! Error code 5.", true);
+        return;
+    }
     if(key.isEmpty()) {
         qsrand(randSeed());
         for(int i = 0; i < 64; i++)
@@ -62,6 +73,14 @@ void ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode)
 {
     // TODO Remove debug mode = 0
     mode = 0;
+    if(encr_data.isEmpty()) {
+        alert("No data given!", true);
+        return;
+    }
+    if(image->isNull()) {
+        fail("Image not valid! Error code 5.");
+        return;
+    }
 
     encr_data = ver_byte + encr_data;
     long long int countBytes = encr_data.size();

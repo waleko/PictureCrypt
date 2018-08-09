@@ -1,5 +1,6 @@
 #include "controllerpc.h"
 #include <QApplication>
+#include <testpc.h>
 /*!
  * \mainpage PictureCrypt
  * Project made using QT Creator on C++
@@ -111,6 +112,9 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    TestPC test;
+    test.startTest();
+
     ControllerPC w;
 
     return a.exec();
