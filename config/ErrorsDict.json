@@ -1,0 +1,12 @@
+{
+    "nodata": "No data given!",
+    "nullimage": "Image not valid!",
+    "bigkey": "Key is too big, max is 255 bytes!",
+    "muchdata": "Too much data for this image",
+    "wrongmode": "Incorrect mode selected",
+    "wrongimage": "Image wasn't encrypted by this app or is damaged!",
+    "noreaddata": "Read data is empty!",
+    "savefilefail": "Cannot save file, wait wut?",
+    "bitsBufferFail": "Something went very wrong! Error code 1",
+	"nojphs": "JPHS not installed, installation required! See Menu -> Configure -> JPHS directory"
+}

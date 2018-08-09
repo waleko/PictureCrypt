@@ -1,6 +1,6 @@
 #include "controllerpc.h"
 #include <QApplication>
-#include <testpc.h>
+#include <unit_tests/testpc.h>
 /*!
  * \mainpage PictureCrypt
  * Project made using QT Creator on C++

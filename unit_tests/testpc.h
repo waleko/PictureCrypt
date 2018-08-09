@@ -20,13 +20,15 @@ signals:
 public slots:
     int startTest();
 private slots:
-    bool test();
-    void checkText();
-    void getImage();
+    bool test(QByteArray data, QImage rImage,
+              int mode, QString key, int bitsUsed = 8);
+    /*void alert(QString mes, bool isWarning);*/
 private:
     ModelPC * model;
     QByteArray text;
     QImage image;
+
+    QByteArray returned_text;
 
     // Mode 0 tests
     bool stdTest();

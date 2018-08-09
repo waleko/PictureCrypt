@@ -9,6 +9,7 @@ ModelPC::ModelPC()
 {
     // Version control
     versionString = "1.2.6";
+
     auto ver = versionString.split(".");
     version = ver[0].toInt() * pow(2, 16) + ver[1].toInt() * pow(2, 8) + ver[2].toInt();
     ver_byte = bytes((long int) (version / 65536)) + bytes((long int) (version / 256) % 256);
@@ -25,16 +26,17 @@ ModelPC::ModelPC()
  * \param _bitsUsed Bits per byte, see also ModelPC::bitsUsed
  * \param key Key, if default (empty), random key of 64 charachters will be generated.
  * \param mode Mode of encryption
+ * \return Returns image with embedded data.
  */
-void ModelPC::start(QByteArray data, QImage image, int _bitsUsed, QString key, int mode)
+QImage * ModelPC::start(QByteArray data, QImage * image, int _bitsUsed, QString key, int mode)
 {
     if(data.isEmpty()) {
         alert("No data given!", true);
-        return;
+        return nullptr;
     }
-    if(image.isNull()) {
+    if(image->isNull()) {
         alert("Image not valid! Error code 5.", true);
-        return;
+        return nullptr;
     }
     if(key.isEmpty()) {
         qsrand(randSeed());
@@ -43,13 +45,13 @@ void ModelPC::start(QByteArray data, QImage image, int _bitsUsed, QString key, i
     }
     else if(key.size() > 255) {
         alert("Key is too big, max is 255 bytes", true);
-        return;
+        return nullptr;
     }
     long long usedBytes = data.size() + 14 + key.size();
-    long long size = image.width() * image.height();
+    long long size = image->width() * image->height();
     if(usedBytes * 100 / (size * 3) * 8 / _bitsUsed > 70) {
         alert("Too much data for this image", true);
-        return;
+        return nullptr;
     }
 
     curMode = mode;
@@ -59,7 +61,7 @@ void ModelPC::start(QByteArray data, QImage image, int _bitsUsed, QString key, i
     QByteArray zipped_data = zip(data, key_data);
     QByteArray encr_data = bytes(key_data.size()) + key_data + zipped_data;
 
-    encrypt(encr_data, &image);
+    return encrypt(encr_data, image);
 }
 
 /*!
@@ -67,19 +69,20 @@ void ModelPC::start(QByteArray data, QImage image, int _bitsUsed, QString key, i
  * \param encr_data Data to be inserted to an image.
  * \param image Image to be inserted in.
  * \param mode Mode of encryption
+ * \return Returns image with embedded data.
  * \sa ViewPC::on_startButton_clicked, ModelPC::decrypt, ModelPC::circuit
  */
-void ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode)
+QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode)
 {
     // TODO Remove debug mode = 0
     mode = 0;
     if(encr_data.isEmpty()) {
         alert("No data given!", true);
-        return;
+        return nullptr;
     }
     if(image->isNull()) {
         fail("Image not valid! Error code 5.");
-        return;
+        return nullptr;
     }
 
     encr_data = ver_byte + encr_data;
@@ -95,20 +98,25 @@ void ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode)
         break;
     default:
         fail("Something went wrong! Error code 4.");
-        return;
+        return nullptr;
     }
 
 
     // Saving
-    if(success)
+    if(success) {
         emit saveImage(image);
+        return image;
+    }
+    else
+        return nullptr;
 }
 /*!
  * \brief ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started.
  * \param image Image to be decrypted.
+ * \return Returns decrypted data
  * \sa ViewPC::on_startButton_clicked, ModelPC::encrypt, ModelPC::circuit
  */
-void ModelPC::decrypt(QImage * image)
+QByteArray ModelPC::decrypt(QImage * image)
 {
     // Image opening
     int w = image->width();
@@ -124,7 +132,7 @@ void ModelPC::decrypt(QImage * image)
     verifCode += colDR.blue() % 4;
     if(verifCode != 166){
         alert("Image wasn't encrypted by this app or is damaged!");
-        return;
+        return nullptr;
     }
     // Getting number of bytes
     long long int countBytes = (colUL.blue() % 32 + ((colUL.green() % 32) << 5) + ((colUL.red() % 32) << 10)) << 9;
@@ -139,11 +147,11 @@ void ModelPC::decrypt(QImage * image)
 
     // Check if circuit was successful
     if(!success)
-        return;
+        return nullptr;
     if(data.isEmpty())
     {
         alert("Read data is empty. Cannot continue!", true);
-        return;
+        return nullptr;
 
     }
     // Version check
@@ -155,13 +163,13 @@ void ModelPC::decrypt(QImage * image)
         alert("Picture's app version is newer than yours. Image version is "
               + generateVersionString(_ver) + ", yours is "
               + generateVersionString(version) + ".", true);
-        return;
+        return nullptr;
     }
     else if(_ver < version) {
         alert("Picture's app version is older than yours. Image version is "
               + generateVersionString(_ver) + ", yours is "
               + generateVersionString(version) + ".", true);
-        return;
+        return nullptr;
     }
 
     // Obtain the key
@@ -172,6 +180,7 @@ void ModelPC::decrypt(QImage * image)
     // Unzip
     QByteArray unzipped_data = unzip(data, key);
     emit saveData(unzipped_data);
+    return unzipped_data;
 }
 /*!
  * \brief ModelPC::fail Slot to stop execution of cryption

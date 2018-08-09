@@ -1,13 +1,28 @@
 #include "viewpc.h"
 #include "ui_viewpc.h"
-#include <QThread>
-#include <QDesktopServices>
+
 
 ViewPC::ViewPC(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::ViewPC)
 {
     ui->setupUi(this);
+
+    // Alerts dictionary setup
+    QFile file(":/config/ErrorsDict.json");
+    if(!file.open(QFile::ReadOnly | QFile::Text)) {
+        alert("Cannot open config file!");
+        return;
+    }
+    QByteArray readData = file.readAll();
+    file.close();
+    QJsonDocument doc = QJsonDocument::fromJson(readData);
+    QByteArray checkData = doc.toJson();
+    bool same = readData == checkData;
+    errorsDict = doc.object();
+
+    // Debug
+    alert("nojphs");
 }
 
 ViewPC::~ViewPC()
@@ -119,6 +134,9 @@ void ViewPC::on_startButton_clicked()
  */
 void ViewPC::alert(QString message, bool isWarning)
 {
+    // Get message
+    if(errorsDict.contains(message))
+        message = errorsDict[message].toString();
     // Create message box
     QMessageBox box;
     if(isWarning)

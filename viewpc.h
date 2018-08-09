@@ -9,10 +9,16 @@
 #include <algorithm>
 #include <QByteArray>
 #include <QVector>
+#include <QMap>
+#include <QThread>
+#include <QDesktopServices>
 
 #include <encryptdialog.h>
 #include <QProgressDialog>
 #include <aboutpc.h>
+
+#include <QJsonDocument>
+#include <QJsonObject>
 
 namespace Ui {
 class ViewPC;
@@ -31,7 +37,7 @@ class ViewPC : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit ViewPC(QWidget *parent = 0);
+    explicit ViewPC(QWidget *parent = nullptr);
     ~ViewPC();
 private slots:
     void on_encryptMode_clicked();
@@ -95,6 +101,7 @@ public:
      * \sa ViewPC::abortCircuit, ViewPC::setProgress
      */
     bool progressDialogClosed;
+    QJsonObject errorsDict;
 private:
     Ui::ViewPC *ui;
     bool isEncrypt;

@@ -8,5 +8,6 @@
         <file>unit_tests/longtext.txt</file>
         <file>unit_tests/bigpicture.jpg</file>
         <file>unit_tests/tinypicture.png</file>
+        <file>config/ErrorsDict.json</file>
     </qresource>
 </RCC>

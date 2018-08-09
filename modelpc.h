@@ -37,7 +37,7 @@ signals:
      * \param isWarning Flag if message is critical.
      * \sa ModelPC::alert, ViewPC::alert
      */
-    alertView(QString message, bool isWarning);
+    alertView(QString messageCode, bool isWarning);
     /*!
      * \brief saveData Signal to be called to save data from ModelPC::decrypt.
      * \param data Data to be saved.
@@ -54,10 +54,11 @@ signals:
      * \sa ViewPC::setProgress
      */
     setProgress(int val);
+
 public slots:
-    void start(QByteArray data, QImage image, int mode = 0, QString key = "", int _bitsUsed = 8);
-    void encrypt(QByteArray encr_data, QImage * image, int mode = 0);
-    void decrypt(QImage * image);
+    QImage *start(QByteArray data, QImage *image, int mode = 0, QString key = "", int _bitsUsed = 8);
+    QImage *encrypt(QByteArray encr_data, QImage * image, int mode = 0);
+    QByteArray decrypt(QImage * image);
     void fail(QString message);
 
 public:
