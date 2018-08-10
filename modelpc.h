@@ -56,9 +56,9 @@ signals:
     setProgress(int val);
 
 public slots:
-    QImage *start(QByteArray data, QImage *image, int mode = 0, QString key = "", int _bitsUsed = 8);
-    QImage *encrypt(QByteArray encr_data, QImage * image, int mode = 0);
-    QByteArray decrypt(QImage * image);
+    QImage *start(QByteArray data, QImage *image, int mode = 0, QString key = "", int _bitsUsed = 8, QString *_error = nullptr);
+    QImage *encrypt(QByteArray encr_data, QImage * image, int mode = 0, QString *_error = nullptr);
+    QByteArray decrypt(QImage * image, QString *_error = nullptr);
     void fail(QString message);
 
 public:
@@ -87,6 +87,10 @@ public:
      * \brief defaultJPHSDir Default JPHS directory
      */
     QString defaultJPHSDir;
+    /*!
+     * \brief error Current error
+     */
+    QString * error;
     QByteArray unzip(QByteArray data, QByteArray key);
     void alert(QString message, bool isWarning = false);
 protected:
@@ -113,6 +117,7 @@ private:
     long pop(int bits = -1);
     void push(int data, int bits = -1);
 
+    void setError(QString word);
 };
 
 #endif // MODELPC_H

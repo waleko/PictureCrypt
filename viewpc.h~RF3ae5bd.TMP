@@ -6,8 +6,10 @@
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QImage>
+#include <algorithm>
 #include <QByteArray>
 #include <QVector>
+#include <QMap>
 #include <QThread>
 #include <QDesktopServices>
 
@@ -98,7 +100,6 @@ public:
      * \brief progressDialogClosed Flag, if dialog is closed.
      * \sa ViewPC::abortCircuit, ViewPC::setProgress
      */
-    // TODO check if works with fail from like jphs
     bool progressDialogClosed;
     QJsonObject errorsDict;
 private:

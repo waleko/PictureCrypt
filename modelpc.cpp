@@ -28,14 +28,17 @@ ModelPC::ModelPC()
  * \param mode Mode of encryption
  * \return Returns image with embedded data.
  */
-QImage * ModelPC::start(QByteArray data, QImage * image, int _bitsUsed, QString key, int mode)
+QImage * ModelPC::start(QByteArray data, QImage * image, int _bitsUsed, QString key, int mode, QString *_error)
 {
+    error = _error;
     if(data.isEmpty()) {
-        alert("No data given!", true);
+        setError("nodata");
+        alert(*error, true);
         return nullptr;
     }
     if(image->isNull()) {
-        alert("Image not valid! Error code 5.", true);
+        setError("nullimage");
+        alert(*error, true);
         return nullptr;
     }
     if(key.isEmpty()) {
@@ -44,13 +47,15 @@ QImage * ModelPC::start(QByteArray data, QImage * image, int _bitsUsed, QString 
             key.append(48 + qrand() % 75);
     }
     else if(key.size() > 255) {
-        alert("Key is too big, max is 255 bytes", true);
+        setError("bigkey");
+        alert(*error, true);
         return nullptr;
     }
     long long usedBytes = data.size() + 14 + key.size();
     long long size = image->width() * image->height();
     if(usedBytes * 100 / (size * 3) * 8 / _bitsUsed > 70) {
-        alert("Too much data for this image", true);
+        setError("muchdata");
+        alert(*error, true);
         return nullptr;
     }
 
@@ -72,15 +77,18 @@ QImage * ModelPC::start(QByteArray data, QImage * image, int _bitsUsed, QString 
  * \return Returns image with embedded data.
  * \sa ViewPC::on_startButton_clicked, ModelPC::decrypt, ModelPC::circuit
  */
-QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode)
+QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode, QString *_error)
 {
+    error = _error;
     // TODO Remove debug mode = 0
     mode = 0;
     if(encr_data.isEmpty()) {
-        alert("No data given!", true);
+        setError("nodata");
+        alert(*error, true);
         return nullptr;
     }
     if(image->isNull()) {
+        setError("nullimage");
         fail("Image not valid! Error code 5.");
         return nullptr;
     }
@@ -97,6 +105,7 @@ QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode)
         jphs(image, &encr_data);
         break;
     default:
+        setError("wrongmode");
         fail("Something went wrong! Error code 4.");
         return nullptr;
     }
@@ -116,8 +125,9 @@ QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode)
  * \return Returns decrypted data
  * \sa ViewPC::on_startButton_clicked, ModelPC::encrypt, ModelPC::circuit
  */
-QByteArray ModelPC::decrypt(QImage * image)
+QByteArray ModelPC::decrypt(QImage * image, QString *_error)
 {
+    error = _error;
     // Image opening
     int w = image->width();
     int h = image->height();
@@ -131,6 +141,7 @@ QByteArray ModelPC::decrypt(QImage * image)
     int verifCode = (((colUR.green() % 2) << 5) + colUR.blue() % 32) << 2;
     verifCode += colDR.blue() % 4;
     if(verifCode != 166){
+        setError("veriffail");
         alert("Image wasn't encrypted by this app or is damaged!");
         return nullptr;
     }
@@ -150,6 +161,7 @@ QByteArray ModelPC::decrypt(QImage * image)
         return nullptr;
     if(data.isEmpty())
     {
+        setError("noreaddata");
         alert("Read data is empty. Cannot continue!", true);
         return nullptr;
 
@@ -210,6 +222,7 @@ void ModelPC::jphs(QImage *image, QByteArray *data)
     QString targetEXE = defaultJPHSDir + (isEncrypt ? "/jphide.exe" : "/jpseek.exe");
     if(!fileExists(targetEXE))
     {
+        setError("nojphs");
         alert("JPHS not installed, installation required!\nSee Menu -> Configure -> JPHS directory", true);
         return;
     }
@@ -222,6 +235,7 @@ void ModelPC::jphs(QImage *image, QByteArray *data)
     if(isEncrypt) {
         QFile file(randomFileName + ".pc");
         if(!file.open(QFile::WriteOnly)) {
+            setError("savefilefail");
             alert("Cannot save file, wait wut?",true);
             return;
         }
@@ -356,6 +370,7 @@ void ModelPC::circuit(QImage *image, QByteArray *data, long long countBytes)
         while(cur < countBytes)
             push(mod(circuitData->at(cur++)), 8);
         if(bitsBuffer.size() > 20) {
+            setError("bitsBufferFail");
             fail("Something went wrong! Error code 1");
             return;
         }
@@ -582,4 +597,10 @@ uint ModelPC::randSeed()
     QTime time = QTime::currentTime();
     uint randSeed = time.msecsSinceStartOfDay() % 65536 + time.minute() * 21 + time.second() * 2;
     return randSeed;
+}
+// TODO add fail to setError
+void ModelPC::setError(QString word)
+{
+    *error = word;
+    alert()
 }

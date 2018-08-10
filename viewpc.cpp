@@ -1,7 +1,6 @@
 #include "viewpc.h"
 #include "ui_viewpc.h"
 
-
 ViewPC::ViewPC(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::ViewPC)
@@ -9,20 +8,19 @@ ViewPC::ViewPC(QWidget *parent) :
     ui->setupUi(this);
 
     // Alerts dictionary setup
-    QFile file(":/config/ErrorsDict.json");
+
+    // TODO Add relative path
+    QFile file("C:/Users/salex/Documents/GitHub/PictureCrypt/config/ErrorsDict.json");
     if(!file.open(QFile::ReadOnly | QFile::Text)) {
         alert("Cannot open config file!");
         return;
     }
     QByteArray readData = file.readAll();
     file.close();
-    QJsonDocument doc = QJsonDocument::fromJson(readData);
-    QByteArray checkData = doc.toJson();
-    bool same = readData == checkData;
-    errorsDict = doc.object();
 
-    // Debug
-    alert("nojphs");
+    QJsonParseError error;
+    QJsonDocument doc = QJsonDocument::fromJson(readData, &error);
+    errorsDict = doc.object();
 }
 
 ViewPC::~ViewPC()
