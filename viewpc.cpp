@@ -7,8 +7,9 @@ ViewPC::ViewPC(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    // Alerts dictionary setup
+    progressDialogClosed = true;
 
+    // Alerts dictionary setup
     // TODO Add relative path
     QFile file("C:/Users/salex/Documents/GitHub/PictureCrypt/config/ErrorsDict.json");
     if(!file.open(QFile::ReadOnly | QFile::Text)) {
@@ -201,7 +202,7 @@ void ViewPC::setProgress(int val)
         dialog->setWindowIcon(QIcon(":/icons/loading.png"));
         dialog->show();
     }
-    else if(val >= 100) {
+    else if(val >= 100 && !progressDialogClosed) {
         // Close dialog
         dialog->setValue(100);
         QThread::msleep(25);

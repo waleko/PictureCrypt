@@ -8,12 +8,14 @@
 ModelPC::ModelPC()
 {
     // Version control
-    versionString = "1.2.6";
+    versionString = "1.2.7";
 
     auto ver = versionString.split(".");
     version = ver[0].toInt() * pow(2, 16) + ver[1].toInt() * pow(2, 8) + ver[2].toInt();
-    ver_byte = bytes((long int) (version / 65536)) + bytes((long int) (version / 256) % 256);
-    ver_byte += bytes(version % 256);
+
+    ver_byte = bytes(ver[0].toInt()) +
+            bytes(ver[1].toInt()) +
+            bytes(ver[2].toInt());
     // Random seed
     qsrand(randSeed());
 }
@@ -28,34 +30,37 @@ ModelPC::ModelPC()
  * \param mode Mode of encryption
  * \return Returns image with embedded data.
  */
-QImage * ModelPC::start(QByteArray data, QImage * image, int _bitsUsed, QString key, int mode, QString *_error)
+QImage * ModelPC::start(QByteArray data, QImage * image, int mode, QString key, int _bitsUsed, QString *_error)
 {
+    // Error management
+    *_error = "ok";
     error = _error;
+
     if(data.isEmpty()) {
-        setError("nodata");
-        alert(*error, true);
+        fail("nodata");
         return nullptr;
     }
-    if(image->isNull()) {
-        setError("nullimage");
-        alert(*error, true);
+    if(image == nullptr || image->isNull()) {
+        fail("nullimage");
+        return nullptr;
+    }
+    if(_bitsUsed < 1 || _bitsUsed > 8) {
+        fail("bitsWrong");
         return nullptr;
     }
     if(key.isEmpty()) {
         qsrand(randSeed());
-        for(int i = 0; i < 64; i++)
+        for(int i = 0; i < 32; i++)
             key.append(48 + qrand() % 75);
     }
     else if(key.size() > 255) {
-        setError("bigkey");
-        alert(*error, true);
+        fail("bigkey");
         return nullptr;
     }
     long long usedBytes = data.size() + 14 + key.size();
     long long size = image->width() * image->height();
     if(usedBytes * 100 / (size * 3) * 8 / _bitsUsed > 70) {
-        setError("muchdata");
-        alert(*error, true);
+        fail("muchdata");
         return nullptr;
     }
 
@@ -66,7 +71,10 @@ QImage * ModelPC::start(QByteArray data, QImage * image, int _bitsUsed, QString 
     QByteArray zipped_data = zip(data, key_data);
     QByteArray encr_data = bytes(key_data.size()) + key_data + zipped_data;
 
-    return encrypt(encr_data, image);
+    if(*error == "ok")
+        return encrypt(encr_data, image, curMode, error);
+    else
+        return nullptr;
 }
 
 /*!
@@ -79,17 +87,18 @@ QImage * ModelPC::start(QByteArray data, QImage * image, int _bitsUsed, QString 
  */
 QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode, QString *_error)
 {
+    // Error management
+    *_error = "ok";
     error = _error;
+
     // TODO Remove debug mode = 0
     mode = 0;
     if(encr_data.isEmpty()) {
-        setError("nodata");
-        alert(*error, true);
+        fail("nodata");
         return nullptr;
     }
-    if(image->isNull()) {
-        setError("nullimage");
-        fail("Image not valid! Error code 5.");
+    if(image == nullptr || image->isNull()) {
+        fail("nullimage");
         return nullptr;
     }
 
@@ -105,8 +114,7 @@ QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode, QStrin
         jphs(image, &encr_data);
         break;
     default:
-        setError("wrongmode");
-        fail("Something went wrong! Error code 4.");
+        fail("wrongmode");
         return nullptr;
     }
 
@@ -127,7 +135,13 @@ QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode, QStrin
  */
 QByteArray ModelPC::decrypt(QImage * image, QString *_error)
 {
+    // Error management
+    *_error = "ok";
     error = _error;
+    if(image == nullptr || image->isNull()) {
+        fail("nullimage");
+        return nullptr;
+    }
     // Image opening
     int w = image->width();
     int h = image->height();
@@ -141,8 +155,7 @@ QByteArray ModelPC::decrypt(QImage * image, QString *_error)
     int verifCode = (((colUR.green() % 2) << 5) + colUR.blue() % 32) << 2;
     verifCode += colDR.blue() % 4;
     if(verifCode != 166){
-        setError("veriffail");
-        alert("Image wasn't encrypted by this app or is damaged!");
+        fail("veriffail");
         return nullptr;
     }
     // Getting number of bytes
@@ -161,8 +174,7 @@ QByteArray ModelPC::decrypt(QImage * image, QString *_error)
         return nullptr;
     if(data.isEmpty())
     {
-        setError("noreaddata");
-        alert("Read data is empty. Cannot continue!", true);
+        fail("noreaddata");
         return nullptr;
 
     }
@@ -172,15 +184,15 @@ QByteArray ModelPC::decrypt(QImage * image, QString *_error)
     _ver += mod(data.at(2));
     data.remove(0, 3);
     if(_ver > version) {
-        alert("Picture's app version is newer than yours. Image version is "
+        fail("Picture's app version is newer than yours. Image version is "
               + generateVersionString(_ver) + ", yours is "
-              + generateVersionString(version) + ".", true);
+              + generateVersionString(version) + ".");
         return nullptr;
     }
     else if(_ver < version) {
-        alert("Picture's app version is older than yours. Image version is "
+        fail("Picture's app version is older than yours. Image version is "
               + generateVersionString(_ver) + ", yours is "
-              + generateVersionString(version) + ".", true);
+              + generateVersionString(version) + ".");
         return nullptr;
     }
 
@@ -200,10 +212,10 @@ QByteArray ModelPC::decrypt(QImage * image, QString *_error)
  */
 void ModelPC::fail(QString message)
 {
+    *error = message;
     alert(message, true);
     success = false;
     emit setProgress(101);
-    return;
 }
 /*!
  * \brief ModelPC::jphs JPHS function to use jphide and jpseek (currently under development)
@@ -222,8 +234,7 @@ void ModelPC::jphs(QImage *image, QByteArray *data)
     QString targetEXE = defaultJPHSDir + (isEncrypt ? "/jphide.exe" : "/jpseek.exe");
     if(!fileExists(targetEXE))
     {
-        setError("nojphs");
-        alert("JPHS not installed, installation required!\nSee Menu -> Configure -> JPHS directory", true);
+        fail("nojphs");
         return;
     }
 
@@ -235,8 +246,7 @@ void ModelPC::jphs(QImage *image, QByteArray *data)
     if(isEncrypt) {
         QFile file(randomFileName + ".pc");
         if(!file.open(QFile::WriteOnly)) {
-            setError("savefilefail");
-            alert("Cannot save file, wait wut?",true);
+            fail("savefilefail");
             return;
         }
         file.write(*data);
@@ -370,8 +380,7 @@ void ModelPC::circuit(QImage *image, QByteArray *data, long long countBytes)
         while(cur < countBytes)
             push(mod(circuitData->at(cur++)), 8);
         if(bitsBuffer.size() > 20) {
-            setError("bitsBufferFail");
-            fail("Something went wrong! Error code 1");
+            fail("bitsBufferFail");
             return;
         }
         // Getting extra data as long.
@@ -597,10 +606,4 @@ uint ModelPC::randSeed()
     QTime time = QTime::currentTime();
     uint randSeed = time.msecsSinceStartOfDay() % 65536 + time.minute() * 21 + time.second() * 2;
     return randSeed;
-}
-// TODO add fail to setError
-void ModelPC::setError(QString word)
-{
-    *error = word;
-    alert()
 }

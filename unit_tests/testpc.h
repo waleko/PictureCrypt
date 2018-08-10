@@ -19,10 +19,10 @@ signals:
 
 public slots:
     int startTest();
-private slots:
+protected slots:
     bool test(QByteArray data, QImage rImage,
-              int mode, QString key, int bitsUsed = 8);
-    /*void alert(QString mes, bool isWarning);*/
+              QString expectedOutput = "ok", int mode = 0,
+              QString key = "", int bitsUsed = 8);
 private:
     ModelPC * model;
     QByteArray text;
@@ -30,16 +30,6 @@ private:
 
     QByteArray returned_text;
 
-    // Mode 0 tests
-    bool stdTest();
-    bool sevenTest();
-    bool fiveTest();
-    bool fourTest();
-    bool threeTest();
-    bool oneTest();
-    bool overSizeTest();
-    bool notImagetest();
-    // Mode 1 tests
 };
 
 #endif // TESTPC_H

@@ -8,5 +8,6 @@
     "noreaddata": "Read data is empty!",
     "savefilefail": "Cannot save file, wait wut?",
     "bitsBufferFail": "Something went very wrong! Error code 1",
-	"nojphs": "JPHS not installed, installation required!\nSee Menu -> Configure -> JPHS directory"
+    "nojphs": "JPHS not installed, installation required!\nSee Menu -> Configure -> JPHS directory",
+    "bitsWrong": "BitsUsed set incorrectly!"
 }
