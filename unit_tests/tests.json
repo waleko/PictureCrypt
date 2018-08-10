@@ -1,0 +1,12 @@
+{
+    "tests": [
+        {
+            "data": "/text/",
+            "image": "bigpicture.jpg",
+            "expectation": "ok",
+            "mode": 0,
+            "key": "",
+            "bitsUsed": 8
+        }
+    ]
+}

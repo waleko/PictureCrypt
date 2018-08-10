@@ -8,16 +8,12 @@
  */
 ControllerPC::ControllerPC()
 {
-    // ModelPC auto-test
-
-
     // Layer creation
     view = new ViewPC();
     model = new ModelPC();
     QThread * modelThread = new QThread();
     model->moveToThread(modelThread);
     modelThread->start();
-
 
     view->setVersion(model->versionString);
     view->show();

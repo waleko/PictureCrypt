@@ -8,15 +8,19 @@
 #include <QString>
 #include <QImage>
 #include <QByteArray>
+#include <QVector>
+
+#include <QJsonDocument>
+#include <QJsonArray>
+#include <QJsonObject>
+
+#include <QDateTime>
 
 class TestPC : public QObject
 {
     Q_OBJECT
 public:
     TestPC();
-
-signals:
-
 public slots:
     int startTest();
 protected slots:
@@ -28,8 +32,8 @@ private:
     QByteArray text;
     QImage image;
 
-    QByteArray returned_text;
-
+    bool stdTest();
+    bool autoTest(QJsonDocument doc);
 };
 
 #endif // TESTPC_H
