@@ -6,7 +6,7 @@ raw = open(filename, 'r')
 js = json.load(raw)
 print('Existing tests:')
 for obj in js['tests']:
-    print(obj['data'], obj['image'], obj['expectation'], obj['mode'], obj['key'], obj['bitsUsed'])
+    print(obj['data'], obj['image'], obj['expectation'], obj['mode'], obj['key'], obj['bitsUsed'], sep='-')
 
 print('------------')
 print('Type new tests')

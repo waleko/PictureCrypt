@@ -109,13 +109,14 @@
  * \author Alex Kovrigin ![me](https://avatars2.githubusercontent.com/u/24986722?s=100)
  * \copyright Alex Kovrigin 2018
  */
+// TODO update main page
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     TestPC test;
-    test.startTest();
-
-    ControllerPC w;
+    bool success = test.startTest();
+    if(success)
+        ControllerPC w;
 
     return a.exec();
 }

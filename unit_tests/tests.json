@@ -7,6 +7,54 @@
             "mode": 0,
             "key": "",
             "bitsUsed": 8
+        },
+        {
+            "data": "/text/",
+            "image": "bigpicture.jpg",
+            "expectation": "ok",
+            "mode": 0,
+            "key": "",
+            "bitsUsed": 7
+        },
+        {
+            "data": "/text/",
+            "image": "bigpicture.jpg",
+            "expectation": "ok",
+            "mode": 0,
+            "key": "",
+            "bitsUsed": 1
+        },
+        {
+            "data": "/text/",
+            "image": "tinypicture.png",
+            "expectation": "muchdata",
+            "mode": 0,
+            "key": "",
+            "bitsUsed": 8
+        },
+        {
+            "data": "",
+            "image": "bigpicture.jpg",
+            "expectation": "nodata",
+            "mode": 0,
+            "key": "",
+            "bitsUsed": 8
+        },
+        {
+            "data": "/text/",
+            "image": "invalid.jpg",
+            "expectation": "nullimage",
+            "mode": 0,
+            "key": "",
+            "bitsUsed": 8
+        },
+        {
+            "data": "/text/",
+            "image": "bigpicture.jpg",
+            "expectation": "bitsWrong",
+            "mode": 0,
+            "key": "",
+            "bitsUsed": 12
         }
     ]
 }
