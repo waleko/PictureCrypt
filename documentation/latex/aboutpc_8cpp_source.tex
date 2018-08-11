@@ -1,0 +1,23 @@
+\hypertarget{aboutpc_8cpp_source}{}\section{aboutpc.\+cpp}
+\label{aboutpc_8cpp_source}\index{C\+:/\+Users/salex/\+Documents/\+Git\+Hub/\+Picture\+Crypt/aboutpc.\+cpp@{C\+:/\+Users/salex/\+Documents/\+Git\+Hub/\+Picture\+Crypt/aboutpc.\+cpp}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "\mbox{\hyperlink{aboutpc_8h}{aboutpc.h}}"}
+00002 \textcolor{preprocessor}{#include "ui\_aboutpc.h"}
+00003 
+\Hypertarget{aboutpc_8cpp_source_l00004}\mbox{\hyperlink{class_about_p_c_a89341c4427d97da60acf15dc929ad8a6}{00004}} \mbox{\hyperlink{class_about_p_c_a89341c4427d97da60acf15dc929ad8a6}{AboutPC::AboutPC}}(QWidget *parent) :
+00005     QDialog(parent),
+00006     ui(new \mbox{\hyperlink{namespace_ui}{Ui}}::\mbox{\hyperlink{class_about_p_c}{AboutPC}})
+00007 \{
+00008     ui->setupUi(\textcolor{keyword}{this});
+00009 \}
+00010 
+\Hypertarget{aboutpc_8cpp_source_l00011}\mbox{\hyperlink{class_about_p_c_a3cc0c4c81abc640d946003b078a47dd4}{00011}} \mbox{\hyperlink{class_about_p_c_a3cc0c4c81abc640d946003b078a47dd4}{AboutPC::~AboutPC}}()
+00012 \{
+00013     \textcolor{keyword}{delete} ui;
+00014 \}
+\Hypertarget{aboutpc_8cpp_source_l00019}\mbox{\hyperlink{class_about_p_c_aa3815d4826d0c8d87122449537a0a4d5}{00019}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_about_p_c_aa3815d4826d0c8d87122449537a0a4d5}{AboutPC::setVersion}}(QString version)
+00020 \{
+00021     ui->versionLabel->setText(\textcolor{stringliteral}{"Version "} + version);
+00022 \}
+\end{DoxyCode}

@@ -1,0 +1,560 @@
+\hypertarget{class_view_p_c}{}\section{View\+PC Class Reference}
+\label{class_view_p_c}\index{View\+PC@{View\+PC}}
+
+
+The \mbox{\hyperlink{class_view_p_c}{View\+PC}} class View layer of the app. Controls \mbox{\hyperlink{class_encrypt_dialog}{Encrypt\+Dialog}} and Progress\+Dialog.  
+
+
+
+
+{\ttfamily \#include $<$viewpc.\+h$>$}
+
+
+
+Inheritance diagram for View\+PC\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{class_view_p_c__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for View\+PC\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=160pt]{class_view_p_c__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}} (Q\+String message, bool is\+Warning=false)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{View\+P\+C\+::alert}} Slot to create Q\+Message\+Box with message. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_view_p_c_aaff156103970be7c777beedaf0020604}{save\+Data}} (Q\+Byte\+Array Edata)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_view_p_c_aaff156103970be7c777beedaf0020604}{View\+P\+C\+::save\+Data}} Slot to be called to save data using Q\+File\+Dialog. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_view_p_c_a7901ce10ffaaf2387bef1db7feea342d}{save\+Image}} (Q\+Image $\ast$image)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_view_p_c_a7901ce10ffaaf2387bef1db7feea342d}{View\+P\+C\+::save\+Image}} Slot to be called to save image using Q\+File\+Dialog. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_view_p_c_a9c32a1fdb6ead84e5ada8fba8860c7ed}{set\+Progress}} (int val)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_view_p_c_a9c32a1fdb6ead84e5ada8fba8860c7ed}{View\+P\+C\+::set\+Progress}} Slot to set the value of the Progress\+Dialog (\mbox{\hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{View\+P\+C\+::dialog}}). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_view_p_c_ad7ba2fcf1d17862de15e32432823f7b0}{abort\+Circuit}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_view_p_c_ad7ba2fcf1d17862de15e32432823f7b0}{View\+P\+C\+::abort\+Circuit}} Slot to close Progress\+Dialog (\mbox{\hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{View\+P\+C\+::dialog}}) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_view_p_c_a5b48951efefdc0e3039c9a4bf185320b}{set\+Encrypt\+Mode}} (bool encr)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_view_p_c_a5b48951efefdc0e3039c9a4bf185320b}{View\+P\+C\+::set\+Encrypt\+Mode}} Set the encrpt mode (View\+P\+C\+::is\+Encrypt) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_view_p_c_ac05220df875b7c4f24405a5742476ebf}{set\+Version}} (Q\+String version)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_view_p_c_ac05220df875b7c4f24405a5742476ebf}{View\+P\+C\+::set\+Version}} Set the version of the app from \mbox{\hyperlink{class_controller_p_c}{Controller\+PC}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Signals}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_view_p_c_ade35449b95cf1c5424c4eb929f46fd73}{encrypt}} (Q\+Byte\+Array data, Q\+Image $\ast$image, int mode)
+\begin{DoxyCompactList}\small\item\em encrypt Signal calling \mbox{\hyperlink{class_model_p_c_a8ef76567bc0c0307b4e2547c46536e51}{Model\+P\+C\+::encrypt}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_view_p_c_acf8feb98f757cc238dada1df2308e303}{decrypt}} (Q\+Image $\ast$\+\_\+image)
+\begin{DoxyCompactList}\small\item\em decrypt Signal calling \mbox{\hyperlink{class_model_p_c_af1f0b21565bf39808c4cdd448fad0ea8}{Model\+P\+C\+::decrypt}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_view_p_c_a863f5233af3791bd165a2811a5d9bcc2}{abort\+Model}} ()
+\begin{DoxyCompactList}\small\item\em abort\+Model Signal calling to stop \mbox{\hyperlink{class_model_p_c_a1d0091062a0c836b283ec2f67411623b}{Model\+P\+C\+::circuit}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_view_p_c_a2ccc0a3f2f48080ae6308e800646fcd5}{set\+Bits\+Used}} (int bits\+Used)
+\begin{DoxyCompactList}\small\item\em set\+Bits\+Used Sets bits used in \mbox{\hyperlink{class_model_p_c}{Model\+PC}} \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_view_p_c_ababceedc355ecc1217a4c708e19e5e6b}{set\+J\+P\+H\+S\+Dir}} (Q\+String dir)
+\begin{DoxyCompactList}\small\item\em set\+J\+P\+H\+S\+Path Sets the default J\+P\+HS directory \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_view_p_c_a33c96c61f61042319c66c19059836b7f}{View\+PC}} (Q\+Widget $\ast$parent=nullptr)
+\item 
+\mbox{\hyperlink{class_view_p_c_a91c51f5c1e6ed5ab12b410339f469b0f}{$\sim$\+View\+PC}} ()
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Progress\+Dialog $\ast$ \mbox{\hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}}
+\begin{DoxyCompactList}\small\item\em dialog Progress\+Dialog used. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_view_p_c_add8c82aa2b0b934212aa5bde9277ab36}{progress\+Dialog\+Closed}}
+\begin{DoxyCompactList}\small\item\em progress\+Dialog\+Closed Flag, if dialog is closed. \end{DoxyCompactList}\item 
+Q\+Json\+Object \mbox{\hyperlink{class_view_p_c_a26f90436aca32e5bad46f5e69a7e7e09}{errors\+Dict}}
+\end{DoxyCompactItemize}
+\subsection*{Protected Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_view_p_c_a3b9b7a7be9702d8b160f257f1c74a776}{on\+\_\+file\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_view_p_c_a3b9b7a7be9702d8b160f257f1c74a776}{View\+P\+C\+::on\+\_\+file\+Button\+\_\+clicked}} Slot to be called, when according button is pressed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_view_p_c_a456d75b7c5d3a089302a576e7359f1f4}{on\+\_\+start\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_view_p_c_a456d75b7c5d3a089302a576e7359f1f4}{View\+P\+C\+::on\+\_\+start\+Button\+\_\+clicked}} Slot to be called, when Start Button is pressed. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_view_p_c_a09a46da4d492eb3dde88f35dc58c997b}{on\+\_\+action\+About\+\_\+triggered}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_view_p_c_a09a46da4d492eb3dde88f35dc58c997b}{View\+P\+C\+::on\+\_\+action\+About\+\_\+triggered}} Opens about page. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_view_p_c_a0d252ff4829260c6c76769fbd24b7cd7}{on\+\_\+action\+Help\+\_\+triggered}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_view_p_c_a0d252ff4829260c6c76769fbd24b7cd7}{View\+P\+C\+::on\+\_\+action\+Help\+\_\+triggered}} Opens online documentation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_view_p_c}{View\+PC}} class View layer of the app. Controls \mbox{\hyperlink{class_encrypt_dialog}{Encrypt\+Dialog}} and Progress\+Dialog. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_controller_p_c}{Controller\+PC}}, \mbox{\hyperlink{class_model_p_c}{Model\+PC}}, \mbox{\hyperlink{class_encrypt_dialog}{Encrypt\+Dialog}} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{viewpc_8h_source_l00033}{33}} of file \mbox{\hyperlink{viewpc_8h_source}{viewpc.\+h}}.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_view_p_c_a33c96c61f61042319c66c19059836b7f}\label{class_view_p_c_a33c96c61f61042319c66c19059836b7f}} 
+\index{View\+PC@{View\+PC}!View\+PC@{View\+PC}}
+\index{View\+PC@{View\+PC}!View\+PC@{View\+PC}}
+\subsubsection{\texorpdfstring{View\+P\+C()}{ViewPC()}}
+{\footnotesize\ttfamily View\+P\+C\+::\+View\+PC (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Definition at line \mbox{\hyperlink{viewpc_8cpp_source_l00004}{4}} of file \mbox{\hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{class_view_p_c_a33c96c61f61042319c66c19059836b7f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_view_p_c_a91c51f5c1e6ed5ab12b410339f469b0f}\label{class_view_p_c_a91c51f5c1e6ed5ab12b410339f469b0f}} 
+\index{View\+PC@{View\+PC}!````~View\+PC@{$\sim$\+View\+PC}}
+\index{````~View\+PC@{$\sim$\+View\+PC}!View\+PC@{View\+PC}}
+\subsubsection{\texorpdfstring{$\sim$\+View\+P\+C()}{~ViewPC()}}
+{\footnotesize\ttfamily View\+P\+C\+::$\sim$\+View\+PC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{viewpc_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}}.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_view_p_c_ad7ba2fcf1d17862de15e32432823f7b0}\label{class_view_p_c_ad7ba2fcf1d17862de15e32432823f7b0}} 
+\index{View\+PC@{View\+PC}!abort\+Circuit@{abort\+Circuit}}
+\index{abort\+Circuit@{abort\+Circuit}!View\+PC@{View\+PC}}
+\subsubsection{\texorpdfstring{abort\+Circuit}{abortCircuit}}
+{\footnotesize\ttfamily void View\+P\+C\+::abort\+Circuit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_view_p_c_ad7ba2fcf1d17862de15e32432823f7b0}{View\+P\+C\+::abort\+Circuit}} Slot to close Progress\+Dialog (\mbox{\hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{View\+P\+C\+::dialog}}) 
+
+
+
+Definition at line \mbox{\hyperlink{viewpc_8cpp_source_l00220}{220}} of file \mbox{\hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_view_p_c_ad7ba2fcf1d17862de15e32432823f7b0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_view_p_c_a863f5233af3791bd165a2811a5d9bcc2}\label{class_view_p_c_a863f5233af3791bd165a2811a5d9bcc2}} 
+\index{View\+PC@{View\+PC}!abort\+Model@{abort\+Model}}
+\index{abort\+Model@{abort\+Model}!View\+PC@{View\+PC}}
+\subsubsection{\texorpdfstring{abort\+Model}{abortModel}}
+{\footnotesize\ttfamily View\+P\+C\+::abort\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+abort\+Model Signal calling to stop \mbox{\hyperlink{class_model_p_c_a1d0091062a0c836b283ec2f67411623b}{Model\+P\+C\+::circuit}} 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_view_p_c_a863f5233af3791bd165a2811a5d9bcc2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_view_p_c_a7c467169467789561078abc9d4fe57bd}\label{class_view_p_c_a7c467169467789561078abc9d4fe57bd}} 
+\index{View\+PC@{View\+PC}!alert@{alert}}
+\index{alert@{alert}!View\+PC@{View\+PC}}
+\subsubsection{\texorpdfstring{alert}{alert}}
+{\footnotesize\ttfamily void View\+P\+C\+::alert (\begin{DoxyParamCaption}\item[{Q\+String}]{message,  }\item[{bool}]{is\+Warning = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{View\+P\+C\+::alert}} Slot to create Q\+Message\+Box with message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & Message to be shown \\
+\hline
+{\em is\+Warning} & Flag, if message is critical. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{viewpc_8cpp_source_l00134}{134}} of file \mbox{\hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{class_view_p_c_a7c467169467789561078abc9d4fe57bd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_view_p_c_acf8feb98f757cc238dada1df2308e303}\label{class_view_p_c_acf8feb98f757cc238dada1df2308e303}} 
+\index{View\+PC@{View\+PC}!decrypt@{decrypt}}
+\index{decrypt@{decrypt}!View\+PC@{View\+PC}}
+\subsubsection{\texorpdfstring{decrypt}{decrypt}}
+{\footnotesize\ttfamily View\+P\+C\+::decrypt (\begin{DoxyParamCaption}\item[{Q\+Image $\ast$}]{\+\_\+image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+decrypt Signal calling \mbox{\hyperlink{class_model_p_c_af1f0b21565bf39808c4cdd448fad0ea8}{Model\+P\+C\+::decrypt}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+image} & Image for decryption \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{class_view_p_c_acf8feb98f757cc238dada1df2308e303_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_view_p_c_ade35449b95cf1c5424c4eb929f46fd73}\label{class_view_p_c_ade35449b95cf1c5424c4eb929f46fd73}} 
+\index{View\+PC@{View\+PC}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!View\+PC@{View\+PC}}
+\subsubsection{\texorpdfstring{encrypt}{encrypt}}
+{\footnotesize\ttfamily View\+P\+C\+::encrypt (\begin{DoxyParamCaption}\item[{Q\+Byte\+Array}]{data,  }\item[{Q\+Image $\ast$}]{image,  }\item[{int}]{mode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+encrypt Signal calling \mbox{\hyperlink{class_model_p_c_a8ef76567bc0c0307b4e2547c46536e51}{Model\+P\+C\+::encrypt}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to write \\
+\hline
+{\em image} & Image to be encrypted into. \\
+\hline
+{\em mode} & Mode of encryption \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{class_view_p_c_ade35449b95cf1c5424c4eb929f46fd73_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_view_p_c_a09a46da4d492eb3dde88f35dc58c997b}\label{class_view_p_c_a09a46da4d492eb3dde88f35dc58c997b}} 
+\index{View\+PC@{View\+PC}!on\+\_\+action\+About\+\_\+triggered@{on\+\_\+action\+About\+\_\+triggered}}
+\index{on\+\_\+action\+About\+\_\+triggered@{on\+\_\+action\+About\+\_\+triggered}!View\+PC@{View\+PC}}
+\subsubsection{\texorpdfstring{on\+\_\+action\+About\+\_\+triggered}{on\_actionAbout\_triggered}}
+{\footnotesize\ttfamily void View\+P\+C\+::on\+\_\+action\+About\+\_\+triggered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_view_p_c_a09a46da4d492eb3dde88f35dc58c997b}{View\+P\+C\+::on\+\_\+action\+About\+\_\+triggered}} Opens about page. 
+
+
+
+Definition at line \mbox{\hyperlink{viewpc_8cpp_source_l00255}{255}} of file \mbox{\hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{class_view_p_c_a09a46da4d492eb3dde88f35dc58c997b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_view_p_c_a0d252ff4829260c6c76769fbd24b7cd7}\label{class_view_p_c_a0d252ff4829260c6c76769fbd24b7cd7}} 
+\index{View\+PC@{View\+PC}!on\+\_\+action\+Help\+\_\+triggered@{on\+\_\+action\+Help\+\_\+triggered}}
+\index{on\+\_\+action\+Help\+\_\+triggered@{on\+\_\+action\+Help\+\_\+triggered}!View\+PC@{View\+PC}}
+\subsubsection{\texorpdfstring{on\+\_\+action\+Help\+\_\+triggered}{on\_actionHelp\_triggered}}
+{\footnotesize\ttfamily void View\+P\+C\+::on\+\_\+action\+Help\+\_\+triggered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_view_p_c_a0d252ff4829260c6c76769fbd24b7cd7}{View\+P\+C\+::on\+\_\+action\+Help\+\_\+triggered}} Opens online documentation. 
+
+
+
+Definition at line \mbox{\hyperlink{viewpc_8cpp_source_l00265}{265}} of file \mbox{\hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}}.
+
+\mbox{\Hypertarget{class_view_p_c_a3b9b7a7be9702d8b160f257f1c74a776}\label{class_view_p_c_a3b9b7a7be9702d8b160f257f1c74a776}} 
+\index{View\+PC@{View\+PC}!on\+\_\+file\+Button\+\_\+clicked@{on\+\_\+file\+Button\+\_\+clicked}}
+\index{on\+\_\+file\+Button\+\_\+clicked@{on\+\_\+file\+Button\+\_\+clicked}!View\+PC@{View\+PC}}
+\subsubsection{\texorpdfstring{on\+\_\+file\+Button\+\_\+clicked}{on\_fileButton\_clicked}}
+{\footnotesize\ttfamily void View\+P\+C\+::on\+\_\+file\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_view_p_c_a3b9b7a7be9702d8b160f257f1c74a776}{View\+P\+C\+::on\+\_\+file\+Button\+\_\+clicked}} Slot to be called, when according button is pressed. 
+
+
+
+Definition at line \mbox{\hyperlink{viewpc_8cpp_source_l00046}{46}} of file \mbox{\hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}}.
+
+\mbox{\Hypertarget{class_view_p_c_a456d75b7c5d3a089302a576e7359f1f4}\label{class_view_p_c_a456d75b7c5d3a089302a576e7359f1f4}} 
+\index{View\+PC@{View\+PC}!on\+\_\+start\+Button\+\_\+clicked@{on\+\_\+start\+Button\+\_\+clicked}}
+\index{on\+\_\+start\+Button\+\_\+clicked@{on\+\_\+start\+Button\+\_\+clicked}!View\+PC@{View\+PC}}
+\subsubsection{\texorpdfstring{on\+\_\+start\+Button\+\_\+clicked}{on\_startButton\_clicked}}
+{\footnotesize\ttfamily void View\+P\+C\+::on\+\_\+start\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_view_p_c_a456d75b7c5d3a089302a576e7359f1f4}{View\+P\+C\+::on\+\_\+start\+Button\+\_\+clicked}} Slot to be called, when Start Button is pressed. 
+
+\hypertarget{class_view_p_c_encrypting}{}\subsection{Encrypting}\label{class_view_p_c_encrypting}
+If Encrypting mode is active the data from text browser or from file from file selector will be opened and checked in size. \begin{DoxyNote}{Note}
+File size limit is 16\+MB
+\end{DoxyNote}
+Then the \mbox{\hyperlink{class_encrypt_dialog}{Encrypt\+Dialog}} opens and image and key is selected. Then the \mbox{\hyperlink{class_view_p_c_ade35449b95cf1c5424c4eb929f46fd73}{View\+P\+C\+::encrypt}} signal is called to start \mbox{\hyperlink{class_model_p_c_a8ef76567bc0c0307b4e2547c46536e51}{Model\+P\+C\+::encrypt}} \hypertarget{class_view_p_c_decrypting}{}\subsection{Decrypting}\label{class_view_p_c_decrypting}
+Else, the image from file selector is transmitted to \mbox{\hyperlink{class_model_p_c_af1f0b21565bf39808c4cdd448fad0ea8}{Model\+P\+C\+::decrypt}} 
+
+Definition at line \mbox{\hyperlink{viewpc_8cpp_source_l00068}{68}} of file \mbox{\hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{class_view_p_c_a456d75b7c5d3a089302a576e7359f1f4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_view_p_c_aaff156103970be7c777beedaf0020604}\label{class_view_p_c_aaff156103970be7c777beedaf0020604}} 
+\index{View\+PC@{View\+PC}!save\+Data@{save\+Data}}
+\index{save\+Data@{save\+Data}!View\+PC@{View\+PC}}
+\subsubsection{\texorpdfstring{save\+Data}{saveData}}
+{\footnotesize\ttfamily void View\+P\+C\+::save\+Data (\begin{DoxyParamCaption}\item[{Q\+Byte\+Array}]{Edata }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_view_p_c_aaff156103970be7c777beedaf0020604}{View\+P\+C\+::save\+Data}} Slot to be called to save data using Q\+File\+Dialog. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Edata} & Encrypted data to be saved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_model_p_c_a8ef76567bc0c0307b4e2547c46536e51}{Model\+P\+C\+::encrypt}} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{viewpc_8cpp_source_l00155}{155}} of file \mbox{\hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{class_view_p_c_aaff156103970be7c777beedaf0020604_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_view_p_c_a7901ce10ffaaf2387bef1db7feea342d}\label{class_view_p_c_a7901ce10ffaaf2387bef1db7feea342d}} 
+\index{View\+PC@{View\+PC}!save\+Image@{save\+Image}}
+\index{save\+Image@{save\+Image}!View\+PC@{View\+PC}}
+\subsubsection{\texorpdfstring{save\+Image}{saveImage}}
+{\footnotesize\ttfamily void View\+P\+C\+::save\+Image (\begin{DoxyParamCaption}\item[{Q\+Image $\ast$}]{image }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_view_p_c_a7901ce10ffaaf2387bef1db7feea342d}{View\+P\+C\+::save\+Image}} Slot to be called to save image using Q\+File\+Dialog. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & Image to be saved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_model_p_c_af1f0b21565bf39808c4cdd448fad0ea8}{Model\+P\+C\+::decrypt}} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{viewpc_8cpp_source_l00176}{176}} of file \mbox{\hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{class_view_p_c_a7901ce10ffaaf2387bef1db7feea342d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_view_p_c_a2ccc0a3f2f48080ae6308e800646fcd5}\label{class_view_p_c_a2ccc0a3f2f48080ae6308e800646fcd5}} 
+\index{View\+PC@{View\+PC}!set\+Bits\+Used@{set\+Bits\+Used}}
+\index{set\+Bits\+Used@{set\+Bits\+Used}!View\+PC@{View\+PC}}
+\subsubsection{\texorpdfstring{set\+Bits\+Used}{setBitsUsed}}
+{\footnotesize\ttfamily View\+P\+C\+::set\+Bits\+Used (\begin{DoxyParamCaption}\item[{int}]{bits\+Used }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+set\+Bits\+Used Sets bits used in \mbox{\hyperlink{class_model_p_c}{Model\+PC}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bits\+Used} & The new value \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_model_p_c_a655deb6a8afa94c7f4aadb3056989038}{Model\+P\+C\+::bits\+Used}} 
+\end{DoxySeeAlso}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=347pt]{class_view_p_c_a2ccc0a3f2f48080ae6308e800646fcd5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_view_p_c_a5b48951efefdc0e3039c9a4bf185320b}\label{class_view_p_c_a5b48951efefdc0e3039c9a4bf185320b}} 
+\index{View\+PC@{View\+PC}!set\+Encrypt\+Mode@{set\+Encrypt\+Mode}}
+\index{set\+Encrypt\+Mode@{set\+Encrypt\+Mode}!View\+PC@{View\+PC}}
+\subsubsection{\texorpdfstring{set\+Encrypt\+Mode}{setEncryptMode}}
+{\footnotesize\ttfamily void View\+P\+C\+::set\+Encrypt\+Mode (\begin{DoxyParamCaption}\item[{bool}]{encr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_view_p_c_a5b48951efefdc0e3039c9a4bf185320b}{View\+P\+C\+::set\+Encrypt\+Mode}} Set the encrpt mode (View\+P\+C\+::is\+Encrypt) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em encr} & \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{viewpc_8cpp_source_l00233}{233}} of file \mbox{\hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}}.
+
+\mbox{\Hypertarget{class_view_p_c_ababceedc355ecc1217a4c708e19e5e6b}\label{class_view_p_c_ababceedc355ecc1217a4c708e19e5e6b}} 
+\index{View\+PC@{View\+PC}!set\+J\+P\+H\+S\+Dir@{set\+J\+P\+H\+S\+Dir}}
+\index{set\+J\+P\+H\+S\+Dir@{set\+J\+P\+H\+S\+Dir}!View\+PC@{View\+PC}}
+\subsubsection{\texorpdfstring{set\+J\+P\+H\+S\+Dir}{setJPHSDir}}
+{\footnotesize\ttfamily View\+P\+C\+::set\+J\+P\+H\+S\+Dir (\begin{DoxyParamCaption}\item[{Q\+String}]{dir }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [signal]}}
+
+
+
+set\+J\+P\+H\+S\+Path Sets the default J\+P\+HS directory 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & Directory \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_view_p_c_a9c32a1fdb6ead84e5ada8fba8860c7ed}\label{class_view_p_c_a9c32a1fdb6ead84e5ada8fba8860c7ed}} 
+\index{View\+PC@{View\+PC}!set\+Progress@{set\+Progress}}
+\index{set\+Progress@{set\+Progress}!View\+PC@{View\+PC}}
+\subsubsection{\texorpdfstring{set\+Progress}{setProgress}}
+{\footnotesize\ttfamily void View\+P\+C\+::set\+Progress (\begin{DoxyParamCaption}\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_view_p_c_a9c32a1fdb6ead84e5ada8fba8860c7ed}{View\+P\+C\+::set\+Progress}} Slot to set the value of the Progress\+Dialog (\mbox{\hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{View\+P\+C\+::dialog}}). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em val} & New value of the dialog. If -\/1, creates Progress\+Dialog, if 101 closes the dialog. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_view_p_c_ad7ba2fcf1d17862de15e32432823f7b0}{View\+P\+C\+::abort\+Circuit()}}, \mbox{\hyperlink{class_model_p_c_a25a4496e129e87ac96f12257a123b84f}{Model\+P\+C\+::set\+Progress()}} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{viewpc_8cpp_source_l00194}{194}} of file \mbox{\hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{class_view_p_c_a9c32a1fdb6ead84e5ada8fba8860c7ed_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_view_p_c_ac05220df875b7c4f24405a5742476ebf}\label{class_view_p_c_ac05220df875b7c4f24405a5742476ebf}} 
+\index{View\+PC@{View\+PC}!set\+Version@{set\+Version}}
+\index{set\+Version@{set\+Version}!View\+PC@{View\+PC}}
+\subsubsection{\texorpdfstring{set\+Version}{setVersion}}
+{\footnotesize\ttfamily void View\+P\+C\+::set\+Version (\begin{DoxyParamCaption}\item[{Q\+String}]{version }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_view_p_c_ac05220df875b7c4f24405a5742476ebf}{View\+P\+C\+::set\+Version}} Set the version of the app from \mbox{\hyperlink{class_controller_p_c}{Controller\+PC}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em version} & Version as Q\+String \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{viewpc_8cpp_source_l00242}{242}} of file \mbox{\hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_view_p_c_ac05220df875b7c4f24405a5742476ebf_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}\label{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}} 
+\index{View\+PC@{View\+PC}!dialog@{dialog}}
+\index{dialog@{dialog}!View\+PC@{View\+PC}}
+\subsubsection{\texorpdfstring{dialog}{dialog}}
+{\footnotesize\ttfamily Q\+Progress\+Dialog$\ast$ View\+P\+C\+::dialog}
+
+
+
+dialog Progress\+Dialog used. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_view_p_c_a9c32a1fdb6ead84e5ada8fba8860c7ed}{View\+P\+C\+::set\+Progress}}, View\+P\+C\+::cancel, \mbox{\hyperlink{class_model_p_c_a25a4496e129e87ac96f12257a123b84f}{Model\+P\+C\+::set\+Progress}} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{viewpc_8h_source_l00096}{96}} of file \mbox{\hyperlink{viewpc_8h_source}{viewpc.\+h}}.
+
+\mbox{\Hypertarget{class_view_p_c_a26f90436aca32e5bad46f5e69a7e7e09}\label{class_view_p_c_a26f90436aca32e5bad46f5e69a7e7e09}} 
+\index{View\+PC@{View\+PC}!errors\+Dict@{errors\+Dict}}
+\index{errors\+Dict@{errors\+Dict}!View\+PC@{View\+PC}}
+\subsubsection{\texorpdfstring{errors\+Dict}{errorsDict}}
+{\footnotesize\ttfamily Q\+Json\+Object View\+P\+C\+::errors\+Dict}
+
+
+
+Definition at line \mbox{\hyperlink{viewpc_8h_source_l00102}{102}} of file \mbox{\hyperlink{viewpc_8h_source}{viewpc.\+h}}.
+
+\mbox{\Hypertarget{class_view_p_c_add8c82aa2b0b934212aa5bde9277ab36}\label{class_view_p_c_add8c82aa2b0b934212aa5bde9277ab36}} 
+\index{View\+PC@{View\+PC}!progress\+Dialog\+Closed@{progress\+Dialog\+Closed}}
+\index{progress\+Dialog\+Closed@{progress\+Dialog\+Closed}!View\+PC@{View\+PC}}
+\subsubsection{\texorpdfstring{progress\+Dialog\+Closed}{progressDialogClosed}}
+{\footnotesize\ttfamily bool View\+P\+C\+::progress\+Dialog\+Closed}
+
+
+
+progress\+Dialog\+Closed Flag, if dialog is closed. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_view_p_c_ad7ba2fcf1d17862de15e32432823f7b0}{View\+P\+C\+::abort\+Circuit}}, \mbox{\hyperlink{class_view_p_c_a9c32a1fdb6ead84e5ada8fba8860c7ed}{View\+P\+C\+::set\+Progress}} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{viewpc_8h_source_l00101}{101}} of file \mbox{\hyperlink{viewpc_8h_source}{viewpc.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/salex/\+Documents/\+Git\+Hub/\+Picture\+Crypt/\mbox{\hyperlink{viewpc_8h}{viewpc.\+h}}\item 
+C\+:/\+Users/salex/\+Documents/\+Git\+Hub/\+Picture\+Crypt/\mbox{\hyperlink{viewpc_8cpp}{viewpc.\+cpp}}\end{DoxyCompactItemize}
