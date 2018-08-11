@@ -1,0 +1,118 @@
+\hypertarget{_r_e_a_d_m_e_8md_source}{}\section{C\+:/\+Users/salex/\+Documents/\+Git\+Hub/\+Picture\+Crypt/\+R\+E\+A\+D\+ME.md}
+
+\begin{DoxyCode}
+00001 # PictureCrypt
+00002 Make your pictures crypted.
+00003 
+00004 
+00005 ## About
+00006 Project is made only using QT.
+00007 [QAESEncryption](http://github.com/bricke/Qt-AES) by bricke was also used.
+00008 MVC pattern used.
+00009 PictureCrypt project is UI based, the model contains all buisness logic and can work as standalone
+       class.
+00010 
+00011 ## External use
+00012 ModelPC class can be used externally (without UI)
+00013 ```
+00014 #include <modelpc.h>
+00015 #include <QByteArray>
+00016 #include <QImage>
+00017 
+00018 ...
+00019 
+00020 ModelPC * model = new ModelPC(ver);
+00021 // ver is version of the app, used to check the data structure version
+00022 // ver is type long and is calculated as if version is "x.y.z" => ver = x * 65536 + y * 256 + z
+00023 // Default parameter is 2^17 (2.0.0)
+00024 
+00025 // Connecting signals
+00026 
+00027 // Essential ones
+00028 
+00029 model->saveData(QByteArray data)
+00030 // Used to return the retrieved data
+00031 
+00032 model->saveImage(QImage * image)
+00033 // Used to return the modified image
+00034 
+00035 // Extra ones
+00036 
+00037 model->alertView(QString message, bool isWarning)
+00038 // Used for messages to be shown to users
+00039 
+00040 model->setProgress(int val)
+00041 // Used to show user the progress of embedding
+00042 // -1 indicates the creation of some kind of progress dialog
+00043 // from 0 to 100 shows the progress
+00044 // 101 indicates that progress dialog should be closed
+00045 
+00046 ```
+00047 
+00048 ## Avaible methods
+00049 ### Essential ones
+00050 #### start
+00051 Used for embedding
+00052 
+00053 Parameters:
+00054 data   Data to be encrypted
+00055 \_image Image to be encrypted into.
+00056 \_bitsUsed  Bits per byte, see also ModelPC::bitsUsed
+00057 key    Key, if default (empty), random key of 64 charachters will be generated.
+00058 mode   Mode of encryption
+00059 ```
+00060 model->start(QByteArray data, QImage image, int mode = 0, QString key = "", int \_bitsUsed = 8);
+00061 ```
+00062 
+00063 #### decrypt
+00064 Used for de-embedding
+00065 
+00066 Parameters:
+00067 image  Image to be decrypted.
+00068 
+00069 ```
+00070 model->decrypt(QImage * image);
+00071 ```
+00072 ### Extra ones
+00073 #### encrypt
+00074 Used for embedding but with data already packed with stuff like version, file size, aes key, etc.
+00075 Used in PictureCrypt project
+00076 
+00077 Parameters:
+00078 
+00079 encr\_data  Data to be embbed to an image.
+00080 image  Image to be embbed into.
+00081 mode   Mode of encryption
+00082 
+00083 ```
+00084 model->encrypt(QByteArray encr\_data, QImage * image, int mode = 0);
+00085 ```
+00086 #### fail
+00087 Used for stopping the embedding or de-embedding proccess
+00088 Parameters:
+00089 
+00090 message    Message for user
+00091 ```
+00092 model->fail(QString message);
+00093 ```
+00094 
+00095 ## Available modes of embedding
+00096 * 0 - Standard, created by me
+00097 * 1 - JPHS, requires manually installed JPHS and specified directory (not currently available).
+00098 
+00099 ## Documentation
+00100 Doxygen Documentation avaible [here](https://waleko.github.io/doc/picturecrypt)
+00101 
+00102 
+00103 ## Dependencies
+00104 * qtcore
+00105 * [QAESEncryption](https://github.com/bricke/Qt-AES) by bricke
+00106 
+00107 ## Contact
+00108 Question or suggestions are welcome!
+00109 Please use the GitHub issue tracking to report suggestions or issues.
+00110 Email me a.kovrigin0@gmail.com and visit my site http://alex.unaux.com
+00111 
+00112 ## License
+00113 This software is provided under the [UNLICENSE](http://unlicense.org/)
+\end{DoxyCode}

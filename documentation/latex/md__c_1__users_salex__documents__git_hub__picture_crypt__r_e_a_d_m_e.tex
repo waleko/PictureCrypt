@@ -1,0 +1,119 @@
+Make your pictures crypted.
+
+\subsection*{About}
+
+Project is made only using QT. \href{http://github.com/bricke/Qt-AES}{\tt Q\+A\+E\+S\+Encryption} by bricke was also used. M\+VC pattern used. Picture\+Crypt project is UI based, the model contains all buisness logic and can work as standalone class.
+
+\subsection*{External use}
+
+\mbox{\hyperlink{class_model_p_c}{Model\+PC}} class can be used externally (without UI) 
+\begin{DoxyCode}
+#include <modelpc.h>
+#include <QByteArray>
+#include <QImage>
+
+...
+
+ModelPC * model = new ModelPC(ver);
+// ver is version of the app, used to check the data structure version
+// ver is type long and is calculated as if version is "x.y.z" => ver = x * 65536 + y * 256 + z
+// Default parameter is 2^17 (2.0.0)
+
+// Connecting signals
+
+// Essential ones
+
+model->saveData(QByteArray data)
+// Used to return the retrieved data
+
+model->saveImage(QImage * image)
+// Used to return the modified image
+
+// Extra ones
+
+model->alertView(QString message, bool isWarning)
+// Used for messages to be shown to users
+
+model->setProgress(int val)
+// Used to show user the progress of embedding
+// -1 indicates the creation of some kind of progress dialog
+// from 0 to 100 shows the progress
+// 101 indicates that progress dialog should be closed
+\end{DoxyCode}
+
+
+\subsection*{Avaible methods}
+
+\subsubsection*{Essential ones}
+
+\paragraph*{start}
+
+Used for embedding
+
+Parameters\+: data Data to be encrypted \+\_\+image Image to be encrypted into. \+\_\+bits\+Used Bits per byte, see also \mbox{\hyperlink{class_model_p_c_a655deb6a8afa94c7f4aadb3056989038}{Model\+P\+C\+::bits\+Used}} key Key, if default (empty), random key of 64 charachters will be generated. mode Mode of encryption 
+\begin{DoxyCode}
+model->start(QByteArray data, QImage image, int mode = 0, QString key = "", int \_bitsUsed = 8);
+\end{DoxyCode}
+
+
+\paragraph*{decrypt}
+
+Used for de-\/embedding
+
+Parameters\+: image Image to be decrypted.
+
+
+\begin{DoxyCode}
+model->decrypt(QImage * image);
+\end{DoxyCode}
+ \subsubsection*{Extra ones}
+
+\paragraph*{encrypt}
+
+Used for embedding but with data already packed with stuff like version, file size, aes key, etc. Used in Picture\+Crypt project
+
+Parameters\+:
+
+encr\+\_\+data Data to be embbed to an image. image Image to be embbed into. mode Mode of encryption
+
+
+\begin{DoxyCode}
+model->encrypt(QByteArray encr\_data, QImage * image, int mode = 0);
+\end{DoxyCode}
+ \paragraph*{fail}
+
+Used for stopping the embedding or de-\/embedding proccess Parameters\+:
+
+message Message for user 
+\begin{DoxyCode}
+model->fail(QString message);
+\end{DoxyCode}
+
+
+\subsection*{Available modes of embedding}
+
+
+\begin{DoxyItemize}
+\item 0 -\/ Standard, created by me
+\item 1 -\/ J\+P\+HS, requires manually installed J\+P\+HS and specified directory (not currently available).
+\end{DoxyItemize}
+
+\subsection*{Documentation}
+
+Doxygen Documentation avaible \href{https://waleko.github.io/doc/picturecrypt}{\tt here}
+
+\subsection*{Dependencies}
+
+
+\begin{DoxyItemize}
+\item qtcore
+\item \href{https://github.com/bricke/Qt-AES}{\tt Q\+A\+E\+S\+Encryption} by bricke
+\end{DoxyItemize}
+
+\subsection*{Contact}
+
+Question or suggestions are welcome! Please use the Git\+Hub issue tracking to report suggestions or issues. Email me \href{mailto:a.kovrigin0@gmail.com}{\tt a.\+kovrigin0@gmail.\+com} and visit my site \href{http://alex.unaux.com}{\tt http\+://alex.\+unaux.\+com}
+
+\subsection*{License}
+
+This software is provided under the \href{http://unlicense.org/}{\tt U\+N\+L\+I\+C\+E\+N\+SE} 
