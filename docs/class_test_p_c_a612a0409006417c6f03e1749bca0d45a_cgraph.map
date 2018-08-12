@@ -1,0 +1,16 @@
+<map id="TestPC::test" name="TestPC::test">
+<area shape="rect" id="node2" href="$class_model_p_c.html#a3cae34fd5bcb06e8c1f8cfe7961bd270" title="ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff After completion sta..." alt="" coords="148,272,257,299"/>
+<area shape="rect" id="node12" href="$class_model_p_c.html#af1f0b21565bf39808c4cdd448fad0ea8" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="305,95,432,121"/>
+<area shape="rect" id="node3" href="$class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="1012,183,1111,209"/>
+<area shape="rect" id="node5" href="$class_model_p_c.html#afebbbfa4b07deba4f68fc6dfb50f353f" title="ModelPC::zip Zip function, copy of EncryptDialog::zip Used for ModelPC in custom projects, other than PictureCrypt. " alt="" coords="319,360,419,387"/>
+<area shape="rect" id="node8" href="$class_model_p_c.html#a8ef76567bc0c0307b4e2547c46536e51" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="305,233,432,260"/>
+<area shape="rect" id="node4" href="$class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. " alt="" coords="1207,183,1315,209"/>
+<area shape="rect" id="node6" href="$class_q_a_e_s_encryption.html#a43819eeb6a7cb29fbd3cb6ad640dcbdf" title="Crypt Static encode function. " alt="" coords="480,360,640,387"/>
+<area shape="rect" id="node7" href="$class_q_a_e_s_encryption.html#aeac0ee8532e69e5d30b023fe38c30b3b" title="QAESEncryption::QAESEncryption" alt="" coords="688,360,916,387"/>
+<area shape="rect" id="node9" href="$class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="501,132,619,159"/>
+<area shape="rect" id="node11" href="$class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="749,208,855,235"/>
+<area shape="rect" id="node10" href="$class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="723,157,881,184"/>
+<area shape="rect" id="node13" href="$class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0" title="ModelPC::unzip Unzip data from ModelPC::decrypt. Just mirrored EncryptDialog::zip. " alt="" coords="503,5,617,32"/>
+<area shape="rect" id="node14" href="$class_q_a_e_s_encryption.html#a58f972f2b66c2454edd5112495463bba" title="decode Decodes data with AES " alt="" coords="717,5,887,32"/>
+<area shape="rect" id="node15" href="$class_q_a_e_s_encryption.html#a5bfbb972f84a8376fceed648553c0912" title="ExpandKey Expands the key. " alt="" coords="964,5,1159,32"/>
+</map>

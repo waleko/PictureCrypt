@@ -1,9 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>icons/image.png</file>
-        <file>icons/loading.png</file>
-        <file>icons/unlocked.png</file>
-        <file>icons/mail.png</file>
-        <file>icons/code.png</file>
-    </qresource>
-</RCC>

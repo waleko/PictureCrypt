@@ -1,0 +1,95 @@
+digraph oh
+{
+node [shape=plaintext, fontsize=16]
+{
+Files -> Tester -> Controller -> "Non-Controller Layers" -> "Extra Classes" -> "ViewPC Functions" -> "ModelPC Functions";
+}
+node [shape=hexagon, style=filled, color=tan1]
+{
+  {rank = same; Files; "tests.json"; "main.cpp"; "ErrorsDict.json"; "tests.log"}
+}
+node [shape=signature, style=filled, color=olivedrab1]
+{
+  {rank = same; Tester; TestPC}
+}
+node [shape=box, style=filled, color=pink]
+{
+  {rank = same; Controller; ControllerPC}
+  {rank = same; "Extra Classes"; QAESEncryption}
+}
+node [shape= ellipse, style=filled, color=lightblue]
+{
+  {rank = same; "Non-Controller Layers"; ViewPC}
+  {rank = same; "Extra Classes"; EncryptDialog; AboutPC}
+  {rank = same; "ViewPC Functions"; "ViewPC::saveData()"; "ViewPC::saveImage()"; "ViewPC::setProgress()"; "ViewPC::on_startButton_clicked()"; "Open About Page"; "Open online\ndocumentation"}
+}
+node [shape= ellipse, style=filled, color=tomato]
+{
+  {rank = same; "Non-Controller Layers"; ModelPC}
+  {rank = same; "ModelPC Functions"; "ModelPC::encrypt()"; "ModelPC::decrypt()"; "ModelPC::circuit()"; "ModelPC::processPixel()"; "ModelPC::start"}
+}
+
+TestPC[URL="\ref TestPC"]
+"ModelPC::start"[URL="\ref ModelPC::start"]
+"tests.json"[URL="\ref unit_tests/tests.json"]
+"main.cpp"[URL="\ref main.cpp"]
+"ErrorsDict.json"[URL="\ref config/ErrorsDict.json"]
+
+ControllerPC [shape=box, URL="\ref ControllerPC"]
+QAESEncryption [color=gold, shape=box, URL="\ref QAESEncryption"]
+ViewPC [shape=box, URL="\ref ViewPC"]
+ModelPC [shape=box, URL="\ref ModelPC"]
+EncryptDialog [shape=box, URL="\ref EncryptDialog"]
+AboutPC [shape=box, URL="\ref AboutPC"]
+"ModelPC::encrypt()" [URL = "\ref ModelPC::encrypt"]
+"ModelPC::decrypt()" [URL = "\ref ModelPC::decrypt"]
+"ModelPC::circuit()" [URL = "\ref ModelPC::circuit"]
+"ModelPC::processPixel()" [URL = "\ref ModelPC::processPixel"]
+"ViewPC::on_startButton_clicked()" [URL = "\ref ViewPC::on_startButton_clicked"]
+"ViewPC::setProgress()" [URL = "\ref ViewPC::setProgress"]
+"ViewPC::saveImage()" [URL = "\ref ViewPC::saveImage"]
+"ViewPC::saveData()" [URL = "\ref ViewPC::saveData"]
+
+"main.cpp" -> ControllerPC [color=maroon]
+"main.cpp" -> TestPC [color=maroon]
+TestPC -> ModelPC [color=maroon]
+TestPC -> "ModelPC::start"[color=darkgreen]
+TestPC -> "tests.log"[color=orange]
+TestPC -> "tests.json"[color=orange]
+
+ControllerPC -> ViewPC [color=maroon]
+ControllerPC -> ModelPC [color=maroon]
+
+ModelPC -> "ModelPC::encrypt()" [color=red]
+ModelPC -> "ModelPC::decrypt()" [color=red]
+ModelPC -> "ModelPC::circuit()" [color=red]
+ModelPC -> "ModelPC::processPixel()" [color=red]
+
+ViewPC -> "ErrorsDict.json"[color=orange]
+ViewPC -> EncryptDialog [color=maroon]
+ViewPC -> AboutPC [color=maroon]
+ViewPC -> "Open About Page" [color =navy]
+"Open About Page" -> AboutPC [style=dotted, color=darkgreen]
+ViewPC -> "Open online\ndocumentation" [color=navy]
+
+"ModelPC::decrypt()" -> QAESEncryption [color=darkgreen, style=dotted]
+EncryptDialog -> QAESEncryption [color=darkgreen, style=dotted]
+
+ViewPC -> "ViewPC::on_startButton_clicked()" [color=navy]
+ViewPC -> "ViewPC::setProgress()" [color=navy]
+ViewPC -> "ViewPC::saveImage()" [color=navy]
+ViewPC -> "ViewPC::saveData()" [color = navy]
+
+"ViewPC::on_startButton_clicked()" -> "ModelPC::encrypt()" [style=dotted]
+"ViewPC::on_startButton_clicked()" -> "ModelPC::decrypt()" [style=dotted]
+"ViewPC::on_startButton_clicked()" -> EncryptDialog [color=darkgreen, style=dotted]
+
+"ModelPC::encrypt()" -> "ModelPC::circuit()" [color=darkgreen]
+EncryptDialog -> "ModelPC::encrypt()" [color=darkgreen, style=dotted]
+"ModelPC::decrypt()" -> "ModelPC::circuit()" [color=darkgreen]
+"ModelPC::circuit()" -> "ModelPC::processPixel()" [color=darkgreen]
+"ModelPC::processPixel()" -> "ViewPC::setProgress()" [style=dotted]
+"ModelPC::encrypt()" -> "ViewPC::saveImage()" [style=dotted]
+"ModelPC::decrypt()" -> "ViewPC::saveData()" [style =dotted]
+"ModelPC::start" -> "ModelPC::encrypt()" [color=darkgreen, style=dotted]
+}

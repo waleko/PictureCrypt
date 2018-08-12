@@ -1,0 +1,6 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$class_controller_p_c.html" title="The ControllerPC class Controller class, which controls View and Model layers. " alt="" coords="137,5,232,32"/>
+<area shape="rect" id="node3" href="$class_model_p_c.html" title="The ModelPC class Model Layer of the app. Controled by ControllerPC. " alt="" coords="147,56,222,83"/>
+<area shape="rect" id="node4" href="$class_q_a_e_s_encryption.html" title="The QAESEncryption class Small and portable AES encryption class for Qt. Supports all key sizes &#45; 128..." alt="" coords="124,107,245,133"/>
+<area shape="rect" id="node5" href="$class_test_p_c.html" title="The TestPC class AutoTest for ModelPC Currently used in main.cpp. " alt="" coords="152,157,217,184"/>
+</map>

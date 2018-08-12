@@ -1,13 +1,14 @@
 # PictureCrypt
 Make your pictures crypted.
 
+
 ## About
 Project is made only using QT.
 [QAESEncryption](http://github.com/bricke/Qt-AES) by bricke was also used.
 MVC pattern used.
 PictureCrypt project is UI based, the model contains all buisness logic and can work as standalone class.
 
-## External usage 
+## External use
 ModelPC class can be used externally (without UI)
 ```
 #include <modelpc.h>
@@ -91,17 +92,15 @@ message    Message for user
 model->fail(QString message);
 ```
 
-## Avaible modes of embedding
+## Available modes of embedding
 * 0 - Standard, created by me
-* 1 - JPHS, requires manually installed JPHS and specified directory.
+* 1 - JPHS, requires manually installed JPHS and specified directory (not currently available).
 
 ## Documentation
-Doxygen Documentation avaibale [here](http://doc.alex.unaux.com/picturecrypt)
+Doxygen Documentation avaible [here](https://waleko.github.io/doc/picturecrypt)
 
-## Windows Installer
-Windows installer for non-QT build [here](http://bit.ly/PictureCryptProject)
 
-## Dependancies
+## Dependencies
 * qtcore
 * [QAESEncryption](https://github.com/bricke/Qt-AES) by bricke
 
