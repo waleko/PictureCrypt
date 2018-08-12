@@ -34,6 +34,8 @@ ModelPC::ModelPC()
 QImage * ModelPC::start(QByteArray data, QImage * image, int mode, QString key, int _bitsUsed, QString *_error)
 {
     // Error management
+    if(_error == nullptr)
+        _error = new QString();
     *_error = "ok";
     error = _error;
 
@@ -90,6 +92,8 @@ QImage * ModelPC::start(QByteArray data, QImage * image, int mode, QString key, 
 QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode, QString *_error)
 {
     // Error management
+    if(_error == nullptr)
+        _error = new QString();
     *_error = "ok";
     error = _error;
 
@@ -140,6 +144,8 @@ QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode, QStrin
 QByteArray ModelPC::decrypt(QImage * image, QString *_error)
 {
     // Error management
+    if(_error == nullptr)
+        _error = new QString();
     *_error = "ok";
     error = _error;
     if(image == nullptr || image->isNull()) {

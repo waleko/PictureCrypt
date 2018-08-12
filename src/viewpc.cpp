@@ -10,7 +10,6 @@ ViewPC::ViewPC(QWidget *parent) :
     progressDialogClosed = true;
 
     // Alerts dictionary setup
-    // TODO Add relative path
     QFile file(":/config/ErrorsDict.json");
     if(!file.open(QFile::ReadOnly | QFile::Text)) {
         alert("Cannot open config file!");
