@@ -9,7 +9,6 @@
 #include <QString>
 #include <QImage>
 #include <QByteArray>
-#include <QVector>
 
 #include <QJsonDocument>
 #include <QJsonArray>

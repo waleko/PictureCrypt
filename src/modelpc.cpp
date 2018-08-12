@@ -30,6 +30,7 @@ ModelPC::ModelPC()
  * \param _bitsUsed Bits per byte (see ModelPC::bitsUsed)
  * \param _error Error output
  * \return Returns image with embedded data
+ * \sa ModelPC::encrypt
  */
 QImage * ModelPC::start(QByteArray data, QImage * image, int mode, QString key, int _bitsUsed, QString *_error)
 {
@@ -87,7 +88,7 @@ QImage * ModelPC::start(QByteArray data, QImage * image, int mode, QString key, 
  * \param mode Mode of encryption
  * \param _error Error output
  * \return Returns image with embedded data.
- * \sa ViewPC::on_startButton_clicked, ModelPC::decrypt, ModelPC::circuit
+ * \sa ViewPC::on_startButton_clicked, ModelPC::decrypt, ModelPC::circuit, ModelPC::start
  */
 QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode, QString *_error)
 {
