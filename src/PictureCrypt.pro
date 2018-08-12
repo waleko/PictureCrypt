@@ -60,5 +60,3 @@ RESOURCES += \
 
 #}
 #win32:QMAKE_POST_LINK += windeployqt $$DESTDIR $$escape_expand(\\n)
-
-DISTFILES +=
