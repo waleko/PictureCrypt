@@ -38,8 +38,9 @@ if(*error != "ok)
 QByteArray output = model->decrypt(QImage * image, // Image with hidden data
 								   QString *_error = nullptr); // Error output
 if(data == output)
-   qDebug() << "Great success!";
-    
+	qDebug() << "Great success!";
+else
+	qDebug() << "Fiasco :(";
 ```
 
 ## Available modes of embedding
@@ -52,9 +53,11 @@ Doxygen Documentation avaible [here](https://waleko.github.io/PictureCrypt)
 
 ## Dependencies
 * qtcore
+* qtgui
+* qtwidgets
 
-## Used works from other people
- * [QAESEncryption](https://github.com/bricke/Qt-AES) by bricke
+## Works of other people used in this project
+ * [QAESEncryption](https://github.com/bricke/Qt-AES) by bricke (provided under [UNLICENSE](http://unlicense.org/))
 
 ## Contact
 Question or suggestions are welcome!
