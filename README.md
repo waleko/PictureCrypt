@@ -50,7 +50,6 @@ else
 ## Documentation
 Doxygen Documentation avaible [here](https://waleko.github.io/PictureCrypt)
 
-
 ## Dependencies
 * qtcore
 * qtgui
