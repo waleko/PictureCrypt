@@ -104,7 +104,7 @@
  * This software is provided under the [UNLICENSE](http://unlicense.org)
  *
  * \section contact Contact us
- * Visit Github Page: https://waleko.github.io and our site http://alex.unaux.com
+ * Visit us: https://www.alexkovrigin.me
  *
  * Email me at a.kovrigin0@gmail.com
  *

@@ -48,7 +48,7 @@ else
 * 1 - JPHS, requires manually installed JPHS and specified directory (not currently available).
 
 ## Documentation
-Doxygen Documentation avaible [here](https://waleko.github.io/PictureCrypt)
+Doxygen Documentation avaible [here](https://alexkovrigin.me/PictureCrypt)
 
 ## Dependencies
 * qtcore

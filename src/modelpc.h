@@ -93,6 +93,7 @@ public:
     QString * error;
     QByteArray unzip(QByteArray data, QByteArray key);
     void alert(QString message, bool isWarning = false);
+    // TODO add static functions: start, encrypt, decrypt.
 protected:
     void circuit(QImage * image, QByteArray * data, long long int countBytes);
     void jphs(QImage * image, QByteArray * data);

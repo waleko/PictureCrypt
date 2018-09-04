@@ -190,8 +190,8 @@ QByteArray ModelPC::decrypt(QImage * image, QString *_error)
 
     }
     // Version check
-    long long int _ver = mod(data.at(0) * pow(2, 16));
-    _ver += mod(data.at(1) * pow(2, 8));
+    long long int _ver = mod(data.at(0)) * pow(2, 16);
+    _ver += mod(data.at(1)) * pow(2, 8);
     _ver += mod(data.at(2));
     data.remove(0, 3);
     if(_ver > version) {

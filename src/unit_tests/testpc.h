@@ -24,6 +24,7 @@ class TestPC : public QObject
     Q_OBJECT
 public:
     TestPC();
+    // TODO add static Test();
 public slots:
     int startTest();
 protected slots:
