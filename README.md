@@ -1,5 +1,6 @@
 # PictureCrypt
 Make your pictures crypted.
+
 [![Build Status](https://travis-ci.com/waleko/PictureCrypt.svg?branch=master)](https://travis-ci.com/waleko/PictureCrypt)
 
 ## About
