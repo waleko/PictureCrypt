@@ -10,4 +10,3 @@ before_install:
 script:
 - qmake -project
 - qmake src/PictureCrypt.pro
-- make
