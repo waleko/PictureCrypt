@@ -1,12 +1,14 @@
-language:
-    - c++
+language: cpp
+
+compiler: gcc
+
 before_install:
-    - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
-    - sudo apt-get update -qq
-    - sudo apt-get install -qq qt5-qmake qtbase5-dev qtdeclarative5-dev libqt5webkit5-dev libsqlite3-dev
-script:
-    - std=c++11
-    - cd src
-    - qmake -qt=qt5 -v
-    - qmake -qt=qt5
-    - make
+ - sudo apt-get update -qq
+ - sudo apt-get install -qq qt5-dev-tools
+
+before_script:
+  - mkdir build
+  - cd src
+  - cmake
+
+script: make
