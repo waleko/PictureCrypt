@@ -5,6 +5,8 @@
  * \mainpage PictureCrypt
  * Project made using QT Creator in C++
  *
+ * [![Build Status](https://travis-ci.com/waleko/PictureCrypt.svg?branch=master)](https://travis-ci.com/waleko/PictureCrypt)
+ *
  * \section idea The idea of the project
  * The idea came to me, when I read an article about steganoraphy.
  * I realised, that you can store data in an image in pixels near the border,
