@@ -5,7 +5,7 @@ Make your pictures crypted.
 
 ## About
 Project is made only using QT.
-[QAESEncryption](http://github.com/bricke/Qt-AES) by bricke was also used.
+[QAESEncryption](https://github.com/bricke/Qt-AES) by bricke was also used.
 MVC pattern used.
 PictureCrypt project is UI based, the model contains all buisness logic and can work as standalone class.
 
@@ -18,6 +18,7 @@ ModelPC class can be used externally (without UI)
 #include <QImage>
 
 ...
+
 // Testing the ModelPC
 TestPC testing;
 if(!testing.startTest())
@@ -57,12 +58,12 @@ Doxygen Documentation avaible [here](https://alexkovrigin.me/PictureCrypt)
 * qtwidgets
 
 ## Works of other people used in this project
- * [QAESEncryption](https://github.com/bricke/Qt-AES) by bricke (provided under [UNLICENSE](http://unlicense.org/))
+ * [QAESEncryption](https://github.com/bricke/Qt-AES) by bricke (provided under [UNLICENSE](https://unlicense.org/))
 
 ## Contact
 Question or suggestions are welcome!
 Please use the GitHub issue tracking to report suggestions or issues.
-Email me a.kovrigin0@gmail.com and visit my site http://alex.unaux.com
+Email me a.kovrigin0@gmail.com and visit my site https://alexkovrigin.me
 
 ## License
 This software is provided under the [UNLICENSE](http://unlicense.org/)
