@@ -85,6 +85,7 @@ QImage * ModelPC::start(QByteArray data, QImage * image, int mode, QString key, 
  * \param encr_data Data to be inserted to an image.
  * \param image Image to be inserted in.
  * \param mode Mode of encryption
+ * \param _bitsUsed Bits per byte used
  * \param _error Error output
  * \return Returns image with embedded data.
  * \sa ViewPC::on_startButton_clicked, ModelPC::decrypt, ModelPC::circuit, ModelPC::start

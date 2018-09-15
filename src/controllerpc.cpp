@@ -22,6 +22,7 @@ ControllerPC::ControllerPC()
     connect(view, SIGNAL(decrypt(QImage*)), model, SLOT(decrypt(QImage*)));
     connect(view, SIGNAL(abortModel()), this, SLOT(abortCircuit()));
     connect(view, SIGNAL(setJPHSDir(QString)), this, SLOT(setJPHSDir(QString)));
+    connect(view, SIGNAL(runTests()), this, SLOT(runTests()));
 
     connect(model, SIGNAL(alertView(QString,bool)), view, SLOT(alert(QString,bool)));
     connect(model, SIGNAL(saveData(QByteArray)), view, SLOT(saveData(QByteArray)));
@@ -35,6 +36,16 @@ ControllerPC::ControllerPC()
 void ControllerPC::abortCircuit()
 {
     model->success = false;
+}
+/*!
+ * \brief ControllerPC::runTests Runs tests
+ */
+void ControllerPC::runTests()
+{
+    bool res = TestPC::Test();
+    QMessageBox o;
+    o.setText(!res ? "Testing complete! All tests passed." : "Testing failed.");
+    o.exec();
 }
 /*!
  * \brief ControllerPC::setJPHSDir Sets JPHS default dir

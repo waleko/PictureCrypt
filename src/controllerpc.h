@@ -4,9 +4,11 @@
 #include <QObject>
 #include <QString>
 #include <QThread>
+#include <QMessageBox>
 
 #include <modelpc.h>
 #include <viewpc.h>
+#include <unit_tests/testpc.h>
 /*! \file controllerpc.h
  * Header of ControllerPC class
  * \sa ControllerPC, ModelPC, ViewPC
@@ -31,6 +33,7 @@ public:
     QString versionString;
 public slots:
     void abortCircuit();
+    void runTests();
     void setJPHSDir(QString dir);
 private:
     ViewPC * view;

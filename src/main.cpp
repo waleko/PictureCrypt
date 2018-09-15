@@ -1,6 +1,5 @@
 #include "controllerpc.h"
 #include <QApplication>
-#include <unit_tests/testpc.h>
 /*!
  * \mainpage PictureCrypt
  * Project made using QT Creator in C++
@@ -63,8 +62,7 @@
  *
  * ...
  *
- * TestPC testing;
- * if(!testing.startTest())
+ * if(TestPC::Test())
  *     return;
  * ModelPC * model = new ModelPC();
  *
@@ -117,10 +115,7 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    TestPC test;
-    bool success = test.startTest();
-    if(success)
-        ControllerPC w;
+    ControllerPC w;
 
     return a.exec();
 }

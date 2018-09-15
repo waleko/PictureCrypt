@@ -68,6 +68,7 @@ signals:
      * \param data Data to write
      * \param image Image to be encrypted into.
      * \param mode Mode of encryption
+     * \param bitsUsed Bits used per byte
      */
     encrypt(QByteArray data, QImage * image, int mode, int bitsUsed);
     /*!
@@ -84,6 +85,10 @@ signals:
      * \param dir Directory
      */
     setJPHSDir(QString dir);
+    /*!
+     * \brief runTests Runs tests in ControllerPC via TestPC
+     */
+    runTests();
 public:
     /*!
      * \brief dialog ProgressDialog used.

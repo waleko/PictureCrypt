@@ -278,5 +278,5 @@ void ViewPC::on_actionJPHS_path_triggered()
 
 void ViewPC::on_actionRun_tests_triggered()
 {
-
+    emit runTests();
 }

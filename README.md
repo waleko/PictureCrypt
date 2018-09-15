@@ -20,8 +20,7 @@ ModelPC class can be used externally (without UI)
 ...
 
 // Testing the ModelPC
-TestPC testing;
-if(!testing.startTest())
+if(TestPC::Test())
 	return;
 ModelPC * model = new ModelPC();
 
