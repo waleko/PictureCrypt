@@ -58,7 +58,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;PictureCrypt is a project made exclusively by Alex Kovrigin and website alex.unaux.com&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Provided under Unlicense&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;Resources used:&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Icons used are Circle Icons by Nick Roach provided under GPL v3.0&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;And icons from alex.unaux.com&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;QAESEncryption Class from bricke https://github.com/bricke/Qt-AES&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;provided under Unlicense&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;(C) Alex Kovigin 2018&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;PictureCrypt is a project made exclusively by Alex Kovrigin (waleko) and website alexkovrigin.me&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Provided under Unlicense&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;Resources used:&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Icons used are Circle Icons by Nick Roach provided under GPL v3.0&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;And icons from alex.unaux.com&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;QAESEncryption Class from bricke https://github.com/bricke/Qt-AES&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;provided under Unlicense&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;(C) Alex Kovigin 2018&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QLabel" name="label_5">
@@ -66,8 +66,8 @@
     <rect>
      <x>170</x>
      <y>430</y>
-     <width>241</width>
-     <height>61</height>
+     <width>321</width>
+     <height>71</height>
     </rect>
    </property>
    <property name="font">
@@ -77,7 +77,7 @@
     </font>
    </property>
    <property name="text">
-    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Done by Alex Kovrigin and&lt;/p&gt;&lt;p&gt;alex.unaux.com&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Done by Alex Kovrigin (waleko) and&lt;/p&gt;&lt;p&gt;alexkovrigin.me&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
   <widget class="QWidget" name="layoutWidget">

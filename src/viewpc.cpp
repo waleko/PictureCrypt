@@ -232,6 +232,7 @@ void ViewPC::setEncryptMode(bool encr)
 {
     ui->text->setEnabled(encr);
     isEncrypt = encr;
+    ui->startButton->setText(encr ? "Continue configuration" : "Start decryption");
 }
 /*!
  * \brief ViewPC::setVersion Set the version of the app from ControllerPC
@@ -262,7 +263,7 @@ void ViewPC::on_actionAbout_triggered()
  */
 void ViewPC::on_actionHelp_triggered()
 {
-    QUrl docLink("http://doc.alex.unaux.com/picturecrypt");
+    QUrl docLink("https://alexkovrigin.me/PictureCrypt");
     QDesktopServices::openUrl(docLink);
 }
 
@@ -273,4 +274,9 @@ void ViewPC::on_actionJPHS_path_triggered()
                                                     QFileDialog::ShowDirsOnly
                                                     | QFileDialog::DontResolveSymlinks);
     emit setJPHSDir(dir);
+}
+
+void ViewPC::on_actionRun_tests_triggered()
+{
+
 }

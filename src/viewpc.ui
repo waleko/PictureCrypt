@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>280</width>
-    <height>361</height>
+    <width>279</width>
+    <height>359</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -47,12 +47,19 @@
          </property>
         </widget>
        </item>
+       <item>
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
       </layout>
      </item>
      <item>
       <widget class="QLabel" name="label">
        <property name="text">
-        <string>Input</string>
+        <string>Input:</string>
        </property>
       </widget>
      </item>
@@ -98,9 +105,16 @@
       </layout>
      </item>
      <item>
+      <widget class="Line" name="line_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="startButton">
        <property name="text">
-        <string>Start processing</string>
+        <string>Continue configuration</string>
        </property>
       </widget>
      </item>
@@ -112,7 +126,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>280</width>
+     <width>279</width>
      <height>21</height>
     </rect>
    </property>
@@ -126,6 +140,7 @@
      </property>
      <addaction name="actionJPHS_path"/>
     </widget>
+    <addaction name="actionRun_tests"/>
     <addaction name="menuConfigure"/>
     <addaction name="separator"/>
     <addaction name="actionAbout"/>
@@ -146,6 +161,11 @@
   <action name="actionJPHS_path">
    <property name="text">
     <string>JPHS directory</string>
+   </property>
+  </action>
+  <action name="actionRun_tests">
+   <property name="text">
+    <string>Run tests</string>
    </property>
   </action>
  </widget>

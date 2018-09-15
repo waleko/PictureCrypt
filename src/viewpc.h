@@ -44,6 +44,8 @@ private slots:
 
     void on_actionJPHS_path_triggered();
 
+    void on_actionRun_tests_triggered();
+
 protected slots:
     void on_fileButton_clicked();
 
