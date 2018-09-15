@@ -67,7 +67,7 @@ signals:
      * \param image Image to be encrypted into.
      * \param mode Mode of encryption
      */
-    encrypt(QByteArray data, QImage * image, int mode);
+    encrypt(QByteArray data, QImage * image, int mode, int bitsUsed);
     /*!
      * \brief decrypt Signal calling ModelPC::decrypt
      * \param _image Image for decryption
@@ -77,12 +77,6 @@ signals:
      * \brief abortModel Signal calling to stop ModelPC::circuit
      */
     abortModel();
-    /*!
-     * \brief setBitsUsed Sets bits used in ModelPC
-     * \param bitsUsed The new value
-     * \sa ModelPC::bitsUsed
-     */
-    setBitsUsed(int bitsUsed);
     /*!
      * \brief setJPHSPath Sets the default JPHS directory
      * \param dir Directory

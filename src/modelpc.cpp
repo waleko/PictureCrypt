@@ -69,14 +69,13 @@ QImage * ModelPC::start(QByteArray data, QImage * image, int mode, QString key, 
     }
 
     curMode = mode;
-    bitsUsed = _bitsUsed;
 
     QByteArray key_data = key.toUtf8();
     QByteArray zipped_data = zip(data, key_data);
     QByteArray encr_data = bytes(key_data.size()) + key_data + zipped_data;
 
     if(*error == "ok")
-        return encrypt(encr_data, image, curMode, error);
+        return encrypt(encr_data, image, curMode, _bitsUsed, error);
     else
         return nullptr;
 }
@@ -90,7 +89,7 @@ QImage * ModelPC::start(QByteArray data, QImage * image, int mode, QString key, 
  * \return Returns image with embedded data.
  * \sa ViewPC::on_startButton_clicked, ModelPC::decrypt, ModelPC::circuit, ModelPC::start
  */
-QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode, QString *_error)
+QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode, int _bitsUsed, QString *_error)
 {
     // Error management
     if(_error == nullptr)
@@ -101,12 +100,18 @@ QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode, QStrin
     // TODO Remove debug mode = 0
     mode = 0;
 
+    bitsUsed = _bitsUsed;
+
     if(encr_data.isEmpty()) {
         fail("nodata");
         return nullptr;
     }
     if(image == nullptr || image->isNull()) {
         fail("nullimage");
+        return nullptr;
+    }
+    if(_bitsUsed < 1 || _bitsUsed > 8) {
+        fail("bitsWrong");
         return nullptr;
     }
 
@@ -296,7 +301,6 @@ void ModelPC::jphs(QImage *image, QByteArray *data)
  */
 void ModelPC::circuit(QImage *image, QByteArray *data, long long countBytes)
 {
-
     // Some flags and creation of the ProgressDialog
     success = true;
     emit setProgress(-1);

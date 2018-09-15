@@ -109,8 +109,7 @@ void ViewPC::on_startButton_clicked()
 
         encr_data = bytes(key_data.size()) + key_data + encr_data;
         // TODO do the mode thing
-        emit setBitsUsed(dialog->bitsUsed);
-        emit encrypt(encr_data, &dialog->image, 0);
+        emit encrypt(encr_data, &dialog->image, 0, dialog->bitsUsed);
     }
     else
     {
