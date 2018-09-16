@@ -41,6 +41,5 @@ target_wrapper.*
 
 # QtCreator CMake
 CMakeLists.txt.user*
-
 #TMP files
 *.tmp

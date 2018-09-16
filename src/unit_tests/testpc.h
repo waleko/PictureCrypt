@@ -9,7 +9,6 @@
 #include <QString>
 #include <QImage>
 #include <QByteArray>
-#include <QVector>
 
 #include <QJsonDocument>
 #include <QJsonArray>
@@ -25,6 +24,8 @@ class TestPC : public QObject
     Q_OBJECT
 public:
     TestPC();
+    static int Test();
+    // TODO add static Test();
 public slots:
     int startTest();
 protected slots:

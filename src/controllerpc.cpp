@@ -18,11 +18,11 @@ ControllerPC::ControllerPC()
     view->setVersion(model->versionString);
     view->show();
     // Layer Connection
-    connect(view, SIGNAL(encrypt(QByteArray,QImage*,int)), model, SLOT(encrypt(QByteArray,QImage*,int)));
+    connect(view, SIGNAL(encrypt(QByteArray,QImage*,int, int)), model, SLOT(encrypt(QByteArray,QImage*,int, int)));
     connect(view, SIGNAL(decrypt(QImage*)), model, SLOT(decrypt(QImage*)));
     connect(view, SIGNAL(abortModel()), this, SLOT(abortCircuit()));
-    connect(view, SIGNAL(setBitsUsed(int)), this, SLOT(setBitsUsed(int)));
     connect(view, SIGNAL(setJPHSDir(QString)), this, SLOT(setJPHSDir(QString)));
+    connect(view, SIGNAL(runTests()), this, SLOT(runTests()));
 
     connect(model, SIGNAL(alertView(QString,bool)), view, SLOT(alert(QString,bool)));
     connect(model, SIGNAL(saveData(QByteArray)), view, SLOT(saveData(QByteArray)));
@@ -38,12 +38,14 @@ void ControllerPC::abortCircuit()
     model->success = false;
 }
 /*!
- * \brief ControllerPC::setBitsUsed Slot to set ModelPC::bitsUsed
- * \param bitsUsed Value
+ * \brief ControllerPC::runTests Runs tests
  */
-void ControllerPC::setBitsUsed(int bitsUsed)
+void ControllerPC::runTests()
 {
-    model->bitsUsed = bitsUsed;
+    bool res = TestPC::Test();
+    QMessageBox o;
+    o.setText(!res ? "Testing complete! All tests passed." : "Testing failed.");
+    o.exec();
 }
 /*!
  * \brief ControllerPC::setJPHSDir Sets JPHS default dir

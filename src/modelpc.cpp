@@ -8,7 +8,7 @@
 ModelPC::ModelPC()
 {
     // Version control
-    versionString = "1.3.0";
+    versionString = "1.3.1";
 
     auto ver = versionString.split(".");
     version = ver[0].toInt() * pow(2, 16) + ver[1].toInt() * pow(2, 8) + ver[2].toInt();
@@ -30,10 +30,13 @@ ModelPC::ModelPC()
  * \param _bitsUsed Bits per byte (see ModelPC::bitsUsed)
  * \param _error Error output
  * \return Returns image with embedded data
+ * \sa ModelPC::encrypt
  */
 QImage * ModelPC::start(QByteArray data, QImage * image, int mode, QString key, int _bitsUsed, QString *_error)
 {
     // Error management
+    if(_error == nullptr)
+        _error = new QString();
     *_error = "ok";
     error = _error;
 
@@ -66,14 +69,13 @@ QImage * ModelPC::start(QByteArray data, QImage * image, int mode, QString key, 
     }
 
     curMode = mode;
-    bitsUsed = _bitsUsed;
 
     QByteArray key_data = key.toUtf8();
     QByteArray zipped_data = zip(data, key_data);
     QByteArray encr_data = bytes(key_data.size()) + key_data + zipped_data;
 
     if(*error == "ok")
-        return encrypt(encr_data, image, curMode, error);
+        return encrypt(encr_data, image, curMode, _bitsUsed, error);
     else
         return nullptr;
 }
@@ -83,18 +85,23 @@ QImage * ModelPC::start(QByteArray data, QImage * image, int mode, QString key, 
  * \param encr_data Data to be inserted to an image.
  * \param image Image to be inserted in.
  * \param mode Mode of encryption
+ * \param _bitsUsed Bits per byte used
  * \param _error Error output
  * \return Returns image with embedded data.
- * \sa ViewPC::on_startButton_clicked, ModelPC::decrypt, ModelPC::circuit
+ * \sa ViewPC::on_startButton_clicked, ModelPC::decrypt, ModelPC::circuit, ModelPC::start
  */
-QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode, QString *_error)
+QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode, int _bitsUsed, QString *_error)
 {
     // Error management
+    if(_error == nullptr)
+        _error = new QString();
     *_error = "ok";
     error = _error;
 
     // TODO Remove debug mode = 0
     mode = 0;
+
+    bitsUsed = _bitsUsed;
 
     if(encr_data.isEmpty()) {
         fail("nodata");
@@ -102,6 +109,10 @@ QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode, QStrin
     }
     if(image == nullptr || image->isNull()) {
         fail("nullimage");
+        return nullptr;
+    }
+    if(_bitsUsed < 1 || _bitsUsed > 8) {
+        fail("bitsWrong");
         return nullptr;
     }
 
@@ -140,6 +151,8 @@ QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode, QStrin
 QByteArray ModelPC::decrypt(QImage * image, QString *_error)
 {
     // Error management
+    if(_error == nullptr)
+        _error = new QString();
     *_error = "ok";
     error = _error;
     if(image == nullptr || image->isNull()) {
@@ -183,8 +196,8 @@ QByteArray ModelPC::decrypt(QImage * image, QString *_error)
 
     }
     // Version check
-    long long int _ver = mod(data.at(0) * pow(2, 16));
-    _ver += mod(data.at(1) * pow(2, 8));
+    long long int _ver = mod(data.at(0)) * pow(2, 16);
+    _ver += mod(data.at(1)) * pow(2, 8);
     _ver += mod(data.at(2));
     data.remove(0, 3);
     if(_ver > version) {
@@ -289,7 +302,6 @@ void ModelPC::jphs(QImage *image, QByteArray *data)
  */
 void ModelPC::circuit(QImage *image, QByteArray *data, long long countBytes)
 {
-
     // Some flags and creation of the ProgressDialog
     success = true;
     emit setProgress(-1);

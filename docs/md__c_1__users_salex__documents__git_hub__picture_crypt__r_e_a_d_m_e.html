@@ -72,30 +72,19 @@ $(function() {
 <h2>About</h2>
 <p>Project is made only using QT. <a href="http://github.com/bricke/Qt-AES">QAESEncryption</a> by bricke was also used. MVC pattern used. PictureCrypt project is UI based, the model contains all buisness logic and can work as standalone class.</p>
 <h2>External use</h2>
-<p><a class="el" href="class_model_p_c.html" title="The ModelPC class Model Layer of the app. Controled by ControllerPC. ">ModelPC</a> class can be used externally (without UI) </p><div class="fragment"><div class="line">#include &lt;modelpc.h&gt;</div><div class="line">#include &lt;QByteArray&gt;</div><div class="line">#include &lt;QImage&gt;</div><div class="line"></div><div class="line">...</div><div class="line"></div><div class="line">ModelPC * model = new ModelPC(ver);</div><div class="line">// ver is version of the app, used to check the data structure version</div><div class="line">// ver is type long and is calculated as if version is &quot;x.y.z&quot; =&gt; ver = x * 65536 + y * 256 + z</div><div class="line">// Default parameter is 2^17 (2.0.0)</div><div class="line"></div><div class="line">// Connecting signals</div><div class="line"></div><div class="line">// Essential ones</div><div class="line"></div><div class="line">model-&gt;saveData(QByteArray data)</div><div class="line">// Used to return the retrieved data</div><div class="line"></div><div class="line">model-&gt;saveImage(QImage * image)</div><div class="line">// Used to return the modified image</div><div class="line"></div><div class="line">// Extra ones</div><div class="line"></div><div class="line">model-&gt;alertView(QString message, bool isWarning)</div><div class="line">// Used for messages to be shown to users</div><div class="line"></div><div class="line">model-&gt;setProgress(int val)</div><div class="line">// Used to show user the progress of embedding</div><div class="line">// -1 indicates the creation of some kind of progress dialog</div><div class="line">// from 0 to 100 shows the progress</div><div class="line">// 101 indicates that progress dialog should be closed</div></div><!-- fragment --><h2>Avaible methods</h2>
-<h3>Essential ones</h3>
-<h4>start</h4>
-<p>Used for embedding</p>
-<p>Parameters: data Data to be encrypted _image Image to be encrypted into. _bitsUsed Bits per byte, see also <a class="el" href="class_model_p_c.html#a655deb6a8afa94c7f4aadb3056989038" title="bitsUsed Bits per byte used in pixel ">ModelPC::bitsUsed</a> key Key, if default (empty), random key of 64 charachters will be generated. mode Mode of encryption </p><div class="fragment"><div class="line">model-&gt;start(QByteArray data, QImage image, int mode = 0, QString key = &quot;&quot;, int _bitsUsed = 8);</div></div><!-- fragment --><h4>decrypt</h4>
-<p>Used for de-embedding</p>
-<p>Parameters: image Image to be decrypted.</p>
-<div class="fragment"><div class="line">model-&gt;decrypt(QImage * image);</div></div><!-- fragment --> <h3>Extra ones</h3>
-<h4>encrypt</h4>
-<p>Used for embedding but with data already packed with stuff like version, file size, aes key, etc. Used in PictureCrypt project</p>
-<p>Parameters:</p>
-<p>encr_data Data to be embbed to an image. image Image to be embbed into. mode Mode of encryption</p>
-<div class="fragment"><div class="line">model-&gt;encrypt(QByteArray encr_data, QImage * image, int mode = 0);</div></div><!-- fragment --> <h4>fail</h4>
-<p>Used for stopping the embedding or de-embedding proccess Parameters:</p>
-<p>message Message for user </p><div class="fragment"><div class="line">model-&gt;fail(QString message);</div></div><!-- fragment --><h2>Available modes of embedding</h2>
+<p><a class="el" href="class_model_p_c.html" title="The ModelPC class Model Layer of the app. Controled by ControllerPC. ">ModelPC</a> class can be used externally (without UI) </p><div class="fragment"><div class="line">#include &lt;modelpc.h&gt;</div><div class="line">#include &lt;testpc.h&gt;</div><div class="line">#include &lt;QByteArray&gt;</div><div class="line">#include &lt;QImage&gt;</div><div class="line"></div><div class="line">...</div><div class="line">// Testing the ModelPC</div><div class="line">TestPC testing;</div><div class="line">if(!testing.startTest())</div><div class="line">    return;</div><div class="line">ModelPC * model = new ModelPC();</div><div class="line"></div><div class="line">// Embedding</div><div class="line">QImage * resultImage = model-&gt;start(QByteArray data, // Data to be embedded</div><div class="line">                                    QImage *image, // Image for embedding</div><div class="line">                                    int mode = 0, // Mode of embedding</div><div class="line">                                    QString key = &quot;&quot;, // Key for extra-encryption (if empty, key will be generated automatically)</div><div class="line">                                    int bitsUsed = 8, // Bits per Byte used (better explaination ModelPC::bitsUsed)</div><div class="line">                                    QString *error = nullptr); // Error output, if everything is ok, error will be &quot;ok&quot;</div><div class="line">if(*error != &quot;ok)</div><div class="line">    return;</div><div class="line">// Note *error is just a code of error (like &quot;muchdata&quot;, dictionary of error codes is also available on github.</div><div class="line"></div><div class="line">// De-embedding</div><div class="line">QByteArray output = model-&gt;decrypt(QImage * image, // Image with hidden data</div><div class="line">                                   QString *_error = nullptr); // Error output</div><div class="line">if(data == output)</div><div class="line">   qDebug() &lt;&lt; &quot;Great success!&quot;;</div></div><!-- fragment --><h2>Available modes of embedding</h2>
 <ul>
 <li>0 - Standard, created by me</li>
 <li>1 - JPHS, requires manually installed JPHS and specified directory (not currently available).</li>
 </ul>
 <h2>Documentation</h2>
-<p>Doxygen Documentation avaible <a href="https://waleko.github.io/doc/picturecrypt">here</a></p>
+<p>Doxygen Documentation avaible <a href="https://waleko.github.io/PictureCrypt">here</a></p>
 <h2>Dependencies</h2>
 <ul>
 <li>qtcore</li>
+</ul>
+<h2>Used works from other people</h2>
+<ul>
 <li><a href="https://github.com/bricke/Qt-AES">QAESEncryption</a> by bricke</li>
 </ul>
 <h2>Contact</h2>

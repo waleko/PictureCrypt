@@ -1,9 +1,10 @@
 #include "controllerpc.h"
 #include <QApplication>
-#include <unit_tests/testpc.h>
 /*!
  * \mainpage PictureCrypt
- * Project made using QT Creator on C++
+ * Project made using QT Creator in C++
+ *
+ * [![Build Status](https://travis-ci.com/waleko/PictureCrypt.svg?branch=master)](https://travis-ci.com/waleko/PictureCrypt)
  *
  * \section idea The idea of the project
  * The idea came to me, when I read an article about steganoraphy.
@@ -15,7 +16,7 @@
  * \attention Output image format available is .PNG, because .jpg isn't lossless, so the pixels containing data
  * would be seriously simplified and the data damaged. .BMP isn't used, because noone really uses it and .PNG
  * is just compressed .BMP (more or less)
- * \note JPHS support is under development
+ * \note JPHS support is under development :D
  *
  * \section use How can someone use it?
  * Well... Anyone who wants to securely commuicate. For example your boss watches your inbox, so
@@ -50,16 +51,18 @@
  * \section ext-use External use
  * ModelPC class can be used externally (without UI)
  * \note TestPC class was introduced recently, its use is adviced.
+ *
  * \code
  * #include <modelpc.h>
  * #include <testpc.h>
  * #include <QByteArray>
  * #include <QImage>
  *
+ * #include <QDebug> // Just for demonstration use
+ *
  * ...
  *
- * TestPC testing;
- * if(!testing.startTest())
+ * if(TestPC::Test())
  *     return;
  * ModelPC * model = new ModelPC();
  *
@@ -79,11 +82,11 @@
  *                                    QString *_error = nullptr); // Error output
  * if(data == output)
  *    qDebug() << "Great success!";
+ * else
+ *    qDebug() << "Fiasco :(";
  *
  * \endcode
  * \sa ModelPC, ModelPC::ModelPC, ModelPC::saveData, ModelPC::saveImage, ModelPC::alertView, ModelPC::setProgress
- *
- * Avaible methods see here: https://waleko.github.io/PictureCrypt/#external-use or here ModelPC
  *
  * \section jphs-use JPHS use
  * The newer versions of the app have jphs support, but they don't have jphs built in as it is provided under GNU General Public License v3.0,
@@ -101,19 +104,18 @@
  * This software is provided under the [UNLICENSE](http://unlicense.org)
  *
  * \section contact Contact us
- * Visit our site: http://alex.unaux.com and Github Page: https://waleko.github.io
+ * Visit us: https://www.alexkovrigin.me
+ *
  * Email me at a.kovrigin0@gmail.com
  *
- * \author Alex Kovrigin ![me](https://avatars2.githubusercontent.com/u/24986722?s=100)
+ * \author Alex Kovrigin
  * \copyright Alex Kovrigin 2018
+ * ![gravatar](https://avatars2.githubusercontent.com/u/24986722?s=100)
  */
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    TestPC test;
-    bool success = test.startTest();
-    if(success)
-        ControllerPC w;
+    ControllerPC w;
 
     return a.exec();
 }

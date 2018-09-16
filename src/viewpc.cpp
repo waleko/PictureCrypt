@@ -10,7 +10,6 @@ ViewPC::ViewPC(QWidget *parent) :
     progressDialogClosed = true;
 
     // Alerts dictionary setup
-    // TODO Add relative path
     QFile file(":/config/ErrorsDict.json");
     if(!file.open(QFile::ReadOnly | QFile::Text)) {
         alert("Cannot open config file!");
@@ -110,8 +109,7 @@ void ViewPC::on_startButton_clicked()
 
         encr_data = bytes(key_data.size()) + key_data + encr_data;
         // TODO do the mode thing
-        emit setBitsUsed(dialog->bitsUsed);
-        emit encrypt(encr_data, &dialog->image, 0);
+        emit encrypt(encr_data, &dialog->image, 0, dialog->bitsUsed);
     }
     else
     {
@@ -234,6 +232,7 @@ void ViewPC::setEncryptMode(bool encr)
 {
     ui->text->setEnabled(encr);
     isEncrypt = encr;
+    ui->startButton->setText(encr ? "Continue configuration" : "Start decryption");
 }
 /*!
  * \brief ViewPC::setVersion Set the version of the app from ControllerPC
@@ -264,7 +263,7 @@ void ViewPC::on_actionAbout_triggered()
  */
 void ViewPC::on_actionHelp_triggered()
 {
-    QUrl docLink("http://doc.alex.unaux.com/picturecrypt");
+    QUrl docLink("https://alexkovrigin.me/PictureCrypt");
     QDesktopServices::openUrl(docLink);
 }
 
@@ -275,4 +274,9 @@ void ViewPC::on_actionJPHS_path_triggered()
                                                     QFileDialog::ShowDirsOnly
                                                     | QFileDialog::DontResolveSymlinks);
     emit setJPHSDir(dir);
+}
+
+void ViewPC::on_actionRun_tests_triggered()
+{
+    emit runTests();
 }

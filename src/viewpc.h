@@ -44,6 +44,8 @@ private slots:
 
     void on_actionJPHS_path_triggered();
 
+    void on_actionRun_tests_triggered();
+
 protected slots:
     void on_fileButton_clicked();
 
@@ -66,8 +68,9 @@ signals:
      * \param data Data to write
      * \param image Image to be encrypted into.
      * \param mode Mode of encryption
+     * \param bitsUsed Bits used per byte
      */
-    encrypt(QByteArray data, QImage * image, int mode);
+    encrypt(QByteArray data, QImage * image, int mode, int bitsUsed);
     /*!
      * \brief decrypt Signal calling ModelPC::decrypt
      * \param _image Image for decryption
@@ -78,16 +81,14 @@ signals:
      */
     abortModel();
     /*!
-     * \brief setBitsUsed Sets bits used in ModelPC
-     * \param bitsUsed The new value
-     * \sa ModelPC::bitsUsed
-     */
-    setBitsUsed(int bitsUsed);
-    /*!
      * \brief setJPHSPath Sets the default JPHS directory
      * \param dir Directory
      */
     setJPHSDir(QString dir);
+    /*!
+     * \brief runTests Runs tests in ControllerPC via TestPC
+     */
+    runTests();
 public:
     /*!
      * \brief dialog ProgressDialog used.

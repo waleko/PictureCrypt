@@ -5,6 +5,14 @@
 TestPC::TestPC()
 { }
 /*!
+ * \brief TestPC::Test Static function of testing
+ * \return Returns result of the testing
+ */
+int TestPC::Test()
+{
+    return TestPC().startTest();
+}
+/*!
  * \brief TestPC::test Function calling TestPC::model for tests
  * \param data Data for test
  * \param rImage Image for test
@@ -127,5 +135,5 @@ bool TestPC::autoTest(QJsonDocument doc)
     // Cleaning up
     qDebug() << "Testing completed\n";
     delete model;
-    return testsSuc;
+    return !testsSuc;
 }

@@ -57,7 +57,7 @@ signals:
 
 public slots:
     QImage *start(QByteArray data, QImage *image, int mode = 0, QString key = "", int _bitsUsed = 8, QString *_error = nullptr);
-    QImage *encrypt(QByteArray encr_data, QImage * image, int mode = 0, QString *_error = nullptr);
+    QImage *encrypt(QByteArray encr_data, QImage * image, int mode = 0, int _bitsUsed = 8, QString *_error = nullptr);
     QByteArray decrypt(QImage * image, QString *_error = nullptr);
     void fail(QString message);
 
@@ -93,6 +93,7 @@ public:
     QString * error;
     QByteArray unzip(QByteArray data, QByteArray key);
     void alert(QString message, bool isWarning = false);
+    // TODO add static functions: start, encrypt, decrypt.
 protected:
     void circuit(QImage * image, QByteArray * data, long long int countBytes);
     void jphs(QImage * image, QByteArray * data);

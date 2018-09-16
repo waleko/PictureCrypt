@@ -50,13 +50,9 @@ FORMS += \
 RESOURCES += \
     resource.qrc
 
-#CONFIG(debug, debug|release) {
-
-#    DESTDIR         = $$OUT_PWD/build/Debug
-
-#}else {
-
-#    DESTDIR         = $$OUT_PWD/build/Release
-
-#}
-#win32:QMAKE_POST_LINK += windeployqt $$DESTDIR $$escape_expand(\\n)
+CONFIG(debug, debug|release) {
+    DESTDIR         = $$OUT_PWD/build/Debug
+}else {
+    DESTDIR         = $$OUT_PWD/build/Release
+}
+win32:QMAKE_POST_LINK += windeployqt $$DESTDIR $$escape_expand(\\n)

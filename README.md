@@ -1,10 +1,11 @@
 # PictureCrypt
 Make your pictures crypted.
 
+[![Build Status](https://travis-ci.com/waleko/PictureCrypt.svg?branch=master)](https://travis-ci.com/waleko/PictureCrypt)
 
 ## About
 Project is made only using QT.
-[QAESEncryption](http://github.com/bricke/Qt-AES) by bricke was also used.
+[QAESEncryption](https://github.com/bricke/Qt-AES) by bricke was also used.
 MVC pattern used.
 PictureCrypt project is UI based, the model contains all buisness logic and can work as standalone class.
 
@@ -12,84 +13,35 @@ PictureCrypt project is UI based, the model contains all buisness logic and can 
 ModelPC class can be used externally (without UI)
 ```
 #include <modelpc.h>
+#include <testpc.h>
 #include <QByteArray>
 #include <QImage>
 
 ...
 
-ModelPC * model = new ModelPC(ver);
-// ver is version of the app, used to check the data structure version
-// ver is type long and is calculated as if version is "x.y.z" => ver = x * 65536 + y * 256 + z
-// Default parameter is 2^17 (2.0.0)
+// Testing the ModelPC
+if(TestPC::Test())
+	return;
+ModelPC * model = new ModelPC();
 
-// Connecting signals
+// Embedding
+QImage * resultImage = model->start(QByteArray data, // Data to be embedded
+									QImage *image, // Image for embedding
+									int mode = 0, // Mode of embedding
+									QString key = "", // Key for extra-encryption (if empty, key will be generated automatically)
+									int bitsUsed = 8, // Bits per Byte used (better explaination ModelPC::bitsUsed)
+									QString *error = nullptr); // Error output, if everything is ok, error will be "ok"
+if(*error != "ok)
+	return;
+// Note *error is just a code of error (like "muchdata", dictionary of error codes is also available on github.
 
-// Essential ones
-
-model->saveData(QByteArray data)
-// Used to return the retrieved data
-
-model->saveImage(QImage * image)
-// Used to return the modified image
-
-// Extra ones
-
-model->alertView(QString message, bool isWarning)
-// Used for messages to be shown to users
-
-model->setProgress(int val)
-// Used to show user the progress of embedding
-// -1 indicates the creation of some kind of progress dialog
-// from 0 to 100 shows the progress
-// 101 indicates that progress dialog should be closed
-
-```
-
-## Avaible methods
-### Essential ones
-#### start
-Used for embedding
-
-Parameters:
-data	Data to be encrypted
-_image	Image to be encrypted into.
-_bitsUsed	Bits per byte, see also ModelPC::bitsUsed
-key	Key, if default (empty), random key of 64 charachters will be generated.
-mode	Mode of encryption
-```
-model->start(QByteArray data, QImage image, int mode = 0, QString key = "", int _bitsUsed = 8);
-```
-
-#### decrypt
-Used for de-embedding
-
-Parameters:
-image	Image to be decrypted.
-
-```
-model->decrypt(QImage * image);
-```
-### Extra ones
-#### encrypt
-Used for embedding but with data already packed with stuff like version, file size, aes key, etc.
-Used in PictureCrypt project
-
-Parameters:
-
-encr_data	Data to be embbed to an image.
-image	Image to be embbed into.
-mode	Mode of encryption
-
-```
-model->encrypt(QByteArray encr_data, QImage * image, int mode = 0);
-```
-#### fail
-Used for stopping the embedding or de-embedding proccess
-Parameters:
-
-message    Message for user
-```
-model->fail(QString message);
+// De-embedding
+QByteArray output = model->decrypt(QImage * image, // Image with hidden data
+								   QString *_error = nullptr); // Error output
+if(data == output)
+	qDebug() << "Great success!";
+else
+	qDebug() << "Fiasco :(";
 ```
 
 ## Available modes of embedding
@@ -97,17 +49,20 @@ model->fail(QString message);
 * 1 - JPHS, requires manually installed JPHS and specified directory (not currently available).
 
 ## Documentation
-Doxygen Documentation avaible [here](https://waleko.github.io/doc/picturecrypt)
-
+Doxygen Documentation avaible [here](https://alexkovrigin.me/PictureCrypt)
 
 ## Dependencies
 * qtcore
-* [QAESEncryption](https://github.com/bricke/Qt-AES) by bricke
+* qtgui
+* qtwidgets
+
+## Works of other people used in this project
+ * [QAESEncryption](https://github.com/bricke/Qt-AES) by bricke (provided under [UNLICENSE](https://unlicense.org/))
 
 ## Contact
 Question or suggestions are welcome!
 Please use the GitHub issue tracking to report suggestions or issues.
-Email me a.kovrigin0@gmail.com and visit my site http://alex.unaux.com
+Email me a.kovrigin0@gmail.com and visit my site https://alexkovrigin.me
 
 ## License
 This software is provided under the [UNLICENSE](http://unlicense.org/)
