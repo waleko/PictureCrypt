@@ -1,5 +1,5 @@
-language: cpp
-compiler: gcc
+# language: cpp
+# compiler: gcc
 sudo: required
 dist: trusty
 
@@ -12,13 +12,13 @@ install:
 
 before_script:
   - cd src
-  
+
 script:
   - qmake -project
   - qmake "CONFIG+=debug" PictureCrypt.pro
   - make
-  - ./src/PictureCrypt
+  - ./PictureCrypt
   - rm Makefile PictureCrypt *.o #remove files (which are generated from unit test) for next build
   - qmake "CONFIG+=release" PictureCrypt.pro #we gonna compile for actual program
   - make
-  - ./src/PictureCrypt #run actual program
+  - ./PictureCrypt #run actual program
