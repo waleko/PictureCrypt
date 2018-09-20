@@ -30,7 +30,7 @@ bool TestPC::test(QByteArray data, QImage rImage, QString expectedOutput, int mo
     // Embedding
     QImage * retImage = model->start(data, &rImage, mode, key, bitsUsed, &error1);
     // De-embedding
-    QByteArray output = model->decrypt(retImage, &error2);
+    QByteArray output = model->decrypt(retImage, QString(), &error2);
 
     // Success of error outputs
     bool er1 = error1 == expectedOutput;

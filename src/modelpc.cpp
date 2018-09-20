@@ -144,11 +144,12 @@ QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode, int _b
 /*!
  * \brief ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started.
  * \param image Image to be decrypted.
- * \return Returns decrypted data
+ * \param key Keyphrase with which the data is encrypted
  * \param _error Error output
+ * \return Returns decrypted data
  * \sa ViewPC::on_startButton_clicked, ModelPC::encrypt, ModelPC::circuit
  */
-QByteArray ModelPC::decrypt(QImage * image, QString *_error)
+QByteArray ModelPC::decrypt(QImage * image, QString key, QString *_error)
 {
     // Error management
     if(_error == nullptr)
@@ -212,14 +213,17 @@ QByteArray ModelPC::decrypt(QImage * image, QString *_error)
               + generateVersionString(version) + ".");
         return nullptr;
     }
-
-    // Obtain the key
-    int key_size = mod(data.at(0));
-    QByteArray key = data.mid(1, key_size);
-    data.remove(0, key_size + 1);
+    // Get the hash
+    QByteArray hash = data.left(32);
+    data.remove(0, 32);
 
     // Unzip
-    QByteArray unzipped_data = unzip(data, key);
+    QByteArray unzipped_data = unzip(data, key.toUtf8());
+    QByteArray our_hash = QCryptographicHash::hash(unzipped_data, QCryptographicHash::Sha256);
+    if(our_hash != hash) {
+        fail("fail_hash");
+        return QByteArray("");
+    }
     emit saveData(unzipped_data);
     return unzipped_data;
 }

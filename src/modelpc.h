@@ -58,7 +58,7 @@ signals:
 public slots:
     QImage *start(QByteArray data, QImage *image, int mode = 0, QString key = "", int _bitsUsed = 8, QString *_error = nullptr);
     QImage *encrypt(QByteArray encr_data, QImage * image, int mode = 0, int _bitsUsed = 8, QString *_error = nullptr);
-    QByteArray decrypt(QImage * image, QString *_error = nullptr);
+    QByteArray decrypt(QImage * image, QString key, QString *_error = nullptr);
     void fail(QString message);
 
 public:

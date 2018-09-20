@@ -33,7 +33,7 @@ public slots:
 
     void on_buttonBox_rejected();
 
-    void on_horizontalSlider_valueChanged(int value);
+    void on_bitsSlider_valueChanged(int value);
 
 public:
     /*!
@@ -78,9 +78,6 @@ public:
      */
     QImage image;
     QByteArray zip();
-private slots:
-    void on_bitsSlider_valueChanged(int value);
-
 private:
     Ui::EncryptDialog *ui;
     void alert(QString text);

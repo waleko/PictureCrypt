@@ -10,6 +10,7 @@
 #include <QVector>
 #include <QThread>
 #include <QDesktopServices>
+#include <QInputDialog>
 
 #include <encryptdialog.h>
 #include <QProgressDialog>
@@ -74,8 +75,9 @@ signals:
     /*!
      * \brief decrypt Signal calling ModelPC::decrypt
      * \param _image Image for decryption
+     * \param key encryption key
      */
-    decrypt(QImage * _image);
+    decrypt(QImage * _image, QString key);
     /*!
      * \brief abortModel Signal calling to stop ModelPC::circuit
      */
@@ -101,6 +103,8 @@ public:
      */
     bool progressDialogClosed;
     QJsonObject errorsDict;
+protected:
+    QString requestKey();
 private:
     Ui::ViewPC *ui;
     bool isEncrypt;
