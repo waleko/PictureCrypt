@@ -1,48 +1,3 @@
-# language: cpp
-# compiler: gcc
-
-# sudo: required
-# dist: trusty
-#
-# before_install:
-# - sudo add-apt-repository --yes ppa:ubuntu-sdk-team/ppa
-# - sudo apt-get update -qq
-#
-# install:
-#   - sudo apt-get install -y qt5-default qttools5-dev-tools #install necessary Qt files
-#
-# before_script:
-#   - cd src
-#
-# script:
-#   - qmake -project
-#   - qmake "CONFIG+=debug" PictureCrypt.pro
-#   - make
-#   - ./PictureCrypt
-#   - rm Makefile PictureCrypt *.o #remove files (which are generated from unit test) for next build
-#   - qmake "CONFIG+=release" PictureCrypt.pro #we gonna compile for actual program
-#   - make
-#   - ./PictureCrypt #run actual program
-
-# sudo: required
-# dist: trusty
-#
-# before_install:
-#   - sudo add-apt-repository --yes ppa:beineri/opt-qt551-trusty
-#   - sudo apt-get update -qq
-#
-# install:
-#   - sudo apt-get -y install qt55[QTPACKAGE]
-#
-# script:
-#   - source /opt/qt55/bin/qt55-env.sh
-#   - cd src
-#   - /opt/qt55/bin/qmake -project
-#   - /opt/qt55/bin/qmake PictureCrypt.pro
-#   - make
-#
-
-# new
 language: cpp
 compiler: gcc
 
@@ -50,6 +5,8 @@ before_install:
   # C++14
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
   - sudo apt-get update -qq
+  - sudo apt-get install qtbase5-dev
+  - sudo apt-get install qt5-default qttools5-dev-tools
 
 install:
   # C++14
