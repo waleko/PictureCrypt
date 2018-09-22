@@ -19,10 +19,10 @@ before_install:
 install:
   # C++14
   - sudo apt-get install -qq g++-5
-  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 90
+  # - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 90
 
 script:
   - cd src
-  - qmake -std=c++11
+  - qmake
   - make
   - ./PictureCrypt
