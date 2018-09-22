@@ -8,7 +8,7 @@
 ModelPC::ModelPC()
 {
     // Version control
-    versionString = "1.3.1";
+    versionString = "1.3.3";
 
     auto ver = versionString.split(".");
     version = ver[0].toInt() * pow(2, 16) + ver[1].toInt() * pow(2, 8) + ver[2].toInt();
@@ -26,7 +26,7 @@ ModelPC::ModelPC()
  * \param data Data for embedding
  * \param image Image for embedding
  * \param mode Mode for embedding
- * \param key Key for extra encryption (if empty, key will be auto-generated)
+ * \param key Key for extra encryption
  * \param _bitsUsed Bits per byte (see ModelPC::bitsUsed)
  * \param _error Error output
  * \return Returns image with embedded data
@@ -53,9 +53,8 @@ QImage * ModelPC::start(QByteArray data, QImage * image, int mode, QString key, 
         return nullptr;
     }
     if(key.isEmpty()) {
-        qsrand(randSeed());
-        for(int i = 0; i < 32; i++)
-            key.append(48 + qrand() % 75);
+        fail("no_key");
+        return nullptr;
     }
     else if(key.size() > 255) {
         fail("bigkey");
@@ -70,9 +69,9 @@ QImage * ModelPC::start(QByteArray data, QImage * image, int mode, QString key, 
 
     curMode = mode;
 
-    QByteArray key_data = key.toUtf8();
-    QByteArray zipped_data = zip(data, key_data);
-    QByteArray encr_data = bytes(key_data.size()) + key_data + zipped_data;
+    QByteArray zipped_data = zip(data, key.toUtf8());
+    QByteArray hash = QCryptographicHash::hash(data, QCryptographicHash::Sha256);
+    QByteArray encr_data = hash + zipped_data;
 
     if(*error == "ok")
         return encrypt(encr_data, image, curMode, _bitsUsed, error);

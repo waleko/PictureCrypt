@@ -22,7 +22,9 @@ ViewPC::ViewPC(QWidget *parent) :
     QJsonDocument doc = QJsonDocument::fromJson(readData, &error);
     errorsDict = doc.object();
 }
-
+/*!
+ * \brief ViewPC::~ViewPC Simple destructor for this layer
+ */
 ViewPC::~ViewPC()
 {
     delete ui;
