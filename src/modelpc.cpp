@@ -8,7 +8,7 @@
 ModelPC::ModelPC()
 {
     // Version control
-    versionString = "1.3.1";
+    versionString = "1.3.4";
 
     auto ver = versionString.split(".");
     version = ver[0].toInt() * pow(2, 16) + ver[1].toInt() * pow(2, 8) + ver[2].toInt();
@@ -26,7 +26,7 @@ ModelPC::ModelPC()
  * \param data Data for embedding
  * \param image Image for embedding
  * \param mode Mode for embedding
- * \param key Key for extra encryption (if empty, key will be auto-generated)
+ * \param key Key for extra encryption
  * \param _bitsUsed Bits per byte (see ModelPC::bitsUsed)
  * \param _error Error output
  * \return Returns image with embedded data
@@ -53,9 +53,8 @@ QImage * ModelPC::start(QByteArray data, QImage * image, int mode, QString key, 
         return nullptr;
     }
     if(key.isEmpty()) {
-        qsrand(randSeed());
-        for(int i = 0; i < 32; i++)
-            key.append(48 + qrand() % 75);
+        fail("no_key");
+        return nullptr;
     }
     else if(key.size() > 255) {
         fail("bigkey");
@@ -70,9 +69,9 @@ QImage * ModelPC::start(QByteArray data, QImage * image, int mode, QString key, 
 
     curMode = mode;
 
-    QByteArray key_data = key.toUtf8();
-    QByteArray zipped_data = zip(data, key_data);
-    QByteArray encr_data = bytes(key_data.size()) + key_data + zipped_data;
+    QByteArray zipped_data = zip(data, key.toUtf8());
+    QByteArray hash = QCryptographicHash::hash(data, QCryptographicHash::Sha256);
+    QByteArray encr_data = hash + zipped_data;
 
     if(*error == "ok")
         return encrypt(encr_data, image, curMode, _bitsUsed, error);
@@ -144,11 +143,12 @@ QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode, int _b
 /*!
  * \brief ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started.
  * \param image Image to be decrypted.
- * \return Returns decrypted data
+ * \param key Keyphrase with which the data is encrypted
  * \param _error Error output
+ * \return Returns decrypted data
  * \sa ViewPC::on_startButton_clicked, ModelPC::encrypt, ModelPC::circuit
  */
-QByteArray ModelPC::decrypt(QImage * image, QString *_error)
+QByteArray ModelPC::decrypt(QImage * image, QString key, QString *_error)
 {
     // Error management
     if(_error == nullptr)
@@ -212,14 +212,17 @@ QByteArray ModelPC::decrypt(QImage * image, QString *_error)
               + generateVersionString(version) + ".");
         return nullptr;
     }
-
-    // Obtain the key
-    int key_size = mod(data.at(0));
-    QByteArray key = data.mid(1, key_size);
-    data.remove(0, key_size + 1);
+    // Get the hash
+    QByteArray hash = data.left(32);
+    data.remove(0, 32);
 
     // Unzip
-    QByteArray unzipped_data = unzip(data, key);
+    QByteArray unzipped_data = unzip(data, key.toUtf8());
+    QByteArray our_hash = QCryptographicHash::hash(unzipped_data, QCryptographicHash::Sha256);
+    if(our_hash != hash) {
+        fail("fail_hash");
+        return QByteArray("");
+    }
     emit saveData(unzipped_data);
     return unzipped_data;
 }

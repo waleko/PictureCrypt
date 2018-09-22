@@ -22,7 +22,9 @@ ViewPC::ViewPC(QWidget *parent) :
     QJsonDocument doc = QJsonDocument::fromJson(readData, &error);
     errorsDict = doc.object();
 }
-
+/*!
+ * \brief ViewPC::~ViewPC Simple destructor for this layer
+ */
 ViewPC::~ViewPC()
 {
     delete ui;
@@ -104,10 +106,9 @@ void ViewPC::on_startButton_clicked()
         // Get the data
         QByteArray encr_data = dialog->compr_data;
 
-        // Save the key
-        QByteArray key_data = dialog->key.toUtf8();
-
-        encr_data = bytes(key_data.size()) + key_data + encr_data;
+        // Save the hash
+        QByteArray hash = QCryptographicHash::hash(data, QCryptographicHash::Sha256);
+        encr_data = hash + encr_data;
         // TODO do the mode thing
         emit encrypt(encr_data, &dialog->image, 0, dialog->bitsUsed);
     }
@@ -120,8 +121,11 @@ void ViewPC::on_startButton_clicked()
             alert("File not selected. Cannot continue!", true);
             return;
         }
+        QByteArray key = requestKey().toUtf8();
+        if(key.isEmpty())
+            return;
         QImage * res_image = new QImage(inputFileName);
-        emit decrypt(res_image);
+        emit decrypt(res_image, key);
     }
 }
 /*!
@@ -242,6 +246,22 @@ void ViewPC::setVersion(QString version)
 {
     // Version setup
     versionString = version;
+}
+/*!
+ * \brief ViewPC::requestKey Request keyphrase from user using InputDialog
+ * \return Returns keyphrase
+ */
+QString ViewPC::requestKey()
+{
+    bool ok;
+    QString text = QInputDialog::getText(this, tr("QInputDialog::getText()"),
+                                         tr("Enter the keyphrase:"), QLineEdit::Normal,
+                                         QDir::home().dirName(), &ok);
+    if(text.isEmpty() && ok) {
+        alert("Key is empty!", true);
+        return QString();
+    }
+    return ok ? text : QString();
 }
 
 QByteArray ViewPC::bytes(long long n)

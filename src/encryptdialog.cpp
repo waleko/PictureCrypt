@@ -15,10 +15,7 @@ EncryptDialog::EncryptDialog(QByteArray _data, QWidget *parent) :
     success = false;
     // UI setup
     ui->totalBytes->setText(QString::number(data.size()));
-    key.clear();
-    for(int i = 0; i < 24; i++)
-        key.append(48 + qrand() % 75);
-    val = 24;
+    key = "";
     compr_data = zip();
     long long int compr_data_size = compr_data.size();
     ui->zippedBytes->setText(QString::number(compr_data_size));
@@ -74,7 +71,7 @@ void EncryptDialog::on_fileButton_clicked()
         ui->percentage->setText("");
         return;
     }
-    double perc = (compr_data_size + 14 + val) * 100 / (size * 3) * bitsUsed / 8;
+    double perc = (compr_data_size + 14) * 100 / (size * 3) * bitsUsed / 8;
     ui->percentage->setText(QString::number(perc) + "%");
     goodPercentage = perc < 70;
 }
@@ -90,6 +87,7 @@ void EncryptDialog::on_buttonBox_accepted()
         return;
     }
     // Final zip
+    key = ui->keyLine->text();
     compr_data = zip();
     success = true;
     close();
@@ -103,20 +101,6 @@ void EncryptDialog::on_buttonBox_rejected()
     close();
 }
 /*!
- * \brief EncryptDialog::on_horizontalSlider_valueChanged Slot if value of the slider is changed.
- * Key is generated here.
- * \param value Value of the slider.
- */
-void EncryptDialog::on_horizontalSlider_valueChanged(int value)
-{
-    // Key generator with value of charachters
-    key.clear();
-    for(int i = 0; i < value; i++)
-        key.append(48 + qrand() % 75);
-    val = value;
-    ui->keyLabel->setText(QString::number(value));
-}
-/*!
  * \brief EncryptDialog::on_bitsSlider_valueChanged Slot if value of the bits slider is changed
  * \param value Well, value
  */
@@ -126,6 +110,6 @@ void EncryptDialog::on_bitsSlider_valueChanged(int value)
     ui->bitsUsedLbl->setText(QString::number(value));
     if(ui->percentage->text().isEmpty())
         return;
-    double perc = (compr_data.size() + 14 + val) * 100 / (size * 3) * 8 / bitsUsed;
+    double perc = (compr_data.size() + 14) * 100 / (size * 3) * 8 / bitsUsed;
     ui->percentage->setText(QString::number(perc) + "%");
 }

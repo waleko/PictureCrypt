@@ -5,7 +5,7 @@
             "image": "bigpicture.jpg",
             "expectation": "ok",
             "mode": 0,
-            "key": "",
+            "key": "qwertykey",
             "bitsUsed": 8
         },
         {
@@ -13,7 +13,7 @@
             "image": "bigpicture.jpg",
             "expectation": "ok",
             "mode": 0,
-            "key": "",
+            "key": "password",
             "bitsUsed": 7
         },
         {
@@ -21,7 +21,7 @@
             "image": "bigpicture.jpg",
             "expectation": "ok",
             "mode": 0,
-            "key": "",
+            "key": "wowthatpassword",
             "bitsUsed": 1
         },
         {
@@ -29,7 +29,7 @@
             "image": "tinypicture.png",
             "expectation": "muchdata",
             "mode": 0,
-            "key": "",
+            "key": "get123",
             "bitsUsed": 8
         },
         {
@@ -37,7 +37,7 @@
             "image": "bigpicture.jpg",
             "expectation": "nodata",
             "mode": 0,
-            "key": "",
+            "key": "42",
             "bitsUsed": 8
         },
         {
@@ -53,8 +53,16 @@
             "image": "bigpicture.jpg",
             "expectation": "bitsWrong",
             "mode": 0,
-            "key": "",
+            "key": "that key is brilliant",
             "bitsUsed": 12
+        },
+		{
+            "data": "/text/",
+            "image": "bigpicture.jpg",
+            "expectation": "no_key",
+            "mode": 0,
+            "key": "",
+            "bitsUsed": 7
         }
     ]
 }
