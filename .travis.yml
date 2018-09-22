@@ -24,19 +24,37 @@
 #   - make
 #   - ./PictureCrypt #run actual program
 
-sudo: required
-dist: trusty
+# sudo: required
+# dist: trusty
+#
+# before_install:
+#   - sudo add-apt-repository --yes ppa:beineri/opt-qt551-trusty
+#   - sudo apt-get update -qq
+#
+# install:
+#   - sudo apt-get -y install qt55[QTPACKAGE]
+#
+# script:
+#   - source /opt/qt55/bin/qt55-env.sh
+#   - cd src
+#   - /opt/qt55/bin/qmake -project
+#   - /opt/qt55/bin/qmake PictureCrypt.pro
+#   - make
+#
 
-before_install:
-  - sudo add-apt-repository --yes ppa:beineri/opt-qt551-trusty
-  - sudo apt-get update -qq
+# new
+sudo: true
+language: cpp
+compiler: gcc
+addons:
+  apt:
+    packages: libboost-all-dev
 
-install:
-  - sudo apt-get -y install qt55[QTPACKAGE]
-
-script:
-  - source /opt/qt55/bin/qt55-env.sh
+# Start X server, from https://docs.travis-ci.com/user/gui-and-headless-browsers/
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 # give xvfb some time to start
   - cd src
-  - /opt/qt55/bin/qmake -project
-  - /opt/qt55/bin/qmake PictureCrypt.pro
-  - make
+
+script: ./.travis/build.sh
