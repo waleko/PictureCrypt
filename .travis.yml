@@ -23,6 +23,6 @@ install:
 
 script:
   - cd src
-  - qmake
+  - qmake -std=c++11
   - make
   - ./PictureCrypt
