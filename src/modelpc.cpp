@@ -8,7 +8,7 @@
 ModelPC::ModelPC()
 {
     // Version control
-    versionString = "1.3.3";
+    versionString = "1.3.4";
 
     auto ver = versionString.split(".");
     version = ver[0].toInt() * pow(2, 16) + ver[1].toInt() * pow(2, 8) + ver[2].toInt();

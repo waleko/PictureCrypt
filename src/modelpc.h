@@ -21,8 +21,10 @@
 /*!
  * \brief The ModelPC class
  * Model Layer of the app.
+ * Main class that does the work of PictureCrypt logic
  * Controled by ControllerPC
  * \sa ViewPC, ControllerPC
+ * \author Alex Kovrigin (waleko)
  */
 class ModelPC : public QObject
 {

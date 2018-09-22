@@ -108,7 +108,7 @@
  *
  * Email me at a.kovrigin0@gmail.com
  *
- * \author Alex Kovrigin
+ * \author Alex Kovrigin (waleko)
  * \copyright Alex Kovrigin 2018
  * ![gravatar](https://avatars2.githubusercontent.com/u/24986722?s=100)
  */
