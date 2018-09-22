@@ -28,15 +28,16 @@ ModelPC * model = new ModelPC();
 QImage * resultImage = model->start(QByteArray data, // Data to be embedded
 									QImage *image, // Image for embedding
 									int mode = 0, // Mode of embedding
-									QString key = "", // Key for extra-encryption (if empty, key will be generated automatically)
+									QString key = "", // Key for extra-encryption (is required, if not given, error will show up)
 									int bitsUsed = 8, // Bits per Byte used (better explaination ModelPC::bitsUsed)
 									QString *error = nullptr); // Error output, if everything is ok, error will be "ok"
-if(*error != "ok)
+if(*error != "ok")
 	return;
 // Note *error is just a code of error (like "muchdata", dictionary of error codes is also available on github.
 
 // De-embedding
 QByteArray output = model->decrypt(QImage * image, // Image with hidden data
+									 QString key = "" // Key for extra-encryption
 								   QString *_error = nullptr); // Error output
 if(data == output)
 	qDebug() << "Great success!";
