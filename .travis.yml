@@ -4,6 +4,10 @@ compiler: gcc
 std:
   - gnu++0x
   - c++0x
+  - c++14
+  - gnu++14
+  - c++11
+  - gnu++11
 
 before_install:
   # C++14
