@@ -64,6 +64,6 @@ before_script:
   - cd src
 
 script:
-  - qmake -project
-  - qmake ./PictureCrypt.pro
+  # - qmake -project
+  - qmake PictureCrypt.pro
   - make debug
