@@ -41,6 +41,6 @@ install:
 
 script:
   - cd src
-  - qmake "QMAKE_CXXFLAGS += -std=c++0x"
+  - qmake "QMAKE_CXXFLAGS += -std=c++0x" "QT += gui" "QT += core" "QT += widgets"
   - make
   - ./PictureCrypt
