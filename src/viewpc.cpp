@@ -87,7 +87,7 @@ void ViewPC::on_startButton_clicked()
             }
             // Check the data size
             auto size = file.size();
-            if(size > pow(2, 24)) {
+            if(size > qPow(2, 24)) {
                 alert("Your file is too big, our systems can handle it, but it requires a lot of time. We decline.", true);
                 file.close();
                 return;

@@ -11,6 +11,7 @@
 #include <QThread>
 #include <QDesktopServices>
 #include <QInputDialog>
+#include <QtMath>
 
 #include <encryptdialog.h>
 #include <QProgressDialog>
@@ -71,26 +72,26 @@ signals:
      * \param mode Mode of encryption
      * \param bitsUsed Bits used per byte
      */
-    encrypt(QByteArray data, QImage * image, int mode, int bitsUsed);
+    void encrypt(QByteArray data, QImage * image, int mode, int bitsUsed);
     /*!
      * \brief decrypt Signal calling ModelPC::decrypt
      * \param _image Image for decryption
      * \param key encryption key
      */
-    decrypt(QImage * _image, QString key);
+    void decrypt(QImage * _image, QString key);
     /*!
      * \brief abortModel Signal calling to stop ModelPC::circuit
      */
-    abortModel();
+    void abortModel();
     /*!
      * \brief setJPHSPath Sets the default JPHS directory
      * \param dir Directory
      */
-    setJPHSDir(QString dir);
+    void setJPHSDir(QString dir);
     /*!
      * \brief runTests Runs tests in ControllerPC via TestPC
      */
-    runTests();
+    void runTests();
 public:
     /*!
      * \brief dialog ProgressDialog used.
