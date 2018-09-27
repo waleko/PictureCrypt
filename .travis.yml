@@ -27,14 +27,6 @@
 language: cpp
 compiler: gcc
 
-std:
-  - gnu++0x
-  - c++0x
-  - c++14
-  - gnu++14
-  - c++11
-  - gnu++11
-
 before_install:
   # C++14
   - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
@@ -49,6 +41,6 @@ install:
 
 script:
   - cd src
-  - qmake
+  - qmake "QMAKE_CXXFLAGS += -std=c++0x"
   - make
   - ./PictureCrypt
