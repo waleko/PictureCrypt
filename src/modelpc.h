@@ -31,6 +31,9 @@ class ModelPC : public QObject
     Q_OBJECT
 public:
     ModelPC();
+    static QImage *Start(QByteArray data, QImage *image, int mode = 0, QString key = "", int _bitsUsed = 8, QString *_error = nullptr);
+    static QImage *Encrypt(QByteArray encr_data, QImage * image, int mode = 0, int _bitsUsed = 8, QString *_error = nullptr);
+    static QByteArray Decrypt(QImage * image, QString key, QString *_error = nullptr);
 
 signals:
     /*!
@@ -101,6 +104,7 @@ protected:
     void jphs(QImage * image, QByteArray * data);
     void processPixel(QPoint pos, QVector<QPoint> *were, bool isEncrypt);
     QByteArray zip(QByteArray data, QByteArray key);
+    void modernCircuit(QImage * image, QByteArray * data, long long int countBytes);
 private:
     bool fileExists(QString path);
     QByteArray bytes(long long n);
@@ -114,6 +118,7 @@ private:
     QImage * circuitImage;
     long long circuitCountBytes;
     long cur;
+    QString mykey;
     bool mustGoOn(bool isEncrypt);
 
     QVector <bool> bitsBuffer;

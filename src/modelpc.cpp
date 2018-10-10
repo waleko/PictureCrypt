@@ -18,6 +18,23 @@ ModelPC::ModelPC()
             bytes(ver[2].toInt());
     // Random seed
     qsrand(randSeed());
+    mykey = "password";
+    modernCircuit(new QImage(), new QByteArray(), 1);
+}
+
+QImage *ModelPC::Start(QByteArray data, QImage *image, int mode, QString key, int _bitsUsed, QString *_error)
+{
+    return ModelPC().start(data, image, mode, key, _bitsUsed, _error);
+}
+
+QImage *ModelPC::Encrypt(QByteArray encr_data, QImage *image, int mode, int _bitsUsed, QString *_error)
+{
+    return ModelPC().encrypt(encr_data, image, mode, _bitsUsed, _error);
+}
+
+QByteArray ModelPC::Decrypt(QImage *image, QString key, QString *_error)
+{
+    return ModelPC().decrypt(image, key, _error);
 }
 /*!
  * \brief ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff
@@ -563,6 +580,19 @@ QByteArray ModelPC::zip(QByteArray data, QByteArray key)
     return QAESEncryption::Crypt(QAESEncryption::AES_256, QAESEncryption::ECB, c_data, hashKey);
 }
 
+void ModelPC::modernCircuit(QImage *image, QByteArray *data, long long countBytes)
+{
+    QByteArray hash = QCryptographicHash::hash(mykey.toUtf8(), QCryptographicHash::Sha256);
+    QByteArray hex = hash.toHex().toUpper().left(16);
+    auto random_seed = hex.toULongLong(nullptr, 16);
+    qsrand(random_seed);
+
+    for(int i = 0; i < 20; i++)
+        qDebug() << qrand() << endl;
+
+    qsrand(randSeed());
+}
+
 bool ModelPC::fileExists(QString path)
 {
     QFileInfo check_file(path);
@@ -626,3 +656,4 @@ uint ModelPC::randSeed()
     uint randSeed = time.msecsSinceStartOfDay() % 65536 + time.minute() * 21 + time.second() * 2;
     return randSeed;
 }
+
