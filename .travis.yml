@@ -10,11 +10,11 @@ before_install:
 
 install:
   # C++14
-  - sudo apt-get install g++-5
+  - sudo apt-get install g++-6
   # - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 90
 
 script:
   - cd src
-  - qmake -qt=qt5 "QMAKE_CXXFLAGS += -std=c++0x" "QT += gui" "QT += core" "QT += widgets"
+  - qmake -qt=qt5 "QMAKE_CXXFLAGS += -std=c++0x" "QT += gui" "QT += core" "QT += widgets" "DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900"
   - make
   - ./PictureCrypt
