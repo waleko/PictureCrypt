@@ -583,6 +583,10 @@ QByteArray ModelPC::zip(QByteArray data, QByteArray key)
 
 void ModelPC::modernCircuit(QImage *image, QByteArray *data, long long countBytes)
 {
+    // Currently in development
+    return;
+    // Dead code
+
     QByteArray hash = QCryptographicHash::hash(mykey.toUtf8(), QCryptographicHash::Sha256);
     QByteArray hex = hash.toHex().toUpper().left(16);
     auto random_seed = hex.toULongLong(nullptr, 16);

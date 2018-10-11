@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>274</width>
-    <height>369</height>
+    <width>432</width>
+    <height>478</height>
    </rect>
   </property>
   <property name="contextMenuPolicy">
@@ -53,9 +53,9 @@
        </layout>
       </item>
       <item>
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="enLabel1">
         <property name="text">
-         <string>Input:</string>
+         <string>Type in the text for encryption:</string>
         </property>
        </widget>
       </item>
@@ -66,6 +66,13 @@
         </property>
         <property name="readOnly">
          <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="enLabel2">
+        <property name="text">
+         <string>Or use the file dialog to choose a file:</string>
         </property>
        </widget>
       </item>
@@ -123,7 +130,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>274</width>
+     <width>432</width>
      <height>25</height>
     </rect>
    </property>

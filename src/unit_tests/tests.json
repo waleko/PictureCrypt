@@ -14,7 +14,7 @@
             "expectation": "ok",
             "mode": 0,
             "key": "password",
-            "bitsUsed": 7
+            "bitsUsed": 5
         },
         {
             "data": "/text/",
@@ -45,7 +45,7 @@
             "image": "invalid.jpg",
             "expectation": "nullimage",
             "mode": 0,
-            "key": "",
+            "key": "blog it",
             "bitsUsed": 8
         },
         {
@@ -53,7 +53,7 @@
             "image": "bigpicture.jpg",
             "expectation": "bitsWrong",
             "mode": 0,
-            "key": "that key is brilliant",
+            "key": "turtles are great",
             "bitsUsed": 12
         },
 		{

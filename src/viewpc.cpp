@@ -237,6 +237,9 @@ void ViewPC::setEncryptMode(bool encr)
     ui->text->setEnabled(encr);
     isEncrypt = encr;
     ui->startButton->setText(encr ? "Continue configuration" : "Start decryption");
+    ui->enLabel1->setText(encr ? "Type in the text for encryption:" : "Text input isn't supported in decryption mode");
+    ui->enLabel1->setEnabled(encr);
+    ui->enLabel2->setText(encr ? "Or use the file dialog to choose a file:" : "Choose a file for decryption:");
 }
 /*!
  * \brief ViewPC::setVersion Set the version of the app from ControllerPC
