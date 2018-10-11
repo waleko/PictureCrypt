@@ -6,7 +6,8 @@
     "wrongmode": "Incorrect mode selected",
     "wrongimage": "Image wasn't encrypted by this app or is damaged!",
     "noreaddata": "Read data is empty!",
-    "savefilefail": "Cannot save file, wait wut?",
-    "bitsBufferFail": "Something went very wrong! Error code 1",
-    "nojphs": "JPHS not installed, installation required!\nSee Menu -> Configure -> JPHS directory"
+    "savefilefail": "Cannot save the file!",
+    "bitsBufferFail": "Something went very wrong! Error code: bitsBuffer",
+    "nojphs": "JPHS not installed, installation required!\nSee Menu -> Configure -> JPHS directory",
+    "fail_hash": "Invalid keyphrase"
 }

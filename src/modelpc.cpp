@@ -1,5 +1,6 @@
 #include "modelpc.h"
 #include <QDebug>
+#include <QtMath>
 /*!
  * \brief ModelPC::ModelPC Constructor
  * Unit tests are run here.
@@ -11,13 +12,30 @@ ModelPC::ModelPC()
     versionString = "1.3.4";
 
     auto ver = versionString.split(".");
-    version = ver[0].toInt() * pow(2, 16) + ver[1].toInt() * pow(2, 8) + ver[2].toInt();
+    version = ver[0].toInt() * qPow(2, 16) + ver[1].toInt() * qPow(2, 8) + ver[2].toInt();
 
     ver_byte = bytes(ver[0].toInt()) +
             bytes(ver[1].toInt()) +
             bytes(ver[2].toInt());
     // Random seed
     qsrand(randSeed());
+    mykey = "password";
+    modernCircuit(new QImage(), new QByteArray(), 1);
+}
+
+QImage *ModelPC::Start(QByteArray data, QImage *image, int mode, QString key, int _bitsUsed, QString *_error)
+{
+    return ModelPC().start(data, image, mode, key, _bitsUsed, _error);
+}
+
+QImage *ModelPC::Encrypt(QByteArray encr_data, QImage *image, int mode, int _bitsUsed, QString *_error)
+{
+    return ModelPC().encrypt(encr_data, image, mode, _bitsUsed, _error);
+}
+
+QByteArray ModelPC::Decrypt(QImage *image, QString key, QString *_error)
+{
+    return ModelPC().decrypt(image, key, _error);
 }
 /*!
  * \brief ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff
@@ -196,8 +214,8 @@ QByteArray ModelPC::decrypt(QImage * image, QString key, QString *_error)
 
     }
     // Version check
-    long long int _ver = mod(data.at(0)) * pow(2, 16);
-    _ver += mod(data.at(1)) * pow(2, 8);
+    long long int _ver = mod(data.at(0)) * qPow(2, 16);
+    _ver += mod(data.at(1)) * qPow(2, 8);
     _ver += mod(data.at(2));
     data.remove(0, 3);
     if(_ver > version) {
@@ -467,9 +485,9 @@ void ModelPC::processPixel(QPoint pos, QVector<QPoint> *were, bool isEncrypt)
         int blue = pixelColor.blue();
 
         // Write new data in last bitsUsed pixels
-        red += pop() - red % (int) pow(2, bitsUsed);
-        green += pop() - green % (int) pow(2, bitsUsed);
-        blue += pop() - blue % (int) pow(2, bitsUsed);
+        red += pop() - red % (int) qPow(2, bitsUsed);
+        green += pop() - green % (int) qPow(2, bitsUsed);
+        blue += pop() - blue % (int) qPow(2, bitsUsed);
 
         circuitImage->setPixelColor(pos, QColor(red, green, blue));
     }
@@ -482,9 +500,9 @@ void ModelPC::processPixel(QPoint pos, QVector<QPoint> *were, bool isEncrypt)
         int blue = read_color.blue();
 
         // Reading the last bitsUsed pixels
-        red %= (int) pow(2, bitsUsed);
-        green %= (int) pow(2, bitsUsed);
-        blue %= (int) pow(2, bitsUsed);
+        red %= (int) qPow(2, bitsUsed);
+        green %= (int) qPow(2, bitsUsed);
+        blue %= (int) qPow(2, bitsUsed);
 
         // Getting the data in the bitsBuffer.
         push(red);
@@ -508,7 +526,7 @@ long ModelPC::pop(int bits)
     if(bits == -2)
         poppedBits = bitsBuffer.size();
     for(int i = 0; i < poppedBits; i++)
-        res += bitsBuffer[i] * pow(2, poppedBits - i - 1);
+        res += bitsBuffer[i] * qPow(2, poppedBits - i - 1);
     bitsBuffer.remove(0, poppedBits);
     return res;
 }
@@ -563,6 +581,23 @@ QByteArray ModelPC::zip(QByteArray data, QByteArray key)
     return QAESEncryption::Crypt(QAESEncryption::AES_256, QAESEncryption::ECB, c_data, hashKey);
 }
 
+void ModelPC::modernCircuit(QImage *image, QByteArray *data, long long countBytes)
+{
+    // Currently in development
+    return;
+    // Dead code
+
+    QByteArray hash = QCryptographicHash::hash(mykey.toUtf8(), QCryptographicHash::Sha256);
+    QByteArray hex = hash.toHex().toUpper().left(16);
+    auto random_seed = hex.toULongLong(nullptr, 16);
+    qsrand(random_seed);
+
+    for(int i = 0; i < 20; i++)
+        qDebug() << qrand() << endl;
+
+    qsrand(randSeed());
+}
+
 bool ModelPC::fileExists(QString path)
 {
     QFileInfo check_file(path);
@@ -611,13 +646,13 @@ QColor ModelPC::RGBbytes(long long byte)
 {
     int blue = byte % 256;
     int green = (byte / 256) % 256;
-    int red = byte / pow(2, 16);
+    int red = byte / qPow(2, 16);
     return QColor(red, green, blue);
 }
 
 QString ModelPC::generateVersionString(long ver)
 {
-    return QString::number((int)( ver / pow(2, 16))) + "." + QString::number(((int) (ver / 256)) % 256) + "." + QString::number(ver % 256);
+    return QString::number((int)( ver / qPow(2, 16))) + "." + QString::number(((int) (ver / 256)) % 256) + "." + QString::number(ver % 256);
 }
 
 uint ModelPC::randSeed()
@@ -626,3 +661,4 @@ uint ModelPC::randSeed()
     uint randSeed = time.msecsSinceStartOfDay() % 65536 + time.minute() * 21 + time.second() * 2;
     return randSeed;
 }
+

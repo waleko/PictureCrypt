@@ -31,6 +31,9 @@ class ModelPC : public QObject
     Q_OBJECT
 public:
     ModelPC();
+    static QImage *Start(QByteArray data, QImage *image, int mode = 0, QString key = "", int _bitsUsed = 8, QString *_error = nullptr);
+    static QImage *Encrypt(QByteArray encr_data, QImage * image, int mode = 0, int _bitsUsed = 8, QString *_error = nullptr);
+    static QByteArray Decrypt(QImage * image, QString key, QString *_error = nullptr);
 
 signals:
     /*!
@@ -39,23 +42,23 @@ signals:
      * \param isWarning Flag if message is critical.
      * \sa ModelPC::alert, ViewPC::alert
      */
-    alertView(QString messageCode, bool isWarning);
+    void alertView(QString messageCode, bool isWarning);
     /*!
      * \brief saveData Signal to be called to save data from ModelPC::decrypt.
      * \param data Data to be saved.
      */
-    saveData(QByteArray data);
+    void saveData(QByteArray data);
     /*!
      * \brief saveImage Signal to be called to save image from ModelPC::encrypt.
      * \param image Image to be saved.
      */
-    saveImage(QImage *image);
+    void saveImage(QImage *image);
     /*!
      * \brief setProgress Signal to be called to set progress of ProgressDialog.
      * \param val Value to be set.
      * \sa ViewPC::setProgress
      */
-    setProgress(int val);
+    void setProgress(int val);
 
 public slots:
     QImage *start(QByteArray data, QImage *image, int mode = 0, QString key = "", int _bitsUsed = 8, QString *_error = nullptr);
@@ -101,6 +104,7 @@ protected:
     void jphs(QImage * image, QByteArray * data);
     void processPixel(QPoint pos, QVector<QPoint> *were, bool isEncrypt);
     QByteArray zip(QByteArray data, QByteArray key);
+    void modernCircuit(QImage * image, QByteArray * data, long long int countBytes);
 private:
     bool fileExists(QString path);
     QByteArray bytes(long long n);
@@ -114,6 +118,7 @@ private:
     QImage * circuitImage;
     long long circuitCountBytes;
     long cur;
+    QString mykey;
     bool mustGoOn(bool isEncrypt);
 
     QVector <bool> bitsBuffer;
