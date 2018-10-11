@@ -2,6 +2,7 @@
 Make your pictures crypted.
 
 [![Build Status](https://travis-ci.com/waleko/PictureCrypt.svg?branch=master)](https://travis-ci.com/waleko/PictureCrypt)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0c1f3e2bd51c4feebf5a4ce9d2692660)](https://app.codacy.com/app/waleko/PictureCrypt?utm_source=github.com&utm_medium=referral&utm_content=waleko/PictureCrypt&utm_campaign=Badge_Grade_Dashboard)
 
 ## About
 Project is made only using QT.
@@ -28,15 +29,16 @@ ModelPC * model = new ModelPC();
 QImage * resultImage = model->start(QByteArray data, // Data to be embedded
 									QImage *image, // Image for embedding
 									int mode = 0, // Mode of embedding
-									QString key = "", // Key for extra-encryption (if empty, key will be generated automatically)
+									QString key = "", // Key for extra-encryption (is required, if not given, error will show up)
 									int bitsUsed = 8, // Bits per Byte used (better explaination ModelPC::bitsUsed)
 									QString *error = nullptr); // Error output, if everything is ok, error will be "ok"
-if(*error != "ok)
+if(*error != "ok")
 	return;
 // Note *error is just a code of error (like "muchdata", dictionary of error codes is also available on github.
 
 // De-embedding
 QByteArray output = model->decrypt(QImage * image, // Image with hidden data
+									 QString key = "" // Key for extra-encryption
 								   QString *_error = nullptr); // Error output
 if(data == output)
 	qDebug() << "Great success!";
@@ -61,8 +63,7 @@ Doxygen Documentation avaible [here](https://alexkovrigin.me/PictureCrypt)
 
 ## Contact
 Question or suggestions are welcome!
-Please use the GitHub issue tracking to report suggestions or issues.
-Email me a.kovrigin0@gmail.com and visit my site https://alexkovrigin.me
+Email me a.kovrigin0@gmail.com or visit my site https://alexkovrigin.me
 
 ## License
 This software is provided under the [UNLICENSE](http://unlicense.org/)
