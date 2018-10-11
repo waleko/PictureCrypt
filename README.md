@@ -1,4 +1,10 @@
 # PictureCrypt
+
+!!!
+Note: This branch is just a travis ci test, 
+version of the app here may be really old.
+
+
 Make your pictures crypted.
 
 [![Build Status](https://travis-ci.com/waleko/PictureCrypt.svg?branch=master)](https://travis-ci.com/waleko/PictureCrypt)
