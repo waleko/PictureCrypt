@@ -10,6 +10,7 @@
 #include <QProcess>
 #include <QTime>
 #include <QFileInfo>
+#include <QtGui>
 
 #include <aes/qaesencryption.h>
 #include <QCryptographicHash>
