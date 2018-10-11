@@ -6,20 +6,28 @@ dist: trusty
 before_install:
   # C++14
   - sudo add-apt-repository -y ppa:beineri/opt-qt-5.10.1-trusty
+  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
   - sudo apt-get update -qq
 
 install:
   # C++14
-  - sudo apt-get install -qq qt510-meta-full
+  - sudo apt-get install -y qt510-meta-minimal
   - source /opt/qt510/bin/qt510-env.sh
   - export QTHOME=/opt/qt510
-  - sudo apt-get install qtbase5-dev
-  - sudo apt-get install qt5-default qttools5-dev-tools qt5-qmake make
+  # - sudo apt-get install qtbase5-dev
+  # - sudo apt-get install qt5-default qttools5-dev-tools qt5-qmake make
   - sudo apt-get install g++-6
   # - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 90
 
 script:
   - cd src
-  - qmake -qt=qt5 "QMAKE_CXXFLAGS += -std=c++0x" "QT += gui" "QT += core" "QT += widgets" "DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900"
+  - qmake "QMAKE_CXXFLAGS += -std=c++0x" "QT += gui" "QT += core" "QT += widgets" "DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900"
   - make
-  - ./PictureCrypt
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: master
