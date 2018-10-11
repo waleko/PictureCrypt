@@ -10,7 +10,7 @@ before_install:
 
 install:
   # C++14
-  - sudo apt-get install -qq qt510-meta-minimal
+  - sudo apt-get install -y qt510-meta-minimal
   - source /opt/qt510/bin/qt510-env.sh
   - export QTHOME=/opt/qt510
   - sudo apt-get install qtbase5-dev
