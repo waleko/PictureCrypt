@@ -30,14 +30,13 @@ install:
   - sudo apt-get install -y doxygen-gui
   - sudo apt-get install -y graphviz
 
-before_script:
-  - cd src
 script:
-  - ./script/build.sh
+  - cd script
+  - bash ./script/build.sh
 after_success:
-  - ./script/clean.sh
+  - bash ./script/clean.sh
 before_deploy:
-  - ./script/deploy.sh
+  - bash ./script/deploy.sh
 
 deploy:
   provider: pages
