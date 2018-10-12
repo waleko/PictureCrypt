@@ -3,7 +3,9 @@
  * \brief TestPC::TestPC Constructor
  */
 TestPC::TestPC()
-{ }
+{
+    model = new ModelPC();
+}
 /*!
  * \brief TestPC::Test Static function of testing
  * \return Returns result of the testing
