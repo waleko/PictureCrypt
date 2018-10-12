@@ -2,6 +2,7 @@ language: cpp
 compiler: gcc
 sudo: required
 dist: trusty
+
 branches:
   except:
     - gh-pages
@@ -22,16 +23,21 @@ install:
   - export QTHOME=/opt/qt510
   # Install g++
   - sudo apt-get install g++-6
-  # Install doxygen
-  - sudo apt-get -y doxygen
-  - sudo apt-get -y doxygen-doc
-  - sudo apt-get -y doxygen-latex
-  - sudo apt-get -y doxygen-gui
-  - sudo apt-get -y graphviz
+  # Install doxygen and graphviz
+  - sudo apt-get install -y doxygen
+  - sudo apt-get install -y doxygen-doc
+  - sudo apt-get install -y doxygen-latex
+  - sudo apt-get install -y doxygen-gui
+  - sudo apt-get install -y graphviz
 
-script:
+before_script:
   - cd src
+script:
   - ../script/build.sh
+after_success:
+  - ../script/clean.sh
+before_deploy:
+  - ../script/deploy.sh
 
 deploy:
   provider: pages
