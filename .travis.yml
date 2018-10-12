@@ -33,11 +33,11 @@ install:
 before_script:
   - cd src
 script:
-  - ../script/build.sh
+  - ./script/build.sh
 after_success:
-  - ../script/clean.sh
+  - ./script/clean.sh
 before_deploy:
-  - ../script/deploy.sh
+  - ./script/deploy.sh
 
 deploy:
   provider: pages
