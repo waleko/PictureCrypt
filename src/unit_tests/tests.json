@@ -1,0 +1,68 @@
+{
+    "tests": [
+        {
+            "data": "/text/",
+            "image": "bigpicture.jpg",
+            "expectation": "ok",
+            "mode": 0,
+            "key": "qwertykey",
+            "bitsUsed": 8
+        },
+        {
+            "data": "/text/",
+            "image": "bigpicture.jpg",
+            "expectation": "ok",
+            "mode": 0,
+            "key": "password",
+            "bitsUsed": 5
+        },
+        {
+            "data": "/text/",
+            "image": "bigpicture.jpg",
+            "expectation": "ok",
+            "mode": 0,
+            "key": "wowthatpassword",
+            "bitsUsed": 1
+        },
+        {
+            "data": "/text/",
+            "image": "tinypicture.png",
+            "expectation": "muchdata",
+            "mode": 0,
+            "key": "get123",
+            "bitsUsed": 8
+        },
+        {
+            "data": "",
+            "image": "bigpicture.jpg",
+            "expectation": "nodata",
+            "mode": 0,
+            "key": "42",
+            "bitsUsed": 8
+        },
+        {
+            "data": "/text/",
+            "image": "invalid.jpg",
+            "expectation": "nullimage",
+            "mode": 0,
+            "key": "blog it",
+            "bitsUsed": 8
+        },
+        {
+            "data": "/text/",
+            "image": "bigpicture.jpg",
+            "expectation": "bitsWrong",
+            "mode": 0,
+            "key": "turtles are great",
+            "bitsUsed": 12
+        },
+		{
+            "data": "/text/",
+            "image": "bigpicture.jpg",
+            "expectation": "no_key",
+            "mode": 0,
+            "key": "",
+            "bitsUsed": 7
+        }
+    ]
+}

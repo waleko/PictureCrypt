@@ -1,0 +1,97 @@
+Project made using QT Creator in C++\hypertarget{index_idea}{}\section{The idea of the project}\label{index_idea}
+The idea came to me, when I read an article about steganoraphy. I realised, that you can store data in an image in pixels near the border, so noone can see and even if they did, it is practically impossible to decipher the contents. \hypertarget{index_real}{}\section{Realisation}\label{index_real}
+To create the encrypted image, you need to select any file for encryption, then using \mbox{\hyperlink{class_encrypt_dialog}{Encrypt\+Dialog}} you select the image to store the data. Then output image is generated. \begin{DoxyAttention}{Attention}
+Output image format available is .P\+NG, because .jpg isn\textquotesingle{}t lossless, so the pixels containing data would be seriously simplified and the data damaged. .B\+MP isn\textquotesingle{}t used, because noone really uses it and .P\+NG is just compressed .B\+MP (more or less) 
+\end{DoxyAttention}
+\begin{DoxyNote}{Note}
+J\+P\+HS support is under development \+:D
+\end{DoxyNote}
+\hypertarget{index_use}{}\section{How can someone use it?}\label{index_use}
+Well... Anyone who wants to securely commuicate. For example your boss watches your inbox, so you do the work and don\textquotesingle{}t chat with your friends about the bar, they\textquotesingle{}ve just visited. Using this app you can send them a photo of your desk, saying it\textquotesingle{}s my new working space, but inside the image there is secret message saying \char`\"{}\+Wanna get another beer tonight? x\+D\char`\"{}. Boss sees this image, but doesn\textquotesingle{}t spot anyhing. Great example... \hypertarget{index_structure}{}\section{Structure of the project.}\label{index_structure}
+Project is done via M\+VC Pattern. View and Model layers are totally isolated and run on different threads.
+
+Code from controller.\+cpp 
+\begin{DoxyCode}
+view = \textcolor{keyword}{new} \mbox{\hyperlink{class_view_p_c}{ViewPC}}();
+model = \textcolor{keyword}{new} \mbox{\hyperlink{class_model_p_c}{ModelPC}}(version);
+QThread * modelThread = \textcolor{keyword}{new} QThread();
+model->moveToThread(modelThread);
+modelThread->\mbox{\hyperlink{class_model_p_c_a3cae34fd5bcb06e8c1f8cfe7961bd270}{start}}();
+\end{DoxyCode}
+ So when Model is hard-\/working, View layer is just fine.
+
+Layers also have a ton of functions, so here is a scheme, that I was doing for about 10 hours, which demonstrates the most important functions and classes in the project. And everything is clickable here, so try it out! 
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{dot_mainpage}}
+\end{DoxyImageNoCaption}
+ Well... I think you didn\textquotesingle{}t quite understand what is happening here... So hop into my \char`\"{}\+User-\/friendly\char`\"{} Documentation!
+
+See source on \href{https://github.com/waleko/PictureCrypt}{\tt https\+://github.\+com/waleko/\+Picture\+Crypt}
+
+\begin{DoxyNote}{Note}
+\mbox{\hyperlink{class_q_a_e_s_encryption}{Q\+A\+E\+S\+Encryption}} class done by \href{https://github.com/bricke}{\tt Bricke}
+\end{DoxyNote}
+\hypertarget{index_ext-use}{}\section{External use}\label{index_ext-use}
+\mbox{\hyperlink{class_model_p_c}{Model\+PC}} class can be used externally (without UI) \begin{DoxyNote}{Note}
+\mbox{\hyperlink{class_test_p_c}{Test\+PC}} class was introduced recently, its use is adviced.
+\end{DoxyNote}
+
+\begin{DoxyCode}
+\textcolor{preprocessor}{#include <\mbox{\hyperlink{modelpc_8h}{modelpc.h}}>}
+\textcolor{preprocessor}{#include <\mbox{\hyperlink{testpc_8h}{testpc.h}}>}
+\textcolor{preprocessor}{#include <QByteArray>}
+\textcolor{preprocessor}{#include <QImage>}
+
+\textcolor{preprocessor}{#include <QDebug>} \textcolor{comment}{// Just for demonstration use}
+
+...
+
+TestPC testing;
+\textcolor{keywordflow}{if}(!testing.startTest())
+    \textcolor{keywordflow}{return};
+\mbox{\hyperlink{class_model_p_c}{ModelPC}} * model = \textcolor{keyword}{new} \mbox{\hyperlink{class_model_p_c}{ModelPC}}();
+
+\textcolor{comment}{// Embedding}
+QImage * resultImage = model->\mbox{\hyperlink{class_model_p_c_a3cae34fd5bcb06e8c1f8cfe7961bd270}{start}}(QByteArray \mbox{\hyperlink{namespace_errors_dict_setup_af570460846fb9f0c91abd308a095dcdc}{data}}, \textcolor{comment}{// Data to be embedded}
+                                    QImage *\mbox{\hyperlink{namespacetests-setup_ad55b685280f549e15688a94cbb89f512}{image}}, \textcolor{comment}{// Image for embedding}
+                                    \textcolor{keywordtype}{int} \mbox{\hyperlink{namespacetests-setup_a04126d10edec6b3171e1b55a00309b23}{mode}} = 0, \textcolor{comment}{// Mode of embedding}
+                                    QString \mbox{\hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key}} = \textcolor{stringliteral}{""}, \textcolor{comment}{// Key for extra-encryption (if empty, key will be
+       generated automatically)}
+                                    \textcolor{keywordtype}{int} \mbox{\hyperlink{namespacetests-setup_a64974eb034f518d24195739395783d3d}{bitsUsed}} = 8, \textcolor{comment}{// Bits per Byte used (better explaination
+       ModelPC::bitsUsed)}
+                                    QString *error = \textcolor{keyword}{nullptr}); \textcolor{comment}{// Error output, if everything is ok, error
+       will be "ok"}
+\textcolor{keywordflow}{if}(*error != \textcolor{stringliteral}{"ok)}
+\textcolor{stringliteral}{    return;}
+\textcolor{stringliteral}{// Note *error is just a code of error (like "}muchdata\textcolor{stringliteral}{", dictionary of error codes is also available on
+       github.}
+\textcolor{stringliteral}{}
+\textcolor{stringliteral}{// De-embedding}
+\textcolor{stringliteral}{QByteArray output = model->decrypt(QImage * image, // Image with hidden data}
+\textcolor{stringliteral}{                                   QString *\_error = nullptr); // Error output}
+\textcolor{stringliteral}{if(data == output)}
+\textcolor{stringliteral}{   qDebug() << "}Great success!\textcolor{stringliteral}{";}
+\textcolor{stringliteral}{else}
+\textcolor{stringliteral}{   qDebug() << "}Fiasco :(\textcolor{stringliteral}{";}
+\end{DoxyCode}
+ \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_model_p_c}{Model\+PC}}, \mbox{\hyperlink{class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c}{Model\+P\+C\+::\+Model\+PC}}, \mbox{\hyperlink{class_model_p_c_a67c4fd6db2cd4a3bb23a2fc48f7cceff}{Model\+P\+C\+::save\+Data}}, \mbox{\hyperlink{class_model_p_c_a5af79bd5fd50d7be0646778bc99413b9}{Model\+P\+C\+::save\+Image}}, \mbox{\hyperlink{class_model_p_c_aef1f058227af54e4cfc9fc4c4397d30c}{Model\+P\+C\+::alert\+View}}, \mbox{\hyperlink{class_model_p_c_a25a4496e129e87ac96f12257a123b84f}{Model\+P\+C\+::set\+Progress}}
+\end{DoxySeeAlso}
+\hypertarget{index_jphs-use}{}\section{J\+P\+H\+S use}\label{index_jphs-use}
+The newer versions of the app have jphs support, but they don\textquotesingle{}t have jphs built in as it is provided under G\+NU General Public License v3.\+0, is \char`\"{}for test purposes only\char`\"{} and is illegal in some countries, so... \begin{DoxyAttention}{Attention}
+We support J\+P\+HS, but we don\textquotesingle{}t use any responsibility for it, we never used or downloaded it, we just used .exe output in the web, and it somehow works by chance. All responsibility for using jphs is on you, that is why we use made only optionally. That means that to use jphs with our app you will have to download the jphs yourself and specify the jphs directory. However we provide link to the site where you can download the supported version of the jphs\+: \href{http://linux01.gwdg.de/~alatham/stego.html}{\tt http\+://linux01.\+gwdg.\+de/$\sim$alatham/stego.\+html} As it\textquotesingle{}s not our site publishing the dangerous zip file, we just put link to that site (Google does that too, so what? Sue Google?), This text is subject to United Nations\textquotesingle{} Universal Declaration of Human Rights, (see Article 19 \href{http://www.un.org/en/universal-declaration-human-rights}{\tt http\+://www.\+un.\+org/en/universal-\/declaration-\/human-\/rights})\+: \begin{quote}
+Everyone has the right to freedom of opinion and expression; this right includes freedom to hold opinions without interference and to seek, receive and impart information and ideas through any media and regardless of frontiers. \end{quote}
+And I typed this link randomly, and I\textquotesingle{}m scared...
+\end{DoxyAttention}
+\hypertarget{index_lic}{}\section{License}\label{index_lic}
+This software is provided under the \href{http://unlicense.org}{\tt U\+N\+L\+I\+C\+E\+N\+SE}\hypertarget{index_contact}{}\section{Contact us}\label{index_contact}
+Visit Github Page\+: \href{https://waleko.github.io}{\tt https\+://waleko.\+github.\+io} and our site \href{http://alex.unaux.com}{\tt http\+://alex.\+unaux.\+com}
+
+Email me at \href{mailto:a.kovrigin0@gmail.com}{\tt a.\+kovrigin0@gmail.\+com}
+
+\begin{DoxyAuthor}{Author}
+Alex Kovrigin 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Alex Kovrigin 2018  
+\end{DoxyCopyright}

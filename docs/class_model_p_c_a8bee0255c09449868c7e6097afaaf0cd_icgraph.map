@@ -1,0 +1,6 @@
+<map id="ModelPC::jphs" name="ModelPC::jphs">
+<area shape="rect" id="node2" href="$class_model_p_c.html#a8ef76567bc0c0307b4e2547c46536e51" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="160,31,287,57"/>
+<area shape="rect" id="node3" href="$class_model_p_c.html#a3cae34fd5bcb06e8c1f8cfe7961bd270" title="ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff After completion sta..." alt="" coords="335,31,444,57"/>
+<area shape="rect" id="node4" href="$class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" title="ControllerPC::ControllerPC Constructor of controller Constructor runs auto&#45;test for ModelPC..." alt="" coords="492,5,668,32"/>
+<area shape="rect" id="node5" href="$class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="533,56,627,83"/>
+</map>

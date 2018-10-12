@@ -1,0 +1,42 @@
+\hypertarget{testpc_8h_source}{}\section{testpc.\+h}
+\label{testpc_8h_source}\index{C\+:/\+Users/salex/\+Documents/\+Git\+Hub/\+Picture\+Crypt/src/unit\+\_\+tests/testpc.\+h@{C\+:/\+Users/salex/\+Documents/\+Git\+Hub/\+Picture\+Crypt/src/unit\+\_\+tests/testpc.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#ifndef TESTPC\_H}
+00002 \textcolor{preprocessor}{#define TESTPC\_H}
+00003 
+00004 \textcolor{preprocessor}{#include <QObject>}
+00005 \textcolor{preprocessor}{#include <\mbox{\hyperlink{modelpc_8h}{modelpc.h}}>}
+00006 
+00007 \textcolor{preprocessor}{#include <QFile>}
+00008 \textcolor{preprocessor}{#include <QDebug>}
+00009 \textcolor{preprocessor}{#include <QString>}
+00010 \textcolor{preprocessor}{#include <QImage>}
+00011 \textcolor{preprocessor}{#include <QByteArray>}
+00012 
+00013 \textcolor{preprocessor}{#include <QJsonDocument>}
+00014 \textcolor{preprocessor}{#include <QJsonArray>}
+00015 \textcolor{preprocessor}{#include <QJsonObject>}
+00016 
+00017 \textcolor{preprocessor}{#include <QDateTime>}
+\Hypertarget{testpc_8h_source_l00022}\mbox{\hyperlink{class_test_p_c}{00022}} \textcolor{keyword}{class }\mbox{\hyperlink{class_test_p_c}{TestPC}} : \textcolor{keyword}{public} QObject
+00023 \{
+00024     Q\_OBJECT
+00025 \textcolor{keyword}{public}:
+00026     \mbox{\hyperlink{class_test_p_c_a65226eb54f1ff76639c9fb1e2013e430}{TestPC}}();
+00027 \textcolor{keyword}{public} slots:
+00028     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_test_p_c_ad0d724439a65d183d3d336b667cb867b}{startTest}}();
+00029 \textcolor{keyword}{protected} slots:
+00030     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_test_p_c_a612a0409006417c6f03e1749bca0d45a}{test}}(QByteArray \mbox{\hyperlink{namespace_errors_dict_setup_af570460846fb9f0c91abd308a095dcdc}{data}}, QImage rImage,
+00031               QString expectedOutput = \textcolor{stringliteral}{"ok"}, \textcolor{keywordtype}{int} \mbox{\hyperlink{namespacetests-setup_a04126d10edec6b3171e1b55a00309b23}{mode}} = 0,
+00032               QString \mbox{\hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key}} = \textcolor{stringliteral}{""}, \textcolor{keywordtype}{int} \mbox{\hyperlink{namespacetests-setup_a64974eb034f518d24195739395783d3d}{bitsUsed}} = 8);
+00033 \textcolor{keyword}{private}:
+00037     \mbox{\hyperlink{class_model_p_c}{ModelPC}} * model;
+00041     QByteArray text;
+00045     QImage image;
+00046 
+00047     \textcolor{keywordtype}{bool} autoTest(QJsonDocument doc);
+00048 \};
+00049 
+00050 \textcolor{preprocessor}{#endif // TESTPC\_H}
+\end{DoxyCode}

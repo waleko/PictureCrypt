@@ -1,0 +1,78 @@
+Make your pictures crypted.
+
+\subsection*{About}
+
+Project is made only using QT. \href{http://github.com/bricke/Qt-AES}{\tt Q\+A\+E\+S\+Encryption} by bricke was also used. M\+VC pattern used. Picture\+Crypt project is UI based, the model contains all buisness logic and can work as standalone class.
+
+\subsection*{External use}
+
+\mbox{\hyperlink{class_model_p_c}{Model\+PC}} class can be used externally (without UI) 
+\begin{DoxyCode}
+#include <modelpc.h>
+#include <testpc.h>
+#include <QByteArray>
+#include <QImage>
+
+...
+// Testing the ModelPC
+TestPC testing;
+if(!testing.startTest())
+    return;
+ModelPC * model = new ModelPC();
+
+// Embedding
+QImage * resultImage = model->start(QByteArray data, // Data to be embedded
+                                    QImage *image, // Image for embedding
+                                    int mode = 0, // Mode of embedding
+                                    QString key = "", // Key for extra-encryption (if empty, key will be
+       generated automatically)
+                                    int bitsUsed = 8, // Bits per Byte used (better explaination
+       ModelPC::bitsUsed)
+                                    QString *error = nullptr); // Error output, if everything is ok, error
+       will be "ok"
+if(*error != "ok)
+    return;
+// Note *error is just a code of error (like "muchdata", dictionary of error codes is also available on
+       github.
+
+// De-embedding
+QByteArray output = model->decrypt(QImage * image, // Image with hidden data
+                                   QString *\_error = nullptr); // Error output
+if(data == output)
+   qDebug() << "Great success!";
+\end{DoxyCode}
+
+
+\subsection*{Available modes of embedding}
+
+
+\begin{DoxyItemize}
+\item 0 -\/ Standard, created by me
+\item 1 -\/ J\+P\+HS, requires manually installed J\+P\+HS and specified directory (not currently available).
+\end{DoxyItemize}
+
+\subsection*{Documentation}
+
+Doxygen Documentation avaible \href{https://waleko.github.io/PictureCrypt}{\tt here}
+
+\subsection*{Dependencies}
+
+
+\begin{DoxyItemize}
+\item qtcore
+\end{DoxyItemize}
+
+\subsection*{Used works from other people}
+
+
+\begin{DoxyItemize}
+\item \href{https://github.com/bricke/Qt-AES}{\tt Q\+A\+E\+S\+Encryption} by bricke
+\end{DoxyItemize}
+
+\subsection*{Contact}
+
+Question or suggestions are welcome! Please use the Git\+Hub issue tracking to report suggestions or issues. Email me \href{mailto:a.kovrigin0@gmail.com}{\tt a.\+kovrigin0@gmail.\+com} and visit my site \href{http://alex.unaux.com}{\tt http\+://alex.\+unaux.\+com}
+
+\subsection*{License}
+
+This software is provided under the \href{http://unlicense.org/}{\tt U\+N\+L\+I\+C\+E\+N\+SE} 

@@ -1,0 +1,42 @@
+\hypertarget{controllerpc_8cpp_source}{}\section{controllerpc.\+cpp}
+\label{controllerpc_8cpp_source}\index{C\+:/\+Users/salex/\+Documents/\+Git\+Hub/\+Picture\+Crypt/src/controllerpc.\+cpp@{C\+:/\+Users/salex/\+Documents/\+Git\+Hub/\+Picture\+Crypt/src/controllerpc.\+cpp}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "\mbox{\hyperlink{controllerpc_8h}{controllerpc.h}}"}
+00002 
+\Hypertarget{controllerpc_8cpp_source_l00009}\mbox{\hyperlink{class_controller_p_c_afa6c92d67bf3b6531c42385fc5938003}{00009}} \mbox{\hyperlink{class_controller_p_c_afa6c92d67bf3b6531c42385fc5938003}{ControllerPC::ControllerPC}}()
+00010 \{
+00011     \textcolor{comment}{// Layer creation}
+00012     view = \textcolor{keyword}{new} \mbox{\hyperlink{class_view_p_c}{ViewPC}}();
+00013     model = \textcolor{keyword}{new} \mbox{\hyperlink{class_model_p_c}{ModelPC}}();
+00014     QThread * modelThread = \textcolor{keyword}{new} QThread();
+00015     model->moveToThread(modelThread);
+00016     modelThread->\mbox{\hyperlink{class_model_p_c_a3cae34fd5bcb06e8c1f8cfe7961bd270}{start}}();
+00017 
+00018     view->\mbox{\hyperlink{class_view_p_c_ac05220df875b7c4f24405a5742476ebf}{setVersion}}(model->\mbox{\hyperlink{class_model_p_c_a5f426725ccf7eefd3c77ea8c720264c9}{versionString}});
+00019     view->show();
+00020     \textcolor{comment}{// Layer Connection}
+00021     connect(view, SIGNAL(encrypt(QByteArray,QImage*,\textcolor{keywordtype}{int})), model, SLOT(encrypt(QByteArray,QImage*,\textcolor{keywordtype}{int})));
+00022     connect(view, SIGNAL(decrypt(QImage*)), model, SLOT(decrypt(QImage*)));
+00023     connect(view, SIGNAL(abortModel()), \textcolor{keyword}{this}, SLOT(\mbox{\hyperlink{class_controller_p_c_a8814989f7be1214e06b2e720889066b0}{abortCircuit}}()));
+00024     connect(view, SIGNAL(\mbox{\hyperlink{class_controller_p_c_afd8d33ed84e463c5e0ce6715067003f3}{setBitsUsed}}(\textcolor{keywordtype}{int})), \textcolor{keyword}{this}, SLOT(\mbox{\hyperlink{class_controller_p_c_afd8d33ed84e463c5e0ce6715067003f3}{setBitsUsed}}(\textcolor{keywordtype}{int})));
+00025     connect(view, SIGNAL(\mbox{\hyperlink{class_controller_p_c_ac00d29685a7e5b780c01eb438e10f96d}{setJPHSDir}}(QString)), \textcolor{keyword}{this}, SLOT(\mbox{\hyperlink{class_controller_p_c_ac00d29685a7e5b780c01eb438e10f96d}{setJPHSDir}}(QString)));
+00026 
+00027     connect(model, SIGNAL(alertView(QString,\textcolor{keywordtype}{bool})), view, SLOT(alert(QString,\textcolor{keywordtype}{bool})));
+00028     connect(model, SIGNAL(saveData(QByteArray)), view, SLOT(saveData(QByteArray)));
+00029     connect(model, SIGNAL(saveImage(QImage*)), view, SLOT(saveImage(QImage*)));
+00030     connect(model, SIGNAL(setProgress(\textcolor{keywordtype}{int})), view, SLOT(setProgress(\textcolor{keywordtype}{int})));
+00031 \}
+\Hypertarget{controllerpc_8cpp_source_l00036}\mbox{\hyperlink{class_controller_p_c_a8814989f7be1214e06b2e720889066b0}{00036}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_p_c_a8814989f7be1214e06b2e720889066b0}{ControllerPC::abortCircuit}}()
+00037 \{
+00038     model->\mbox{\hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{success}} = \textcolor{keyword}{false};
+00039 \}
+\Hypertarget{controllerpc_8cpp_source_l00044}\mbox{\hyperlink{class_controller_p_c_afd8d33ed84e463c5e0ce6715067003f3}{00044}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_p_c_afd8d33ed84e463c5e0ce6715067003f3}{ControllerPC::setBitsUsed}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{namespacetests-setup_a64974eb034f518d24195739395783d3d}{bitsUsed}})
+00045 \{
+00046     model->\mbox{\hyperlink{class_model_p_c_a655deb6a8afa94c7f4aadb3056989038}{bitsUsed}} = \mbox{\hyperlink{namespacetests-setup_a64974eb034f518d24195739395783d3d}{bitsUsed}};
+00047 \}
+\Hypertarget{controllerpc_8cpp_source_l00052}\mbox{\hyperlink{class_controller_p_c_ac00d29685a7e5b780c01eb438e10f96d}{00052}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_controller_p_c_ac00d29685a7e5b780c01eb438e10f96d}{ControllerPC::setJPHSDir}}(QString dir)
+00053 \{
+00054     model->\mbox{\hyperlink{class_model_p_c_abd038306f14f22fb885a1697c96d6335}{defaultJPHSDir}} = dir;
+00055 \}
+\end{DoxyCode}

@@ -1,0 +1,391 @@
+\hypertarget{class_encrypt_dialog}{}\section{Encrypt\+Dialog Class Reference}
+\label{class_encrypt_dialog}\index{Encrypt\+Dialog@{Encrypt\+Dialog}}
+
+
+The \mbox{\hyperlink{class_encrypt_dialog}{Encrypt\+Dialog}} class Class to get the image and key to store secret info.  
+
+
+
+
+{\ttfamily \#include $<$encryptdialog.\+h$>$}
+
+
+
+Inheritance diagram for Encrypt\+Dialog\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{class_encrypt_dialog__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Encrypt\+Dialog\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{class_encrypt_dialog__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_encrypt_dialog_ac9817d3f11f44f4bb8d97a228fbdf8a5}{on\+\_\+file\+Button\+\_\+clicked}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_encrypt_dialog_ac9817d3f11f44f4bb8d97a228fbdf8a5}{Encrypt\+Dialog\+::on\+\_\+file\+Button\+\_\+clicked}} Slot to select the image. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_encrypt_dialog_a9a998acd37db458eede31f4a9cb16b78}{on\+\_\+button\+Box\+\_\+accepted}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_encrypt_dialog_a9a998acd37db458eede31f4a9cb16b78}{Encrypt\+Dialog\+::on\+\_\+button\+Box\+\_\+accepted}} Slot to start the encryption. Successful closing of the app. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_encrypt_dialog_a43deb5fd2be501f4d03582a8ed49e9c2}{on\+\_\+button\+Box\+\_\+rejected}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_encrypt_dialog_a43deb5fd2be501f4d03582a8ed49e9c2}{Encrypt\+Dialog\+::on\+\_\+button\+Box\+\_\+rejected}} Slot to reject the encryption. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_encrypt_dialog_a48c33063066fdbd61e2c87f08a5cfd60}{on\+\_\+horizontal\+Slider\+\_\+value\+Changed}} (int value)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_encrypt_dialog_a48c33063066fdbd61e2c87f08a5cfd60}{Encrypt\+Dialog\+::on\+\_\+horizontal\+Slider\+\_\+value\+Changed}} Slot if value of the slider is changed. Key is generated here. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_encrypt_dialog_ab57e8b3a0d00c977e81f3b356657524e}{Encrypt\+Dialog}} (Q\+Byte\+Array \+\_\+data, Q\+Widget $\ast$parent=0)
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_encrypt_dialog_ab57e8b3a0d00c977e81f3b356657524e}{Encrypt\+Dialog\+::\+Encrypt\+Dialog}} Constructor of the class. Input data is saved here and some variables are set here. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_encrypt_dialog_a466e283080f87ee50f172052e43e38b6}{$\sim$\+Encrypt\+Dialog}} ()
+\item 
+Q\+Byte\+Array \mbox{\hyperlink{class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a}{zip}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a}{Encrypt\+Dialog\+::zip}} Zipping algorithm It copresses the data and then compresses it using q\+Compress() \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Byte\+Array \mbox{\hyperlink{class_encrypt_dialog_acf3a8bbce90d99ef17fec093c35b1008}{data}}
+\begin{DoxyCompactList}\small\item\em data Input data \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_encrypt_dialog_ada4900bcd40894d9c098c65aa4066ac9}{success}}
+\begin{DoxyCompactList}\small\item\em success Flag, if image was successfully selected and data was encrypted. \end{DoxyCompactList}\item 
+Q\+Byte\+Array \mbox{\hyperlink{class_encrypt_dialog_a3e8998aa39696cbd1242f6420ef18143}{compr\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em compr\+\_\+data Compressed data, aka Output data. \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_encrypt_dialog_a859b1bc2f032a247632b879bf8663d0b}{input\+File\+Name}}
+\begin{DoxyCompactList}\small\item\em input\+File\+Name Filename of the image. \end{DoxyCompactList}\item 
+long long int \mbox{\hyperlink{class_encrypt_dialog_a7fff26f838ab50f807744cd2c4bed033}{size}}
+\begin{DoxyCompactList}\small\item\em size Size of the image in square pixels \end{DoxyCompactList}\item 
+Q\+String \mbox{\hyperlink{class_encrypt_dialog_a1afdef3c665fb0d0fae06d1df8e84951}{key}}
+\begin{DoxyCompactList}\small\item\em key Key to be used for encryption in Encryt\+Dialog\+::zip \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_encrypt_dialog_a0c821b893cfddd7a6c07bbd270ba49e9}{good\+Percentage}}
+\begin{DoxyCompactList}\small\item\em good\+Percentage Flag if area of the used data via encryption is less than 70\% of the area of the image. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_encrypt_dialog_a3c9da51b5e9d98d702bcc4ed15405fd5}{val}}
+\begin{DoxyCompactList}\small\item\em val Value of the slider \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_encrypt_dialog_abf638fea37fbdbaba215954e2e239860}{bits\+Used}}
+\begin{DoxyCompactList}\small\item\em bits\+Used Bits used per byte of pixel. \end{DoxyCompactList}\item 
+Q\+Image \mbox{\hyperlink{class_encrypt_dialog_a739a0df1d28d06b28a3fd16e2bc16c73}{image}}
+\begin{DoxyCompactList}\small\item\em image Inputted image \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \mbox{\hyperlink{class_encrypt_dialog}{Encrypt\+Dialog}} class Class to get the image and key to store secret info. 
+
+\begin{DoxyNote}{Note}
+Not the most important and well written class. 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_view_p_c}{View\+PC}} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{encryptdialog_8h_source_l00021}{21}} of file \mbox{\hyperlink{encryptdialog_8h_source}{encryptdialog.\+h}}.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_encrypt_dialog_ab57e8b3a0d00c977e81f3b356657524e}\label{class_encrypt_dialog_ab57e8b3a0d00c977e81f3b356657524e}} 
+\index{Encrypt\+Dialog@{Encrypt\+Dialog}!Encrypt\+Dialog@{Encrypt\+Dialog}}
+\index{Encrypt\+Dialog@{Encrypt\+Dialog}!Encrypt\+Dialog@{Encrypt\+Dialog}}
+\subsubsection{\texorpdfstring{Encrypt\+Dialog()}{EncryptDialog()}}
+{\footnotesize\ttfamily Encrypt\+Dialog\+::\+Encrypt\+Dialog (\begin{DoxyParamCaption}\item[{Q\+Byte\+Array}]{\+\_\+data,  }\item[{Q\+Widget $\ast$}]{parent = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\mbox{\hyperlink{class_encrypt_dialog_ab57e8b3a0d00c977e81f3b356657524e}{Encrypt\+Dialog\+::\+Encrypt\+Dialog}} Constructor of the class. Input data is saved here and some variables are set here. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+data} & Input data. \\
+\hline
+{\em parent} & Parent (not in use) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{encryptdialog_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{encryptdialog_8cpp_source}{encryptdialog.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_encrypt_dialog_ab57e8b3a0d00c977e81f3b356657524e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_encrypt_dialog_a466e283080f87ee50f172052e43e38b6}\label{class_encrypt_dialog_a466e283080f87ee50f172052e43e38b6}} 
+\index{Encrypt\+Dialog@{Encrypt\+Dialog}!````~Encrypt\+Dialog@{$\sim$\+Encrypt\+Dialog}}
+\index{````~Encrypt\+Dialog@{$\sim$\+Encrypt\+Dialog}!Encrypt\+Dialog@{Encrypt\+Dialog}}
+\subsubsection{\texorpdfstring{$\sim$\+Encrypt\+Dialog()}{~EncryptDialog()}}
+{\footnotesize\ttfamily Encrypt\+Dialog\+::$\sim$\+Encrypt\+Dialog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{encryptdialog_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{encryptdialog_8cpp_source}{encryptdialog.\+cpp}}.
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_encrypt_dialog_a9a998acd37db458eede31f4a9cb16b78}\label{class_encrypt_dialog_a9a998acd37db458eede31f4a9cb16b78}} 
+\index{Encrypt\+Dialog@{Encrypt\+Dialog}!on\+\_\+button\+Box\+\_\+accepted@{on\+\_\+button\+Box\+\_\+accepted}}
+\index{on\+\_\+button\+Box\+\_\+accepted@{on\+\_\+button\+Box\+\_\+accepted}!Encrypt\+Dialog@{Encrypt\+Dialog}}
+\subsubsection{\texorpdfstring{on\+\_\+button\+Box\+\_\+accepted}{on\_buttonBox\_accepted}}
+{\footnotesize\ttfamily void Encrypt\+Dialog\+::on\+\_\+button\+Box\+\_\+accepted (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_encrypt_dialog_a9a998acd37db458eede31f4a9cb16b78}{Encrypt\+Dialog\+::on\+\_\+button\+Box\+\_\+accepted}} Slot to start the encryption. Successful closing of the app. 
+
+
+
+Definition at line \mbox{\hyperlink{encryptdialog_8cpp_source_l00085}{85}} of file \mbox{\hyperlink{encryptdialog_8cpp_source}{encryptdialog.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_encrypt_dialog_a9a998acd37db458eede31f4a9cb16b78_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_encrypt_dialog_a43deb5fd2be501f4d03582a8ed49e9c2}\label{class_encrypt_dialog_a43deb5fd2be501f4d03582a8ed49e9c2}} 
+\index{Encrypt\+Dialog@{Encrypt\+Dialog}!on\+\_\+button\+Box\+\_\+rejected@{on\+\_\+button\+Box\+\_\+rejected}}
+\index{on\+\_\+button\+Box\+\_\+rejected@{on\+\_\+button\+Box\+\_\+rejected}!Encrypt\+Dialog@{Encrypt\+Dialog}}
+\subsubsection{\texorpdfstring{on\+\_\+button\+Box\+\_\+rejected}{on\_buttonBox\_rejected}}
+{\footnotesize\ttfamily void Encrypt\+Dialog\+::on\+\_\+button\+Box\+\_\+rejected (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_encrypt_dialog_a43deb5fd2be501f4d03582a8ed49e9c2}{Encrypt\+Dialog\+::on\+\_\+button\+Box\+\_\+rejected}} Slot to reject the encryption. 
+
+
+
+Definition at line \mbox{\hyperlink{encryptdialog_8cpp_source_l00100}{100}} of file \mbox{\hyperlink{encryptdialog_8cpp_source}{encryptdialog.\+cpp}}.
+
+\mbox{\Hypertarget{class_encrypt_dialog_ac9817d3f11f44f4bb8d97a228fbdf8a5}\label{class_encrypt_dialog_ac9817d3f11f44f4bb8d97a228fbdf8a5}} 
+\index{Encrypt\+Dialog@{Encrypt\+Dialog}!on\+\_\+file\+Button\+\_\+clicked@{on\+\_\+file\+Button\+\_\+clicked}}
+\index{on\+\_\+file\+Button\+\_\+clicked@{on\+\_\+file\+Button\+\_\+clicked}!Encrypt\+Dialog@{Encrypt\+Dialog}}
+\subsubsection{\texorpdfstring{on\+\_\+file\+Button\+\_\+clicked}{on\_fileButton\_clicked}}
+{\footnotesize\ttfamily void Encrypt\+Dialog\+::on\+\_\+file\+Button\+\_\+clicked (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_encrypt_dialog_ac9817d3f11f44f4bb8d97a228fbdf8a5}{Encrypt\+Dialog\+::on\+\_\+file\+Button\+\_\+clicked}} Slot to select the image. 
+
+
+
+Definition at line \mbox{\hyperlink{encryptdialog_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{encryptdialog_8cpp_source}{encryptdialog.\+cpp}}.
+
+\mbox{\Hypertarget{class_encrypt_dialog_a48c33063066fdbd61e2c87f08a5cfd60}\label{class_encrypt_dialog_a48c33063066fdbd61e2c87f08a5cfd60}} 
+\index{Encrypt\+Dialog@{Encrypt\+Dialog}!on\+\_\+horizontal\+Slider\+\_\+value\+Changed@{on\+\_\+horizontal\+Slider\+\_\+value\+Changed}}
+\index{on\+\_\+horizontal\+Slider\+\_\+value\+Changed@{on\+\_\+horizontal\+Slider\+\_\+value\+Changed}!Encrypt\+Dialog@{Encrypt\+Dialog}}
+\subsubsection{\texorpdfstring{on\+\_\+horizontal\+Slider\+\_\+value\+Changed}{on\_horizontalSlider\_valueChanged}}
+{\footnotesize\ttfamily void Encrypt\+Dialog\+::on\+\_\+horizontal\+Slider\+\_\+value\+Changed (\begin{DoxyParamCaption}\item[{int}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+\mbox{\hyperlink{class_encrypt_dialog_a48c33063066fdbd61e2c87f08a5cfd60}{Encrypt\+Dialog\+::on\+\_\+horizontal\+Slider\+\_\+value\+Changed}} Slot if value of the slider is changed. Key is generated here. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & Value of the slider. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{encryptdialog_8cpp_source_l00110}{110}} of file \mbox{\hyperlink{encryptdialog_8cpp_source}{encryptdialog.\+cpp}}.
+
+\mbox{\Hypertarget{class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a}\label{class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a}} 
+\index{Encrypt\+Dialog@{Encrypt\+Dialog}!zip@{zip}}
+\index{zip@{zip}!Encrypt\+Dialog@{Encrypt\+Dialog}}
+\subsubsection{\texorpdfstring{zip()}{zip()}}
+{\footnotesize\ttfamily Q\+Byte\+Array Encrypt\+Dialog\+::zip (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\mbox{\hyperlink{class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a}{Encrypt\+Dialog\+::zip}} Zipping algorithm It copresses the data and then compresses it using q\+Compress() 
+
+\begin{DoxyReturn}{Returns}
+Returns Compressed data. 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_model_p_c_a6da88f166785a49f73b22c169f956fd0}{Model\+P\+C\+::unzip}} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{encryptdialog_8cpp_source_l00049}{49}} of file \mbox{\hyperlink{encryptdialog_8cpp_source}{encryptdialog.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_encrypt_dialog_abf638fea37fbdbaba215954e2e239860}\label{class_encrypt_dialog_abf638fea37fbdbaba215954e2e239860}} 
+\index{Encrypt\+Dialog@{Encrypt\+Dialog}!bits\+Used@{bits\+Used}}
+\index{bits\+Used@{bits\+Used}!Encrypt\+Dialog@{Encrypt\+Dialog}}
+\subsubsection{\texorpdfstring{bits\+Used}{bitsUsed}}
+{\footnotesize\ttfamily int Encrypt\+Dialog\+::bits\+Used}
+
+
+
+bits\+Used Bits used per byte of pixel. 
+
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{class_model_p_c_a1d0091062a0c836b283ec2f67411623b}{Model\+P\+C\+::circuit}} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{encryptdialog_8h_source_l00075}{75}} of file \mbox{\hyperlink{encryptdialog_8h_source}{encryptdialog.\+h}}.
+
+\mbox{\Hypertarget{class_encrypt_dialog_a3e8998aa39696cbd1242f6420ef18143}\label{class_encrypt_dialog_a3e8998aa39696cbd1242f6420ef18143}} 
+\index{Encrypt\+Dialog@{Encrypt\+Dialog}!compr\+\_\+data@{compr\+\_\+data}}
+\index{compr\+\_\+data@{compr\+\_\+data}!Encrypt\+Dialog@{Encrypt\+Dialog}}
+\subsubsection{\texorpdfstring{compr\+\_\+data}{compr\_data}}
+{\footnotesize\ttfamily Q\+Byte\+Array Encrypt\+Dialog\+::compr\+\_\+data}
+
+
+
+compr\+\_\+data Compressed data, aka Output data. 
+
+
+
+Definition at line \mbox{\hyperlink{encryptdialog_8h_source_l00050}{50}} of file \mbox{\hyperlink{encryptdialog_8h_source}{encryptdialog.\+h}}.
+
+\mbox{\Hypertarget{class_encrypt_dialog_acf3a8bbce90d99ef17fec093c35b1008}\label{class_encrypt_dialog_acf3a8bbce90d99ef17fec093c35b1008}} 
+\index{Encrypt\+Dialog@{Encrypt\+Dialog}!data@{data}}
+\index{data@{data}!Encrypt\+Dialog@{Encrypt\+Dialog}}
+\subsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily Q\+Byte\+Array Encrypt\+Dialog\+::data}
+
+
+
+data Input data 
+
+
+
+Definition at line \mbox{\hyperlink{encryptdialog_8h_source_l00042}{42}} of file \mbox{\hyperlink{encryptdialog_8h_source}{encryptdialog.\+h}}.
+
+\mbox{\Hypertarget{class_encrypt_dialog_a0c821b893cfddd7a6c07bbd270ba49e9}\label{class_encrypt_dialog_a0c821b893cfddd7a6c07bbd270ba49e9}} 
+\index{Encrypt\+Dialog@{Encrypt\+Dialog}!good\+Percentage@{good\+Percentage}}
+\index{good\+Percentage@{good\+Percentage}!Encrypt\+Dialog@{Encrypt\+Dialog}}
+\subsubsection{\texorpdfstring{good\+Percentage}{goodPercentage}}
+{\footnotesize\ttfamily bool Encrypt\+Dialog\+::good\+Percentage}
+
+
+
+good\+Percentage Flag if area of the used data via encryption is less than 70\% of the area of the image. 
+
+
+
+Definition at line \mbox{\hyperlink{encryptdialog_8h_source_l00066}{66}} of file \mbox{\hyperlink{encryptdialog_8h_source}{encryptdialog.\+h}}.
+
+\mbox{\Hypertarget{class_encrypt_dialog_a739a0df1d28d06b28a3fd16e2bc16c73}\label{class_encrypt_dialog_a739a0df1d28d06b28a3fd16e2bc16c73}} 
+\index{Encrypt\+Dialog@{Encrypt\+Dialog}!image@{image}}
+\index{image@{image}!Encrypt\+Dialog@{Encrypt\+Dialog}}
+\subsubsection{\texorpdfstring{image}{image}}
+{\footnotesize\ttfamily Q\+Image Encrypt\+Dialog\+::image}
+
+
+
+image Inputted image 
+
+
+
+Definition at line \mbox{\hyperlink{encryptdialog_8h_source_l00079}{79}} of file \mbox{\hyperlink{encryptdialog_8h_source}{encryptdialog.\+h}}.
+
+\mbox{\Hypertarget{class_encrypt_dialog_a859b1bc2f032a247632b879bf8663d0b}\label{class_encrypt_dialog_a859b1bc2f032a247632b879bf8663d0b}} 
+\index{Encrypt\+Dialog@{Encrypt\+Dialog}!input\+File\+Name@{input\+File\+Name}}
+\index{input\+File\+Name@{input\+File\+Name}!Encrypt\+Dialog@{Encrypt\+Dialog}}
+\subsubsection{\texorpdfstring{input\+File\+Name}{inputFileName}}
+{\footnotesize\ttfamily Q\+String Encrypt\+Dialog\+::input\+File\+Name}
+
+
+
+input\+File\+Name Filename of the image. 
+
+
+
+Definition at line \mbox{\hyperlink{encryptdialog_8h_source_l00054}{54}} of file \mbox{\hyperlink{encryptdialog_8h_source}{encryptdialog.\+h}}.
+
+\mbox{\Hypertarget{class_encrypt_dialog_a1afdef3c665fb0d0fae06d1df8e84951}\label{class_encrypt_dialog_a1afdef3c665fb0d0fae06d1df8e84951}} 
+\index{Encrypt\+Dialog@{Encrypt\+Dialog}!key@{key}}
+\index{key@{key}!Encrypt\+Dialog@{Encrypt\+Dialog}}
+\subsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily Q\+String Encrypt\+Dialog\+::key}
+
+
+
+key Key to be used for encryption in Encryt\+Dialog\+::zip 
+
+
+
+Definition at line \mbox{\hyperlink{encryptdialog_8h_source_l00062}{62}} of file \mbox{\hyperlink{encryptdialog_8h_source}{encryptdialog.\+h}}.
+
+\mbox{\Hypertarget{class_encrypt_dialog_a7fff26f838ab50f807744cd2c4bed033}\label{class_encrypt_dialog_a7fff26f838ab50f807744cd2c4bed033}} 
+\index{Encrypt\+Dialog@{Encrypt\+Dialog}!size@{size}}
+\index{size@{size}!Encrypt\+Dialog@{Encrypt\+Dialog}}
+\subsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily long long int Encrypt\+Dialog\+::size}
+
+
+
+size Size of the image in square pixels 
+
+
+
+Definition at line \mbox{\hyperlink{encryptdialog_8h_source_l00058}{58}} of file \mbox{\hyperlink{encryptdialog_8h_source}{encryptdialog.\+h}}.
+
+\mbox{\Hypertarget{class_encrypt_dialog_ada4900bcd40894d9c098c65aa4066ac9}\label{class_encrypt_dialog_ada4900bcd40894d9c098c65aa4066ac9}} 
+\index{Encrypt\+Dialog@{Encrypt\+Dialog}!success@{success}}
+\index{success@{success}!Encrypt\+Dialog@{Encrypt\+Dialog}}
+\subsubsection{\texorpdfstring{success}{success}}
+{\footnotesize\ttfamily bool Encrypt\+Dialog\+::success}
+
+
+
+success Flag, if image was successfully selected and data was encrypted. 
+
+
+
+Definition at line \mbox{\hyperlink{encryptdialog_8h_source_l00046}{46}} of file \mbox{\hyperlink{encryptdialog_8h_source}{encryptdialog.\+h}}.
+
+\mbox{\Hypertarget{class_encrypt_dialog_a3c9da51b5e9d98d702bcc4ed15405fd5}\label{class_encrypt_dialog_a3c9da51b5e9d98d702bcc4ed15405fd5}} 
+\index{Encrypt\+Dialog@{Encrypt\+Dialog}!val@{val}}
+\index{val@{val}!Encrypt\+Dialog@{Encrypt\+Dialog}}
+\subsubsection{\texorpdfstring{val}{val}}
+{\footnotesize\ttfamily int Encrypt\+Dialog\+::val}
+
+
+
+val Value of the slider 
+
+
+
+Definition at line \mbox{\hyperlink{encryptdialog_8h_source_l00070}{70}} of file \mbox{\hyperlink{encryptdialog_8h_source}{encryptdialog.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/salex/\+Documents/\+Git\+Hub/\+Picture\+Crypt/src/\mbox{\hyperlink{encryptdialog_8h}{encryptdialog.\+h}}\item 
+C\+:/\+Users/salex/\+Documents/\+Git\+Hub/\+Picture\+Crypt/src/\mbox{\hyperlink{encryptdialog_8cpp}{encryptdialog.\+cpp}}\end{DoxyCompactItemize}

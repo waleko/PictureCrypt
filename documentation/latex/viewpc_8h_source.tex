@@ -1,0 +1,77 @@
+\hypertarget{viewpc_8h_source}{}\section{viewpc.\+h}
+\label{viewpc_8h_source}\index{C\+:/\+Users/salex/\+Documents/\+Git\+Hub/\+Picture\+Crypt/src/viewpc.\+h@{C\+:/\+Users/salex/\+Documents/\+Git\+Hub/\+Picture\+Crypt/src/viewpc.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#ifndef VIEWPC\_H}
+00002 \textcolor{preprocessor}{#define VIEWPC\_H}
+00003 
+00004 \textcolor{preprocessor}{#include <QMainWindow>}
+00005 \textcolor{preprocessor}{#include <QFile>}
+00006 \textcolor{preprocessor}{#include <QFileDialog>}
+00007 \textcolor{preprocessor}{#include <QMessageBox>}
+00008 \textcolor{preprocessor}{#include <QImage>}
+00009 \textcolor{preprocessor}{#include <QByteArray>}
+00010 \textcolor{preprocessor}{#include <QVector>}
+00011 \textcolor{preprocessor}{#include <QThread>}
+00012 \textcolor{preprocessor}{#include <QDesktopServices>}
+00013 
+00014 \textcolor{preprocessor}{#include <\mbox{\hyperlink{encryptdialog_8h}{encryptdialog.h}}>}
+00015 \textcolor{preprocessor}{#include <QProgressDialog>}
+00016 \textcolor{preprocessor}{#include <\mbox{\hyperlink{aboutpc_8h}{aboutpc.h}}>}
+00017 
+00018 \textcolor{preprocessor}{#include <QJsonDocument>}
+00019 \textcolor{preprocessor}{#include <QJsonObject>}
+00020 
+00021 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespace_ui}{Ui}} \{
+00022 \textcolor{keyword}{class }\mbox{\hyperlink{class_view_p_c}{ViewPC}};
+00023 \}
+\Hypertarget{viewpc_8h_source_l00033}\mbox{\hyperlink{class_view_p_c}{00033}} \textcolor{keyword}{class }\mbox{\hyperlink{class_view_p_c}{ViewPC}} : \textcolor{keyword}{public} QMainWindow
+00034 \{
+00035     Q\_OBJECT
+00036 
+00037 \textcolor{keyword}{public}:
+00038     \textcolor{keyword}{explicit} \mbox{\hyperlink{class_view_p_c_a33c96c61f61042319c66c19059836b7f}{ViewPC}}(QWidget *parent = \textcolor{keyword}{nullptr});
+00039     \mbox{\hyperlink{class_view_p_c_a91c51f5c1e6ed5ab12b410339f469b0f}{~ViewPC}}();
+00040 \textcolor{keyword}{private} slots:
+00041     \textcolor{keywordtype}{void} on\_encryptMode\_clicked();
+00042 
+00043     \textcolor{keywordtype}{void} on\_decryptMode\_clicked();
+00044 
+00045     \textcolor{keywordtype}{void} on\_actionJPHS\_path\_triggered();
+00046 
+00047 \textcolor{keyword}{protected} slots:
+00048     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_p_c_a3b9b7a7be9702d8b160f257f1c74a776}{on\_fileButton\_clicked}}();
+00049 
+00050     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_p_c_a456d75b7c5d3a089302a576e7359f1f4}{on\_startButton\_clicked}}();
+00051 
+00052     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_p_c_a09a46da4d492eb3dde88f35dc58c997b}{on\_actionAbout\_triggered}}();
+00053 
+00054     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_p_c_a0d252ff4829260c6c76769fbd24b7cd7}{on\_actionHelp\_triggered}}();
+00055 \textcolor{keyword}{public} slots:
+00056     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}}(QString message, \textcolor{keywordtype}{bool} isWarning = \textcolor{keyword}{false});
+00057     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_p_c_aaff156103970be7c777beedaf0020604}{saveData}}(QByteArray Edata);
+00058     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_p_c_a7901ce10ffaaf2387bef1db7feea342d}{saveImage}}(QImage *\mbox{\hyperlink{namespacetests-setup_ad55b685280f549e15688a94cbb89f512}{image}});
+00059     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_p_c_a9c32a1fdb6ead84e5ada8fba8860c7ed}{setProgress}}(\textcolor{keywordtype}{int} val);
+00060     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_p_c_ad7ba2fcf1d17862de15e32432823f7b0}{abortCircuit}}();
+00061     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_p_c_a5b48951efefdc0e3039c9a4bf185320b}{setEncryptMode}}(\textcolor{keywordtype}{bool} encr);
+00062     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_view_p_c_ac05220df875b7c4f24405a5742476ebf}{setVersion}}(QString version);
+00063 signals:
+00070     \mbox{\hyperlink{class_view_p_c_ade35449b95cf1c5424c4eb929f46fd73}{encrypt}}(QByteArray \mbox{\hyperlink{namespace_errors_dict_setup_af570460846fb9f0c91abd308a095dcdc}{data}}, QImage * \mbox{\hyperlink{namespacetests-setup_ad55b685280f549e15688a94cbb89f512}{image}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{namespacetests-setup_a04126d10edec6b3171e1b55a00309b23}{mode}});
+00075     \mbox{\hyperlink{class_view_p_c_acf8feb98f757cc238dada1df2308e303}{decrypt}}(QImage * \_image);
+00079     \mbox{\hyperlink{class_view_p_c_a863f5233af3791bd165a2811a5d9bcc2}{abortModel}}();
+00085     \mbox{\hyperlink{class_view_p_c_a2ccc0a3f2f48080ae6308e800646fcd5}{setBitsUsed}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{namespacetests-setup_a64974eb034f518d24195739395783d3d}{bitsUsed}});
+00090     \mbox{\hyperlink{class_view_p_c_ababceedc355ecc1217a4c708e19e5e6b}{setJPHSDir}}(QString dir);
+00091 \textcolor{keyword}{public}:
+\Hypertarget{viewpc_8h_source_l00096}\mbox{\hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{00096}}     QProgressDialog * \mbox{\hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}};
+\Hypertarget{viewpc_8h_source_l00101}\mbox{\hyperlink{class_view_p_c_add8c82aa2b0b934212aa5bde9277ab36}{00101}}     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_view_p_c_add8c82aa2b0b934212aa5bde9277ab36}{progressDialogClosed}};
+\Hypertarget{viewpc_8h_source_l00102}\mbox{\hyperlink{class_view_p_c_a26f90436aca32e5bad46f5e69a7e7e09}{00102}}     QJsonObject \mbox{\hyperlink{class_view_p_c_a26f90436aca32e5bad46f5e69a7e7e09}{errorsDict}};
+00103 \textcolor{keyword}{private}:
+00104     Ui::ViewPC *ui;
+00105     \textcolor{keywordtype}{bool} isEncrypt;
+00106     QString inputFileName;
+00107     QByteArray bytes(\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} n);
+00108     QString versionString;
+00109 \};
+00110 
+00111 \textcolor{preprocessor}{#endif // VIEWPC\_H}
+\end{DoxyCode}

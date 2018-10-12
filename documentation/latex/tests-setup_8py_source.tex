@@ -1,0 +1,32 @@
+\hypertarget{tests-setup_8py_source}{}\section{tests-\/setup.py}
+\label{tests-setup_8py_source}\index{C\+:/\+Users/salex/\+Documents/\+Git\+Hub/\+Picture\+Crypt/src/unit\+\_\+tests/tests-\/setup.\+py@{C\+:/\+Users/salex/\+Documents/\+Git\+Hub/\+Picture\+Crypt/src/unit\+\_\+tests/tests-\/setup.\+py}}
+
+\begin{DoxyCode}
+\Hypertarget{tests-setup_8py_source_l00001}\mbox{\hyperlink{namespacetests-setup}{00001}} \textcolor{keyword}{import} json
+\Hypertarget{tests-setup_8py_source_l00002}\mbox{\hyperlink{namespacetests-setup_a1c1b6d4c14026d664106586c65e10a94}{00002}} filename = \textcolor{stringliteral}{'tests.json'}
+00003 
+\Hypertarget{tests-setup_8py_source_l00004}\mbox{\hyperlink{namespacetests-setup_a16d40f6dd9430f3bdc79db2d00aab267}{00004}} raw = open(filename, \textcolor{stringliteral}{'r')}
+00005 \textcolor{stringliteral}{}
+\Hypertarget{tests-setup_8py_source_l00006}\mbox{\hyperlink{namespacetests-setup_a94275a2f2d070d13dedc7e8dfaf4faa0}{00006}} \textcolor{stringliteral}{js = json.load(raw)}
+00007 \textcolor{stringliteral}{print('Existing tests:'})
+00008 \textcolor{keywordflow}{for} obj \textcolor{keywordflow}{in} js[\textcolor{stringliteral}{'tests'}]:
+\Hypertarget{tests-setup_8py_source_l00009}\mbox{\hyperlink{namespacetests-setup_a92ab4d3dccd0fc5347ed0f5399869803}{00009}}     print(obj[\textcolor{stringliteral}{'data'}], obj[\textcolor{stringliteral}{'image'}], obj[\textcolor{stringliteral}{'expectation'}], obj[\textcolor{stringliteral}{'mode'}], obj[\textcolor{stringliteral}{'key'}], obj[\textcolor{stringliteral}{'bitsUsed'}], sep=\textcolor{stringliteral}{'-'})
+00010 
+00011 print(\textcolor{stringliteral}{'------------'})
+00012 print(\textcolor{stringliteral}{'Type new tests'})
+00013 
+\Hypertarget{tests-setup_8py_source_l00014}\mbox{\hyperlink{namespacetests-setup_a1e5de3b19e0107100d5df9b7e2122764}{00014}} input\_data = input()
+00015 
+\Hypertarget{tests-setup_8py_source_l00016}\mbox{\hyperlink{namespacetests-setup_a274aaa7c0d5733ef5f48372d9481f34a}{00016}} arr = []
+00017 \textcolor{keywordflow}{while} len(input\_data):
+\Hypertarget{tests-setup_8py_source_l00018}\mbox{\hyperlink{namespacetests-setup_a04126d10edec6b3171e1b55a00309b23}{00018}}     data, image, expect, mode, key, bitsUsed = map(str, input\_data.split(\textcolor{stringliteral}{'-'}))
+00019 
+\Hypertarget{tests-setup_8py_source_l00020}\mbox{\hyperlink{namespacetests-setup_afb80c1236926b5468a6d3e942a527a96}{00020}}     obj = \{\textcolor{stringliteral}{'data'}:data, \textcolor{stringliteral}{'image'}:image,\textcolor{stringliteral}{'expectation'}:expect,\textcolor{stringliteral}{'mode'}:int(mode),\textcolor{stringliteral}{'key'}:key,\textcolor{stringliteral}{'bitsUsed'}:int(
+      bitsUsed)\}
+00021     arr.append(obj)
+00022     input\_data = input()
+00023 
+00024 js[\textcolor{stringliteral}{'tests'}] += arr
+00025 with open(filename, \textcolor{stringliteral}{'w'}) \textcolor{keyword}{as} f:
+\Hypertarget{tests-setup_8py_source_l00026}\mbox{\hyperlink{namespacetests-setup_aee04695e456c1d05ed5119e87842fc86}{00026}}     json.dump(js, f, indent=4)
+\end{DoxyCode}

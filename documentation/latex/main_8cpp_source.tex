@@ -1,0 +1,18 @@
+\hypertarget{main_8cpp_source}{}\section{main.\+cpp}
+\label{main_8cpp_source}\index{C\+:/\+Users/salex/\+Documents/\+Git\+Hub/\+Picture\+Crypt/src/main.\+cpp@{C\+:/\+Users/salex/\+Documents/\+Git\+Hub/\+Picture\+Crypt/src/main.\+cpp}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "\mbox{\hyperlink{controllerpc_8h}{controllerpc.h}}"}
+00002 \textcolor{preprocessor}{#include <QApplication>}
+00003 \textcolor{preprocessor}{#include <\mbox{\hyperlink{testpc_8h}{unit\_tests/testpc.h}}>}
+\Hypertarget{main_8cpp_source_l00115}\mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{00115}} \textcolor{keywordtype}{int} \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[])
+00116 \{
+00117     QApplication a(argc, argv);
+00118     \mbox{\hyperlink{class_test_p_c}{TestPC}} test;
+00119     \textcolor{keywordtype}{bool} success = test.\mbox{\hyperlink{class_test_p_c_ad0d724439a65d183d3d336b667cb867b}{startTest}}();
+00120     \textcolor{keywordflow}{if}(success)
+00121         \mbox{\hyperlink{class_controller_p_c}{ControllerPC}} w;
+00122 
+00123     \textcolor{keywordflow}{return} a.exec();
+00124 \}
+\end{DoxyCode}
