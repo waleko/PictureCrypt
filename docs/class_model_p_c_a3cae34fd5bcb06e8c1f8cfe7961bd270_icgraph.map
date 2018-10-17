@@ -1,4 +1,0 @@
-<map id="ModelPC::start" name="ModelPC::start">
-<area shape="rect" id="node2" href="$class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" title="ControllerPC::ControllerPC Constructor of controller Constructor runs auto&#45;test for ModelPC..." alt="" coords="163,5,339,32"/>
-<area shape="rect" id="node3" href="$class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="203,56,298,83"/>
-</map>

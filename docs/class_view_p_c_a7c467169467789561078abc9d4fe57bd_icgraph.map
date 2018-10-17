@@ -1,6 +1,0 @@
-<map id="ViewPC::alert" name="ViewPC::alert">
-<area shape="rect" id="node2" href="$class_view_p_c.html#a33c96c61f61042319c66c19059836b7f" title="ViewPC::ViewPC" alt="" coords="174,5,297,32"/>
-<area shape="rect" id="node3" href="$class_view_p_c.html#a456d75b7c5d3a089302a576e7359f1f4" title="ViewPC::on_startButton_clicked Slot to be called, when Start Button is pressed. " alt="" coords="155,57,316,98"/>
-<area shape="rect" id="node4" href="$class_view_p_c.html#aaff156103970be7c777beedaf0020604" title="ViewPC::saveData Slot to be called to save data using QFileDialog. " alt="" coords="171,123,300,149"/>
-<area shape="rect" id="node5" href="$class_view_p_c.html#a7901ce10ffaaf2387bef1db7feea342d" title="ViewPC::saveImage Slot to be called to save image using QFileDialog. " alt="" coords="167,173,304,200"/>
-</map>

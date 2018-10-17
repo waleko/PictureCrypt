@@ -30,22 +30,15 @@ install:
   - sudo apt-get install -y doxygen-gui
   - sudo apt-get install -y graphviz
 
-# script:
-#   - cd script
-#   - bash ./script/build.sh
-# after_success:
-#   - bash ./script/clean.sh
-# before_deploy:
-#   - bash ./script/deploy.sh
-script:
+before_script:
   - cd src
-  - qmake "QMAKE_CXXFLAGS += -std=c++0x" "QT += gui" "QT += core" "QT += widgets" "DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900"
-  - make debug
+script:
+  - bash ./scripts/build.sh
+  - bash ./scripts/clean.sh
 
-  - qmake "QMAKE_CXXFLAGS += -std=c++0x" "QT += gui" "QT += core" "QT += widgets" "DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900"
-  - make release
-
-
+before_deploy:
+  - cd doxy
+  - bash ./deploy.sh
 
 deploy:
   provider: pages
