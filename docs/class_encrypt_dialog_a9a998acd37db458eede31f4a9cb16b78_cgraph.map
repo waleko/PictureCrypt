@@ -1,5 +1,5 @@
 <map id="EncryptDialog::on_buttonBox_accepted" name="EncryptDialog::on_buttonBox_accepted">
-<area shape="rect" id="node2" href="$class_encrypt_dialog.html#a2bff820a3df4ddc36ecb07ed74b7138a" title="EncryptDialog::zip Zipping algorithm It copresses the data and then compresses it using qCompress() ..." alt="" coords="221,13,349,39"/>
-<area shape="rect" id="node3" href="$class_q_a_e_s_encryption.html#a43819eeb6a7cb29fbd3cb6ad640dcbdf" title="Crypt Static encode function. " alt="" coords="397,13,557,39"/>
-<area shape="rect" id="node4" href="$class_q_a_e_s_encryption.html#aeac0ee8532e69e5d30b023fe38c30b3b" title="QAESEncryption::QAESEncryption" alt="" coords="605,13,833,39"/>
+<area shape="rect" id="node2" href="$class_encrypt_dialog.html#a2bff820a3df4ddc36ecb07ed74b7138a" title="EncryptDialog::zip Zipping algorithm It copresses the data and then compresses it using qCompress() ..." alt="" coords="225,12,354,39"/>
+<area shape="rect" id="node3" href="$class_q_a_e_s_encryption.html#a43819eeb6a7cb29fbd3cb6ad640dcbdf" title="Crypt Static encode function. " alt="" coords="403,12,565,39"/>
+<area shape="rect" id="node4" href="$class_q_a_e_s_encryption.html#aeac0ee8532e69e5d30b023fe38c30b3b" title="QAESEncryption::QAESEncryption" alt="" coords="614,12,842,39"/>
 </map>

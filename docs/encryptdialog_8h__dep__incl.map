@@ -1,8 +1,8 @@
-<map id="C:/Users/salex/Documents/GitHub/PictureCrypt/src/encryptdialog.h" name="C:/Users/salex/Documents/GitHub/PictureCrypt/src/encryptdialog.h">
-<area shape="rect" id="node2" href="$encryptdialog_8cpp.html" title="C:/Users/salex/Documents\l/GitHub/PictureCrypt/src\l/encryptdialog.cpp" alt="" coords="5,109,184,165"/>
-<area shape="rect" id="node3" href="$viewpc_8h.html" title="C:/Users/salex/Documents\l/GitHub/PictureCrypt/src\l/viewpc.h" alt="" coords="208,109,387,165"/>
-<area shape="rect" id="node4" href="$controllerpc_8h.html" title="C:/Users/salex/Documents\l/GitHub/PictureCrypt/src\l/controllerpc.h" alt="" coords="107,213,285,269"/>
-<area shape="rect" id="node7" href="$viewpc_8cpp.html" title="C:/Users/salex/Documents\l/GitHub/PictureCrypt/src\l/viewpc.cpp" alt="" coords="309,213,488,269"/>
-<area shape="rect" id="node5" href="$controllerpc_8cpp.html" title="C:/Users/salex/Documents\l/GitHub/PictureCrypt/src\l/controllerpc.cpp" alt="" coords="5,317,184,373"/>
-<area shape="rect" id="node6" href="$main_8cpp.html" title="C:/Users/salex/Documents\l/GitHub/PictureCrypt/src\l/main.cpp" alt="" coords="208,317,387,373"/>
+<map id="encryptdialog.h" name="encryptdialog.h">
+<area shape="rect" id="node2" href="$encryptdialog_8cpp.html" title="encryptdialog.cpp" alt="" coords="5,80,128,107"/>
+<area shape="rect" id="node3" href="$viewpc_8h.html" title="viewpc.h" alt="" coords="152,80,225,107"/>
+<area shape="rect" id="node4" href="$controllerpc_8h.html" title="controllerpc.h" alt="" coords="79,155,179,181"/>
+<area shape="rect" id="node7" href="$viewpc_8cpp.html" title="viewpc.cpp" alt="" coords="204,155,292,181"/>
+<area shape="rect" id="node5" href="$controllerpc_8cpp.html" title="controllerpc.cpp" alt="" coords="13,229,128,256"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title="main.cpp" alt="" coords="152,229,225,256"/>
 </map>

@@ -1,0 +1,11 @@
+<map id="ModelPC::setProgress" name="ModelPC::setProgress">
+<area shape="rect" id="node2" href="$class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="208,140,309,166"/>
+<area shape="rect" id="node9" href="$class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="566,89,685,116"/>
+<area shape="rect" id="node10" href="$class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="358,38,517,65"/>
+<area shape="rect" id="node3" href="$class_model_p_c.html#a3cae34fd5bcb06e8c1f8cfe7961bd270" title="ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff After completion sta..." alt="" coords="910,190,1021,217"/>
+<area shape="rect" id="node6" href="$class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="734,190,861,217"/>
+<area shape="rect" id="node7" href="$class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="734,140,861,166"/>
+<area shape="rect" id="node8" href="$class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="571,190,679,217"/>
+<area shape="rect" id="node4" href="$class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" title="ControllerPC::ControllerPC Constructor of controller Constructor runs auto&#45;test for ModelPC..." alt="" coords="1070,190,1250,217"/>
+<area shape="rect" id="node5" href="$class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="1111,140,1209,166"/>
+</map>

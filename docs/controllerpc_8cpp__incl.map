@@ -1,8 +1,9 @@
-<map id="C:/Users/salex/Documents/GitHub/PictureCrypt/src/controllerpc.cpp" name="C:/Users/salex/Documents/GitHub/PictureCrypt/src/controllerpc.cpp">
-<area shape="rect" id="node2" href="$controllerpc_8h.html" title="controllerpc.h" alt="" coords="599,109,699,136"/>
-<area shape="rect" id="node6" href="$modelpc_8h.html" title="modelpc.h" alt="" coords="471,259,554,285"/>
-<area shape="rect" id="node17" href="$viewpc_8h.html" title="viewpc.h" alt="" coords="1103,184,1173,211"/>
-<area shape="rect" id="node15" href="$qaesencryption_8h.html" title="aes/qaesencryption.h" alt="" coords="853,333,999,360"/>
-<area shape="rect" id="node23" href="$encryptdialog_8h.html" title="encryptdialog.h" alt="" coords="1176,259,1287,285"/>
-<area shape="rect" id="node26" href="$aboutpc_8h.html" title="aboutpc.h" alt="" coords="1493,259,1572,285"/>
+<map id="controllerpc.cpp" name="controllerpc.cpp">
+<area shape="rect" id="node2" href="$controllerpc_8h.html" title="controllerpc.h" alt="" coords="1064,80,1163,107"/>
+<area shape="rect" id="node7" href="$modelpc_8h.html" title="modelpc.h" alt="" coords="508,229,590,256"/>
+<area shape="rect" id="node19" href="$viewpc_8h.html" title="viewpc.h" alt="" coords="2039,155,2112,181"/>
+<area shape="rect" id="node32" href="$testpc_8h.html" title="unit_tests/testpc.h" alt="" coords="1048,155,1178,181"/>
+<area shape="rect" id="node17" href="$qaesencryption_8h.html" title="aes/qaesencryption.h" alt="" coords="943,304,1090,331"/>
+<area shape="rect" id="node26" href="$encryptdialog_8h.html" title="encryptdialog.h" alt="" coords="1744,229,1854,256"/>
+<area shape="rect" id="node29" href="$aboutpc_8h.html" title="aboutpc.h" alt="" coords="2628,229,2706,256"/>
 </map>

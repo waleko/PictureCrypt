@@ -1,0 +1,581 @@
+\hypertarget{modelpc_8cpp_source}{\section{modelpc.\-cpp}
+}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "\hyperlink{modelpc_8h}{modelpc.h}"}
+00002 \textcolor{preprocessor}{#include <QDebug>}
+00003 \textcolor{preprocessor}{#include <QtMath>}
+\hypertarget{modelpc_8cpp_source_l00009}{}\hyperlink{class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c}{00009} \hyperlink{class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c}{ModelPC::ModelPC}()
+00010 \{
+00011     \textcolor{comment}{// Version control}
+00012     \hyperlink{class_model_p_c_a5f426725ccf7eefd3c77ea8c720264c9}{versionString} = \textcolor{stringliteral}{"1.3.4"};
+00013 
+00014     \textcolor{keyword}{auto} ver = \hyperlink{class_model_p_c_a5f426725ccf7eefd3c77ea8c720264c9}{versionString}.split(\textcolor{stringliteral}{"."});
+00015     \hyperlink{class_model_p_c_a5af48ab89e19be42a94c34ba00249401}{version} = ver[0].toInt() * qPow(2, 16) + ver[1].toInt() * qPow(2, 8) + ver[2].toInt();
+00016 
+00017     ver\_byte = bytes(ver[0].toInt()) +
+00018             bytes(ver[1].toInt()) +
+00019             bytes(ver[2].toInt());
+00020     \textcolor{comment}{// Random seed}
+00021     qsrand(randSeed());
+00022     mykey = \textcolor{stringliteral}{"password"};
+00023     \hyperlink{class_model_p_c_a670c3a08360555282adfd3740b2debac}{modernCircuit}(\textcolor{keyword}{new} QImage(), \textcolor{keyword}{new} QByteArray(), 1);
+00024 \}
+00025 
+\hypertarget{modelpc_8cpp_source_l00026}{}\hyperlink{class_model_p_c_a77a3beaa87ab7d882215730c546a1c91}{00026} QImage *\hyperlink{class_model_p_c_a77a3beaa87ab7d882215730c546a1c91}{ModelPC::Start}(QByteArray \hyperlink{namespace_errors_dict_setup_adf4c30d205d29df7343e26f7c62b0685}{data}, QImage *image, \textcolor{keywordtype}{int} mode, QString key, \textcolor{keywordtype}{int} 
+      \_bitsUsed, QString *\_error)
+00027 \{
+00028     \textcolor{keywordflow}{return} \hyperlink{class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c}{ModelPC}().start(data, image, mode, key, \_bitsUsed, \_error);
+00029 \}
+00030 
+\hypertarget{modelpc_8cpp_source_l00031}{}\hyperlink{class_model_p_c_a132a399bf401a97106c2368e6e9e8792}{00031} QImage *\hyperlink{class_model_p_c_a132a399bf401a97106c2368e6e9e8792}{ModelPC::Encrypt}(QByteArray encr\_data, QImage *image, \textcolor{keywordtype}{int} mode, \textcolor{keywordtype}{int} \_bitsUsed, 
+      QString *\_error)
+00032 \{
+00033     \textcolor{keywordflow}{return} \hyperlink{class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c}{ModelPC}().encrypt(encr\_data, image, mode, \_bitsUsed, \_error);
+00034 \}
+00035 
+\hypertarget{modelpc_8cpp_source_l00036}{}\hyperlink{class_model_p_c_ac245b9b6d618f421c0ccfa66d97ac905}{00036} QByteArray \hyperlink{class_model_p_c_ac245b9b6d618f421c0ccfa66d97ac905}{ModelPC::Decrypt}(QImage *image, QString key, QString *\_error)
+00037 \{
+00038     \textcolor{keywordflow}{return} \hyperlink{class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c}{ModelPC}().decrypt(image, key, \_error);
+00039 \}
+\hypertarget{modelpc_8cpp_source_l00053}{}\hyperlink{class_model_p_c_a3cae34fd5bcb06e8c1f8cfe7961bd270}{00053} QImage * \hyperlink{class_model_p_c_a3cae34fd5bcb06e8c1f8cfe7961bd270}{ModelPC::start}(QByteArray \hyperlink{namespace_errors_dict_setup_adf4c30d205d29df7343e26f7c62b0685}{data}, QImage * image, \textcolor{keywordtype}{int} mode, QString key, \textcolor{keywordtype}{int} 
+      \_bitsUsed, QString *\_error)
+00054 \{
+00055     \textcolor{comment}{// Error management}
+00056     \textcolor{keywordflow}{if}(\_error == \textcolor{keyword}{nullptr})
+00057         \_error = \textcolor{keyword}{new} QString();
+00058     *\_error = \textcolor{stringliteral}{"ok"};
+00059     \hyperlink{class_model_p_c_a4e5a9c0ca1f06fe5bc478b6bf248c37c}{error} = \_error;
+00060 
+00061     \textcolor{keywordflow}{if}(data.isEmpty()) \{
+00062         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"nodata"});
+00063         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+00064     \}
+00065     \textcolor{keywordflow}{if}(image == \textcolor{keyword}{nullptr} || image->isNull()) \{
+00066         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"nullimage"});
+00067         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+00068     \}
+00069     \textcolor{keywordflow}{if}(\_bitsUsed < 1 || \_bitsUsed > 8) \{
+00070         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"bitsWrong"});
+00071         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+00072     \}
+00073     \textcolor{keywordflow}{if}(key.isEmpty()) \{
+00074         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"no\_key"});
+00075         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+00076     \}
+00077     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(key.size() > 255) \{
+00078         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"bigkey"});
+00079         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+00080     \}
+00081     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} usedBytes = data.size() + 14 + key.size();
+00082     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} size = image->width() * image->height();
+00083     \textcolor{keywordflow}{if}(usedBytes * 100 / (size * 3) * 8 / \_bitsUsed > 70) \{
+00084         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"muchdata"});
+00085         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+00086     \}
+00087 
+00088     \hyperlink{class_model_p_c_ad74974ac236182c1d6d2cf0729fac3dd}{curMode} = mode;
+00089 
+00090     QByteArray zipped\_data = \hyperlink{class_model_p_c_afebbbfa4b07deba4f68fc6dfb50f353f}{zip}(data, key.toUtf8());
+00091     QByteArray hash = QCryptographicHash::hash(data, QCryptographicHash::Sha256);
+00092     QByteArray encr\_data = hash + zipped\_data;
+00093 
+00094     \textcolor{keywordflow}{if}(*\hyperlink{class_model_p_c_a4e5a9c0ca1f06fe5bc478b6bf248c37c}{error} == \textcolor{stringliteral}{"ok"})
+00095         \textcolor{keywordflow}{return} \hyperlink{class_model_p_c_a48667f5b1a547d03a3def2d3db5a220f}{encrypt}(encr\_data, image, \hyperlink{class_model_p_c_ad74974ac236182c1d6d2cf0729fac3dd}{curMode}, \_bitsUsed, \hyperlink{class_model_p_c_a4e5a9c0ca1f06fe5bc478b6bf248c37c}{error});
+00096     \textcolor{keywordflow}{else}
+00097         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+00098 \}
+00099 
+\hypertarget{modelpc_8cpp_source_l00110}{}\hyperlink{class_model_p_c_a48667f5b1a547d03a3def2d3db5a220f}{00110} QImage * \hyperlink{class_model_p_c_a48667f5b1a547d03a3def2d3db5a220f}{ModelPC::encrypt}(QByteArray encr\_data, QImage * image, \textcolor{keywordtype}{int} mode, \textcolor{keywordtype}{int} \_bitsUsed, 
+      QString *\_error)
+00111 \{
+00112     \textcolor{comment}{// Error management}
+00113     \textcolor{keywordflow}{if}(\_error == \textcolor{keyword}{nullptr})
+00114         \_error = \textcolor{keyword}{new} QString();
+00115     *\_error = \textcolor{stringliteral}{"ok"};
+00116     \hyperlink{class_model_p_c_a4e5a9c0ca1f06fe5bc478b6bf248c37c}{error} = \_error;
+00117 
+00118     \textcolor{comment}{// TODO Remove debug mode = 0}
+00119     mode = 0;
+00120 
+00121     \hyperlink{class_model_p_c_a655deb6a8afa94c7f4aadb3056989038}{bitsUsed} = \_bitsUsed;
+00122 
+00123     \textcolor{keywordflow}{if}(encr\_data.isEmpty()) \{
+00124         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"nodata"});
+00125         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+00126     \}
+00127     \textcolor{keywordflow}{if}(image == \textcolor{keyword}{nullptr} || image->isNull()) \{
+00128         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"nullimage"});
+00129         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+00130     \}
+00131     \textcolor{keywordflow}{if}(\_bitsUsed < 1 || \_bitsUsed > 8) \{
+00132         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"bitsWrong"});
+00133         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+00134     \}
+00135 
+00136     encr\_data = ver\_byte + encr\_data;
+00137     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} countBytes = encr\_data.size();
+00138     \hyperlink{class_model_p_c_ad74974ac236182c1d6d2cf0729fac3dd}{curMode} = mode;
+00139     \textcolor{keywordflow}{switch}(\hyperlink{class_model_p_c_ad74974ac236182c1d6d2cf0729fac3dd}{curMode})
+00140     \{
+00141     \textcolor{keywordflow}{case} 0:
+00142         \hyperlink{class_model_p_c_a1d0091062a0c836b283ec2f67411623b}{circuit}(image, &encr\_data, countBytes);
+00143         \textcolor{keywordflow}{break};
+00144     \textcolor{keywordflow}{case} 1:
+00145         \hyperlink{class_model_p_c_a8bee0255c09449868c7e6097afaaf0cd}{jphs}(image, &encr\_data);
+00146         \textcolor{keywordflow}{break};
+00147     \textcolor{keywordflow}{default}:
+00148         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"wrongmode"});
+00149         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+00150     \}
+00151 
+00152 
+00153     \textcolor{comment}{// Saving}
+00154     \textcolor{keywordflow}{if}(\hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{success}) \{
+00155         emit \hyperlink{class_model_p_c_a41f5e2e8022679046e4d3fa1109025fa}{saveImage}(image);
+00156         \textcolor{keywordflow}{return} image;
+00157     \}
+00158     \textcolor{keywordflow}{else}
+00159         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+00160 \}
+\hypertarget{modelpc_8cpp_source_l00169}{}\hyperlink{class_model_p_c_a9458c3a1e369a64889d9a1f70e0c1d18}{00169} QByteArray \hyperlink{class_model_p_c_a9458c3a1e369a64889d9a1f70e0c1d18}{ModelPC::decrypt}(QImage * image, QString key, QString *\_error)
+00170 \{
+00171     \textcolor{comment}{// Error management}
+00172     \textcolor{keywordflow}{if}(\_error == \textcolor{keyword}{nullptr})
+00173         \_error = \textcolor{keyword}{new} QString();
+00174     *\_error = \textcolor{stringliteral}{"ok"};
+00175     \hyperlink{class_model_p_c_a4e5a9c0ca1f06fe5bc478b6bf248c37c}{error} = \_error;
+00176     \textcolor{keywordflow}{if}(image == \textcolor{keyword}{nullptr} || image->isNull()) \{
+00177         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"nullimage"});
+00178         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+00179     \}
+00180     \textcolor{comment}{// Image opening}
+00181     \textcolor{keywordtype}{int} w = image->width();
+00182     \textcolor{keywordtype}{int} h = image->height();
+00183 
+00184     \textcolor{comment}{// Getting corner pixels}
+00185     QColor colUL = image->pixelColor(0, 0).toRgb();
+00186     QColor colUR = image->pixelColor(w - 1, 0).toRgb();
+00187     QColor colDR = image->pixelColor(w - 1, h - 1).toRgb();
+00188 
+00189     \textcolor{comment}{// Getting verification code}
+00190     \textcolor{keywordtype}{int} verifCode = (((colUR.green() % 2) << 5) + colUR.blue() % 32) << 2;
+00191     verifCode += colDR.blue() % 4;
+00192     \textcolor{keywordflow}{if}(verifCode != 166)\{
+00193         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"veriffail"});
+00194         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+00195     \}
+00196     \textcolor{comment}{// Getting number of bytes}
+00197     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} countBytes = (colUL.blue() % 32 + ((colUL.green() % 32) << 5) + ((colUL.red() % 32) << 10
+      )) << 9;
+00198     countBytes += ((colUR.red() % 32) << 4) + (colUR.green() >> 1) % 16;
+00199 
+00200     \hyperlink{class_model_p_c_a655deb6a8afa94c7f4aadb3056989038}{bitsUsed} = (colDR.blue() >> 2) % 8 + 1;
+00201     \hyperlink{class_model_p_c_ad74974ac236182c1d6d2cf0729fac3dd}{curMode} = colDR.green() % 32;
+00202 
+00203     \textcolor{comment}{// Start of the circuit}
+00204     QByteArray \hyperlink{namespace_errors_dict_setup_adf4c30d205d29df7343e26f7c62b0685}{data};
+00205     \hyperlink{class_model_p_c_a1d0091062a0c836b283ec2f67411623b}{circuit}(image, &data, countBytes);
+00206 
+00207     \textcolor{comment}{// Check if circuit was successful}
+00208     \textcolor{keywordflow}{if}(!\hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{success})
+00209         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+00210     \textcolor{keywordflow}{if}(data.isEmpty())
+00211     \{
+00212         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"noreaddata"});
+00213         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+00214 
+00215     \}
+00216     \textcolor{comment}{// Version check}
+00217     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \_ver = mod(data.at(0)) * qPow(2, 16);
+00218     \_ver += mod(data.at(1)) * qPow(2, 8);
+00219     \_ver += mod(data.at(2));
+00220     data.remove(0, 3);
+00221     \textcolor{keywordflow}{if}(\_ver > \hyperlink{class_model_p_c_a5af48ab89e19be42a94c34ba00249401}{version}) \{
+00222         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"Picture's app version is newer than yours. Image version is "}
+00223               + generateVersionString(\_ver) + \textcolor{stringliteral}{", yours is "}
+00224               + generateVersionString(\hyperlink{class_model_p_c_a5af48ab89e19be42a94c34ba00249401}{version}) + \textcolor{stringliteral}{"."});
+00225         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+00226     \}
+00227     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(\_ver < \hyperlink{class_model_p_c_a5af48ab89e19be42a94c34ba00249401}{version}) \{
+00228         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"Picture's app version is older than yours. Image version is "}
+00229               + generateVersionString(\_ver) + \textcolor{stringliteral}{", yours is "}
+00230               + generateVersionString(\hyperlink{class_model_p_c_a5af48ab89e19be42a94c34ba00249401}{version}) + \textcolor{stringliteral}{"."});
+00231         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
+00232     \}
+00233     \textcolor{comment}{// Get the hash}
+00234     QByteArray hash = data.left(32);
+00235     data.remove(0, 32);
+00236 
+00237     \textcolor{comment}{// Unzip}
+00238     QByteArray unzipped\_data = \hyperlink{class_model_p_c_a6da88f166785a49f73b22c169f956fd0}{unzip}(data, key.toUtf8());
+00239     QByteArray our\_hash = QCryptographicHash::hash(unzipped\_data, QCryptographicHash::Sha256);
+00240     \textcolor{keywordflow}{if}(our\_hash != hash) \{
+00241         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"fail\_hash"});
+00242         \textcolor{keywordflow}{return} QByteArray(\textcolor{stringliteral}{""});
+00243     \}
+00244     emit \hyperlink{class_model_p_c_a0855107fb0ccc247cd9e893fae9bb08a}{saveData}(unzipped\_data);
+00245     \textcolor{keywordflow}{return} unzipped\_data;
+00246 \}
+\hypertarget{modelpc_8cpp_source_l00251}{}\hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{00251} \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{ModelPC::fail}(QString message)
+00252 \{
+00253     *\hyperlink{class_model_p_c_a4e5a9c0ca1f06fe5bc478b6bf248c37c}{error} = message;
+00254     \hyperlink{class_model_p_c_a9079a101d83672aa48fd2dbac797de40}{alert}(message, \textcolor{keyword}{true});
+00255     \hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{success} = \textcolor{keyword}{false};
+00256     emit \hyperlink{class_model_p_c_afdcd80f0ed5062e145a71f09b0897547}{setProgress}(101);
+00257 \}
+\hypertarget{modelpc_8cpp_source_l00263}{}\hyperlink{class_model_p_c_a8bee0255c09449868c7e6097afaaf0cd}{00263} \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a8bee0255c09449868c7e6097afaaf0cd}{ModelPC::jphs}(QImage *image, QByteArray *\hyperlink{namespace_errors_dict_setup_adf4c30d205d29df7343e26f7c62b0685}{data})
+00264 \{
+00265     \textcolor{comment}{// Under Development}
+00266     \textcolor{keywordflow}{return};
+00267 
+00268     \textcolor{comment}{// Dead code}
+00269 
+00270     \hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{success} = \textcolor{keyword}{true};
+00271     \textcolor{keywordtype}{bool} isEncrypt = !data->isEmpty();
+00272     QString targetEXE = \hyperlink{class_model_p_c_abd038306f14f22fb885a1697c96d6335}{defaultJPHSDir} + (isEncrypt ? \textcolor{stringliteral}{"/jphide.exe"} : \textcolor{stringliteral}{"/jpseek.exe"});
+00273     \textcolor{keywordflow}{if}(!fileExists(targetEXE))
+00274     \{
+00275         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"nojphs"});
+00276         \textcolor{keywordflow}{return};
+00277     \}
+00278 
+00279     QString randomFileName = \hyperlink{class_model_p_c_abd038306f14f22fb885a1697c96d6335}{defaultJPHSDir} + \textcolor{stringliteral}{"/"};
+00280     qsrand(randSeed());
+00281     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 10; i++)
+00282         randomFileName.append(97 + qrand() % 25);
+00283     image->save(randomFileName + \textcolor{stringliteral}{".jpg"});
+00284     \textcolor{keywordflow}{if}(isEncrypt) \{
+00285         QFile file(randomFileName + \textcolor{stringliteral}{".pc"});
+00286         \textcolor{keywordflow}{if}(!file.open(QFile::WriteOnly)) \{
+00287             \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"savefilefail"});
+00288             \textcolor{keywordflow}{return};
+00289         \}
+00290         file.write(*data);
+00291         file.close();
+00292 
+00293         QStringList args;
+00294         args << (randomFileName + \textcolor{stringliteral}{".jpg"}) << (randomFileName + \textcolor{stringliteral}{"\_out.jpg"}) << (randomFileName + \textcolor{stringliteral}{".pc"});
+00295         QProcess prog(\textcolor{keyword}{this});
+00296         prog.start(targetEXE, args);
+00297         prog.waitForStarted();
+00298         prog.write(\textcolor{stringliteral}{"test\(\backslash\)n"});
+00299         prog.waitForBytesWritten();
+00300         prog.write(\textcolor{stringliteral}{"test\(\backslash\)n"});
+00301         prog.waitForBytesWritten();
+00302         prog.waitForReadyRead();
+00303         QByteArray bytes = prog.readAll();
+00304         prog.waitForFinished();
+00305         \textcolor{comment}{//QByteArray readData = prog.readAll();}
+00306         prog.close();
+00307         \textcolor{comment}{// Cleaning - Deleting temp files}
+00308 
+00309     \}
+00310     \textcolor{keywordflow}{else} \{
+00311 
+00312     \}
+00313 
+00314 \}
+00315 
+\hypertarget{modelpc_8cpp_source_l00324}{}\hyperlink{class_model_p_c_a1d0091062a0c836b283ec2f67411623b}{00324} \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a1d0091062a0c836b283ec2f67411623b}{ModelPC::circuit}(QImage *image, QByteArray *\hyperlink{namespace_errors_dict_setup_adf4c30d205d29df7343e26f7c62b0685}{data}, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} countBytes)
+00325 \{
+00326     \textcolor{comment}{// Some flags and creation of the ProgressDialog}
+00327     \hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{success} = \textcolor{keyword}{true};
+00328     emit \hyperlink{class_model_p_c_afdcd80f0ed5062e145a71f09b0897547}{setProgress}(-1);
+00329     \textcolor{keywordtype}{bool} isEncrypt = !data->isEmpty();
+00330 
+00331     \textcolor{comment}{// Image setup}
+00332     \textcolor{keywordtype}{int} w = image->width();
+00333     \textcolor{keywordtype}{int} h = image->height();
+00334 
+00335     \textcolor{comment}{// Visited pixels array}
+00336     QVector <QPoint> were;
+00337     were.push\_back(QPoint(0, 0));
+00338     were.push\_back(QPoint(0, h - 1));
+00339     were.push\_back(QPoint(w - 1, 0));
+00340     were.push\_back(QPoint(w - 1, h - 1));
+00341 
+00342     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} offset = 0;
+00343 
+00344     \textcolor{comment}{// Pre-start Cleaning}
+00345     circuitData = \hyperlink{namespace_errors_dict_setup_adf4c30d205d29df7343e26f7c62b0685}{data};
+00346     circuitImage = image;
+00347     circuitCountBytes = countBytes;
+00348     cur = 0;
+00349     bitsBuffer.clear();
+00350 
+00351     \textcolor{comment}{// Writing Top-Left to Bottom-Left}
+00352     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 1; i < h - 1 && mustGoOn(isEncrypt); i++) \{
+00353         QPoint pos(0, i);
+00354         \hyperlink{class_model_p_c_a1171f9fe1550133dc9053a46b4e5bcfd}{processPixel}(pos, &were, isEncrypt);
+00355     \}
+00356     \textcolor{comment}{// Writing Bottom-Right to Top-Right}
+00357     \textcolor{keywordflow}{if}(mustGoOn(isEncrypt))
+00358     \{
+00359         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = h - 2; i >= 1 && mustGoOn(isEncrypt); i--)\{
+00360             QPoint pos(w - 1, i);
+00361             \hyperlink{class_model_p_c_a1171f9fe1550133dc9053a46b4e5bcfd}{processPixel}(pos, &were, isEncrypt);
+00362         \}
+00363     \}
+00364     \textcolor{comment}{// Main cycle}
+00365     \textcolor{comment}{// Strong is considered as actual corner pixel and weak as pixel near it like (1, 0) or (0, 1)}
+00366     \textcolor{keywordflow}{while}(mustGoOn(isEncrypt))
+00367     \{
+00368         \textcolor{comment}{// Strong Top-Right to Strong Bottom-Right}
+00369         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = offset; i < h - offset && mustGoOn(isEncrypt); i++)\{
+00370             QPoint pos(w - offset - 2, i);
+00371             \hyperlink{class_model_p_c_a1171f9fe1550133dc9053a46b4e5bcfd}{processPixel}(pos, &were, isEncrypt);
+00372         \}
+00373         \textcolor{comment}{// Strong Top-Left to Weak Top-Right}
+00374         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = offset + 1; i < w - offset - 2 && mustGoOn(isEncrypt); i++)\{
+00375             QPoint pos(i, offset);
+00376             \hyperlink{class_model_p_c_a1171f9fe1550133dc9053a46b4e5bcfd}{processPixel}(pos, &were, isEncrypt);
+00377         \}
+00378         \textcolor{comment}{// Weak Bottom-Right to Weak Bottom-Left}
+00379         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = w - 3 - offset; i >= offset + 2 && mustGoOn(isEncrypt); i--)\{
+00380             QPoint pos(i, h - offset - 1);
+00381             \hyperlink{class_model_p_c_a1171f9fe1550133dc9053a46b4e5bcfd}{processPixel}(pos, &were, isEncrypt);
+00382         \}
+00383         \textcolor{comment}{// Weak Top-Left to Strong Bottom-Left}
+00384         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = offset + 1; i < h - offset && mustGoOn(isEncrypt); i++)\{
+00385             QPoint pos(offset + 1, i);
+00386             \hyperlink{class_model_p_c_a1171f9fe1550133dc9053a46b4e5bcfd}{processPixel}(pos, &were, isEncrypt);
+00387         \}
+00388         offset++;
+00389     \}
+00390     \textcolor{comment}{// Extra writing}
+00391     \textcolor{keywordflow}{if}(!\hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{success})
+00392         \textcolor{keywordflow}{return};
+00393     \textcolor{keywordflow}{if}(isEncrypt)
+00394     \{
+00395         \textcolor{comment}{// Getting past colors}
+00396         QColor colUL = image->pixelColor(0, 0).toRgb();
+00397         QColor colUR = image->pixelColor(w - 1, 0).toRgb();
+00398         QColor colDL = image->pixelColor(0, h - 1).toRgb();
+00399         QColor colDR = image->pixelColor(w - 1, h - 1).toRgb();
+00400         \textcolor{keywordtype}{int} red = 0;
+00401         \textcolor{keywordtype}{int} green = 0;
+00402         \textcolor{keywordtype}{int} blue = 0;
+00403 
+00404         \textcolor{comment}{// Writing Upper Left}
+00405         red = (colUL.red() & 224) + (countBytes >> 19);
+00406         green = (colUL.green() & 224) + (countBytes >> 14) % 32;
+00407         blue = (colUL.blue() & 224) + (countBytes >> 9) % 32;
+00408         image->setPixelColor(0, 0, QColor(red, green, blue));
+00409 
+00410         \textcolor{comment}{// Writing Upper Right}
+00411         red = (colUR.red() & 224) + (countBytes >> 4) % 32;
+00412         green = (colUR.green() & 224) + ((countBytes % 16) << 1) + 1;
+00413         blue = (colUR.blue() & 224) + 9;
+00414         image->setPixelColor(w - 1, 0, QColor(red, green, blue));
+00415 
+00416         \textcolor{comment}{// Getting extra bytes if left}
+00417         \textcolor{keywordflow}{while}(cur < countBytes)
+00418             push(mod(circuitData->at(cur++)), 8);
+00419         \textcolor{keywordflow}{if}(bitsBuffer.size() > 20) \{
+00420             \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"bitsBufferFail"});
+00421             \textcolor{keywordflow}{return};
+00422         \}
+00423         \textcolor{comment}{// Getting extra data as long.}
+00424         \textcolor{keywordtype}{long} extraData = pop(-2);
+00425 
+00426         \textcolor{comment}{// Writing Down Left}
+00427         red = (colDL.red() & 224) + (extraData >> 15);
+00428         green = (colDL.green() & 224) + (extraData >> 10) % 32;
+00429         blue = (colDL.blue() & 224) + (extraData >> 5) % 32;
+00430         image->setPixelColor(0, h - 1, QColor(red, green, blue));
+00431 
+00432         \textcolor{comment}{// Writing Down Right}
+00433         red = (colDR.red() & 224) + extraData % 32;
+00434         green = (colDR.green() & 224);
+00435         blue = (colDR.blue() & 224) + ((\hyperlink{class_model_p_c_a655deb6a8afa94c7f4aadb3056989038}{bitsUsed} - 1) << 2) + 2;
+00436         image->setPixelColor(w - 1, h - 1, QColor(red, green, blue));
+00437     \}
+00438     \textcolor{keywordflow}{else}
+00439     \{
+00440         \textcolor{comment}{// Read the past pixels}
+00441         QColor colDL = image->pixelColor(0, h - 1).toRgb();
+00442         QColor colDR = image->pixelColor(w - 1, h - 1).toRgb();
+00443 
+00444         \textcolor{comment}{// Read extra data}
+00445         \textcolor{keywordtype}{long} extraData = ((colDL.red() % 32) << 15) + ((colDL.green() % 32) << 10);
+00446         extraData += ((colDL.blue() % 32) << 5) + colDR.red() % 32;
+00447 
+00448         \textcolor{comment}{// Add extra data to the bitsBuffer}
+00449         push(extraData, (countBytes - cur) * 8 - bitsBuffer.size());
+00450 
+00451         \textcolor{comment}{// Move bits from bitsBuffer to the QByteArray}
+00452         \textcolor{keywordflow}{while}(!bitsBuffer.isEmpty())
+00453             data->append(pop(8));
+00454     \}
+00455     emit \hyperlink{class_model_p_c_afdcd80f0ed5062e145a71f09b0897547}{setProgress}(101);
+00456 \}
+00457 
+\hypertarget{modelpc_8cpp_source_l00465}{}\hyperlink{class_model_p_c_a1171f9fe1550133dc9053a46b4e5bcfd}{00465} \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a1171f9fe1550133dc9053a46b4e5bcfd}{ModelPC::processPixel}(QPoint pos, QVector<QPoint> *were, \textcolor{keywordtype}{bool} isEncrypt)
+00466 \{
+00467     \textcolor{keywordflow}{if}(!\hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{success})
+00468         \textcolor{keywordflow}{return};
+00469     \textcolor{comment}{// Check if point was already visited}
+00470     \textcolor{keywordflow}{if}(were->contains(pos))\{
+00471         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"Point ("} + QString::number(pos.x()) + \textcolor{stringliteral}{","} + QString::number(pos.y()) + \textcolor{stringliteral}{") was visited
+       twice! Error code 2"});
+00472         \textcolor{keywordflow}{return};
+00473     \}
+00474     \textcolor{keywordflow}{else}
+00475         were->push\_back(pos);
+00476     \textcolor{keywordflow}{if}(isEncrypt)
+00477     \{
+00478         \textcolor{comment}{// Make sure that there are enough bits in bitsBuffer to write}
+00479         \textcolor{keywordflow}{while}(bitsBuffer.size() < 3 * \hyperlink{class_model_p_c_a655deb6a8afa94c7f4aadb3056989038}{bitsUsed})
+00480             push(mod(circuitData->at(cur++)), 8);
+00481         \textcolor{comment}{// Read past contains}
+00482         QColor pixelColor = circuitImage->pixelColor(pos);
+00483         \textcolor{keywordtype}{int} red = pixelColor.red();
+00484         \textcolor{keywordtype}{int} green = pixelColor.green();
+00485         \textcolor{keywordtype}{int} blue = pixelColor.blue();
+00486 
+00487         \textcolor{comment}{// Write new data in last bitsUsed pixels}
+00488         red += pop() - red % (int) qPow(2, \hyperlink{class_model_p_c_a655deb6a8afa94c7f4aadb3056989038}{bitsUsed});
+00489         green += pop() - green % (int) qPow(2, \hyperlink{class_model_p_c_a655deb6a8afa94c7f4aadb3056989038}{bitsUsed});
+00490         blue += pop() - blue % (int) qPow(2, \hyperlink{class_model_p_c_a655deb6a8afa94c7f4aadb3056989038}{bitsUsed});
+00491 
+00492         circuitImage->setPixelColor(pos, QColor(red, green, blue));
+00493     \}
+00494     \textcolor{keywordflow}{else}
+00495     \{
+00496         QColor read\_color = circuitImage->pixelColor(pos).toRgb();
+00497         \textcolor{comment}{// Reading the pixel}
+00498         \textcolor{keywordtype}{int} red = read\_color.red();
+00499         \textcolor{keywordtype}{int} green = read\_color.green();
+00500         \textcolor{keywordtype}{int} blue = read\_color.blue();
+00501 
+00502         \textcolor{comment}{// Reading the last bitsUsed pixels}
+00503         red %= (int) qPow(2, \hyperlink{class_model_p_c_a655deb6a8afa94c7f4aadb3056989038}{bitsUsed});
+00504         green %= (int) qPow(2, \hyperlink{class_model_p_c_a655deb6a8afa94c7f4aadb3056989038}{bitsUsed});
+00505         blue %= (int) qPow(2, \hyperlink{class_model_p_c_a655deb6a8afa94c7f4aadb3056989038}{bitsUsed});
+00506 
+00507         \textcolor{comment}{// Getting the data in the bitsBuffer.}
+00508         push(red);
+00509         push(green);
+00510         push(blue);
+00511 
+00512         \textcolor{comment}{// Getting data to QByteArray}
+00513         \textcolor{keywordflow}{while}(bitsBuffer.size() >= 8) \{
+00514             circuitData->append(pop(8));
+00515             cur++;
+00516         \}
+00517     \}
+00518     emit \hyperlink{class_model_p_c_afdcd80f0ed5062e145a71f09b0897547}{setProgress}(100 * cur / circuitCountBytes);
+00519 \}
+00520 
+00521 \textcolor{keywordtype}{long} ModelPC::pop(\textcolor{keywordtype}{int} bits)
+00522 \{
+00523     \textcolor{comment}{// Hard to say}
+00524     \textcolor{keywordtype}{long} res = 0;
+00525     \textcolor{keywordtype}{int} poppedBits = bits == -1 ? \hyperlink{class_model_p_c_a655deb6a8afa94c7f4aadb3056989038}{bitsUsed} : bits;
+00526     \textcolor{keywordflow}{if}(bits == -2)
+00527         poppedBits = bitsBuffer.size();
+00528     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < poppedBits; i++)
+00529         res += bitsBuffer[i] * qPow(2, poppedBits - i - 1);
+00530     bitsBuffer.remove(0, poppedBits);
+00531     \textcolor{keywordflow}{return} res;
+00532 \}
+00533 
+00534 \textcolor{keywordtype}{void} ModelPC::push(\textcolor{keywordtype}{int} \hyperlink{namespace_errors_dict_setup_adf4c30d205d29df7343e26f7c62b0685}{data}, \textcolor{keywordtype}{int} bits)
+00535 \{
+00536     \textcolor{comment}{// That's easier, but also hard}
+00537     \textcolor{keywordtype}{int} buf\_size = bitsBuffer.size();
+00538     \textcolor{keywordtype}{int} extraSize = bits == -1 ? \hyperlink{class_model_p_c_a655deb6a8afa94c7f4aadb3056989038}{bitsUsed} : bits;
+00539     bitsBuffer.resize(buf\_size + extraSize);
+00540     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = bitsBuffer.size() - 1; i >= buf\_size; i--, data >>= 1)
+00541         bitsBuffer[i] = data % 2;
+00542 \}
+00543 
+00544 \textcolor{keywordtype}{bool} ModelPC::mustGoOn(\textcolor{keywordtype}{bool} isEncrypt)
+00545 \{
+00546     \textcolor{keywordflow}{return} \hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{success} && (isEncrypt ? (circuitCountBytes - cur) * 8 + bitsBuffer.size() >= 
+      \hyperlink{class_model_p_c_a655deb6a8afa94c7f4aadb3056989038}{bitsUsed} * 3 :
+00547                                    circuitData->size() * 8 + bitsBuffer.size() <
+00548                                    circuitCountBytes * 8 - (circuitCountBytes * 8)% (
+      \hyperlink{class_model_p_c_a655deb6a8afa94c7f4aadb3056989038}{bitsUsed} * 3));
+00549 \}
+\hypertarget{modelpc_8cpp_source_l00558}{}\hyperlink{class_model_p_c_a6da88f166785a49f73b22c169f956fd0}{00558} QByteArray \hyperlink{class_model_p_c_a6da88f166785a49f73b22c169f956fd0}{ModelPC::unzip}(QByteArray data, QByteArray key)
+00559 \{
+00560     \textcolor{comment}{// Decryption}
+00561     QByteArray hashKey = QCryptographicHash::hash(key, QCryptographicHash::Sha256);
+00562     \hyperlink{class_q_a_e_s_encryption}{QAESEncryption} encryption(\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bdacde97774ab1d4c609e04b0dd13a1e1f7}{QAESEncryption::AES\_256}, 
+      \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a4ca7f51778e2adf1f464164a0ba8e75e}{QAESEncryption::ECB});
+00563     QByteArray new\_data = encryption.\hyperlink{class_q_a_e_s_encryption_a58f972f2b66c2454edd5112495463bba}{decode}(data, hashKey);
+00564     \textcolor{comment}{// Decompressing}
+00565     \textcolor{keywordflow}{return} qUncompress(new\_data);
+00566 \}
+\hypertarget{modelpc_8cpp_source_l00575}{}\hyperlink{class_model_p_c_afebbbfa4b07deba4f68fc6dfb50f353f}{00575} QByteArray \hyperlink{class_model_p_c_afebbbfa4b07deba4f68fc6dfb50f353f}{ModelPC::zip}(QByteArray data, QByteArray key)
+00576 \{
+00577     \textcolor{comment}{// Zip}
+00578     QByteArray c\_data = qCompress(data, 9);
+00579     \textcolor{comment}{// Encryption}
+00580     QByteArray hashKey = QCryptographicHash::hash(key, QCryptographicHash::Sha256);
+00581     \textcolor{keywordflow}{return} \hyperlink{class_q_a_e_s_encryption_a43819eeb6a7cb29fbd3cb6ad640dcbdf}{QAESEncryption::Crypt}(\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bdacde97774ab1d4c609e04b0dd13a1e1f7}{QAESEncryption::AES\_256}, 
+      \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a4ca7f51778e2adf1f464164a0ba8e75e}{QAESEncryption::ECB}, c\_data, hashKey);
+00582 \}
+00583 
+\hypertarget{modelpc_8cpp_source_l00584}{}\hyperlink{class_model_p_c_a670c3a08360555282adfd3740b2debac}{00584} \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a670c3a08360555282adfd3740b2debac}{ModelPC::modernCircuit}(QImage *image, QByteArray *data, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} countBytes)
+00585 \{
+00586     \textcolor{comment}{// Currently in development}
+00587     \textcolor{keywordflow}{return};
+00588     \textcolor{comment}{// Dead code}
+00589 
+00590     QByteArray hash = QCryptographicHash::hash(mykey.toUtf8(), QCryptographicHash::Sha256);
+00591     QByteArray hex = hash.toHex().toUpper().left(16);
+00592     \textcolor{keyword}{auto} random\_seed = hex.toULongLong(\textcolor{keyword}{nullptr}, 16);
+00593     qsrand(random\_seed);
+00594 
+00595     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < 20; i++)
+00596         qDebug() << qrand() << endl;
+00597 
+00598     qsrand(randSeed());
+00599 \}
+00600 
+00601 \textcolor{keywordtype}{bool} ModelPC::fileExists(QString path)
+00602 \{
+00603     QFileInfo check\_file(path);
+00604     \textcolor{keywordflow}{return} check\_file.exists() && check\_file.isFile();
+00605 \}
+00606 
+00613 QByteArray ModelPC::bytes(\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} n)
+00614 \{
+00615     \textcolor{keywordflow}{return} QByteArray::fromHex(QByteArray::number(n, 16));
+00616 \}
+00623 \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} ModelPC::mod(\textcolor{keywordtype}{int} input)
+00624 \{
+00625     \textcolor{keywordflow}{if}(input < 0)
+00626         \textcolor{keywordflow}{return} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}) (256 + input);
+00627     \textcolor{keywordflow}{else}
+00628         \textcolor{keywordflow}{return} (\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int}) input;
+00629 \}
+\hypertarget{modelpc_8cpp_source_l00636}{}\hyperlink{class_model_p_c_a9079a101d83672aa48fd2dbac797de40}{00636} \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a9079a101d83672aa48fd2dbac797de40}{ModelPC::alert}(QString message, \textcolor{keywordtype}{bool} isWarning)
+00637 \{
+00638     emit \hyperlink{class_model_p_c_af0217a7ca5671e26090dc50a5dccdaf5}{alertView}(message, isWarning);
+00639 \}
+00645 QColor ModelPC::RGBbytes(\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} byte)
+00646 \{
+00647     \textcolor{keywordtype}{int} blue = byte % 256;
+00648     \textcolor{keywordtype}{int} green = (byte / 256) % 256;
+00649     \textcolor{keywordtype}{int} red = byte / qPow(2, 16);
+00650     \textcolor{keywordflow}{return} QColor(red, green, blue);
+00651 \}
+00652 
+00653 QString ModelPC::generateVersionString(\textcolor{keywordtype}{long} ver)
+00654 \{
+00655     \textcolor{keywordflow}{return} QString::number((\textcolor{keywordtype}{int})( ver / qPow(2, 16))) + \textcolor{stringliteral}{"."} + QString::number(((\textcolor{keywordtype}{int}) (ver / 256)) % 256) + \textcolor{stringliteral}{
+      "."} + QString::number(ver % 256);
+00656 \}
+00657 
+00658 uint ModelPC::randSeed()
+00659 \{
+00660     QTime time = QTime::currentTime();
+00661     uint randSeed = time.msecsSinceStartOfDay() % 65536 + time.minute() * 21 + time.second() * 2;
+00662     \textcolor{keywordflow}{return} randSeed;
+00663 \}
+00664 
+\end{DoxyCode}

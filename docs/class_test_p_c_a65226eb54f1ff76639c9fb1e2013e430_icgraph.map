@@ -1,0 +1,5 @@
+<map id="TestPC::TestPC" name="TestPC::TestPC">
+<area shape="rect" id="node2" href="$class_test_p_c.html#adec99ddd8910d45b6aca0a105f44960e" title="TestPC::Test Static function of testing. " alt="" coords="173,5,275,32"/>
+<area shape="rect" id="node3" href="$class_controller_p_c.html#aaa59fc90e1ef731eee4560ec87e43707" title="ControllerPC::runTests Runs tests. " alt="" coords="323,5,479,32"/>
+<area shape="rect" id="node4" href="$class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" title="ControllerPC::ControllerPC Constructor of controller Constructor runs auto&#45;test for ModelPC..." alt="" coords="529,5,709,32"/>
+</map>

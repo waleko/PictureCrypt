@@ -1,8 +1,8 @@
 <map id="ModelPC::processPixel" name="ModelPC::processPixel">
-<area shape="rect" id="node2" href="$class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="212,31,331,57"/>
-<area shape="rect" id="node3" href="$class_model_p_c.html#a8ef76567bc0c0307b4e2547c46536e51" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="379,5,505,32"/>
-<area shape="rect" id="node7" href="$class_model_p_c.html#af1f0b21565bf39808c4cdd448fad0ea8" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="553,56,680,83"/>
-<area shape="rect" id="node4" href="$class_model_p_c.html#a3cae34fd5bcb06e8c1f8cfe7961bd270" title="ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff After completion sta..." alt="" coords="562,5,671,32"/>
-<area shape="rect" id="node5" href="$class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" title="ControllerPC::ControllerPC Constructor of controller Constructor runs auto&#45;test for ModelPC..." alt="" coords="728,5,904,32"/>
-<area shape="rect" id="node6" href="$class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="769,56,863,83"/>
+<area shape="rect" id="node2" href="$class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="214,31,333,57"/>
+<area shape="rect" id="node3" href="$class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="382,5,509,32"/>
+<area shape="rect" id="node7" href="$class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="558,56,685,83"/>
+<area shape="rect" id="node4" href="$class_model_p_c.html#a3cae34fd5bcb06e8c1f8cfe7961bd270" title="ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff After completion sta..." alt="" coords="566,5,677,32"/>
+<area shape="rect" id="node5" href="$class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" title="ControllerPC::ControllerPC Constructor of controller Constructor runs auto&#45;test for ModelPC..." alt="" coords="734,5,914,32"/>
+<area shape="rect" id="node6" href="$class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="775,56,873,83"/>
 </map>

@@ -1,0 +1,116 @@
+\hypertarget{testpc_8cpp}{\section{testpc.\-cpp}
+\label{testpc_8cpp}\index{testpc.\-cpp@{testpc.\-cpp}}
+}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "\hyperlink{testpc_8h}{testpc.h}"}
+\hypertarget{testpc_8cpp_source_l00005}{}\hyperlink{class_test_p_c_a65226eb54f1ff76639c9fb1e2013e430}{00005} \hyperlink{class_test_p_c_a65226eb54f1ff76639c9fb1e2013e430}{TestPC::TestPC}()
+00006 \{
+00007     model = \textcolor{keyword}{new} \hyperlink{class_model_p_c}{ModelPC}();
+00008 \}
+\hypertarget{testpc_8cpp_source_l00013}{}\hyperlink{class_test_p_c_adec99ddd8910d45b6aca0a105f44960e}{00013} \textcolor{keywordtype}{int} \hyperlink{class_test_p_c_adec99ddd8910d45b6aca0a105f44960e}{TestPC::Test}()
+00014 \{
+00015     \textcolor{keywordflow}{return} \hyperlink{class_test_p_c_a65226eb54f1ff76639c9fb1e2013e430}{TestPC}().startTest();
+00016 \}
+\hypertarget{testpc_8cpp_source_l00028}{}\hyperlink{class_test_p_c_a612a0409006417c6f03e1749bca0d45a}{00028} \textcolor{keywordtype}{bool} \hyperlink{class_test_p_c_a612a0409006417c6f03e1749bca0d45a}{TestPC::test}(QByteArray \hyperlink{namespace_errors_dict_setup_adf4c30d205d29df7343e26f7c62b0685}{data}, QImage rImage, QString expectedOutput, \textcolor{keywordtype}{int} mode, QString
+       key, \textcolor{keywordtype}{int} bitsUsed)
+00029 \{
+00030     \textcolor{comment}{// Error outputs}
+00031     QString error1, error2;
+00032     \textcolor{comment}{// Embedding}
+00033     QImage * retImage = model->\hyperlink{class_model_p_c_a3cae34fd5bcb06e8c1f8cfe7961bd270}{start}(data, &rImage, mode, key, bitsUsed, &error1);
+00034     \textcolor{comment}{// De-embedding}
+00035     QByteArray output = model->\hyperlink{class_model_p_c_a9458c3a1e369a64889d9a1f70e0c1d18}{decrypt}(retImage, key, &error2);
+00036 
+00037     \textcolor{comment}{// Success of error outputs}
+00038     \textcolor{keywordtype}{bool} er1 = error1 == expectedOutput;
+00039     \textcolor{keywordtype}{bool} er2 = error2 == expectedOutput;
+00040     \textcolor{keywordflow}{if}(expectedOutput == \textcolor{stringliteral}{"ok"})
+00041         \textcolor{keywordflow}{return} er1 && er2 && data == output;
+00042     \textcolor{keywordflow}{else}
+00043         \textcolor{keywordflow}{return} er1 || er2;
+00044 \}
+\hypertarget{testpc_8cpp_source_l00052}{}\hyperlink{class_test_p_c_ad0d724439a65d183d3d336b667cb867b}{00052} \textcolor{keywordtype}{int} \hyperlink{class_test_p_c_ad0d724439a65d183d3d336b667cb867b}{TestPC::startTest}()
+00053 \{
+00054     qDebug() << \textcolor{stringliteral}{"Testing started...\(\backslash\)n"};
+00055     model = \textcolor{keyword}{new} \hyperlink{class_model_p_c}{ModelPC}();
+00056 
+00057     \textcolor{comment}{// Long text open}
+00058     QFile file(\textcolor{stringliteral}{":/unit\_tests/longtext.txt"});
+00059     \textcolor{keywordflow}{if}(!file.open(QFile::ReadOnly))
+00060         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00061     text = file.readAll();
+00062     file.close();
+00063 
+00064     \textcolor{comment}{// Big picture open}
+00065     image = QImage(\textcolor{stringliteral}{":/unit\_tests/bigpicture.jpg"});
+00066     \textcolor{keywordflow}{if}(image.isNull())
+00067         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00068 
+00069     \textcolor{comment}{// JSON tests list open}
+00070     QFile json\_file(\textcolor{stringliteral}{":/unit\_tests/tests.json"});
+00071     QJsonDocument doc;
+00072     \textcolor{keywordflow}{if}(!json\_file.open(QFile::ReadOnly | QFile::Text))
+00073         \textcolor{keywordflow}{return} \textcolor{keyword}{false};
+00074     QByteArray readData = json\_file.readAll();
+00075     json\_file.close();
+00076     doc = QJsonDocument::fromJson(readData);
+00077     \textcolor{comment}{// Testing}
+00078     \textcolor{keywordflow}{return} autoTest(doc);
+00079 \}
+00087 \textcolor{keywordtype}{bool} TestPC::autoTest(QJsonDocument doc)
+00088 \{
+00089     \textcolor{comment}{// Opening the tests array}
+00090     QJsonObject o = doc.object();
+00091     QJsonArray \hyperlink{namespacetests-setup_a274aaa7c0d5733ef5f48372d9481f34a}{arr} = o[\textcolor{stringliteral}{"tests"}].toArray();
+00092     \textcolor{keywordtype}{int} sum = 0;
+00093 
+00094     \textcolor{comment}{// Info about tests}
+00095     QString extraText;
+00096     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = 0; i < arr.size(); i++) \{
+00097         \textcolor{comment}{// Reading the data}
+00098         QJsonObject \hyperlink{namespacetests-setup_afb80c1236926b5468a6d3e942a527a96}{obj} = arr[i].toObject();
+00099 
+00100         QString t = obj[\textcolor{stringliteral}{"data"}].toString();
+00101         \textcolor{keywordflow}{if}(t == \textcolor{stringliteral}{"/text/"})
+00102             t = text;
+00103         QByteArray \hyperlink{namespace_errors_dict_setup_adf4c30d205d29df7343e26f7c62b0685}{data} = t.toUtf8();
+00104 
+00105         QString im = obj[\textcolor{stringliteral}{"image"}].toString();
+00106         QImage img(\textcolor{stringliteral}{":/unit\_tests/"} + im);
+00107 
+00108         QString expect = obj[\textcolor{stringliteral}{"expectation"}].toString();
+00109 
+00110         \textcolor{keywordtype}{int} mode = obj[\textcolor{stringliteral}{"mode"}].toInt();
+00111 
+00112         QString key = obj[\textcolor{stringliteral}{"key"}].toString();
+00113 
+00114         \textcolor{keywordtype}{int} bitsUsed = obj[\textcolor{stringliteral}{"bitsUsed"}].toInt();
+00115 
+00116         \textcolor{comment}{// Testing}
+00117         \textcolor{keywordtype}{bool} s = \hyperlink{class_test_p_c_a612a0409006417c6f03e1749bca0d45a}{test}(data, img, expect, mode, key, bitsUsed);
+00118 
+00119         sum += s;
+00120         extraText += \textcolor{stringliteral}{"\(\backslash\)n * Test #"} + QString::number(i + 1) + \textcolor{stringliteral}{" "} + (s ? \textcolor{stringliteral}{"completed."} : \textcolor{stringliteral}{"failed."});
+00121     \}
+00122     \textcolor{comment}{// Writing log}
+00123     QFile file(\textcolor{stringliteral}{"tests.log"});
+00124     \textcolor{keywordtype}{bool} testsSuc = sum == arr.size();
+00125     \textcolor{keywordflow}{if}(!file.open(QFile::WriteOnly | QFile::Text))
+00126         \textcolor{keywordflow}{return} testsSuc;
+00127     QDateTime curTime = QDateTime::currentDateTime();
+00128     QString date = curTime.toString(\textcolor{stringliteral}{"dd.MM.yyyy HH:mm"});
+00129     QString logtext = \textcolor{stringliteral}{"############################################\(\backslash\)n"}
+00130                       \textcolor{stringliteral}{"####Log file created at "} + date + \textcolor{stringliteral}{"####\(\backslash\)n"}
+00131                       \textcolor{stringliteral}{"############################################\(\backslash\)n\(\backslash\)n"}
+00132                       \textcolor{stringliteral}{"Status: "} + (testsSuc ? \textcolor{stringliteral}{"All tests completed"} : \textcolor{stringliteral}{"Tests failed"}) + \textcolor{stringliteral}{"\(\backslash\)n\(\backslash\)n"}
+00133                       \textcolor{stringliteral}{"Tests list:\(\backslash\)n"};
+00134     logtext += extraText;
+00135     file.write(logtext.toUtf8());
+00136     file.close();
+00137     \textcolor{comment}{// Cleaning up}
+00138     qDebug() << \textcolor{stringliteral}{"Testing completed\(\backslash\)n"};
+00139     \textcolor{keyword}{delete} model;
+00140     \textcolor{keywordflow}{return} !testsSuc;
+00141 \}
+\end{DoxyCode}

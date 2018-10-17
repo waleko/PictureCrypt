@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mode',['mode',['../namespacetests-setup.html#a04126d10edec6b3171e1b55a00309b23',1,'tests-setup']]]
+  ['obj',['obj',['../namespacetests-setup.html#afb80c1236926b5468a6d3e942a527a96',1,'tests-setup']]]
 ];
