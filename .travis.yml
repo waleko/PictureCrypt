@@ -33,12 +33,12 @@ install:
 before_script:
   - cd src
 script:
-  - bash ./scripts/build.sh
-  - bash ./scripts/clean.sh
+  - bash ./../scripts/build.sh
+  - bash ./../scripts/clean.sh
 
 before_deploy:
   - cd doxy
-  - bash ./deploy.sh
+  - bash ./../../scripts/deploy.sh
 
 deploy:
   provider: pages
