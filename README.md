@@ -52,6 +52,7 @@ else
 
 ## Documentation
 Doxygen ocumentation available [here](https://alexkovrigin.me/PictureCrypt)
+
 PDF documentation available [here](https://github.com/waleko/PictureCrypt/raw/gh-pages/refman.pdf)
 
 ## Dependencies
