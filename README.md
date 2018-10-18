@@ -51,17 +51,17 @@ else
 * 1 - JPHS, requires manually installed JPHS and specified directory (not currently available).
 
 ## Documentation
-Doxygen ocumentation available [here](https://alexkovrigin.me/PictureCrypt)
+Doxygen documentation available [here](https://alexkovrigin.me/PictureCrypt)
 
 PDF documentation available [here](https://github.com/waleko/PictureCrypt/raw/gh-pages/refman.pdf)
 
 ## Dependencies
-* qtcore
-* qtgui
-* qtwidgets
+* [qtcore](https://doc.qt.io/qt-5.11/qtcore-index.html)
+* [qtgui](http://doc.qt.io/archives/qt-4.8/qtgui-module.html)
+* [qtwidgets](https://doc.qt.io/qt-5.11/qtwidgets-index.html)
 
 ## Works of other people used in this project
- * [QAESEncryption](https://github.com/bricke/Qt-AES) by bricke (provided under [UNLICENSE](https://unlicense.org/))
+ * [QAESEncryption](https://github.com/bricke/Qt-AES) by [bricke](https://github.com/bricke/) (provided under [UNLICENSE](https://unlicense.org/))
 
 ## Contact
 Question or suggestions are welcome!

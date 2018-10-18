@@ -105,7 +105,7 @@
  * This software is provided under the [UNLICENSE](http://unlicense.org)
  *
  * \section contact Contact us
- * Visit us: https://www.alexkovrigin.me
+ * Visit my site: https://www.alexkovrigin.me
  *
  * Email me at a.kovrigin0@gmail.com
  *
