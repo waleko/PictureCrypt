@@ -3,9 +3,11 @@
 /*!
  * \mainpage PictureCrypt
  * Project made using QT Creator in C++
+ * Test
+ * ![Build Status](https://travis-ci.com/waleko/PictureCrypt.svg?branch=master)
  *
- * [![Build Status](https://travis-ci.com/waleko/PictureCrypt.svg?branch=master)](https://travis-ci.com/waleko/PictureCrypt)
- * [![Codacy Badge](https://api.codacy.com/project/badge/Grade/0c1f3e2bd51c4feebf5a4ce9d2692660)](https://app.codacy.com/app/waleko/PictureCrypt?utm_source=github.com&utm_medium=referral&utm_content=waleko/PictureCrypt&utm_campaign=Badge_Grade_Dashboard)
+ * [ ![Build Status](https://travis-ci.com/waleko/PictureCrypt.svg?branch=master) ](https://travis-ci.com/waleko/PictureCrypt)
+ * [ ![Codacy Badge](https://api.codacy.com/project/badge/Grade/0c1f3e2bd51c4feebf5a4ce9d2692660) ](https://app.codacy.com/app/waleko/PictureCrypt?utm_source=github.com&utm_medium=referral&utm_content=waleko/PictureCrypt&utm_campaign=Badge_Grade_Dashboard)
  *
  * \section idea The idea of the project
  * The idea came to me, when I read an article about steganoraphy.
