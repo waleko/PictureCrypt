@@ -1,6 +1,4 @@
-Project made using Q\-T Creator in C++ Test 
-
-\href{https://travis-ci.com/waleko/PictureCrypt}{\tt !\mbox{[}Build Status\mbox{]}(https\-://travis-\/ci.\-com/waleko/\-Picture\-Crypt.\-svg?branch=master)} \href{https://app.codacy.com/app/waleko/PictureCrypt?utm_source=github.com&utm_medium=referral&utm_content=waleko/PictureCrypt&utm_campaign=Badge_Grade_Dashboard}{\tt !\mbox{[}Codacy Badge\mbox{]}(https\-://api.\-codacy.\-com/project/badge/\-Grade/0c1f3e2bd51c4feebf5a4ce9d2692660)}\hypertarget{index_idea}{}\section{The idea of the project}\label{index_idea}
+Project made using Q\-T Creator in C++\hypertarget{index_idea}{}\section{The idea of the project}\label{index_idea}
 The idea came to me, when I read an article about steganoraphy. I realised, that you can store data in an image in pixels near the border, so noone can see and even if they did, it is practically impossible to decipher the contents. \hypertarget{index_real}{}\section{Realisation}\label{index_real}
 To create the encrypted image, you need to select any file for encryption, then using \hyperlink{class_encrypt_dialog}{Encrypt\-Dialog} you select the image to store the data. Then output image is generated. \begin{DoxyAttention}{Attention}
 Output image format available is .P\-N\-G, because .jpg isn't lossless, so the pixels containing data would be seriously simplified and the data damaged. .B\-M\-P isn't used, because noone really uses it and .P\-N\-G is just compressed .B\-M\-P (more or less) 
