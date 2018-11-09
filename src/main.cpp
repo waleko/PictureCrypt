@@ -71,7 +71,7 @@
  *                                     QString key = "", // Key for extra-encryption (if empty, key will be generated automatically)
  *                                     int bitsUsed = 8, // Bits per Byte used (better explaination ModelPC::bitsUsed)
  *                                     QString *error = nullptr); // Error output, if everything is ok, error will be "ok"
- * if(*error != "ok)
+ * if(*error != "ok")
  *     return;
  * // Note *error is just a code of error (like "muchdata", dictionary of error codes is also available on github.
  *

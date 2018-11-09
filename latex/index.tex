@@ -60,18 +60,18 @@ QImage * resultImage = model->\hyperlink{class_model_p_c_a3cae34fd5bcb06e8c1f8cf
        ModelPC::bitsUsed)}
                                     QString *error = \textcolor{keyword}{nullptr}); \textcolor{comment}{// Error output, if everything is ok, error
        will be "ok"}
-\textcolor{keywordflow}{if}(*error != \textcolor{stringliteral}{"ok)}
-\textcolor{stringliteral}{    return;}
-\textcolor{stringliteral}{// Note *error is just a code of error (like "}muchdata\textcolor{stringliteral}{", dictionary of error codes is also available on
+\textcolor{keywordflow}{if}(*error != \textcolor{stringliteral}{"ok"})
+    \textcolor{keywordflow}{return};
+\textcolor{comment}{// Note *error is just a code of error (like "muchdata", dictionary of error codes is also available on
        github.}
-\textcolor{stringliteral}{}
-\textcolor{stringliteral}{// De-embedding}
-\textcolor{stringliteral}{QByteArray output = model->decrypt(QImage * image, // Image with hidden data}
-\textcolor{stringliteral}{                                   QString *\_error = nullptr); // Error output}
-\textcolor{stringliteral}{if(data == output)}
-\textcolor{stringliteral}{   qDebug() << "}Great success!\textcolor{stringliteral}{";}
-\textcolor{stringliteral}{else}
-\textcolor{stringliteral}{   qDebug() << "}Fiasco :(\textcolor{stringliteral}{";}
+
+\textcolor{comment}{// De-embedding}
+QByteArray output = model->\hyperlink{class_model_p_c_a9458c3a1e369a64889d9a1f70e0c1d18}{decrypt}(QImage * image, \textcolor{comment}{// Image with hidden data}
+                                   QString *\_error = \textcolor{keyword}{nullptr}); \textcolor{comment}{// Error output}
+\textcolor{keywordflow}{if}(data == output)
+   qDebug() << \textcolor{stringliteral}{"Great success!"};
+\textcolor{keywordflow}{else}
+   qDebug() << \textcolor{stringliteral}{"Fiasco :("};
 \end{DoxyCode}
  \begin{DoxySeeAlso}{See Also}
 \hyperlink{class_model_p_c}{Model\-P\-C}, \hyperlink{class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c}{Model\-P\-C\-::\-Model\-P\-C}, \hyperlink{class_model_p_c_a0855107fb0ccc247cd9e893fae9bb08a}{Model\-P\-C\-::save\-Data}, \hyperlink{class_model_p_c_a41f5e2e8022679046e4d3fa1109025fa}{Model\-P\-C\-::save\-Image}, \hyperlink{class_model_p_c_af0217a7ca5671e26090dc50a5dccdaf5}{Model\-P\-C\-::alert\-View}, \hyperlink{class_model_p_c_afdcd80f0ed5062e145a71f09b0897547}{Model\-P\-C\-::set\-Progress}

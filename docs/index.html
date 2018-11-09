@@ -137,17 +137,17 @@ External use</h1>
 <div class="line">                                    QString key = <span class="stringliteral">&quot;&quot;</span>, <span class="comment">// Key for extra-encryption (if empty, key will be generated automatically)</span></div>
 <div class="line">                                    <span class="keywordtype">int</span> bitsUsed = 8, <span class="comment">// Bits per Byte used (better explaination ModelPC::bitsUsed)</span></div>
 <div class="line">                                    QString *error = <span class="keyword">nullptr</span>); <span class="comment">// Error output, if everything is ok, error will be &quot;ok&quot;</span></div>
-<div class="line"><span class="keywordflow">if</span>(*error != <span class="stringliteral">&quot;ok)</span></div>
-<div class="line"><span class="stringliteral">    return;</span></div>
-<div class="line"><span class="stringliteral">// Note *error is just a code of error (like &quot;</span>muchdata<span class="stringliteral">&quot;, dictionary of error codes is also available on github.</span></div>
-<div class="line"><span class="stringliteral"></span></div>
-<div class="line"><span class="stringliteral">// De-embedding</span></div>
-<div class="line"><span class="stringliteral">QByteArray output = model-&gt;decrypt(QImage * image, // Image with hidden data</span></div>
-<div class="line"><span class="stringliteral">                                   QString *_error = nullptr); // Error output</span></div>
-<div class="line"><span class="stringliteral">if(data == output)</span></div>
-<div class="line"><span class="stringliteral">   qDebug() &lt;&lt; &quot;</span>Great success!<span class="stringliteral">&quot;;</span></div>
-<div class="line"><span class="stringliteral">else</span></div>
-<div class="line"><span class="stringliteral">   qDebug() &lt;&lt; &quot;</span>Fiasco :(<span class="stringliteral">&quot;;</span></div>
+<div class="line"><span class="keywordflow">if</span>(*error != <span class="stringliteral">&quot;ok&quot;</span>)</div>
+<div class="line">    <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="comment">// Note *error is just a code of error (like &quot;muchdata&quot;, dictionary of error codes is also available on github.</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">// De-embedding</span></div>
+<div class="line">QByteArray output = model-&gt;<a class="code" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18">decrypt</a>(QImage * image, <span class="comment">// Image with hidden data</span></div>
+<div class="line">                                   QString *_error = <span class="keyword">nullptr</span>); <span class="comment">// Error output</span></div>
+<div class="line"><span class="keywordflow">if</span>(data == output)</div>
+<div class="line">   qDebug() &lt;&lt; <span class="stringliteral">&quot;Great success!&quot;</span>;</div>
+<div class="line"><span class="keywordflow">else</span></div>
+<div class="line">   qDebug() &lt;&lt; <span class="stringliteral">&quot;Fiasco :(&quot;</span>;</div>
 </div><!-- fragment --> <dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_model_p_c.html" title="The ModelPC class Model Layer of the app. Main class that does the work of PictureCrypt logic Control...">ModelPC</a>, <a class="el" href="class_model_p_c.html#ae12ebe65ec973c02a0de4850a7c1e31c" title="ModelPC::ModelPC Constructor Unit tests are run here. ">ModelPC::ModelPC</a>, <a class="el" href="class_model_p_c.html#a0855107fb0ccc247cd9e893fae9bb08a" title="saveData Signal to be called to save data from ModelPC::decrypt. ">ModelPC::saveData</a>, <a class="el" href="class_model_p_c.html#a41f5e2e8022679046e4d3fa1109025fa" title="saveImage Signal to be called to save image from ModelPC::encrypt. ">ModelPC::saveImage</a>, <a class="el" href="class_model_p_c.html#af0217a7ca5671e26090dc50a5dccdaf5" title="alertView Signal to be called to create MessageBox. ">ModelPC::alertView</a>, <a class="el" href="class_model_p_c.html#afdcd80f0ed5062e145a71f09b0897547" title="setProgress Signal to be called to set progress of ProgressDialog. ">ModelPC::setProgress</a></dd></dl>
 <h1><a class="anchor" id="jphs-use"></a>
 JPHS use</h1>
