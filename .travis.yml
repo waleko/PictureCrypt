@@ -1,10 +1,7 @@
 language: cpp
 compiler: gcc
+dist: trusty
 sudo: required
-dist:
-  - trusty
-  - xenial
-  - bionic  
 os:
   - linux
 #  - windows
