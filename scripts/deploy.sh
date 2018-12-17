@@ -14,13 +14,12 @@ mv refman.pdf ../refman.pdf
 echo ":: Deploying on windows..."
 cd ..
 sudo apt-get install -y awscli
-echo ":: set aws_access_key"
-echo $TEST_VALUE
-aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
-echo ":: set aws_access_secret"
-aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
-echo ":: set aws_region"
-aws configure set default_region_name eu-north-1
+#echo ":: set aws_access_key"
+#aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+#echo ":: set aws_access_secret"
+#aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+#echo ":: set aws_region"
+#aws configure set default_region_name eu-north-1
 echo ":: download mxe"
 aws s3 sync s3://mxe-qt/ mxe
 export PATH=/home/travis/PictureCrypt/mxe/usr/bin:$PATH
