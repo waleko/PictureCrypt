@@ -44,6 +44,8 @@ script:
 before_deploy:
   - cd doxy
   - bash ./../../scripts/deploy.sh
+  - cd ../..
+  - sh ./scripts/deploy_windows.sh
 
 deploy:
   provider: pages
