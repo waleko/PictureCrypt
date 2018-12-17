@@ -1,0 +1,23 @@
+This file is part of MXE. See LICENSE.md for licensing information.
+
+Contains ad hoc patches for cross building.
+
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Tony Theodore <tonyt@logyst.com>
+Date: Sat, 24 Feb 2018 18:47:20 +1100
+Subject: [PATCH 1/1] fix mingw build
+
+
+diff --git a/include/qwt3d_types.h b/include/qwt3d_types.h
+index 1111111..2222222 100644
+--- a/include/qwt3d_types.h
++++ b/include/qwt3d_types.h
+@@ -9,7 +9,7 @@
+ #include <string>
+ 
+ #include <QtGlobal>
+-#if defined(Q_OS_WIN)
++#if defined(Q_OS_WIN) && defined(_MSC_VER)
+ 	#include <windows.h>
+ 
+     #define IS_NAN(x) std::_isnan(x)

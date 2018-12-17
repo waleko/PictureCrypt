@@ -1,0 +1,22 @@
+This file is part of MXE. See LICENSE.md for licensing information.
+
+From c807305d0df68e88aa04fabd3275aff4f34d4368 Mon Sep 17 00:00:00 2001
+From: Timothy Gu <timothygu99@gmail.com>
+Date: Sat, 28 Mar 2015 21:06:56 +0100
+Subject: [PATCH 2/2] fix pkgconfig
+
+
+diff --git a/src/libaacs.pc.in b/src/libaacs.pc.in
+index 598f206..4334d8c 100644
+--- a/src/libaacs.pc.in
++++ b/src/libaacs.pc.in
+@@ -7,4 +7,5 @@ Name: libaacs
+ Description: AACS support library for Blu-ray playback
+ Version: @PACKAGE_VERSION@
+ Libs: -L${libdir} -laacs
++Libs.private: @LIBGCRYPT_LIBS@ @GPG_ERROR_LIBS@
+ Cflags: -I${includedir}
+-- 
+2.1.0
+
+

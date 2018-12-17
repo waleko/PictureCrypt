@@ -1,0 +1,63 @@
+#!/usr/bin/env bash
+
+# Tool for converting between MXE patch files and git repos
+# Imports and exports patch files in "git format-patch" format.
+
+cmd=$1
+pkg=$2
+patch_name=${3:-1-fixes}
+
+setupEnv() {
+  # MXE directory
+  export mxedir=$(cd $(dirname $0) && cd .. && pwd)
+}
+
+function init_git {
+  setupEnv
+  make -C $mxedir init-git-$pkg
+}
+
+function export_patch {
+  setupEnv
+  make -C $mxedir export-patch-$pkg PATCH_NAME=${patch_name}
+}
+
+function import_patch {
+  setupEnv
+  make -C $mxedir import-patch-$pkg PATCH_NAME=${patch_name}
+}
+
+function import_all_patches {
+  setupEnv
+  make -C $mxedir import-all-patches-$pkg
+}
+
+case "$cmd" in
+  init)
+    init_git $pkg
+    ;;
+  import)
+    import_patch $pkg
+    ;;
+  import-all)
+    import_all_patches $pkg
+    ;;
+  export)
+    export_patch $pkg
+    ;;
+  *)
+    echo "Unrecognized command '${cmd}'" >&2
+    cat <<EOS
+    Usage: $0 COMMAND PACKAGENAME [PATCHNAME]
+    where COMMAND is one of:
+      init - create a git directory for the package with the raw source
+      import - apply the "pkgname-PATCHNAME.patch" patch commits
+      import-all - apply commits from all the patches of the package
+      export - create/replace the "pkgname-PATCHNAME.patch" patch with a patch of all commits since init.
+
+    If PATCHNAME is not set, it is default to "1-fixes".
+EOS
+    exit 1
+    ;;
+esac
+

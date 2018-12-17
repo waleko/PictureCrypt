@@ -1,0 +1,36 @@
+This file is part of MXE. See LICENSE.md for licensing information.
+
+Contains ad hoc patches for cross building.
+
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: "fix@me" <fix@me>
+Date: Mon, 30 Nov 2015 20:34:28 +1100
+Subject: [PATCH 1/1] fix dll installation and ws2_32 linking errors
+
+
+diff --git a/libs/network/src/CMakeLists.txt b/libs/network/src/CMakeLists.txt
+index 1111111..2222222 100644
+--- a/libs/network/src/CMakeLists.txt
++++ b/libs/network/src/CMakeLists.txt
+@@ -21,6 +21,7 @@ install(TARGETS cppnetlib-uri
+     EXPORT cppnetlibTargets
+     PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_FULL_INCLUDEDIR}
+     LIBRARY DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}
++    RUNTIME DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
+     ARCHIVE DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR})
+ 
+ set(CPP-NETLIB_HTTP_SERVER_SRCS server_request_parsers_impl.cpp)
+@@ -33,6 +34,7 @@ install(TARGETS cppnetlib-server-parsers
+     EXPORT cppnetlibTargets
+     PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_FULL_INCLUDEDIR}
+     LIBRARY DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}
++    RUNTIME DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
+     ARCHIVE DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR})
+ 
+ set(CPP-NETLIB_HTTP_CLIENT_SRCS client.cpp)
+@@ -47,6 +48,7 @@ endif ()
+     EXPORT cppnetlibTargets
+     PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_FULL_INCLUDEDIR}
+     LIBRARY DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR}
++    RUNTIME DESTINATION ${CMAKE_INSTALL_FULL_BINDIR}
+     ARCHIVE DESTINATION ${CMAKE_INSTALL_FULL_LIBDIR})

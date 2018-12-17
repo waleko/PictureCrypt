@@ -1,0 +1,71 @@
+This file is part of MXE. See LICENSE.md for licensing information.
+
+Contains ad hoc patches for cross building.
+
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Boris Nagaev <bnagaev@gmail.com>
+Date: Sun, 11 Oct 2015 22:47:50 +0200
+Subject: [PATCH 1/2] use Unix file functions on MinGW
+
+
+diff --git a/src/rapidjson.cpp b/src/rapidjson.cpp
+index 1111111..2222222 100644
+--- a/src/rapidjson.cpp
++++ b/src/rapidjson.cpp
+@@ -54,7 +54,7 @@ static void setfuncs(lua_State* L, const luaL_Reg *funcs)
+ FILE* openForRead(const char* filename)
+ {
+ 	FILE* fp = NULL;
+-#if WIN32
++#if WIN32 && !defined(__MINGW32__)
+ 	fopen_s(&fp, filename, "rb");
+ #else
+ 	fp = fopen(filename, "r");
+@@ -66,7 +66,7 @@ FILE* openForRead(const char* filename)
+ FILE* openForWrite(const char* filename)
+ {
+ 	FILE* fp = NULL;
+-#if WIN32
++#if WIN32 && !defined(__MINGW32__)
+ 	fopen_s(&fp, filename, "wb");
+ #else
+ 	fp = fopen(filename, "w");
+
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Boris Nagaev <bnagaev@gmail.com>
+Date: Sun, 11 Oct 2015 22:48:26 +0200
+Subject: [PATCH 2/2] link with Lua libraries on MinGW and MXE
+
+
+diff --git a/rapidjson-0.2.2-1.rockspec b/rapidjson-0.2.2-1.rockspec
+index 1111111..2222222 100644
+--- a/rapidjson-0.2.2-1.rockspec
++++ b/rapidjson-0.2.2-1.rockspec
+@@ -27,6 +27,13 @@ dependencies = {
+   "lua >= 5.1"
+ }
+ 
++-- windows DLL needs link with importlib.
++local link = {
++  variables = {
++    LUA_LIBRARIES = "$(LUA_LIBDIR)/$(LUALIB)",
++  }
++}
++
+ -- cmake -Bbuild -H. -DBUILD_SHARED_LIBS=ON
+ -- cmake --build build --target install --config Release
+ build = {
+@@ -39,10 +46,8 @@ build = {
+   },
+   -- Override default build options
+   platforms = {
+-    windows = {
+-      variables = {
+-        LUA_LIBRARIES = "$(LUA_LIBDIR)/$(LUALIB)", -- windows DLL needs link with importlib.
+-      }
+-    }
++    windows = link,
++    mingw = link,
++    mxe = link,
+   }
+ }

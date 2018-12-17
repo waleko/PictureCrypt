@@ -1,0 +1,28 @@
+This file is part of MXE. See LICENSE.md for licensing information.
+
+Contains ad hoc patches for cross building.
+
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: "fix@me" <fix@me>
+Date: Sun, 4 Aug 2013 23:32:15 +0200
+Subject: [PATCH 1/1] comment out production of some file for make install to
+ succeed
+
+
+diff --git a/glade/Makefile.am b/glade/Makefile.am
+index 1111111..2222222 100644
+--- a/glade/Makefile.am
++++ b/glade/Makefile.am
+@@ -13,10 +13,10 @@ if OS_WIN32
+ export_symbols = -export-symbols glade.def
+ 
+ install-libtool-import-lib:
+-	$(INSTALL) .libs/libglade-2.0.dll.a $(DESTDIR)$(libdir)
++#	$(INSTALL) .libs/libglade-2.0.dll.a $(DESTDIR)$(libdir)
+ 
+ uninstall-libtool-import-lib:
+-	-rm $(DESTDIR)$(libdir)/libglade-2.0.dll.a
++#	-rm $(DESTDIR)$(libdir)/libglade-2.0.dll.a
+ else
+ 
+ export_symbols = -export-symbols-regex "^[^_].*"

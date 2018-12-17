@@ -1,0 +1,87 @@
+. tools/compat-init.sh
+
+export MXE_DIR=`pwd`
+export BUILD=`$MXE_DIR/ext/config.guess`
+export PATH=$MXE_DIR/usr/$BUILD/bin:$MXE_DIR/usr/bin:$PATH
+
+MXE_TRIPLETS=`grep ^MXE_TRIPLETS Makefile | cut -d '=' -f2 | cut -d ' ' -f2- | tr ' ' ','`
+MXE_LIB_TYPES=`grep ^MXE_LIB_TYPES Makefile | cut -d '=' -f2 | cut -d ' ' -f2- | tr ' ' ','`
+MXE_TARGET_LIST=`eval "echo {$MXE_TRIPLETS}.{$MXE_LIB_TYPES}"`
+
+alias mxe-make='$MAKE -C $MXE_DIR --no-print-directory'
+
+unset `compgen -e | \
+    grep -vi '^EDITOR\|^HOME\|^LANG\|MXE\|^PATH' | \
+    grep -vi 'PKG_CONFIG\|PROXY\|^PS1\|^TERM' | \
+    tr '\n' ' '`
+
+_mxe()
+{
+    local cur prev pkgs tgts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+
+    pkgs=$( for x in `ls -l $MXE_DIR/src/*.mk | $SED -n 's,.*src/\(.*\)\.mk,\1,p'`; do echo ${x} ; done )
+    tgts=$MXE_TARGET_LIST
+
+    case "${cur}" in
+    download-*)
+        local _pkgs=$( for x in ${pkgs}; do echo download-${x} ; done )
+        COMPREPLY=( $(compgen -W "${_pkgs}" -- ${cur}) )
+        return 0
+        ;;
+    update-checksum-*)
+        local _pkgs=$( for x in ${pkgs}; do echo update-checksum-${x} ; done )
+        COMPREPLY=( $(compgen -W "${_pkgs}" -- ${cur}) )
+        return 0
+        ;;
+    show-*deps-*)
+        local base=`echo ${cur} | $SED -n 's,\(show.*deps-\).*,\1,p'`
+        local _pkgs=$( for x in ${pkgs}; do echo $base${x} ; done )
+        COMPREPLY=( $(compgen -W "${_pkgs}" -- ${cur}) )
+        return 0
+        ;;
+    *-*-*)
+        local base=`echo ${cur} | $SED -n 's,\(.*-.*-\).*,\1,p'`
+        local _pkgs=$( for x in ${pkgs}; do echo $base${x} ; done )
+        COMPREPLY=( $(compgen -W "${_pkgs}" -- ${cur}) )
+        return 0
+        ;;
+    *-*-*-*)
+        local base=`echo ${cur} | $SED -n 's,\(.*-.*-.*-\).*,\1,p'`
+        local _pkgs=$( for x in ${pkgs}; do echo $base${x} ; done )
+        COMPREPLY=( $(compgen -W "${_pkgs}" -- ${cur}) )
+        return 0
+        ;;
+    [!-]*)
+        pkgs+=" docs/build-matrix.html \
+                docs/packages.json \
+                check-requirements \
+                clean \
+                clean-junk \
+                clean-pkg \
+                cleanup-deps-style \
+                cleanup-style \
+                download \
+                download- \
+                download-only- \
+                export-patch- \
+                gmsl-print- \
+                import-all-patches- \
+                import-patch- \
+                init-git- \
+                print-deps-for-build-pkg \
+                show-deps- \
+                show-downstream-deps- \
+                show-upstream-deps- \
+                update \
+                update-checksum- \
+                update-package- "
+        COMPREPLY=( $(compgen -W "${pkgs}" -- ${cur}) )
+        return 0
+        ;;
+    esac
+
+}
+complete -o nospace -o default -F _mxe mxe-make make gmake

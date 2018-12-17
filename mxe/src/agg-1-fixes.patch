@@ -1,0 +1,22 @@
+This file is part of MXE. See LICENSE.md for licensing information.
+
+Contains ad hoc patches for cross building.
+
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Mark Brand <mabrand@mabrand.nl>
+Date: Tue, 12 Jun 2012 17:05:49 +0200
+Subject: [PATCH 1/1] automake 1.12 compatibility fix
+
+
+diff --git a/configure.in b/configure.in
+index 1111111..2222222 100644
+--- a/configure.in
++++ b/configure.in
+@@ -8,7 +8,6 @@ dnl Checks for programs.
+ AC_PROG_CC
+ AC_PROG_CXX
+ AC_ISC_POSIX
+-AM_C_PROTOTYPES
+ if test "x$U" != "x"; then
+   AC_MSG_ERROR(Compiler not ANSI compliant)
+ fi

@@ -1,0 +1,63 @@
+This file is part of MXE. See LICENSE.md for licensing information.
+
+Contains ad hoc patches for cross building.
+
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Tony Theodore <tonyt@logyst.com>
+Date: Sat, 18 Nov 2017 20:31:24 +1100
+Subject: [PATCH 1/1] fixes
+
+
+diff --git a/bzip2.c b/bzip2.c
+index 1111111..2222222 100644
+--- a/bzip2.c
++++ b/bzip2.c
+@@ -128,7 +128,7 @@
+ #if BZ_LCCWIN32
+ #   include <io.h>
+ #   include <fcntl.h>
+-#   include <sys\stat.h>
++#   include <sys/stat.h>
+ 
+ #   define NORETURN       /**/
+ #   define PATH_SEP       '\\'
+diff --git a/bzlib.h b/bzlib.h
+index 1111111..2222222 100644
+--- a/bzlib.h
++++ b/bzlib.h
+@@ -75,7 +75,7 @@ typedef
+ #include <stdio.h>
+ #endif
+ 
+-#ifdef _WIN32
++#if 0
+ #   include <windows.h>
+ #   ifdef small
+       /* windows.h define small to char */
+@@ -116,7 +116,7 @@ BZ_EXTERN int BZ_API(BZ2_bzCompressEnd) (
+ BZ_EXTERN int BZ_API(BZ2_bzDecompressInit) ( 
+       bz_stream *strm, 
+       int       verbosity, 
+-      int       small
++      int       small_
+    );
+ 
+ BZ_EXTERN int BZ_API(BZ2_bzDecompress) ( 
+@@ -140,7 +140,7 @@ BZ_EXTERN BZFILE* BZ_API(BZ2_bzReadOpen) (
+       int*  bzerror,   
+       FILE* f, 
+       int   verbosity, 
+-      int   small,
++      int   small_,
+       void* unused,    
+       int   nUnused 
+    );
+@@ -216,7 +216,7 @@ BZ_EXTERN int BZ_API(BZ2_bzBuffToBuffDecompress) (
+       unsigned int* destLen,
+       char*         source, 
+       unsigned int  sourceLen,
+-      int           small, 
++      int           small_, 
+       int           verbosity 
+    );
+ 

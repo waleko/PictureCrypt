@@ -1,0 +1,38 @@
+This file is part of MXE. See LICENSE.md for licensing information.
+
+Contains ad hoc patches for cross building.
+
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: "fix@me" <fix@me>
+Date: Mon, 22 Jun 2015 14:10:16 -0700
+Subject: [PATCH 1/1] Fix pointer-to-integer cast for 64-bit architecture.
+
+
+diff --git a/src/sl/slDSP.cxx b/src/sl/slDSP.cxx
+index 1111111..2222222 100644
+--- a/src/sl/slDSP.cxx
++++ b/src/sl/slDSP.cxx
+@@ -237,8 +237,8 @@ void slDSP::open ( const char *device, int _rate, int _stereo, int _bps )
+    // Now the hwaveouthandle "should" be valid 
+ 
+    if ( ( result = waveOutOpen( & hWaveOut, WAVE_MAPPER, 
+-         (WAVEFORMATEX *)& Format, (DWORD)waveOutProc, 
+-         (DWORD)this, CALLBACK_FUNCTION )) != MMSYSERR_NOERROR )
++         (WAVEFORMATEX *)& Format, (uintptr_t)waveOutProc, 
++         (uintptr_t)this, CALLBACK_FUNCTION )) != MMSYSERR_NOERROR )
+    {
+       wperror( result);
+ 
+diff --git a/src/ssg/ssgParser.cxx b/src/ssg/ssgParser.cxx
+index 1111111..2222222 100644
+--- a/src/ssg/ssgParser.cxx
++++ b/src/ssg/ssgParser.cxx
+@@ -263,7 +263,7 @@ void _ssgParser::expectNextToken( const char* name )
+ // This is copied to a new buffer, so that I have the space to add the 0.
+ void _ssgParser::addOneCharToken ( char *ptr ) 
+ {
+-	assert( (long)onechartokenbuf_ptr- (long)onechartokenbuf < 4096 ) ; // Buffer overflow
++	assert( (uintptr_t)onechartokenbuf_ptr- (uintptr_t)onechartokenbuf < 4096 ) ; // Buffer overflow
+ 	
+ 	onechartokenbuf_ptr [ 0 ] = *ptr;
+ 	onechartokenbuf_ptr [ 1 ] = 0;

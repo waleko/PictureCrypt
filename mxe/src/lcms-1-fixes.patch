@@ -1,0 +1,22 @@
+This file is part of MXE. See LICENSE.md for licensing information.
+
+Contains ad hoc patches for cross building.
+
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: "fix@me" <fix@me>
+Date: Fri, 23 Dec 2011 00:01:31 +0100
+Subject: [PATCH 1/1] add missing static dependencies to .pc file
+
+
+diff --git a/lcms2.pc.in b/lcms2.pc.in
+index 1111111..2222222 100644
+--- a/lcms2.pc.in
++++ b/lcms2.pc.in
+@@ -7,5 +7,6 @@ Name: @PACKAGE@
+ Description: LCMS Color Management Library
+ Version: @VERSION@
+ Libs: -L${libdir} -llcms2
+-Libs.private: @LIB_MATH@ @LIB_THREAD@
++Libs.private: -ljpeg @LIB_MATH@ @LIB_THREAD@
+ Cflags: -I${includedir}
++Requires: libtiff-4

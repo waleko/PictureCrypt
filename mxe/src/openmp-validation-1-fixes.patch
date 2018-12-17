@@ -1,0 +1,124 @@
+This file is part of MXE. See LICENSE.md for licensing information.
+
+Contains ad hoc patches for cross building.
+
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Tony Theodore <tonyt@logyst.com>
+Date: Sun, 23 Feb 2014 05:22:26 +1100
+Subject: [PATCH 1/3] Overwrite built-in rules to allow .exe suffix
+
+
+diff --git a/Makefile b/Makefile
+index 1111111..2222222 100644
+--- a/Makefile
++++ b/Makefile
+@@ -184,14 +184,21 @@ omp_testsuite.h: ompts-c.conf c/*
+ .c.o: omp_testsuite omp_my_sleep
+ 	$(CC) $(CFLAGS) -c $<
+ 
++# Overwrite built-in rules to allow .exe suffix
++%: %.c
++	$(LINK.c) $^ $(LOADLIBES) $(LDLIBS) -o $@$(EXE_SUFFIX)
++
++%: %.f
++	$(LINK.f) $^ $(LOADLIBES) $(LDLIBS) -o $@$(EXE_SUFFIX)
++
+ ctest: omp_my_sleep omp_testsuite
+-	./runtest.pl --lang=c testlist-c.txt
++	./runtest.pl $(RUNTEST_OPTIONS) --lang=c testlist-c.txt
+ 
+ ftest:
+ 	mkdir -p bin/fortran
+ 	cp omp_testsuite.f bin/fortran
+ 	cp omp_my_sleep.f bin/fortran
+-	./runtest.pl --lang=fortran testlist-f.txt
++	./runtest.pl $(RUNTEST_OPTIONS) --lang=fortran testlist-f.txt
+ 
+ print_compile_options:
+ 	@echo "-------------------"
+diff --git a/omp_my_sleep.h b/omp_my_sleep.h
+index 1111111..2222222 100644
+--- a/omp_my_sleep.h
++++ b/omp_my_sleep.h
+@@ -5,7 +5,6 @@
+ #include<stdlib.h>
+ #include<unistd.h>
+ 
+-#include <sys/times.h> 
+ #include <sys/time.h>
+ #include <time.h>
+ #include <errno.h>
+
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Tony Theodore <tonyt@logyst.com>
+Date: Sun, 23 Feb 2014 05:22:26 +1100
+Subject: [PATCH 2/3] add Batchfile with test to run on host
+
+
+diff --git a/all-tests-openmp-validation.bat b/all-tests-openmp-validation.bat
+new file mode 100644
+index 1111111..2222222
+--- /dev/null
++++ b/all-tests-openmp-validation.bat
+@@ -0,0 +1,40 @@
++setlocal enableextensions enabledelayedexpansion
++set /a TEST_COUNT=0
++set /a FAIL_COUNT=0
++set /a PASS_COUNT=0
++set LOG_FILE=%~n0.log
++set BLANK=
++for /l %%I in (1,1,79) do set SPACER=%BLANK% %BLANK%!SPACER!
++date /t >  %LOG_FILE%
++time /t >> %LOG_FILE%
++echo. >> %LOG_FILE%
++echo L=Language (c=c, n=fortran) >> %LOG_FILE%
++echo Pass 0=Y >> %LOG_FILE%
++echo. >> %LOG_FILE%
++echo L Test Name %SPACER:~0,50% Pass  Certainty%%>> %LOG_FILE%
++echo %SPACER: =-%>> %LOG_FILE%
++for /r %%F in (test*.exe) do (
++	set /a TEST_COUNT += 1
++	%%F
++	set ERR=!errorlevel!
++	if !ERR! neq 0 (set /a FAIL_COUNT += 1) else set /a PASS_COUNT += 1
++	set TEST_LANG=%%~pF
++	set TEST_NAME=%%~nF%SPACER%
++	set ERR_SPC=!ERR!%SPACER%
++	set /p "=!TEST_LANG:~-2,-1! !TEST_NAME:~0,60! !ERR_SPC:~0,5! " < nul >> %LOG_FILE%
++	%%~dpFc%%~nxF
++	echo !errorlevel!%% >> %LOG_FILE%
++	if exist %%~dpForph_%%~nxF (
++		set /a TEST_COUNT += 1
++		%%~dpForph_%%~nxF
++		set ERR=!errorlevel!
++		if !ERR! neq 0 (set /a FAIL_COUNT += 1) else set /a PASS_COUNT += 1
++		set TEST_NAME=orph_%%~nF%SPACER%
++		set ERR_SPC=!ERR!%SPACER%
++		set /p "=!TEST_LANG:~-2,-1! !TEST_NAME:~0,60! !ERR_SPC:~0,5! " < nul >> %LOG_FILE%
++		%%~dpForph_c%%~nxF
++		echo !errorlevel!%% >> %LOG_FILE%
++	)
++)
++echo. >> %LOG_FILE%
++echo Total tests: !TEST_COUNT!  Total Failed: !FAIL_COUNT! Total Passed: !PASS_COUNT!>> %LOG_FILE%
+
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Moritz Bunkus <moritz@bunkus.org>
+Date: Tue, 25 Jul 2017 16:46:33 +1000
+Subject: [PATCH 3/3] perl cwd not in inc anymore
+
+
+diff --git a/runtest.pl b/runtest.pl
+index 1111111..2222222 100755
+--- a/runtest.pl
++++ b/runtest.pl
+@@ -1,5 +1,9 @@
+ #!/usr/bin/env perl
+ 
++BEGIN {
++  unshift @INC, '.';
++}
++
+ # runtest [options] FILENAME
+ #
+ # Read the file FILENAME. Each line contains a test.
