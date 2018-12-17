@@ -1,7 +1,10 @@
 language: cpp
 compiler: gcc
-sudo: required
 dist: trusty
+sudo: required
+os:
+  - linux
+#  - windows
 
 branches:
   except:
@@ -45,7 +48,11 @@ before_deploy:
   - cd doxy
   - bash ./../../scripts/deploy.sh
   - cd ../..
-  - sh ./scripts/deploy_windows.sh
+#  - sudo apt-get install -y awscli
+  - pip install --user awscli
+  - aws s3 sync s3://mxe-qt/ mxe --region us-west-1 > s3.log
+  - cd src
+  - sh ./../scripts/deploy_windows.sh
 
 deploy:
   provider: pages
