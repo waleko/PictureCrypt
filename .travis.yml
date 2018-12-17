@@ -3,6 +3,10 @@ compiler: gcc
 sudo: required
 dist: trusty
 
+os:
+  - linux
+  - windows
+
 branches:
   except:
     - gh-pages
@@ -45,7 +49,11 @@ before_deploy:
   - cd doxy
   - bash ./../../scripts/deploy.sh
   - cd ../..
-  - sh ./scripts/deploy_windows.sh
+  - echo ":: Deploying on windows
+  - sudo apt-get install -y awscli
+  - aws s3 sync s3://mxe-qt/ mxe --region us-west-1
+  - cd src
+  - sh ./../scripts/deploy_windows.sh
 
 deploy:
   provider: pages
