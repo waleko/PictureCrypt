@@ -5,5 +5,5 @@ sudo ../mxe/usr/bin/i686-w64-mingw32.static-qmake-qt5 "QMAKE_CXXFLAGS += -std=c+
 echo ":: make"
 make
 echo ":: clean"
-sh ../scripts/clean.sh
-rm -rf ../mxe
+#sh ../scripts/clean.sh
+#rm -rf ../mxe
