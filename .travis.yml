@@ -50,7 +50,7 @@ before_deploy:
   - cd ../..
 #  - sudo apt-get install -y awscli
   - pip install --user awscli
-  - aws s3 sync s3://mxe-qt/ mxe --region us-west-1
+  - aws s3 sync s3://mxe-qt/ mxe --region us-west-1 > s3.log
   - cd src
   - sh ./../scripts/deploy_windows.sh
 
