@@ -15,6 +15,7 @@ echo ":: Deploying on windows..."
 cd ..
 sudo apt-get install -y awscli
 echo ":: set aws_access_key"
+echo $TEST_VALUE
 aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
 echo ":: set aws_access_secret"
 aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
