@@ -48,7 +48,6 @@ before_deploy:
   - cd doxy
   - bash ./../../scripts/deploy.sh
   - cd ../..
-  - echo ":: Deploying on windows"
   - sudo apt-get install -y awscli
   - aws s3 sync s3://mxe-qt/ mxe --region us-west-1
   - cd src
