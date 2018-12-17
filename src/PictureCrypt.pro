@@ -55,4 +55,4 @@ CONFIG(debug, debug|release) {
 }else {
     DESTDIR         = $$OUT_PWD/build/Release
 }
-win32:QMAKE_POST_LINK += windeployqt $$DESTDIR $$escape_expand(\\n)
+# win32:QMAKE_POST_LINK += windeployqt $$DESTDIR $$escape_expand(\\n)
