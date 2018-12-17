@@ -10,7 +10,7 @@ sudo apt-get install -y awscli
 #echo ":: set aws_region"
 #aws configure set default_region_name eu-north-1
 echo ":: download mxe"
-aws s3 sync s3://mxe-qt/ mxe --region eu-north-1
+aws s3 sync s3://mxe-qt/ mxe --region us-west-1
 export PATH=/home/travis/PictureCrypt/mxe/usr/bin:$PATH
 cd src
 echo ":: qmake"
