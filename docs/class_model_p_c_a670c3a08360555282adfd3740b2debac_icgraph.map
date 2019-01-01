@@ -1,6 +1,0 @@
-<map id="ModelPC::modernCircuit" name="ModelPC::modernCircuit">
-<area shape="rect" id="node2" href="$class_model_p_c.html#ae12ebe65ec973c02a0de4850a7c1e31c" title="ModelPC::ModelPC Constructor Unit tests are run here. " alt="" coords="219,56,357,83"/>
-<area shape="rect" id="node3" href="$class_model_p_c.html#a77a3beaa87ab7d882215730c546a1c91" title="ModelPC::Start" alt="" coords="415,5,527,32"/>
-<area shape="rect" id="node4" href="$class_model_p_c.html#a132a399bf401a97106c2368e6e9e8792" title="ModelPC::Encrypt" alt="" coords="406,56,535,83"/>
-<area shape="rect" id="node5" href="$class_model_p_c.html#ac245b9b6d618f421c0ccfa66d97ac905" title="ModelPC::Decrypt" alt="" coords="405,107,536,133"/>
-</map>

@@ -99,7 +99,7 @@
 00110         QByteArray hash = QCryptographicHash::hash(data, QCryptographicHash::Sha256);
 00111         encr\_data = hash + encr\_data;
 00112         \textcolor{comment}{// TODO do the mode thing}
-00113         emit \hyperlink{class_view_p_c_a27ecfb84029d42029631b776a02ff5d8}{encrypt}(encr\_data, &dialog->\hyperlink{class_encrypt_dialog_a739a0df1d28d06b28a3fd16e2bc16c73}{image}, 0, dialog->\hyperlink{class_encrypt_dialog_abf638fea37fbdbaba215954e2e239860}{bitsUsed});
+00113         emit \hyperlink{class_view_p_c_a27ecfb84029d42029631b776a02ff5d8}{encrypt}(encr\_data, &dialog->\hyperlink{class_encrypt_dialog_a739a0df1d28d06b28a3fd16e2bc16c73}{image}, 1, dialog->\hyperlink{class_encrypt_dialog_abf638fea37fbdbaba215954e2e239860}{bitsUsed});
 00114     \}
 00115     \textcolor{keywordflow}{else}
 00116     \{
@@ -115,7 +115,7 @@
 00125         \textcolor{keywordflow}{if}(key.isEmpty())
 00126             \textcolor{keywordflow}{return};
 00127         QImage * res\_image = \textcolor{keyword}{new} QImage(inputFileName);
-00128         emit \hyperlink{class_view_p_c_aef365fa37c40972e1c1504de647fee12}{decrypt}(res\_image, key);
+00128         emit \hyperlink{class_view_p_c_a365df051360d557c7221474ad856e0af}{decrypt}(res\_image, key, 1);
 00129     \}
 00130 \}
 \hypertarget{viewpc_8cpp_source_l00136}{}\hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{00136} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{ViewPC::alert}(QString message, \textcolor{keywordtype}{bool} isWarning)

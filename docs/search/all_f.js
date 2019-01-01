@@ -1,13 +1,7 @@
 var searchData=
 [
-  ['savedata',['saveData',['../class_model_p_c.html#a0855107fb0ccc247cd9e893fae9bb08a',1,'ModelPC::saveData()'],['../class_view_p_c.html#aaff156103970be7c777beedaf0020604',1,'ViewPC::saveData()']]],
-  ['saveimage',['saveImage',['../class_model_p_c.html#a41f5e2e8022679046e4d3fa1109025fa',1,'ModelPC::saveImage()'],['../class_view_p_c.html#a7901ce10ffaaf2387bef1db7feea342d',1,'ViewPC::saveImage()']]],
-  ['setencryptmode',['setEncryptMode',['../class_view_p_c.html#a5b48951efefdc0e3039c9a4bf185320b',1,'ViewPC']]],
-  ['setjphsdir',['setJPHSDir',['../class_controller_p_c.html#ac00d29685a7e5b780c01eb438e10f96d',1,'ControllerPC::setJPHSDir()'],['../class_view_p_c.html#ae81085836c0c01bc9556a5b27eb8d19c',1,'ViewPC::setJPHSDir()']]],
-  ['setprogress',['setProgress',['../class_model_p_c.html#afdcd80f0ed5062e145a71f09b0897547',1,'ModelPC::setProgress()'],['../class_view_p_c.html#a9c32a1fdb6ead84e5ada8fba8860c7ed',1,'ViewPC::setProgress()']]],
-  ['setversion',['setVersion',['../class_about_p_c.html#aa3815d4826d0c8d87122449537a0a4d5',1,'AboutPC::setVersion()'],['../class_view_p_c.html#ac05220df875b7c4f24405a5742476ebf',1,'ViewPC::setVersion()']]],
-  ['size',['size',['../class_encrypt_dialog.html#a7fff26f838ab50f807744cd2c4bed033',1,'EncryptDialog']]],
-  ['start',['Start',['../class_model_p_c.html#a77a3beaa87ab7d882215730c546a1c91',1,'ModelPC::Start(QByteArray data, QImage *image, int mode=0, QString key=&quot;&quot;, int _bitsUsed=8, QString *_error=nullptr)'],['../class_model_p_c.html#a3cae34fd5bcb06e8c1f8cfe7961bd270',1,'ModelPC::start(QByteArray data, QImage *image, int mode=0, QString key=&quot;&quot;, int _bitsUsed=8, QString *_error=nullptr)']]],
-  ['starttest',['startTest',['../class_test_p_c.html#ad0d724439a65d183d3d336b667cb867b',1,'TestPC']]],
-  ['success',['success',['../class_encrypt_dialog.html#ada4900bcd40894d9c098c65aa4066ac9',1,'EncryptDialog::success()'],['../class_model_p_c.html#a945ffbbc44a832b953c191debd448f4c',1,'ModelPC::success()']]]
+  ['raw',['raw',['../namespace_errors_dict_setup.html#ad08a9cc68898a62eb6523550f54917cf',1,'ErrorsDictSetup.raw()'],['../namespacetests-setup.html#a1788203b7bbd6108e09617328eaeceb9',1,'tests-setup.raw()']]],
+  ['removepadding',['RemovePadding',['../class_q_a_e_s_encryption.html#abb2887bf5623a74053dd19627f3d3055',1,'QAESEncryption::RemovePadding(const QByteArray &amp;rawText, QAESEncryption::Padding padding)'],['../class_q_a_e_s_encryption.html#a4dc7e77485e5a3e63eebc99b9386c17b',1,'QAESEncryption::removePadding(const QByteArray &amp;rawText)']]],
+  ['requestkey',['requestKey',['../class_view_p_c.html#a559c95675ec98b15451f3bca47033d9c',1,'ViewPC']]],
+  ['runtests',['runTests',['../class_controller_p_c.html#aaa59fc90e1ef731eee4560ec87e43707',1,'ControllerPC::runTests()'],['../class_view_p_c.html#a96a6c95728bf20c64d2a8fe978495395',1,'ViewPC::runTests()']]]
 ];

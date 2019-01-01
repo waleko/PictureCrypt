@@ -147,11 +147,11 @@ Public Slots</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
 <tr class="memitem:a27ecfb84029d42029631b776a02ff5d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view_p_c.html#a27ecfb84029d42029631b776a02ff5d8">encrypt</a> (QByteArray data, QImage *image, int mode, int bitsUsed)</td></tr>
-<tr class="memdesc:a27ecfb84029d42029631b776a02ff5d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">encrypt Signal calling <a class="el" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::encrypt</a>  <a href="#a27ecfb84029d42029631b776a02ff5d8">More...</a><br/></td></tr>
+<tr class="memdesc:a27ecfb84029d42029631b776a02ff5d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">encrypt Signal calling <a class="el" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st...">ModelPC::encrypt</a>  <a href="#a27ecfb84029d42029631b776a02ff5d8">More...</a><br/></td></tr>
 <tr class="separator:a27ecfb84029d42029631b776a02ff5d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef365fa37c40972e1c1504de647fee12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view_p_c.html#aef365fa37c40972e1c1504de647fee12">decrypt</a> (QImage *_image, QString key)</td></tr>
-<tr class="memdesc:aef365fa37c40972e1c1504de647fee12"><td class="mdescLeft">&#160;</td><td class="mdescRight">decrypt Signal calling <a class="el" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>  <a href="#aef365fa37c40972e1c1504de647fee12">More...</a><br/></td></tr>
-<tr class="separator:aef365fa37c40972e1c1504de647fee12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a365df051360d557c7221474ad856e0af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view_p_c.html#a365df051360d557c7221474ad856e0af">decrypt</a> (QImage *_image, QString key, int mode)</td></tr>
+<tr class="memdesc:a365df051360d557c7221474ad856e0af"><td class="mdescLeft">&#160;</td><td class="mdescRight">decrypt Signal calling <a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>  <a href="#a365df051360d557c7221474ad856e0af">More...</a><br/></td></tr>
+<tr class="separator:a365df051360d557c7221474ad856e0af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa652102ce6b5757b8eef830409c8cabf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view_p_c.html#aa652102ce6b5757b8eef830409c8cabf">abortModel</a> ()</td></tr>
 <tr class="memdesc:aa652102ce6b5757b8eef830409c8cabf"><td class="mdescLeft">&#160;</td><td class="mdescRight">abortModel Signal calling to stop <a class="el" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. ">ModelPC::circuit</a>  <a href="#aa652102ce6b5757b8eef830409c8cabf">More...</a><br/></td></tr>
 <tr class="separator:aa652102ce6b5757b8eef830409c8cabf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -387,7 +387,7 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="aef365fa37c40972e1c1504de647fee12"></a>
+<a class="anchor" id="a365df051360d557c7221474ad856e0af"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -404,7 +404,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">QString&#160;</td>
-          <td class="paramname"><em>key</em>&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>mode</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -419,11 +425,11 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>decrypt Signal calling <a class="el" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> </p>
+<p>decrypt Signal calling <a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_image</td><td>Image for decryption </td></tr>
-    <tr><td class="paramname">key</td><td>encryption key </td></tr>
+    <tr><td class="paramname">key</td><td>encryption key // FIXME add param </td></tr>
   </table>
   </dd>
 </dl>
@@ -431,8 +437,8 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_view_p_c_aef365fa37c40972e1c1504de647fee12_icgraph.png" border="0" usemap="#class_view_p_c_aef365fa37c40972e1c1504de647fee12_icgraph" alt=""/></div>
-<map name="class_view_p_c_aef365fa37c40972e1c1504de647fee12_icgraph" id="class_view_p_c_aef365fa37c40972e1c1504de647fee12_icgraph">
+<div class="center"><img src="class_view_p_c_a365df051360d557c7221474ad856e0af_icgraph.png" border="0" usemap="#class_view_p_c_a365df051360d557c7221474ad856e0af_icgraph" alt=""/></div>
+<map name="class_view_p_c_a365df051360d557c7221474ad856e0af_icgraph" id="class_view_p_c_a365df051360d557c7221474ad856e0af_icgraph">
 <area shape="rect" id="node2" href="class_view_p_c.html#a456d75b7c5d3a089302a576e7359f1f4" title="ViewPC::on_startButton_clicked Slot to be called, when Start Button is pressed. " alt="" coords="176,5,339,46"/></map>
 </div>
 </p>
@@ -483,7 +489,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>encrypt Signal calling <a class="el" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::encrypt</a> </p>
+<p>encrypt Signal calling <a class="el" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st...">ModelPC::encrypt</a> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>Data to write </td></tr>
@@ -621,10 +627,10 @@ Here is the call graph for this function:</div>
 Encrypting</h1>
 <p>If Encrypting mode is active the data from text browser or from file from file selector will be opened and checked in size. </p>
 <dl class="section note"><dt>Note</dt><dd>File size limit is 16MB</dd></dl>
-<p>Then the <a class="el" href="class_encrypt_dialog.html" title="The EncryptDialog class Class to get the image and key to store secret info. ">EncryptDialog</a> opens and image and key is selected. Then the <a class="el" href="class_view_p_c.html#a27ecfb84029d42029631b776a02ff5d8" title="encrypt Signal calling ModelPC::encrypt ">ViewPC::encrypt</a> signal is called to start <a class="el" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::encrypt</a> </p>
+<p>Then the <a class="el" href="class_encrypt_dialog.html" title="The EncryptDialog class Class to get the image and key to store secret info. ">EncryptDialog</a> opens and image and key is selected. Then the <a class="el" href="class_view_p_c.html#a27ecfb84029d42029631b776a02ff5d8" title="encrypt Signal calling ModelPC::encrypt ">ViewPC::encrypt</a> signal is called to start <a class="el" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st...">ModelPC::encrypt</a> </p>
 <h1><a class="anchor" id="decrypting"></a>
 Decrypting</h1>
-<p>Else, the image from file selector is transmitted to <a class="el" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> </p>
+<p>Else, the image from file selector is transmitted to <a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> </p>
 
 <p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00069">69</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
 
@@ -739,7 +745,7 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::encrypt</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st...">ModelPC::encrypt</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00157">157</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
 
@@ -783,7 +789,7 @@ Here is the call graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00178">178</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
 
@@ -965,7 +971,7 @@ Here is the caller graph for this function:</div>
 <p>dialog ProgressDialog used. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_view_p_c.html#a9c32a1fdb6ead84e5ada8fba8860c7ed" title="ViewPC::setProgress Slot to set the value of the ProgressDialog (ViewPC::dialog). ...">ViewPC::setProgress</a>, ViewPC::cancel, <a class="el" href="class_model_p_c.html#afdcd80f0ed5062e145a71f09b0897547" title="setProgress Signal to be called to set progress of ProgressDialog. ">ModelPC::setProgress</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="viewpc_8h_source.html#l00100">100</a> of file <a class="el" href="viewpc_8h_source.html">viewpc.h</a>.</p>
+<p>Definition at line <a class="el" href="viewpc_8h_source.html#l00101">101</a> of file <a class="el" href="viewpc_8h_source.html">viewpc.h</a>.</p>
 
 </div>
 </div>
@@ -979,7 +985,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="viewpc_8h_source.html#l00106">106</a> of file <a class="el" href="viewpc_8h_source.html">viewpc.h</a>.</p>
+<p>Definition at line <a class="el" href="viewpc_8h_source.html#l00107">107</a> of file <a class="el" href="viewpc_8h_source.html">viewpc.h</a>.</p>
 
 </div>
 </div>
@@ -996,7 +1002,7 @@ Here is the caller graph for this function:</div>
 <p>progressDialogClosed Flag, if dialog is closed. </p>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_view_p_c.html#ad7ba2fcf1d17862de15e32432823f7b0" title="ViewPC::abortCircuit Slot to close ProgressDialog (ViewPC::dialog) ">ViewPC::abortCircuit</a>, <a class="el" href="class_view_p_c.html#a9c32a1fdb6ead84e5ada8fba8860c7ed" title="ViewPC::setProgress Slot to set the value of the ProgressDialog (ViewPC::dialog). ...">ViewPC::setProgress</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="viewpc_8h_source.html#l00105">105</a> of file <a class="el" href="viewpc_8h_source.html">viewpc.h</a>.</p>
+<p>Definition at line <a class="el" href="viewpc_8h_source.html#l00106">106</a> of file <a class="el" href="viewpc_8h_source.html">viewpc.h</a>.</p>
 
 </div>
 </div>

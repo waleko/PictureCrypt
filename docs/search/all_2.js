@@ -8,5 +8,5 @@ var searchData=
   ['controllerpc_2ecpp',['controllerpc.cpp',['../controllerpc_8cpp.html',1,'']]],
   ['controllerpc_2eh',['controllerpc.h',['../controllerpc_8h.html',1,'']]],
   ['crypt',['Crypt',['../class_q_a_e_s_encryption.html#a43819eeb6a7cb29fbd3cb6ad640dcbdf',1,'QAESEncryption']]],
-  ['curmode',['curMode',['../class_model_p_c.html#ad74974ac236182c1d6d2cf0729fac3dd',1,'ModelPC']]]
+  ['cryptmode',['CryptMode',['../class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceb',1,'ModelPC']]]
 ];

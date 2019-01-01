@@ -17,9 +17,10 @@ ControllerPC::ControllerPC()
 
     view->setVersion(model->versionString);
     view->show();
-    // Layer Connection
-    connect(view, SIGNAL(encrypt(QByteArray,QImage*,int, int)), model, SLOT(encrypt(QByteArray,QImage*,int, int)));
-    connect(view, SIGNAL(decrypt(QImage*, QString)), model, SLOT(decrypt(QImage*, QString)));
+
+    // Layers Connection
+    connect(view, SIGNAL(encrypt(QByteArray,QImage*,int, int)), model, SLOT(inject(QByteArray,QImage*, int, int)));
+    connect(view, SIGNAL(decrypt(QImage*,QString,int)), model, SLOT(decrypt(QImage*, QString, int)));
     connect(view, SIGNAL(abortModel()), this, SLOT(abortCircuit()));
     connect(view, SIGNAL(setJPHSDir(QString)), this, SLOT(setJPHSDir(QString)));
     connect(view, SIGNAL(runTests()), this, SLOT(runTests()));
@@ -42,6 +43,7 @@ void ControllerPC::abortCircuit()
  */
 void ControllerPC::runTests()
 {
+    // FIXME remove all of this mess and use QtTest
     bool res = TestPC::Test();
     QMessageBox o;
     o.setText(!res ? "Testing complete! All tests passed." : "Testing failed.");

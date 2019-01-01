@@ -18,9 +18,9 @@
 00030     \textcolor{comment}{// Error outputs}
 00031     QString error1, error2;
 00032     \textcolor{comment}{// Embedding}
-00033     QImage * retImage = model->\hyperlink{class_model_p_c_a3cae34fd5bcb06e8c1f8cfe7961bd270}{start}(data, &rImage, mode, key, bitsUsed, &error1);
+00033     QImage * retImage = model->\hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{encrypt}(data, &rImage, mode, key, bitsUsed, &error1);
 00034     \textcolor{comment}{// De-embedding}
-00035     QByteArray output = model->\hyperlink{class_model_p_c_a9458c3a1e369a64889d9a1f70e0c1d18}{decrypt}(retImage, key, &error2);
+00035     QByteArray output = model->\hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{decrypt}(retImage, key, mode, &error2);
 00036 
 00037     \textcolor{comment}{// Success of error outputs}
 00038     \textcolor{keywordtype}{bool} er1 = error1 == expectedOutput;

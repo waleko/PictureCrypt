@@ -32,9 +32,10 @@ class ModelPC : public QObject
     Q_OBJECT
 public:
     ModelPC();
-    static QImage *Start(QByteArray data, QImage *image, int mode = 0, QString key = "", int _bitsUsed = 8, QString *_error = nullptr);
-    static QImage *Encrypt(QByteArray encr_data, QImage * image, int mode = 0, int _bitsUsed = 8, QString *_error = nullptr);
-    static QByteArray Decrypt(QImage * image, QString key, QString *_error = nullptr);
+    enum CryptMode {NotDefined, v1_3, v1_4, jphs_mode};
+    static QImage *Encrypt(QByteArray data, QImage *image, int _mode, QString key = "", int _bitsUsed = 8, QString *_error = nullptr);
+    static QImage *Inject(QByteArray encr_data, QImage * image, int _mode, int _bitsUsed = 8, QString *_error = nullptr);
+    static QByteArray Decrypt(QImage * image, QString key, int _mode = 0, QString *_error = nullptr);
 
 signals:
     /*!
@@ -62,12 +63,15 @@ signals:
     void setProgress(int val);
 
 public slots:
-    QImage *start(QByteArray data, QImage *image, int mode = 0, QString key = "", int _bitsUsed = 8, QString *_error = nullptr);
-    QImage *encrypt(QByteArray encr_data, QImage * image, int mode = 0, int _bitsUsed = 8, QString *_error = nullptr);
-    QByteArray decrypt(QImage * image, QString key, QString *_error = nullptr);
+    QImage *encrypt(QByteArray data, QImage *image, int _mode, QString key = "", int _bitsUsed = 8, QString *_error = nullptr);
+    QImage *inject(QByteArray encr_data, QImage * image, int _mode, int _bitsUsed = 8, QString *_error = nullptr);
+    QByteArray decrypt(QImage * image, QString key, int _mode = 0, QString *_error = nullptr);
     void fail(QString message);
+    void alert(QString message, bool isWarning = false);
 
 public:
+    QByteArray unzip(QByteArray data, QByteArray key);
+
     /*!
      * \brief success Flag that true by default,
      * but in case of error or cancelling of ProgressDialog it turns to false, which stops execution of ModelPC::circuit
@@ -82,31 +86,24 @@ public:
      */
     QString versionString;
     /*!
-     * \brief curMode Mode of en- or decryption
-     */
-    int curMode;
-    /*!
-     * \brief bitsUsed Bits per byte used in pixel
-     */
-    int bitsUsed;
-    /*!
      * \brief defaultJPHSDir Default JPHS directory
      */
     QString defaultJPHSDir;
-    /*!
-     * \brief error Current error
-     */
-    QString * error;
-    QByteArray unzip(QByteArray data, QByteArray key);
-    void alert(QString message, bool isWarning = false);
-    // TODO add static functions: start, encrypt, decrypt.
 protected:
     void circuit(QImage * image, QByteArray * data, long long int countBytes);
     void jphs(QImage * image, QByteArray * data);
     void processPixel(QPoint pos, QVector<QPoint> *were, bool isEncrypt);
+    void encryptv1_4(QImage *image, QByteArray data, QString key);
+    QByteArray decryptv1_3(QImage * image, QString key);
+    QByteArray decryptv1_4(QImage * image, QString key);
     QByteArray zip(QByteArray data, QByteArray key);
-    void modernCircuit(QImage * image, QByteArray * data, long long int countBytes);
+
+    /*!
+     * \brief error Current error
+     */
+    QString * error;
 private:
+    int bitsUsed;
     bool fileExists(QString path);
     QByteArray bytes(long long n);
     unsigned int mod(int input);
@@ -119,7 +116,6 @@ private:
     QImage * circuitImage;
     long long circuitCountBytes;
     long cur;
-    QString mykey;
     bool mustGoOn(bool isEncrypt);
 
     QVector <bool> bitsBuffer;
@@ -127,6 +123,7 @@ private:
     void push(int data, int bits = -1);
 
     void setError(QString word);
+    QByteArray GetRandomBytes(long long count = 32);
 };
 
 #endif // MODELPC_H

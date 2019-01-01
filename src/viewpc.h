@@ -77,8 +77,9 @@ signals:
      * \brief decrypt Signal calling ModelPC::decrypt
      * \param _image Image for decryption
      * \param key encryption key
+     * // FIXME add param
      */
-    void decrypt(QImage * _image, QString key);
+    void decrypt(QImage * _image, QString key, int mode);
     /*!
      * \brief abortModel Signal calling to stop ModelPC::circuit
      */

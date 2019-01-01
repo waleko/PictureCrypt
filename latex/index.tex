@@ -1,5 +1,6 @@
-Project made using Q\-T Creator in C++\hypertarget{index_idea}{}\section{The idea of the project}\label{index_idea}
-The idea came to me, when I read an article about steganoraphy. I realised, that you can store data in an image in pixels near the border, so noone can see and even if they did, it is practically impossible to decipher the contents. \hypertarget{index_real}{}\section{Realisation}\label{index_real}
+Project made using Q\-T Creator in C++\hypertarget{index_about}{}\section{About}\label{index_about}
+A simple steganography project which hides data in images This project is built using M\-V\-C pattern and features G\-U\-I. \href{https://qt.io}{\tt Qt} and \href{https://github.com/bricke/Qt-AES}{\tt Q\-A\-E\-S\-Encryption} by \href{https://github.com/bricke}{\tt bricke} were used. \hypertarget{index_download}{}\section{Download}\label{index_download}
+Get the binary files at \href{https://github.com/waleko/PictureCrypt/releases/latest}{\tt latest release page} Or download latest {\bfseries U\-N\-S\-T\-A\-B\-L\-E} binary file for linux \href{https://github.com/waleko/PictureCrypt/raw/gh-pages/src/build/Release/PictureCrypt}{\tt here} \hypertarget{index_real}{}\section{Realisation}\label{index_real}
 To create the encrypted image, you need to select any file for encryption, then using \hyperlink{class_encrypt_dialog}{Encrypt\-Dialog} you select the image to store the data. Then output image is generated. \begin{DoxyAttention}{Attention}
 Output image format available is .P\-N\-G, because .jpg isn't lossless, so the pixels containing data would be seriously simplified and the data damaged. .B\-M\-P isn't used, because noone really uses it and .P\-N\-G is just compressed .B\-M\-P (more or less) 
 \end{DoxyAttention}
@@ -16,7 +17,7 @@ view = \textcolor{keyword}{new} \hyperlink{class_view_p_c}{ViewPC}();
 model = \textcolor{keyword}{new} \hyperlink{class_model_p_c}{ModelPC}(version);
 QThread * modelThread = \textcolor{keyword}{new} QThread();
 model->moveToThread(modelThread);
-modelThread->\hyperlink{class_model_p_c_a3cae34fd5bcb06e8c1f8cfe7961bd270}{start}();
+modelThread->start();
 \end{DoxyCode}
  So when Model is hard-\/working, View layer is just fine.
 
@@ -51,7 +52,7 @@ if(\hyperlink{class_test_p_c_adec99ddd8910d45b6aca0a105f44960e}{TestPC::Test}())
 \hyperlink{class_model_p_c}{ModelPC} * model = \textcolor{keyword}{new} \hyperlink{class_model_p_c}{ModelPC}();
 
 \textcolor{comment}{// Embedding}
-QImage * resultImage = model->\hyperlink{class_model_p_c_a3cae34fd5bcb06e8c1f8cfe7961bd270}{start}(QByteArray data, \textcolor{comment}{// Data to be embedded}
+QImage * resultImage = model->start(QByteArray data, \textcolor{comment}{// Data to be embedded}
                                     QImage *image, \textcolor{comment}{// Image for embedding}
                                     \textcolor{keywordtype}{int} mode = 0, \textcolor{comment}{// Mode of embedding}
                                     QString key = \textcolor{stringliteral}{""}, \textcolor{comment}{// Key for extra-encryption (if empty, key will be
@@ -66,7 +67,7 @@ QImage * resultImage = model->\hyperlink{class_model_p_c_a3cae34fd5bcb06e8c1f8cf
        github.}
 
 \textcolor{comment}{// De-embedding}
-QByteArray output = model->\hyperlink{class_model_p_c_a9458c3a1e369a64889d9a1f70e0c1d18}{decrypt}(QImage * image, \textcolor{comment}{// Image with hidden data}
+QByteArray output = model->\hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{decrypt}(QImage * image, \textcolor{comment}{// Image with hidden data}
                                    QString *\_error = \textcolor{keyword}{nullptr}); \textcolor{comment}{// Error output}
 \textcolor{keywordflow}{if}(data == output)
    qDebug() << \textcolor{stringliteral}{"Great success!"};
@@ -84,7 +85,7 @@ Everyone has the right to freedom of opinion and expression; this right includes
 \end{quotation}
 And I typed this link randomly, and I'm scared...
 \end{DoxyAttention}
-\hypertarget{index_lic}{}\section{License}\label{index_lic}
+\hypertarget{index_license}{}\section{License}\label{index_license}
 This software is provided under the \href{http://unlicense.org}{\tt U\-N\-L\-I\-C\-E\-N\-S\-E}\hypertarget{index_contact}{}\section{Contact us}\label{index_contact}
 Visit my site\-: \href{https://www.alexkovrigin.me}{\tt https\-://www.\-alexkovrigin.\-me}
 

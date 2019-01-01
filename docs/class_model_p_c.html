@@ -89,12 +89,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-slots">Public Slots</a> &#124;
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_model_p_c-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ModelPC Class Reference</div>  </div>
@@ -120,20 +122,32 @@ Collaboration diagram for ModelPC:</div>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:a296dd7afe3e1c49b3da25fd644fe4ceb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceb">CryptMode</a> { <a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba287198790ac9799acd03c99d63a6faea">NotDefined</a>, 
+<a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba7612e38de7178170655a56ddcf96e12c">v1_3</a>, 
+<a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba43138df6b33a6b2bf608768907f95abc">v1_4</a>, 
+<a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba90ca32d3ccbb6be224cdfc33f7096eea">jphs_mode</a>
+ }</td></tr>
+<tr class="separator:a296dd7afe3e1c49b3da25fd644fe4ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
 Public Slots</h2></td></tr>
-<tr class="memitem:a3cae34fd5bcb06e8c1f8cfe7961bd270"><td class="memItemLeft" align="right" valign="top">QImage *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a3cae34fd5bcb06e8c1f8cfe7961bd270">start</a> (QByteArray data, QImage *image, int mode=0, QString key=&quot;&quot;, int _bitsUsed=8, QString *_error=nullptr)</td></tr>
-<tr class="memdesc:a3cae34fd5bcb06e8c1f8cfe7961bd270"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#a3cae34fd5bcb06e8c1f8cfe7961bd270" title="ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff After completion sta...">ModelPC::start</a> Slot to zip and encrypt data and provide it with some extra stuff After completion start standard <a class="el" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::encrypt</a> Isn't used in PictureCrypt, but used can be used in other - custom projects.  <a href="#a3cae34fd5bcb06e8c1f8cfe7961bd270">More...</a><br/></td></tr>
-<tr class="separator:a3cae34fd5bcb06e8c1f8cfe7961bd270"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48667f5b1a547d03a3def2d3db5a220f"><td class="memItemLeft" align="right" valign="top">QImage *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f">encrypt</a> (QByteArray encr_data, QImage *image, int mode=0, int _bitsUsed=8, QString *_error=nullptr)</td></tr>
-<tr class="memdesc:a48667f5b1a547d03a3def2d3db5a220f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::encrypt</a> Slot to be called when encrypt mode in <a class="el" href="class_view_p_c.html" title="The ViewPC class View layer of the app. Controls EncryptDialog and ProgressDialog. ">ViewPC</a> is selected and started.  <a href="#a48667f5b1a547d03a3def2d3db5a220f">More...</a><br/></td></tr>
-<tr class="separator:a48667f5b1a547d03a3def2d3db5a220f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9458c3a1e369a64889d9a1f70e0c1d18"><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18">decrypt</a> (QImage *image, QString key, QString *_error=nullptr)</td></tr>
-<tr class="memdesc:a9458c3a1e369a64889d9a1f70e0c1d18"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> Slot to be called when decrypt mode in <a class="el" href="class_view_p_c.html" title="The ViewPC class View layer of the app. Controls EncryptDialog and ProgressDialog. ">ViewPC</a> is selected and started.  <a href="#a9458c3a1e369a64889d9a1f70e0c1d18">More...</a><br/></td></tr>
-<tr class="separator:a9458c3a1e369a64889d9a1f70e0c1d18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f191f62d4635d0d3555fcc0be298794"><td class="memItemLeft" align="right" valign="top">QImage *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794">encrypt</a> (QByteArray data, QImage *image, int _mode, QString key=&quot;&quot;, int _bitsUsed=8, QString *_error=nullptr)</td></tr>
+<tr class="memdesc:a6f191f62d4635d0d3555fcc0be298794"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st...">ModelPC::encrypt</a> Slot to zip and inject data and provide it with some extra stuff After completion start standard <a class="el" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::inject</a> Isn't used in PictureCrypt, but used can be used in other - custom projects.  <a href="#a6f191f62d4635d0d3555fcc0be298794">More...</a><br/></td></tr>
+<tr class="separator:a6f191f62d4635d0d3555fcc0be298794"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aada6a04d81ada8f2b4ba18108c8d6f10"><td class="memItemLeft" align="right" valign="top">QImage *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10">inject</a> (QByteArray encr_data, QImage *image, int _mode, int _bitsUsed=8, QString *_error=nullptr)</td></tr>
+<tr class="memdesc:aada6a04d81ada8f2b4ba18108c8d6f10"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::inject</a> Slot to be called when encrypt mode in <a class="el" href="class_view_p_c.html" title="The ViewPC class View layer of the app. Controls EncryptDialog and ProgressDialog. ">ViewPC</a> is selected and started.  <a href="#aada6a04d81ada8f2b4ba18108c8d6f10">More...</a><br/></td></tr>
+<tr class="separator:aada6a04d81ada8f2b4ba18108c8d6f10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5995215a34a1e1f504035715a8013809"><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809">decrypt</a> (QImage *image, QString key, int _mode=0, QString *_error=nullptr)</td></tr>
+<tr class="memdesc:a5995215a34a1e1f504035715a8013809"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> Slot to be called when decrypt mode in <a class="el" href="class_view_p_c.html" title="The ViewPC class View layer of the app. Controls EncryptDialog and ProgressDialog. ">ViewPC</a> is selected and started.  <a href="#a5995215a34a1e1f504035715a8013809">More...</a><br/></td></tr>
+<tr class="separator:a5995215a34a1e1f504035715a8013809"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47464b59b7e37fcee25e55475708aabd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd">fail</a> (QString message)</td></tr>
 <tr class="memdesc:a47464b59b7e37fcee25e55475708aabd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. ">ModelPC::fail</a> Slot to stop execution of cryption.  <a href="#a47464b59b7e37fcee25e55475708aabd">More...</a><br/></td></tr>
 <tr class="separator:a47464b59b7e37fcee25e55475708aabd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9079a101d83672aa48fd2dbac797de40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40">alert</a> (QString message, bool isWarning=false)</td></tr>
+<tr class="memdesc:a9079a101d83672aa48fd2dbac797de40"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. ">ModelPC::alert</a> Function emits signal <a class="el" href="class_model_p_c.html#af0217a7ca5671e26090dc50a5dccdaf5" title="alertView Signal to be called to create MessageBox. ">ModelPC::alertView</a> and calls <a class="el" href="class_view_p_c.html#a7c467169467789561078abc9d4fe57bd" title="ViewPC::alert Slot to create QMessageBox with message. ">ViewPC::alert</a>.  <a href="#a9079a101d83672aa48fd2dbac797de40">More...</a><br/></td></tr>
+<tr class="separator:a9079a101d83672aa48fd2dbac797de40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
@@ -141,10 +155,10 @@ Signals</h2></td></tr>
 <tr class="memdesc:af0217a7ca5671e26090dc50a5dccdaf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">alertView Signal to be called to create MessageBox.  <a href="#af0217a7ca5671e26090dc50a5dccdaf5">More...</a><br/></td></tr>
 <tr class="separator:af0217a7ca5671e26090dc50a5dccdaf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0855107fb0ccc247cd9e893fae9bb08a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a0855107fb0ccc247cd9e893fae9bb08a">saveData</a> (QByteArray data)</td></tr>
-<tr class="memdesc:a0855107fb0ccc247cd9e893fae9bb08a"><td class="mdescLeft">&#160;</td><td class="mdescRight">saveData Signal to be called to save data from <a class="el" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>.  <a href="#a0855107fb0ccc247cd9e893fae9bb08a">More...</a><br/></td></tr>
+<tr class="memdesc:a0855107fb0ccc247cd9e893fae9bb08a"><td class="mdescLeft">&#160;</td><td class="mdescRight">saveData Signal to be called to save data from <a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>.  <a href="#a0855107fb0ccc247cd9e893fae9bb08a">More...</a><br/></td></tr>
 <tr class="separator:a0855107fb0ccc247cd9e893fae9bb08a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41f5e2e8022679046e4d3fa1109025fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a41f5e2e8022679046e4d3fa1109025fa">saveImage</a> (QImage *image)</td></tr>
-<tr class="memdesc:a41f5e2e8022679046e4d3fa1109025fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">saveImage Signal to be called to save image from <a class="el" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::encrypt</a>.  <a href="#a41f5e2e8022679046e4d3fa1109025fa">More...</a><br/></td></tr>
+<tr class="memdesc:a41f5e2e8022679046e4d3fa1109025fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">saveImage Signal to be called to save image from <a class="el" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st...">ModelPC::encrypt</a>.  <a href="#a41f5e2e8022679046e4d3fa1109025fa">More...</a><br/></td></tr>
 <tr class="separator:a41f5e2e8022679046e4d3fa1109025fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdcd80f0ed5062e145a71f09b0897547"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#afdcd80f0ed5062e145a71f09b0897547">setProgress</a> (int val)</td></tr>
 <tr class="memdesc:afdcd80f0ed5062e145a71f09b0897547"><td class="mdescLeft">&#160;</td><td class="mdescRight">setProgress Signal to be called to set progress of ProgressDialog.  <a href="#afdcd80f0ed5062e145a71f09b0897547">More...</a><br/></td></tr>
@@ -156,20 +170,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae12ebe65ec973c02a0de4850a7c1e31c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#ae12ebe65ec973c02a0de4850a7c1e31c" title="ModelPC::ModelPC Constructor Unit tests are run here. ">ModelPC::ModelPC</a> Constructor Unit tests are run here.  <a href="#ae12ebe65ec973c02a0de4850a7c1e31c">More...</a><br/></td></tr>
 <tr class="separator:ae12ebe65ec973c02a0de4850a7c1e31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6da88f166785a49f73b22c169f956fd0"><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0">unzip</a> (QByteArray data, QByteArray key)</td></tr>
-<tr class="memdesc:a6da88f166785a49f73b22c169f956fd0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0" title="ModelPC::unzip Unzip data from ModelPC::decrypt. Just mirrored EncryptDialog::zip. ">ModelPC::unzip</a> Unzip data from <a class="el" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>. Just mirrored <a class="el" href="class_encrypt_dialog.html#a2bff820a3df4ddc36ecb07ed74b7138a" title="EncryptDialog::zip Zipping algorithm It copresses the data and then compresses it using qCompress() ...">EncryptDialog::zip</a>.  <a href="#a6da88f166785a49f73b22c169f956fd0">More...</a><br/></td></tr>
+<tr class="memdesc:a6da88f166785a49f73b22c169f956fd0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0" title="ModelPC::unzip Unzip data from ModelPC::decrypt. Just mirrored EncryptDialog::zip. ">ModelPC::unzip</a> Unzip data from <a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>. Just mirrored <a class="el" href="class_encrypt_dialog.html#a2bff820a3df4ddc36ecb07ed74b7138a" title="EncryptDialog::zip Zipping algorithm It copresses the data and then compresses it using qCompress() ...">EncryptDialog::zip</a>.  <a href="#a6da88f166785a49f73b22c169f956fd0">More...</a><br/></td></tr>
 <tr class="separator:a6da88f166785a49f73b22c169f956fd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9079a101d83672aa48fd2dbac797de40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40">alert</a> (QString message, bool isWarning=false)</td></tr>
-<tr class="memdesc:a9079a101d83672aa48fd2dbac797de40"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. ">ModelPC::alert</a> Function emits signal <a class="el" href="class_model_p_c.html#af0217a7ca5671e26090dc50a5dccdaf5" title="alertView Signal to be called to create MessageBox. ">ModelPC::alertView</a> and calls <a class="el" href="class_view_p_c.html#a7c467169467789561078abc9d4fe57bd" title="ViewPC::alert Slot to create QMessageBox with message. ">ViewPC::alert</a>.  <a href="#a9079a101d83672aa48fd2dbac797de40">More...</a><br/></td></tr>
-<tr class="separator:a9079a101d83672aa48fd2dbac797de40"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a77a3beaa87ab7d882215730c546a1c91"><td class="memItemLeft" align="right" valign="top">static QImage *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a77a3beaa87ab7d882215730c546a1c91">Start</a> (QByteArray data, QImage *image, int mode=0, QString key=&quot;&quot;, int _bitsUsed=8, QString *_error=nullptr)</td></tr>
-<tr class="separator:a77a3beaa87ab7d882215730c546a1c91"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a132a399bf401a97106c2368e6e9e8792"><td class="memItemLeft" align="right" valign="top">static QImage *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a132a399bf401a97106c2368e6e9e8792">Encrypt</a> (QByteArray encr_data, QImage *image, int mode=0, int _bitsUsed=8, QString *_error=nullptr)</td></tr>
-<tr class="separator:a132a399bf401a97106c2368e6e9e8792"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac245b9b6d618f421c0ccfa66d97ac905"><td class="memItemLeft" align="right" valign="top">static QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#ac245b9b6d618f421c0ccfa66d97ac905">Decrypt</a> (QImage *image, QString key, QString *_error=nullptr)</td></tr>
-<tr class="separator:ac245b9b6d618f421c0ccfa66d97ac905"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a271cf9285e32df58ffbfc918e6482bbd"><td class="memItemLeft" align="right" valign="top">static QImage *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a271cf9285e32df58ffbfc918e6482bbd">Encrypt</a> (QByteArray data, QImage *image, int _mode, QString key=&quot;&quot;, int _bitsUsed=8, QString *_error=nullptr)</td></tr>
+<tr class="separator:a271cf9285e32df58ffbfc918e6482bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac17e68e6aab134621b0d151d74acdc82"><td class="memItemLeft" align="right" valign="top">static QImage *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#ac17e68e6aab134621b0d151d74acdc82">Inject</a> (QByteArray encr_data, QImage *image, int _mode, int _bitsUsed=8, QString *_error=nullptr)</td></tr>
+<tr class="separator:ac17e68e6aab134621b0d151d74acdc82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a902abaea4f07995b48c0f2fea6eceb7c"><td class="memItemLeft" align="right" valign="top">static QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a902abaea4f07995b48c0f2fea6eceb7c">Decrypt</a> (QImage *image, QString key, int _mode=0, QString *_error=nullptr)</td></tr>
+<tr class="separator:a902abaea4f07995b48c0f2fea6eceb7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -182,18 +193,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a5f426725ccf7eefd3c77ea8c720264c9"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a5f426725ccf7eefd3c77ea8c720264c9">versionString</a></td></tr>
 <tr class="memdesc:a5f426725ccf7eefd3c77ea8c720264c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">versionString Version as string  <a href="#a5f426725ccf7eefd3c77ea8c720264c9">More...</a><br/></td></tr>
 <tr class="separator:a5f426725ccf7eefd3c77ea8c720264c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad74974ac236182c1d6d2cf0729fac3dd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#ad74974ac236182c1d6d2cf0729fac3dd">curMode</a></td></tr>
-<tr class="memdesc:ad74974ac236182c1d6d2cf0729fac3dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">curMode Mode of en- or decryption  <a href="#ad74974ac236182c1d6d2cf0729fac3dd">More...</a><br/></td></tr>
-<tr class="separator:ad74974ac236182c1d6d2cf0729fac3dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a655deb6a8afa94c7f4aadb3056989038"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a655deb6a8afa94c7f4aadb3056989038">bitsUsed</a></td></tr>
-<tr class="memdesc:a655deb6a8afa94c7f4aadb3056989038"><td class="mdescLeft">&#160;</td><td class="mdescRight">bitsUsed Bits per byte used in pixel  <a href="#a655deb6a8afa94c7f4aadb3056989038">More...</a><br/></td></tr>
-<tr class="separator:a655deb6a8afa94c7f4aadb3056989038"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd038306f14f22fb885a1697c96d6335"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#abd038306f14f22fb885a1697c96d6335">defaultJPHSDir</a></td></tr>
 <tr class="memdesc:abd038306f14f22fb885a1697c96d6335"><td class="mdescLeft">&#160;</td><td class="mdescRight">defaultJPHSDir Default JPHS directory  <a href="#abd038306f14f22fb885a1697c96d6335">More...</a><br/></td></tr>
 <tr class="separator:abd038306f14f22fb885a1697c96d6335"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e5a9c0ca1f06fe5bc478b6bf248c37c"><td class="memItemLeft" align="right" valign="top">QString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a4e5a9c0ca1f06fe5bc478b6bf248c37c">error</a></td></tr>
-<tr class="memdesc:a4e5a9c0ca1f06fe5bc478b6bf248c37c"><td class="mdescLeft">&#160;</td><td class="mdescRight">error Current error  <a href="#a4e5a9c0ca1f06fe5bc478b6bf248c37c">More...</a><br/></td></tr>
-<tr class="separator:a4e5a9c0ca1f06fe5bc478b6bf248c37c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -206,11 +208,24 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a1171f9fe1550133dc9053a46b4e5bcfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd">processPixel</a> (QPoint pos, QVector&lt; QPoint &gt; *were, bool isEncrypt)</td></tr>
 <tr class="memdesc:a1171f9fe1550133dc9053a46b4e5bcfd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. ">ModelPC::processPixel</a> Processes every pixel. Reads its contains or writes data.  <a href="#a1171f9fe1550133dc9053a46b4e5bcfd">More...</a><br/></td></tr>
 <tr class="separator:a1171f9fe1550133dc9053a46b4e5bcfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4daefc3fb87a1f19172b9b20c987eb12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a4daefc3fb87a1f19172b9b20c987eb12">encryptv1_4</a> (QImage *image, QByteArray data, QString key)</td></tr>
+<tr class="memdesc:a4daefc3fb87a1f19172b9b20c987eb12"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#a4daefc3fb87a1f19172b9b20c987eb12" title="ModelPC::encryptv1_4 Encrypts and injects data to image used in v1.4+. ">ModelPC::encryptv1_4</a> Encrypts and injects data to image used in v1.4+.  <a href="#a4daefc3fb87a1f19172b9b20c987eb12">More...</a><br/></td></tr>
+<tr class="separator:a4daefc3fb87a1f19172b9b20c987eb12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fe70ebbedfaf31d45a35f82d0f06caa"><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa">decryptv1_3</a> (QImage *image, QString key)</td></tr>
+<tr class="memdesc:a4fe70ebbedfaf31d45a35f82d0f06caa"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. ">ModelPC::decryptv1_3</a> Decrytps data from image in v1.3.  <a href="#a4fe70ebbedfaf31d45a35f82d0f06caa">More...</a><br/></td></tr>
+<tr class="separator:a4fe70ebbedfaf31d45a35f82d0f06caa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a1f7d491e1bde16936190b9e90896b0"><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a7a1f7d491e1bde16936190b9e90896b0">decryptv1_4</a> (QImage *image, QString key)</td></tr>
+<tr class="memdesc:a7a1f7d491e1bde16936190b9e90896b0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#a7a1f7d491e1bde16936190b9e90896b0" title="ModelPC::decryptv1_4 Decrypts data from image in v1.4+. ">ModelPC::decryptv1_4</a> Decrypts data from image in v1.4+.  <a href="#a7a1f7d491e1bde16936190b9e90896b0">More...</a><br/></td></tr>
+<tr class="separator:a7a1f7d491e1bde16936190b9e90896b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afebbbfa4b07deba4f68fc6dfb50f353f"><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#afebbbfa4b07deba4f68fc6dfb50f353f">zip</a> (QByteArray data, QByteArray key)</td></tr>
 <tr class="memdesc:afebbbfa4b07deba4f68fc6dfb50f353f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#afebbbfa4b07deba4f68fc6dfb50f353f" title="ModelPC::zip Zip function, copy of EncryptDialog::zip Used for ModelPC in custom projects, other than PictureCrypt. ">ModelPC::zip</a> Zip function, copy of <a class="el" href="class_encrypt_dialog.html#a2bff820a3df4ddc36ecb07ed74b7138a" title="EncryptDialog::zip Zipping algorithm It copresses the data and then compresses it using qCompress() ...">EncryptDialog::zip</a> Used for <a class="el" href="class_model_p_c.html" title="The ModelPC class Model Layer of the app. Main class that does the work of PictureCrypt logic Control...">ModelPC</a> in custom projects, other than PictureCrypt.  <a href="#afebbbfa4b07deba4f68fc6dfb50f353f">More...</a><br/></td></tr>
 <tr class="separator:afebbbfa4b07deba4f68fc6dfb50f353f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a670c3a08360555282adfd3740b2debac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a670c3a08360555282adfd3740b2debac">modernCircuit</a> (QImage *image, QByteArray *data, long long int countBytes)</td></tr>
-<tr class="separator:a670c3a08360555282adfd3740b2debac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a4e5a9c0ca1f06fe5bc478b6bf248c37c"><td class="memItemLeft" align="right" valign="top">QString *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a4e5a9c0ca1f06fe5bc478b6bf248c37c">error</a></td></tr>
+<tr class="memdesc:a4e5a9c0ca1f06fe5bc478b6bf248c37c"><td class="mdescLeft">&#160;</td><td class="mdescRight">error Current error  <a href="#a4e5a9c0ca1f06fe5bc478b6bf248c37c">More...</a><br/></td></tr>
+<tr class="separator:a4e5a9c0ca1f06fe5bc478b6bf248c37c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The <a class="el" href="class_model_p_c.html" title="The ModelPC class Model Layer of the app. Main class that does the work of PictureCrypt logic Control...">ModelPC</a> class Model Layer of the app. Main class that does the work of PictureCrypt logic Controled by <a class="el" href="class_controller_p_c.html" title="The ControllerPC class Controller class, which controls View and Model layers. ">ControllerPC</a>. </p>
@@ -218,7 +233,32 @@ Protected Member Functions</h2></td></tr>
 <dl class="section author"><dt>Author</dt><dd>Alex Kovrigin (waleko) </dd></dl>
 
 <p>Definition at line <a class="el" href="modelpc_8h_source.html#l00030">30</a> of file <a class="el" href="modelpc_8h_source.html">modelpc.h</a>.</p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Enumeration Documentation</h2>
+<a class="anchor" id="a296dd7afe3e1c49b3da25fd644fe4ceb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceb">ModelPC::CryptMode</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><em><a class="anchor" id="a296dd7afe3e1c49b3da25fd644fe4ceba287198790ac9799acd03c99d63a6faea"></a>NotDefined</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a296dd7afe3e1c49b3da25fd644fe4ceba7612e38de7178170655a56ddcf96e12c"></a>v1_3</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a296dd7afe3e1c49b3da25fd644fe4ceba43138df6b33a6b2bf608768907f95abc"></a>v1_4</em>&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><em><a class="anchor" id="a296dd7afe3e1c49b3da25fd644fe4ceba90ca32d3ccbb6be224cdfc33f7096eea"></a>jphs_mode</em>&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+<p>Definition at line <a class="el" href="modelpc_8h_source.html#l00035">35</a> of file <a class="el" href="modelpc_8h_source.html">modelpc.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ae12ebe65ec973c02a0de4850a7c1e31c"></a>
 <div class="memitem">
 <div class="memproto">
@@ -238,20 +278,11 @@ Protected Member Functions</h2></td></tr>
 <p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00009">9</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
 
 <p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c_cgraph.png" border="0" usemap="#class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c_cgraph" alt=""/></div>
-<map name="class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c_cgraph" id="class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c_cgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#a670c3a08360555282adfd3740b2debac" title="ModelPC::modernCircuit" alt="" coords="192,5,357,32"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c_icgraph.png" border="0" usemap="#class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c_icgraph" alt=""/></div>
 <map name="class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c_icgraph" id="class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c_icgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#a77a3beaa87ab7d882215730c546a1c91" title="ModelPC::Start" alt="" coords="201,5,313,32"/><area shape="rect" id="node3" href="class_model_p_c.html#a132a399bf401a97106c2368e6e9e8792" title="ModelPC::Encrypt" alt="" coords="193,56,322,83"/><area shape="rect" id="node4" href="class_model_p_c.html#ac245b9b6d618f421c0ccfa66d97ac905" title="ModelPC::Decrypt" alt="" coords="192,107,323,133"/></map>
+<area shape="rect" id="node2" href="class_model_p_c.html#a271cf9285e32df58ffbfc918e6482bbd" title="ModelPC::Encrypt" alt="" coords="193,5,322,32"/><area shape="rect" id="node3" href="class_model_p_c.html#ac17e68e6aab134621b0d151d74acdc82" title="ModelPC::Inject" alt="" coords="199,56,315,83"/><area shape="rect" id="node4" href="class_model_p_c.html#a902abaea4f07995b48c0f2fea6eceb7c" title="ModelPC::Decrypt" alt="" coords="192,107,323,133"/></map>
 </div>
 </p>
 
@@ -261,6 +292,9 @@ Here is the caller graph for this function:</div>
 <a class="anchor" id="a9079a101d83672aa48fd2dbac797de40"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void ModelPC::alert </td>
@@ -280,6 +314,11 @@ Here is the caller graph for this function:</div>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p><a class="el" href="class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. ">ModelPC::alert</a> Function emits signal <a class="el" href="class_model_p_c.html#af0217a7ca5671e26090dc50a5dccdaf5" title="alertView Signal to be called to create MessageBox. ">ModelPC::alertView</a> and calls <a class="el" href="class_view_p_c.html#a7c467169467789561078abc9d4fe57bd" title="ViewPC::alert Slot to create QMessageBox with message. ">ViewPC::alert</a>. </p>
@@ -292,14 +331,14 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_view_p_c.html#a7c467169467789561078abc9d4fe57bd" title="ViewPC::alert Slot to create QMessageBox with message. ">ViewPC::alert</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00636">636</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00703">703</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model_p_c_a9079a101d83672aa48fd2dbac797de40_icgraph.png" border="0" usemap="#class_model_p_c_a9079a101d83672aa48fd2dbac797de40_icgraph" alt=""/></div>
 <map name="class_model_p_c_a9079a101d83672aa48fd2dbac797de40_icgraph" id="class_model_p_c_a9079a101d83672aa48fd2dbac797de40_icgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="163,84,264,111"/><area shape="rect" id="node3" href="class_model_p_c.html#a3cae34fd5bcb06e8c1f8cfe7961bd270" title="ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff After completion sta..." alt="" coords="865,59,975,85"/><area shape="rect" id="node6" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="689,59,815,85"/><area shape="rect" id="node7" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="689,109,815,136"/><area shape="rect" id="node8" href="class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="526,59,634,85"/><area shape="rect" id="node9" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="521,109,639,136"/><area shape="rect" id="node10" href="class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="313,160,471,187"/><area shape="rect" id="node4" href="class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" title="ControllerPC::ControllerPC Constructor of controller Constructor runs auto&#45;test for ModelPC..." alt="" coords="1025,59,1205,85"/><area shape="rect" id="node5" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="1066,109,1163,136"/></map>
+<area shape="rect" id="node2" href="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="163,121,264,148"/><area shape="rect" id="node3" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="891,70,1018,97"/><area shape="rect" id="node5" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="708,70,823,97"/><area shape="rect" id="node6" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="891,172,1018,198"/><area shape="rect" id="node7" href="class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="526,70,634,97"/><area shape="rect" id="node8" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="521,121,639,148"/><area shape="rect" id="node9" href="class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="688,172,843,198"/><area shape="rect" id="node10" href="class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="313,121,471,148"/><area shape="rect" id="node4" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="1067,121,1165,148"/></map>
 </div>
 </p>
 
@@ -352,7 +391,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model_p_c_af0217a7ca5671e26090dc50a5dccdaf5_icgraph.png" border="0" usemap="#class_model_p_c_af0217a7ca5671e26090dc50a5dccdaf5_icgraph" alt=""/></div>
 <map name="class_model_p_c_af0217a7ca5671e26090dc50a5dccdaf5_icgraph" id="class_model_p_c_af0217a7ca5671e26090dc50a5dccdaf5_icgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. " alt="" coords="192,84,301,111"/><area shape="rect" id="node3" href="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="349,84,451,111"/><area shape="rect" id="node4" href="class_model_p_c.html#a3cae34fd5bcb06e8c1f8cfe7961bd270" title="ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff After completion sta..." alt="" coords="1051,59,1162,85"/><area shape="rect" id="node7" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="875,59,1002,85"/><area shape="rect" id="node8" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="875,109,1002,136"/><area shape="rect" id="node9" href="class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="713,59,821,85"/><area shape="rect" id="node10" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="707,109,826,136"/><area shape="rect" id="node11" href="class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="499,160,658,187"/><area shape="rect" id="node5" href="class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" title="ControllerPC::ControllerPC Constructor of controller Constructor runs auto&#45;test for ModelPC..." alt="" coords="1211,59,1391,85"/><area shape="rect" id="node6" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="1253,109,1350,136"/></map>
+<area shape="rect" id="node2" href="class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. " alt="" coords="192,121,301,148"/><area shape="rect" id="node3" href="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="349,121,451,148"/><area shape="rect" id="node4" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="1078,70,1205,97"/><area shape="rect" id="node6" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="895,70,1009,97"/><area shape="rect" id="node7" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="1078,172,1205,198"/><area shape="rect" id="node8" href="class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="713,70,821,97"/><area shape="rect" id="node9" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="707,121,826,148"/><area shape="rect" id="node10" href="class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="875,172,1029,198"/><area shape="rect" id="node11" href="class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="499,121,658,148"/><area shape="rect" id="node5" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="1254,121,1351,148"/></map>
 </div>
 </p>
 
@@ -408,7 +447,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. ">ModelPC::processPixel</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00324">324</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00308">308</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -424,13 +463,13 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model_p_c_a1d0091062a0c836b283ec2f67411623b_icgraph.png" border="0" usemap="#class_model_p_c_a1d0091062a0c836b283ec2f67411623b_icgraph" alt=""/></div>
 <map name="class_model_p_c_a1d0091062a0c836b283ec2f67411623b_icgraph" id="class_model_p_c_a1d0091062a0c836b283ec2f67411623b_icgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="174,5,301,32"/><area shape="rect" id="node6" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="350,56,477,83"/><area shape="rect" id="node3" href="class_model_p_c.html#a3cae34fd5bcb06e8c1f8cfe7961bd270" title="ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff After completion sta..." alt="" coords="358,5,469,32"/><area shape="rect" id="node4" href="class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" title="ControllerPC::ControllerPC Constructor of controller Constructor runs auto&#45;test for ModelPC..." alt="" coords="526,5,706,32"/><area shape="rect" id="node5" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="567,56,665,83"/></map>
+<area shape="rect" id="node2" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="193,5,308,32"/><area shape="rect" id="node5" href="class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="173,56,328,83"/><area shape="rect" id="node3" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="377,5,503,32"/><area shape="rect" id="node4" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="553,31,650,57"/><area shape="rect" id="node6" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="377,56,503,83"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="ac245b9b6d618f421c0ccfa66d97ac905"></a>
+<a class="anchor" id="a902abaea4f07995b48c0f2fea6eceb7c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -452,6 +491,12 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_mode</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">QString *&#160;</td>
           <td class="paramname"><em>_error</em> = <code>nullptr</code>&#160;</td>
         </tr>
@@ -468,20 +513,20 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00036">36</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00034">34</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_model_p_c_ac245b9b6d618f421c0ccfa66d97ac905_cgraph.png" border="0" usemap="#class_model_p_c_ac245b9b6d618f421c0ccfa66d97ac905_cgraph" alt=""/></div>
-<map name="class_model_p_c_ac245b9b6d618f421c0ccfa66d97ac905_cgraph" id="class_model_p_c_ac245b9b6d618f421c0ccfa66d97ac905_cgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#ae12ebe65ec973c02a0de4850a7c1e31c" title="ModelPC::ModelPC Constructor Unit tests are run here. " alt="" coords="184,5,323,32"/><area shape="rect" id="node3" href="class_model_p_c.html#a670c3a08360555282adfd3740b2debac" title="ModelPC::modernCircuit" alt="" coords="371,5,536,32"/></map>
+<div class="center"><img src="class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c_cgraph.png" border="0" usemap="#class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c_cgraph" alt=""/></div>
+<map name="class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c_cgraph" id="class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c_cgraph">
+<area shape="rect" id="node2" href="class_model_p_c.html#ae12ebe65ec973c02a0de4850a7c1e31c" title="ModelPC::ModelPC Constructor Unit tests are run here. " alt="" coords="184,5,323,32"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a9458c3a1e369a64889d9a1f70e0c1d18"></a>
+<a class="anchor" id="a5995215a34a1e1f504035715a8013809"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -503,6 +548,12 @@ Here is the call graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_mode</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">QString *&#160;</td>
           <td class="paramname"><em>_error</em> = <code>nullptr</code>&#160;</td>
         </tr>
@@ -519,41 +570,161 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> Slot to be called when decrypt mode in <a class="el" href="class_view_p_c.html" title="The ViewPC class View layer of the app. Controls EncryptDialog and ProgressDialog. ">ViewPC</a> is selected and started. </p>
+<p><a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> Slot to be called when decrypt mode in <a class="el" href="class_view_p_c.html" title="The ViewPC class View layer of the app. Controls EncryptDialog and ProgressDialog. ">ViewPC</a> is selected and started. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">image</td><td>Image to be decrypted. </td></tr>
-    <tr><td class="paramname">key</td><td>Keyphrase with which the data is encrypted </td></tr>
+    <tr><td class="paramname">key</td><td>Keyphrase with which the data is injected </td></tr>
+    <tr><td class="paramname">_mode</td><td>Mode for decryption </td></tr>
     <tr><td class="paramname">_error</td><td>Error output </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns decrypted data </dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_view_p_c.html#a456d75b7c5d3a089302a576e7359f1f4" title="ViewPC::on_startButton_clicked Slot to be called, when Start Button is pressed. ">ViewPC::on_startButton_clicked</a>, <a class="el" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::encrypt</a>, <a class="el" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. ">ModelPC::circuit</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_view_p_c.html#a456d75b7c5d3a089302a576e7359f1f4" title="ViewPC::on_startButton_clicked Slot to be called, when Start Button is pressed. ">ViewPC::on_startButton_clicked</a>, <a class="el" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::inject</a>, <a class="el" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. ">ModelPC::circuit</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00169">169</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00195">195</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_model_p_c_a9458c3a1e369a64889d9a1f70e0c1d18_cgraph.png" border="0" usemap="#class_model_p_c_a9458c3a1e369a64889d9a1f70e0c1d18_cgraph" alt=""/></div>
-<map name="class_model_p_c_a9458c3a1e369a64889d9a1f70e0c1d18_cgraph" id="class_model_p_c_a9458c3a1e369a64889d9a1f70e0c1d18_cgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="615,13,716,39"/><area shape="rect" id="node4" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="182,26,301,53"/><area shape="rect" id="node6" href="class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0" title="ModelPC::unzip Unzip data from ModelPC::decrypt. Just mirrored EncryptDialog::zip. " alt="" coords="184,102,299,129"/><area shape="rect" id="node3" href="class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. " alt="" coords="811,13,920,39"/><area shape="rect" id="node5" href="class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="355,63,514,90"/><area shape="rect" id="node7" href="class_q_a_e_s_encryption.html#a58f972f2b66c2454edd5112495463bba" title="decode Decodes data with AES " alt="" coords="349,114,520,141"/><area shape="rect" id="node8" href="class_q_a_e_s_encryption.html#a5bfbb972f84a8376fceed648553c0912" title="ExpandKey Expands the key. " alt="" coords="568,114,763,141"/></map>
+<div class="center"><img src="class_model_p_c_a5995215a34a1e1f504035715a8013809_cgraph.png" border="0" usemap="#class_model_p_c_a5995215a34a1e1f504035715a8013809_cgraph" alt=""/></div>
+<map name="class_model_p_c_a5995215a34a1e1f504035715a8013809_cgraph" id="class_model_p_c_a5995215a34a1e1f504035715a8013809_cgraph">
+<area shape="rect" id="node2" href="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="817,25,919,52"/><area shape="rect" id="node4" href="class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="181,25,336,52"/><area shape="rect" id="node10" href="class_model_p_c.html#a7a1f7d491e1bde16936190b9e90896b0" title="ModelPC::decryptv1_4 Decrypts data from image in v1.4+. " alt="" coords="181,76,336,102"/><area shape="rect" id="node3" href="class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. " alt="" coords="1013,25,1123,52"/><area shape="rect" id="node5" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="385,50,503,77"/><area shape="rect" id="node7" href="class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0" title="ModelPC::unzip Unzip data from ModelPC::decrypt. Just mirrored EncryptDialog::zip. " alt="" coords="387,126,501,153"/><area shape="rect" id="node6" href="class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="558,101,717,128"/><area shape="rect" id="node8" href="class_q_a_e_s_encryption.html#a58f972f2b66c2454edd5112495463bba" title="decode Decodes data with AES " alt="" coords="552,152,723,178"/><area shape="rect" id="node9" href="class_q_a_e_s_encryption.html#a5bfbb972f84a8376fceed648553c0912" title="ExpandKey Expands the key. " alt="" coords="771,152,965,178"/></map>
 </div>
 </p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_model_p_c_a9458c3a1e369a64889d9a1f70e0c1d18_icgraph.png" border="0" usemap="#class_model_p_c_a9458c3a1e369a64889d9a1f70e0c1d18_icgraph" alt=""/></div>
-<map name="class_model_p_c_a9458c3a1e369a64889d9a1f70e0c1d18_icgraph" id="class_model_p_c_a9458c3a1e369a64889d9a1f70e0c1d18_icgraph">
+<div class="center"><img src="class_model_p_c_a5995215a34a1e1f504035715a8013809_icgraph.png" border="0" usemap="#class_model_p_c_a5995215a34a1e1f504035715a8013809_icgraph" alt=""/></div>
+<map name="class_model_p_c_a5995215a34a1e1f504035715a8013809_icgraph" id="class_model_p_c_a5995215a34a1e1f504035715a8013809_icgraph">
 <area shape="rect" id="node2" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="182,5,279,32"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a132a399bf401a97106c2368e6e9e8792"></a>
+<a class="anchor" id="a4fe70ebbedfaf31d45a35f82d0f06caa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray ModelPC::decryptv1_3 </td>
+          <td>(</td>
+          <td class="paramtype">QImage *&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. ">ModelPC::decryptv1_3</a> Decrytps data from image in v1.3. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>Image with data </td></tr>
+    <tr><td class="paramname">key</td><td>Key </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns obtained data </dd></dl>
+
+<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00535">535</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_model_p_c_a4fe70ebbedfaf31d45a35f82d0f06caa_cgraph.png" border="0" usemap="#class_model_p_c_a4fe70ebbedfaf31d45a35f82d0f06caa_cgraph" alt=""/></div>
+<map name="class_model_p_c_a4fe70ebbedfaf31d45a35f82d0f06caa_cgraph" id="class_model_p_c_a4fe70ebbedfaf31d45a35f82d0f06caa_cgraph">
+<area shape="rect" id="node2" href="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="641,12,743,38"/><area shape="rect" id="node4" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="209,25,327,52"/><area shape="rect" id="node6" href="class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0" title="ModelPC::unzip Unzip data from ModelPC::decrypt. Just mirrored EncryptDialog::zip. " alt="" coords="211,101,325,128"/><area shape="rect" id="node3" href="class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. " alt="" coords="837,12,947,38"/><area shape="rect" id="node5" href="class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="382,62,541,89"/><area shape="rect" id="node7" href="class_q_a_e_s_encryption.html#a58f972f2b66c2454edd5112495463bba" title="decode Decodes data with AES " alt="" coords="376,113,547,140"/><area shape="rect" id="node8" href="class_q_a_e_s_encryption.html#a5bfbb972f84a8376fceed648553c0912" title="ExpandKey Expands the key. " alt="" coords="595,113,789,140"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_model_p_c_a4fe70ebbedfaf31d45a35f82d0f06caa_icgraph.png" border="0" usemap="#class_model_p_c_a4fe70ebbedfaf31d45a35f82d0f06caa_icgraph" alt=""/></div>
+<map name="class_model_p_c_a4fe70ebbedfaf31d45a35f82d0f06caa_icgraph" id="class_model_p_c_a4fe70ebbedfaf31d45a35f82d0f06caa_icgraph">
+<area shape="rect" id="node2" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="209,5,335,32"/><area shape="rect" id="node3" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="385,5,482,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a7a1f7d491e1bde16936190b9e90896b0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray ModelPC::decryptv1_4 </td>
+          <td>(</td>
+          <td class="paramtype">QImage *&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_model_p_c.html#a7a1f7d491e1bde16936190b9e90896b0" title="ModelPC::decryptv1_4 Decrypts data from image in v1.4+. ">ModelPC::decryptv1_4</a> Decrypts data from image in v1.4+. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>Image with data </td></tr>
+    <tr><td class="paramname">key</td><td>Key </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns obtained data </dd></dl>
+
+<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00524">524</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_model_p_c_a7a1f7d491e1bde16936190b9e90896b0_icgraph.png" border="0" usemap="#class_model_p_c_a7a1f7d491e1bde16936190b9e90896b0_icgraph" alt=""/></div>
+<map name="class_model_p_c_a7a1f7d491e1bde16936190b9e90896b0_icgraph" id="class_model_p_c_a7a1f7d491e1bde16936190b9e90896b0_icgraph">
+<area shape="rect" id="node2" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="209,5,335,32"/><area shape="rect" id="node3" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="385,5,482,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a271cf9285e32df58ffbfc918e6482bbd"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -564,7 +735,7 @@ Here is the caller graph for this function:</div>
           <td class="memname">QImage * ModelPC::Encrypt </td>
           <td>(</td>
           <td class="paramtype">QByteArray&#160;</td>
-          <td class="paramname"><em>encr_data</em>, </td>
+          <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -576,7 +747,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>mode</em> = <code>0</code>, </td>
+          <td class="paramname"><em>_mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em> = <code>&quot;&quot;</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -603,20 +780,20 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00031">31</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00024">24</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_model_p_c_a132a399bf401a97106c2368e6e9e8792_cgraph.png" border="0" usemap="#class_model_p_c_a132a399bf401a97106c2368e6e9e8792_cgraph" alt=""/></div>
-<map name="class_model_p_c_a132a399bf401a97106c2368e6e9e8792_cgraph" id="class_model_p_c_a132a399bf401a97106c2368e6e9e8792_cgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#ae12ebe65ec973c02a0de4850a7c1e31c" title="ModelPC::ModelPC Constructor Unit tests are run here. " alt="" coords="184,5,323,32"/><area shape="rect" id="node3" href="class_model_p_c.html#a670c3a08360555282adfd3740b2debac" title="ModelPC::modernCircuit" alt="" coords="371,5,536,32"/></map>
+<div class="center"><img src="class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd_cgraph.png" border="0" usemap="#class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd_cgraph" alt=""/></div>
+<map name="class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd_cgraph" id="class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd_cgraph">
+<area shape="rect" id="node2" href="class_model_p_c.html#ae12ebe65ec973c02a0de4850a7c1e31c" title="ModelPC::ModelPC Constructor Unit tests are run here. " alt="" coords="184,5,323,32"/></map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a48667f5b1a547d03a3def2d3db5a220f"></a>
+<a class="anchor" id="a6f191f62d4635d0d3555fcc0be298794"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -627,7 +804,7 @@ Here is the call graph for this function:</div>
           <td class="memname">QImage * ModelPC::encrypt </td>
           <td>(</td>
           <td class="paramtype">QByteArray&#160;</td>
-          <td class="paramname"><em>encr_data</em>, </td>
+          <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -639,7 +816,13 @@ Here is the call graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>mode</em> = <code>0</code>, </td>
+          <td class="paramname"><em>_mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em> = <code>&quot;&quot;</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -666,37 +849,107 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::encrypt</a> Slot to be called when encrypt mode in <a class="el" href="class_view_p_c.html" title="The ViewPC class View layer of the app. Controls EncryptDialog and ProgressDialog. ">ViewPC</a> is selected and started. </p>
+<p><a class="el" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st...">ModelPC::encrypt</a> Slot to zip and inject data and provide it with some extra stuff After completion start standard <a class="el" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::inject</a> Isn't used in PictureCrypt, but used can be used in other - custom projects. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">encr_data</td><td>Data to be inserted to an image. </td></tr>
-    <tr><td class="paramname">image</td><td>Image to be inserted in. </td></tr>
-    <tr><td class="paramname">mode</td><td>Mode of encryption </td></tr>
-    <tr><td class="paramname">_bitsUsed</td><td>Bits per byte used </td></tr>
+    <tr><td class="paramname">data</td><td>Data for embedding </td></tr>
+    <tr><td class="paramname">image</td><td>Image for embedding </td></tr>
+    <tr><td class="paramname">mode</td><td>Mode for embedding </td></tr>
+    <tr><td class="paramname">key</td><td>Key for extra encryption </td></tr>
+    <tr><td class="paramname">_bitsUsed</td><td>Bits per byte (see ModelPC::bitsUsed) </td></tr>
     <tr><td class="paramname">_error</td><td>Error output </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns image with embedded data. </dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_view_p_c.html#a456d75b7c5d3a089302a576e7359f1f4" title="ViewPC::on_startButton_clicked Slot to be called, when Start Button is pressed. ">ViewPC::on_startButton_clicked</a>, <a class="el" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>, <a class="el" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. ">ModelPC::circuit</a>, <a class="el" href="class_model_p_c.html#a3cae34fd5bcb06e8c1f8cfe7961bd270" title="ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff After completion sta...">ModelPC::start</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns image with embedded data </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::inject</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00110">110</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00051">51</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_model_p_c_a48667f5b1a547d03a3def2d3db5a220f_cgraph.png" border="0" usemap="#class_model_p_c_a48667f5b1a547d03a3def2d3db5a220f_cgraph" alt=""/></div>
-<map name="class_model_p_c_a48667f5b1a547d03a3def2d3db5a220f_cgraph" id="class_model_p_c_a48667f5b1a547d03a3def2d3db5a220f_cgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="557,40,659,66"/><area shape="rect" id="node4" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="182,26,301,53"/><area shape="rect" id="node6" href="class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="375,116,483,142"/><area shape="rect" id="node3" href="class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. " alt="" coords="707,40,816,66"/><area shape="rect" id="node5" href="class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="350,65,509,92"/></map>
+<div class="center"><img src="class_model_p_c_a6f191f62d4635d0d3555fcc0be298794_cgraph.png" border="0" usemap="#class_model_p_c_a6f191f62d4635d0d3555fcc0be298794_cgraph" alt=""/></div>
+<map name="class_model_p_c_a6f191f62d4635d0d3555fcc0be298794_cgraph" id="class_model_p_c_a6f191f62d4635d0d3555fcc0be298794_cgraph">
+<area shape="rect" id="node2" href="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="827,183,928,209"/><area shape="rect" id="node4" href="class_model_p_c.html#afebbbfa4b07deba4f68fc6dfb50f353f" title="ModelPC::zip Zip function, copy of EncryptDialog::zip Used for ModelPC in custom projects, other than PictureCrypt. " alt="" coords="393,5,495,32"/><area shape="rect" id="node7" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="201,157,316,184"/><area shape="rect" id="node11" href="class_model_p_c.html#a4daefc3fb87a1f19172b9b20c987eb12" title="ModelPC::encryptv1_4 Encrypts and injects data to image used in v1.4+. " alt="" coords="181,31,336,57"/><area shape="rect" id="node3" href="class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. " alt="" coords="1040,183,1149,209"/><area shape="rect" id="node5" href="class_q_a_e_s_encryption.html#a43819eeb6a7cb29fbd3cb6ad640dcbdf" title="Crypt Static encode function. " alt="" coords="553,5,714,32"/><area shape="rect" id="node6" href="class_q_a_e_s_encryption.html#aeac0ee8532e69e5d30b023fe38c30b3b" title="QAESEncryption::QAESEncryption" alt="" coords="763,5,991,32"/><area shape="rect" id="node8" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="385,183,503,209"/><area shape="rect" id="node10" href="class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="579,284,687,311"/><area shape="rect" id="node9" href="class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="554,233,713,260"/></map>
 </div>
 </p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_model_p_c_a48667f5b1a547d03a3def2d3db5a220f_icgraph.png" border="0" usemap="#class_model_p_c_a48667f5b1a547d03a3def2d3db5a220f_icgraph" alt=""/></div>
-<map name="class_model_p_c_a48667f5b1a547d03a3def2d3db5a220f_icgraph" id="class_model_p_c_a48667f5b1a547d03a3def2d3db5a220f_icgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#a3cae34fd5bcb06e8c1f8cfe7961bd270" title="ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff After completion sta..." alt="" coords="182,31,293,57"/><area shape="rect" id="node3" href="class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" title="ControllerPC::ControllerPC Constructor of controller Constructor runs auto&#45;test for ModelPC..." alt="" coords="342,5,522,32"/><area shape="rect" id="node4" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="383,56,481,83"/></map>
+<div class="center"><img src="class_model_p_c_a6f191f62d4635d0d3555fcc0be298794_icgraph.png" border="0" usemap="#class_model_p_c_a6f191f62d4635d0d3555fcc0be298794_icgraph" alt=""/></div>
+<map name="class_model_p_c_a6f191f62d4635d0d3555fcc0be298794_icgraph" id="class_model_p_c_a6f191f62d4635d0d3555fcc0be298794_icgraph">
+<area shape="rect" id="node2" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="182,5,279,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a4daefc3fb87a1f19172b9b20c987eb12"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ModelPC::encryptv1_4 </td>
+          <td>(</td>
+          <td class="paramtype">QImage *&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QByteArray&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_model_p_c.html#a4daefc3fb87a1f19172b9b20c987eb12" title="ModelPC::encryptv1_4 Encrypts and injects data to image used in v1.4+. ">ModelPC::encryptv1_4</a> Encrypts and injects data to image used in v1.4+. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">image</td><td>Image for injecting </td></tr>
+    <tr><td class="paramname">data</td><td>Data for embedding </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00509">509</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_model_p_c_a4daefc3fb87a1f19172b9b20c987eb12_cgraph.png" border="0" usemap="#class_model_p_c_a4daefc3fb87a1f19172b9b20c987eb12_cgraph" alt=""/></div>
+<map name="class_model_p_c_a4daefc3fb87a1f19172b9b20c987eb12_cgraph" id="class_model_p_c_a4daefc3fb87a1f19172b9b20c987eb12_cgraph">
+<area shape="rect" id="node2" href="class_model_p_c.html#afebbbfa4b07deba4f68fc6dfb50f353f" title="ModelPC::zip Zip function, copy of EncryptDialog::zip Used for ModelPC in custom projects, other than PictureCrypt. " alt="" coords="208,5,309,32"/><area shape="rect" id="node3" href="class_q_a_e_s_encryption.html#a43819eeb6a7cb29fbd3cb6ad640dcbdf" title="Crypt Static encode function. " alt="" coords="358,5,519,32"/><area shape="rect" id="node4" href="class_q_a_e_s_encryption.html#aeac0ee8532e69e5d30b023fe38c30b3b" title="QAESEncryption::QAESEncryption" alt="" coords="569,5,797,32"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_model_p_c_a4daefc3fb87a1f19172b9b20c987eb12_icgraph.png" border="0" usemap="#class_model_p_c_a4daefc3fb87a1f19172b9b20c987eb12_icgraph" alt=""/></div>
+<map name="class_model_p_c_a4daefc3fb87a1f19172b9b20c987eb12_icgraph" id="class_model_p_c_a4daefc3fb87a1f19172b9b20c987eb12_icgraph">
+<area shape="rect" id="node2" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="209,5,335,32"/><area shape="rect" id="node3" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="385,5,482,32"/></map>
 </div>
 </p>
 
@@ -732,7 +985,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00251">251</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00235">235</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -748,7 +1001,156 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model_p_c_a47464b59b7e37fcee25e55475708aabd_icgraph.png" border="0" usemap="#class_model_p_c_a47464b59b7e37fcee25e55475708aabd_icgraph" alt=""/></div>
 <map name="class_model_p_c_a47464b59b7e37fcee25e55475708aabd_icgraph" id="class_model_p_c_a47464b59b7e37fcee25e55475708aabd_icgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#a3cae34fd5bcb06e8c1f8cfe7961bd270" title="ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff After completion sta..." alt="" coords="707,59,818,85"/><area shape="rect" id="node5" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="531,59,658,85"/><area shape="rect" id="node6" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="531,109,658,136"/><area shape="rect" id="node7" href="class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="369,59,477,85"/><area shape="rect" id="node8" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="363,109,482,136"/><area shape="rect" id="node9" href="class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="155,160,314,187"/><area shape="rect" id="node3" href="class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" title="ControllerPC::ControllerPC Constructor of controller Constructor runs auto&#45;test for ModelPC..." alt="" coords="867,59,1047,85"/><area shape="rect" id="node4" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="909,109,1006,136"/></map>
+<area shape="rect" id="node2" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="734,70,861,97"/><area shape="rect" id="node4" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="551,70,665,97"/><area shape="rect" id="node5" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="734,172,861,198"/><area shape="rect" id="node6" href="class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="369,70,477,97"/><area shape="rect" id="node7" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="363,121,482,148"/><area shape="rect" id="node8" href="class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="531,172,685,198"/><area shape="rect" id="node9" href="class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="155,121,314,148"/><area shape="rect" id="node3" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="910,121,1007,148"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ac17e68e6aab134621b0d151d74acdc82"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QImage * ModelPC::Inject </td>
+          <td>(</td>
+          <td class="paramtype">QByteArray&#160;</td>
+          <td class="paramname"><em>encr_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QImage *&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_bitsUsed</em> = <code>8</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString *&#160;</td>
+          <td class="paramname"><em>_error</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00029">29</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_model_p_c_ac17e68e6aab134621b0d151d74acdc82_cgraph.png" border="0" usemap="#class_model_p_c_ac17e68e6aab134621b0d151d74acdc82_cgraph" alt=""/></div>
+<map name="class_model_p_c_ac17e68e6aab134621b0d151d74acdc82_cgraph" id="class_model_p_c_ac17e68e6aab134621b0d151d74acdc82_cgraph">
+<area shape="rect" id="node2" href="class_model_p_c.html#ae12ebe65ec973c02a0de4850a7c1e31c" title="ModelPC::ModelPC Constructor Unit tests are run here. " alt="" coords="171,5,309,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aada6a04d81ada8f2b4ba18108c8d6f10"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QImage * ModelPC::inject </td>
+          <td>(</td>
+          <td class="paramtype">QByteArray&#160;</td>
+          <td class="paramname"><em>encr_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QImage *&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_mode</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>_bitsUsed</em> = <code>8</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QString *&#160;</td>
+          <td class="paramname"><em>_error</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::inject</a> Slot to be called when encrypt mode in <a class="el" href="class_view_p_c.html" title="The ViewPC class View layer of the app. Controls EncryptDialog and ProgressDialog. ">ViewPC</a> is selected and started. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">encr_data</td><td>Data to be inserted to an image. </td></tr>
+    <tr><td class="paramname">image</td><td>Image to be inserted in. </td></tr>
+    <tr><td class="paramname">mode</td><td>Mode of encryption </td></tr>
+    <tr><td class="paramname">_bitsUsed</td><td>Bits per byte used </td></tr>
+    <tr><td class="paramname">_error</td><td>Error output </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns image with embedded data. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_view_p_c.html#a456d75b7c5d3a089302a576e7359f1f4" title="ViewPC::on_startButton_clicked Slot to be called, when Start Button is pressed. ">ViewPC::on_startButton_clicked</a>, <a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>, <a class="el" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. ">ModelPC::circuit</a>, ModelPC::start </dd></dl>
+
+<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00130">130</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10_cgraph.png" border="0" usemap="#class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10_cgraph" alt=""/></div>
+<map name="class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10_cgraph" id="class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10_cgraph">
+<area shape="rect" id="node2" href="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="544,40,645,67"/><area shape="rect" id="node4" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="169,27,287,53"/><area shape="rect" id="node6" href="class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="362,116,470,143"/><area shape="rect" id="node3" href="class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. " alt="" coords="693,40,803,67"/><area shape="rect" id="node5" href="class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="337,65,495,92"/></map>
+</div>
+</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10_icgraph.png" border="0" usemap="#class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10_icgraph" alt=""/></div>
+<map name="class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10_icgraph" id="class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10_icgraph">
+<area shape="rect" id="node2" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="169,5,295,32"/><area shape="rect" id="node3" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="345,5,442,32"/></map>
 </div>
 </p>
 
@@ -795,7 +1197,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00263">263</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00247">247</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -811,58 +1213,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model_p_c_a8bee0255c09449868c7e6097afaaf0cd_icgraph.png" border="0" usemap="#class_model_p_c_a8bee0255c09449868c7e6097afaaf0cd_icgraph" alt=""/></div>
 <map name="class_model_p_c_a8bee0255c09449868c7e6097afaaf0cd_icgraph" id="class_model_p_c_a8bee0255c09449868c7e6097afaaf0cd_icgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="163,31,290,57"/><area shape="rect" id="node3" href="class_model_p_c.html#a3cae34fd5bcb06e8c1f8cfe7961bd270" title="ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff After completion sta..." alt="" coords="339,31,450,57"/><area shape="rect" id="node4" href="class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" title="ControllerPC::ControllerPC Constructor of controller Constructor runs auto&#45;test for ModelPC..." alt="" coords="499,5,679,32"/><area shape="rect" id="node5" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="541,56,638,83"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a670c3a08360555282adfd3740b2debac"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ModelPC::modernCircuit </td>
-          <td>(</td>
-          <td class="paramtype">QImage *&#160;</td>
-          <td class="paramname"><em>image</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">QByteArray *&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">long long int&#160;</td>
-          <td class="paramname"><em>countBytes</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00584">584</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_model_p_c_a670c3a08360555282adfd3740b2debac_icgraph.png" border="0" usemap="#class_model_p_c_a670c3a08360555282adfd3740b2debac_icgraph" alt=""/></div>
-<map name="class_model_p_c_a670c3a08360555282adfd3740b2debac_icgraph" id="class_model_p_c_a670c3a08360555282adfd3740b2debac_icgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#ae12ebe65ec973c02a0de4850a7c1e31c" title="ModelPC::ModelPC Constructor Unit tests are run here. " alt="" coords="219,56,357,83"/><area shape="rect" id="node3" href="class_model_p_c.html#a77a3beaa87ab7d882215730c546a1c91" title="ModelPC::Start" alt="" coords="415,5,527,32"/><area shape="rect" id="node4" href="class_model_p_c.html#a132a399bf401a97106c2368e6e9e8792" title="ModelPC::Encrypt" alt="" coords="406,56,535,83"/><area shape="rect" id="node5" href="class_model_p_c.html#ac245b9b6d618f421c0ccfa66d97ac905" title="ModelPC::Decrypt" alt="" coords="405,107,536,133"/></map>
+<area shape="rect" id="node2" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="163,5,277,32"/><area shape="rect" id="node3" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="326,5,453,32"/><area shape="rect" id="node4" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="502,5,599,32"/></map>
 </div>
 </p>
 
@@ -916,7 +1267,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00465">465</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00449">449</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -932,7 +1283,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model_p_c_a1171f9fe1550133dc9053a46b4e5bcfd_icgraph.png" border="0" usemap="#class_model_p_c_a1171f9fe1550133dc9053a46b4e5bcfd_icgraph" alt=""/></div>
 <map name="class_model_p_c_a1171f9fe1550133dc9053a46b4e5bcfd_icgraph" id="class_model_p_c_a1171f9fe1550133dc9053a46b4e5bcfd_icgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="214,31,333,57"/><area shape="rect" id="node3" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="382,5,509,32"/><area shape="rect" id="node7" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="558,56,685,83"/><area shape="rect" id="node4" href="class_model_p_c.html#a3cae34fd5bcb06e8c1f8cfe7961bd270" title="ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff After completion sta..." alt="" coords="566,5,677,32"/><area shape="rect" id="node5" href="class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" title="ControllerPC::ControllerPC Constructor of controller Constructor runs auto&#45;test for ModelPC..." alt="" coords="734,5,914,32"/><area shape="rect" id="node6" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="775,56,873,83"/></map>
+<area shape="rect" id="node2" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="214,31,333,57"/><area shape="rect" id="node3" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="401,5,516,32"/><area shape="rect" id="node6" href="class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="381,56,536,83"/><area shape="rect" id="node4" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="585,5,711,32"/><area shape="rect" id="node5" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="761,31,858,57"/><area shape="rect" id="node7" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="585,56,711,83"/></map>
 </div>
 </p>
 
@@ -960,7 +1311,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>saveData Signal to be called to save data from <a class="el" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>. </p>
+<p>saveData Signal to be called to save data from <a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>Data to be saved. </td></tr>
@@ -973,7 +1324,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model_p_c_a0855107fb0ccc247cd9e893fae9bb08a_icgraph.png" border="0" usemap="#class_model_p_c_a0855107fb0ccc247cd9e893fae9bb08a_icgraph" alt=""/></div>
 <map name="class_model_p_c_a0855107fb0ccc247cd9e893fae9bb08a_icgraph" id="class_model_p_c_a0855107fb0ccc247cd9e893fae9bb08a_icgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="195,5,322,32"/><area shape="rect" id="node3" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="371,5,469,32"/></map>
+<area shape="rect" id="node2" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="195,5,322,32"/><area shape="rect" id="node3" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="371,5,469,32"/></map>
 </div>
 </p>
 
@@ -1001,7 +1352,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>saveImage Signal to be called to save image from <a class="el" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::encrypt</a>. </p>
+<p>saveImage Signal to be called to save image from <a class="el" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st...">ModelPC::encrypt</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">image</td><td>Image to be saved. </td></tr>
@@ -1014,7 +1365,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model_p_c_a41f5e2e8022679046e4d3fa1109025fa_icgraph.png" border="0" usemap="#class_model_p_c_a41f5e2e8022679046e4d3fa1109025fa_icgraph" alt=""/></div>
 <map name="class_model_p_c_a41f5e2e8022679046e4d3fa1109025fa_icgraph" id="class_model_p_c_a41f5e2e8022679046e4d3fa1109025fa_icgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="203,31,330,57"/><area shape="rect" id="node3" href="class_model_p_c.html#a3cae34fd5bcb06e8c1f8cfe7961bd270" title="ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff After completion sta..." alt="" coords="379,31,490,57"/><area shape="rect" id="node4" href="class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" title="ControllerPC::ControllerPC Constructor of controller Constructor runs auto&#45;test for ModelPC..." alt="" coords="539,5,719,32"/><area shape="rect" id="node5" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="581,56,678,83"/></map>
+<area shape="rect" id="node2" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="203,5,317,32"/><area shape="rect" id="node3" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="366,5,493,32"/><area shape="rect" id="node4" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="542,5,639,32"/></map>
 </div>
 </p>
 
@@ -1056,169 +1407,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model_p_c_afdcd80f0ed5062e145a71f09b0897547_icgraph.png" border="0" usemap="#class_model_p_c_afdcd80f0ed5062e145a71f09b0897547_icgraph" alt=""/></div>
 <map name="class_model_p_c_afdcd80f0ed5062e145a71f09b0897547_icgraph" id="class_model_p_c_afdcd80f0ed5062e145a71f09b0897547_icgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="208,140,309,166"/><area shape="rect" id="node9" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="566,89,685,116"/><area shape="rect" id="node10" href="class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="358,38,517,65"/><area shape="rect" id="node3" href="class_model_p_c.html#a3cae34fd5bcb06e8c1f8cfe7961bd270" title="ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff After completion sta..." alt="" coords="910,190,1021,217"/><area shape="rect" id="node6" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="734,190,861,217"/><area shape="rect" id="node7" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="734,140,861,166"/><area shape="rect" id="node8" href="class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="571,190,679,217"/><area shape="rect" id="node4" href="class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" title="ControllerPC::ControllerPC Constructor of controller Constructor runs auto&#45;test for ModelPC..." alt="" coords="1070,190,1250,217"/><area shape="rect" id="node5" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="1111,140,1209,166"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a77a3beaa87ab7d882215730c546a1c91"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QImage * ModelPC::Start </td>
-          <td>(</td>
-          <td class="paramtype">QByteArray&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">QImage *&#160;</td>
-          <td class="paramname"><em>image</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>mode</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">QString&#160;</td>
-          <td class="paramname"><em>key</em> = <code>&quot;&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>_bitsUsed</em> = <code>8</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">QString *&#160;</td>
-          <td class="paramname"><em>_error</em> = <code>nullptr</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00026">26</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_model_p_c_a77a3beaa87ab7d882215730c546a1c91_cgraph.png" border="0" usemap="#class_model_p_c_a77a3beaa87ab7d882215730c546a1c91_cgraph" alt=""/></div>
-<map name="class_model_p_c_a77a3beaa87ab7d882215730c546a1c91_cgraph" id="class_model_p_c_a77a3beaa87ab7d882215730c546a1c91_cgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#ae12ebe65ec973c02a0de4850a7c1e31c" title="ModelPC::ModelPC Constructor Unit tests are run here. " alt="" coords="165,5,304,32"/><area shape="rect" id="node3" href="class_model_p_c.html#a670c3a08360555282adfd3740b2debac" title="ModelPC::modernCircuit" alt="" coords="352,5,517,32"/></map>
-</div>
-</p>
-
-</div>
-</div>
-<a class="anchor" id="a3cae34fd5bcb06e8c1f8cfe7961bd270"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">QImage * ModelPC::start </td>
-          <td>(</td>
-          <td class="paramtype">QByteArray&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">QImage *&#160;</td>
-          <td class="paramname"><em>image</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>mode</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">QString&#160;</td>
-          <td class="paramname"><em>key</em> = <code>&quot;&quot;</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>_bitsUsed</em> = <code>8</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">QString *&#160;</td>
-          <td class="paramname"><em>_error</em> = <code>nullptr</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p><a class="el" href="class_model_p_c.html#a3cae34fd5bcb06e8c1f8cfe7961bd270" title="ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff After completion sta...">ModelPC::start</a> Slot to zip and encrypt data and provide it with some extra stuff After completion start standard <a class="el" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::encrypt</a> Isn't used in PictureCrypt, but used can be used in other - custom projects. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">data</td><td>Data for embedding </td></tr>
-    <tr><td class="paramname">image</td><td>Image for embedding </td></tr>
-    <tr><td class="paramname">mode</td><td>Mode for embedding </td></tr>
-    <tr><td class="paramname">key</td><td>Key for extra encryption </td></tr>
-    <tr><td class="paramname">_bitsUsed</td><td>Bits per byte (see <a class="el" href="class_model_p_c.html#a655deb6a8afa94c7f4aadb3056989038" title="bitsUsed Bits per byte used in pixel ">ModelPC::bitsUsed</a>) </td></tr>
-    <tr><td class="paramname">_error</td><td>Error output </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns image with embedded data </dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::encrypt</a> </dd></dl>
-
-<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00053">53</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
-
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_model_p_c_a3cae34fd5bcb06e8c1f8cfe7961bd270_cgraph.png" border="0" usemap="#class_model_p_c_a3cae34fd5bcb06e8c1f8cfe7961bd270_cgraph" alt=""/></div>
-<map name="class_model_p_c_a3cae34fd5bcb06e8c1f8cfe7961bd270_cgraph" id="class_model_p_c_a3cae34fd5bcb06e8c1f8cfe7961bd270_cgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="829,176,931,202"/><area shape="rect" id="node4" href="class_model_p_c.html#afebbbfa4b07deba4f68fc6dfb50f353f" title="ModelPC::zip Zip function, copy of EncryptDialog::zip Used for ModelPC in custom projects, other than PictureCrypt. " alt="" coords="179,74,280,101"/><area shape="rect" id="node7" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="166,150,293,177"/><area shape="rect" id="node3" href="class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. " alt="" coords="979,176,1088,202"/><area shape="rect" id="node5" href="class_q_a_e_s_encryption.html#a43819eeb6a7cb29fbd3cb6ad640dcbdf" title="Crypt Static encode function. " alt="" coords="342,74,503,101"/><area shape="rect" id="node6" href="class_q_a_e_s_encryption.html#aeac0ee8532e69e5d30b023fe38c30b3b" title="QAESEncryption::QAESEncryption" alt="" coords="553,74,781,101"/><area shape="rect" id="node8" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="363,176,482,202"/><area shape="rect" id="node10" href="class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="613,277,721,304"/><area shape="rect" id="node9" href="class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="587,226,746,253"/></map>
-</div>
-</p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_model_p_c_a3cae34fd5bcb06e8c1f8cfe7961bd270_icgraph.png" border="0" usemap="#class_model_p_c_a3cae34fd5bcb06e8c1f8cfe7961bd270_icgraph" alt=""/></div>
-<map name="class_model_p_c_a3cae34fd5bcb06e8c1f8cfe7961bd270_icgraph" id="class_model_p_c_a3cae34fd5bcb06e8c1f8cfe7961bd270_icgraph">
-<area shape="rect" id="node2" href="class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" title="ControllerPC::ControllerPC Constructor of controller Constructor runs auto&#45;test for ModelPC..." alt="" coords="166,5,346,32"/><area shape="rect" id="node3" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="207,56,305,83"/></map>
+<area shape="rect" id="node2" href="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="208,116,309,143"/><area shape="rect" id="node8" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="566,192,685,219"/><area shape="rect" id="node10" href="class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="358,243,517,269"/><area shape="rect" id="node3" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="937,91,1063,117"/><area shape="rect" id="node5" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="753,141,868,168"/><area shape="rect" id="node6" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="937,40,1063,67"/><area shape="rect" id="node7" href="class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="571,141,679,168"/><area shape="rect" id="node9" href="class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="733,40,888,67"/><area shape="rect" id="node4" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="1113,65,1210,92"/></map>
 </div>
 </p>
 
@@ -1248,7 +1437,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0" title="ModelPC::unzip Unzip data from ModelPC::decrypt. Just mirrored EncryptDialog::zip. ">ModelPC::unzip</a> Unzip data from <a class="el" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>. Just mirrored <a class="el" href="class_encrypt_dialog.html#a2bff820a3df4ddc36ecb07ed74b7138a" title="EncryptDialog::zip Zipping algorithm It copresses the data and then compresses it using qCompress() ...">EncryptDialog::zip</a>. </p>
+<p><a class="el" href="class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0" title="ModelPC::unzip Unzip data from ModelPC::decrypt. Just mirrored EncryptDialog::zip. ">ModelPC::unzip</a> Unzip data from <a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>. Just mirrored <a class="el" href="class_encrypt_dialog.html#a2bff820a3df4ddc36ecb07ed74b7138a" title="EncryptDialog::zip Zipping algorithm It copresses the data and then compresses it using qCompress() ...">EncryptDialog::zip</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>Data to be decrypted. </td></tr>
@@ -1257,9 +1446,9 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns data </dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_encrypt_dialog.html#a2bff820a3df4ddc36ecb07ed74b7138a" title="EncryptDialog::zip Zipping algorithm It copresses the data and then compresses it using qCompress() ...">EncryptDialog::zip</a>, <a class="el" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>, <a class="el" href="class_model_p_c.html#afebbbfa4b07deba4f68fc6dfb50f353f" title="ModelPC::zip Zip function, copy of EncryptDialog::zip Used for ModelPC in custom projects, other than PictureCrypt. ">ModelPC::zip</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_encrypt_dialog.html#a2bff820a3df4ddc36ecb07ed74b7138a" title="EncryptDialog::zip Zipping algorithm It copresses the data and then compresses it using qCompress() ...">EncryptDialog::zip</a>, <a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>, <a class="el" href="class_model_p_c.html#afebbbfa4b07deba4f68fc6dfb50f353f" title="ModelPC::zip Zip function, copy of EncryptDialog::zip Used for ModelPC in custom projects, other than PictureCrypt. ">ModelPC::zip</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00558">558</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00642">642</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1275,7 +1464,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model_p_c_a6da88f166785a49f73b22c169f956fd0_icgraph.png" border="0" usemap="#class_model_p_c_a6da88f166785a49f73b22c169f956fd0_icgraph" alt=""/></div>
 <map name="class_model_p_c_a6da88f166785a49f73b22c169f956fd0_icgraph" id="class_model_p_c_a6da88f166785a49f73b22c169f956fd0_icgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#a9458c3a1e369a64889d9a1f70e0c1d18" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="169,5,295,32"/><area shape="rect" id="node3" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="345,5,442,32"/></map>
+<area shape="rect" id="node2" href="class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="168,5,323,32"/><area shape="rect" id="node3" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="371,5,498,32"/><area shape="rect" id="node4" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="547,5,645,32"/></map>
 </div>
 </p>
 
@@ -1322,9 +1511,9 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns decrypted data </dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="class_model_p_c.html#a3cae34fd5bcb06e8c1f8cfe7961bd270" title="ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff After completion sta...">ModelPC::start</a>, <a class="el" href="class_model_p_c.html#a48667f5b1a547d03a3def2d3db5a220f" title="ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::encrypt</a>, <a class="el" href="class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0" title="ModelPC::unzip Unzip data from ModelPC::decrypt. Just mirrored EncryptDialog::zip. ">ModelPC::unzip</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd>ModelPC::start, <a class="el" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::inject</a>, <a class="el" href="class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0" title="ModelPC::unzip Unzip data from ModelPC::decrypt. Just mirrored EncryptDialog::zip. ">ModelPC::unzip</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00575">575</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00659">659</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1340,45 +1529,13 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model_p_c_afebbbfa4b07deba4f68fc6dfb50f353f_icgraph.png" border="0" usemap="#class_model_p_c_afebbbfa4b07deba4f68fc6dfb50f353f_icgraph" alt=""/></div>
 <map name="class_model_p_c_afebbbfa4b07deba4f68fc6dfb50f353f_icgraph" id="class_model_p_c_afebbbfa4b07deba4f68fc6dfb50f353f_icgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#a3cae34fd5bcb06e8c1f8cfe7961bd270" title="ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff After completion sta..." alt="" coords="155,31,266,57"/><area shape="rect" id="node3" href="class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" title="ControllerPC::ControllerPC Constructor of controller Constructor runs auto&#45;test for ModelPC..." alt="" coords="315,5,495,32"/><area shape="rect" id="node4" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="357,56,454,83"/></map>
+<area shape="rect" id="node2" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="358,5,485,32"/><area shape="rect" id="node4" href="class_model_p_c.html#a4daefc3fb87a1f19172b9b20c987eb12" title="ModelPC::encryptv1_4 Encrypts and injects data to image used in v1.4+. " alt="" coords="155,31,309,57"/><area shape="rect" id="node3" href="class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="534,5,631,32"/></map>
 </div>
 </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a655deb6a8afa94c7f4aadb3056989038"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ModelPC::bitsUsed</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>bitsUsed Bits per byte used in pixel </p>
-
-<p>Definition at line <a class="el" href="modelpc_8h_source.html#l00091">91</a> of file <a class="el" href="modelpc_8h_source.html">modelpc.h</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ad74974ac236182c1d6d2cf0729fac3dd"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ModelPC::curMode</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>curMode Mode of en- or decryption </p>
-
-<p>Definition at line <a class="el" href="modelpc_8h_source.html#l00087">87</a> of file <a class="el" href="modelpc_8h_source.html">modelpc.h</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="abd038306f14f22fb885a1697c96d6335"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1391,23 +1548,31 @@ Here is the caller graph for this function:</div>
 
 <p>defaultJPHSDir Default JPHS directory </p>
 
-<p>Definition at line <a class="el" href="modelpc_8h_source.html#l00095">95</a> of file <a class="el" href="modelpc_8h_source.html">modelpc.h</a>.</p>
+<p>Definition at line <a class="el" href="modelpc_8h_source.html#l00091">91</a> of file <a class="el" href="modelpc_8h_source.html">modelpc.h</a>.</p>
 
 </div>
 </div>
 <a class="anchor" id="a4e5a9c0ca1f06fe5bc478b6bf248c37c"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">QString* ModelPC::error</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>error Current error </p>
 
-<p>Definition at line <a class="el" href="modelpc_8h_source.html#l00099">99</a> of file <a class="el" href="modelpc_8h_source.html">modelpc.h</a>.</p>
+<p>Definition at line <a class="el" href="modelpc_8h_source.html#l00104">104</a> of file <a class="el" href="modelpc_8h_source.html">modelpc.h</a>.</p>
 
 </div>
 </div>
@@ -1423,7 +1588,7 @@ Here is the caller graph for this function:</div>
 
 <p>success Flag that true by default, but in case of error or cancelling of ProgressDialog it turns to false, which stops execution of <a class="el" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. ">ModelPC::circuit</a> </p>
 
-<p>Definition at line <a class="el" href="modelpc_8h_source.html#l00075">75</a> of file <a class="el" href="modelpc_8h_source.html">modelpc.h</a>.</p>
+<p>Definition at line <a class="el" href="modelpc_8h_source.html#l00079">79</a> of file <a class="el" href="modelpc_8h_source.html">modelpc.h</a>.</p>
 
 </div>
 </div>
@@ -1439,7 +1604,7 @@ Here is the caller graph for this function:</div>
 
 <p>version Version of the class </p>
 
-<p>Definition at line <a class="el" href="modelpc_8h_source.html#l00079">79</a> of file <a class="el" href="modelpc_8h_source.html">modelpc.h</a>.</p>
+<p>Definition at line <a class="el" href="modelpc_8h_source.html#l00083">83</a> of file <a class="el" href="modelpc_8h_source.html">modelpc.h</a>.</p>
 
 </div>
 </div>
@@ -1455,7 +1620,7 @@ Here is the caller graph for this function:</div>
 
 <p>versionString Version as string </p>
 
-<p>Definition at line <a class="el" href="modelpc_8h_source.html#l00083">83</a> of file <a class="el" href="modelpc_8h_source.html">modelpc.h</a>.</p>
+<p>Definition at line <a class="el" href="modelpc_8h_source.html#l00087">87</a> of file <a class="el" href="modelpc_8h_source.html">modelpc.h</a>.</p>
 
 </div>
 </div>
