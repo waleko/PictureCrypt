@@ -9,7 +9,7 @@
 ModelPC::ModelPC()
 {
     // Version control
-    versionString = "1.3.4";
+    versionString = "1.3.7";
 
     auto ver = versionString.split(".");
     version = ver[0].toInt() * qPow(2, 16) + ver[1].toInt() * qPow(2, 8) + ver[2].toInt();
@@ -19,27 +19,25 @@ ModelPC::ModelPC()
             bytes(ver[2].toInt());
     // Random seed
     qsrand(randSeed());
-    mykey = "password";
-    modernCircuit(new QImage(), new QByteArray(), 1);
 }
 
-QImage *ModelPC::Start(QByteArray data, QImage *image, int mode, QString key, int _bitsUsed, QString *_error)
+QImage *ModelPC::Encrypt(QByteArray data, QImage *image, int _mode, QString key, int _bitsUsed, QString *_error)
 {
-    return ModelPC().start(data, image, mode, key, _bitsUsed, _error);
+    return ModelPC().encrypt(data, image, _mode, key, _bitsUsed, _error);
 }
 
-QImage *ModelPC::Encrypt(QByteArray encr_data, QImage *image, int mode, int _bitsUsed, QString *_error)
+QImage *ModelPC::Inject(QByteArray encr_data, QImage *image, int _mode, int _bitsUsed, QString *_error)
 {
-    return ModelPC().encrypt(encr_data, image, mode, _bitsUsed, _error);
+    return ModelPC().inject(encr_data, image, _mode, _bitsUsed, _error);
 }
 
-QByteArray ModelPC::Decrypt(QImage *image, QString key, QString *_error)
+QByteArray ModelPC::Decrypt(QImage *image, QString key, int _mode, QString *_error)
 {
-    return ModelPC().decrypt(image, key, _error);
+    return ModelPC().decrypt(image, key, _mode, _error);
 }
 /*!
- * \brief ModelPC::start Slot to zip and encrypt data and provide it with some extra stuff
- * After completion start standard ModelPC::encrypt
+ * \brief ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff
+ * After completion start standard ModelPC::inject
  * Isn't used in PictureCrypt, but used can be used in other - custom projects.
  * \param data Data for embedding
  * \param image Image for embedding
@@ -48,10 +46,12 @@ QByteArray ModelPC::Decrypt(QImage *image, QString key, QString *_error)
  * \param _bitsUsed Bits per byte (see ModelPC::bitsUsed)
  * \param _error Error output
  * \return Returns image with embedded data
- * \sa ModelPC::encrypt
+ * \sa ModelPC::inject
  */
-QImage * ModelPC::start(QByteArray data, QImage * image, int mode, QString key, int _bitsUsed, QString *_error)
+QImage * ModelPC::encrypt(QByteArray data, QImage * image, int _mode, QString key, int _bitsUsed, QString *_error)
 {
+    // FIXME check for errors
+    CryptMode mode = CryptMode(_mode);
     // Error management
     if(_error == nullptr)
         _error = new QString();
@@ -78,6 +78,10 @@ QImage * ModelPC::start(QByteArray data, QImage * image, int mode, QString key, 
         fail("bigkey");
         return nullptr;
     }
+    if(mode == CryptMode::NotDefined) {
+        fail("undefined_mode");
+        return nullptr;
+    }
     long long usedBytes = data.size() + 14 + key.size();
     long long size = image->width() * image->height();
     if(usedBytes * 100 / (size * 3) * 8 / _bitsUsed > 70) {
@@ -85,20 +89,36 @@ QImage * ModelPC::start(QByteArray data, QImage * image, int mode, QString key, 
         return nullptr;
     }
 
-    curMode = mode;
-
-    QByteArray zipped_data = zip(data, key.toUtf8());
-    QByteArray hash = QCryptographicHash::hash(data, QCryptographicHash::Sha256);
-    QByteArray encr_data = hash + zipped_data;
-
-    if(*error == "ok")
-        return encrypt(encr_data, image, curMode, _bitsUsed, error);
-    else
-        return nullptr;
+    switch(mode)
+    {
+        case v1_3:
+        {
+            QByteArray zipped_data = zip(data, key.toUtf8());
+            QByteArray hash = QCryptographicHash::hash(data, QCryptographicHash::Sha256);
+            QByteArray encr_data = hash + zipped_data;
+            if(*error == "ok")
+                return inject(encr_data, image, _mode, _bitsUsed, error);
+            else
+                return nullptr;
+            break;
+        }
+        case v1_4:
+            bitsUsed = _bitsUsed;
+            encryptv1_4(image, data, key);
+            return image;
+        break;
+        case jphs_mode:
+            // TODO add jphs
+            return nullptr;
+        break;
+        default:
+            fail("wrongmode");
+            return nullptr;
+    }
 }
 
 /*!
- * \brief ModelPC::encrypt Slot to be called when encrypt mode in ViewPC is selected and started.
+ * \brief ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started.
  * \param encr_data Data to be inserted to an image.
  * \param image Image to be inserted in.
  * \param mode Mode of encryption
@@ -107,16 +127,14 @@ QImage * ModelPC::start(QByteArray data, QImage * image, int mode, QString key, 
  * \return Returns image with embedded data.
  * \sa ViewPC::on_startButton_clicked, ModelPC::decrypt, ModelPC::circuit, ModelPC::start
  */
-QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode, int _bitsUsed, QString *_error)
+QImage * ModelPC::inject(QByteArray encr_data, QImage * image, int _mode, int _bitsUsed, QString *_error)
 {
+    CryptMode mode = CryptMode(_mode);
     // Error management
     if(_error == nullptr)
         _error = new QString();
     *_error = "ok";
     error = _error;
-
-    // TODO Remove debug mode = 0
-    mode = 0;
 
     bitsUsed = _bitsUsed;
 
@@ -132,17 +150,24 @@ QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode, int _b
         fail("bitsWrong");
         return nullptr;
     }
+    if(mode == CryptMode::NotDefined) {
+        fail("undefined_mode");
+        return nullptr;
+    }
 
     encr_data = ver_byte + encr_data;
     long long int countBytes = encr_data.size();
-    curMode = mode;
-    switch(curMode)
+    switch(mode)
     {
-    case 0:
+    case v1_3:
         circuit(image, &encr_data, countBytes);
         break;
-    case 1:
+    case jphs_mode:
         jphs(image, &encr_data);
+        break;
+    case v1_4:
+        fail("inject-v1.4");
+        return nullptr;
         break;
     default:
         fail("wrongmode");
@@ -161,13 +186,15 @@ QImage * ModelPC::encrypt(QByteArray encr_data, QImage * image, int mode, int _b
 /*!
  * \brief ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started.
  * \param image Image to be decrypted.
- * \param key Keyphrase with which the data is encrypted
+ * \param key Keyphrase with which the data is injected
+ * \param _mode Mode for decryption
  * \param _error Error output
  * \return Returns decrypted data
- * \sa ViewPC::on_startButton_clicked, ModelPC::encrypt, ModelPC::circuit
+ * \sa ViewPC::on_startButton_clicked, ModelPC::inject, ModelPC::circuit
  */
-QByteArray ModelPC::decrypt(QImage * image, QString key, QString *_error)
+QByteArray ModelPC::decrypt(QImage * image, QString key, int _mode, QString *_error)
 {
+    CryptMode mode = CryptMode(_mode);
     // Error management
     if(_error == nullptr)
         _error = new QString();
@@ -177,72 +204,29 @@ QByteArray ModelPC::decrypt(QImage * image, QString key, QString *_error)
         fail("nullimage");
         return nullptr;
     }
-    // Image opening
-    int w = image->width();
-    int h = image->height();
+    QByteArray result;
 
-    // Getting corner pixels
-    QColor colUL = image->pixelColor(0, 0).toRgb();
-    QColor colUR = image->pixelColor(w - 1, 0).toRgb();
-    QColor colDR = image->pixelColor(w - 1, h - 1).toRgb();
-
-    // Getting verification code
-    int verifCode = (((colUR.green() % 2) << 5) + colUR.blue() % 32) << 2;
-    verifCode += colDR.blue() % 4;
-    if(verifCode != 166){
-        fail("veriffail");
+    switch (mode) {
+    case v1_3:
+        result = decryptv1_3(image, key);
+    break;
+    case v1_4:
+        result = decryptv1_4(image, key);
+    break;
+    case jphs_mode:
+        // TODO add jphs support
+    break;
+    case NotDefined:
+        // TODO check all upper functions
+    break;
+    default:
+        // For invalid modes
+        fail("wrongmode");
         return nullptr;
     }
-    // Getting number of bytes
-    long long int countBytes = (colUL.blue() % 32 + ((colUL.green() % 32) << 5) + ((colUL.red() % 32) << 10)) << 9;
-    countBytes += ((colUR.red() % 32) << 4) + (colUR.green() >> 1) % 16;
-
-    bitsUsed = (colDR.blue() >> 2) % 8 + 1;
-    curMode = colDR.green() % 32;
-
-    // Start of the circuit
-    QByteArray data;
-    circuit(image, &data, countBytes);
-
-    // Check if circuit was successful
-    if(!success)
-        return nullptr;
-    if(data.isEmpty())
-    {
-        fail("noreaddata");
-        return nullptr;
-
-    }
-    // Version check
-    long long int _ver = mod(data.at(0)) * qPow(2, 16);
-    _ver += mod(data.at(1)) * qPow(2, 8);
-    _ver += mod(data.at(2));
-    data.remove(0, 3);
-    if(_ver > version) {
-        fail("Picture's app version is newer than yours. Image version is "
-              + generateVersionString(_ver) + ", yours is "
-              + generateVersionString(version) + ".");
-        return nullptr;
-    }
-    else if(_ver < version) {
-        fail("Picture's app version is older than yours. Image version is "
-              + generateVersionString(_ver) + ", yours is "
-              + generateVersionString(version) + ".");
-        return nullptr;
-    }
-    // Get the hash
-    QByteArray hash = data.left(32);
-    data.remove(0, 32);
-
-    // Unzip
-    QByteArray unzipped_data = unzip(data, key.toUtf8());
-    QByteArray our_hash = QCryptographicHash::hash(unzipped_data, QCryptographicHash::Sha256);
-    if(our_hash != hash) {
-        fail("fail_hash");
-        return QByteArray("");
-    }
-    emit saveData(unzipped_data);
-    return unzipped_data;
+    if(*error == "ok")
+        emit saveData(result);
+    return result;
 }
 /*!
  * \brief ModelPC::fail Slot to stop execution of cryption
@@ -517,7 +501,107 @@ void ModelPC::processPixel(QPoint pos, QVector<QPoint> *were, bool isEncrypt)
     }
     emit setProgress(100 * cur / circuitCountBytes);
 }
+/*!
+ * \brief ModelPC::encryptv1_4 Encrypts and injects data to image used in v1.4+
+ * \param image Image for injecting
+ * \param data Data for embedding
+ */
+void ModelPC::encryptv1_4(QImage *image, QByteArray data, QString key)
+{
+    QByteArray rand_master = GetRandomBytes(32);
+    QByteArray pass = QCryptographicHash::hash(key.toUtf8() + rand_master + QString("hi").toUtf8(), QCryptographicHash::Sha3_384);
+    QByteArray noise = GetRandomBytes(data.size() / 10 + 32);
+    QByteArray bytes_key = GetRandomBytes(32);
+    QByteArray pass_rand = QCryptographicHash::hash(pass + bytes_key, QCryptographicHash::Sha3_256);
+    QByteArray zipped = zip(data, pass_rand);
+}
+/*!
+ * \brief ModelPC::decryptv1_4 Decrypts data from image in v1.4+
+ * \param image Image with data
+ * \param key Key
+ * \return Returns obtained data
+ */
+QByteArray ModelPC::decryptv1_4(QImage *image, QString key)
+{
 
+}
+
+/*!
+ * \brief ModelPC::decryptv1_3 Decrytps data from image in v1.3
+ * \param image Image with data
+ * \param key Key
+ * \return Returns obtained data
+ */
+QByteArray ModelPC::decryptv1_3(QImage *image, QString key)
+{
+    // Image opening
+    int w = image->width();
+    int h = image->height();
+
+    // Getting corner pixels
+    QColor colUL = image->pixelColor(0, 0).toRgb();
+    QColor colUR = image->pixelColor(w - 1, 0).toRgb();
+    QColor colDR = image->pixelColor(w - 1, h - 1).toRgb();
+
+
+    // Getting verification code
+    int verifCode = (((colUR.green() % 2) << 5) + colUR.blue() % 32) << 2;
+    verifCode += colDR.blue() % 4;
+    if(verifCode != 166){
+        fail("veriffail");
+        return nullptr;
+    }
+    // Getting number of bytes
+    long long int countBytes = (colUL.blue() % 32 + ((colUL.green() % 32) << 5) + ((colUL.red() % 32) << 10)) << 9;
+    countBytes += ((colUR.red() % 32) << 4) + (colUR.green() >> 1) % 16;
+
+    bitsUsed = (colDR.blue() >> 2) % 8 + 1;
+    // FIXME check if works
+    // curMode = colDR.green() % 32;
+
+    // Start of the circuit
+    QByteArray data;
+    circuit(image, &data, countBytes);
+
+    // Check if circuit was successful
+    if(!success)
+        return nullptr;
+    if(data.isEmpty())
+    {
+        fail("noreaddata");
+        return nullptr;
+
+    }
+    // Version check
+    long long int _ver = mod(data.at(0)) * qPow(2, 16);
+    _ver += mod(data.at(1)) * qPow(2, 8);
+    _ver += mod(data.at(2));
+    data.remove(0, 3);
+    if(_ver > version) {
+        fail("Picture's app version is newer than yours. Image version is "
+              + generateVersionString(_ver) + ", yours is "
+              + generateVersionString(version) + ".");
+        return nullptr;
+    }
+    else if(_ver < version) {
+        fail("Picture's app version is older than yours. Image version is "
+              + generateVersionString(_ver) + ", yours is "
+              + generateVersionString(version) + ".");
+        return nullptr;
+    }
+    // Get the hash
+    QByteArray hash = data.left(32);
+    data.remove(0, 32);
+
+    // Unzip
+    QByteArray unzipped_data = unzip(data, key.toUtf8());
+    QByteArray our_hash = QCryptographicHash::hash(unzipped_data, QCryptographicHash::Sha256);
+    if(our_hash != hash) {
+        fail("fail_hash");
+        return QByteArray("");
+    }
+    return unzipped_data;
+}
 long ModelPC::pop(int bits)
 {
     // Hard to say
@@ -570,7 +654,7 @@ QByteArray ModelPC::unzip(QByteArray data, QByteArray key)
  * \param data Data to be encrypted
  * \param key Key for encryption
  * \return Returns decrypted data
- * \sa ModelPC::start, ModelPC::encrypt, ModelPC::unzip
+ * \sa ModelPC::start, ModelPC::inject, ModelPC::unzip
  */
 QByteArray ModelPC::zip(QByteArray data, QByteArray key)
 {
@@ -579,23 +663,6 @@ QByteArray ModelPC::zip(QByteArray data, QByteArray key)
     // Encryption
     QByteArray hashKey = QCryptographicHash::hash(key, QCryptographicHash::Sha256);
     return QAESEncryption::Crypt(QAESEncryption::AES_256, QAESEncryption::ECB, c_data, hashKey);
-}
-
-void ModelPC::modernCircuit(QImage *image, QByteArray *data, long long countBytes)
-{
-    // Currently in development
-    return;
-    // Dead code
-
-    QByteArray hash = QCryptographicHash::hash(mykey.toUtf8(), QCryptographicHash::Sha256);
-    QByteArray hex = hash.toHex().toUpper().left(16);
-    auto random_seed = hex.toULongLong(nullptr, 16);
-    qsrand(random_seed);
-
-    for(int i = 0; i < 20; i++)
-        qDebug() << qrand() << endl;
-
-    qsrand(randSeed());
 }
 
 bool ModelPC::fileExists(QString path)
@@ -661,4 +728,10 @@ uint ModelPC::randSeed()
     uint randSeed = time.msecsSinceStartOfDay() % 65536 + time.minute() * 21 + time.second() * 2;
     return randSeed;
 }
-
+QByteArray ModelPC::GetRandomBytes(long long count)
+{
+    QByteArray res;
+    for(int i = 0; i < count; i++)
+       res += qrand() % 256;
+    return res;
+}

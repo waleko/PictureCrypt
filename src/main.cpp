@@ -4,10 +4,13 @@
  * \mainpage PictureCrypt
  * Project made using QT Creator in C++
  *
- * \section idea The idea of the project
- * The idea came to me, when I read an article about steganoraphy.
- * I realised, that you can store data in an image in pixels near the border,
- * so noone can see and even if they did, it is practically impossible to decipher the contents.
+ * \section about About
+ * A simple steganography project which hides data in images
+ * This project is built using MVC pattern and features GUI.
+ * [Qt](https://qt.io) and [QAESEncryption](https://github.com/bricke/Qt-AES) by [bricke](https://github.com/bricke) were used.
+ * \section download Download
+ * Get the binary files at [latest release page](https://github.com/waleko/PictureCrypt/releases/latest)
+ * Or download latest **UNSTABLE** binary file for linux [here](https://github.com/waleko/PictureCrypt/raw/gh-pages/src/build/Release/PictureCrypt)
  * \section real Realisation
  * To create the encrypted image, you need to select any file for encryption, then using EncryptDialog
  * you select the image to store the data. Then output image is generated.
@@ -98,7 +101,7 @@
  * > Everyone has the right to freedom of opinion and expression; this right includes freedom to hold opinions without interference and to seek, receive and impart information and ideas through any media and regardless of frontiers.
  * And I typed this link randomly, and I'm scared...
  *
- * \section lic License
+ * \section license License
  * This software is provided under the [UNLICENSE](http://unlicense.org)
  *
  * \section contact Contact us

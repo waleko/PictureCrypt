@@ -110,7 +110,7 @@ void ViewPC::on_startButton_clicked()
         QByteArray hash = QCryptographicHash::hash(data, QCryptographicHash::Sha256);
         encr_data = hash + encr_data;
         // TODO do the mode thing
-        emit encrypt(encr_data, &dialog->image, 0, dialog->bitsUsed);
+        emit encrypt(encr_data, &dialog->image, 1, dialog->bitsUsed);
     }
     else
     {
@@ -125,7 +125,7 @@ void ViewPC::on_startButton_clicked()
         if(key.isEmpty())
             return;
         QImage * res_image = new QImage(inputFileName);
-        emit decrypt(res_image, key);
+        emit decrypt(res_image, key, 1);
     }
 }
 /*!

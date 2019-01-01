@@ -43,3 +43,6 @@ target_wrapper.*
 CMakeLists.txt.user*
 #TMP files
 *.tmp
+
+# Build stuff
+/src/build/*
