@@ -43,11 +43,11 @@ before_script:
 script:
   - bash ./../scripts/build.sh
   - bash ./../scripts/clean.sh
+  - cd doxy
 
 before_deploy:
-  - cd doxy
   - bash ./../../scripts/deploy.sh
-  - cd ../..
+#  - cd ../..
 #  - pip install --user awscli
 #  - aws s3 sync s3://mxe-qt/ mxe --region us-west-1 > s3.log
 #  - cd src
