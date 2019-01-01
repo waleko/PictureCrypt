@@ -60,9 +60,9 @@ deploy:
     keep-history: true
     on:
       branch: master
-  - provider: s3
-    access_key_id: $AWS_ACCESS_KEY_ID
-    secret_access_key: $AWS_SECRET_ACCESS_KEY
-    bucket: "waleko-cedar"
-    skip_cleanup: true
-    region: us-west-1
+#  - provider: s3
+#    access_key_id: $AWS_ACCESS_KEY_ID
+#    secret_access_key: $AWS_SECRET_ACCESS_KEY
+#    bucket: waleko-cedar
+#    skip_cleanup: true
+#    region: us-west-1
