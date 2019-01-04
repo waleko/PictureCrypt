@@ -9,7 +9,7 @@
 ModelPC::ModelPC()
 {
     // Version control
-    versionString = "1.4.0.dev-alpha.1";
+    versionString = "1.4.0.dev-alpha.4";
 
     auto ver = versionString.split(".");
     version = ver[0].toInt() * qPow(2, 16) + ver[1].toInt() * qPow(2, 8) + ver[2].toInt();
