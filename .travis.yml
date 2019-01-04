@@ -22,12 +22,12 @@ install:
   - source /opt/qt511/bin/qt511-env.sh
   - export QTHOME=/opt/qt511
 
-before_script:
-  - cd src
+#before_script:
+#  - cd src
 script:
   - bash ../scripts/build.sh
 #  - bash ./../scripts/clean.sh
-  - cd ../src/doxy
+  - cd src/doxy
 
 before_deploy:
   - bash ../../scripts/deploy.sh
