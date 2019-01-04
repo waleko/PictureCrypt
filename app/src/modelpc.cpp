@@ -500,7 +500,7 @@ void ModelPC::processPixel(QPoint pos, QVector<QPoint> *were, bool isEncrypt)
         return;
     // Check if point was already visited
     if(were->contains(pos)){
-        fail("Point (" + QString::number(pos.x()) + "," + QString::number(pos.y()) + ") was visited twice! Error code 2");
+        fail("point_visited_twice");
         return;
     }
     else
@@ -816,15 +816,11 @@ QByteArray ModelPC::decryptv1_3(QImage *image, QString key)
     _ver += mod(data.at(2));
     data.remove(0, 3);
     if(_ver > version) {
-        fail("Picture's app version is newer than yours. Image version is "
-              + generateVersionString(_ver) + ", yours is "
-              + generateVersionString(version) + ".");
+        fail("new_version");
         return nullptr;
     }
     else if(_ver < version) {
-        fail("Picture's app version is older than yours. Image version is "
-              + generateVersionString(_ver) + ", yours is "
-              + generateVersionString(version) + ".");
+        fail("old_version");
         return nullptr;
     }
     // Get the hash

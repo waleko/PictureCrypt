@@ -76,20 +76,20 @@ void ViewPC::on_startButton_clicked()
         QByteArray data;
         if(text.isEmpty()) {
             if(inputFileName.isEmpty()) {
-                alert("No input file or text was not given. Cannot continue!", true);
+                alert("no_input_file", true);
                 return;
             }
             // Opening the file
             QFile file(inputFileName);
             if (!file.open(QIODevice::ReadOnly))
             {
-                alert("Cannot open file. Cannot continue!", true);
+                alert("open_file_fail", true);
                 return;
             }
             // Check the data size
             auto size = file.size();
             if(size > qPow(2, 24)) {
-                alert("Your file is too big, our systems can handle it, but it requires a lot of time. We decline.", true);
+                alert("big_file", true);
                 file.close();
                 return;
             }
@@ -123,10 +123,8 @@ void ViewPC::on_startButton_clicked()
     else
     {
         // Get the filename of the image
-        if(!ui->text->toPlainText().isEmpty())
-            alert("Obviously, the text browser isn't supported for decryption, use File Dialog instead.");
         if(inputFileName.isEmpty()) {
-            alert("File not selected. Cannot continue!", true);
+            alert("no_file_selected", true);
             return;
         }
         QByteArray key = requestKey().toUtf8();
@@ -171,12 +169,12 @@ void ViewPC::saveData(QByteArray Edata)
     QFile writeFile(outputFileName);
     if (!writeFile.open(QIODevice::WriteOnly))
     {
-        alert("Cannot access file path. Cannot continue!", true);
+        alert("save_file_fail", true);
         return;
     }
     writeFile.write(Edata);
     writeFile.close();
-    alert("Decryption completed!");
+    alert("decryption_completed");
 }
 /*!
  * \brief ViewPC::saveImage Slot to be called to save image using QFileDialog.
@@ -190,10 +188,10 @@ void ViewPC::saveImage(QImage * image)
                                "/untitled.png",
                                tr("Images(*.png)"));
     if(!image->save(outputFileName)) {
-        alert("Cannot save file. Unable to continue!", true);
+        alert("save_file_fail", true);
         return;
     }
-    alert("Encryption completed!");
+    alert("encryption_completed");
 }
 /*!
  * \brief ViewPC::setProgress Slot to set the value of the ProgressDialog (ViewPC::dialog).

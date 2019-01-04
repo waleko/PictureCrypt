@@ -5,10 +5,6 @@
         <file>icons/unlocked.png</file>
         <file>icons/mail.png</file>
         <file>icons/code.png</file>
-        <file>unit_tests/longtext.txt</file>
-        <file>unit_tests/bigpicture.jpg</file>
-        <file>unit_tests/tinypicture.png</file>
         <file>config/ErrorsDict.json</file>
-        <file>unit_tests/tests.json</file>
     </qresource>
 </RCC>

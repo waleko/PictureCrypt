@@ -12,7 +12,7 @@ sudo apt-get install -y qt510-meta-minimal
 source /opt/qt510/bin/qt510-env.sh
 export QTHOME=/opt/qt510
   # Install g++
-sudo apt-get install g++-7
+sudo apt-get install -y g++-7
   # Install doxy + graphviz
 sudo apt-get install -y doxygen
 sudo apt-get install -y doxygen-doc
