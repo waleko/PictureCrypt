@@ -23,26 +23,18 @@
 00024     connect(view, SIGNAL(decrypt(QImage*,QString,\textcolor{keywordtype}{int})), model, SLOT(decrypt(QImage*, QString, \textcolor{keywordtype}{int})));
 00025     connect(view, SIGNAL(abortModel()), \textcolor{keyword}{this}, SLOT(\hyperlink{class_controller_p_c_a8814989f7be1214e06b2e720889066b0}{abortCircuit}()));
 00026     connect(view, SIGNAL(\hyperlink{class_controller_p_c_ac00d29685a7e5b780c01eb438e10f96d}{setJPHSDir}(QString)), \textcolor{keyword}{this}, SLOT(\hyperlink{class_controller_p_c_ac00d29685a7e5b780c01eb438e10f96d}{setJPHSDir}(QString)));
-00027     connect(view, SIGNAL(\hyperlink{class_controller_p_c_aaa59fc90e1ef731eee4560ec87e43707}{runTests}()), \textcolor{keyword}{this}, SLOT(\hyperlink{class_controller_p_c_aaa59fc90e1ef731eee4560ec87e43707}{runTests}()));
-00028 
-00029     connect(model, SIGNAL(alertView(QString,\textcolor{keywordtype}{bool})), view, SLOT(alert(QString,\textcolor{keywordtype}{bool})));
-00030     connect(model, SIGNAL(saveData(QByteArray)), view, SLOT(saveData(QByteArray)));
-00031     connect(model, SIGNAL(saveImage(QImage*)), view, SLOT(saveImage(QImage*)));
-00032     connect(model, SIGNAL(setProgress(\textcolor{keywordtype}{int})), view, SLOT(setProgress(\textcolor{keywordtype}{int})));
-00033 \}
-\hypertarget{controllerpc_8cpp_source.tex_l00038}{}\hyperlink{class_controller_p_c_a8814989f7be1214e06b2e720889066b0}{00038} \textcolor{keywordtype}{void} \hyperlink{class_controller_p_c_a8814989f7be1214e06b2e720889066b0}{ControllerPC::abortCircuit}()
-00039 \{
-00040     model->\hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{success} = \textcolor{keyword}{false};
-00041 \}
-\hypertarget{controllerpc_8cpp_source.tex_l00045}{}\hyperlink{class_controller_p_c_aaa59fc90e1ef731eee4560ec87e43707}{00045} \textcolor{keywordtype}{void} \hyperlink{class_controller_p_c_aaa59fc90e1ef731eee4560ec87e43707}{ControllerPC::runTests}()
+00027 
+00028     connect(model, SIGNAL(alertView(QString,\textcolor{keywordtype}{bool})), view, SLOT(alert(QString,\textcolor{keywordtype}{bool})));
+00029     connect(model, SIGNAL(saveData(QByteArray)), view, SLOT(saveData(QByteArray)));
+00030     connect(model, SIGNAL(saveImage(QImage*)), view, SLOT(saveImage(QImage*)));
+00031     connect(model, SIGNAL(setProgress(\textcolor{keywordtype}{int})), view, SLOT(setProgress(\textcolor{keywordtype}{int})));
+00032 \}
+\hypertarget{controllerpc_8cpp_source.tex_l00037}{}\hyperlink{class_controller_p_c_a8814989f7be1214e06b2e720889066b0}{00037} \textcolor{keywordtype}{void} \hyperlink{class_controller_p_c_a8814989f7be1214e06b2e720889066b0}{ControllerPC::abortCircuit}()
+00038 \{
+00039     model->\hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{success} = \textcolor{keyword}{false};
+00040 \}
+\hypertarget{controllerpc_8cpp_source.tex_l00045}{}\hyperlink{class_controller_p_c_ac00d29685a7e5b780c01eb438e10f96d}{00045} \textcolor{keywordtype}{void} \hyperlink{class_controller_p_c_ac00d29685a7e5b780c01eb438e10f96d}{ControllerPC::setJPHSDir}(QString dir)
 00046 \{
-00047     \textcolor{comment}{// FIXME remove all of this mess and use QtTest}
-00048     QMessageBox o;
-00049     o.setText(\textcolor{stringliteral}{"No tests, sorry. Use 'make tests'"});
-00050     o.exec();
-00051 \}
-\hypertarget{controllerpc_8cpp_source.tex_l00056}{}\hyperlink{class_controller_p_c_ac00d29685a7e5b780c01eb438e10f96d}{00056} \textcolor{keywordtype}{void} \hyperlink{class_controller_p_c_ac00d29685a7e5b780c01eb438e10f96d}{ControllerPC::setJPHSDir}(QString dir)
-00057 \{
-00058     model->\hyperlink{class_model_p_c_abd038306f14f22fb885a1697c96d6335}{defaultJPHSDir} = dir;
-00059 \}
+00047     model->\hyperlink{class_model_p_c_abd038306f14f22fb885a1697c96d6335}{defaultJPHSDir} = dir;
+00048 \}
 \end{DoxyCode}

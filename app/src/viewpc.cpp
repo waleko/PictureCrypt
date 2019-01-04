@@ -307,11 +307,6 @@ void ViewPC::on_actionJPHS_path_triggered()
     emit setJPHSDir(dir);
 }
 
-void ViewPC::on_actionRun_tests_triggered()
-{
-    emit runTests();
-}
-
 void ViewPC::on_comboBox_currentIndexChanged(int index)
 {
     selectedMode = index + 1;

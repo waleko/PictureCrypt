@@ -6,5 +6,7 @@
 	<string name="nullimage">Invalid / null image!</string>
 	<string name="bigimage">Image is too big!</string>
 	<string name="bitsWrong">bitsUsed parameter is wrong!</string>
+	<string name="no_key">No key given!</string>
+	<string name=""></string>
 	
 </resources>

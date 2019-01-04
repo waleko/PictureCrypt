@@ -46,8 +46,6 @@ private slots:
 
     void on_actionJPHS_path_triggered();
 
-    void on_actionRun_tests_triggered();
-
     void on_comboBox_currentIndexChanged(int index);
 
     void on_text_textChanged();
@@ -89,7 +87,8 @@ signals:
      * \brief decrypt Signal calling ModelPC::decrypt
      * \param _image Image for decryption
      * \param key encryption key
-     * // FIXME add param
+     * \param mode Mode of decryption
+     * \sa ModelPC::decrypt, ModelPC::CryptMode
      */
     void decrypt(QImage * _image, QString key, int mode);
     /*!
@@ -101,10 +100,6 @@ signals:
      * \param dir Directory
      */
     void setJPHSDir(QString dir);
-    /*!
-     * \brief runTests Runs tests in ControllerPC via TestPC
-     */
-    void runTests();
 public:
     /*!
      * \brief dialog ProgressDialog used.

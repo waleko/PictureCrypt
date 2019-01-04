@@ -11,7 +11,7 @@
 #include <QTime>
 #include <QFileInfo>
 #include <QtGui>
-#include <QRandomGenerator>
+#include <QtCore/QRandomGenerator>
 #include <QPair>
 
 #include "aes/qaesencryption.h"

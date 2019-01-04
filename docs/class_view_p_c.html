@@ -162,9 +162,6 @@ Signals</h2></td></tr>
 <tr class="memitem:ae81085836c0c01bc9556a5b27eb8d19c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view_p_c.html#ae81085836c0c01bc9556a5b27eb8d19c">setJPHSDir</a> (QString dir)</td></tr>
 <tr class="memdesc:ae81085836c0c01bc9556a5b27eb8d19c"><td class="mdescLeft">&#160;</td><td class="mdescRight">setJPHSPath Sets the default JPHS directory  <a href="#ae81085836c0c01bc9556a5b27eb8d19c">More...</a><br /></td></tr>
 <tr class="separator:ae81085836c0c01bc9556a5b27eb8d19c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96a6c95728bf20c64d2a8fe978495395"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view_p_c.html#a96a6c95728bf20c64d2a8fe978495395">runTests</a> ()</td></tr>
-<tr class="memdesc:a96a6c95728bf20c64d2a8fe978495395"><td class="mdescLeft">&#160;</td><td class="mdescRight">runTests Runs tests in <a class="el" href="class_controller_p_c.html" title="The ControllerPC class Controller class, which controls View and Model layers. ">ControllerPC</a> via TestPC  <a href="#a96a6c95728bf20c64d2a8fe978495395">More...</a><br /></td></tr>
-<tr class="separator:a96a6c95728bf20c64d2a8fe978495395"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -453,10 +450,12 @@ Here is the caller graph for this function:</div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_image</td><td>Image for decryption </td></tr>
-    <tr><td class="paramname">key</td><td>encryption key // FIXME add param </td></tr>
+    <tr><td class="paramname">key</td><td>encryption key </td></tr>
+    <tr><td class="paramname">mode</td><td>Mode of decryption </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>, <a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceb">ModelPC::CryptMode</a> </dd></dl>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -788,41 +787,6 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a96a6c95728bf20c64d2a8fe978495395"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void ViewPC::runTests </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>runTests Runs tests in <a class="el" href="class_controller_p_c.html" title="The ControllerPC class Controller class, which controls View and Model layers. ">ControllerPC</a> via TestPC </p>
-
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_view_p_c_a96a6c95728bf20c64d2a8fe978495395_icgraph.png" border="0" usemap="#class_view_p_c_a96a6c95728bf20c64d2a8fe978495395_icgraph" alt=""/></div>
-<map name="class_view_p_c_a96a6c95728bf20c64d2a8fe978495395_icgraph" id="class_view_p_c_a96a6c95728bf20c64d2a8fe978495395_icgraph">
-<area shape="rect" id="node2" href="class_view_p_c.html#a0d252ff4829260c6c76769fbd24b7cd7" title="ViewPC::on_actionHelp_triggered Opens online documentation. " alt="" coords="183,5,344,47"/>
-</map>
-</div>
-</p>
-
-</div>
-</div>
 <a class="anchor" id="aaff156103970be7c777beedaf0020604"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1102,7 +1066,7 @@ Here is the caller graph for this function:</div>
 <p>dialog ProgressDialog used. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_view_p_c.html#a9c32a1fdb6ead84e5ada8fba8860c7ed" title="ViewPC::setProgress Slot to set the value of the ProgressDialog (ViewPC::dialog). ...">ViewPC::setProgress</a>, ViewPC::cancel, <a class="el" href="class_model_p_c.html#afdcd80f0ed5062e145a71f09b0897547" title="setProgress Signal to be called to set progress of ProgressDialog. ">ModelPC::setProgress</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="viewpc_8h_source.html#l00113">113</a> of file <a class="el" href="viewpc_8h_source.html">viewpc.h</a>.</p>
+<p>Definition at line <a class="el" href="viewpc_8h_source.html#l00108">108</a> of file <a class="el" href="viewpc_8h_source.html">viewpc.h</a>.</p>
 
 </div>
 </div>
@@ -1118,7 +1082,7 @@ Here is the caller graph for this function:</div>
 
 <p>errorsDict Json object for errors dictionary </p>
 
-<p>Definition at line <a class="el" href="viewpc_8h_source.html#l00122">122</a> of file <a class="el" href="viewpc_8h_source.html">viewpc.h</a>.</p>
+<p>Definition at line <a class="el" href="viewpc_8h_source.html#l00117">117</a> of file <a class="el" href="viewpc_8h_source.html">viewpc.h</a>.</p>
 
 </div>
 </div>
@@ -1135,7 +1099,7 @@ Here is the caller graph for this function:</div>
 <p>progressDialogClosed Flag, if dialog is closed. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_view_p_c.html#ad7ba2fcf1d17862de15e32432823f7b0" title="ViewPC::abortCircuit Slot to close ProgressDialog (ViewPC::dialog) ">ViewPC::abortCircuit</a>, <a class="el" href="class_view_p_c.html#a9c32a1fdb6ead84e5ada8fba8860c7ed" title="ViewPC::setProgress Slot to set the value of the ProgressDialog (ViewPC::dialog). ...">ViewPC::setProgress</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="viewpc_8h_source.html#l00118">118</a> of file <a class="el" href="viewpc_8h_source.html">viewpc.h</a>.</p>
+<p>Definition at line <a class="el" href="viewpc_8h_source.html#l00113">113</a> of file <a class="el" href="viewpc_8h_source.html">viewpc.h</a>.</p>
 
 </div>
 </div>

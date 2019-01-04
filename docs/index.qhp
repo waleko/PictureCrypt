@@ -35,7 +35,6 @@
             <section title="ControllerPC" ref="class_controller_p_c.html">
               <section title="ControllerPC" ref="class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" />
               <section title="abortCircuit" ref="class_controller_p_c.html#a8814989f7be1214e06b2e720889066b0" />
-              <section title="runTests" ref="class_controller_p_c.html#aaa59fc90e1ef731eee4560ec87e43707" />
               <section title="setJPHSDir" ref="class_controller_p_c.html#ac00d29685a7e5b780c01eb438e10f96d" />
               <section title="version" ref="class_controller_p_c.html#a9eb43c34237d66751a6411e55cf5f55e" />
               <section title="versionString" ref="class_controller_p_c.html#a0e63cca37d6ce2e660f3380400c2c5f3" />
@@ -128,7 +127,6 @@
               <section title="on_fileButton_clicked" ref="class_view_p_c.html#a3b9b7a7be9702d8b160f257f1c74a776" />
               <section title="on_startButton_clicked" ref="class_view_p_c.html#a456d75b7c5d3a089302a576e7359f1f4" />
               <section title="requestKey" ref="class_view_p_c.html#a559c95675ec98b15451f3bca47033d9c" />
-              <section title="runTests" ref="class_view_p_c.html#a96a6c95728bf20c64d2a8fe978495395" />
               <section title="saveData" ref="class_view_p_c.html#aaff156103970be7c777beedaf0020604" />
               <section title="saveImage" ref="class_view_p_c.html#a7901ce10ffaaf2387bef1db7feea342d" />
               <section title="setEncryptMode" ref="class_view_p_c.html#a5b48951efefdc0e3039c9a4bf185320b" />
@@ -178,7 +176,6 @@
               <section title="ControllerPC" ref="class_controller_p_c.html">
                 <section title="ControllerPC" ref="class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" />
                 <section title="abortCircuit" ref="class_controller_p_c.html#a8814989f7be1214e06b2e720889066b0" />
-                <section title="runTests" ref="class_controller_p_c.html#aaa59fc90e1ef731eee4560ec87e43707" />
                 <section title="setJPHSDir" ref="class_controller_p_c.html#ac00d29685a7e5b780c01eb438e10f96d" />
                 <section title="version" ref="class_controller_p_c.html#a9eb43c34237d66751a6411e55cf5f55e" />
                 <section title="versionString" ref="class_controller_p_c.html#a0e63cca37d6ce2e660f3380400c2c5f3" />
@@ -300,7 +297,6 @@
                 <section title="on_fileButton_clicked" ref="class_view_p_c.html#a3b9b7a7be9702d8b160f257f1c74a776" />
                 <section title="on_startButton_clicked" ref="class_view_p_c.html#a456d75b7c5d3a089302a576e7359f1f4" />
                 <section title="requestKey" ref="class_view_p_c.html#a559c95675ec98b15451f3bca47033d9c" />
-                <section title="runTests" ref="class_view_p_c.html#a96a6c95728bf20c64d2a8fe978495395" />
                 <section title="saveData" ref="class_view_p_c.html#aaff156103970be7c777beedaf0020604" />
                 <section title="saveImage" ref="class_view_p_c.html#a7901ce10ffaaf2387bef1db7feea342d" />
                 <section title="setEncryptMode" ref="class_view_p_c.html#a5b48951efefdc0e3039c9a4bf185320b" />
@@ -338,7 +334,6 @@
       <keyword name="setVersion" id="AboutPC::setVersion" ref="class_about_p_c.html#aa3815d4826d0c8d87122449537a0a4d5" />
       <keyword name="ControllerPC" id="ControllerPC" ref="class_controller_p_c.html" />
       <keyword name="abortCircuit" id="ControllerPC::abortCircuit" ref="class_controller_p_c.html#a8814989f7be1214e06b2e720889066b0" />
-      <keyword name="runTests" id="ControllerPC::runTests" ref="class_controller_p_c.html#aaa59fc90e1ef731eee4560ec87e43707" />
       <keyword name="setJPHSDir" id="ControllerPC::setJPHSDir" ref="class_controller_p_c.html#ac00d29685a7e5b780c01eb438e10f96d" />
       <keyword name="ControllerPC" id="ControllerPC::ControllerPC" ref="class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" />
       <keyword name="version" id="ControllerPC::version" ref="class_controller_p_c.html#a9eb43c34237d66751a6411e55cf5f55e" />
@@ -426,7 +421,6 @@
       <keyword name="decrypt" id="ViewPC::decrypt" ref="class_view_p_c.html#a365df051360d557c7221474ad856e0af" />
       <keyword name="abortModel" id="ViewPC::abortModel" ref="class_view_p_c.html#aa652102ce6b5757b8eef830409c8cabf" />
       <keyword name="setJPHSDir" id="ViewPC::setJPHSDir" ref="class_view_p_c.html#ae81085836c0c01bc9556a5b27eb8d19c" />
-      <keyword name="runTests" id="ViewPC::runTests" ref="class_view_p_c.html#a96a6c95728bf20c64d2a8fe978495395" />
       <keyword name="ViewPC" id="ViewPC::ViewPC" ref="class_view_p_c.html#a33c96c61f61042319c66c19059836b7f" />
       <keyword name="~ViewPC" id="ViewPC::~ViewPC" ref="class_view_p_c.html#a91c51f5c1e6ed5ab12b410339f469b0f" />
       <keyword name="dialog" id="ViewPC::dialog" ref="class_view_p_c.html#a31abbb470fe329b44e6ffee202b903ca" />
@@ -562,8 +556,6 @@
       <file>class_controller_p_c_afa6c92d67bf3b6531c42385fc5938003_cgraph.png</file>
       <file>class_controller_p_c_a8814989f7be1214e06b2e720889066b0_icgraph.png</file>
       <file>class_controller_p_c_a8814989f7be1214e06b2e720889066b0_icgraph.png</file>
-      <file>class_controller_p_c_aaa59fc90e1ef731eee4560ec87e43707_icgraph.png</file>
-      <file>class_controller_p_c_aaa59fc90e1ef731eee4560ec87e43707_icgraph.png</file>
       <file>class_controller_p_c_ac00d29685a7e5b780c01eb438e10f96d_icgraph.png</file>
       <file>class_controller_p_c_ac00d29685a7e5b780c01eb438e10f96d_icgraph.png</file>
       <file>class_controller_p_c-members.html</file>
@@ -706,8 +698,6 @@
       <file>class_view_p_c_a559c95675ec98b15451f3bca47033d9c_cgraph.png</file>
       <file>class_view_p_c_a559c95675ec98b15451f3bca47033d9c_icgraph.png</file>
       <file>class_view_p_c_a559c95675ec98b15451f3bca47033d9c_icgraph.png</file>
-      <file>class_view_p_c_a96a6c95728bf20c64d2a8fe978495395_icgraph.png</file>
-      <file>class_view_p_c_a96a6c95728bf20c64d2a8fe978495395_icgraph.png</file>
       <file>class_view_p_c_aaff156103970be7c777beedaf0020604_cgraph.png</file>
       <file>class_view_p_c_aaff156103970be7c777beedaf0020604_cgraph.png</file>
       <file>class_view_p_c_a7901ce10ffaaf2387bef1db7feea342d_cgraph.png</file>

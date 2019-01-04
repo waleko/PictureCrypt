@@ -256,18 +256,13 @@
 00307     emit \hyperlink{class_view_p_c_ae81085836c0c01bc9556a5b27eb8d19c}{setJPHSDir}(dir);
 00308 \}
 00309 
-00310 \textcolor{keywordtype}{void} ViewPC::on\_actionRun\_tests\_triggered()
+00310 \textcolor{keywordtype}{void} ViewPC::on\_comboBox\_currentIndexChanged(\textcolor{keywordtype}{int} index)
 00311 \{
-00312     emit \hyperlink{class_view_p_c_a96a6c95728bf20c64d2a8fe978495395}{runTests}();
+00312     selectedMode = index + 1;
 00313 \}
 00314 
-00315 \textcolor{keywordtype}{void} ViewPC::on\_comboBox\_currentIndexChanged(\textcolor{keywordtype}{int} index)
+00315 \textcolor{keywordtype}{void} ViewPC::on\_text\_textChanged()
 00316 \{
-00317     selectedMode = index + 1;
+00317     ui->fileButton->setEnabled(ui->text->toPlainText().isEmpty());
 00318 \}
-00319 
-00320 \textcolor{keywordtype}{void} ViewPC::on\_text\_textChanged()
-00321 \{
-00322     ui->fileButton->setEnabled(ui->text->toPlainText().isEmpty());
-00323 \}
 \end{DoxyCode}

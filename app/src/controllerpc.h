@@ -32,7 +32,6 @@ public:
     QString versionString;
 public slots:
     void abortCircuit();
-    void runTests();
     void setJPHSDir(QString dir);
 private:
     ViewPC * view;
