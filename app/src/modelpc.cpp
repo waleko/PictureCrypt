@@ -93,7 +93,7 @@ QImage * ModelPC::encrypt(QByteArray data, QImage * image, int _mode, QString ke
     long long usedBytes = data.size() + 14 + key.size();
     long long size = image->width() * image->height();
     if(usedBytes * 100 / (size * 3) * 8 / _bitsUsed > 70) {
-        fail("muchdata");
+        fail("bigdata");
         return nullptr;
     }
 
@@ -319,7 +319,7 @@ void ModelPC::jphs(QImage *image, QByteArray *data)
     if(isEncrypt) {
         QFile file(randomFileName + ".pc");
         if(!file.open(QFile::WriteOnly)) {
-            fail("savefilefail");
+            fail("save_file_fail");
             return;
         }
         file.write(*data);
