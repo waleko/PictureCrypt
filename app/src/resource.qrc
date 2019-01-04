@@ -6,5 +6,6 @@
         <file>icons/mail.png</file>
         <file>icons/code.png</file>
         <file>config/ErrorsDict.json</file>
+        <file>icons/waleko.png</file>
     </qresource>
 </RCC>

@@ -240,6 +240,7 @@ void ViewPC::abortCircuit()
  */
 void ViewPC::setEncryptMode(bool encr)
 {
+    ui->text->setText("");
     ui->text->setEnabled(encr);
     isEncrypt = encr;
     ui->startButton->setText(encr ? "Continue configuration" : "Start decryption");
@@ -268,7 +269,7 @@ QString ViewPC::requestKey()
                                          tr("Enter the keyphrase:"), QLineEdit::Normal,
                                          QDir::home().dirName(), &ok);
     if(text.isEmpty() && ok) {
-        alert("Key is empty!", true);
+        alert("no_key", true);
         return QString();
     }
     return ok ? text : QString();
@@ -314,4 +315,9 @@ void ViewPC::on_actionRun_tests_triggered()
 void ViewPC::on_comboBox_currentIndexChanged(int index)
 {
     selectedMode = index + 1;
+}
+
+void ViewPC::on_text_textChanged()
+{
+    ui->fileButton->setEnabled(ui->text->toPlainText().isEmpty());
 }

@@ -50,6 +50,8 @@ private slots:
 
     void on_comboBox_currentIndexChanged(int index);
 
+    void on_text_textChanged();
+
 protected slots:
     void on_fileButton_clicked();
 
