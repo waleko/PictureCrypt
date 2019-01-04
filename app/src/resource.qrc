@@ -5,7 +5,7 @@
         <file>icons/unlocked.png</file>
         <file>icons/mail.png</file>
         <file>icons/code.png</file>
-        <file>config/ErrorsDict.json</file>
         <file>icons/waleko.png</file>
+        <file>res/values/errors.xml</file>
     </qresource>
 </RCC>

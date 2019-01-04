@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['f',['f',['../namespace_errors_dict_setup.html#aadfab4e19ca2acd086062511d8ec75a8',1,'ErrorsDictSetup']]],
-  ['filename',['filename',['../namespace_errors_dict_setup.html#a0c97c48fca0fdec3e730b9df1dbab9c7',1,'ErrorsDictSetup']]]
+  ['goodpercentage',['goodPercentage',['../class_encrypt_dialog.html#a0c821b893cfddd7a6c07bbd270ba49e9',1,'EncryptDialog']]]
 ];

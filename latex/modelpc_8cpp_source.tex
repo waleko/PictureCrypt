@@ -19,8 +19,8 @@
 00021     qsrand(randSeed());
 00022 \}
 00023 
-\hypertarget{modelpc_8cpp_source.tex_l00024}{}\hyperlink{class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd}{00024} QImage *\hyperlink{class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd}{ModelPC::Encrypt}(QByteArray \hyperlink{namespace_errors_dict_setup_af570460846fb9f0c91abd308a095dcdc}{data}, QImage *image, \textcolor{keywordtype}{int} \_mode, QString 
-      \hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key}, \textcolor{keywordtype}{int} \_bitsUsed, QString *\_error)
+\hypertarget{modelpc_8cpp_source.tex_l00024}{}\hyperlink{class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd}{00024} QImage *\hyperlink{class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd}{ModelPC::Encrypt}(QByteArray data, QImage *image, \textcolor{keywordtype}{int} \_mode, QString key, \textcolor{keywordtype}{int} 
+      \_bitsUsed, QString *\_error)
 00025 \{
 00026     \textcolor{keywordflow}{return} \hyperlink{class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c}{ModelPC}().encrypt(data, image, \_mode, key, \_bitsUsed, \_error);
 00027 \}
@@ -31,12 +31,12 @@
 00031     \textcolor{keywordflow}{return} \hyperlink{class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c}{ModelPC}().inject(encr\_data, image, \_mode, \_bitsUsed, \_error);
 00032 \}
 00033 
-\hypertarget{modelpc_8cpp_source.tex_l00034}{}\hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{00034} QByteArray \hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{ModelPC::Decrypt}(QImage *image, QString \hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key}, \textcolor{keywordtype}{int} \_mode, QString *\_error)
+\hypertarget{modelpc_8cpp_source.tex_l00034}{}\hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{00034} QByteArray \hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{ModelPC::Decrypt}(QImage *image, QString key, \textcolor{keywordtype}{int} \_mode, QString *\_error)
 00035 \{
 00036     \textcolor{keywordflow}{return} \hyperlink{class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c}{ModelPC}().decrypt(image, key, \_mode, \_error);
 00037 \}
-\hypertarget{modelpc_8cpp_source.tex_l00051}{}\hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{00051} QImage * \hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{ModelPC::encrypt}(QByteArray \hyperlink{namespace_errors_dict_setup_af570460846fb9f0c91abd308a095dcdc}{data}, QImage * image, \textcolor{keywordtype}{int} \_mode, QString 
-      \hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key}, \textcolor{keywordtype}{int} \_bitsUsed, QString *\_error)
+\hypertarget{modelpc_8cpp_source.tex_l00051}{}\hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{00051} QImage * \hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{ModelPC::encrypt}(QByteArray data, QImage * image, \textcolor{keywordtype}{int} \_mode, QString key, \textcolor{keywordtype}{int} 
+      \_bitsUsed, QString *\_error)
 00052 \{
 00053     \hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{success} = \textcolor{keyword}{true};
 00054     \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceb}{CryptMode} mode = \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceb}{CryptMode}(\_mode);
@@ -179,7 +179,7 @@
 00200     \textcolor{keywordflow}{else}
 00201         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
 00202 \}
-\hypertarget{modelpc_8cpp_source.tex_l00212}{}\hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{00212} QByteArray \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{ModelPC::decrypt}(QImage * image, QString \hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key}, \textcolor{keywordtype}{int} \_mode, QString *\_error)
+\hypertarget{modelpc_8cpp_source.tex_l00212}{}\hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{00212} QByteArray \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{ModelPC::decrypt}(QImage * image, QString key, \textcolor{keywordtype}{int} \_mode, QString *\_error)
 00213 \{
 00214     \hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{success} = \textcolor{keyword}{true};
 00215     \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceb}{CryptMode} mode = \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceb}{CryptMode}(\_mode);
@@ -256,7 +256,7 @@
 00290     \}
 00291     qDebug() << \textcolor{stringliteral}{"[Debug] !!! fail() - "} << message;
 00292 \}
-\hypertarget{modelpc_8cpp_source.tex_l00298}{}\hyperlink{class_model_p_c_a8bee0255c09449868c7e6097afaaf0cd}{00298} \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a8bee0255c09449868c7e6097afaaf0cd}{ModelPC::jphs}(QImage *image, QByteArray *\hyperlink{namespace_errors_dict_setup_af570460846fb9f0c91abd308a095dcdc}{data})
+\hypertarget{modelpc_8cpp_source.tex_l00298}{}\hyperlink{class_model_p_c_a8bee0255c09449868c7e6097afaaf0cd}{00298} \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a8bee0255c09449868c7e6097afaaf0cd}{ModelPC::jphs}(QImage *image, QByteArray *data)
 00299 \{
 00300     \textcolor{comment}{// Under Development}
 00301     \textcolor{keywordflow}{return};
@@ -309,7 +309,7 @@
 00348 
 00349 \}
 00350 
-\hypertarget{modelpc_8cpp_source.tex_l00359}{}\hyperlink{class_model_p_c_a1d0091062a0c836b283ec2f67411623b}{00359} \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a1d0091062a0c836b283ec2f67411623b}{ModelPC::circuit}(QImage *image, QByteArray *\hyperlink{namespace_errors_dict_setup_af570460846fb9f0c91abd308a095dcdc}{data}, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} countBytes)
+\hypertarget{modelpc_8cpp_source.tex_l00359}{}\hyperlink{class_model_p_c_a1d0091062a0c836b283ec2f67411623b}{00359} \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a1d0091062a0c836b283ec2f67411623b}{ModelPC::circuit}(QImage *image, QByteArray *data, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} countBytes)
 00360 \{
 00361     \textcolor{comment}{// Some flags and creation of the ProgressDialog}
 00362     \hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{success} = \textcolor{keyword}{true};
@@ -330,7 +330,7 @@
 00377     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} offset = 0;
 00378 
 00379     \textcolor{comment}{// Pre-start Cleaning}
-00380     circuitData = \hyperlink{namespace_errors_dict_setup_af570460846fb9f0c91abd308a095dcdc}{data};
+00380     circuitData = data;
 00381     circuitImage = image;
 00382     circuitCountBytes = countBytes;
 00383     cur = 0;
@@ -498,8 +498,7 @@
 00552     \}
 00553     emit \hyperlink{class_model_p_c_afdcd80f0ed5062e145a71f09b0897547}{setProgress}(100 * cur / circuitCountBytes);
 00554 \}
-\hypertarget{modelpc_8cpp_source.tex_l00560}{}\hyperlink{class_model_p_c_a4daefc3fb87a1f19172b9b20c987eb12}{00560} \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a4daefc3fb87a1f19172b9b20c987eb12}{ModelPC::encryptv1\_4}(QImage *image, QByteArray \hyperlink{namespace_errors_dict_setup_af570460846fb9f0c91abd308a095dcdc}{data}, QString 
-      \hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key})
+\hypertarget{modelpc_8cpp_source.tex_l00560}{}\hyperlink{class_model_p_c_a4daefc3fb87a1f19172b9b20c987eb12}{00560} \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a4daefc3fb87a1f19172b9b20c987eb12}{ModelPC::encryptv1\_4}(QImage *image, QByteArray data, QString key)
 00561 \{
 00562     \textcolor{keywordflow}{if}(data.size() + 98 > image->height() * image->width() * 3) \{
 00563         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"bigdata"});
@@ -536,7 +535,7 @@
 00593     qDebug() << \textcolor{stringliteral}{"[Debug] Finished encrypting in "} << st.msecsTo(\textcolor{keyword}{final}) << \textcolor{stringliteral}{" msecs."};
 00594 \}
 00595 
-\hypertarget{modelpc_8cpp_source.tex_l00602}{}\hyperlink{class_model_p_c_a7a1f7d491e1bde16936190b9e90896b0}{00602} QByteArray \hyperlink{class_model_p_c_a7a1f7d491e1bde16936190b9e90896b0}{ModelPC::decryptv1\_4}(QImage *image, QString \hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key})
+\hypertarget{modelpc_8cpp_source.tex_l00602}{}\hyperlink{class_model_p_c_a7a1f7d491e1bde16936190b9e90896b0}{00602} QByteArray \hyperlink{class_model_p_c_a7a1f7d491e1bde16936190b9e90896b0}{ModelPC::decryptv1\_4}(QImage *image, QString key)
 00603 \{
 00604     QTime st = QTime::currentTime();
 00605     QByteArray mid\_data, heavy\_data;
@@ -589,9 +588,8 @@
 00651     qDebug() << \textcolor{stringliteral}{"[Debug] Finished decrypting in "} << st.msecsTo(\textcolor{keyword}{final}) << \textcolor{stringliteral}{" msecs."};
 00652     \textcolor{keywordflow}{return} unzipped;
 00653 \}
-\hypertarget{modelpc_8cpp_source.tex_l00663}{}\hyperlink{class_model_p_c_a5cdb4d1d61ff62ee9d45b496a7dbf1fb}{00663} \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a5cdb4d1d61ff62ee9d45b496a7dbf1fb}{ModelPC::proccessPixelsv1\_4}(QImage *image, QByteArray* 
-      \hyperlink{namespace_errors_dict_setup_af570460846fb9f0c91abd308a095dcdc}{data}, QByteArray \hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key}, \textcolor{keywordtype}{bool} isEncrypt, QVector <QPair<QPoint, QPair<int, int>>> *were, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} size
-      )
+\hypertarget{modelpc_8cpp_source.tex_l00663}{}\hyperlink{class_model_p_c_a5cdb4d1d61ff62ee9d45b496a7dbf1fb}{00663} \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a5cdb4d1d61ff62ee9d45b496a7dbf1fb}{ModelPC::proccessPixelsv1\_4}(QImage *image, QByteArray* data, QByteArray key
+      , \textcolor{keywordtype}{bool} isEncrypt, QVector <QPair<QPoint, QPair<int, int>>> *were, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} size)
 00664 \{
 00665     \textcolor{keywordtype}{long} w = image->width();
 00666     \textcolor{keywordtype}{long} h = image->height();
@@ -699,7 +697,7 @@
 00768     \}
 00769 \}
 00770 
-\hypertarget{modelpc_8cpp_source.tex_l00777}{}\hyperlink{class_model_p_c_a4fe70ebbedfaf31d45a35f82d0f06caa}{00777} QByteArray \hyperlink{class_model_p_c_a4fe70ebbedfaf31d45a35f82d0f06caa}{ModelPC::decryptv1\_3}(QImage *image, QString \hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key})
+\hypertarget{modelpc_8cpp_source.tex_l00777}{}\hyperlink{class_model_p_c_a4fe70ebbedfaf31d45a35f82d0f06caa}{00777} QByteArray \hyperlink{class_model_p_c_a4fe70ebbedfaf31d45a35f82d0f06caa}{ModelPC::decryptv1\_3}(QImage *image, QString key)
 00778 \{
 00779     \textcolor{comment}{// Image opening}
 00780     \textcolor{keywordtype}{int} w = image->width();
@@ -727,7 +725,7 @@
 00801     \textcolor{comment}{// curMode = colDR.green() % 32;}
 00802 
 00803     \textcolor{comment}{// Start of the circuit}
-00804     QByteArray \hyperlink{namespace_errors_dict_setup_af570460846fb9f0c91abd308a095dcdc}{data};
+00804     QByteArray data;
 00805     \hyperlink{class_model_p_c_a1d0091062a0c836b283ec2f67411623b}{circuit}(image, &data, countBytes);
 00806 
 00807     \textcolor{comment}{// Check if circuit was successful}
@@ -778,13 +776,13 @@
 00852     \textcolor{keywordflow}{return} res;
 00853 \}
 00854 
-00855 \textcolor{keywordtype}{void} ModelPC::push(\textcolor{keywordtype}{int} \hyperlink{namespace_errors_dict_setup_af570460846fb9f0c91abd308a095dcdc}{data}, \textcolor{keywordtype}{int} bits)
+00855 \textcolor{keywordtype}{void} ModelPC::push(\textcolor{keywordtype}{int} data, \textcolor{keywordtype}{int} bits)
 00856 \{
 00857     \textcolor{comment}{// That's easier, but also hard}
 00858     \textcolor{keywordtype}{int} buf\_size = bitsBuffer.size();
 00859     \textcolor{keywordtype}{int} extraSize = bits == -1 ? bitsUsed : bits;
 00860     bitsBuffer.resize(buf\_size + extraSize);
-00861     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = bitsBuffer.size() - 1; i >= buf\_size; i--, \hyperlink{namespace_errors_dict_setup_af570460846fb9f0c91abd308a095dcdc}{data} >>= 1)
+00861     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i = bitsBuffer.size() - 1; i >= buf\_size; i--, data >>= 1)
 00862         bitsBuffer[i] = data % 2;
 00863 \}
 00864 
@@ -795,7 +793,7 @@
 00868                                    circuitData->size() * 8 + bitsBuffer.size() <
 00869                                    circuitCountBytes * 8 - (circuitCountBytes * 8)% (bitsUsed * 3));
 00870 \}
-\hypertarget{modelpc_8cpp_source.tex_l00879}{}\hyperlink{class_model_p_c_a6da88f166785a49f73b22c169f956fd0}{00879} QByteArray \hyperlink{class_model_p_c_a6da88f166785a49f73b22c169f956fd0}{ModelPC::unzip}(QByteArray \hyperlink{namespace_errors_dict_setup_af570460846fb9f0c91abd308a095dcdc}{data}, QByteArray \hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key})
+\hypertarget{modelpc_8cpp_source.tex_l00879}{}\hyperlink{class_model_p_c_a6da88f166785a49f73b22c169f956fd0}{00879} QByteArray \hyperlink{class_model_p_c_a6da88f166785a49f73b22c169f956fd0}{ModelPC::unzip}(QByteArray data, QByteArray key)
 00880 \{
 00881     \textcolor{comment}{// Decryption}
 00882     QByteArray hashKey = QCryptographicHash::hash(key, QCryptographicHash::Sha256);
@@ -805,7 +803,7 @@
 00885     \textcolor{comment}{// Decompressing}
 00886     \textcolor{keywordflow}{return} qUncompress(new\_data);
 00887 \}
-\hypertarget{modelpc_8cpp_source.tex_l00896}{}\hyperlink{class_model_p_c_afebbbfa4b07deba4f68fc6dfb50f353f}{00896} QByteArray \hyperlink{class_model_p_c_afebbbfa4b07deba4f68fc6dfb50f353f}{ModelPC::zip}(QByteArray \hyperlink{namespace_errors_dict_setup_af570460846fb9f0c91abd308a095dcdc}{data}, QByteArray \hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key})
+\hypertarget{modelpc_8cpp_source.tex_l00896}{}\hyperlink{class_model_p_c_afebbbfa4b07deba4f68fc6dfb50f353f}{00896} QByteArray \hyperlink{class_model_p_c_afebbbfa4b07deba4f68fc6dfb50f353f}{ModelPC::zip}(QByteArray data, QByteArray key)
 00897 \{
 00898     \textcolor{comment}{// Zip}
 00899     QByteArray c\_data = qCompress(data, 9);

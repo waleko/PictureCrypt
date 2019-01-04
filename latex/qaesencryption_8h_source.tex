@@ -30,17 +30,15 @@
 \hypertarget{qaesencryption_8h_source.tex_l00058}{}\hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{00058}       \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{ISO}
 00059     \};
 00071     \textcolor{keyword}{static} QByteArray \hyperlink{class_q_a_e_s_encryption_a43819eeb6a7cb29fbd3cb6ad640dcbdf}{Crypt}(\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{QAESEncryption::Aes} level, 
-      \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{QAESEncryption::Mode} mode, \textcolor{keyword}{const} QByteArray &rawText, \textcolor{keyword}{const} QByteArray &
-      \hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key},
+      \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{QAESEncryption::Mode} mode, \textcolor{keyword}{const} QByteArray &rawText, \textcolor{keyword}{const} QByteArray &key,
 00072                             \textcolor{keyword}{const} QByteArray &iv = NULL, \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{QAESEncryption::Padding} 
       padding = \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{QAESEncryption::ISO});
 00084     \textcolor{keyword}{static} QByteArray \hyperlink{class_q_a_e_s_encryption_af9baa154a06683049d941bd06ac698fd}{Decrypt}(\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{QAESEncryption::Aes} level, 
-      \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{QAESEncryption::Mode} mode, \textcolor{keyword}{const} QByteArray &rawText, \textcolor{keyword}{const} QByteArray &
-      \hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key},
+      \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{QAESEncryption::Mode} mode, \textcolor{keyword}{const} QByteArray &rawText, \textcolor{keyword}{const} QByteArray &key,
 00085                               \textcolor{keyword}{const} QByteArray &iv = NULL, 
       \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{QAESEncryption::Padding} padding = \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{QAESEncryption::ISO});
 00094     \textcolor{keyword}{static} QByteArray \hyperlink{class_q_a_e_s_encryption_a2112456e057e6dd886694348fbf202cd}{ExpandKey}(\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{QAESEncryption::Aes} level, 
-      \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{QAESEncryption::Mode} mode, \textcolor{keyword}{const} QByteArray &\hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key});
+      \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{QAESEncryption::Mode} mode, \textcolor{keyword}{const} QByteArray &key);
 00102     \textcolor{keyword}{static} QByteArray \hyperlink{class_q_a_e_s_encryption_abb2887bf5623a74053dd19627f3d3055}{RemovePadding}(\textcolor{keyword}{const} QByteArray &rawText, 
       \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{QAESEncryption::Padding} padding);
 00103 
@@ -48,12 +46,10 @@
       \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{QAESEncryption::Mode} mode,
 00105                    \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{QAESEncryption::Padding} padding = 
       \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{QAESEncryption::ISO});
-00116     QByteArray \hyperlink{class_q_a_e_s_encryption_a0c56eddd6f03e93b1f7faad464044d65}{encode}(\textcolor{keyword}{const} QByteArray &rawText, \textcolor{keyword}{const} QByteArray &\hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key}, \textcolor{keyword}{const} QByteArray &iv = 
-      NULL);
-00127     QByteArray \hyperlink{class_q_a_e_s_encryption_a58f972f2b66c2454edd5112495463bba}{decode}(\textcolor{keyword}{const} QByteArray &rawText, \textcolor{keyword}{const} QByteArray &\hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key}, \textcolor{keyword}{const} QByteArray &iv = 
-      NULL);
+00116     QByteArray \hyperlink{class_q_a_e_s_encryption_a0c56eddd6f03e93b1f7faad464044d65}{encode}(\textcolor{keyword}{const} QByteArray &rawText, \textcolor{keyword}{const} QByteArray &key, \textcolor{keyword}{const} QByteArray &iv = NULL);
+00127     QByteArray \hyperlink{class_q_a_e_s_encryption_a58f972f2b66c2454edd5112495463bba}{decode}(\textcolor{keyword}{const} QByteArray &rawText, \textcolor{keyword}{const} QByteArray &key, \textcolor{keyword}{const} QByteArray &iv = NULL);
 00136     QByteArray \hyperlink{class_q_a_e_s_encryption_a4dc7e77485e5a3e63eebc99b9386c17b}{removePadding}(\textcolor{keyword}{const} QByteArray &rawText);
-00145     QByteArray \hyperlink{class_q_a_e_s_encryption_a5bfbb972f84a8376fceed648553c0912}{expandKey}(\textcolor{keyword}{const} QByteArray &\hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key});
+00145     QByteArray \hyperlink{class_q_a_e_s_encryption_a5bfbb972f84a8376fceed648553c0912}{expandKey}(\textcolor{keyword}{const} QByteArray &key);
 00146 
 00147 signals:
 00148 

@@ -17,12 +17,7 @@
         <section title="Contact us" ref="index.html#contact" />
         <section title="Namespaces">
           <section title="Namespace List" ref="namespaces.html">
-            <section title="ErrorsDictSetup" ref="namespace_errors_dict_setup.html" />
             <section title="Ui" ref="namespace_ui.html" />
-          </section>
-          <section title="Namespace Members" ref="namespacemembers.html">
-            <section title="All" ref="namespacemembers.html" />
-            <section title="Variables" ref="namespacemembers_vars.html" />
           </section>
         </section>
         <section title="Classes" ref="annotated.html">
@@ -132,9 +127,10 @@
               <section title="setEncryptMode" ref="class_view_p_c.html#a5b48951efefdc0e3039c9a4bf185320b" />
               <section title="setJPHSDir" ref="class_view_p_c.html#ae81085836c0c01bc9556a5b27eb8d19c" />
               <section title="setProgress" ref="class_view_p_c.html#a9c32a1fdb6ead84e5ada8fba8860c7ed" />
+              <section title="setupErrorsDict" ref="class_view_p_c.html#a89236a0bb8760f02e984b85a8571934c" />
               <section title="setVersion" ref="class_view_p_c.html#ac05220df875b7c4f24405a5742476ebf" />
               <section title="dialog" ref="class_view_p_c.html#a31abbb470fe329b44e6ffee202b903ca" />
-              <section title="errorsDict" ref="class_view_p_c.html#a26f90436aca32e5bad46f5e69a7e7e09" />
+              <section title="errorsDict" ref="class_view_p_c.html#aaf7f058e5589d65fec72a21abfd5629b" />
               <section title="progressDialogClosed" ref="class_view_p_c.html#add8c82aa2b0b934212aa5bde9277ab36" />
             </section>
           </section>
@@ -202,17 +198,6 @@
                 <section title="success" ref="class_encrypt_dialog.html#ada4900bcd40894d9c098c65aa4066ac9" />
                 <section title="val" ref="class_encrypt_dialog.html#a3c9da51b5e9d98d702bcc4ed15405fd5" />
               </section>
-            </section>
-            <section title="ErrorsDict.json" ref="_errors_dict_8json.html" />
-            <section title="ErrorsDictSetup.py" ref="_errors_dict_setup_8py.html">
-              <section title="data" ref="_errors_dict_setup_8py.html#af570460846fb9f0c91abd308a095dcdc" />
-              <section title="f" ref="_errors_dict_setup_8py.html#aadfab4e19ca2acd086062511d8ec75a8" />
-              <section title="filename" ref="_errors_dict_setup_8py.html#a0c97c48fca0fdec3e730b9df1dbab9c7" />
-              <section title="indent" ref="_errors_dict_setup_8py.html#a3c8f88b66a58f9c28e5d3bd66fa6191a" />
-              <section title="input_data" ref="_errors_dict_setup_8py.html#a82a4de99ebada6605cb7ca0598ef411e" />
-              <section title="key" ref="_errors_dict_setup_8py.html#a09c268098d09ffb8e5504f30fa6d5dd9" />
-              <section title="raw" ref="_errors_dict_setup_8py.html#a71f324cc110ab41d2a588f590fff7481" />
-              <section title="value" ref="_errors_dict_setup_8py.html#a4436d6af623cbe45d37493afe4de9461" />
             </section>
             <section title="main.cpp" ref="main_8cpp.html">
               <section title="main" ref="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" />
@@ -302,9 +287,10 @@
                 <section title="setEncryptMode" ref="class_view_p_c.html#a5b48951efefdc0e3039c9a4bf185320b" />
                 <section title="setJPHSDir" ref="class_view_p_c.html#ae81085836c0c01bc9556a5b27eb8d19c" />
                 <section title="setProgress" ref="class_view_p_c.html#a9c32a1fdb6ead84e5ada8fba8860c7ed" />
+                <section title="setupErrorsDict" ref="class_view_p_c.html#a89236a0bb8760f02e984b85a8571934c" />
                 <section title="setVersion" ref="class_view_p_c.html#ac05220df875b7c4f24405a5742476ebf" />
                 <section title="dialog" ref="class_view_p_c.html#a31abbb470fe329b44e6ffee202b903ca" />
-                <section title="errorsDict" ref="class_view_p_c.html#a26f90436aca32e5bad46f5e69a7e7e09" />
+                <section title="errorsDict" ref="class_view_p_c.html#aaf7f058e5589d65fec72a21abfd5629b" />
                 <section title="progressDialogClosed" ref="class_view_p_c.html#add8c82aa2b0b934212aa5bde9277ab36" />
               </section>
             </section>
@@ -317,14 +303,6 @@
       </section>
     </toc>
     <keywords>
-      <keyword name="filename" id="ErrorsDictSetup.py::filename" ref="_errors_dict_setup_8py.html#a0c97c48fca0fdec3e730b9df1dbab9c7" />
-      <keyword name="raw" id="ErrorsDictSetup.py::raw" ref="_errors_dict_setup_8py.html#a71f324cc110ab41d2a588f590fff7481" />
-      <keyword name="data" id="ErrorsDictSetup.py::data" ref="_errors_dict_setup_8py.html#af570460846fb9f0c91abd308a095dcdc" />
-      <keyword name="input_data" id="ErrorsDictSetup.py::input_data" ref="_errors_dict_setup_8py.html#a82a4de99ebada6605cb7ca0598ef411e" />
-      <keyword name="key" id="ErrorsDictSetup.py::key" ref="_errors_dict_setup_8py.html#a09c268098d09ffb8e5504f30fa6d5dd9" />
-      <keyword name="value" id="ErrorsDictSetup.py::value" ref="_errors_dict_setup_8py.html#a4436d6af623cbe45d37493afe4de9461" />
-      <keyword name="f" id="ErrorsDictSetup.py::f" ref="_errors_dict_setup_8py.html#aadfab4e19ca2acd086062511d8ec75a8" />
-      <keyword name="indent" id="ErrorsDictSetup.py::indent" ref="_errors_dict_setup_8py.html#a3c8f88b66a58f9c28e5d3bd66fa6191a" />
       <keyword name="main" id="main.cpp::main" ref="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" />
       <keyword name="xTime" id="qaesencryption.cpp::xTime" ref="qaesencryption_8cpp.html#a94a5c6f286db021d028ddc6f91a65f72" />
       <keyword name="multiply" id="qaesencryption.cpp::multiply" ref="qaesencryption_8cpp.html#adcc23c7a5520793f14710fff6ef23dfe" />
@@ -425,21 +403,13 @@
       <keyword name="~ViewPC" id="ViewPC::~ViewPC" ref="class_view_p_c.html#a91c51f5c1e6ed5ab12b410339f469b0f" />
       <keyword name="dialog" id="ViewPC::dialog" ref="class_view_p_c.html#a31abbb470fe329b44e6ffee202b903ca" />
       <keyword name="progressDialogClosed" id="ViewPC::progressDialogClosed" ref="class_view_p_c.html#add8c82aa2b0b934212aa5bde9277ab36" />
-      <keyword name="errorsDict" id="ViewPC::errorsDict" ref="class_view_p_c.html#a26f90436aca32e5bad46f5e69a7e7e09" />
+      <keyword name="errorsDict" id="ViewPC::errorsDict" ref="class_view_p_c.html#aaf7f058e5589d65fec72a21abfd5629b" />
       <keyword name="on_fileButton_clicked" id="ViewPC::on_fileButton_clicked" ref="class_view_p_c.html#a3b9b7a7be9702d8b160f257f1c74a776" />
       <keyword name="on_startButton_clicked" id="ViewPC::on_startButton_clicked" ref="class_view_p_c.html#a456d75b7c5d3a089302a576e7359f1f4" />
       <keyword name="on_actionAbout_triggered" id="ViewPC::on_actionAbout_triggered" ref="class_view_p_c.html#a09a46da4d492eb3dde88f35dc58c997b" />
       <keyword name="on_actionHelp_triggered" id="ViewPC::on_actionHelp_triggered" ref="class_view_p_c.html#a0d252ff4829260c6c76769fbd24b7cd7" />
+      <keyword name="setupErrorsDict" id="ViewPC::setupErrorsDict" ref="class_view_p_c.html#a89236a0bb8760f02e984b85a8571934c" />
       <keyword name="requestKey" id="ViewPC::requestKey" ref="class_view_p_c.html#a559c95675ec98b15451f3bca47033d9c" />
-      <keyword name="ErrorsDictSetup" id="ErrorsDictSetup" ref="namespace_errors_dict_setup.html" />
-      <keyword name="filename" id="ErrorsDictSetup::filename" ref="namespace_errors_dict_setup.html#a0c97c48fca0fdec3e730b9df1dbab9c7" />
-      <keyword name="raw" id="ErrorsDictSetup::raw" ref="namespace_errors_dict_setup.html#a71f324cc110ab41d2a588f590fff7481" />
-      <keyword name="data" id="ErrorsDictSetup::data" ref="namespace_errors_dict_setup.html#af570460846fb9f0c91abd308a095dcdc" />
-      <keyword name="input_data" id="ErrorsDictSetup::input_data" ref="namespace_errors_dict_setup.html#a82a4de99ebada6605cb7ca0598ef411e" />
-      <keyword name="key" id="ErrorsDictSetup::key" ref="namespace_errors_dict_setup.html#a09c268098d09ffb8e5504f30fa6d5dd9" />
-      <keyword name="value" id="ErrorsDictSetup::value" ref="namespace_errors_dict_setup.html#a4436d6af623cbe45d37493afe4de9461" />
-      <keyword name="f" id="ErrorsDictSetup::f" ref="namespace_errors_dict_setup.html#aadfab4e19ca2acd086062511d8ec75a8" />
-      <keyword name="indent" id="ErrorsDictSetup::indent" ref="namespace_errors_dict_setup.html#a3c8f88b66a58f9c28e5d3bd66fa6191a" />
       <keyword name="Ui" id="Ui" ref="namespace_ui.html" />
     </keywords>
     <files>
@@ -471,8 +441,6 @@
       <file>controllerpc_8h_source.html</file>
       <file>encryptdialog_8cpp_source.html</file>
       <file>encryptdialog_8h_source.html</file>
-      <file>_errors_dict_8json_source.html</file>
-      <file>_errors_dict_setup_8py_source.html</file>
       <file>main_8cpp_source.html</file>
       <file>modelpc_8cpp_source.html</file>
       <file>modelpc_8h_source.html</file>
@@ -504,8 +472,6 @@
       <file>encryptdialog_8h__incl.png</file>
       <file>encryptdialog_8h__dep__incl.png</file>
       <file>encryptdialog_8h__dep__incl.png</file>
-      <file>_errors_dict_8json.html</file>
-      <file>_errors_dict_setup_8py.html</file>
       <file>main_8cpp.html</file>
       <file>main_8cpp__incl.png</file>
       <file>main_8cpp__incl.png</file>
@@ -708,31 +674,21 @@
       <file>class_view_p_c_ae81085836c0c01bc9556a5b27eb8d19c_icgraph.png</file>
       <file>class_view_p_c_a9c32a1fdb6ead84e5ada8fba8860c7ed_cgraph.png</file>
       <file>class_view_p_c_a9c32a1fdb6ead84e5ada8fba8860c7ed_cgraph.png</file>
+      <file>class_view_p_c_a89236a0bb8760f02e984b85a8571934c_cgraph.png</file>
+      <file>class_view_p_c_a89236a0bb8760f02e984b85a8571934c_cgraph.png</file>
+      <file>class_view_p_c_a89236a0bb8760f02e984b85a8571934c_icgraph.png</file>
+      <file>class_view_p_c_a89236a0bb8760f02e984b85a8571934c_icgraph.png</file>
       <file>class_view_p_c_ac05220df875b7c4f24405a5742476ebf_icgraph.png</file>
       <file>class_view_p_c_ac05220df875b7c4f24405a5742476ebf_icgraph.png</file>
       <file>class_view_p_c-members.html</file>
-      <file>namespace_errors_dict_setup.html</file>
       <file>namespace_ui.html</file>
       <file>graph_legend.png</file>
       <file>graph_legend.html</file>
       <file>dir_cd1471d333ee889e1fea5aa170113706.html</file>
-      <file>dir_9f351d46ce3cc29445a41dc3a31e6919.html</file>
       <file>index.html</file>
       <file>dot_mainpage.png</file>
       <file>dot_mainpage.png</file>
       <file>namespaces.html</file>
-      <file>namespacemembers.html</file>
-      <file>namespacemembers.html</file>
-      <file>namespacemembers.html</file>
-      <file>namespacemembers.html</file>
-      <file>namespacemembers.html</file>
-      <file>namespacemembers.html</file>
-      <file>namespacemembers_vars.html</file>
-      <file>namespacemembers_vars.html</file>
-      <file>namespacemembers_vars.html</file>
-      <file>namespacemembers_vars.html</file>
-      <file>namespacemembers_vars.html</file>
-      <file>namespacemembers_vars.html</file>
       <file>annotated.html</file>
       <file>classes.html</file>
       <file>hierarchy.html</file>

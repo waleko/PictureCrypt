@@ -12,257 +12,288 @@
 00009 
 00010     \hyperlink{class_view_p_c_add8c82aa2b0b934212aa5bde9277ab36}{progressDialogClosed} = \textcolor{keyword}{true};
 00011 
-00012     \textcolor{comment}{// Alerts dictionary setup}
-00013     QFile file(\textcolor{stringliteral}{":/config/ErrorsDict.json"});
-00014     \textcolor{keywordflow}{if}(!file.open(QFile::ReadOnly | QFile::Text)) \{
-00015         \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"Cannot open config file!"});
-00016         \textcolor{keywordflow}{return};
-00017     \}
-00018     QByteArray readData = file.readAll();
-00019     file.close();
-00020 
-00021     QJsonParseError error;
-00022     QJsonDocument doc = QJsonDocument::fromJson(readData, &error);
-00023     \hyperlink{class_view_p_c_a26f90436aca32e5bad46f5e69a7e7e09}{errorsDict} = doc.object();
-00024     isEncrypt = \textcolor{keyword}{true};
-00025 \}
-\hypertarget{viewpc_8cpp_source.tex_l00029}{}\hyperlink{class_view_p_c_a91c51f5c1e6ed5ab12b410339f469b0f}{00029} \hyperlink{class_view_p_c_a91c51f5c1e6ed5ab12b410339f469b0f}{ViewPC::~ViewPC}()
-00030 \{
-00031     \textcolor{keyword}{delete} ui;
-00032 \}
-00033 
-00034 \textcolor{keywordtype}{void} ViewPC::on\_encryptMode\_clicked()
-00035 \{
-00036     \textcolor{comment}{// Encrypt radio button clicked}
-00037     \hyperlink{class_view_p_c_a5b48951efefdc0e3039c9a4bf185320b}{setEncryptMode}(\textcolor{keyword}{true});
-00038 \}
-00039 
-00040 \textcolor{keywordtype}{void} ViewPC::on\_decryptMode\_clicked()
-00041 \{
-00042     \textcolor{comment}{// Decrypt radio button clicked}
-00043     \hyperlink{class_view_p_c_a5b48951efefdc0e3039c9a4bf185320b}{setEncryptMode}(\textcolor{keyword}{false});
-00044 \}
-\hypertarget{viewpc_8cpp_source.tex_l00048}{}\hyperlink{class_view_p_c_a3b9b7a7be9702d8b160f257f1c74a776}{00048} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_a3b9b7a7be9702d8b160f257f1c74a776}{ViewPC::on\_fileButton\_clicked}()
-00049 \{
-00050     \textcolor{comment}{// Opening QFileDialog depending on isEncrypt}
-00051     \textcolor{keywordflow}{if}(isEncrypt)
-00052         inputFileName = QFileDialog::getOpenFileName(\textcolor{keyword}{this}, tr(\textcolor{stringliteral}{"Select file"}), \textcolor{stringliteral}{"/untitled.txt"}, tr(\textcolor{stringliteral}{"Text
+00012     \hyperlink{class_view_p_c_a89236a0bb8760f02e984b85a8571934c}{setupErrorsDict}();
+00013 
+00014     isEncrypt = \textcolor{keyword}{true};
+00015 \}
+\hypertarget{viewpc_8cpp_source.tex_l00019}{}\hyperlink{class_view_p_c_a91c51f5c1e6ed5ab12b410339f469b0f}{00019} \hyperlink{class_view_p_c_a91c51f5c1e6ed5ab12b410339f469b0f}{ViewPC::~ViewPC}()
+00020 \{
+00021     \textcolor{keyword}{delete} ui;
+00022 \}
+00023 
+00024 \textcolor{keywordtype}{void} ViewPC::on\_encryptMode\_clicked()
+00025 \{
+00026     \textcolor{comment}{// Encrypt radio button clicked}
+00027     \hyperlink{class_view_p_c_a5b48951efefdc0e3039c9a4bf185320b}{setEncryptMode}(\textcolor{keyword}{true});
+00028 \}
+00029 
+00030 \textcolor{keywordtype}{void} ViewPC::on\_decryptMode\_clicked()
+00031 \{
+00032     \textcolor{comment}{// Decrypt radio button clicked}
+00033     \hyperlink{class_view_p_c_a5b48951efefdc0e3039c9a4bf185320b}{setEncryptMode}(\textcolor{keyword}{false});
+00034 \}
+\hypertarget{viewpc_8cpp_source.tex_l00038}{}\hyperlink{class_view_p_c_a3b9b7a7be9702d8b160f257f1c74a776}{00038} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_a3b9b7a7be9702d8b160f257f1c74a776}{ViewPC::on\_fileButton\_clicked}()
+00039 \{
+00040     \textcolor{comment}{// Opening QFileDialog depending on isEncrypt}
+00041     \textcolor{keywordflow}{if}(isEncrypt)
+00042         inputFileName = QFileDialog::getOpenFileName(\textcolor{keyword}{this}, tr(\textcolor{stringliteral}{"Select file"}), \textcolor{stringliteral}{"/untitled.txt"}, tr(\textcolor{stringliteral}{"Text
        files (*.txt);;All Files (*)"}));
-00053     \textcolor{keywordflow}{else}
-00054         inputFileName = QFileDialog::getOpenFileName(\textcolor{keyword}{this}, tr(\textcolor{stringliteral}{"Select file"}), \textcolor{stringliteral}{"/untitled.png"}, tr(\textcolor{stringliteral}{"PNG
+00043     \textcolor{keywordflow}{else}
+00044         inputFileName = QFileDialog::getOpenFileName(\textcolor{keyword}{this}, tr(\textcolor{stringliteral}{"Select file"}), \textcolor{stringliteral}{"/untitled.png"}, tr(\textcolor{stringliteral}{"PNG
        files (*.png);;All Files (*)"}));
-00055     \textcolor{comment}{// Display the file name}
-00056     ui->fileLabel->setText(inputFileName.isEmpty() ? \textcolor{stringliteral}{"File not chosen"} : inputFileName);
-00057 \}
-\hypertarget{viewpc_8cpp_source.tex_l00070}{}\hyperlink{class_view_p_c_a456d75b7c5d3a089302a576e7359f1f4}{00070} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_a456d75b7c5d3a089302a576e7359f1f4}{ViewPC::on\_startButton\_clicked}()
-00071 \{
-00072     \textcolor{keywordflow}{if}(isEncrypt)
-00073     \{
-00074         \textcolor{comment}{// Getting the data}
-00075         QString text = ui->text->toPlainText();
-00076         QByteArray \hyperlink{namespace_errors_dict_setup_af570460846fb9f0c91abd308a095dcdc}{data};
-00077         \textcolor{keywordflow}{if}(text.isEmpty()) \{
-00078             \textcolor{keywordflow}{if}(inputFileName.isEmpty()) \{
-00079                 \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"no\_input\_file"}, \textcolor{keyword}{true});
-00080                 \textcolor{keywordflow}{return};
-00081             \}
-00082             \textcolor{comment}{// Opening the file}
-00083             QFile file(inputFileName);
-00084             \textcolor{keywordflow}{if} (!file.open(QIODevice::ReadOnly))
-00085             \{
-00086                 \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"open\_file\_fail"}, \textcolor{keyword}{true});
-00087                 \textcolor{keywordflow}{return};
-00088             \}
-00089             \textcolor{comment}{// Check the data size}
-00090             \textcolor{keyword}{auto} size = file.size();
-00091             \textcolor{keywordflow}{if}(size > qPow(2, 24)) \{
-00092                 \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"muchdata"}, \textcolor{keyword}{true});
-00093                 file.close();
-00094                 \textcolor{keywordflow}{return};
-00095             \}
-00096             data = file.readAll();
-00097             file.close();
-00098         \}
-00099         \textcolor{keywordflow}{else}
-00100             data = text.toUtf8();
-00101         \textcolor{comment}{// Select image via EncryptDialog}
-00102         \hyperlink{class_encrypt_dialog}{EncryptDialog} * \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog} = \textcolor{keyword}{new} \hyperlink{class_encrypt_dialog}{EncryptDialog}(data);
-00103         dialog->exec();
-00104         \textcolor{keywordflow}{if}(!dialog->\hyperlink{class_encrypt_dialog_ada4900bcd40894d9c098c65aa4066ac9}{success})
-00105             \textcolor{keywordflow}{return};
-00106 
-00107         \textcolor{comment}{// Get the data}
-00108         QByteArray encr\_data = dialog->\hyperlink{class_encrypt_dialog_a3e8998aa39696cbd1242f6420ef18143}{compr\_data};
-00109 
-00110         \textcolor{comment}{// Save the hash}
-00111         QByteArray hash = QCryptographicHash::hash(data, QCryptographicHash::Sha256);
-00112         encr\_data = hash + encr\_data;
-00113 
-00114         \textcolor{keywordflow}{switch} (selectedMode) \{
-00115         \textcolor{keywordflow}{case} 1:
-00116             emit \hyperlink{class_view_p_c_a652c98014c2df32178d43a5a9612dd99}{inject}(encr\_data, &dialog->\hyperlink{class_encrypt_dialog_a739a0df1d28d06b28a3fd16e2bc16c73}{image}, selectedMode, dialog->
+00045     \textcolor{comment}{// Display the file name}
+00046     ui->fileLabel->setText(inputFileName.isEmpty() ? \textcolor{stringliteral}{"File not chosen"} : inputFileName);
+00047 \}
+\hypertarget{viewpc_8cpp_source.tex_l00060}{}\hyperlink{class_view_p_c_a456d75b7c5d3a089302a576e7359f1f4}{00060} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_a456d75b7c5d3a089302a576e7359f1f4}{ViewPC::on\_startButton\_clicked}()
+00061 \{
+00062     \textcolor{keywordflow}{if}(isEncrypt)
+00063     \{
+00064         \textcolor{comment}{// Getting the data}
+00065         QString text = ui->text->toPlainText();
+00066         QByteArray data;
+00067         \textcolor{keywordflow}{if}(text.isEmpty()) \{
+00068             \textcolor{keywordflow}{if}(inputFileName.isEmpty()) \{
+00069                 \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"no\_input\_file"}, \textcolor{keyword}{true});
+00070                 \textcolor{keywordflow}{return};
+00071             \}
+00072             \textcolor{comment}{// Opening the file}
+00073             QFile file(inputFileName);
+00074             \textcolor{keywordflow}{if} (!file.open(QIODevice::ReadOnly))
+00075             \{
+00076                 \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"open\_file\_fail"}, \textcolor{keyword}{true});
+00077                 \textcolor{keywordflow}{return};
+00078             \}
+00079             \textcolor{comment}{// Check the data size}
+00080             \textcolor{keyword}{auto} size = file.size();
+00081             \textcolor{keywordflow}{if}(size > qPow(2, 24)) \{
+00082                 \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"muchdata"}, \textcolor{keyword}{true});
+00083                 file.close();
+00084                 \textcolor{keywordflow}{return};
+00085             \}
+00086             data = file.readAll();
+00087             file.close();
+00088         \}
+00089         \textcolor{keywordflow}{else}
+00090             data = text.toUtf8();
+00091         \textcolor{comment}{// Select image via EncryptDialog}
+00092         \hyperlink{class_encrypt_dialog}{EncryptDialog} * \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog} = \textcolor{keyword}{new} \hyperlink{class_encrypt_dialog}{EncryptDialog}(data);
+00093         dialog->exec();
+00094         \textcolor{keywordflow}{if}(!dialog->\hyperlink{class_encrypt_dialog_ada4900bcd40894d9c098c65aa4066ac9}{success})
+00095             \textcolor{keywordflow}{return};
+00096 
+00097         \textcolor{comment}{// Get the data}
+00098         QByteArray encr\_data = dialog->\hyperlink{class_encrypt_dialog_a3e8998aa39696cbd1242f6420ef18143}{compr\_data};
+00099 
+00100         \textcolor{comment}{// Save the hash}
+00101         QByteArray hash = QCryptographicHash::hash(data, QCryptographicHash::Sha256);
+00102         encr\_data = hash + encr\_data;
+00103 
+00104         \textcolor{keywordflow}{switch} (selectedMode) \{
+00105         \textcolor{keywordflow}{case} 1:
+00106             emit \hyperlink{class_view_p_c_a652c98014c2df32178d43a5a9612dd99}{inject}(encr\_data, &dialog->\hyperlink{class_encrypt_dialog_a739a0df1d28d06b28a3fd16e2bc16c73}{image}, selectedMode, dialog->
       \hyperlink{class_encrypt_dialog_abf638fea37fbdbaba215954e2e239860}{bitsUsed});
-00117             \textcolor{keywordflow}{break};
-00118         \textcolor{keywordflow}{case} 2:
-00119             emit \hyperlink{class_view_p_c_a9d179ff85ed8b1ca0ff7fa495965b52d}{encrypt}(data, &dialog->\hyperlink{class_encrypt_dialog_a739a0df1d28d06b28a3fd16e2bc16c73}{image}, selectedMode, dialog->
+00107             \textcolor{keywordflow}{break};
+00108         \textcolor{keywordflow}{case} 2:
+00109             emit \hyperlink{class_view_p_c_a9d179ff85ed8b1ca0ff7fa495965b52d}{encrypt}(data, &dialog->\hyperlink{class_encrypt_dialog_a739a0df1d28d06b28a3fd16e2bc16c73}{image}, selectedMode, dialog->
       \hyperlink{class_encrypt_dialog_a1afdef3c665fb0d0fae06d1df8e84951}{key});
-00120             \textcolor{keywordflow}{break};
-00121         \}
-00122     \}
-00123     \textcolor{keywordflow}{else}
-00124     \{
-00125         \textcolor{comment}{// Get the filename of the image}
-00126         \textcolor{keywordflow}{if}(inputFileName.isEmpty()) \{
-00127             \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"no\_input\_file"}, \textcolor{keyword}{true});
-00128             \textcolor{keywordflow}{return};
-00129         \}
-00130         QByteArray \hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key} = \hyperlink{class_view_p_c_a559c95675ec98b15451f3bca47033d9c}{requestKey}().toUtf8();
-00131         \textcolor{keywordflow}{if}(key.isEmpty())
-00132             \textcolor{keywordflow}{return};
-00133         QImage * res\_image = \textcolor{keyword}{new} QImage(inputFileName);
-00134         emit \hyperlink{class_view_p_c_a365df051360d557c7221474ad856e0af}{decrypt}(res\_image, key, 0);
-00135     \}
-00136 \}
-\hypertarget{viewpc_8cpp_source.tex_l00142}{}\hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{00142} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{ViewPC::alert}(QString message, \textcolor{keywordtype}{bool} isWarning)
-00143 \{
-00144     \textcolor{comment}{// Get message}
-00145     \textcolor{keywordflow}{if}(\hyperlink{class_view_p_c_a26f90436aca32e5bad46f5e69a7e7e09}{errorsDict}.contains(message))
-00146         message = \hyperlink{class_view_p_c_a26f90436aca32e5bad46f5e69a7e7e09}{errorsDict}[message].toString();
-00147     \textcolor{comment}{// Create message box}
-00148     QMessageBox box;
-00149     \textcolor{keywordflow}{if}(isWarning)
-00150         box.setIcon(QMessageBox::Warning);
-00151     \textcolor{keywordflow}{else}
-00152         box.setIcon(QMessageBox::Information);
-00153     box.setText(message);
-00154     box.setWindowIcon(QIcon(\textcolor{stringliteral}{":/icons/mail.png"}));
-00155     box.setWindowTitle(\textcolor{stringliteral}{"Message"});
-00156     box.exec();
-00157 \}
-\hypertarget{viewpc_8cpp_source.tex_l00163}{}\hyperlink{class_view_p_c_aaff156103970be7c777beedaf0020604}{00163} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_aaff156103970be7c777beedaf0020604}{ViewPC::saveData}(QByteArray Edata)
-00164 \{
-00165     \textcolor{comment}{// Save data using QFileDialog}
-00166     QString outputFileName = QFileDialog::getSaveFileName(\textcolor{keyword}{this}, tr(\textcolor{stringliteral}{"Save File"}),
-00167                                \textcolor{stringliteral}{"/untitled.txt"},
-00168                                tr(\textcolor{stringliteral}{"Text(*.txt);;All files (*)"}));
-00169     QFile writeFile(outputFileName);
-00170     \textcolor{keywordflow}{if} (!writeFile.open(QIODevice::WriteOnly))
-00171     \{
-00172         \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"save\_file\_fail"}, \textcolor{keyword}{true});
-00173         \textcolor{keywordflow}{return};
-00174     \}
-00175     writeFile.write(Edata);
-00176     writeFile.close();
-00177     \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"decryption\_completed"});
-00178 \}
-\hypertarget{viewpc_8cpp_source.tex_l00184}{}\hyperlink{class_view_p_c_a7901ce10ffaaf2387bef1db7feea342d}{00184} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_a7901ce10ffaaf2387bef1db7feea342d}{ViewPC::saveImage}(QImage * image)
-00185 \{
-00186     \textcolor{comment}{// Save image using QFileDialog}
-00187     QString outputFileName = QFileDialog::getSaveFileName(\textcolor{keyword}{this}, tr(\textcolor{stringliteral}{"Save Image"}),
-00188                                \textcolor{stringliteral}{"/untitled.png"},
-00189                                tr(\textcolor{stringliteral}{"Images(*.png)"}));
-00190     \textcolor{keywordflow}{if}(!image->save(outputFileName)) \{
-00191         \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"save\_file\_fail"}, \textcolor{keyword}{true});
-00192         \textcolor{keywordflow}{return};
-00193     \}
-00194     \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"encryption\_completed"});
-00195 \}
-\hypertarget{viewpc_8cpp_source.tex_l00202}{}\hyperlink{class_view_p_c_a9c32a1fdb6ead84e5ada8fba8860c7ed}{00202} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_a9c32a1fdb6ead84e5ada8fba8860c7ed}{ViewPC::setProgress}(\textcolor{keywordtype}{int} val)
-00203 \{
-00204     \textcolor{keywordflow}{if}(val < 0) \{
-00205         \textcolor{comment}{// Create dialog}
-00206         \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog} = \textcolor{keyword}{new} QProgressDialog(\textcolor{stringliteral}{"Cryption in progress."}, \textcolor{stringliteral}{"Cancel"}, 0, 100);
-00207         connect(\hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}, SIGNAL(canceled()), \textcolor{keyword}{this}, SLOT(\hyperlink{class_view_p_c_ad7ba2fcf1d17862de15e32432823f7b0}{abortCircuit}()));
-00208         \hyperlink{class_view_p_c_add8c82aa2b0b934212aa5bde9277ab36}{progressDialogClosed} = \textcolor{keyword}{false};
-00209         \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}->setWindowTitle(\textcolor{stringliteral}{"Processing"});
-00210         \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}->setWindowIcon(QIcon(\textcolor{stringliteral}{":/icons/loading.png"}));
-00211         \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}->show();
-00212     \}
-00213     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(val > 100 && !\hyperlink{class_view_p_c_add8c82aa2b0b934212aa5bde9277ab36}{progressDialogClosed}) \{
-00214         \textcolor{comment}{// Close dialog}
-00215         \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}->setValue(100);
-00216         QThread::msleep(25);
-00217         \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}->close();
-00218         \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}->reset();
-00219         \hyperlink{class_view_p_c_add8c82aa2b0b934212aa5bde9277ab36}{progressDialogClosed} = \textcolor{keyword}{true};
-00220     \}
-00221     \textcolor{comment}{// Update the progress}
-00222     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(!\hyperlink{class_view_p_c_add8c82aa2b0b934212aa5bde9277ab36}{progressDialogClosed})
-00223         \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}->setValue(val);
-00224 \}
-\hypertarget{viewpc_8cpp_source.tex_l00228}{}\hyperlink{class_view_p_c_ad7ba2fcf1d17862de15e32432823f7b0}{00228} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_ad7ba2fcf1d17862de15e32432823f7b0}{ViewPC::abortCircuit}()
-00229 \{
-00230     \textcolor{comment}{// Set the flag}
-00231     \hyperlink{class_view_p_c_add8c82aa2b0b934212aa5bde9277ab36}{progressDialogClosed} = \textcolor{keyword}{true};
-00232     \textcolor{comment}{// Close the dialog}
-00233     \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}->close();
-00234     \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}->reset();
-00235     emit \hyperlink{class_view_p_c_aa652102ce6b5757b8eef830409c8cabf}{abortModel}();
-00236 \}
-\hypertarget{viewpc_8cpp_source.tex_l00241}{}\hyperlink{class_view_p_c_a5b48951efefdc0e3039c9a4bf185320b}{00241} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_a5b48951efefdc0e3039c9a4bf185320b}{ViewPC::setEncryptMode}(\textcolor{keywordtype}{bool} encr)
-00242 \{
-00243     ui->text->setText(\textcolor{stringliteral}{""});
-00244     ui->text->setEnabled(encr);
-00245     isEncrypt = encr;
-00246     ui->startButton->setText(encr ? \textcolor{stringliteral}{"Continue configuration"} : \textcolor{stringliteral}{"Start decryption"});
-00247     ui->enLabel1->setText(encr ? \textcolor{stringliteral}{"Type in the text for encryption:"} : \textcolor{stringliteral}{"Text input isn't supported in
+00110             \textcolor{keywordflow}{break};
+00111         \}
+00112     \}
+00113     \textcolor{keywordflow}{else}
+00114     \{
+00115         \textcolor{comment}{// Get the filename of the image}
+00116         \textcolor{keywordflow}{if}(inputFileName.isEmpty()) \{
+00117             \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"no\_input\_file"}, \textcolor{keyword}{true});
+00118             \textcolor{keywordflow}{return};
+00119         \}
+00120         QByteArray key = \hyperlink{class_view_p_c_a559c95675ec98b15451f3bca47033d9c}{requestKey}().toUtf8();
+00121         \textcolor{keywordflow}{if}(key.isEmpty())
+00122             \textcolor{keywordflow}{return};
+00123         QImage * res\_image = \textcolor{keyword}{new} QImage(inputFileName);
+00124         emit \hyperlink{class_view_p_c_a365df051360d557c7221474ad856e0af}{decrypt}(res\_image, key, 0);
+00125     \}
+00126 \}
+\hypertarget{viewpc_8cpp_source.tex_l00132}{}\hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{00132} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{ViewPC::alert}(QString message, \textcolor{keywordtype}{bool} isWarning)
+00133 \{
+00134     \textcolor{comment}{// Get message}
+00135     \textcolor{keywordflow}{if}(\hyperlink{class_view_p_c_aaf7f058e5589d65fec72a21abfd5629b}{errorsDict}.contains(message))
+00136         message = \hyperlink{class_view_p_c_aaf7f058e5589d65fec72a21abfd5629b}{errorsDict}[message];
+00137     \textcolor{comment}{// Create message box}
+00138     QMessageBox box;
+00139     \textcolor{keywordflow}{if}(isWarning)
+00140         box.setIcon(QMessageBox::Warning);
+00141     \textcolor{keywordflow}{else}
+00142         box.setIcon(QMessageBox::Information);
+00143     box.setText(message);
+00144     box.setWindowIcon(QIcon(\textcolor{stringliteral}{":/icons/mail.png"}));
+00145     box.setWindowTitle(\textcolor{stringliteral}{"Message"});
+00146     box.exec();
+00147 \}
+\hypertarget{viewpc_8cpp_source.tex_l00153}{}\hyperlink{class_view_p_c_aaff156103970be7c777beedaf0020604}{00153} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_aaff156103970be7c777beedaf0020604}{ViewPC::saveData}(QByteArray Edata)
+00154 \{
+00155     \textcolor{comment}{// Save data using QFileDialog}
+00156     QString outputFileName = QFileDialog::getSaveFileName(\textcolor{keyword}{this}, tr(\textcolor{stringliteral}{"Save File"}),
+00157                                \textcolor{stringliteral}{"/untitled.txt"},
+00158                                tr(\textcolor{stringliteral}{"Text(*.txt);;All files (*)"}));
+00159     QFile writeFile(outputFileName);
+00160     \textcolor{keywordflow}{if} (!writeFile.open(QIODevice::WriteOnly))
+00161     \{
+00162         \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"save\_file\_fail"}, \textcolor{keyword}{true});
+00163         \textcolor{keywordflow}{return};
+00164     \}
+00165     writeFile.write(Edata);
+00166     writeFile.close();
+00167     \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"decryption\_completed"});
+00168 \}
+\hypertarget{viewpc_8cpp_source.tex_l00174}{}\hyperlink{class_view_p_c_a7901ce10ffaaf2387bef1db7feea342d}{00174} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_a7901ce10ffaaf2387bef1db7feea342d}{ViewPC::saveImage}(QImage * image)
+00175 \{
+00176     \textcolor{comment}{// Save image using QFileDialog}
+00177     QString outputFileName = QFileDialog::getSaveFileName(\textcolor{keyword}{this}, tr(\textcolor{stringliteral}{"Save Image"}),
+00178                                \textcolor{stringliteral}{"/untitled.png"},
+00179                                tr(\textcolor{stringliteral}{"Images(*.png)"}));
+00180     \textcolor{keywordflow}{if}(!image->save(outputFileName)) \{
+00181         \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"save\_file\_fail"}, \textcolor{keyword}{true});
+00182         \textcolor{keywordflow}{return};
+00183     \}
+00184     \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"encryption\_completed"});
+00185 \}
+\hypertarget{viewpc_8cpp_source.tex_l00192}{}\hyperlink{class_view_p_c_a9c32a1fdb6ead84e5ada8fba8860c7ed}{00192} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_a9c32a1fdb6ead84e5ada8fba8860c7ed}{ViewPC::setProgress}(\textcolor{keywordtype}{int} val)
+00193 \{
+00194     \textcolor{keywordflow}{if}(val < 0) \{
+00195         \textcolor{comment}{// Create dialog}
+00196         \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog} = \textcolor{keyword}{new} QProgressDialog(\textcolor{stringliteral}{"Cryption in progress."}, \textcolor{stringliteral}{"Cancel"}, 0, 100);
+00197         connect(\hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}, SIGNAL(canceled()), \textcolor{keyword}{this}, SLOT(\hyperlink{class_view_p_c_ad7ba2fcf1d17862de15e32432823f7b0}{abortCircuit}()));
+00198         \hyperlink{class_view_p_c_add8c82aa2b0b934212aa5bde9277ab36}{progressDialogClosed} = \textcolor{keyword}{false};
+00199         \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}->setWindowTitle(\textcolor{stringliteral}{"Processing"});
+00200         \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}->setWindowIcon(QIcon(\textcolor{stringliteral}{":/icons/loading.png"}));
+00201         \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}->show();
+00202     \}
+00203     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(val > 100 && !\hyperlink{class_view_p_c_add8c82aa2b0b934212aa5bde9277ab36}{progressDialogClosed}) \{
+00204         \textcolor{comment}{// Close dialog}
+00205         \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}->setValue(100);
+00206         QThread::msleep(25);
+00207         \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}->close();
+00208         \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}->reset();
+00209         \hyperlink{class_view_p_c_add8c82aa2b0b934212aa5bde9277ab36}{progressDialogClosed} = \textcolor{keyword}{true};
+00210     \}
+00211     \textcolor{comment}{// Update the progress}
+00212     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(!\hyperlink{class_view_p_c_add8c82aa2b0b934212aa5bde9277ab36}{progressDialogClosed})
+00213         \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}->setValue(val);
+00214 \}
+\hypertarget{viewpc_8cpp_source.tex_l00218}{}\hyperlink{class_view_p_c_ad7ba2fcf1d17862de15e32432823f7b0}{00218} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_ad7ba2fcf1d17862de15e32432823f7b0}{ViewPC::abortCircuit}()
+00219 \{
+00220     \textcolor{comment}{// Set the flag}
+00221     \hyperlink{class_view_p_c_add8c82aa2b0b934212aa5bde9277ab36}{progressDialogClosed} = \textcolor{keyword}{true};
+00222     \textcolor{comment}{// Close the dialog}
+00223     \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}->close();
+00224     \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202b903ca}{dialog}->reset();
+00225     emit \hyperlink{class_view_p_c_aa652102ce6b5757b8eef830409c8cabf}{abortModel}();
+00226 \}
+\hypertarget{viewpc_8cpp_source.tex_l00231}{}\hyperlink{class_view_p_c_a5b48951efefdc0e3039c9a4bf185320b}{00231} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_a5b48951efefdc0e3039c9a4bf185320b}{ViewPC::setEncryptMode}(\textcolor{keywordtype}{bool} encr)
+00232 \{
+00233     ui->text->setText(\textcolor{stringliteral}{""});
+00234     ui->text->setEnabled(encr);
+00235     isEncrypt = encr;
+00236     ui->startButton->setText(encr ? \textcolor{stringliteral}{"Continue configuration"} : \textcolor{stringliteral}{"Start decryption"});
+00237     ui->enLabel1->setText(encr ? \textcolor{stringliteral}{"Type in the text for encryption:"} : \textcolor{stringliteral}{"Text input isn't supported in
        decryption mode"});
-00248     ui->enLabel1->setEnabled(encr);
-00249     ui->enLabel2->setText(encr ? \textcolor{stringliteral}{"Or use the file dialog to choose a file:"} : \textcolor{stringliteral}{"Choose a file for
+00238     ui->enLabel1->setEnabled(encr);
+00239     ui->enLabel2->setText(encr ? \textcolor{stringliteral}{"Or use the file dialog to choose a file:"} : \textcolor{stringliteral}{"Choose a file for
        decryption:"});
-00250     ui->comboBox->setEnabled(encr);
-00251 \}
-\hypertarget{viewpc_8cpp_source.tex_l00256}{}\hyperlink{class_view_p_c_ac05220df875b7c4f24405a5742476ebf}{00256} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_ac05220df875b7c4f24405a5742476ebf}{ViewPC::setVersion}(QString version)
-00257 \{
-00258     \textcolor{comment}{// Version setup}
-00259     versionString = version;
-00260 \}
-\hypertarget{viewpc_8cpp_source.tex_l00265}{}\hyperlink{class_view_p_c_a559c95675ec98b15451f3bca47033d9c}{00265} QString \hyperlink{class_view_p_c_a559c95675ec98b15451f3bca47033d9c}{ViewPC::requestKey}()
-00266 \{
-00267     \textcolor{keywordtype}{bool} ok;
-00268     QString text = QInputDialog::getText(\textcolor{keyword}{this}, tr(\textcolor{stringliteral}{"QInputDialog::getText()"}),
-00269                                          tr(\textcolor{stringliteral}{"Enter the keyphrase:"}), QLineEdit::Normal,
-00270                                          QDir::home().dirName(), &ok);
-00271     \textcolor{keywordflow}{if}(text.isEmpty() && ok) \{
-00272         \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"no\_key"}, \textcolor{keyword}{true});
-00273         \textcolor{keywordflow}{return} QString();
-00274     \}
-00275     \textcolor{keywordflow}{return} ok ? text : QString();
-00276 \}
-00277 
-00278 QByteArray ViewPC::bytes(\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} n)
-00279 \{
-00280     \textcolor{keywordflow}{return} QByteArray::fromHex(QByteArray::number(n, 16));
-00281 \}
-\hypertarget{viewpc_8cpp_source.tex_l00285}{}\hyperlink{class_view_p_c_a09a46da4d492eb3dde88f35dc58c997b}{00285} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_a09a46da4d492eb3dde88f35dc58c997b}{ViewPC::on\_actionAbout\_triggered}()
+00240     ui->comboBox->setEnabled(encr);
+00241 \}
+\hypertarget{viewpc_8cpp_source.tex_l00246}{}\hyperlink{class_view_p_c_ac05220df875b7c4f24405a5742476ebf}{00246} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_ac05220df875b7c4f24405a5742476ebf}{ViewPC::setVersion}(QString version)
+00247 \{
+00248     \textcolor{comment}{// Version setup}
+00249     versionString = version;
+00250 \}
+\hypertarget{viewpc_8cpp_source.tex_l00255}{}\hyperlink{class_view_p_c_a559c95675ec98b15451f3bca47033d9c}{00255} QString \hyperlink{class_view_p_c_a559c95675ec98b15451f3bca47033d9c}{ViewPC::requestKey}()
+00256 \{
+00257     \textcolor{keywordtype}{bool} ok;
+00258     QString text = QInputDialog::getText(\textcolor{keyword}{this}, tr(\textcolor{stringliteral}{"QInputDialog::getText()"}),
+00259                                          tr(\textcolor{stringliteral}{"Enter the keyphrase:"}), QLineEdit::Normal,
+00260                                          QDir::home().dirName(), &ok);
+00261     \textcolor{keywordflow}{if}(text.isEmpty() && ok) \{
+00262         \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"no\_key"}, \textcolor{keyword}{true});
+00263         \textcolor{keywordflow}{return} QString();
+00264     \}
+00265     \textcolor{keywordflow}{return} ok ? text : QString();
+00266 \}
+00267 
+00268 QByteArray ViewPC::bytes(\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} n)
+00269 \{
+00270     \textcolor{keywordflow}{return} QByteArray::fromHex(QByteArray::number(n, 16));
+00271 \}
+\hypertarget{viewpc_8cpp_source.tex_l00275}{}\hyperlink{class_view_p_c_a09a46da4d492eb3dde88f35dc58c997b}{00275} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_a09a46da4d492eb3dde88f35dc58c997b}{ViewPC::on\_actionAbout\_triggered}()
+00276 \{
+00277     \hyperlink{class_about_p_c}{AboutPC} about;
+00278     about.\hyperlink{class_about_p_c_aa3815d4826d0c8d87122449537a0a4d5}{setVersion}(versionString);
+00279     about.exec();
+00280 \}
+00281 
+\hypertarget{viewpc_8cpp_source.tex_l00285}{}\hyperlink{class_view_p_c_a0d252ff4829260c6c76769fbd24b7cd7}{00285} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_a0d252ff4829260c6c76769fbd24b7cd7}{ViewPC::on\_actionHelp\_triggered}()
 00286 \{
-00287     \hyperlink{class_about_p_c}{AboutPC} about;
-00288     about.\hyperlink{class_about_p_c_aa3815d4826d0c8d87122449537a0a4d5}{setVersion}(versionString);
-00289     about.exec();
-00290 \}
-00291 
-\hypertarget{viewpc_8cpp_source.tex_l00295}{}\hyperlink{class_view_p_c_a0d252ff4829260c6c76769fbd24b7cd7}{00295} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_a0d252ff4829260c6c76769fbd24b7cd7}{ViewPC::on\_actionHelp\_triggered}()
-00296 \{
-00297     QUrl docLink(\textcolor{stringliteral}{"https://alexkovrigin.me/PictureCrypt"});
-00298     QDesktopServices::openUrl(docLink);
-00299 \}
-00300 
-00301 \textcolor{keywordtype}{void} ViewPC::on\_actionJPHS\_path\_triggered()
-00302 \{
-00303     QString dir = QFileDialog::getExistingDirectory(\textcolor{keyword}{this}, tr(\textcolor{stringliteral}{"Open JPHS folder"}),
-00304                                                     \textcolor{stringliteral}{"/home"},
-00305                                                     QFileDialog::ShowDirsOnly
-00306                                                     | QFileDialog::DontResolveSymlinks);
-00307     emit \hyperlink{class_view_p_c_ae81085836c0c01bc9556a5b27eb8d19c}{setJPHSDir}(dir);
-00308 \}
-00309 
-00310 \textcolor{keywordtype}{void} ViewPC::on\_comboBox\_currentIndexChanged(\textcolor{keywordtype}{int} index)
-00311 \{
-00312     selectedMode = index + 1;
-00313 \}
-00314 
-00315 \textcolor{keywordtype}{void} ViewPC::on\_text\_textChanged()
-00316 \{
-00317     ui->fileButton->setEnabled(ui->text->toPlainText().isEmpty());
-00318 \}
+00287     QUrl docLink(\textcolor{stringliteral}{"https://alexkovrigin.me/PictureCrypt"});
+00288     QDesktopServices::openUrl(docLink);
+00289 \}
+\hypertarget{viewpc_8cpp_source.tex_l00293}{}\hyperlink{class_view_p_c_a89236a0bb8760f02e984b85a8571934c}{00293} \textcolor{keywordtype}{void} \hyperlink{class_view_p_c_a89236a0bb8760f02e984b85a8571934c}{ViewPC::setupErrorsDict}()
+00294 \{
+00295     QString locale = QLocale::system().name().left(2);
+00296     QString folderName = \textcolor{stringliteral}{"values-"} + locale;
+00297     QString defaultPath = \textcolor{stringliteral}{"://res/values/errors.xml"};
+00298     QString path = \textcolor{stringliteral}{"://res/"} + folderName + \textcolor{stringliteral}{"/errors.xml"};
+00299     \textcolor{keywordflow}{if}(locale == \textcolor{stringliteral}{"en"})
+00300         path = defaultPath;
+00301 
+00302     QFileInfo foo(path);
+00303     \textcolor{keywordflow}{if}(!foo.exists() || !foo.isFile()) \{
+00304         path = defaultPath;
+00305         qDebug() << locale + \textcolor{stringliteral}{" unsupported. Switching to en"};
+00306     \}
+00307 
+00308     QFile file(path);
+00309     \textcolor{keywordflow}{if}(!file.open(QFile::ReadOnly | QFile::Text)) \{
+00310         \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"Cannot open config file!"});
+00311         \textcolor{keywordflow}{return};
+00312     \}
+00313     QByteArray readData = file.readAll();
+00314     file.close();
+00315     QDomDocument doc;
+00316     doc.setContent(readData);
+00317 
+00318     QDomElement root = doc.documentElement();
+00319     QDomElement Component = root.firstChild().toElement();
+00320 
+00321     \textcolor{comment}{// Loop while there is a child}
+00322     \textcolor{keywordflow}{while}(!Component.isNull())
+00323     \{
+00324         \textcolor{comment}{// Check if the child tag name is string}
+00325         \textcolor{keywordflow}{if} (Component.tagName() == \textcolor{stringliteral}{"string"})
+00326         \{
+00327             QString name = Component.attribute(\textcolor{stringliteral}{"name"}, \textcolor{stringliteral}{"no name"});
+00328             QString value = Component.firstChild().toText().data();
+00329             \hyperlink{class_view_p_c_aaf7f058e5589d65fec72a21abfd5629b}{errorsDict}[name] = value;
+00330         \}
+00331         Component = Component.nextSibling().toElement();
+00332     \}
+00333 \}
+00334 
+00335 \textcolor{keywordtype}{void} ViewPC::on\_actionJPHS\_path\_triggered()
+00336 \{
+00337     QString dir = QFileDialog::getExistingDirectory(\textcolor{keyword}{this}, tr(\textcolor{stringliteral}{"Open JPHS folder"}),
+00338                                                     \textcolor{stringliteral}{"/home"},
+00339                                                     QFileDialog::ShowDirsOnly
+00340                                                     | QFileDialog::DontResolveSymlinks);
+00341     emit \hyperlink{class_view_p_c_ae81085836c0c01bc9556a5b27eb8d19c}{setJPHSDir}(dir);
+00342 \}
+00343 
+00344 \textcolor{keywordtype}{void} ViewPC::on\_comboBox\_currentIndexChanged(\textcolor{keywordtype}{int} index)
+00345 \{
+00346     selectedMode = index + 1;
+00347 \}
+00348 
+00349 \textcolor{keywordtype}{void} ViewPC::on\_text\_textChanged()
+00350 \{
+00351     ui->fileButton->setEnabled(ui->text->toPlainText().isEmpty());
+00352 \}
 \end{DoxyCode}

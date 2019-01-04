@@ -27,12 +27,12 @@
 00036 \textcolor{keyword}{public}:
 00037     \hyperlink{class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c}{ModelPC}();
 \hypertarget{modelpc_8h_source.tex_l00038}{}\hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba43138df6b33a6b2bf608768907f95abc}{00038}     \textcolor{keyword}{enum} \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceb}{CryptMode} \{\hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba287198790ac9799acd03c99d63a6faea}{NotDefined}, \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba7612e38de7178170655a56ddcf96e12c}{v1\_3}, \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba43138df6b33a6b2bf608768907f95abc}{v1\_4}, \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba90ca32d3ccbb6be224cdfc33f7096eea}{jphs\_mode}\};
-00039     \textcolor{keyword}{static} QImage *\hyperlink{class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd}{Encrypt}(QByteArray \hyperlink{namespace_errors_dict_setup_af570460846fb9f0c91abd308a095dcdc}{data}, QImage *image, \textcolor{keywordtype}{int} \_mode, QString 
-      \hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key} = \textcolor{stringliteral}{""}, \textcolor{keywordtype}{int} \_bitsUsed = 8, QString *\_error = \textcolor{keyword}{nullptr});
+00039     \textcolor{keyword}{static} QImage *\hyperlink{class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd}{Encrypt}(QByteArray data, QImage *image, \textcolor{keywordtype}{int} \_mode, QString key = \textcolor{stringliteral}{""}, \textcolor{keywordtype}{int} 
+      \_bitsUsed = 8, QString *\_error = \textcolor{keyword}{nullptr});
 00040     \textcolor{keyword}{static} QImage *\hyperlink{class_model_p_c_ac17e68e6aab134621b0d151d74acdc82}{Inject}(QByteArray encr\_data, QImage * image, \textcolor{keywordtype}{int} \_mode, \textcolor{keywordtype}{int} \_bitsUsed = 8, QString
        *\_error = \textcolor{keyword}{nullptr});
-00041     \textcolor{keyword}{static} QByteArray \hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{Decrypt}(QImage * image, QString \hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key}, \textcolor{keywordtype}{int} \_mode = 0, QString *\_error = \textcolor{keyword}{
-      nullptr});
+00041     \textcolor{keyword}{static} QByteArray \hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{Decrypt}(QImage * image, QString key, \textcolor{keywordtype}{int} \_mode = 0, QString *\_error = \textcolor{keyword}{nullptr})
+      ;
 00042 
 00043 signals:
 00050     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_af0217a7ca5671e26090dc50a5dccdaf5}{alertView}(QString messageCode, \textcolor{keywordtype}{bool} isWarning);

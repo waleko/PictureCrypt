@@ -73,8 +73,8 @@ Q\+Progress\+Dialog $\ast$ \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202
 \begin{DoxyCompactList}\small\item\em dialog Progress\+Dialog used. \end{DoxyCompactList}\item 
 bool \hyperlink{class_view_p_c_add8c82aa2b0b934212aa5bde9277ab36}{progress\+Dialog\+Closed}
 \begin{DoxyCompactList}\small\item\em progress\+Dialog\+Closed Flag, if dialog is closed. \end{DoxyCompactList}\item 
-Q\+Json\+Object \hyperlink{class_view_p_c_a26f90436aca32e5bad46f5e69a7e7e09}{errors\+Dict}
-\begin{DoxyCompactList}\small\item\em errors\+Dict Json object for errors dictionary \end{DoxyCompactList}\end{DoxyCompactItemize}
+Q\+Map$<$ Q\+String, Q\+String $>$ \hyperlink{class_view_p_c_aaf7f058e5589d65fec72a21abfd5629b}{errors\+Dict}
+\begin{DoxyCompactList}\small\item\em errors\+Dict Q\+Map -\/ Errors dictionary \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Slots}
 \begin{DoxyCompactItemize}
 \item 
@@ -85,7 +85,9 @@ void \hyperlink{class_view_p_c_a456d75b7c5d3a089302a576e7359f1f4}{on\+\_\+start\
 void \hyperlink{class_view_p_c_a09a46da4d492eb3dde88f35dc58c997b}{on\+\_\+action\+About\+\_\+triggered} ()
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_view_p_c_a09a46da4d492eb3dde88f35dc58c997b}{View\+P\+C\+::on\+\_\+action\+About\+\_\+triggered} Opens about page. \end{DoxyCompactList}\item 
 void \hyperlink{class_view_p_c_a0d252ff4829260c6c76769fbd24b7cd7}{on\+\_\+action\+Help\+\_\+triggered} ()
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_view_p_c_a0d252ff4829260c6c76769fbd24b7cd7}{View\+P\+C\+::on\+\_\+action\+Help\+\_\+triggered} Opens online documentation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_view_p_c_a0d252ff4829260c6c76769fbd24b7cd7}{View\+P\+C\+::on\+\_\+action\+Help\+\_\+triggered} Opens online documentation. \end{DoxyCompactList}\item 
+void \hyperlink{class_view_p_c_a89236a0bb8760f02e984b85a8571934c}{setup\+Errors\+Dict} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_view_p_c_a89236a0bb8760f02e984b85a8571934c}{View\+P\+C\+::setup\+Errors\+Dict} Setups errors\+Dict from strings.\+xml. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -101,7 +103,7 @@ The \hyperlink{class_view_p_c}{View\+PC} class View layer of the app. Controls \
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{viewpc_8h_source_l00035}{35} of file \hyperlink{viewpc_8h_source}{viewpc.\+h}.
+Definition at line \hyperlink{viewpc_8h_source_l00036}{36} of file \hyperlink{viewpc_8h_source}{viewpc.\+h}.
 
 
 
@@ -124,7 +126,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=288pt]{class_view_p_c_a33c96c61f61042319c66c19059836b7f_cgraph}
+\includegraphics[width=350pt]{class_view_p_c_a33c96c61f61042319c66c19059836b7f_cgraph}
 \end{center}
 \end{figure}
 
@@ -142,7 +144,7 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00029}{29} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00019}{19} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 
 
@@ -172,7 +174,7 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00228}{228} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00218}{218} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 
 
@@ -230,7 +232,7 @@ Here is the caller graph for this function\+:
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00142}{142} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00132}{132} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 
 
@@ -368,7 +370,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00285}{285} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00275}{275} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 
 
@@ -395,7 +397,7 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00295}{295} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00285}{285} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 \index{View\+PC@{View\+PC}!on\+\_\+file\+Button\+\_\+clicked@{on\+\_\+file\+Button\+\_\+clicked}}
 \index{on\+\_\+file\+Button\+\_\+clicked@{on\+\_\+file\+Button\+\_\+clicked}!View\+PC@{View\+PC}}
@@ -410,7 +412,7 @@ Definition at line \hyperlink{viewpc_8cpp_source_l00295}{295} of file \hyperlink
 
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00048}{48} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00038}{38} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 \index{View\+PC@{View\+PC}!on\+\_\+start\+Button\+\_\+clicked@{on\+\_\+start\+Button\+\_\+clicked}}
 \index{on\+\_\+start\+Button\+\_\+clicked@{on\+\_\+start\+Button\+\_\+clicked}!View\+PC@{View\+PC}}
@@ -430,7 +432,7 @@ File size limit is 16\+MB
 Then the \hyperlink{class_encrypt_dialog}{Encrypt\+Dialog} opens and image and key is selected. Then the \hyperlink{class_view_p_c_a9d179ff85ed8b1ca0ff7fa495965b52d}{View\+P\+C\+::encrypt} signal is called to start \hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{Model\+P\+C\+::encrypt} \hypertarget{class_view_p_c_decrypting}{}\subsection{Decrypting}\label{class_view_p_c_decrypting}
 Else, the image from file selector is transmitted to \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{Model\+P\+C\+::decrypt} 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00070}{70} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00060}{60} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 
 
@@ -460,7 +462,7 @@ Returns keyphrase
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00265}{265} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00255}{255} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 
 
@@ -507,7 +509,7 @@ Here is the caller graph for this function\+:
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00163}{163} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00153}{153} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 
 
@@ -542,7 +544,7 @@ Here is the call graph for this function\+:
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00184}{184} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00174}{174} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 
 
@@ -574,7 +576,7 @@ Here is the call graph for this function\+:
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00241}{241} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00231}{231} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 
 
@@ -611,7 +613,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=348pt]{class_view_p_c_ae81085836c0c01bc9556a5b27eb8d19c_icgraph}
+\includegraphics[width=350pt]{class_view_p_c_ae81085836c0c01bc9556a5b27eb8d19c_icgraph}
 \end{center}
 \end{figure}
 
@@ -637,7 +639,7 @@ Here is the caller graph for this function\+:
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00202}{202} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00192}{192} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 
 
@@ -647,6 +649,45 @@ Here is the call graph for this function\+:
 \begin{center}
 \leavevmode
 \includegraphics[width=336pt]{class_view_p_c_a9c32a1fdb6ead84e5ada8fba8860c7ed_cgraph}
+\end{center}
+\end{figure}
+
+
+\index{View\+PC@{View\+PC}!setup\+Errors\+Dict@{setup\+Errors\+Dict}}
+\index{setup\+Errors\+Dict@{setup\+Errors\+Dict}!View\+PC@{View\+PC}}
+\subsubsection[{\texorpdfstring{setup\+Errors\+Dict}{setupErrorsDict}}]{\setlength{\rightskip}{0pt plus 5cm}void View\+P\+C\+::setup\+Errors\+Dict (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}\hypertarget{class_view_p_c_a89236a0bb8760f02e984b85a8571934c}{}\label{class_view_p_c_a89236a0bb8760f02e984b85a8571934c}
+
+
+\hyperlink{class_view_p_c_a89236a0bb8760f02e984b85a8571934c}{View\+P\+C\+::setup\+Errors\+Dict} Setups errors\+Dict from strings.\+xml. 
+
+
+
+Definition at line \hyperlink{viewpc_8cpp_source_l00293}{293} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+
+
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{class_view_p_c_a89236a0bb8760f02e984b85a8571934c_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{class_view_p_c_a89236a0bb8760f02e984b85a8571934c_icgraph}
 \end{center}
 \end{figure}
 
@@ -669,7 +710,7 @@ Here is the call graph for this function\+:
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00256}{256} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00246}{246} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 
 
@@ -698,18 +739,18 @@ dialog Progress\+Dialog used.
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{viewpc_8h_source_l00108}{108} of file \hyperlink{viewpc_8h_source}{viewpc.\+h}.
+Definition at line \hyperlink{viewpc_8h_source_l00111}{111} of file \hyperlink{viewpc_8h_source}{viewpc.\+h}.
 
 \index{View\+PC@{View\+PC}!errors\+Dict@{errors\+Dict}}
 \index{errors\+Dict@{errors\+Dict}!View\+PC@{View\+PC}}
-\subsubsection[{\texorpdfstring{errors\+Dict}{errorsDict}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Json\+Object View\+P\+C\+::errors\+Dict}\hypertarget{class_view_p_c_a26f90436aca32e5bad46f5e69a7e7e09}{}\label{class_view_p_c_a26f90436aca32e5bad46f5e69a7e7e09}
+\subsubsection[{\texorpdfstring{errors\+Dict}{errorsDict}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Map$<$Q\+String, Q\+String$>$ View\+P\+C\+::errors\+Dict}\hypertarget{class_view_p_c_aaf7f058e5589d65fec72a21abfd5629b}{}\label{class_view_p_c_aaf7f058e5589d65fec72a21abfd5629b}
 
 
-errors\+Dict Json object for errors dictionary 
+errors\+Dict Q\+Map -\/ Errors dictionary 
 
 
 
-Definition at line \hyperlink{viewpc_8h_source_l00117}{117} of file \hyperlink{viewpc_8h_source}{viewpc.\+h}.
+Definition at line \hyperlink{viewpc_8h_source_l00120}{120} of file \hyperlink{viewpc_8h_source}{viewpc.\+h}.
 
 \index{View\+PC@{View\+PC}!progress\+Dialog\+Closed@{progress\+Dialog\+Closed}}
 \index{progress\+Dialog\+Closed@{progress\+Dialog\+Closed}!View\+PC@{View\+PC}}
@@ -723,7 +764,7 @@ progress\+Dialog\+Closed Flag, if dialog is closed.
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{viewpc_8h_source_l00113}{113} of file \hyperlink{viewpc_8h_source}{viewpc.\+h}.
+Definition at line \hyperlink{viewpc_8h_source_l00116}{116} of file \hyperlink{viewpc_8h_source}{viewpc.\+h}.
 
 
 

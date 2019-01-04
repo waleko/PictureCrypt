@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['errorsdictsetup',['ErrorsDictSetup',['../namespace_errors_dict_setup.html',1,'']]]
+  ['ui',['Ui',['../namespace_ui.html',1,'']]]
 ];

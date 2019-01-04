@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QFile>
+#include <QFileInfo>
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QImage>
@@ -17,8 +18,8 @@
 #include <QProgressDialog>
 #include <aboutpc.h>
 
-#include <QJsonDocument>
-#include <QJsonObject>
+#include <QLocale>
+#include <QtXml>
 
 namespace Ui {
 class ViewPC;
@@ -58,6 +59,8 @@ protected slots:
     void on_actionAbout_triggered();
 
     void on_actionHelp_triggered();
+
+    void setupErrorsDict();
 public slots:
     void alert(QString message, bool isWarning = false);
     void saveData(QByteArray Edata);
@@ -112,9 +115,9 @@ public:
      */
     bool progressDialogClosed;
     /*!
-     * \brief errorsDict Json object for errors dictionary
+     * \brief errorsDict QMap - Errors dictionary
      */
-    QJsonObject errorsDict;
+    QMap<QString, QString> errorsDict;
 protected:
     QString requestKey();
 private:
