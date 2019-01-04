@@ -21,6 +21,7 @@ ViewPC::ViewPC(QWidget *parent) :
     QJsonParseError error;
     QJsonDocument doc = QJsonDocument::fromJson(readData, &error);
     errorsDict = doc.object();
+    isEncrypt = true;
 }
 /*!
  * \brief ViewPC::~ViewPC Simple destructor for this layer
@@ -109,8 +110,15 @@ void ViewPC::on_startButton_clicked()
         // Save the hash
         QByteArray hash = QCryptographicHash::hash(data, QCryptographicHash::Sha256);
         encr_data = hash + encr_data;
-        // TODO do the mode thing
-        emit encrypt(encr_data, &dialog->image, 1, dialog->bitsUsed);
+
+        switch (selectedMode) {
+        case 1:
+            emit inject(encr_data, &dialog->image, selectedMode, dialog->bitsUsed);
+            break;
+        case 2:
+            emit encrypt(data, &dialog->image, selectedMode, dialog->key);
+            break;
+        }
     }
     else
     {
@@ -125,7 +133,7 @@ void ViewPC::on_startButton_clicked()
         if(key.isEmpty())
             return;
         QImage * res_image = new QImage(inputFileName);
-        emit decrypt(res_image, key, 1);
+        emit decrypt(res_image, key, 0);
     }
 }
 /*!
@@ -204,7 +212,7 @@ void ViewPC::setProgress(int val)
         dialog->setWindowIcon(QIcon(":/icons/loading.png"));
         dialog->show();
     }
-    else if(val >= 100 && !progressDialogClosed) {
+    else if(val > 100 && !progressDialogClosed) {
         // Close dialog
         dialog->setValue(100);
         QThread::msleep(25);
@@ -230,7 +238,7 @@ void ViewPC::abortCircuit()
 }
 /*!
  * \brief ViewPC::setEncryptMode Set the encrpt mode (ViewPC::isEncrypt)
- * \param encr
+ * \param encr = isEncrypt, true if encrypting, false if decrypting
  */
 void ViewPC::setEncryptMode(bool encr)
 {
@@ -240,6 +248,7 @@ void ViewPC::setEncryptMode(bool encr)
     ui->enLabel1->setText(encr ? "Type in the text for encryption:" : "Text input isn't supported in decryption mode");
     ui->enLabel1->setEnabled(encr);
     ui->enLabel2->setText(encr ? "Or use the file dialog to choose a file:" : "Choose a file for decryption:");
+    ui->comboBox->setEnabled(encr);
 }
 /*!
  * \brief ViewPC::setVersion Set the version of the app from ControllerPC
@@ -302,4 +311,9 @@ void ViewPC::on_actionJPHS_path_triggered()
 void ViewPC::on_actionRun_tests_triggered()
 {
     emit runTests();
+}
+
+void ViewPC::on_comboBox_currentIndexChanged(int index)
+{
+    selectedMode = index + 1;
 }

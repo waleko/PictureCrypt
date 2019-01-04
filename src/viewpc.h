@@ -48,6 +48,8 @@ private slots:
 
     void on_actionRun_tests_triggered();
 
+    void on_comboBox_currentIndexChanged(int index);
+
 protected slots:
     void on_fileButton_clicked();
 
@@ -68,11 +70,19 @@ signals:
     /*!
      * \brief encrypt Signal calling ModelPC::encrypt
      * \param data Data to write
+     * \param image Image to be encrypted into
+     * \param mode Mode of encryption
+     * \param key Key of encryption
+     */
+    void encrypt(QByteArray data, QImage *image, int mode, QString key);
+    /*!
+     * \brief inject Signal calling ModelPC::inject
+     * \param data Data to write
      * \param image Image to be encrypted into.
      * \param mode Mode of encryption
      * \param bitsUsed Bits used per byte
      */
-    void encrypt(QByteArray data, QImage * image, int mode, int bitsUsed);
+    void inject(QByteArray data, QImage * image, int mode, int bitsUsed);
     /*!
      * \brief decrypt Signal calling ModelPC::decrypt
      * \param _image Image for decryption
@@ -104,6 +114,9 @@ public:
      * \sa ViewPC::abortCircuit, ViewPC::setProgress
      */
     bool progressDialogClosed;
+    /*!
+     * \brief errorsDict Json object for errors dictionary
+     */
     QJsonObject errorsDict;
 protected:
     QString requestKey();
@@ -113,6 +126,7 @@ private:
     QString inputFileName;
     QByteArray bytes(long long n);
     QString versionString;
+    int selectedMode = 2;
 };
 
 #endif // VIEWPC_H

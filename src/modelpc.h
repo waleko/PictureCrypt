@@ -11,9 +11,12 @@
 #include <QTime>
 #include <QFileInfo>
 #include <QtGui>
+#include <QRandomGenerator>
+#include <QPair>
 
 #include <aes/qaesencryption.h>
 #include <QCryptographicHash>
+
 
 /*! \file modelpc.h
  * Header of ModelPC class
@@ -96,6 +99,7 @@ protected:
     void encryptv1_4(QImage *image, QByteArray data, QString key);
     QByteArray decryptv1_3(QImage * image, QString key);
     QByteArray decryptv1_4(QImage * image, QString key);
+    void proccessPixelsv1_4(QImage *image, QByteArray* data, QByteArray key, bool isEncrypt, QVector<QPair<QPoint, QPair<int, int> > > *were, long long size = -1);
     QByteArray zip(QByteArray data, QByteArray key);
 
     /*!
@@ -111,6 +115,7 @@ private:
     QColor RGBbytes(long long byte);
     QString generateVersionString(long ver);
     uint randSeed();
+    bool isTry = false;
 
     QByteArray * circuitData;
     QImage * circuitImage;

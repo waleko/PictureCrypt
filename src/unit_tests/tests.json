@@ -1,68 +1,12 @@
 {
     "tests": [
         {
-            "data": "/text/",
+            "data": "That's one small step for a man, one giant leap for mankind",
             "image": "bigpicture.jpg",
             "expectation": "ok",
-            "mode": 1,
-            "key": "qwertykey",
+            "mode": 2,
+            "key": "turtle",
             "bitsUsed": 8
-        },
-        {
-            "data": "/text/",
-            "image": "bigpicture.jpg",
-            "expectation": "ok",
-            "mode": 1,
-            "key": "password",
-            "bitsUsed": 5
-        },
-        {
-            "data": "/text/",
-            "image": "bigpicture.jpg",
-            "expectation": "ok",
-            "mode": 1,
-            "key": "wowthatpassword",
-            "bitsUsed": 1
-        },
-        {
-            "data": "/text/",
-            "image": "tinypicture.png",
-            "expectation": "muchdata",
-            "mode": 1,
-            "key": "get123",
-            "bitsUsed": 8
-        },
-        {
-            "data": "",
-            "image": "bigpicture.jpg",
-            "expectation": "nodata",
-            "mode": 1,
-            "key": "42",
-            "bitsUsed": 8
-        },
-        {
-            "data": "/text/",
-            "image": "invalid.jpg",
-            "expectation": "nullimage",
-            "mode": 1,
-            "key": "blog it",
-            "bitsUsed": 8
-        },
-        {
-            "data": "/text/",
-            "image": "bigpicture.jpg",
-            "expectation": "bitsWrong",
-            "mode": 1,
-            "key": "turtles are great",
-            "bitsUsed": 12
-        },
-		{
-            "data": "/text/",
-            "image": "bigpicture.jpg",
-            "expectation": "no_key",
-            "mode": 1,
-            "key": "",
-            "bitsUsed": 7
         }
     ]
 }

@@ -33,6 +33,9 @@ bool TestPC::test(QByteArray data, QImage rImage, QString expectedOutput, int mo
     QImage * retImage = model->encrypt(data, &rImage, mode, key, bitsUsed, &error1);
     // De-embedding
     QByteArray output = model->decrypt(retImage, key, mode, &error2);
+    if(!retImage->save("guru.png")) {
+        return false;
+    }
 
     // Success of error outputs
     bool er1 = error1 == expectedOutput;

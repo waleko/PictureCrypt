@@ -9,7 +9,7 @@
 ModelPC::ModelPC()
 {
     // Version control
-    versionString = "1.3.7";
+    versionString = "1.4.0.dev-alpha";
 
     auto ver = versionString.split(".");
     version = ver[0].toInt() * qPow(2, 16) + ver[1].toInt() * qPow(2, 8) + ver[2].toInt();
@@ -50,7 +50,7 @@ QByteArray ModelPC::Decrypt(QImage *image, QString key, int _mode, QString *_err
  */
 QImage * ModelPC::encrypt(QByteArray data, QImage * image, int _mode, QString key, int _bitsUsed, QString *_error)
 {
-    // FIXME check for errors
+    success = true;
     CryptMode mode = CryptMode(_mode);
     // Error management
     if(_error == nullptr)
@@ -62,8 +62,16 @@ QImage * ModelPC::encrypt(QByteArray data, QImage * image, int _mode, QString ke
         fail("nodata");
         return nullptr;
     }
+    if(data.size() > pow(2, 24)) {
+        fail("muchdata");
+        return nullptr;
+    }
     if(image == nullptr || image->isNull()) {
         fail("nullimage");
+        return nullptr;
+    }
+    if(image->width() * image->height() > pow(10, 9)) {
+        fail("bigimage");
         return nullptr;
     }
     if(_bitsUsed < 1 || _bitsUsed > 8) {
@@ -105,6 +113,7 @@ QImage * ModelPC::encrypt(QByteArray data, QImage * image, int _mode, QString ke
         case v1_4:
             bitsUsed = _bitsUsed;
             encryptv1_4(image, data, key);
+            emit saveImage(image);
             return image;
         break;
         case jphs_mode:
@@ -129,6 +138,7 @@ QImage * ModelPC::encrypt(QByteArray data, QImage * image, int _mode, QString ke
  */
 QImage * ModelPC::inject(QByteArray encr_data, QImage * image, int _mode, int _bitsUsed, QString *_error)
 {
+    success = true;
     CryptMode mode = CryptMode(_mode);
     // Error management
     if(_error == nullptr)
@@ -142,8 +152,16 @@ QImage * ModelPC::inject(QByteArray encr_data, QImage * image, int _mode, int _b
         fail("nodata");
         return nullptr;
     }
+    if(encr_data.size() > pow(2, 24)) {
+        fail("muchdata");
+        return nullptr;
+    }
     if(image == nullptr || image->isNull()) {
         fail("nullimage");
+        return nullptr;
+    }
+    if(image->width() * image->height() > pow(10, 9)) {
+        fail("bigimage");
         return nullptr;
     }
     if(_bitsUsed < 1 || _bitsUsed > 8) {
@@ -174,7 +192,6 @@ QImage * ModelPC::inject(QByteArray encr_data, QImage * image, int _mode, int _b
         return nullptr;
     }
 
-
     // Saving
     if(success) {
         emit saveImage(image);
@@ -194,6 +211,7 @@ QImage * ModelPC::inject(QByteArray encr_data, QImage * image, int _mode, int _b
  */
 QByteArray ModelPC::decrypt(QImage * image, QString key, int _mode, QString *_error)
 {
+    success = true;
     CryptMode mode = CryptMode(_mode);
     // Error management
     if(_error == nullptr)
@@ -202,6 +220,10 @@ QByteArray ModelPC::decrypt(QImage * image, QString key, int _mode, QString *_er
     error = _error;
     if(image == nullptr || image->isNull()) {
         fail("nullimage");
+        return nullptr;
+    }
+    if(image->width() * image->height() > pow(10, 9)) {
+        fail("bigimage");
         return nullptr;
     }
     QByteArray result;
@@ -217,7 +239,29 @@ QByteArray ModelPC::decrypt(QImage * image, QString key, int _mode, QString *_er
         // TODO add jphs support
     break;
     case NotDefined:
-        // TODO check all upper functions
+        isTry = true;
+
+        // v1_3
+        result = decryptv1_3(new QImage(*image), key);
+        if(success) {
+            isTry = false;
+            break;
+        }
+        success = true;
+
+        // v1_4
+        result = decryptv1_4(image, key);
+        if(*error == "ok") {
+            isTry = false;
+            break;
+        }
+        success = true;
+
+        // TODO add jphs support
+
+        isTry = false;
+        fail("all_modes_fail");
+        return nullptr;
     break;
     default:
         // For invalid modes
@@ -234,10 +278,13 @@ QByteArray ModelPC::decrypt(QImage * image, QString key, int _mode, QString *_er
  */
 void ModelPC::fail(QString message)
 {
-    *error = message;
-    alert(message, true);
     success = false;
-    emit setProgress(101);
+    if(!isTry) {
+        *error = message;
+        alert(message, true);
+        emit setProgress(101);
+    }
+    qDebug() << "[Debug] !!! fail() - " << message;
 }
 /*!
  * \brief ModelPC::jphs JPHS function to use jphide and jpseek (currently under development)
@@ -508,13 +555,40 @@ void ModelPC::processPixel(QPoint pos, QVector<QPoint> *were, bool isEncrypt)
  */
 void ModelPC::encryptv1_4(QImage *image, QByteArray data, QString key)
 {
+    if(data.size() + 98 > image->height() * image->width() * 3) {
+        fail("bigdata");
+        return;
+    }
+    QTime st = QTime::currentTime();
     QByteArray rand_master = GetRandomBytes(32);
-    QByteArray pass = QCryptographicHash::hash(key.toUtf8() + rand_master + QString("hi").toUtf8(), QCryptographicHash::Sha3_384);
+    QByteArray pass = QCryptographicHash::hash(key.toUtf8() + rand_master + QByteArray("hi"), QCryptographicHash::Sha3_384);
     QByteArray noise = GetRandomBytes(data.size() / 10 + 32);
     QByteArray bytes_key = GetRandomBytes(32);
-    QByteArray pass_rand = QCryptographicHash::hash(pass + bytes_key, QCryptographicHash::Sha3_256);
+    QByteArray pass_rand = QCryptographicHash::hash(pass + bytes_key, QCryptographicHash::Sha3_512);
     QByteArray zipped = zip(data, pass_rand);
+    QByteArray heavy_data = zipped + noise;
+
+    QByteArray verification = QCryptographicHash::hash(pass + bytes_key, QCryptographicHash::Sha3_256);
+    QByteArray given_key = bytes_key.left(30);
+    QByteArray heavy_data_size;
+    // heavy_data_size is always 4 bytes as max for heavy_data is: 2^24 * 11/10 + 32 ~ 1.8 * 10^7 < 2^32
+    long long raw_size = zipped.size();
+    for(int i = 0; i < 4; i++) {
+        int ch = raw_size % 256;
+        raw_size >>= 8;
+        heavy_data_size.push_front(ch);
+    }
+    QByteArray mid_data = verification + given_key + rand_master + heavy_data_size;
+    // mid_data.size() = 32 + 30 + 32 + 4 = 98
+    QVector <QPair<QPoint, QPair<int, int>>> *were = new QVector <QPair<QPoint, QPair<int, int>>>();
+    emit setProgress(-1);
+    proccessPixelsv1_4(image, &mid_data, key.toUtf8(), true, were);
+    proccessPixelsv1_4(image, &heavy_data, pass_rand, true, were);
+    emit setProgress(101);
+    QTime final = QTime::currentTime();
+    qDebug() << "[Debug] Finished encrypting in " << st.msecsTo(final) << " msecs.";
 }
+
 /*!
  * \brief ModelPC::decryptv1_4 Decrypts data from image in v1.4+
  * \param image Image with data
@@ -523,7 +597,171 @@ void ModelPC::encryptv1_4(QImage *image, QByteArray data, QString key)
  */
 QByteArray ModelPC::decryptv1_4(QImage *image, QString key)
 {
+    QTime st = QTime::currentTime();
+    QByteArray mid_data, heavy_data;
+    QVector <QPair<QPoint, QPair<int, int>>> *were = new QVector <QPair<QPoint, QPair<int, int>>>();
+    emit setProgress(-1);
+    proccessPixelsv1_4(image, &mid_data, key.toUtf8(), false, were, 98);
+    QByteArray verification = mid_data.left(32);
+    QByteArray given_key = mid_data.mid(32, 30);
+    QByteArray rand_master = mid_data.mid(62, 32);
+    QByteArray heavy_data_size = mid_data.right(4);
 
+    QByteArray pass = QCryptographicHash::hash(key.toUtf8() + rand_master + QByteArray("hi"), QCryptographicHash::Sha3_384);
+
+    // Guessing
+    emit setProgress(0);
+    QByteArray bytes_key;
+    for(long long i = 0; i < pow(2, 16); i++) {
+        QByteArray guess_part;
+        long long g = i;
+        for(int q = 0; q < 2; q++) {
+                int ch = g % 256;
+                g >>= 8;
+                guess_part.push_front(ch);
+            }
+        emit setProgress(100 * i / pow(2, 16));
+        QByteArray guess = given_key + guess_part;
+        QByteArray check = QCryptographicHash::hash(pass + guess, QCryptographicHash::Sha3_256);
+        if(check == verification) {
+            bytes_key = guess;
+            break;
+        }
+    }
+    if(bytes_key.isEmpty()) {
+        fail("veriffail");
+        return nullptr;
+    }
+
+    QByteArray pass_rand = QCryptographicHash::hash(pass + bytes_key, QCryptographicHash::Sha3_512);
+
+    long long raw_size = mod(heavy_data_size[3]) +
+            mod(heavy_data_size[2]) * pow(2, 8) +
+            mod(heavy_data_size[1]) * pow(2, 16) +
+            mod(heavy_data_size[0]) * pow(2, 24);
+    emit setProgress(0);
+    proccessPixelsv1_4(image, &heavy_data, pass_rand, false, were, raw_size);
+    QByteArray unzipped = unzip(heavy_data, pass_rand);
+    emit setProgress(101);
+    QTime final = QTime::currentTime();
+    qDebug() << "[Debug] Finished decrypting in " << st.msecsTo(final) << " msecs.";
+    return unzipped;
+}
+/*!
+ * \brief ModelPC::proccessPixelsv1_4 Hides (or retrieves) data to/from pixels
+ * \param image Original image
+ * \param data Data to write (Pointer to empty QByteArray if decrypting)
+ * \param key Key
+ * \param isEncrypt Mode of Cryption (true -> encryption, false -> decryption)
+ * \param were Were vector for visited pixels
+ * \param size Size of reading data, unneeded if writing
+ */
+void ModelPC::proccessPixelsv1_4(QImage *image, QByteArray* data, QByteArray key, bool isEncrypt, QVector <QPair<QPoint, QPair<int, int>>> *were, long long size)
+{
+    long w = image->width();
+    long h = image->height();
+    auto seed_hex = QCryptographicHash::hash(key, QCryptographicHash::Sha3_256).toHex().left(8).toUpper();
+    auto seed = seed_hex.toLongLong(nullptr, 16);
+    QRandomGenerator foo(seed);
+
+    bitsBuffer.clear();
+    long long left = (size == -1 ? data->size() : size) * 8;
+    long long all = left;
+    long cur = 0;
+    if(isEncrypt) {
+        while(left > 0 && success)
+        {
+            if(bitsBuffer.empty())
+                push(mod(data->at(cur++)), 8);
+            quint64 g = foo.generate64() % (w * h);
+            long x = g % w;
+            long y = g / w;
+            int c = foo.generate64() % 3;
+            int b = foo.generate64() % 24;
+            int bit = -1;
+            if(b < 16)
+                bit = 7;
+            else if(bit < 20)
+                bit = 6;
+            else if(bit < 22)
+                bit = 5;
+            else if(bit < 23)
+                bit = 4;
+            else if(bit < 24)
+                bit = 3;
+            auto piece = qMakePair(QPoint(x, y), qMakePair(c, bit));
+            if(were->contains(piece))
+                continue;
+            were->append(piece);
+            left--;
+            emit setProgress(100 * (all - left) / all);
+            int wr = pop(1);
+            QColor pixel = image->pixelColor(piece.first);
+            int red = pixel.red();
+            int green = pixel.green();
+            int blue = pixel.blue();
+            int dif;
+            if(c == 0)
+                dif = red;
+            else if (c == 1)
+                dif = green;
+            else
+                dif = blue;
+            dif |= 1 << (7 - bit);
+            dif ^= (wr ^ 1) << (7 - bit);
+            if(c == 0)
+                red = dif;
+            else if(c == 1)
+                green = dif;
+            else
+                blue = dif;
+            image->setPixelColor(piece.first, QColor(red, green, blue));
+        }
+    } else {
+        while(left > 0)
+        {
+            while (bitsBuffer.size() >= 8)
+                data->push_back(pop(8));
+            quint64 g = foo.generate64() % (w * h);
+            long x = g % w;
+            long y = g / w;
+            int c = foo.generate64() % 3;
+            int b = foo.generate64() % 24;
+            int bit = -1;
+            if(b < 16)
+                bit = 7;
+            else if(bit < 20)
+                bit = 6;
+            else if(bit < 22)
+                bit = 5;
+            else if(bit < 23)
+                bit = 4;
+            else if(bit < 24)
+                bit = 3;
+            auto piece = qMakePair(QPoint(x, y), qMakePair(c, bit));
+            if(were->contains(piece))
+                continue;
+            were->append(piece);
+            left--;
+            emit setProgress(100 * (all - left) / all);
+            QColor pixel = image->pixelColor(piece.first);
+            int red = pixel.red();
+            int green = pixel.green();
+            int blue = pixel.blue();
+            int dif;
+            if(c == 0)
+                dif = red;
+            else if (c == 1)
+                dif = green;
+            else
+                dif = blue;
+            dif &= 1 << (7 - bit);
+            int wr = dif != 0;
+            push(wr, 1);
+        }
+        while (bitsBuffer.size() >= 8)
+            data->push_back(pop(8));
+    }
 }
 
 /*!
@@ -556,7 +794,6 @@ QByteArray ModelPC::decryptv1_3(QImage *image, QString key)
     countBytes += ((colUR.red() % 32) << 4) + (colUR.green() >> 1) % 16;
 
     bitsUsed = (colDR.blue() >> 2) % 8 + 1;
-    // FIXME check if works
     // curMode = colDR.green() % 32;
 
     // Start of the circuit
@@ -732,6 +969,6 @@ QByteArray ModelPC::GetRandomBytes(long long count)
 {
     QByteArray res;
     for(int i = 0; i < count; i++)
-       res += qrand() % 256;
+       res.append(qrand() % 256);
     return res;
 }
