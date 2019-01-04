@@ -8,7 +8,6 @@
 
 #include <modelpc.h>
 #include <viewpc.h>
-#include <unit_tests/testpc.h>
 /*! \file controllerpc.h
  * Header of ControllerPC class
  * \sa ControllerPC, ModelPC, ViewPC

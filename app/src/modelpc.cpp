@@ -9,7 +9,7 @@
 ModelPC::ModelPC()
 {
     // Version control
-    versionString = "1.4.0.dev-alpha";
+    versionString = "1.4.0.dev-alpha.1";
 
     auto ver = versionString.split(".");
     version = ver[0].toInt() * qPow(2, 16) + ver[1].toInt() * qPow(2, 8) + ver[2].toInt();
@@ -147,6 +147,7 @@ QImage * ModelPC::inject(QByteArray encr_data, QImage * image, int _mode, int _b
     error = _error;
 
     bitsUsed = _bitsUsed;
+    // FIXME add check for null data and key
 
     if(encr_data.isEmpty()) {
         fail("nodata");
@@ -251,7 +252,7 @@ QByteArray ModelPC::decrypt(QImage * image, QString key, int _mode, QString *_er
 
         // v1_4
         result = decryptv1_4(image, key);
-        if(*error == "ok") {
+        if(success) {
             isTry = false;
             break;
         }
@@ -834,7 +835,7 @@ QByteArray ModelPC::decryptv1_3(QImage *image, QString key)
     QByteArray unzipped_data = unzip(data, key.toUtf8());
     QByteArray our_hash = QCryptographicHash::hash(unzipped_data, QCryptographicHash::Sha256);
     if(our_hash != hash) {
-        fail("fail_hash");
+        fail("veriffail");
         return QByteArray("");
     }
     return unzipped_data;
@@ -962,8 +963,10 @@ QString ModelPC::generateVersionString(long ver)
 uint ModelPC::randSeed()
 {
     QTime time = QTime::currentTime();
-    uint randSeed = time.msecsSinceStartOfDay() % 65536 + time.minute() * 21 + time.second() * 2;
-    return randSeed;
+    uint randSeed = time.msecsSinceStartOfDay() % 55363 + time.minute() * 21 + time.second() * 2 + 239;
+    qsrand(randSeed);
+    uint randSeed_2 = qrand() % 72341 + qrand() % 3 + qrand() % 2 + 566;
+    return randSeed_2;
 }
 QByteArray ModelPC::GetRandomBytes(long long count)
 {

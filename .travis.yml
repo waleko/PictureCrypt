@@ -15,28 +15,9 @@ env:
     # include $HOME/.local/bin for `aws`
     - PATH=$HOME/.local/bin:$PATH
 
-before_install:
-  # Install apt-get for qt 5.10.1
-  - sudo add-apt-repository -y ppa:beineri/opt-qt-5.10.1-trusty
-  # For g++
-  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
-  # Update
-  - sudo apt-get update -qq
-
 install:
-  # Install qt
-  - sudo apt-get install -y qt510-meta-minimal
-  # Setup qt
-  - source /opt/qt510/bin/qt510-env.sh
-  - export QTHOME=/opt/qt510
-  # Install g++
-  - sudo apt-get install g++-6
-  # Install doxygen and graphviz
-  - sudo apt-get install -y doxygen
-  - sudo apt-get install -y doxygen-doc
-  - sudo apt-get install -y doxygen-latex
-  - sudo apt-get install -y doxygen-gui
-  - sudo apt-get install -y graphviz
+  - cd app
+  - sh ./scripts/install.sh
 
 before_script:
   - cd src

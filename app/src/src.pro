@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui testlib
+QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -30,9 +30,7 @@ SOURCES += \
     modelpc.cpp \
     encryptdialog.cpp \
     aboutpc.cpp \
-    aes/qaesencryption.cpp \
-    unit_tests/testpc.cpp \
-    test/picturecrypttest.cpp
+    aes/qaesencryption.cpp
 
 HEADERS += \
         viewpc.h \
@@ -40,8 +38,7 @@ HEADERS += \
     modelpc.h \
     encryptdialog.h \
     aboutpc.h \
-    aes/qaesencryption.h \
-    unit_tests/testpc.h
+    aes/qaesencryption.h
 
 FORMS += \
         viewpc.ui \
@@ -49,10 +46,8 @@ FORMS += \
     aboutpc.ui
 
 RESOURCES += \
-    resource.qrc \
-    test/test-resource.qrc
+    resource.qrc
 
-CONFIG += testcase
 CONFIG(debug, debug|release) {
     DESTDIR         = $$OUT_PWD/build/Debug
 }else {

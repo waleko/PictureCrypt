@@ -45,9 +45,8 @@ void ControllerPC::abortCircuit()
 void ControllerPC::runTests()
 {
     // FIXME remove all of this mess and use QtTest
-    bool res = TestPC::Test();
     QMessageBox o;
-    o.setText(!res ? "Testing complete! All tests passed." : "Testing failed.");
+    o.setText("No tests, sorry. Use 'make tests'");
     o.exec();
 }
 /*!
