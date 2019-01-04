@@ -8,6 +8,7 @@ sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
 sudo apt-get update -qq
   # Install qt
 sudo apt-get install -y qt511-meta-minimal
+sudo apt-get install -y qt511base
   # Setup qt
 source /opt/qt510/bin/qt511-env.sh
 export QTHOME=/opt/qt511

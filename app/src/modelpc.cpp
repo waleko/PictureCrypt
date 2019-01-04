@@ -58,7 +58,7 @@ QImage * ModelPC::encrypt(QByteArray data, QImage * image, int _mode, QString ke
     *_error = "ok";
     error = _error;
 
-    if(data.isEmpty()) {
+    if(data == nullptr || data.isEmpty()) {
         fail("nodata");
         return nullptr;
     }
@@ -78,7 +78,7 @@ QImage * ModelPC::encrypt(QByteArray data, QImage * image, int _mode, QString ke
         fail("bitsWrong");
         return nullptr;
     }
-    if(key.isEmpty()) {
+    if(key == nullptr || key.isEmpty()) {
         fail("no_key");
         return nullptr;
     }
@@ -147,9 +147,8 @@ QImage * ModelPC::inject(QByteArray encr_data, QImage * image, int _mode, int _b
     error = _error;
 
     bitsUsed = _bitsUsed;
-    // FIXME add check for null data and key
 
-    if(encr_data.isEmpty()) {
+    if(encr_data == nullptr || encr_data.isEmpty()) {
         fail("nodata");
         return nullptr;
     }
@@ -225,6 +224,10 @@ QByteArray ModelPC::decrypt(QImage * image, QString key, int _mode, QString *_er
     }
     if(image->width() * image->height() > pow(10, 9)) {
         fail("bigimage");
+        return nullptr;
+    }
+    if(key == nullptr || key.isEmpty()) {
+        fail("no_key");
         return nullptr;
     }
     QByteArray result;

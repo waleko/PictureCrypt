@@ -171,12 +171,14 @@
      <string>Menu</string>
     </property>
     <widget class="QMenu" name="menuConfigure">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="title">
       <string>Configure</string>
      </property>
      <addaction name="actionJPHS_path"/>
     </widget>
-    <addaction name="actionRun_tests"/>
     <addaction name="menuConfigure"/>
     <addaction name="separator"/>
     <addaction name="actionAbout"/>
