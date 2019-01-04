@@ -25,8 +25,8 @@ install:
 #before_script:
 #  - cd src
 script:
-  - bash ../scripts/build.sh
-#  - bash ./../scripts/clean.sh
+  - bash ./scripts/build.sh
+#  - bash ./scripts/clean.sh
   - cd src/doxy
 
 before_deploy:
