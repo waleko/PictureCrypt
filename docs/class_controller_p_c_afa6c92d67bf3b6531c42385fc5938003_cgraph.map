@@ -3,6 +3,4 @@
 <area shape="rect" id="node3" href="$class_controller_p_c.html#a8814989f7be1214e06b2e720889066b0" title="ControllerPC::abortCircuit Slot to be called when ProgressDialog in ViewPC is closed. It flags ModelPC to stop. " alt="" coords="237,56,409,83"/>
 <area shape="rect" id="node4" href="$class_controller_p_c.html#ac00d29685a7e5b780c01eb438e10f96d" title="ControllerPC::setJPHSDir Sets JPHS default dir. " alt="" coords="235,107,410,133"/>
 <area shape="rect" id="node5" href="$class_controller_p_c.html#aaa59fc90e1ef731eee4560ec87e43707" title="ControllerPC::runTests Runs tests. " alt="" coords="245,157,401,184"/>
-<area shape="rect" id="node6" href="$class_test_p_c.html#adec99ddd8910d45b6aca0a105f44960e" title="TestPC::Test Static function of testing. " alt="" coords="459,157,560,184"/>
-<area shape="rect" id="node7" href="$class_test_p_c.html#a65226eb54f1ff76639c9fb1e2013e430" title="TestPC::TestPC Constructor. " alt="" coords="608,157,728,184"/>
 </map>

@@ -34,12 +34,12 @@ See source on \href{https://github.com/waleko/PictureCrypt}{\tt https\-://github
 \end{DoxyNote}
 \hypertarget{index_ext-use}{}\section{External use}\label{index_ext-use}
 \hyperlink{class_model_p_c}{Model\-P\-C} class can be used externally (without U\-I) \begin{DoxyNote}{Note}
-\hyperlink{class_test_p_c}{Test\-P\-C} class was introduced recently, its use is adviced.
+Test\-P\-C class was introduced recently, its use is adviced.
 \end{DoxyNote}
 
 \begin{DoxyCode}
 \textcolor{preprocessor}{#include <\hyperlink{modelpc_8h}{modelpc.h}>}
-\textcolor{preprocessor}{#include <\hyperlink{testpc_8h}{testpc.h}>}
+\textcolor{preprocessor}{#include <testpc.h>}
 \textcolor{preprocessor}{#include <QByteArray>}
 \textcolor{preprocessor}{#include <QImage>}
 
@@ -47,7 +47,7 @@ See source on \href{https://github.com/waleko/PictureCrypt}{\tt https\-://github
 
 ...
 
-if(\hyperlink{class_test_p_c_adec99ddd8910d45b6aca0a105f44960e}{TestPC::Test}())
+if(TestPC::Test())
     \textcolor{keywordflow}{return};
 \hyperlink{class_model_p_c}{ModelPC} * model = \textcolor{keyword}{new} \hyperlink{class_model_p_c}{ModelPC}();
 

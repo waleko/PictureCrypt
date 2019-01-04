@@ -1,8 +1,6 @@
 <map id="modelpc.h" name="modelpc.h">
-<area shape="rect" id="node2" href="$controllerpc_8h.html" title="controllerpc.h" alt="" coords="71,155,171,181"/>
-<area shape="rect" id="node5" href="$modelpc_8cpp.html" title="modelpc.cpp" alt="" coords="120,80,216,107"/>
-<area shape="rect" id="node6" href="$testpc_8h.html" title="testpc.h" alt="" coords="240,80,309,107"/>
-<area shape="rect" id="node3" href="$controllerpc_8cpp.html" title="controllerpc.cpp" alt="" coords="5,229,120,256"/>
-<area shape="rect" id="node4" href="$main_8cpp.html" title="main.cpp" alt="" coords="144,229,217,256"/>
-<area shape="rect" id="node7" href="$testpc_8cpp.html" title="testpc.cpp" alt="" coords="233,155,315,181"/>
+<area shape="rect" id="node2" href="$controllerpc_8h.html" title="controllerpc.h" alt="" coords="71,80,171,107"/>
+<area shape="rect" id="node5" href="$modelpc_8cpp.html" title="modelpc.cpp" alt="" coords="196,80,292,107"/>
+<area shape="rect" id="node3" href="$controllerpc_8cpp.html" title="controllerpc.cpp" alt="" coords="5,155,120,181"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title="main.cpp" alt="" coords="144,155,217,181"/>
 </map>

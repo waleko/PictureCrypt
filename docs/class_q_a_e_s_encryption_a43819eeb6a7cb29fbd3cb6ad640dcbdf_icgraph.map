@@ -4,6 +4,5 @@
 <area shape="rect" id="node3" href="$class_encrypt_dialog.html#ab57e8b3a0d00c977e81f3b356657524e" title="EncryptDialog::EncryptDialog Constructor of the class. Input data is saved here and some variables ar..." alt="" coords="395,5,589,32"/>
 <area shape="rect" id="node4" href="$class_encrypt_dialog.html#a9a998acd37db458eede31f4a9cb16b78" title="EncryptDialog::on_buttonBox_accepted Slot to start the encryption. Successful closing of the app..." alt="" coords="407,57,577,98"/>
 <area shape="rect" id="node6" href="$class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="638,148,765,175"/>
-<area shape="rect" id="node8" href="$class_model_p_c.html#a4daefc3fb87a1f19172b9b20c987eb12" title="ModelPC::encryptv1_4 Encrypts and injects data to image used in v1.4+. " alt="" coords="415,173,569,200"/>
-<area shape="rect" id="node7" href="$class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="814,148,911,175"/>
+<area shape="rect" id="node7" href="$class_model_p_c.html#a4daefc3fb87a1f19172b9b20c987eb12" title="ModelPC::encryptv1_4 Encrypts and injects data to image used in v1.4+. " alt="" coords="415,173,569,200"/>
 </map>

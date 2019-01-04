@@ -105,6 +105,8 @@ Q\-Byte\-Array \hyperlink{class_model_p_c_a4fe70ebbedfaf31d45a35f82d0f06caa}{dec
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_model_p_c_a4fe70ebbedfaf31d45a35f82d0f06caa}{Model\-P\-C\-::decryptv1\-\_\-3} Decrytps data from image in v1.\-3. \end{DoxyCompactList}\item 
 Q\-Byte\-Array \hyperlink{class_model_p_c_a7a1f7d491e1bde16936190b9e90896b0}{decryptv1\-\_\-4} (Q\-Image $\ast$image, Q\-String key)
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_model_p_c_a7a1f7d491e1bde16936190b9e90896b0}{Model\-P\-C\-::decryptv1\-\_\-4} Decrypts data from image in v1.\-4+. \end{DoxyCompactList}\item 
+void \hyperlink{class_model_p_c_a5cdb4d1d61ff62ee9d45b496a7dbf1fb}{proccess\-Pixelsv1\-\_\-4} (Q\-Image $\ast$image, Q\-Byte\-Array $\ast$data, Q\-Byte\-Array key, bool is\-Encrypt, Q\-Vector$<$ Q\-Pair$<$ Q\-Point, Q\-Pair$<$ int, int $>$ $>$ $>$ $\ast$were, long long size=-\/1)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_model_p_c_a5cdb4d1d61ff62ee9d45b496a7dbf1fb}{Model\-P\-C\-::proccess\-Pixelsv1\-\_\-4} Hides (or retrieves) data to/from pixels. \end{DoxyCompactList}\item 
 Q\-Byte\-Array \hyperlink{class_model_p_c_afebbbfa4b07deba4f68fc6dfb50f353f}{zip} (Q\-Byte\-Array data, Q\-Byte\-Array key)
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_model_p_c_afebbbfa4b07deba4f68fc6dfb50f353f}{Model\-P\-C\-::zip} Zip function, copy of \hyperlink{class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a}{Encrypt\-Dialog\-::zip} Used for \hyperlink{class_model_p_c}{Model\-P\-C} in custom projects, other than Picture\-Crypt. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
@@ -125,7 +127,7 @@ Alex Kovrigin (waleko)
 \end{DoxyAuthor}
 
 
-Definition at line \hyperlink{modelpc_8h_source_l00030}{30} of file \hyperlink{modelpc_8h_source}{modelpc.\-h}.
+Definition at line \hyperlink{modelpc_8h_source_l00033}{33} of file \hyperlink{modelpc_8h_source}{modelpc.\-h}.
 
 
 
@@ -148,7 +150,7 @@ Definition at line \hyperlink{modelpc_8h_source_l00030}{30} of file \hyperlink{m
 \end{Desc}
 
 
-Definition at line \hyperlink{modelpc_8h_source_l00035}{35} of file \hyperlink{modelpc_8h_source}{modelpc.\-h}.
+Definition at line \hyperlink{modelpc_8h_source_l00038}{38} of file \hyperlink{modelpc_8h_source}{modelpc.\-h}.
 
 
 
@@ -210,7 +212,7 @@ Here is the caller graph for this function\-:
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{modelpc_8cpp_source_l00703}{703} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
+Definition at line \hyperlink{modelpc_8cpp_source_l00937}{937} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
 
 
 
@@ -285,7 +287,7 @@ The circuit itself can be found in documentation or in commentaries in source.
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{modelpc_8cpp_source_l00308}{308} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
+Definition at line \hyperlink{modelpc_8cpp_source_l00356}{356} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
 
 
 
@@ -370,7 +372,7 @@ Returns decrypted data
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{modelpc_8cpp_source_l00195}{195} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
+Definition at line \hyperlink{modelpc_8cpp_source_l00213}{213} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
 
 
 
@@ -380,18 +382,6 @@ Here is the call graph for this function\-:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_model_p_c_a5995215a34a1e1f504035715a8013809_cgraph}
-\end{center}
-\end{figure}
-
-
-
-
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=286pt]{class_model_p_c_a5995215a34a1e1f504035715a8013809_icgraph}
 \end{center}
 \end{figure}
 
@@ -420,7 +410,7 @@ Returns obtained data
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{modelpc_8cpp_source_l00535}{535} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
+Definition at line \hyperlink{modelpc_8cpp_source_l00774}{774} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
 
 
 
@@ -441,7 +431,7 @@ Here is the caller graph for this function\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_model_p_c_a4fe70ebbedfaf31d45a35f82d0f06caa_icgraph}
+\includegraphics[width=328pt]{class_model_p_c_a4fe70ebbedfaf31d45a35f82d0f06caa_icgraph}
 \end{center}
 \end{figure}
 
@@ -470,7 +460,19 @@ Returns obtained data
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{modelpc_8cpp_source_l00524}{524} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
+Definition at line \hyperlink{modelpc_8cpp_source_l00599}{599} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
+
+
+
+Here is the call graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_model_p_c_a7a1f7d491e1bde16936190b9e90896b0_cgraph}
+\end{center}
+\end{figure}
+
 
 
 
@@ -479,7 +481,7 @@ Here is the caller graph for this function\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_model_p_c_a7a1f7d491e1bde16936190b9e90896b0_icgraph}
+\includegraphics[width=328pt]{class_model_p_c_a7a1f7d491e1bde16936190b9e90896b0_icgraph}
 \end{center}
 \end{figure}
 
@@ -565,18 +567,6 @@ Here is the call graph for this function\-:
 \end{figure}
 
 
-
-
-Here is the caller graph for this function\-:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=286pt]{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794_icgraph}
-\end{center}
-\end{figure}
-
-
 \hypertarget{class_model_p_c_a4daefc3fb87a1f19172b9b20c987eb12}{\index{Model\-P\-C@{Model\-P\-C}!encryptv1\-\_\-4@{encryptv1\-\_\-4}}
 \index{encryptv1\-\_\-4@{encryptv1\-\_\-4}!ModelPC@{Model\-P\-C}}
 \subsubsection[{encryptv1\-\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}void Model\-P\-C\-::encryptv1\-\_\-4 (
@@ -599,7 +589,7 @@ Here is the caller graph for this function\-:
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{modelpc_8cpp_source_l00509}{509} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
+Definition at line \hyperlink{modelpc_8cpp_source_l00557}{557} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
 
 
 
@@ -620,7 +610,7 @@ Here is the caller graph for this function\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_model_p_c_a4daefc3fb87a1f19172b9b20c987eb12_icgraph}
+\includegraphics[width=328pt]{class_model_p_c_a4daefc3fb87a1f19172b9b20c987eb12_icgraph}
 \end{center}
 \end{figure}
 
@@ -643,7 +633,7 @@ Here is the caller graph for this function\-:
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{modelpc_8cpp_source_l00235}{235} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
+Definition at line \hyperlink{modelpc_8cpp_source_l00280}{280} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
 
 
 
@@ -732,7 +722,7 @@ Returns image with embedded data.
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{modelpc_8cpp_source_l00130}{130} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
+Definition at line \hyperlink{modelpc_8cpp_source_l00139}{139} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
 
 
 
@@ -753,7 +743,7 @@ Here is the caller graph for this function\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10_icgraph}
+\includegraphics[width=298pt]{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10_icgraph}
 \end{center}
 \end{figure}
 
@@ -779,7 +769,7 @@ Here is the caller graph for this function\-:
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{modelpc_8cpp_source_l00247}{247} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
+Definition at line \hyperlink{modelpc_8cpp_source_l00295}{295} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
 
 
 
@@ -801,6 +791,53 @@ Here is the caller graph for this function\-:
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{class_model_p_c_a8bee0255c09449868c7e6097afaaf0cd_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_model_p_c_a5cdb4d1d61ff62ee9d45b496a7dbf1fb}{\index{Model\-P\-C@{Model\-P\-C}!proccess\-Pixelsv1\-\_\-4@{proccess\-Pixelsv1\-\_\-4}}
+\index{proccess\-Pixelsv1\-\_\-4@{proccess\-Pixelsv1\-\_\-4}!ModelPC@{Model\-P\-C}}
+\subsubsection[{proccess\-Pixelsv1\-\_\-4}]{\setlength{\rightskip}{0pt plus 5cm}void Model\-P\-C\-::proccess\-Pixelsv1\-\_\-4 (
+\begin{DoxyParamCaption}
+\item[{Q\-Image $\ast$}]{image, }
+\item[{Q\-Byte\-Array $\ast$}]{data, }
+\item[{Q\-Byte\-Array}]{key, }
+\item[{bool}]{is\-Encrypt, }
+\item[{Q\-Vector$<$ Q\-Pair$<$ Q\-Point, Q\-Pair$<$ int, int $>$ $>$ $>$ $\ast$}]{were, }
+\item[{long long}]{size = {\ttfamily -\/1}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_model_p_c_a5cdb4d1d61ff62ee9d45b496a7dbf1fb}
+
+
+\hyperlink{class_model_p_c_a5cdb4d1d61ff62ee9d45b496a7dbf1fb}{Model\-P\-C\-::proccess\-Pixelsv1\-\_\-4} Hides (or retrieves) data to/from pixels. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em image} & Original image \\
+\hline
+{\em data} & Data to write (Pointer to empty Q\-Byte\-Array if decrypting) \\
+\hline
+{\em key} & Key \\
+\hline
+{\em is\-Encrypt} & Mode of Cryption (true -\/$>$ encryption, false -\/$>$ decryption) \\
+\hline
+{\em were} & Were vector for visited pixels \\
+\hline
+{\em size} & Size of reading data, unneeded if writing \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \hyperlink{modelpc_8cpp_source_l00660}{660} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
+
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_model_p_c_a5cdb4d1d61ff62ee9d45b496a7dbf1fb_icgraph}
 \end{center}
 \end{figure}
 
@@ -829,7 +866,7 @@ Here is the caller graph for this function\-:
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{modelpc_8cpp_source_l00449}{449} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
+Definition at line \hyperlink{modelpc_8cpp_source_l00497}{497} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
 
 
 
@@ -878,7 +915,7 @@ Here is the caller graph for this function\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_model_p_c_a0855107fb0ccc247cd9e893fae9bb08a_icgraph}
+\includegraphics[width=318pt]{class_model_p_c_a0855107fb0ccc247cd9e893fae9bb08a_icgraph}
 \end{center}
 \end{figure}
 
@@ -969,7 +1006,7 @@ Returns data
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{modelpc_8cpp_source_l00642}{642} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
+Definition at line \hyperlink{modelpc_8cpp_source_l00876}{876} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
 
 
 
@@ -1022,7 +1059,7 @@ Model\-P\-C\-::start, \hyperlink{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{modelpc_8cpp_source_l00659}{659} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
+Definition at line \hyperlink{modelpc_8cpp_source_l00893}{893} of file \hyperlink{modelpc_8cpp_source}{modelpc.\-cpp}.
 
 
 
@@ -1060,7 +1097,7 @@ default\-J\-P\-H\-S\-Dir Default J\-P\-H\-S directory
 
 
 
-Definition at line \hyperlink{modelpc_8h_source_l00091}{91} of file \hyperlink{modelpc_8h_source}{modelpc.\-h}.
+Definition at line \hyperlink{modelpc_8h_source_l00094}{94} of file \hyperlink{modelpc_8h_source}{modelpc.\-h}.
 
 \hypertarget{class_model_p_c_a4e5a9c0ca1f06fe5bc478b6bf248c37c}{\index{Model\-P\-C@{Model\-P\-C}!error@{error}}
 \index{error@{error}!ModelPC@{Model\-P\-C}}
@@ -1071,7 +1108,7 @@ error Current error
 
 
 
-Definition at line \hyperlink{modelpc_8h_source_l00104}{104} of file \hyperlink{modelpc_8h_source}{modelpc.\-h}.
+Definition at line \hyperlink{modelpc_8h_source_l00108}{108} of file \hyperlink{modelpc_8h_source}{modelpc.\-h}.
 
 \hypertarget{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{\index{Model\-P\-C@{Model\-P\-C}!success@{success}}
 \index{success@{success}!ModelPC@{Model\-P\-C}}
@@ -1082,7 +1119,7 @@ success Flag that true by default, but in case of error or cancelling of Progres
 
 
 
-Definition at line \hyperlink{modelpc_8h_source_l00079}{79} of file \hyperlink{modelpc_8h_source}{modelpc.\-h}.
+Definition at line \hyperlink{modelpc_8h_source_l00082}{82} of file \hyperlink{modelpc_8h_source}{modelpc.\-h}.
 
 \hypertarget{class_model_p_c_a5af48ab89e19be42a94c34ba00249401}{\index{Model\-P\-C@{Model\-P\-C}!version@{version}}
 \index{version@{version}!ModelPC@{Model\-P\-C}}
@@ -1093,7 +1130,7 @@ version Version of the class
 
 
 
-Definition at line \hyperlink{modelpc_8h_source_l00083}{83} of file \hyperlink{modelpc_8h_source}{modelpc.\-h}.
+Definition at line \hyperlink{modelpc_8h_source_l00086}{86} of file \hyperlink{modelpc_8h_source}{modelpc.\-h}.
 
 \hypertarget{class_model_p_c_a5f426725ccf7eefd3c77ea8c720264c9}{\index{Model\-P\-C@{Model\-P\-C}!version\-String@{version\-String}}
 \index{version\-String@{version\-String}!ModelPC@{Model\-P\-C}}
@@ -1104,7 +1141,7 @@ version\-String Version as string
 
 
 
-Definition at line \hyperlink{modelpc_8h_source_l00087}{87} of file \hyperlink{modelpc_8h_source}{modelpc.\-h}.
+Definition at line \hyperlink{modelpc_8h_source_l00090}{90} of file \hyperlink{modelpc_8h_source}{modelpc.\-h}.
 
 
 

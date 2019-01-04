@@ -50,8 +50,10 @@ void \hyperlink{class_view_p_c_ac05220df875b7c4f24405a5742476ebf}{set\-Version} 
 \subsection*{Signals}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{class_view_p_c_a27ecfb84029d42029631b776a02ff5d8}{encrypt} (Q\-Byte\-Array data, Q\-Image $\ast$image, int mode, int bits\-Used)
+void \hyperlink{class_view_p_c_a9d179ff85ed8b1ca0ff7fa495965b52d}{encrypt} (Q\-Byte\-Array data, Q\-Image $\ast$image, int mode, Q\-String key)
 \begin{DoxyCompactList}\small\item\em encrypt Signal calling \hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{Model\-P\-C\-::encrypt} \end{DoxyCompactList}\item 
+void \hyperlink{class_view_p_c_a652c98014c2df32178d43a5a9612dd99}{inject} (Q\-Byte\-Array data, Q\-Image $\ast$image, int mode, int bits\-Used)
+\begin{DoxyCompactList}\small\item\em inject Signal calling \hyperlink{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10}{Model\-P\-C\-::inject} \end{DoxyCompactList}\item 
 void \hyperlink{class_view_p_c_a365df051360d557c7221474ad856e0af}{decrypt} (Q\-Image $\ast$\-\_\-image, Q\-String key, int mode)
 \begin{DoxyCompactList}\small\item\em decrypt Signal calling \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{Model\-P\-C\-::decrypt} \end{DoxyCompactList}\item 
 void \hyperlink{class_view_p_c_aa652102ce6b5757b8eef830409c8cabf}{abort\-Model} ()
@@ -59,7 +61,7 @@ void \hyperlink{class_view_p_c_aa652102ce6b5757b8eef830409c8cabf}{abort\-Model} 
 void \hyperlink{class_view_p_c_ae81085836c0c01bc9556a5b27eb8d19c}{set\-J\-P\-H\-S\-Dir} (Q\-String dir)
 \begin{DoxyCompactList}\small\item\em set\-J\-P\-H\-S\-Path Sets the default J\-P\-H\-S directory \end{DoxyCompactList}\item 
 void \hyperlink{class_view_p_c_a96a6c95728bf20c64d2a8fe978495395}{run\-Tests} ()
-\begin{DoxyCompactList}\small\item\em run\-Tests Runs tests in \hyperlink{class_controller_p_c}{Controller\-P\-C} via \hyperlink{class_test_p_c}{Test\-P\-C} \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em run\-Tests Runs tests in \hyperlink{class_controller_p_c}{Controller\-P\-C} via Test\-P\-C \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -75,7 +77,7 @@ Q\-Progress\-Dialog $\ast$ \hyperlink{class_view_p_c_a31abbb470fe329b44e6ffee202
 bool \hyperlink{class_view_p_c_add8c82aa2b0b934212aa5bde9277ab36}{progress\-Dialog\-Closed}
 \begin{DoxyCompactList}\small\item\em progress\-Dialog\-Closed Flag, if dialog is closed. \end{DoxyCompactList}\item 
 Q\-Json\-Object \hyperlink{class_view_p_c_a26f90436aca32e5bad46f5e69a7e7e09}{errors\-Dict}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em errors\-Dict Json object for errors dictionary \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Slots}
 \begin{DoxyCompactItemize}
 \item 
@@ -143,7 +145,7 @@ Here is the call graph for this function\-:
 
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00028}{28} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00029}{29} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
 
 
 
@@ -161,7 +163,7 @@ Definition at line \hyperlink{viewpc_8cpp_source_l00028}{28} of file \hyperlink{
 
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00222}{222} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00228}{228} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
 
 
 
@@ -219,7 +221,7 @@ Here is the caller graph for this function\-:
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00136}{136} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00142}{142} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
 
 
 
@@ -265,19 +267,56 @@ Here is the caller graph for this function\-:
 \end{figure}
 
 
-\hypertarget{class_view_p_c_a27ecfb84029d42029631b776a02ff5d8}{\index{View\-P\-C@{View\-P\-C}!encrypt@{encrypt}}
+\hypertarget{class_view_p_c_a9d179ff85ed8b1ca0ff7fa495965b52d}{\index{View\-P\-C@{View\-P\-C}!encrypt@{encrypt}}
 \index{encrypt@{encrypt}!ViewPC@{View\-P\-C}}
 \subsubsection[{encrypt}]{\setlength{\rightskip}{0pt plus 5cm}void View\-P\-C\-::encrypt (
 \begin{DoxyParamCaption}
 \item[{Q\-Byte\-Array}]{data, }
 \item[{Q\-Image $\ast$}]{image, }
 \item[{int}]{mode, }
-\item[{int}]{bits\-Used}
+\item[{Q\-String}]{key}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_view_p_c_a27ecfb84029d42029631b776a02ff5d8}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_view_p_c_a9d179ff85ed8b1ca0ff7fa495965b52d}
 
 
 encrypt Signal calling \hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{Model\-P\-C\-::encrypt} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Data to write \\
+\hline
+{\em image} & Image to be encrypted into \\
+\hline
+{\em mode} & Mode of encryption \\
+\hline
+{\em key} & Key of encryption \\
+\hline
+\end{DoxyParams}
+
+
+Here is the caller graph for this function\-:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{class_view_p_c_a9d179ff85ed8b1ca0ff7fa495965b52d_icgraph}
+\end{center}
+\end{figure}
+
+
+\hypertarget{class_view_p_c_a652c98014c2df32178d43a5a9612dd99}{\index{View\-P\-C@{View\-P\-C}!inject@{inject}}
+\index{inject@{inject}!ViewPC@{View\-P\-C}}
+\subsubsection[{inject}]{\setlength{\rightskip}{0pt plus 5cm}void View\-P\-C\-::inject (
+\begin{DoxyParamCaption}
+\item[{Q\-Byte\-Array}]{data, }
+\item[{Q\-Image $\ast$}]{image, }
+\item[{int}]{mode, }
+\item[{int}]{bits\-Used}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_view_p_c_a652c98014c2df32178d43a5a9612dd99}
+
+
+inject Signal calling \hyperlink{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10}{Model\-P\-C\-::inject} 
 
 
 \begin{DoxyParams}{Parameters}
@@ -297,7 +336,7 @@ Here is the caller graph for this function\-:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=330pt]{class_view_p_c_a27ecfb84029d42029631b776a02ff5d8_icgraph}
+\includegraphics[width=320pt]{class_view_p_c_a652c98014c2df32178d43a5a9612dd99_icgraph}
 \end{center}
 \end{figure}
 
@@ -315,7 +354,7 @@ Here is the caller graph for this function\-:
 
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00277}{277} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00285}{285} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
 
 
 
@@ -342,7 +381,7 @@ Here is the call graph for this function\-:
 
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00287}{287} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00295}{295} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
 
 \hypertarget{class_view_p_c_a3b9b7a7be9702d8b160f257f1c74a776}{\index{View\-P\-C@{View\-P\-C}!on\-\_\-file\-Button\-\_\-clicked@{on\-\_\-file\-Button\-\_\-clicked}}
 \index{on\-\_\-file\-Button\-\_\-clicked@{on\-\_\-file\-Button\-\_\-clicked}!ViewPC@{View\-P\-C}}
@@ -357,7 +396,7 @@ Definition at line \hyperlink{viewpc_8cpp_source_l00287}{287} of file \hyperlink
 
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00047}{47} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00048}{48} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
 
 \hypertarget{class_view_p_c_a456d75b7c5d3a089302a576e7359f1f4}{\index{View\-P\-C@{View\-P\-C}!on\-\_\-start\-Button\-\_\-clicked@{on\-\_\-start\-Button\-\_\-clicked}}
 \index{on\-\_\-start\-Button\-\_\-clicked@{on\-\_\-start\-Button\-\_\-clicked}!ViewPC@{View\-P\-C}}
@@ -374,10 +413,10 @@ Definition at line \hyperlink{viewpc_8cpp_source_l00047}{47} of file \hyperlink{
 If Encrypting mode is active the data from text browser or from file from file selector will be opened and checked in size. \begin{DoxyNote}{Note}
 File size limit is 16\-M\-B
 \end{DoxyNote}
-Then the \hyperlink{class_encrypt_dialog}{Encrypt\-Dialog} opens and image and key is selected. Then the \hyperlink{class_view_p_c_a27ecfb84029d42029631b776a02ff5d8}{View\-P\-C\-::encrypt} signal is called to start \hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{Model\-P\-C\-::encrypt} \hypertarget{class_view_p_c_decrypting}{}\subsection{Decrypting}\label{class_view_p_c_decrypting}
+Then the \hyperlink{class_encrypt_dialog}{Encrypt\-Dialog} opens and image and key is selected. Then the \hyperlink{class_view_p_c_a9d179ff85ed8b1ca0ff7fa495965b52d}{View\-P\-C\-::encrypt} signal is called to start \hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{Model\-P\-C\-::encrypt} \hypertarget{class_view_p_c_decrypting}{}\subsection{Decrypting}\label{class_view_p_c_decrypting}
 Else, the image from file selector is transmitted to \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{Model\-P\-C\-::decrypt} 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00069}{69} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00070}{70} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
 
 
 
@@ -407,7 +446,7 @@ Returns keyphrase
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00257}{257} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00265}{265} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
 
 
 
@@ -442,7 +481,7 @@ Here is the caller graph for this function\-:
 )\hspace{0.3cm}{\ttfamily [signal]}}}\label{class_view_p_c_a96a6c95728bf20c64d2a8fe978495395}
 
 
-run\-Tests Runs tests in \hyperlink{class_controller_p_c}{Controller\-P\-C} via \hyperlink{class_test_p_c}{Test\-P\-C} 
+run\-Tests Runs tests in \hyperlink{class_controller_p_c}{Controller\-P\-C} via Test\-P\-C 
 
 \hypertarget{class_view_p_c_aaff156103970be7c777beedaf0020604}{\index{View\-P\-C@{View\-P\-C}!save\-Data@{save\-Data}}
 \index{save\-Data@{save\-Data}!ViewPC@{View\-P\-C}}
@@ -465,7 +504,7 @@ run\-Tests Runs tests in \hyperlink{class_controller_p_c}{Controller\-P\-C} via 
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00157}{157} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00163}{163} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
 
 
 
@@ -500,7 +539,7 @@ Here is the call graph for this function\-:
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00178}{178} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00184}{184} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
 
 
 
@@ -527,12 +566,12 @@ Here is the call graph for this function\-:
 
 
 \begin{DoxyParams}{Parameters}
-{\em encr} & \\
+{\em encr} & = is\-Encrypt, true if encrypting, false if decrypting \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00235}{235} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00241}{241} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
 
 \hypertarget{class_view_p_c_ae81085836c0c01bc9556a5b27eb8d19c}{\index{View\-P\-C@{View\-P\-C}!set\-J\-P\-H\-S\-Dir@{set\-J\-P\-H\-S\-Dir}}
 \index{set\-J\-P\-H\-S\-Dir@{set\-J\-P\-H\-S\-Dir}!ViewPC@{View\-P\-C}}
@@ -571,7 +610,7 @@ set\-J\-P\-H\-S\-Path Sets the default J\-P\-H\-S directory
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00196}{196} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00202}{202} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
 
 
 
@@ -603,7 +642,7 @@ Here is the call graph for this function\-:
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00248}{248} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00256}{256} of file \hyperlink{viewpc_8cpp_source}{viewpc.\-cpp}.
 
 
 
@@ -632,14 +671,18 @@ dialog Progress\-Dialog used.
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{viewpc_8h_source_l00101}{101} of file \hyperlink{viewpc_8h_source}{viewpc.\-h}.
+Definition at line \hyperlink{viewpc_8h_source_l00113}{113} of file \hyperlink{viewpc_8h_source}{viewpc.\-h}.
 
 \hypertarget{class_view_p_c_a26f90436aca32e5bad46f5e69a7e7e09}{\index{View\-P\-C@{View\-P\-C}!errors\-Dict@{errors\-Dict}}
 \index{errors\-Dict@{errors\-Dict}!ViewPC@{View\-P\-C}}
 \subsubsection[{errors\-Dict}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Json\-Object View\-P\-C\-::errors\-Dict}}\label{class_view_p_c_a26f90436aca32e5bad46f5e69a7e7e09}
 
 
-Definition at line \hyperlink{viewpc_8h_source_l00107}{107} of file \hyperlink{viewpc_8h_source}{viewpc.\-h}.
+errors\-Dict Json object for errors dictionary 
+
+
+
+Definition at line \hyperlink{viewpc_8h_source_l00122}{122} of file \hyperlink{viewpc_8h_source}{viewpc.\-h}.
 
 \hypertarget{class_view_p_c_add8c82aa2b0b934212aa5bde9277ab36}{\index{View\-P\-C@{View\-P\-C}!progress\-Dialog\-Closed@{progress\-Dialog\-Closed}}
 \index{progress\-Dialog\-Closed@{progress\-Dialog\-Closed}!ViewPC@{View\-P\-C}}
@@ -653,7 +696,7 @@ progress\-Dialog\-Closed Flag, if dialog is closed.
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{viewpc_8h_source_l00106}{106} of file \hyperlink{viewpc_8h_source}{viewpc.\-h}.
+Definition at line \hyperlink{viewpc_8h_source_l00118}{118} of file \hyperlink{viewpc_8h_source}{viewpc.\-h}.
 
 
 

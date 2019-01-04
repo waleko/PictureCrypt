@@ -23,15 +23,7 @@
 \contentsline {subsubsection}{\numberline {6.1.1.2}filename}{13}{subsubsection.6.1.1.2}
 \contentsline {subsubsection}{\numberline {6.1.1.3}input\discretionary {-}{}{}\_\discretionary {-}{}{}data}{13}{subsubsection.6.1.1.3}
 \contentsline {subsubsection}{\numberline {6.1.1.4}raw}{13}{subsubsection.6.1.1.4}
-\contentsline {section}{\numberline {6.2}tests-\/setup Namespace Reference}{13}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Variable Documentation}{14}{subsection.6.2.1}
-\contentsline {subsubsection}{\numberline {6.2.1.1}arr}{14}{subsubsection.6.2.1.1}
-\contentsline {subsubsection}{\numberline {6.2.1.2}filename}{14}{subsubsection.6.2.1.2}
-\contentsline {subsubsection}{\numberline {6.2.1.3}input\discretionary {-}{}{}\_\discretionary {-}{}{}data}{14}{subsubsection.6.2.1.3}
-\contentsline {subsubsection}{\numberline {6.2.1.4}js}{14}{subsubsection.6.2.1.4}
-\contentsline {subsubsection}{\numberline {6.2.1.5}obj}{14}{subsubsection.6.2.1.5}
-\contentsline {subsubsection}{\numberline {6.2.1.6}raw}{14}{subsubsection.6.2.1.6}
-\contentsline {section}{\numberline {6.3}Ui Namespace Reference}{14}{section.6.3}
+\contentsline {section}{\numberline {6.2}Ui Namespace Reference}{13}{section.6.2}
 \contentsline {chapter}{\numberline {7}Class Documentation}{15}{chapter.7}
 \contentsline {section}{\numberline {7.1}About\discretionary {-}{}{}P\discretionary {-}{}{}C Class Reference}{15}{section.7.1}
 \contentsline {subsection}{\numberline {7.1.1}Detailed Description}{16}{subsection.7.1.1}
@@ -48,163 +40,149 @@
 \contentsline {subsubsection}{\numberline {7.2.3.1}abort\discretionary {-}{}{}Circuit}{18}{subsubsection.7.2.3.1}
 \contentsline {subsubsection}{\numberline {7.2.3.2}run\discretionary {-}{}{}Tests}{19}{subsubsection.7.2.3.2}
 \contentsline {subsubsection}{\numberline {7.2.3.3}set\discretionary {-}{}{}J\discretionary {-}{}{}P\discretionary {-}{}{}H\discretionary {-}{}{}S\discretionary {-}{}{}Dir}{19}{subsubsection.7.2.3.3}
-\contentsline {subsection}{\numberline {7.2.4}Member Data Documentation}{20}{subsection.7.2.4}
-\contentsline {subsubsection}{\numberline {7.2.4.1}version}{20}{subsubsection.7.2.4.1}
+\contentsline {subsection}{\numberline {7.2.4}Member Data Documentation}{19}{subsection.7.2.4}
+\contentsline {subsubsection}{\numberline {7.2.4.1}version}{19}{subsubsection.7.2.4.1}
 \contentsline {subsubsection}{\numberline {7.2.4.2}version\discretionary {-}{}{}String}{20}{subsubsection.7.2.4.2}
 \contentsline {section}{\numberline {7.3}Encrypt\discretionary {-}{}{}Dialog Class Reference}{20}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Detailed Description}{22}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.1}Detailed Description}{21}{subsection.7.3.1}
 \contentsline {subsection}{\numberline {7.3.2}Constructor \& Destructor Documentation}{22}{subsection.7.3.2}
 \contentsline {subsubsection}{\numberline {7.3.2.1}Encrypt\discretionary {-}{}{}Dialog}{22}{subsubsection.7.3.2.1}
 \contentsline {subsubsection}{\numberline {7.3.2.2}$\sim $\discretionary {-}{}{}Encrypt\discretionary {-}{}{}Dialog}{22}{subsubsection.7.3.2.2}
 \contentsline {subsection}{\numberline {7.3.3}Member Function Documentation}{22}{subsection.7.3.3}
 \contentsline {subsubsection}{\numberline {7.3.3.1}on\discretionary {-}{}{}\_\discretionary {-}{}{}bits\discretionary {-}{}{}Slider\discretionary {-}{}{}\_\discretionary {-}{}{}value\discretionary {-}{}{}Changed}{22}{subsubsection.7.3.3.1}
-\contentsline {subsubsection}{\numberline {7.3.3.2}on\discretionary {-}{}{}\_\discretionary {-}{}{}button\discretionary {-}{}{}Box\discretionary {-}{}{}\_\discretionary {-}{}{}accepted}{23}{subsubsection.7.3.3.2}
-\contentsline {subsubsection}{\numberline {7.3.3.3}on\discretionary {-}{}{}\_\discretionary {-}{}{}button\discretionary {-}{}{}Box\discretionary {-}{}{}\_\discretionary {-}{}{}rejected}{23}{subsubsection.7.3.3.3}
+\contentsline {subsubsection}{\numberline {7.3.3.2}on\discretionary {-}{}{}\_\discretionary {-}{}{}button\discretionary {-}{}{}Box\discretionary {-}{}{}\_\discretionary {-}{}{}accepted}{22}{subsubsection.7.3.3.2}
+\contentsline {subsubsection}{\numberline {7.3.3.3}on\discretionary {-}{}{}\_\discretionary {-}{}{}button\discretionary {-}{}{}Box\discretionary {-}{}{}\_\discretionary {-}{}{}rejected}{22}{subsubsection.7.3.3.3}
 \contentsline {subsubsection}{\numberline {7.3.3.4}on\discretionary {-}{}{}\_\discretionary {-}{}{}file\discretionary {-}{}{}Button\discretionary {-}{}{}\_\discretionary {-}{}{}clicked}{23}{subsubsection.7.3.3.4}
 \contentsline {subsubsection}{\numberline {7.3.3.5}zip}{23}{subsubsection.7.3.3.5}
-\contentsline {subsection}{\numberline {7.3.4}Member Data Documentation}{24}{subsection.7.3.4}
-\contentsline {subsubsection}{\numberline {7.3.4.1}bits\discretionary {-}{}{}Used}{24}{subsubsection.7.3.4.1}
+\contentsline {subsection}{\numberline {7.3.4}Member Data Documentation}{23}{subsection.7.3.4}
+\contentsline {subsubsection}{\numberline {7.3.4.1}bits\discretionary {-}{}{}Used}{23}{subsubsection.7.3.4.1}
 \contentsline {subsubsection}{\numberline {7.3.4.2}compr\discretionary {-}{}{}\_\discretionary {-}{}{}data}{24}{subsubsection.7.3.4.2}
 \contentsline {subsubsection}{\numberline {7.3.4.3}data}{24}{subsubsection.7.3.4.3}
 \contentsline {subsubsection}{\numberline {7.3.4.4}good\discretionary {-}{}{}Percentage}{24}{subsubsection.7.3.4.4}
 \contentsline {subsubsection}{\numberline {7.3.4.5}image}{24}{subsubsection.7.3.4.5}
 \contentsline {subsubsection}{\numberline {7.3.4.6}input\discretionary {-}{}{}File\discretionary {-}{}{}Name}{24}{subsubsection.7.3.4.6}
-\contentsline {subsubsection}{\numberline {7.3.4.7}key}{25}{subsubsection.7.3.4.7}
-\contentsline {subsubsection}{\numberline {7.3.4.8}size}{25}{subsubsection.7.3.4.8}
-\contentsline {subsubsection}{\numberline {7.3.4.9}success}{25}{subsubsection.7.3.4.9}
-\contentsline {subsubsection}{\numberline {7.3.4.10}val}{25}{subsubsection.7.3.4.10}
+\contentsline {subsubsection}{\numberline {7.3.4.7}key}{24}{subsubsection.7.3.4.7}
+\contentsline {subsubsection}{\numberline {7.3.4.8}size}{24}{subsubsection.7.3.4.8}
+\contentsline {subsubsection}{\numberline {7.3.4.9}success}{24}{subsubsection.7.3.4.9}
+\contentsline {subsubsection}{\numberline {7.3.4.10}val}{24}{subsubsection.7.3.4.10}
 \contentsline {section}{\numberline {7.4}Model\discretionary {-}{}{}P\discretionary {-}{}{}C Class Reference}{25}{section.7.4}
 \contentsline {subsection}{\numberline {7.4.1}Detailed Description}{27}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Member Enumeration Documentation}{28}{subsection.7.4.2}
-\contentsline {subsubsection}{\numberline {7.4.2.1}Crypt\discretionary {-}{}{}Mode}{28}{subsubsection.7.4.2.1}
-\contentsline {subsection}{\numberline {7.4.3}Constructor \& Destructor Documentation}{28}{subsection.7.4.3}
-\contentsline {subsubsection}{\numberline {7.4.3.1}Model\discretionary {-}{}{}P\discretionary {-}{}{}C}{28}{subsubsection.7.4.3.1}
+\contentsline {subsection}{\numberline {7.4.2}Member Enumeration Documentation}{27}{subsection.7.4.2}
+\contentsline {subsubsection}{\numberline {7.4.2.1}Crypt\discretionary {-}{}{}Mode}{27}{subsubsection.7.4.2.1}
+\contentsline {subsection}{\numberline {7.4.3}Constructor \& Destructor Documentation}{27}{subsection.7.4.3}
+\contentsline {subsubsection}{\numberline {7.4.3.1}Model\discretionary {-}{}{}P\discretionary {-}{}{}C}{27}{subsubsection.7.4.3.1}
 \contentsline {subsection}{\numberline {7.4.4}Member Function Documentation}{28}{subsection.7.4.4}
 \contentsline {subsubsection}{\numberline {7.4.4.1}alert}{28}{subsubsection.7.4.4.1}
 \contentsline {subsubsection}{\numberline {7.4.4.2}alert\discretionary {-}{}{}View}{29}{subsubsection.7.4.4.2}
-\contentsline {subsubsection}{\numberline {7.4.4.3}circuit}{29}{subsubsection.7.4.4.3}
-\contentsline {subsubsection}{\numberline {7.4.4.4}Decrypt}{30}{subsubsection.7.4.4.4}
-\contentsline {subsubsection}{\numberline {7.4.4.5}decrypt}{30}{subsubsection.7.4.4.5}
-\contentsline {subsubsection}{\numberline {7.4.4.6}decryptv1\discretionary {-}{}{}\_\discretionary {-}{}{}3}{31}{subsubsection.7.4.4.6}
-\contentsline {subsubsection}{\numberline {7.4.4.7}decryptv1\discretionary {-}{}{}\_\discretionary {-}{}{}4}{32}{subsubsection.7.4.4.7}
-\contentsline {subsubsection}{\numberline {7.4.4.8}Encrypt}{32}{subsubsection.7.4.4.8}
-\contentsline {subsubsection}{\numberline {7.4.4.9}encrypt}{33}{subsubsection.7.4.4.9}
-\contentsline {subsubsection}{\numberline {7.4.4.10}encryptv1\discretionary {-}{}{}\_\discretionary {-}{}{}4}{34}{subsubsection.7.4.4.10}
-\contentsline {subsubsection}{\numberline {7.4.4.11}fail}{34}{subsubsection.7.4.4.11}
-\contentsline {subsubsection}{\numberline {7.4.4.12}Inject}{35}{subsubsection.7.4.4.12}
-\contentsline {subsubsection}{\numberline {7.4.4.13}inject}{35}{subsubsection.7.4.4.13}
-\contentsline {subsubsection}{\numberline {7.4.4.14}jphs}{36}{subsubsection.7.4.4.14}
-\contentsline {subsubsection}{\numberline {7.4.4.15}process\discretionary {-}{}{}Pixel}{37}{subsubsection.7.4.4.15}
-\contentsline {subsubsection}{\numberline {7.4.4.16}save\discretionary {-}{}{}Data}{37}{subsubsection.7.4.4.16}
-\contentsline {subsubsection}{\numberline {7.4.4.17}save\discretionary {-}{}{}Image}{38}{subsubsection.7.4.4.17}
-\contentsline {subsubsection}{\numberline {7.4.4.18}set\discretionary {-}{}{}Progress}{38}{subsubsection.7.4.4.18}
-\contentsline {subsubsection}{\numberline {7.4.4.19}unzip}{38}{subsubsection.7.4.4.19}
-\contentsline {subsubsection}{\numberline {7.4.4.20}zip}{39}{subsubsection.7.4.4.20}
-\contentsline {subsection}{\numberline {7.4.5}Member Data Documentation}{40}{subsection.7.4.5}
-\contentsline {subsubsection}{\numberline {7.4.5.1}default\discretionary {-}{}{}J\discretionary {-}{}{}P\discretionary {-}{}{}H\discretionary {-}{}{}S\discretionary {-}{}{}Dir}{40}{subsubsection.7.4.5.1}
-\contentsline {subsubsection}{\numberline {7.4.5.2}error}{40}{subsubsection.7.4.5.2}
-\contentsline {subsubsection}{\numberline {7.4.5.3}success}{40}{subsubsection.7.4.5.3}
-\contentsline {subsubsection}{\numberline {7.4.5.4}version}{40}{subsubsection.7.4.5.4}
-\contentsline {subsubsection}{\numberline {7.4.5.5}version\discretionary {-}{}{}String}{40}{subsubsection.7.4.5.5}
-\contentsline {section}{\numberline {7.5}Q\discretionary {-}{}{}A\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}Encryption Class Reference}{41}{section.7.5}
-\contentsline {subsection}{\numberline {7.5.1}Detailed Description}{42}{subsection.7.5.1}
-\contentsline {subsection}{\numberline {7.5.2}Member Enumeration Documentation}{42}{subsection.7.5.2}
-\contentsline {subsubsection}{\numberline {7.5.2.1}Aes}{42}{subsubsection.7.5.2.1}
-\contentsline {subsubsection}{\numberline {7.5.2.2}Mode}{43}{subsubsection.7.5.2.2}
-\contentsline {subsubsection}{\numberline {7.5.2.3}Padding}{43}{subsubsection.7.5.2.3}
-\contentsline {subsection}{\numberline {7.5.3}Constructor \& Destructor Documentation}{43}{subsection.7.5.3}
-\contentsline {subsubsection}{\numberline {7.5.3.1}Q\discretionary {-}{}{}A\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}Encryption}{43}{subsubsection.7.5.3.1}
-\contentsline {subsection}{\numberline {7.5.4}Member Function Documentation}{43}{subsection.7.5.4}
-\contentsline {subsubsection}{\numberline {7.5.4.1}Crypt}{43}{subsubsection.7.5.4.1}
-\contentsline {subsubsection}{\numberline {7.5.4.2}decode}{44}{subsubsection.7.5.4.2}
-\contentsline {subsubsection}{\numberline {7.5.4.3}Decrypt}{45}{subsubsection.7.5.4.3}
-\contentsline {subsubsection}{\numberline {7.5.4.4}encode}{46}{subsubsection.7.5.4.4}
-\contentsline {subsubsection}{\numberline {7.5.4.5}Expand\discretionary {-}{}{}Key}{46}{subsubsection.7.5.4.5}
-\contentsline {subsubsection}{\numberline {7.5.4.6}expand\discretionary {-}{}{}Key}{47}{subsubsection.7.5.4.6}
-\contentsline {subsubsection}{\numberline {7.5.4.7}Remove\discretionary {-}{}{}Padding}{48}{subsubsection.7.5.4.7}
-\contentsline {subsubsection}{\numberline {7.5.4.8}remove\discretionary {-}{}{}Padding}{49}{subsubsection.7.5.4.8}
-\contentsline {section}{\numberline {7.6}Test\discretionary {-}{}{}P\discretionary {-}{}{}C Class Reference}{49}{section.7.6}
-\contentsline {subsection}{\numberline {7.6.1}Detailed Description}{51}{subsection.7.6.1}
-\contentsline {subsection}{\numberline {7.6.2}Constructor \& Destructor Documentation}{51}{subsection.7.6.2}
-\contentsline {subsubsection}{\numberline {7.6.2.1}Test\discretionary {-}{}{}P\discretionary {-}{}{}C}{51}{subsubsection.7.6.2.1}
-\contentsline {subsection}{\numberline {7.6.3}Member Function Documentation}{51}{subsection.7.6.3}
-\contentsline {subsubsection}{\numberline {7.6.3.1}start\discretionary {-}{}{}Test}{51}{subsubsection.7.6.3.1}
-\contentsline {subsubsection}{\numberline {7.6.3.2}Test}{51}{subsubsection.7.6.3.2}
-\contentsline {subsubsection}{\numberline {7.6.3.3}test}{52}{subsubsection.7.6.3.3}
-\contentsline {section}{\numberline {7.7}View\discretionary {-}{}{}P\discretionary {-}{}{}C Class Reference}{53}{section.7.7}
-\contentsline {subsection}{\numberline {7.7.1}Detailed Description}{55}{subsection.7.7.1}
-\contentsline {subsection}{\numberline {7.7.2}Constructor \& Destructor Documentation}{55}{subsection.7.7.2}
-\contentsline {subsubsection}{\numberline {7.7.2.1}View\discretionary {-}{}{}P\discretionary {-}{}{}C}{55}{subsubsection.7.7.2.1}
-\contentsline {subsubsection}{\numberline {7.7.2.2}$\sim $\discretionary {-}{}{}View\discretionary {-}{}{}P\discretionary {-}{}{}C}{56}{subsubsection.7.7.2.2}
-\contentsline {subsection}{\numberline {7.7.3}Member Function Documentation}{56}{subsection.7.7.3}
-\contentsline {subsubsection}{\numberline {7.7.3.1}abort\discretionary {-}{}{}Circuit}{56}{subsubsection.7.7.3.1}
-\contentsline {subsubsection}{\numberline {7.7.3.2}abort\discretionary {-}{}{}Model}{56}{subsubsection.7.7.3.2}
-\contentsline {subsubsection}{\numberline {7.7.3.3}alert}{56}{subsubsection.7.7.3.3}
-\contentsline {subsubsection}{\numberline {7.7.3.4}decrypt}{57}{subsubsection.7.7.3.4}
-\contentsline {subsubsection}{\numberline {7.7.3.5}encrypt}{57}{subsubsection.7.7.3.5}
-\contentsline {subsubsection}{\numberline {7.7.3.6}on\discretionary {-}{}{}\_\discretionary {-}{}{}action\discretionary {-}{}{}About\discretionary {-}{}{}\_\discretionary {-}{}{}triggered}{58}{subsubsection.7.7.3.6}
-\contentsline {subsubsection}{\numberline {7.7.3.7}on\discretionary {-}{}{}\_\discretionary {-}{}{}action\discretionary {-}{}{}Help\discretionary {-}{}{}\_\discretionary {-}{}{}triggered}{58}{subsubsection.7.7.3.7}
-\contentsline {subsubsection}{\numberline {7.7.3.8}on\discretionary {-}{}{}\_\discretionary {-}{}{}file\discretionary {-}{}{}Button\discretionary {-}{}{}\_\discretionary {-}{}{}clicked}{58}{subsubsection.7.7.3.8}
-\contentsline {subsubsection}{\numberline {7.7.3.9}on\discretionary {-}{}{}\_\discretionary {-}{}{}start\discretionary {-}{}{}Button\discretionary {-}{}{}\_\discretionary {-}{}{}clicked}{58}{subsubsection.7.7.3.9}
-\contentsline {subsection}{\numberline {7.7.4}Encrypting}{58}{subsection.7.7.4}
-\contentsline {subsection}{\numberline {7.7.5}Decrypting}{59}{subsection.7.7.5}
-\contentsline {subsubsection}{\numberline {7.7.5.1}request\discretionary {-}{}{}Key}{59}{subsubsection.7.7.5.1}
-\contentsline {subsubsection}{\numberline {7.7.5.2}run\discretionary {-}{}{}Tests}{60}{subsubsection.7.7.5.2}
-\contentsline {subsubsection}{\numberline {7.7.5.3}save\discretionary {-}{}{}Data}{60}{subsubsection.7.7.5.3}
-\contentsline {subsubsection}{\numberline {7.7.5.4}save\discretionary {-}{}{}Image}{60}{subsubsection.7.7.5.4}
-\contentsline {subsubsection}{\numberline {7.7.5.5}set\discretionary {-}{}{}Encrypt\discretionary {-}{}{}Mode}{61}{subsubsection.7.7.5.5}
-\contentsline {subsubsection}{\numberline {7.7.5.6}set\discretionary {-}{}{}J\discretionary {-}{}{}P\discretionary {-}{}{}H\discretionary {-}{}{}S\discretionary {-}{}{}Dir}{62}{subsubsection.7.7.5.6}
-\contentsline {subsubsection}{\numberline {7.7.5.7}set\discretionary {-}{}{}Progress}{62}{subsubsection.7.7.5.7}
-\contentsline {subsubsection}{\numberline {7.7.5.8}set\discretionary {-}{}{}Version}{62}{subsubsection.7.7.5.8}
-\contentsline {subsection}{\numberline {7.7.6}Member Data Documentation}{63}{subsection.7.7.6}
-\contentsline {subsubsection}{\numberline {7.7.6.1}dialog}{63}{subsubsection.7.7.6.1}
-\contentsline {subsubsection}{\numberline {7.7.6.2}errors\discretionary {-}{}{}Dict}{63}{subsubsection.7.7.6.2}
-\contentsline {subsubsection}{\numberline {7.7.6.3}progress\discretionary {-}{}{}Dialog\discretionary {-}{}{}Closed}{63}{subsubsection.7.7.6.3}
-\contentsline {chapter}{\numberline {8}File Documentation}{65}{chapter.8}
-\contentsline {section}{\numberline {8.1}aboutpc.\discretionary {-}{}{}cpp File Reference}{65}{section.8.1}
-\contentsline {section}{\numberline {8.2}aboutpc.\discretionary {-}{}{}cpp}{65}{section.8.2}
-\contentsline {section}{\numberline {8.3}aboutpc.\discretionary {-}{}{}h File Reference}{66}{section.8.3}
-\contentsline {section}{\numberline {8.4}aboutpc.\discretionary {-}{}{}h}{67}{section.8.4}
-\contentsline {section}{\numberline {8.5}controllerpc.\discretionary {-}{}{}cpp File Reference}{67}{section.8.5}
-\contentsline {section}{\numberline {8.6}controllerpc.\discretionary {-}{}{}cpp}{67}{section.8.6}
-\contentsline {section}{\numberline {8.7}controllerpc.\discretionary {-}{}{}h File Reference}{68}{section.8.7}
-\contentsline {subsection}{\numberline {8.7.1}Detailed Description}{68}{subsection.8.7.1}
-\contentsline {section}{\numberline {8.8}controllerpc.\discretionary {-}{}{}h}{69}{section.8.8}
-\contentsline {section}{\numberline {8.9}encryptdialog.\discretionary {-}{}{}cpp File Reference}{69}{section.8.9}
-\contentsline {section}{\numberline {8.10}encryptdialog.\discretionary {-}{}{}cpp}{69}{section.8.10}
-\contentsline {section}{\numberline {8.11}encryptdialog.\discretionary {-}{}{}h File Reference}{71}{section.8.11}
-\contentsline {section}{\numberline {8.12}encryptdialog.\discretionary {-}{}{}h}{72}{section.8.12}
-\contentsline {section}{\numberline {8.13}Errors\discretionary {-}{}{}Dict.\discretionary {-}{}{}json File Reference}{72}{section.8.13}
-\contentsline {section}{\numberline {8.14}Errors\discretionary {-}{}{}Dict.\discretionary {-}{}{}json}{72}{section.8.14}
-\contentsline {section}{\numberline {8.15}Errors\discretionary {-}{}{}Dict\discretionary {-}{}{}Setup.\discretionary {-}{}{}py File Reference}{72}{section.8.15}
-\contentsline {section}{\numberline {8.16}Errors\discretionary {-}{}{}Dict\discretionary {-}{}{}Setup.\discretionary {-}{}{}py}{73}{section.8.16}
-\contentsline {section}{\numberline {8.17}main.\discretionary {-}{}{}cpp File Reference}{73}{section.8.17}
-\contentsline {subsection}{\numberline {8.17.1}Function Documentation}{73}{subsection.8.17.1}
-\contentsline {subsubsection}{\numberline {8.17.1.1}main}{73}{subsubsection.8.17.1.1}
-\contentsline {section}{\numberline {8.18}main.\discretionary {-}{}{}cpp}{74}{section.8.18}
-\contentsline {section}{\numberline {8.19}modelpc.\discretionary {-}{}{}cpp File Reference}{74}{section.8.19}
-\contentsline {section}{\numberline {8.20}modelpc.\discretionary {-}{}{}cpp}{74}{section.8.20}
+\contentsline {subsubsection}{\numberline {7.4.4.3}circuit}{30}{subsubsection.7.4.4.3}
+\contentsline {subsubsection}{\numberline {7.4.4.4}Decrypt}{31}{subsubsection.7.4.4.4}
+\contentsline {subsubsection}{\numberline {7.4.4.5}decrypt}{31}{subsubsection.7.4.4.5}
+\contentsline {subsubsection}{\numberline {7.4.4.6}decryptv1\discretionary {-}{}{}\_\discretionary {-}{}{}3}{32}{subsubsection.7.4.4.6}
+\contentsline {subsubsection}{\numberline {7.4.4.7}decryptv1\discretionary {-}{}{}\_\discretionary {-}{}{}4}{33}{subsubsection.7.4.4.7}
+\contentsline {subsubsection}{\numberline {7.4.4.8}Encrypt}{34}{subsubsection.7.4.4.8}
+\contentsline {subsubsection}{\numberline {7.4.4.9}encrypt}{34}{subsubsection.7.4.4.9}
+\contentsline {subsubsection}{\numberline {7.4.4.10}encryptv1\discretionary {-}{}{}\_\discretionary {-}{}{}4}{35}{subsubsection.7.4.4.10}
+\contentsline {subsubsection}{\numberline {7.4.4.11}fail}{36}{subsubsection.7.4.4.11}
+\contentsline {subsubsection}{\numberline {7.4.4.12}Inject}{37}{subsubsection.7.4.4.12}
+\contentsline {subsubsection}{\numberline {7.4.4.13}inject}{37}{subsubsection.7.4.4.13}
+\contentsline {subsubsection}{\numberline {7.4.4.14}jphs}{38}{subsubsection.7.4.4.14}
+\contentsline {subsubsection}{\numberline {7.4.4.15}proccess\discretionary {-}{}{}Pixelsv1\discretionary {-}{}{}\_\discretionary {-}{}{}4}{38}{subsubsection.7.4.4.15}
+\contentsline {subsubsection}{\numberline {7.4.4.16}process\discretionary {-}{}{}Pixel}{39}{subsubsection.7.4.4.16}
+\contentsline {subsubsection}{\numberline {7.4.4.17}save\discretionary {-}{}{}Data}{39}{subsubsection.7.4.4.17}
+\contentsline {subsubsection}{\numberline {7.4.4.18}save\discretionary {-}{}{}Image}{40}{subsubsection.7.4.4.18}
+\contentsline {subsubsection}{\numberline {7.4.4.19}set\discretionary {-}{}{}Progress}{40}{subsubsection.7.4.4.19}
+\contentsline {subsubsection}{\numberline {7.4.4.20}unzip}{41}{subsubsection.7.4.4.20}
+\contentsline {subsubsection}{\numberline {7.4.4.21}zip}{42}{subsubsection.7.4.4.21}
+\contentsline {subsection}{\numberline {7.4.5}Member Data Documentation}{42}{subsection.7.4.5}
+\contentsline {subsubsection}{\numberline {7.4.5.1}default\discretionary {-}{}{}J\discretionary {-}{}{}P\discretionary {-}{}{}H\discretionary {-}{}{}S\discretionary {-}{}{}Dir}{43}{subsubsection.7.4.5.1}
+\contentsline {subsubsection}{\numberline {7.4.5.2}error}{43}{subsubsection.7.4.5.2}
+\contentsline {subsubsection}{\numberline {7.4.5.3}success}{43}{subsubsection.7.4.5.3}
+\contentsline {subsubsection}{\numberline {7.4.5.4}version}{43}{subsubsection.7.4.5.4}
+\contentsline {subsubsection}{\numberline {7.4.5.5}version\discretionary {-}{}{}String}{43}{subsubsection.7.4.5.5}
+\contentsline {section}{\numberline {7.5}Q\discretionary {-}{}{}A\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}Encryption Class Reference}{43}{section.7.5}
+\contentsline {subsection}{\numberline {7.5.1}Detailed Description}{45}{subsection.7.5.1}
+\contentsline {subsection}{\numberline {7.5.2}Member Enumeration Documentation}{45}{subsection.7.5.2}
+\contentsline {subsubsection}{\numberline {7.5.2.1}Aes}{45}{subsubsection.7.5.2.1}
+\contentsline {subsubsection}{\numberline {7.5.2.2}Mode}{45}{subsubsection.7.5.2.2}
+\contentsline {subsubsection}{\numberline {7.5.2.3}Padding}{46}{subsubsection.7.5.2.3}
+\contentsline {subsection}{\numberline {7.5.3}Constructor \& Destructor Documentation}{46}{subsection.7.5.3}
+\contentsline {subsubsection}{\numberline {7.5.3.1}Q\discretionary {-}{}{}A\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}Encryption}{46}{subsubsection.7.5.3.1}
+\contentsline {subsection}{\numberline {7.5.4}Member Function Documentation}{46}{subsection.7.5.4}
+\contentsline {subsubsection}{\numberline {7.5.4.1}Crypt}{46}{subsubsection.7.5.4.1}
+\contentsline {subsubsection}{\numberline {7.5.4.2}decode}{47}{subsubsection.7.5.4.2}
+\contentsline {subsubsection}{\numberline {7.5.4.3}Decrypt}{48}{subsubsection.7.5.4.3}
+\contentsline {subsubsection}{\numberline {7.5.4.4}encode}{49}{subsubsection.7.5.4.4}
+\contentsline {subsubsection}{\numberline {7.5.4.5}Expand\discretionary {-}{}{}Key}{49}{subsubsection.7.5.4.5}
+\contentsline {subsubsection}{\numberline {7.5.4.6}expand\discretionary {-}{}{}Key}{50}{subsubsection.7.5.4.6}
+\contentsline {subsubsection}{\numberline {7.5.4.7}Remove\discretionary {-}{}{}Padding}{50}{subsubsection.7.5.4.7}
+\contentsline {subsubsection}{\numberline {7.5.4.8}remove\discretionary {-}{}{}Padding}{51}{subsubsection.7.5.4.8}
+\contentsline {section}{\numberline {7.6}View\discretionary {-}{}{}P\discretionary {-}{}{}C Class Reference}{51}{section.7.6}
+\contentsline {subsection}{\numberline {7.6.1}Detailed Description}{53}{subsection.7.6.1}
+\contentsline {subsection}{\numberline {7.6.2}Constructor \& Destructor Documentation}{54}{subsection.7.6.2}
+\contentsline {subsubsection}{\numberline {7.6.2.1}View\discretionary {-}{}{}P\discretionary {-}{}{}C}{54}{subsubsection.7.6.2.1}
+\contentsline {subsubsection}{\numberline {7.6.2.2}$\sim $\discretionary {-}{}{}View\discretionary {-}{}{}P\discretionary {-}{}{}C}{54}{subsubsection.7.6.2.2}
+\contentsline {subsection}{\numberline {7.6.3}Member Function Documentation}{54}{subsection.7.6.3}
+\contentsline {subsubsection}{\numberline {7.6.3.1}abort\discretionary {-}{}{}Circuit}{54}{subsubsection.7.6.3.1}
+\contentsline {subsubsection}{\numberline {7.6.3.2}abort\discretionary {-}{}{}Model}{54}{subsubsection.7.6.3.2}
+\contentsline {subsubsection}{\numberline {7.6.3.3}alert}{55}{subsubsection.7.6.3.3}
+\contentsline {subsubsection}{\numberline {7.6.3.4}decrypt}{55}{subsubsection.7.6.3.4}
+\contentsline {subsubsection}{\numberline {7.6.3.5}encrypt}{56}{subsubsection.7.6.3.5}
+\contentsline {subsubsection}{\numberline {7.6.3.6}inject}{56}{subsubsection.7.6.3.6}
+\contentsline {subsubsection}{\numberline {7.6.3.7}on\discretionary {-}{}{}\_\discretionary {-}{}{}action\discretionary {-}{}{}About\discretionary {-}{}{}\_\discretionary {-}{}{}triggered}{57}{subsubsection.7.6.3.7}
+\contentsline {subsubsection}{\numberline {7.6.3.8}on\discretionary {-}{}{}\_\discretionary {-}{}{}action\discretionary {-}{}{}Help\discretionary {-}{}{}\_\discretionary {-}{}{}triggered}{57}{subsubsection.7.6.3.8}
+\contentsline {subsubsection}{\numberline {7.6.3.9}on\discretionary {-}{}{}\_\discretionary {-}{}{}file\discretionary {-}{}{}Button\discretionary {-}{}{}\_\discretionary {-}{}{}clicked}{57}{subsubsection.7.6.3.9}
+\contentsline {subsubsection}{\numberline {7.6.3.10}on\discretionary {-}{}{}\_\discretionary {-}{}{}start\discretionary {-}{}{}Button\discretionary {-}{}{}\_\discretionary {-}{}{}clicked}{57}{subsubsection.7.6.3.10}
+\contentsline {subsection}{\numberline {7.6.4}Encrypting}{57}{subsection.7.6.4}
+\contentsline {subsection}{\numberline {7.6.5}Decrypting}{58}{subsection.7.6.5}
+\contentsline {subsubsection}{\numberline {7.6.5.1}request\discretionary {-}{}{}Key}{58}{subsubsection.7.6.5.1}
+\contentsline {subsubsection}{\numberline {7.6.5.2}run\discretionary {-}{}{}Tests}{59}{subsubsection.7.6.5.2}
+\contentsline {subsubsection}{\numberline {7.6.5.3}save\discretionary {-}{}{}Data}{59}{subsubsection.7.6.5.3}
+\contentsline {subsubsection}{\numberline {7.6.5.4}save\discretionary {-}{}{}Image}{59}{subsubsection.7.6.5.4}
+\contentsline {subsubsection}{\numberline {7.6.5.5}set\discretionary {-}{}{}Encrypt\discretionary {-}{}{}Mode}{60}{subsubsection.7.6.5.5}
+\contentsline {subsubsection}{\numberline {7.6.5.6}set\discretionary {-}{}{}J\discretionary {-}{}{}P\discretionary {-}{}{}H\discretionary {-}{}{}S\discretionary {-}{}{}Dir}{61}{subsubsection.7.6.5.6}
+\contentsline {subsubsection}{\numberline {7.6.5.7}set\discretionary {-}{}{}Progress}{61}{subsubsection.7.6.5.7}
+\contentsline {subsubsection}{\numberline {7.6.5.8}set\discretionary {-}{}{}Version}{61}{subsubsection.7.6.5.8}
+\contentsline {subsection}{\numberline {7.6.6}Member Data Documentation}{62}{subsection.7.6.6}
+\contentsline {subsubsection}{\numberline {7.6.6.1}dialog}{62}{subsubsection.7.6.6.1}
+\contentsline {subsubsection}{\numberline {7.6.6.2}errors\discretionary {-}{}{}Dict}{62}{subsubsection.7.6.6.2}
+\contentsline {subsubsection}{\numberline {7.6.6.3}progress\discretionary {-}{}{}Dialog\discretionary {-}{}{}Closed}{62}{subsubsection.7.6.6.3}
+\contentsline {chapter}{\numberline {8}File Documentation}{63}{chapter.8}
+\contentsline {section}{\numberline {8.1}aboutpc.\discretionary {-}{}{}cpp File Reference}{63}{section.8.1}
+\contentsline {section}{\numberline {8.2}aboutpc.\discretionary {-}{}{}cpp}{63}{section.8.2}
+\contentsline {section}{\numberline {8.3}aboutpc.\discretionary {-}{}{}h File Reference}{64}{section.8.3}
+\contentsline {section}{\numberline {8.4}aboutpc.\discretionary {-}{}{}h}{65}{section.8.4}
+\contentsline {section}{\numberline {8.5}controllerpc.\discretionary {-}{}{}cpp File Reference}{65}{section.8.5}
+\contentsline {section}{\numberline {8.6}controllerpc.\discretionary {-}{}{}cpp}{65}{section.8.6}
+\contentsline {section}{\numberline {8.7}controllerpc.\discretionary {-}{}{}h File Reference}{66}{section.8.7}
+\contentsline {subsection}{\numberline {8.7.1}Detailed Description}{66}{subsection.8.7.1}
+\contentsline {section}{\numberline {8.8}controllerpc.\discretionary {-}{}{}h}{67}{section.8.8}
+\contentsline {section}{\numberline {8.9}encryptdialog.\discretionary {-}{}{}cpp File Reference}{67}{section.8.9}
+\contentsline {section}{\numberline {8.10}encryptdialog.\discretionary {-}{}{}cpp}{67}{section.8.10}
+\contentsline {section}{\numberline {8.11}encryptdialog.\discretionary {-}{}{}h File Reference}{69}{section.8.11}
+\contentsline {section}{\numberline {8.12}encryptdialog.\discretionary {-}{}{}h}{70}{section.8.12}
+\contentsline {section}{\numberline {8.13}Errors\discretionary {-}{}{}Dict.\discretionary {-}{}{}json File Reference}{70}{section.8.13}
+\contentsline {section}{\numberline {8.14}Errors\discretionary {-}{}{}Dict.\discretionary {-}{}{}json}{70}{section.8.14}
+\contentsline {section}{\numberline {8.15}Errors\discretionary {-}{}{}Dict\discretionary {-}{}{}Setup.\discretionary {-}{}{}py File Reference}{70}{section.8.15}
+\contentsline {section}{\numberline {8.16}Errors\discretionary {-}{}{}Dict\discretionary {-}{}{}Setup.\discretionary {-}{}{}py}{71}{section.8.16}
+\contentsline {section}{\numberline {8.17}main.\discretionary {-}{}{}cpp File Reference}{71}{section.8.17}
+\contentsline {subsection}{\numberline {8.17.1}Function Documentation}{71}{subsection.8.17.1}
+\contentsline {subsubsection}{\numberline {8.17.1.1}main}{71}{subsubsection.8.17.1.1}
+\contentsline {section}{\numberline {8.18}main.\discretionary {-}{}{}cpp}{72}{section.8.18}
+\contentsline {section}{\numberline {8.19}modelpc.\discretionary {-}{}{}cpp File Reference}{72}{section.8.19}
+\contentsline {section}{\numberline {8.20}modelpc.\discretionary {-}{}{}cpp}{72}{section.8.20}
 \contentsline {section}{\numberline {8.21}modelpc.\discretionary {-}{}{}h File Reference}{82}{section.8.21}
 \contentsline {subsection}{\numberline {8.21.1}Detailed Description}{83}{subsection.8.21.1}
 \contentsline {section}{\numberline {8.22}modelpc.\discretionary {-}{}{}h}{83}{section.8.22}
-\contentsline {section}{\numberline {8.23}qaesencryption.\discretionary {-}{}{}cpp File Reference}{84}{section.8.23}
-\contentsline {subsection}{\numberline {8.23.1}Function Documentation}{84}{subsection.8.23.1}
-\contentsline {subsubsection}{\numberline {8.23.1.1}multiply}{84}{subsubsection.8.23.1.1}
+\contentsline {section}{\numberline {8.23}qaesencryption.\discretionary {-}{}{}cpp File Reference}{85}{section.8.23}
+\contentsline {subsection}{\numberline {8.23.1}Function Documentation}{85}{subsection.8.23.1}
+\contentsline {subsubsection}{\numberline {8.23.1.1}multiply}{85}{subsubsection.8.23.1.1}
 \contentsline {subsubsection}{\numberline {8.23.1.2}x\discretionary {-}{}{}Time}{85}{subsubsection.8.23.1.2}
-\contentsline {section}{\numberline {8.24}qaesencryption.\discretionary {-}{}{}cpp}{85}{section.8.24}
-\contentsline {section}{\numberline {8.25}qaesencryption.\discretionary {-}{}{}h File Reference}{91}{section.8.25}
-\contentsline {section}{\numberline {8.26}qaesencryption.\discretionary {-}{}{}h}{92}{section.8.26}
-\contentsline {section}{\numberline {8.27}testpc.\discretionary {-}{}{}cpp File Reference}{94}{section.8.27}
-\contentsline {section}{\numberline {8.28}testpc.\discretionary {-}{}{}cpp}{95}{section.8.28}
-\contentsline {section}{\numberline {8.29}testpc.\discretionary {-}{}{}h File Reference}{96}{section.8.29}
-\contentsline {section}{\numberline {8.30}testpc.\discretionary {-}{}{}h}{97}{section.8.30}
-\contentsline {section}{\numberline {8.31}tests-\/setup.py File Reference}{98}{section.8.31}
-\contentsline {section}{\numberline {8.32}tests-\/setup.py}{98}{section.8.32}
-\contentsline {section}{\numberline {8.33}tests.\discretionary {-}{}{}json File Reference}{98}{section.8.33}
-\contentsline {section}{\numberline {8.34}tests.\discretionary {-}{}{}json}{98}{section.8.34}
-\contentsline {section}{\numberline {8.35}viewpc.\discretionary {-}{}{}cpp File Reference}{99}{section.8.35}
-\contentsline {section}{\numberline {8.36}viewpc.\discretionary {-}{}{}cpp}{99}{section.8.36}
-\contentsline {section}{\numberline {8.37}viewpc.\discretionary {-}{}{}h File Reference}{102}{section.8.37}
-\contentsline {subsection}{\numberline {8.37.1}Detailed Description}{104}{subsection.8.37.1}
-\contentsline {section}{\numberline {8.38}viewpc.\discretionary {-}{}{}h}{104}{section.8.38}
-\contentsline {chapter}{Index}{106}{section*.48}
+\contentsline {section}{\numberline {8.24}qaesencryption.\discretionary {-}{}{}cpp}{86}{section.8.24}
+\contentsline {section}{\numberline {8.25}qaesencryption.\discretionary {-}{}{}h File Reference}{92}{section.8.25}
+\contentsline {section}{\numberline {8.26}qaesencryption.\discretionary {-}{}{}h}{93}{section.8.26}
+\contentsline {section}{\numberline {8.27}viewpc.\discretionary {-}{}{}cpp File Reference}{95}{section.8.27}
+\contentsline {section}{\numberline {8.28}viewpc.\discretionary {-}{}{}cpp}{95}{section.8.28}
+\contentsline {section}{\numberline {8.29}viewpc.\discretionary {-}{}{}h File Reference}{99}{section.8.29}
+\contentsline {subsection}{\numberline {8.29.1}Detailed Description}{100}{subsection.8.29.1}
+\contentsline {section}{\numberline {8.30}viewpc.\discretionary {-}{}{}h}{100}{section.8.30}
+\contentsline {chapter}{Index}{102}{section*.40}

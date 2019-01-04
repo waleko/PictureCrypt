@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['zero',['ZERO',['../class_q_a_e_s_encryption.html#ab0a65cdea4eac21ef32530010d1b0247a0842d5191caeff6f871908fa7b9e8e7a',1,'QAESEncryption']]],
-  ['zip',['zip',['../class_encrypt_dialog.html#a2bff820a3df4ddc36ecb07ed74b7138a',1,'EncryptDialog::zip()'],['../class_model_p_c.html#afebbbfa4b07deba4f68fc6dfb50f353f',1,'ModelPC::zip()']]]
+  ['_7eaboutpc',['~AboutPC',['../class_about_p_c.html#a3cc0c4c81abc640d946003b078a47dd4',1,'AboutPC']]],
+  ['_7eencryptdialog',['~EncryptDialog',['../class_encrypt_dialog.html#a466e283080f87ee50f172052e43e38b6',1,'EncryptDialog']]],
+  ['_7eviewpc',['~ViewPC',['../class_view_p_c.html#a91c51f5c1e6ed5ab12b410339f469b0f',1,'ViewPC']]]
 ];

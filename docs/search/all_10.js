@@ -7,6 +7,5 @@ var searchData=
   ['setprogress',['setProgress',['../class_model_p_c.html#afdcd80f0ed5062e145a71f09b0897547',1,'ModelPC::setProgress()'],['../class_view_p_c.html#a9c32a1fdb6ead84e5ada8fba8860c7ed',1,'ViewPC::setProgress()']]],
   ['setversion',['setVersion',['../class_about_p_c.html#aa3815d4826d0c8d87122449537a0a4d5',1,'AboutPC::setVersion()'],['../class_view_p_c.html#ac05220df875b7c4f24405a5742476ebf',1,'ViewPC::setVersion()']]],
   ['size',['size',['../class_encrypt_dialog.html#a7fff26f838ab50f807744cd2c4bed033',1,'EncryptDialog']]],
-  ['starttest',['startTest',['../class_test_p_c.html#ad0d724439a65d183d3d336b667cb867b',1,'TestPC']]],
   ['success',['success',['../class_encrypt_dialog.html#ada4900bcd40894d9c098c65aa4066ac9',1,'EncryptDialog::success()'],['../class_model_p_c.html#a945ffbbc44a832b953c191debd448f4c',1,'ModelPC::success()']]]
 ];

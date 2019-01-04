@@ -7,24 +7,24 @@
     \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{22}
   \item {$\sim $\discretionary {-}{}{}View\discretionary {-}{}{}P\discretionary {-}{}{}C}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{55}
+		\hyperpage{54}
 
   \indexspace
 
   \item {A\-E\-S\-\_\-128}
-    \subitem {Q\-A\-E\-S\-Encryption}, \hyperpage{42}
+    \subitem {Q\-A\-E\-S\-Encryption}, \hyperpage{45}
   \item {A\-E\-S\-\_\-192}
-    \subitem {Q\-A\-E\-S\-Encryption}, \hyperpage{42}
+    \subitem {Q\-A\-E\-S\-Encryption}, \hyperpage{45}
   \item {A\-E\-S\-\_\-256}
-    \subitem {Q\-A\-E\-S\-Encryption}, \hyperpage{42}
+    \subitem {Q\-A\-E\-S\-Encryption}, \hyperpage{45}
   \item {abort\discretionary {-}{}{}Circuit}
     \subitem {Controller\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
 		\hyperpage{18}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{56}
+		\hyperpage{54}
   \item {abort\discretionary {-}{}{}Model}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{56}
+		\hyperpage{54}
   \item {About\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
 		\hyperpage{15}
     \subitem {$\sim $\discretionary {-}{}{}About\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
@@ -34,38 +34,36 @@
     \subitem {About\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
 		\hyperpage{16}
     \subitem {set\discretionary {-}{}{}Version}, \hyperpage{16}
-  \item {aboutpc.\discretionary {-}{}{}cpp}, \hyperpage{65}
-  \item {aboutpc.\discretionary {-}{}{}h}, \hyperpage{66}
+  \item {aboutpc.\discretionary {-}{}{}cpp}, \hyperpage{63}
+  \item {aboutpc.\discretionary {-}{}{}h}, \hyperpage{64}
   \item {Aes}
     \subitem {Q\discretionary {-}{}{}A\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}Encryption}, 
-		\hyperpage{42}
+		\hyperpage{45}
   \item {alert}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
 		\hyperpage{28}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{56}
+		\hyperpage{55}
   \item {alert\discretionary {-}{}{}View}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{29}
-  \item {arr}
-    \subitem {tests-\/setup}, \hyperpage{14}
+		\hyperpage{28}
 
   \indexspace
 
   \item {bits\discretionary {-}{}{}Used}
-    \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{24}
+    \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{23}
 
   \indexspace
 
   \item {C\-B\-C}
-    \subitem {Q\-A\-E\-S\-Encryption}, \hyperpage{43}
+    \subitem {Q\-A\-E\-S\-Encryption}, \hyperpage{45}
   \item {C\-F\-B}
-    \subitem {Q\-A\-E\-S\-Encryption}, \hyperpage{43}
+    \subitem {Q\-A\-E\-S\-Encryption}, \hyperpage{45}
   \item {circuit}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{29}
+		\hyperpage{30}
   \item {compr\discretionary {-}{}{}\_\discretionary {-}{}{}data}
-    \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{24}
+    \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{23}
   \item {Controller\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
 		\hyperpage{17}
     \subitem {abort\discretionary {-}{}{}Circuit}, \hyperpage{18}
@@ -76,16 +74,16 @@
     \subitem {run\discretionary {-}{}{}Tests}, \hyperpage{19}
     \subitem {set\discretionary {-}{}{}J\discretionary {-}{}{}P\discretionary {-}{}{}H\discretionary {-}{}{}S\discretionary {-}{}{}Dir}, 
 		\hyperpage{19}
-    \subitem {version}, \hyperpage{20}
+    \subitem {version}, \hyperpage{19}
     \subitem {version\discretionary {-}{}{}String}, \hyperpage{20}
-  \item {controllerpc.\discretionary {-}{}{}cpp}, \hyperpage{67}
-  \item {controllerpc.\discretionary {-}{}{}h}, \hyperpage{68}
+  \item {controllerpc.\discretionary {-}{}{}cpp}, \hyperpage{65}
+  \item {controllerpc.\discretionary {-}{}{}h}, \hyperpage{66}
   \item {Crypt}
     \subitem {Q\discretionary {-}{}{}A\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}Encryption}, 
-		\hyperpage{43}
+		\hyperpage{46}
   \item {Crypt\discretionary {-}{}{}Mode}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{28}
+		\hyperpage{27}
 
   \indexspace
 
@@ -95,51 +93,51 @@
 		\hyperpage{13}
   \item {decode}
     \subitem {Q\discretionary {-}{}{}A\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}Encryption}, 
-		\hyperpage{44}
+		\hyperpage{47}
   \item {Decrypt}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{30}
+		\hyperpage{31}
     \subitem {Q\discretionary {-}{}{}A\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}Encryption}, 
-		\hyperpage{45}
+		\hyperpage{48}
   \item {decrypt}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{30}
+		\hyperpage{31}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{57}
+		\hyperpage{55}
   \item {decryptv1\discretionary {-}{}{}\_\discretionary {-}{}{}3}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{31}
+		\hyperpage{32}
   \item {decryptv1\discretionary {-}{}{}\_\discretionary {-}{}{}4}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
 		\hyperpage{32}
   \item {default\discretionary {-}{}{}J\discretionary {-}{}{}P\discretionary {-}{}{}H\discretionary {-}{}{}S\discretionary {-}{}{}Dir}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{40}
+		\hyperpage{42}
   \item {dialog}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{63}
+		\hyperpage{62}
 
   \indexspace
 
   \item {E\-C\-B}
-    \subitem {Q\-A\-E\-S\-Encryption}, \hyperpage{43}
+    \subitem {Q\-A\-E\-S\-Encryption}, \hyperpage{45}
   \item {encode}
     \subitem {Q\discretionary {-}{}{}A\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}Encryption}, 
-		\hyperpage{46}
+		\hyperpage{48}
   \item {Encrypt}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{32}
+		\hyperpage{34}
   \item {encrypt}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{33}
+		\hyperpage{34}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{57}
+		\hyperpage{56}
   \item {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{20}
     \subitem {$\sim $\discretionary {-}{}{}Encrypt\discretionary {-}{}{}Dialog}, 
 		\hyperpage{22}
-    \subitem {bits\discretionary {-}{}{}Used}, \hyperpage{24}
+    \subitem {bits\discretionary {-}{}{}Used}, \hyperpage{23}
     \subitem {compr\discretionary {-}{}{}\_\discretionary {-}{}{}data}, 
-		\hyperpage{24}
+		\hyperpage{23}
     \subitem {data}, \hyperpage{24}
     \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{22}
     \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{22}
@@ -151,28 +149,28 @@
     \subitem {on\discretionary {-}{}{}\_\discretionary {-}{}{}bits\discretionary {-}{}{}Slider\discretionary {-}{}{}\_\discretionary {-}{}{}value\discretionary {-}{}{}Changed}, 
 		\hyperpage{22}
     \subitem {on\discretionary {-}{}{}\_\discretionary {-}{}{}button\discretionary {-}{}{}Box\discretionary {-}{}{}\_\discretionary {-}{}{}accepted}, 
-		\hyperpage{23}
+		\hyperpage{22}
     \subitem {on\discretionary {-}{}{}\_\discretionary {-}{}{}button\discretionary {-}{}{}Box\discretionary {-}{}{}\_\discretionary {-}{}{}rejected}, 
-		\hyperpage{23}
+		\hyperpage{22}
     \subitem {on\discretionary {-}{}{}\_\discretionary {-}{}{}file\discretionary {-}{}{}Button\discretionary {-}{}{}\_\discretionary {-}{}{}clicked}, 
-		\hyperpage{23}
-    \subitem {size}, \hyperpage{25}
-    \subitem {success}, \hyperpage{25}
-    \subitem {val}, \hyperpage{25}
+		\hyperpage{22}
+    \subitem {size}, \hyperpage{24}
+    \subitem {success}, \hyperpage{24}
+    \subitem {val}, \hyperpage{24}
     \subitem {zip}, \hyperpage{23}
-  \item {encryptdialog.\discretionary {-}{}{}cpp}, \hyperpage{69}
-  \item {encryptdialog.\discretionary {-}{}{}h}, \hyperpage{71}
+  \item {encryptdialog.\discretionary {-}{}{}cpp}, \hyperpage{67}
+  \item {encryptdialog.\discretionary {-}{}{}h}, \hyperpage{69}
   \item {encryptv1\discretionary {-}{}{}\_\discretionary {-}{}{}4}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{34}
+		\hyperpage{35}
   \item {error}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{40}
+		\hyperpage{43}
   \item {errors\discretionary {-}{}{}Dict}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{63}
+		\hyperpage{62}
   \item {Errors\discretionary {-}{}{}Dict.\discretionary {-}{}{}json}, 
-		\hyperpage{72}
+		\hyperpage{70}
   \item {Errors\discretionary {-}{}{}Dict\discretionary {-}{}{}Setup}, 
 		\hyperpage{13}
     \subitem {data}, \hyperpage{13}
@@ -181,23 +179,22 @@
 		\hyperpage{13}
     \subitem {raw}, \hyperpage{13}
   \item {Errors\discretionary {-}{}{}Dict\discretionary {-}{}{}Setup.\discretionary {-}{}{}py}, 
-		\hyperpage{72, 73}
+		\hyperpage{70, 71}
   \item {Expand\discretionary {-}{}{}Key}
     \subitem {Q\discretionary {-}{}{}A\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}Encryption}, 
-		\hyperpage{46}
+		\hyperpage{49}
   \item {expand\discretionary {-}{}{}Key}
     \subitem {Q\discretionary {-}{}{}A\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}Encryption}, 
-		\hyperpage{47}
+		\hyperpage{50}
 
   \indexspace
 
   \item {fail}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{34}
+		\hyperpage{36}
   \item {filename}
     \subitem {Errors\discretionary {-}{}{}Dict\discretionary {-}{}{}Setup}, 
 		\hyperpage{13}
-    \subitem {tests-\/setup}, \hyperpage{14}
 
   \indexspace
 
@@ -207,19 +204,20 @@
   \indexspace
 
   \item {I\-S\-O}
-    \subitem {Q\-A\-E\-S\-Encryption}, \hyperpage{43}
+    \subitem {Q\-A\-E\-S\-Encryption}, \hyperpage{46}
   \item {image}
     \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{24}
   \item {Inject}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{35}
+		\hyperpage{36}
   \item {inject}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{35}
+		\hyperpage{37}
+    \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
+		\hyperpage{56}
   \item {input\discretionary {-}{}{}\_\discretionary {-}{}{}data}
     \subitem {Errors\discretionary {-}{}{}Dict\discretionary {-}{}{}Setup}, 
 		\hyperpage{13}
-    \subitem {tests-\/setup}, \hyperpage{14}
   \item {input\discretionary {-}{}{}File\discretionary {-}{}{}Name}
     \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{24}
 
@@ -227,11 +225,9 @@
 
   \item {jphs}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{36}
+		\hyperpage{38}
   \item {jphs\-\_\-mode}
-    \subitem {Model\-P\-C}, \hyperpage{28}
-  \item {js}
-    \subitem {tests-\/setup}, \hyperpage{14}
+    \subitem {Model\-P\-C}, \hyperpage{27}
 
   \indexspace
 
@@ -241,291 +237,261 @@
   \indexspace
 
   \item {main}
-    \subitem {main.\discretionary {-}{}{}cpp}, \hyperpage{73}
-  \item {main.\discretionary {-}{}{}cpp}, \hyperpage{73}
-    \subitem {main}, \hyperpage{73}
+    \subitem {main.\discretionary {-}{}{}cpp}, \hyperpage{71}
+  \item {main.\discretionary {-}{}{}cpp}, \hyperpage{71}
+    \subitem {main}, \hyperpage{71}
   \item {Mode}
     \subitem {Q\discretionary {-}{}{}A\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}Encryption}, 
-		\hyperpage{42}
+		\hyperpage{45}
   \item {Model\-P\-C}
-    \subitem {jphs\-\_\-mode}, \hyperpage{28}
-    \subitem {Not\-Defined}, \hyperpage{28}
-    \subitem {v1\-\_\-3}, \hyperpage{28}
-    \subitem {v1\-\_\-4}, \hyperpage{28}
+    \subitem {jphs\-\_\-mode}, \hyperpage{27}
+    \subitem {Not\-Defined}, \hyperpage{27}
+    \subitem {v1\-\_\-3}, \hyperpage{27}
+    \subitem {v1\-\_\-4}, \hyperpage{27}
   \item {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
 		\hyperpage{25}
     \subitem {alert}, \hyperpage{28}
-    \subitem {alert\discretionary {-}{}{}View}, \hyperpage{29}
-    \subitem {circuit}, \hyperpage{29}
-    \subitem {Crypt\discretionary {-}{}{}Mode}, \hyperpage{28}
-    \subitem {Decrypt}, \hyperpage{30}
-    \subitem {decrypt}, \hyperpage{30}
+    \subitem {alert\discretionary {-}{}{}View}, \hyperpage{28}
+    \subitem {circuit}, \hyperpage{30}
+    \subitem {Crypt\discretionary {-}{}{}Mode}, \hyperpage{27}
+    \subitem {Decrypt}, \hyperpage{31}
+    \subitem {decrypt}, \hyperpage{31}
     \subitem {decryptv1\discretionary {-}{}{}\_\discretionary {-}{}{}3}, 
-		\hyperpage{31}
+		\hyperpage{32}
     \subitem {decryptv1\discretionary {-}{}{}\_\discretionary {-}{}{}4}, 
 		\hyperpage{32}
     \subitem {default\discretionary {-}{}{}J\discretionary {-}{}{}P\discretionary {-}{}{}H\discretionary {-}{}{}S\discretionary {-}{}{}Dir}, 
-		\hyperpage{40}
-    \subitem {Encrypt}, \hyperpage{32}
-    \subitem {encrypt}, \hyperpage{33}
+		\hyperpage{42}
+    \subitem {Encrypt}, \hyperpage{34}
+    \subitem {encrypt}, \hyperpage{34}
     \subitem {encryptv1\discretionary {-}{}{}\_\discretionary {-}{}{}4}, 
-		\hyperpage{34}
-    \subitem {error}, \hyperpage{40}
-    \subitem {fail}, \hyperpage{34}
-    \subitem {Inject}, \hyperpage{35}
-    \subitem {inject}, \hyperpage{35}
-    \subitem {jphs}, \hyperpage{36}
+		\hyperpage{35}
+    \subitem {error}, \hyperpage{43}
+    \subitem {fail}, \hyperpage{36}
+    \subitem {Inject}, \hyperpage{36}
+    \subitem {inject}, \hyperpage{37}
+    \subitem {jphs}, \hyperpage{38}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{28}
+		\hyperpage{27}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{28}
-    \subitem {process\discretionary {-}{}{}Pixel}, \hyperpage{37}
-    \subitem {save\discretionary {-}{}{}Data}, \hyperpage{37}
-    \subitem {save\discretionary {-}{}{}Image}, \hyperpage{38}
-    \subitem {set\discretionary {-}{}{}Progress}, \hyperpage{38}
-    \subitem {success}, \hyperpage{40}
-    \subitem {unzip}, \hyperpage{38}
-    \subitem {version}, \hyperpage{40}
-    \subitem {version\discretionary {-}{}{}String}, \hyperpage{40}
-    \subitem {zip}, \hyperpage{39}
-  \item {modelpc.\discretionary {-}{}{}cpp}, \hyperpage{74}
+		\hyperpage{27}
+    \subitem {proccess\discretionary {-}{}{}Pixelsv1\discretionary {-}{}{}\_\discretionary {-}{}{}4}, 
+		\hyperpage{38}
+    \subitem {process\discretionary {-}{}{}Pixel}, \hyperpage{39}
+    \subitem {save\discretionary {-}{}{}Data}, \hyperpage{39}
+    \subitem {save\discretionary {-}{}{}Image}, \hyperpage{40}
+    \subitem {set\discretionary {-}{}{}Progress}, \hyperpage{40}
+    \subitem {success}, \hyperpage{43}
+    \subitem {unzip}, \hyperpage{41}
+    \subitem {version}, \hyperpage{43}
+    \subitem {version\discretionary {-}{}{}String}, \hyperpage{43}
+    \subitem {zip}, \hyperpage{42}
+  \item {modelpc.\discretionary {-}{}{}cpp}, \hyperpage{72}
   \item {modelpc.\discretionary {-}{}{}h}, \hyperpage{82}
   \item {multiply}
-    \subitem {qaesencryption.\discretionary {-}{}{}cpp}, \hyperpage{84}
+    \subitem {qaesencryption.\discretionary {-}{}{}cpp}, \hyperpage{85}
 
   \indexspace
 
   \item {Not\-Defined}
-    \subitem {Model\-P\-C}, \hyperpage{28}
+    \subitem {Model\-P\-C}, \hyperpage{27}
 
   \indexspace
 
   \item {O\-F\-B}
-    \subitem {Q\-A\-E\-S\-Encryption}, \hyperpage{43}
-  \item {obj}
-    \subitem {tests-\/setup}, \hyperpage{14}
+    \subitem {Q\-A\-E\-S\-Encryption}, \hyperpage{45}
   \item {on\discretionary {-}{}{}\_\discretionary {-}{}{}action\discretionary {-}{}{}About\discretionary {-}{}{}\_\discretionary {-}{}{}triggered}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{58}
+		\hyperpage{57}
   \item {on\discretionary {-}{}{}\_\discretionary {-}{}{}action\discretionary {-}{}{}Help\discretionary {-}{}{}\_\discretionary {-}{}{}triggered}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{58}
+		\hyperpage{57}
   \item {on\discretionary {-}{}{}\_\discretionary {-}{}{}bits\discretionary {-}{}{}Slider\discretionary {-}{}{}\_\discretionary {-}{}{}value\discretionary {-}{}{}Changed}
     \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{22}
   \item {on\discretionary {-}{}{}\_\discretionary {-}{}{}button\discretionary {-}{}{}Box\discretionary {-}{}{}\_\discretionary {-}{}{}accepted}
-    \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{23}
+    \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{22}
   \item {on\discretionary {-}{}{}\_\discretionary {-}{}{}button\discretionary {-}{}{}Box\discretionary {-}{}{}\_\discretionary {-}{}{}rejected}
-    \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{23}
+    \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{22}
   \item {on\discretionary {-}{}{}\_\discretionary {-}{}{}file\discretionary {-}{}{}Button\discretionary {-}{}{}\_\discretionary {-}{}{}clicked}
-    \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{23}
+    \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{22}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{58}
+		\hyperpage{57}
   \item {on\discretionary {-}{}{}\_\discretionary {-}{}{}start\discretionary {-}{}{}Button\discretionary {-}{}{}\_\discretionary {-}{}{}clicked}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{58}
+		\hyperpage{57}
 
   \indexspace
 
   \item {P\-K\-C\-S7}
-    \subitem {Q\-A\-E\-S\-Encryption}, \hyperpage{43}
+    \subitem {Q\-A\-E\-S\-Encryption}, \hyperpage{46}
   \item {Padding}
     \subitem {Q\discretionary {-}{}{}A\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}Encryption}, 
-		\hyperpage{43}
+		\hyperpage{45}
+  \item {proccess\discretionary {-}{}{}Pixelsv1\discretionary {-}{}{}\_\discretionary {-}{}{}4}
+    \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
+		\hyperpage{38}
   \item {process\discretionary {-}{}{}Pixel}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{37}
+		\hyperpage{39}
   \item {progress\discretionary {-}{}{}Dialog\discretionary {-}{}{}Closed}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{63}
+		\hyperpage{62}
 
   \indexspace
 
   \item {Q\-A\-E\-S\-Encryption}
-    \subitem {A\-E\-S\-\_\-128}, \hyperpage{42}
-    \subitem {A\-E\-S\-\_\-192}, \hyperpage{42}
-    \subitem {A\-E\-S\-\_\-256}, \hyperpage{42}
-    \subitem {C\-B\-C}, \hyperpage{43}
-    \subitem {C\-F\-B}, \hyperpage{43}
-    \subitem {E\-C\-B}, \hyperpage{43}
-    \subitem {I\-S\-O}, \hyperpage{43}
-    \subitem {O\-F\-B}, \hyperpage{43}
-    \subitem {P\-K\-C\-S7}, \hyperpage{43}
-    \subitem {Z\-E\-R\-O}, \hyperpage{43}
+    \subitem {A\-E\-S\-\_\-128}, \hyperpage{45}
+    \subitem {A\-E\-S\-\_\-192}, \hyperpage{45}
+    \subitem {A\-E\-S\-\_\-256}, \hyperpage{45}
+    \subitem {C\-B\-C}, \hyperpage{45}
+    \subitem {C\-F\-B}, \hyperpage{45}
+    \subitem {E\-C\-B}, \hyperpage{45}
+    \subitem {I\-S\-O}, \hyperpage{46}
+    \subitem {O\-F\-B}, \hyperpage{45}
+    \subitem {P\-K\-C\-S7}, \hyperpage{46}
+    \subitem {Z\-E\-R\-O}, \hyperpage{46}
   \item {Q\discretionary {-}{}{}A\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}Encryption}, 
-		\hyperpage{41}
-    \subitem {Aes}, \hyperpage{42}
-    \subitem {Crypt}, \hyperpage{43}
-    \subitem {decode}, \hyperpage{44}
-    \subitem {Decrypt}, \hyperpage{45}
-    \subitem {encode}, \hyperpage{46}
-    \subitem {Expand\discretionary {-}{}{}Key}, \hyperpage{46}
-    \subitem {expand\discretionary {-}{}{}Key}, \hyperpage{47}
-    \subitem {Mode}, \hyperpage{42}
-    \subitem {Padding}, \hyperpage{43}
-    \subitem {Q\discretionary {-}{}{}A\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}Encryption}, 
 		\hyperpage{43}
+    \subitem {Aes}, \hyperpage{45}
+    \subitem {Crypt}, \hyperpage{46}
+    \subitem {decode}, \hyperpage{47}
+    \subitem {Decrypt}, \hyperpage{48}
+    \subitem {encode}, \hyperpage{48}
+    \subitem {Expand\discretionary {-}{}{}Key}, \hyperpage{49}
+    \subitem {expand\discretionary {-}{}{}Key}, \hyperpage{50}
+    \subitem {Mode}, \hyperpage{45}
+    \subitem {Padding}, \hyperpage{45}
     \subitem {Q\discretionary {-}{}{}A\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}Encryption}, 
-		\hyperpage{43}
-    \subitem {Remove\discretionary {-}{}{}Padding}, \hyperpage{47}
-    \subitem {remove\discretionary {-}{}{}Padding}, \hyperpage{49}
-  \item {qaesencryption.\discretionary {-}{}{}cpp}, \hyperpage{84, 85}
-    \subitem {multiply}, \hyperpage{84}
+		\hyperpage{46}
+    \subitem {Q\discretionary {-}{}{}A\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}Encryption}, 
+		\hyperpage{46}
+    \subitem {Remove\discretionary {-}{}{}Padding}, \hyperpage{50}
+    \subitem {remove\discretionary {-}{}{}Padding}, \hyperpage{51}
+  \item {qaesencryption.\discretionary {-}{}{}cpp}, \hyperpage{85, 86}
+    \subitem {multiply}, \hyperpage{85}
     \subitem {x\discretionary {-}{}{}Time}, \hyperpage{85}
-  \item {qaesencryption.\discretionary {-}{}{}h}, \hyperpage{91, 92}
+  \item {qaesencryption.\discretionary {-}{}{}h}, \hyperpage{92, 93}
 
   \indexspace
 
   \item {raw}
     \subitem {Errors\discretionary {-}{}{}Dict\discretionary {-}{}{}Setup}, 
 		\hyperpage{13}
-    \subitem {tests-\/setup}, \hyperpage{14}
   \item {Remove\discretionary {-}{}{}Padding}
     \subitem {Q\discretionary {-}{}{}A\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}Encryption}, 
-		\hyperpage{47}
+		\hyperpage{50}
   \item {remove\discretionary {-}{}{}Padding}
     \subitem {Q\discretionary {-}{}{}A\discretionary {-}{}{}E\discretionary {-}{}{}S\discretionary {-}{}{}Encryption}, 
-		\hyperpage{49}
+		\hyperpage{51}
   \item {request\discretionary {-}{}{}Key}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{59}
+		\hyperpage{58}
   \item {run\discretionary {-}{}{}Tests}
     \subitem {Controller\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
 		\hyperpage{19}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{60}
+		\hyperpage{59}
 
   \indexspace
 
   \item {save\discretionary {-}{}{}Data}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{37}
+		\hyperpage{39}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{60}
+		\hyperpage{59}
   \item {save\discretionary {-}{}{}Image}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{38}
+		\hyperpage{40}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{60}
+		\hyperpage{59}
   \item {set\discretionary {-}{}{}Encrypt\discretionary {-}{}{}Mode}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{60}
+		\hyperpage{59}
   \item {set\discretionary {-}{}{}J\discretionary {-}{}{}P\discretionary {-}{}{}H\discretionary {-}{}{}S\discretionary {-}{}{}Dir}
     \subitem {Controller\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
 		\hyperpage{19}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{62}
+		\hyperpage{61}
   \item {set\discretionary {-}{}{}Progress}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{38}
+		\hyperpage{40}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{62}
+		\hyperpage{61}
   \item {set\discretionary {-}{}{}Version}
     \subitem {About\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
 		\hyperpage{16}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{62}
+		\hyperpage{61}
   \item {size}
-    \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{25}
-  \item {start\discretionary {-}{}{}Test}
-    \subitem {Test\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{51}
+    \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{24}
   \item {success}
-    \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{25}
+    \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{24}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{40}
+		\hyperpage{43}
 
   \indexspace
 
-  \item {Test}
-    \subitem {Test\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{51}
-  \item {test}
-    \subitem {Test\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{52}
-  \item {Test\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{49}
-    \subitem {start\discretionary {-}{}{}Test}, \hyperpage{51}
-    \subitem {Test}, \hyperpage{51}
-    \subitem {test}, \hyperpage{52}
-    \subitem {Test\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{51}
-    \subitem {Test\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{51}
-  \item {testpc.\discretionary {-}{}{}cpp}, \hyperpage{94, 95}
-  \item {testpc.\discretionary {-}{}{}h}, \hyperpage{96, 97}
-  \item {tests-\/setup}, \hyperpage{13}
-    \subitem {arr}, \hyperpage{14}
-    \subitem {filename}, \hyperpage{14}
-    \subitem {input\discretionary {-}{}{}\_\discretionary {-}{}{}data}, 
-		\hyperpage{14}
-    \subitem {js}, \hyperpage{14}
-    \subitem {obj}, \hyperpage{14}
-    \subitem {raw}, \hyperpage{14}
-  \item {tests-\/setup.\discretionary {-}{}{}py}, \hyperpage{98}
-  \item {tests.\discretionary {-}{}{}json}, \hyperpage{98}
-
-  \indexspace
-
-  \item {Ui}, \hyperpage{14}
+  \item {Ui}, \hyperpage{13}
   \item {unzip}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{38}
+		\hyperpage{41}
 
   \indexspace
 
   \item {v1\-\_\-3}
-    \subitem {Model\-P\-C}, \hyperpage{28}
+    \subitem {Model\-P\-C}, \hyperpage{27}
   \item {v1\-\_\-4}
-    \subitem {Model\-P\-C}, \hyperpage{28}
+    \subitem {Model\-P\-C}, \hyperpage{27}
   \item {val}
-    \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{25}
+    \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{24}
   \item {version}
     \subitem {Controller\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{20}
+		\hyperpage{19}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{40}
+		\hyperpage{43}
   \item {version\discretionary {-}{}{}String}
     \subitem {Controller\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
 		\hyperpage{20}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{40}
+		\hyperpage{43}
   \item {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{53}
+		\hyperpage{51}
     \subitem {$\sim $\discretionary {-}{}{}View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{55}
-    \subitem {abort\discretionary {-}{}{}Circuit}, \hyperpage{56}
-    \subitem {abort\discretionary {-}{}{}Model}, \hyperpage{56}
-    \subitem {alert}, \hyperpage{56}
-    \subitem {decrypt}, \hyperpage{57}
-    \subitem {dialog}, \hyperpage{63}
-    \subitem {encrypt}, \hyperpage{57}
-    \subitem {errors\discretionary {-}{}{}Dict}, \hyperpage{63}
+		\hyperpage{54}
+    \subitem {abort\discretionary {-}{}{}Circuit}, \hyperpage{54}
+    \subitem {abort\discretionary {-}{}{}Model}, \hyperpage{54}
+    \subitem {alert}, \hyperpage{55}
+    \subitem {decrypt}, \hyperpage{55}
+    \subitem {dialog}, \hyperpage{62}
+    \subitem {encrypt}, \hyperpage{56}
+    \subitem {errors\discretionary {-}{}{}Dict}, \hyperpage{62}
+    \subitem {inject}, \hyperpage{56}
     \subitem {on\discretionary {-}{}{}\_\discretionary {-}{}{}action\discretionary {-}{}{}About\discretionary {-}{}{}\_\discretionary {-}{}{}triggered}, 
-		\hyperpage{58}
+		\hyperpage{57}
     \subitem {on\discretionary {-}{}{}\_\discretionary {-}{}{}action\discretionary {-}{}{}Help\discretionary {-}{}{}\_\discretionary {-}{}{}triggered}, 
-		\hyperpage{58}
+		\hyperpage{57}
     \subitem {on\discretionary {-}{}{}\_\discretionary {-}{}{}file\discretionary {-}{}{}Button\discretionary {-}{}{}\_\discretionary {-}{}{}clicked}, 
-		\hyperpage{58}
+		\hyperpage{57}
     \subitem {on\discretionary {-}{}{}\_\discretionary {-}{}{}start\discretionary {-}{}{}Button\discretionary {-}{}{}\_\discretionary {-}{}{}clicked}, 
-		\hyperpage{58}
+		\hyperpage{57}
     \subitem {progress\discretionary {-}{}{}Dialog\discretionary {-}{}{}Closed}, 
-		\hyperpage{63}
-    \subitem {request\discretionary {-}{}{}Key}, \hyperpage{59}
-    \subitem {run\discretionary {-}{}{}Tests}, \hyperpage{60}
-    \subitem {save\discretionary {-}{}{}Data}, \hyperpage{60}
-    \subitem {save\discretionary {-}{}{}Image}, \hyperpage{60}
-    \subitem {set\discretionary {-}{}{}Encrypt\discretionary {-}{}{}Mode}, 
-		\hyperpage{60}
-    \subitem {set\discretionary {-}{}{}J\discretionary {-}{}{}P\discretionary {-}{}{}H\discretionary {-}{}{}S\discretionary {-}{}{}Dir}, 
 		\hyperpage{62}
-    \subitem {set\discretionary {-}{}{}Progress}, \hyperpage{62}
-    \subitem {set\discretionary {-}{}{}Version}, \hyperpage{62}
+    \subitem {request\discretionary {-}{}{}Key}, \hyperpage{58}
+    \subitem {run\discretionary {-}{}{}Tests}, \hyperpage{59}
+    \subitem {save\discretionary {-}{}{}Data}, \hyperpage{59}
+    \subitem {save\discretionary {-}{}{}Image}, \hyperpage{59}
+    \subitem {set\discretionary {-}{}{}Encrypt\discretionary {-}{}{}Mode}, 
+		\hyperpage{59}
+    \subitem {set\discretionary {-}{}{}J\discretionary {-}{}{}P\discretionary {-}{}{}H\discretionary {-}{}{}S\discretionary {-}{}{}Dir}, 
+		\hyperpage{61}
+    \subitem {set\discretionary {-}{}{}Progress}, \hyperpage{61}
+    \subitem {set\discretionary {-}{}{}Version}, \hyperpage{61}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{55}
+		\hyperpage{54}
     \subitem {View\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{55}
-  \item {viewpc.\discretionary {-}{}{}cpp}, \hyperpage{99}
-  \item {viewpc.\discretionary {-}{}{}h}, \hyperpage{102}
+		\hyperpage{54}
+  \item {viewpc.\discretionary {-}{}{}cpp}, \hyperpage{95}
+  \item {viewpc.\discretionary {-}{}{}h}, \hyperpage{99}
 
   \indexspace
 
@@ -535,10 +501,10 @@
   \indexspace
 
   \item {Z\-E\-R\-O}
-    \subitem {Q\-A\-E\-S\-Encryption}, \hyperpage{43}
+    \subitem {Q\-A\-E\-S\-Encryption}, \hyperpage{46}
   \item {zip}
     \subitem {Encrypt\discretionary {-}{}{}Dialog}, \hyperpage{23}
     \subitem {Model\discretionary {-}{}{}P\discretionary {-}{}{}C}, 
-		\hyperpage{39}
+		\hyperpage{42}
 
 \end{theindex}

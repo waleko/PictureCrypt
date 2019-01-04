@@ -1,11 +1,12 @@
 <map id="ModelPC::decrypt" name="ModelPC::decrypt">
-<area shape="rect" id="node2" href="$class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="817,25,919,52"/>
-<area shape="rect" id="node4" href="$class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="181,25,336,52"/>
-<area shape="rect" id="node10" href="$class_model_p_c.html#a7a1f7d491e1bde16936190b9e90896b0" title="ModelPC::decryptv1_4 Decrypts data from image in v1.4+. " alt="" coords="181,76,336,102"/>
-<area shape="rect" id="node3" href="$class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. " alt="" coords="1013,25,1123,52"/>
-<area shape="rect" id="node5" href="$class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="385,50,503,77"/>
-<area shape="rect" id="node7" href="$class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0" title="ModelPC::unzip Unzip data from ModelPC::decrypt. Just mirrored EncryptDialog::zip. " alt="" coords="387,126,501,153"/>
-<area shape="rect" id="node6" href="$class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="558,101,717,128"/>
-<area shape="rect" id="node8" href="$class_q_a_e_s_encryption.html#a58f972f2b66c2454edd5112495463bba" title="decode Decodes data with AES " alt="" coords="552,152,723,178"/>
-<area shape="rect" id="node9" href="$class_q_a_e_s_encryption.html#a5bfbb972f84a8376fceed648553c0912" title="ExpandKey Expands the key. " alt="" coords="771,152,965,178"/>
+<area shape="rect" id="node2" href="$class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="900,37,1001,64"/>
+<area shape="rect" id="node4" href="$class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="181,63,336,89"/>
+<area shape="rect" id="node10" href="$class_model_p_c.html#a7a1f7d491e1bde16936190b9e90896b0" title="ModelPC::decryptv1_4 Decrypts data from image in v1.4+. " alt="" coords="181,139,336,165"/>
+<area shape="rect" id="node3" href="$class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. " alt="" coords="1096,37,1205,64"/>
+<area shape="rect" id="node5" href="$class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="426,63,545,89"/>
+<area shape="rect" id="node7" href="$class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0" title="ModelPC::unzip Unzip data from ModelPC::decrypt. Just mirrored EncryptDialog::zip. " alt="" coords="428,139,543,165"/>
+<area shape="rect" id="node6" href="$class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="641,88,799,115"/>
+<area shape="rect" id="node8" href="$class_q_a_e_s_encryption.html#a58f972f2b66c2454edd5112495463bba" title="decode Decodes data with AES " alt="" coords="635,139,805,165"/>
+<area shape="rect" id="node9" href="$class_q_a_e_s_encryption.html#a5bfbb972f84a8376fceed648553c0912" title="ExpandKey Expands the key. " alt="" coords="853,139,1048,165"/>
+<area shape="rect" id="node11" href="$class_model_p_c.html#a5cdb4d1d61ff62ee9d45b496a7dbf1fb" title="ModelPC::proccessPixelsv1_4 Hides (or retrieves) data to/from pixels. " alt="" coords="385,240,586,267"/>
 </map>

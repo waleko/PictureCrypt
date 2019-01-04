@@ -1,11 +1,13 @@
 <map id="ModelPC::setProgress" name="ModelPC::setProgress">
-<area shape="rect" id="node2" href="$class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="208,116,309,143"/>
-<area shape="rect" id="node8" href="$class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="566,192,685,219"/>
-<area shape="rect" id="node10" href="$class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="358,243,517,269"/>
-<area shape="rect" id="node3" href="$class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="937,91,1063,117"/>
-<area shape="rect" id="node5" href="$class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="753,141,868,168"/>
-<area shape="rect" id="node6" href="$class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="937,40,1063,67"/>
-<area shape="rect" id="node7" href="$class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="571,141,679,168"/>
-<area shape="rect" id="node9" href="$class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="733,40,888,67"/>
-<area shape="rect" id="node4" href="$class_test_p_c.html#a612a0409006417c6f03e1749bca0d45a" title="TestPC::test Function calling TestPC::model for tests. " alt="" coords="1113,65,1210,92"/>
+<area shape="rect" id="node2" href="$class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="259,248,360,275"/>
+<area shape="rect" id="node7" href="$class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="667,83,786,110"/>
+<area shape="rect" id="node9" href="$class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="459,32,618,59"/>
+<area shape="rect" id="node10" href="$class_model_p_c.html#a4daefc3fb87a1f19172b9b20c987eb12" title="ModelPC::encryptv1_4 Encrypts and injects data to image used in v1.4+. " alt="" coords="461,438,616,464"/>
+<area shape="rect" id="node11" href="$class_model_p_c.html#a7a1f7d491e1bde16936190b9e90896b0" title="ModelPC::decryptv1_4 Decrypts data from image in v1.4+. " alt="" coords="461,387,616,414"/>
+<area shape="rect" id="node12" href="$class_model_p_c.html#a5cdb4d1d61ff62ee9d45b496a7dbf1fb" title="ModelPC::proccessPixelsv1_4 Hides (or retrieves) data to/from pixels. " alt="" coords="209,387,410,414"/>
+<area shape="rect" id="node3" href="$class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="1038,336,1165,363"/>
+<area shape="rect" id="node4" href="$class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="855,235,969,262"/>
+<area shape="rect" id="node5" href="$class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="1038,184,1165,211"/>
+<area shape="rect" id="node6" href="$class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="673,235,781,262"/>
+<area shape="rect" id="node8" href="$class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="835,134,989,160"/>
 </map>
