@@ -2,11 +2,32 @@
 <resources>
 
     <string name="no_data">No data given!</string>
-	<string name="muchdata">Too much data!</string>
+	<string name="muchdata">Data size is too big (must be less than 15MB)!</string>
 	<string name="nullimage">Invalid / null image!</string>
 	<string name="bigimage">Image is too big!</string>
 	<string name="bitsWrong">bitsUsed parameter is wrong!</string>
 	<string name="no_key">No key given!</string>
-	<string name=""></string>
+	<string name="big_key">Given key is too big!</string>
+	<string name="undefined_mode">Undefined mode is only available when decrypting!</string>
+	<string name="wrongmode">Given mode isn't available!</string>
+	<string name="inject-v1.4">ModelPC::inject() isn't available with v1.4 (advanced) mode</string>
+	<string name="all_modes_fail">Given image isn't encrypted by this app (all modes have failed) or is damaged!</string>
+	<string name="nojphs">JPHS is not installed!</string>
+	
+	<string name="bitsBufferFail">bitsBufferFail (holy crap, contact me or submit a bug)</string>
+	<string name="point_visited_twice">One point visited twice (holy crap, contact me or submit a bug)</string>
+	
+	<string name="bigdata">Too much data for this image!</string>
+	<string name="veriffail">Given image isn't encrypted with this mode or is damaged!</string>
+	<string name="noreaddata">No data to read from image!</string>
+	<string name="new_version">Version of the image is newer than yours (update!!!)</string>
+	<string name="old_version">Version of the image is older than yours</string>
+	
+	<string name="no_input_file">No file given!</string>
+	<string name="open_file_fail">Cannot open file!</string>
+	<string name="save_file_fail">Cannot save file!</string>
+	
+	<string name="decryption_completed">Decryption completed!</string>
+	<string name="encryption_completed">Encryption completed!</string>
 	
 </resources>

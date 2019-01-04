@@ -89,7 +89,7 @@ void ViewPC::on_startButton_clicked()
             // Check the data size
             auto size = file.size();
             if(size > qPow(2, 24)) {
-                alert("big_file", true);
+                alert("muchdata", true);
                 file.close();
                 return;
             }
@@ -124,7 +124,7 @@ void ViewPC::on_startButton_clicked()
     {
         // Get the filename of the image
         if(inputFileName.isEmpty()) {
-            alert("no_file_selected", true);
+            alert("no_input_file", true);
             return;
         }
         QByteArray key = requestKey().toUtf8();

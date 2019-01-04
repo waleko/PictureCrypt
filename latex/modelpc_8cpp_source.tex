@@ -81,7 +81,7 @@
 00093     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} usedBytes = data.size() + 14 + key.size();
 00094     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} size = image->width() * image->height();
 00095     \textcolor{keywordflow}{if}(usedBytes * 100 / (size * 3) * 8 / \_bitsUsed > 70) \{
-00096         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"muchdata"});
+00096         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"bigdata"});
 00097         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
 00098     \}
 00099 
@@ -280,7 +280,7 @@
 00319     \textcolor{keywordflow}{if}(isEncrypt) \{
 00320         QFile file(randomFileName + \textcolor{stringliteral}{".pc"});
 00321         \textcolor{keywordflow}{if}(!file.open(QFile::WriteOnly)) \{
-00322             \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"savefilefail"});
+00322             \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"save\_file\_fail"});
 00323             \textcolor{keywordflow}{return};
 00324         \}
 00325         file.write(*data);

@@ -76,7 +76,7 @@
 00089             \textcolor{comment}{// Check the data size}
 00090             \textcolor{keyword}{auto} size = file.size();
 00091             \textcolor{keywordflow}{if}(size > qPow(2, 24)) \{
-00092                 \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"big\_file"}, \textcolor{keyword}{true});
+00092                 \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"muchdata"}, \textcolor{keyword}{true});
 00093                 file.close();
 00094                 \textcolor{keywordflow}{return};
 00095             \}
@@ -113,7 +113,7 @@
 00124     \{
 00125         \textcolor{comment}{// Get the filename of the image}
 00126         \textcolor{keywordflow}{if}(inputFileName.isEmpty()) \{
-00127             \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"no\_file\_selected"}, \textcolor{keyword}{true});
+00127             \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"no\_input\_file"}, \textcolor{keyword}{true});
 00128             \textcolor{keywordflow}{return};
 00129         \}
 00130         QByteArray \hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key} = \hyperlink{class_view_p_c_a559c95675ec98b15451f3bca47033d9c}{requestKey}().toUtf8();
