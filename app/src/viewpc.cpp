@@ -1,4 +1,4 @@
-#include "viewpc.h"
+﻿#include "viewpc.h"
 #include "ui_viewpc.h"
 
 ViewPC::ViewPC(QWidget *parent) :
@@ -9,18 +9,8 @@ ViewPC::ViewPC(QWidget *parent) :
 
     progressDialogClosed = true;
 
-    // Alerts dictionary setup
-    QFile file(":/config/ErrorsDict.json");
-    if(!file.open(QFile::ReadOnly | QFile::Text)) {
-        alert("Cannot open config file!");
-        return;
-    }
-    QByteArray readData = file.readAll();
-    file.close();
+    setupErrorsDict();
 
-    QJsonParseError error;
-    QJsonDocument doc = QJsonDocument::fromJson(readData, &error);
-    errorsDict = doc.object();
     isEncrypt = true;
 }
 /*!
@@ -143,7 +133,7 @@ void ViewPC::alert(QString message, bool isWarning)
 {
     // Get message
     if(errorsDict.contains(message))
-        message = errorsDict[message].toString();
+        message = errorsDict[message];
     // Create message box
     QMessageBox box;
     if(isWarning)
@@ -296,6 +286,50 @@ void ViewPC::on_actionHelp_triggered()
 {
     QUrl docLink("https://alexkovrigin.me/PictureCrypt");
     QDesktopServices::openUrl(docLink);
+}
+/*!
+ * \brief ViewPC::setupErrorsDict Setups errorsDict from strings.xml
+ */
+void ViewPC::setupErrorsDict()
+{
+    QString locale = QLocale::system().name().left(2);
+    QString folderName = "values-" + locale;
+    QString defaultPath = "://res/values/errors.xml";
+    QString path = "://res/" + folderName + "/errors.xml";
+    if(locale == "en")
+        path = defaultPath;
+
+    QFileInfo foo(path);
+    if(!foo.exists() || !foo.isFile()) {
+        path = defaultPath;
+        qDebug() << locale + " unsupported. Switching to en";
+    }
+
+    QFile file(path);
+    if(!file.open(QFile::ReadOnly | QFile::Text)) {
+        alert("Cannot open config file!");
+        return;
+    }
+    QByteArray readData = file.readAll();
+    file.close();
+    QDomDocument doc;
+    doc.setContent(readData);
+
+    QDomElement root = doc.documentElement();
+    QDomElement Component = root.firstChild().toElement();
+
+    // Loop while there is a child
+    while(!Component.isNull())
+    {
+        // Check if the child tag name is string
+        if (Component.tagName() == "string")
+        {
+            QString name = Component.attribute("name", "no name");
+            QString value = Component.firstChild().toText().data();
+            errorsDict[name] = value;
+        }
+        Component = Component.nextSibling().toElement();
+    }
 }
 
 void ViewPC::on_actionJPHS_path_triggered()
