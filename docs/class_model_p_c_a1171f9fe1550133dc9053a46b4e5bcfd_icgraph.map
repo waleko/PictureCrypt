@@ -1,7 +1,7 @@
 <map id="ModelPC::processPixel" name="ModelPC::processPixel">
-<area shape="rect" id="node2" href="$class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="214,31,333,57"/>
-<area shape="rect" id="node3" href="$class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="401,5,516,32"/>
-<area shape="rect" id="node5" href="$class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="381,56,536,83"/>
-<area shape="rect" id="node4" href="$class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="585,5,711,32"/>
-<area shape="rect" id="node6" href="$class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="585,56,711,83"/>
+<area shape="rect" id="node2" href="$class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="212,31,331,57"/>
+<area shape="rect" id="node3" href="$class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="399,5,513,32"/>
+<area shape="rect" id="node5" href="$class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="379,56,533,83"/>
+<area shape="rect" id="node4" href="$class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="581,5,708,32"/>
+<area shape="rect" id="node6" href="$class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="581,56,708,83"/>
 </map>

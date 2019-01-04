@@ -1,180 +1,179 @@
-\hypertarget{class_q_a_e_s_encryption}{\section{Q\-A\-E\-S\-Encryption Class Reference}
-\label{class_q_a_e_s_encryption}\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}}
-}
+\hypertarget{class_q_a_e_s_encryption}{}\section{Q\+A\+E\+S\+Encryption Class Reference}
+\label{class_q_a_e_s_encryption}\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}
 
 
-The \hyperlink{class_q_a_e_s_encryption}{Q\-A\-E\-S\-Encryption} class Small and portable A\-E\-S encryption class for Qt. Supports all key sizes -\/ 128/192/256 bits -\/ E\-C\-B, C\-B\-C, C\-F\-B and O\-F\-B modes. Class made entirely by bricke. Github\-: \href{https://github.com/bricke/Qt-AES}{\tt https\-://github.\-com/bricke/\-Qt-\/\-A\-E\-S}.  
-
-
-
-
-{\ttfamily \#include $<$qaesencryption.\-h$>$}
+The \hyperlink{class_q_a_e_s_encryption}{Q\+A\+E\+S\+Encryption} class Small and portable A\+ES encryption class for Qt. Supports all key sizes -\/ 128/192/256 bits -\/ E\+CB, C\+BC, C\+FB and O\+FB modes. Class made entirely by bricke. Github\+: \href{https://github.com/bricke/Qt-AES}{\tt https\+://github.\+com/bricke/\+Qt-\/\+A\+ES}.  
 
 
 
-Inheritance diagram for Q\-A\-E\-S\-Encryption\-:
+
+{\ttfamily \#include $<$qaesencryption.\+h$>$}
+
+
+
+Inheritance diagram for Q\+A\+E\+S\+Encryption\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=170pt]{class_q_a_e_s_encryption__inherit__graph}
+\includegraphics[width=171pt]{class_q_a_e_s_encryption__inherit__graph}
 \end{center}
 \end{figure}
 
 
-Collaboration diagram for Q\-A\-E\-S\-Encryption\-:
+Collaboration diagram for Q\+A\+E\+S\+Encryption\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=170pt]{class_q_a_e_s_encryption__coll__graph}
+\includegraphics[width=171pt]{class_q_a_e_s_encryption__coll__graph}
 \end{center}
 \end{figure}
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{Aes} \{ \hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bda0fa01cdf69e5537499ecfc6f96d6570a}{A\-E\-S\-\_\-128}, 
-\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bda7bd082b240582de6d5f4b8ea604e646b}{A\-E\-S\-\_\-192}, 
-\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bdacde97774ab1d4c609e04b0dd13a1e1f7}{A\-E\-S\-\_\-256}
- \}
-\begin{DoxyCompactList}\small\item\em The Aes enum A\-E\-S Level A\-E\-S Levels The class supports all A\-E\-S key lenghts. \end{DoxyCompactList}\item 
-enum \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{Mode} \{ \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a4ca7f51778e2adf1f464164a0ba8e75e}{E\-C\-B}, 
-\hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a559bffc55d3599d0a172cc85aed98966}{C\-B\-C}, 
-\hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255ae5e2e019df35c7d172fcd7f0ebec5e8e}{C\-F\-B}, 
-\hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a27e2f82decd94080893d61db4a8adcb3}{O\-F\-B}
- \}
-\begin{DoxyCompactList}\small\item\em The Mode enum A\-E\-S Mode The class supports the following operating modes E\-C\-B C\-B\-C C\-F\-B O\-F\-B. \end{DoxyCompactList}\item 
-enum \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{Padding} \{ \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a0842d5191caeff6f871908fa7b9e8e7a}{Z\-E\-R\-O}, 
-\hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a74a898410a12cbc5391b47daa04cbd69}{P\-K\-C\-S7}, 
-\hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{I\-S\-O}
- \}
-\begin{DoxyCompactList}\small\item\em The Padding enum Padding By default the padding method is I\-S\-O, however, the class supports\-: \end{DoxyCompactList}\end{DoxyCompactItemize}
+enum \hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{Aes} \{ \hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bda0fa01cdf69e5537499ecfc6f96d6570a}{A\+E\+S\+\_\+128}, 
+\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bda7bd082b240582de6d5f4b8ea604e646b}{A\+E\+S\+\_\+192}, 
+\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bdacde97774ab1d4c609e04b0dd13a1e1f7}{A\+E\+S\+\_\+256}
+ \}\begin{DoxyCompactList}\small\item\em The Aes enum A\+ES Level A\+ES Levels The class supports all A\+ES key lenghts. \end{DoxyCompactList}
+\item 
+enum \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{Mode} \{ \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a4ca7f51778e2adf1f464164a0ba8e75e}{E\+CB}, 
+\hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a559bffc55d3599d0a172cc85aed98966}{C\+BC}, 
+\hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255ae5e2e019df35c7d172fcd7f0ebec5e8e}{C\+FB}, 
+\hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a27e2f82decd94080893d61db4a8adcb3}{O\+FB}
+ \}\begin{DoxyCompactList}\small\item\em The Mode enum A\+ES Mode The class supports the following operating modes E\+CB C\+BC C\+FB O\+FB. \end{DoxyCompactList}
+\item 
+enum \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{Padding} \{ \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a0842d5191caeff6f871908fa7b9e8e7a}{Z\+E\+RO}, 
+\hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a74a898410a12cbc5391b47daa04cbd69}{P\+K\+C\+S7}, 
+\hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{I\+SO}
+ \}\begin{DoxyCompactList}\small\item\em The Padding enum Padding By default the padding method is I\+SO, however, the class supports\+: \end{DoxyCompactList}
+\end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_q_a_e_s_encryption_aeac0ee8532e69e5d30b023fe38c30b3b}{Q\-A\-E\-S\-Encryption} (\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{Q\-A\-E\-S\-Encryption\-::\-Aes} level, \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{Q\-A\-E\-S\-Encryption\-::\-Mode} mode, \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{Q\-A\-E\-S\-Encryption\-::\-Padding} padding=\hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{Q\-A\-E\-S\-Encryption\-::\-I\-S\-O})
+\hyperlink{class_q_a_e_s_encryption_aeac0ee8532e69e5d30b023fe38c30b3b}{Q\+A\+E\+S\+Encryption} (\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{Q\+A\+E\+S\+Encryption\+::\+Aes} level, \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{Q\+A\+E\+S\+Encryption\+::\+Mode} mode, \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{Q\+A\+E\+S\+Encryption\+::\+Padding} padding=\hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{Q\+A\+E\+S\+Encryption\+::\+I\+SO})
 \item 
-Q\-Byte\-Array \hyperlink{class_q_a_e_s_encryption_a0c56eddd6f03e93b1f7faad464044d65}{encode} (const Q\-Byte\-Array \&raw\-Text, const Q\-Byte\-Array \&key, const Q\-Byte\-Array \&iv=N\-U\-L\-L)
-\begin{DoxyCompactList}\small\item\em encode Encodes data with A\-E\-S \end{DoxyCompactList}\item 
-Q\-Byte\-Array \hyperlink{class_q_a_e_s_encryption_a58f972f2b66c2454edd5112495463bba}{decode} (const Q\-Byte\-Array \&raw\-Text, const Q\-Byte\-Array \&key, const Q\-Byte\-Array \&iv=N\-U\-L\-L)
-\begin{DoxyCompactList}\small\item\em decode Decodes data with A\-E\-S \end{DoxyCompactList}\item 
-Q\-Byte\-Array \hyperlink{class_q_a_e_s_encryption_a4dc7e77485e5a3e63eebc99b9386c17b}{remove\-Padding} (const Q\-Byte\-Array \&raw\-Text)
-\begin{DoxyCompactList}\small\item\em Remove\-Padding Removes padding. \end{DoxyCompactList}\item 
-Q\-Byte\-Array \hyperlink{class_q_a_e_s_encryption_a5bfbb972f84a8376fceed648553c0912}{expand\-Key} (const Q\-Byte\-Array \&key)
-\begin{DoxyCompactList}\small\item\em Expand\-Key Expands the key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+Q\+Byte\+Array \hyperlink{class_q_a_e_s_encryption_a0c56eddd6f03e93b1f7faad464044d65}{encode} (const Q\+Byte\+Array \&raw\+Text, const Q\+Byte\+Array \&key, const Q\+Byte\+Array \&iv=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em encode Encodes data with A\+ES \end{DoxyCompactList}\item 
+Q\+Byte\+Array \hyperlink{class_q_a_e_s_encryption_a58f972f2b66c2454edd5112495463bba}{decode} (const Q\+Byte\+Array \&raw\+Text, const Q\+Byte\+Array \&key, const Q\+Byte\+Array \&iv=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em decode Decodes data with A\+ES \end{DoxyCompactList}\item 
+Q\+Byte\+Array \hyperlink{class_q_a_e_s_encryption_a4dc7e77485e5a3e63eebc99b9386c17b}{remove\+Padding} (const Q\+Byte\+Array \&raw\+Text)
+\begin{DoxyCompactList}\small\item\em Remove\+Padding Removes padding. \end{DoxyCompactList}\item 
+Q\+Byte\+Array \hyperlink{class_q_a_e_s_encryption_a5bfbb972f84a8376fceed648553c0912}{expand\+Key} (const Q\+Byte\+Array \&key)
+\begin{DoxyCompactList}\small\item\em Expand\+Key Expands the key. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static Q\-Byte\-Array \hyperlink{class_q_a_e_s_encryption_a43819eeb6a7cb29fbd3cb6ad640dcbdf}{Crypt} (\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{Q\-A\-E\-S\-Encryption\-::\-Aes} level, \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{Q\-A\-E\-S\-Encryption\-::\-Mode} mode, const Q\-Byte\-Array \&raw\-Text, const Q\-Byte\-Array \&key, const Q\-Byte\-Array \&iv=N\-U\-L\-L, \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{Q\-A\-E\-S\-Encryption\-::\-Padding} padding=\hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{Q\-A\-E\-S\-Encryption\-::\-I\-S\-O})
+static Q\+Byte\+Array \hyperlink{class_q_a_e_s_encryption_a43819eeb6a7cb29fbd3cb6ad640dcbdf}{Crypt} (\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{Q\+A\+E\+S\+Encryption\+::\+Aes} level, \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{Q\+A\+E\+S\+Encryption\+::\+Mode} mode, const Q\+Byte\+Array \&raw\+Text, const Q\+Byte\+Array \&key, const Q\+Byte\+Array \&iv=N\+U\+LL, \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{Q\+A\+E\+S\+Encryption\+::\+Padding} padding=\hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{Q\+A\+E\+S\+Encryption\+::\+I\+SO})
 \begin{DoxyCompactList}\small\item\em Crypt Static encode function. \end{DoxyCompactList}\item 
-static Q\-Byte\-Array \hyperlink{class_q_a_e_s_encryption_af9baa154a06683049d941bd06ac698fd}{Decrypt} (\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{Q\-A\-E\-S\-Encryption\-::\-Aes} level, \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{Q\-A\-E\-S\-Encryption\-::\-Mode} mode, const Q\-Byte\-Array \&raw\-Text, const Q\-Byte\-Array \&key, const Q\-Byte\-Array \&iv=N\-U\-L\-L, \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{Q\-A\-E\-S\-Encryption\-::\-Padding} padding=\hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{Q\-A\-E\-S\-Encryption\-::\-I\-S\-O})
+static Q\+Byte\+Array \hyperlink{class_q_a_e_s_encryption_af9baa154a06683049d941bd06ac698fd}{Decrypt} (\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{Q\+A\+E\+S\+Encryption\+::\+Aes} level, \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{Q\+A\+E\+S\+Encryption\+::\+Mode} mode, const Q\+Byte\+Array \&raw\+Text, const Q\+Byte\+Array \&key, const Q\+Byte\+Array \&iv=N\+U\+LL, \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{Q\+A\+E\+S\+Encryption\+::\+Padding} padding=\hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{Q\+A\+E\+S\+Encryption\+::\+I\+SO})
 \begin{DoxyCompactList}\small\item\em Decrypt Static decode function. \end{DoxyCompactList}\item 
-static Q\-Byte\-Array \hyperlink{class_q_a_e_s_encryption_a2112456e057e6dd886694348fbf202cd}{Expand\-Key} (\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{Q\-A\-E\-S\-Encryption\-::\-Aes} level, \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{Q\-A\-E\-S\-Encryption\-::\-Mode} mode, const Q\-Byte\-Array \&key)
-\begin{DoxyCompactList}\small\item\em Expand\-Key Expands the key. \end{DoxyCompactList}\item 
-static Q\-Byte\-Array \hyperlink{class_q_a_e_s_encryption_abb2887bf5623a74053dd19627f3d3055}{Remove\-Padding} (const Q\-Byte\-Array \&raw\-Text, \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{Q\-A\-E\-S\-Encryption\-::\-Padding} padding)
-\begin{DoxyCompactList}\small\item\em Remove\-Padding Removes padding. \end{DoxyCompactList}\end{DoxyCompactItemize}
+static Q\+Byte\+Array \hyperlink{class_q_a_e_s_encryption_a2112456e057e6dd886694348fbf202cd}{Expand\+Key} (\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{Q\+A\+E\+S\+Encryption\+::\+Aes} level, \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{Q\+A\+E\+S\+Encryption\+::\+Mode} mode, const Q\+Byte\+Array \&key)
+\begin{DoxyCompactList}\small\item\em Expand\+Key Expands the key. \end{DoxyCompactList}\item 
+static Q\+Byte\+Array \hyperlink{class_q_a_e_s_encryption_abb2887bf5623a74053dd19627f3d3055}{Remove\+Padding} (const Q\+Byte\+Array \&raw\+Text, \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{Q\+A\+E\+S\+Encryption\+::\+Padding} padding)
+\begin{DoxyCompactList}\small\item\em Remove\+Padding Removes padding. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
-The \hyperlink{class_q_a_e_s_encryption}{Q\-A\-E\-S\-Encryption} class Small and portable A\-E\-S encryption class for Qt. Supports all key sizes -\/ 128/192/256 bits -\/ E\-C\-B, C\-B\-C, C\-F\-B and O\-F\-B modes. Class made entirely by bricke. Github\-: \href{https://github.com/bricke/Qt-AES}{\tt https\-://github.\-com/bricke/\-Qt-\/\-A\-E\-S}. 
+The \hyperlink{class_q_a_e_s_encryption}{Q\+A\+E\+S\+Encryption} class Small and portable A\+ES encryption class for Qt. Supports all key sizes -\/ 128/192/256 bits -\/ E\+CB, C\+BC, C\+FB and O\+FB modes. Class made entirely by bricke. Github\+: \href{https://github.com/bricke/Qt-AES}{\tt https\+://github.\+com/bricke/\+Qt-\/\+A\+ES}. 
 
 \begin{DoxyAuthor}{Author}
 Bricke (Matteo B) 
 \end{DoxyAuthor}
 
 
-Definition at line \hyperlink{qaesencryption_8h_source_l00014}{14} of file \hyperlink{qaesencryption_8h_source}{qaesencryption.\-h}.
+Definition at line \hyperlink{qaesencryption_8h_source_l00014}{14} of file \hyperlink{qaesencryption_8h_source}{qaesencryption.\+h}.
 
 
 
 \subsection{Member Enumeration Documentation}
-\hypertarget{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!Aes@{Aes}}
-\index{Aes@{Aes}!QAESEncryption@{Q\-A\-E\-S\-Encryption}}
-\subsubsection[{Aes}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Q\-A\-E\-S\-Encryption\-::\-Aes}}}\label{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}
+\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!Aes@{Aes}}
+\index{Aes@{Aes}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}
+\subsubsection[{\texorpdfstring{Aes}{Aes}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Q\+A\+E\+S\+Encryption\+::\+Aes}}\hypertarget{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{}\label{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}
 
 
-The Aes enum A\-E\-S Level A\-E\-S Levels The class supports all A\-E\-S key lenghts. 
+The Aes enum A\+ES Level A\+ES Levels The class supports all A\+ES key lenghts. 
 
-A\-E\-S\-\_\-128 A\-E\-S\-\_\-192 A\-E\-S\-\_\-256 \begin{Desc}
+A\+E\+S\+\_\+128 A\+E\+S\+\_\+192 A\+E\+S\+\_\+256 \begin{Desc}
 \item[Enumerator]\par
 \begin{description}
-\index{A\-E\-S\-\_\-128@{A\-E\-S\-\_\-128}!Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}}\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!A\-E\-S\-\_\-128@{A\-E\-S\-\_\-128}}\item[{\em 
-\hypertarget{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bda0fa01cdf69e5537499ecfc6f96d6570a}{A\-E\-S\-\_\-128}\label{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bda0fa01cdf69e5537499ecfc6f96d6570a}
-}]\index{A\-E\-S\-\_\-192@{A\-E\-S\-\_\-192}!Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}}\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!A\-E\-S\-\_\-192@{A\-E\-S\-\_\-192}}\item[{\em 
-\hypertarget{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bda7bd082b240582de6d5f4b8ea604e646b}{A\-E\-S\-\_\-192}\label{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bda7bd082b240582de6d5f4b8ea604e646b}
-}]\index{A\-E\-S\-\_\-256@{A\-E\-S\-\_\-256}!Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}}\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!A\-E\-S\-\_\-256@{A\-E\-S\-\_\-256}}\item[{\em 
-\hypertarget{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bdacde97774ab1d4c609e04b0dd13a1e1f7}{A\-E\-S\-\_\-256}\label{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bdacde97774ab1d4c609e04b0dd13a1e1f7}
+\index{A\+E\+S\+\_\+128@{A\+E\+S\+\_\+128}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!A\+E\+S\+\_\+128@{A\+E\+S\+\_\+128}}\item[{\em 
+A\+E\+S\+\_\+128\hypertarget{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bda0fa01cdf69e5537499ecfc6f96d6570a}{}\label{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bda0fa01cdf69e5537499ecfc6f96d6570a}
+}]\index{A\+E\+S\+\_\+192@{A\+E\+S\+\_\+192}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!A\+E\+S\+\_\+192@{A\+E\+S\+\_\+192}}\item[{\em 
+A\+E\+S\+\_\+192\hypertarget{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bda7bd082b240582de6d5f4b8ea604e646b}{}\label{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bda7bd082b240582de6d5f4b8ea604e646b}
+}]\index{A\+E\+S\+\_\+256@{A\+E\+S\+\_\+256}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!A\+E\+S\+\_\+256@{A\+E\+S\+\_\+256}}\item[{\em 
+A\+E\+S\+\_\+256\hypertarget{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bdacde97774ab1d4c609e04b0dd13a1e1f7}{}\label{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bdacde97774ab1d4c609e04b0dd13a1e1f7}
 }]\end{description}
 \end{Desc}
 
 
-Definition at line \hyperlink{qaesencryption_8h_source_l00027}{27} of file \hyperlink{qaesencryption_8h_source}{qaesencryption.\-h}.
+Definition at line \hyperlink{qaesencryption_8h_source_l00027}{27} of file \hyperlink{qaesencryption_8h_source}{qaesencryption.\+h}.
 
-\hypertarget{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!Mode@{Mode}}
-\index{Mode@{Mode}!QAESEncryption@{Q\-A\-E\-S\-Encryption}}
-\subsubsection[{Mode}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Q\-A\-E\-S\-Encryption\-::\-Mode}}}\label{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}
+\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!Mode@{Mode}}
+\index{Mode@{Mode}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}
+\subsubsection[{\texorpdfstring{Mode}{Mode}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Q\+A\+E\+S\+Encryption\+::\+Mode}}\hypertarget{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{}\label{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}
 
 
-The Mode enum A\-E\-S Mode The class supports the following operating modes E\-C\-B C\-B\-C C\-F\-B O\-F\-B. 
+The Mode enum A\+ES Mode The class supports the following operating modes E\+CB C\+BC C\+FB O\+FB. 
 
 \begin{Desc}
 \item[Enumerator]\par
 \begin{description}
-\index{E\-C\-B@{E\-C\-B}!Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}}\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!E\-C\-B@{E\-C\-B}}\item[{\em 
-\hypertarget{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a4ca7f51778e2adf1f464164a0ba8e75e}{E\-C\-B}\label{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a4ca7f51778e2adf1f464164a0ba8e75e}
-}]\index{C\-B\-C@{C\-B\-C}!Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}}\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!C\-B\-C@{C\-B\-C}}\item[{\em 
-\hypertarget{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a559bffc55d3599d0a172cc85aed98966}{C\-B\-C}\label{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a559bffc55d3599d0a172cc85aed98966}
-}]\index{C\-F\-B@{C\-F\-B}!Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}}\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!C\-F\-B@{C\-F\-B}}\item[{\em 
-\hypertarget{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255ae5e2e019df35c7d172fcd7f0ebec5e8e}{C\-F\-B}\label{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255ae5e2e019df35c7d172fcd7f0ebec5e8e}
-}]\index{O\-F\-B@{O\-F\-B}!Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}}\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!O\-F\-B@{O\-F\-B}}\item[{\em 
-\hypertarget{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a27e2f82decd94080893d61db4a8adcb3}{O\-F\-B}\label{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a27e2f82decd94080893d61db4a8adcb3}
+\index{E\+CB@{E\+CB}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!E\+CB@{E\+CB}}\item[{\em 
+E\+CB\hypertarget{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a4ca7f51778e2adf1f464164a0ba8e75e}{}\label{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a4ca7f51778e2adf1f464164a0ba8e75e}
+}]\index{C\+BC@{C\+BC}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!C\+BC@{C\+BC}}\item[{\em 
+C\+BC\hypertarget{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a559bffc55d3599d0a172cc85aed98966}{}\label{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a559bffc55d3599d0a172cc85aed98966}
+}]\index{C\+FB@{C\+FB}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!C\+FB@{C\+FB}}\item[{\em 
+C\+FB\hypertarget{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255ae5e2e019df35c7d172fcd7f0ebec5e8e}{}\label{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255ae5e2e019df35c7d172fcd7f0ebec5e8e}
+}]\index{O\+FB@{O\+FB}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!O\+FB@{O\+FB}}\item[{\em 
+O\+FB\hypertarget{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a27e2f82decd94080893d61db4a8adcb3}{}\label{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a27e2f82decd94080893d61db4a8adcb3}
 }]\end{description}
 \end{Desc}
 
 
-Definition at line \hyperlink{qaesencryption_8h_source_l00040}{40} of file \hyperlink{qaesencryption_8h_source}{qaesencryption.\-h}.
+Definition at line \hyperlink{qaesencryption_8h_source_l00040}{40} of file \hyperlink{qaesencryption_8h_source}{qaesencryption.\+h}.
 
-\hypertarget{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!Padding@{Padding}}
-\index{Padding@{Padding}!QAESEncryption@{Q\-A\-E\-S\-Encryption}}
-\subsubsection[{Padding}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Q\-A\-E\-S\-Encryption\-::\-Padding}}}\label{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}
+\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!Padding@{Padding}}
+\index{Padding@{Padding}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}
+\subsubsection[{\texorpdfstring{Padding}{Padding}}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf Q\+A\+E\+S\+Encryption\+::\+Padding}}\hypertarget{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{}\label{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}
 
 
-The Padding enum Padding By default the padding method is I\-S\-O, however, the class supports\-: 
+The Padding enum Padding By default the padding method is I\+SO, however, the class supports\+: 
 
-Z\-E\-R\-O P\-K\-C\-S7 I\-S\-O \begin{Desc}
+Z\+E\+RO P\+K\+C\+S7 I\+SO \begin{Desc}
 \item[Enumerator]\par
 \begin{description}
-\index{Z\-E\-R\-O@{Z\-E\-R\-O}!Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}}\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!Z\-E\-R\-O@{Z\-E\-R\-O}}\item[{\em 
-\hypertarget{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a0842d5191caeff6f871908fa7b9e8e7a}{Z\-E\-R\-O}\label{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a0842d5191caeff6f871908fa7b9e8e7a}
-}]\index{P\-K\-C\-S7@{P\-K\-C\-S7}!Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}}\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!P\-K\-C\-S7@{P\-K\-C\-S7}}\item[{\em 
-\hypertarget{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a74a898410a12cbc5391b47daa04cbd69}{P\-K\-C\-S7}\label{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a74a898410a12cbc5391b47daa04cbd69}
-}]\index{I\-S\-O@{I\-S\-O}!Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}}\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!I\-S\-O@{I\-S\-O}}\item[{\em 
-\hypertarget{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{I\-S\-O}\label{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}
+\index{Z\+E\+RO@{Z\+E\+RO}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!Z\+E\+RO@{Z\+E\+RO}}\item[{\em 
+Z\+E\+RO\hypertarget{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a0842d5191caeff6f871908fa7b9e8e7a}{}\label{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a0842d5191caeff6f871908fa7b9e8e7a}
+}]\index{P\+K\+C\+S7@{P\+K\+C\+S7}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!P\+K\+C\+S7@{P\+K\+C\+S7}}\item[{\em 
+P\+K\+C\+S7\hypertarget{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a74a898410a12cbc5391b47daa04cbd69}{}\label{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a74a898410a12cbc5391b47daa04cbd69}
+}]\index{I\+SO@{I\+SO}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!I\+SO@{I\+SO}}\item[{\em 
+I\+SO\hypertarget{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{}\label{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}
 }]\end{description}
 \end{Desc}
 
 
-Definition at line \hyperlink{qaesencryption_8h_source_l00055}{55} of file \hyperlink{qaesencryption_8h_source}{qaesencryption.\-h}.
+Definition at line \hyperlink{qaesencryption_8h_source_l00055}{55} of file \hyperlink{qaesencryption_8h_source}{qaesencryption.\+h}.
 
 
 
 \subsection{Constructor \& Destructor Documentation}
-\hypertarget{class_q_a_e_s_encryption_aeac0ee8532e69e5d30b023fe38c30b3b}{\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}}
-\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!QAESEncryption@{Q\-A\-E\-S\-Encryption}}
-\subsubsection[{Q\-A\-E\-S\-Encryption}]{\setlength{\rightskip}{0pt plus 5cm}Q\-A\-E\-S\-Encryption\-::\-Q\-A\-E\-S\-Encryption (
+\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}
+\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}
+\subsubsection[{\texorpdfstring{Q\+A\+E\+S\+Encryption(\+Q\+A\+E\+S\+Encryption\+::\+Aes level, Q\+A\+E\+S\+Encryption\+::\+Mode mode, Q\+A\+E\+S\+Encryption\+::\+Padding padding=\+Q\+A\+E\+S\+Encryption\+::\+I\+S\+O)}{QAESEncryption(QAESEncryption::Aes level, QAESEncryption::Mode mode, QAESEncryption::Padding padding=QAESEncryption::ISO)}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+A\+E\+S\+Encryption\+::\+Q\+A\+E\+S\+Encryption (
 \begin{DoxyParamCaption}
-\item[{{\bf Q\-A\-E\-S\-Encryption\-::\-Aes}}]{level, }
-\item[{{\bf Q\-A\-E\-S\-Encryption\-::\-Mode}}]{mode, }
-\item[{{\bf Q\-A\-E\-S\-Encryption\-::\-Padding}}]{padding = {\ttfamily {\bf Q\-A\-E\-S\-Encryption\-::\-I\-S\-O}}}
+\item[{{\bf Q\+A\+E\+S\+Encryption\+::\+Aes}}]{level, }
+\item[{{\bf Q\+A\+E\+S\+Encryption\+::\+Mode}}]{mode, }
+\item[{{\bf Q\+A\+E\+S\+Encryption\+::\+Padding}}]{padding = {\ttfamily {\bf Q\+A\+E\+S\+Encryption\+::\+I\+SO}}}
 \end{DoxyParamCaption}
-)}}\label{class_q_a_e_s_encryption_aeac0ee8532e69e5d30b023fe38c30b3b}
+)}\hypertarget{class_q_a_e_s_encryption_aeac0ee8532e69e5d30b023fe38c30b3b}{}\label{class_q_a_e_s_encryption_aeac0ee8532e69e5d30b023fe38c30b3b}
 
 
-Definition at line \hyperlink{qaesencryption_8cpp_source_l00067}{67} of file \hyperlink{qaesencryption_8cpp_source}{qaesencryption.\-cpp}.
+Definition at line \hyperlink{qaesencryption_8cpp_source_l00067}{67} of file \hyperlink{qaesencryption_8cpp_source}{qaesencryption.\+cpp}.
 
 
 
-Here is the caller graph for this function\-:
+Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -187,33 +186,33 @@ Here is the caller graph for this function\-:
 
 
 \subsection{Member Function Documentation}
-\hypertarget{class_q_a_e_s_encryption_a43819eeb6a7cb29fbd3cb6ad640dcbdf}{\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!Crypt@{Crypt}}
-\index{Crypt@{Crypt}!QAESEncryption@{Q\-A\-E\-S\-Encryption}}
-\subsubsection[{Crypt}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Byte\-Array Q\-A\-E\-S\-Encryption\-::\-Crypt (
+\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!Crypt@{Crypt}}
+\index{Crypt@{Crypt}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}
+\subsubsection[{\texorpdfstring{Crypt(\+Q\+A\+E\+S\+Encryption\+::\+Aes level, Q\+A\+E\+S\+Encryption\+::\+Mode mode, const Q\+Byte\+Array \&raw\+Text, const Q\+Byte\+Array \&key, const Q\+Byte\+Array \&iv=\+N\+U\+L\+L, Q\+A\+E\+S\+Encryption\+::\+Padding padding=\+Q\+A\+E\+S\+Encryption\+::\+I\+S\+O)}{Crypt(QAESEncryption::Aes level, QAESEncryption::Mode mode, const QByteArray &rawText, const QByteArray &key, const QByteArray &iv=NULL, QAESEncryption::Padding padding=QAESEncryption::ISO)}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Byte\+Array Q\+A\+E\+S\+Encryption\+::\+Crypt (
 \begin{DoxyParamCaption}
-\item[{{\bf Q\-A\-E\-S\-Encryption\-::\-Aes}}]{level, }
-\item[{{\bf Q\-A\-E\-S\-Encryption\-::\-Mode}}]{mode, }
-\item[{const Q\-Byte\-Array \&}]{raw\-Text, }
-\item[{const Q\-Byte\-Array \&}]{key, }
-\item[{const Q\-Byte\-Array \&}]{iv = {\ttfamily NULL}, }
-\item[{{\bf Q\-A\-E\-S\-Encryption\-::\-Padding}}]{padding = {\ttfamily {\bf Q\-A\-E\-S\-Encryption\-::\-I\-S\-O}}}
+\item[{{\bf Q\+A\+E\+S\+Encryption\+::\+Aes}}]{level, }
+\item[{{\bf Q\+A\+E\+S\+Encryption\+::\+Mode}}]{mode, }
+\item[{const Q\+Byte\+Array \&}]{raw\+Text, }
+\item[{const Q\+Byte\+Array \&}]{key, }
+\item[{const Q\+Byte\+Array \&}]{iv = {\ttfamily NULL}, }
+\item[{{\bf Q\+A\+E\+S\+Encryption\+::\+Padding}}]{padding = {\ttfamily {\bf Q\+A\+E\+S\+Encryption\+::\+I\+SO}}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_q_a_e_s_encryption_a43819eeb6a7cb29fbd3cb6ad640dcbdf}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_q_a_e_s_encryption_a43819eeb6a7cb29fbd3cb6ad640dcbdf}{}\label{class_q_a_e_s_encryption_a43819eeb6a7cb29fbd3cb6ad640dcbdf}
 
 
 Crypt Static encode function. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em level} & A\-E\-S level of encryption \\
+{\em level} & A\+ES level of encryption \\
 \hline
-{\em mode} & A\-E\-S mode \\
+{\em mode} & A\+ES mode \\
 \hline
-{\em raw\-Text} & Input data \\
+{\em raw\+Text} & Input data \\
 \hline
 {\em key} & Key for encrytion \\
 \hline
-{\em iv} & I\-V vector \\
+{\em iv} & IV vector \\
 \hline
 {\em padding} & Padding \\
 \hline
@@ -221,16 +220,16 @@ Crypt Static encode function.
 \begin{DoxyReturn}{Returns}
 Returns encrypted data 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See Also}
-\hyperlink{class_q_a_e_s_encryption_a0c56eddd6f03e93b1f7faad464044d65}{Q\-A\-E\-S\-Encryption\-::encode}, \hyperlink{class_q_a_e_s_encryption_af9baa154a06683049d941bd06ac698fd}{Q\-A\-E\-S\-Encryption\-::\-Decrypt} 
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_q_a_e_s_encryption_a0c56eddd6f03e93b1f7faad464044d65}{Q\+A\+E\+S\+Encryption\+::encode}, \hyperlink{class_q_a_e_s_encryption_af9baa154a06683049d941bd06ac698fd}{Q\+A\+E\+S\+Encryption\+::\+Decrypt} 
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{qaesencryption_8cpp_source_l00006}{6} of file \hyperlink{qaesencryption_8cpp_source}{qaesencryption.\-cpp}.
+Definition at line \hyperlink{qaesencryption_8cpp_source_l00006}{6} of file \hyperlink{qaesencryption_8cpp_source}{qaesencryption.\+cpp}.
 
 
 
-Here is the call graph for this function\-:
+Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -242,7 +241,7 @@ Here is the call graph for this function\-:
 
 
 
-Here is the caller graph for this function\-:
+Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -252,44 +251,44 @@ Here is the caller graph for this function\-:
 \end{figure}
 
 
-\hypertarget{class_q_a_e_s_encryption_a58f972f2b66c2454edd5112495463bba}{\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!decode@{decode}}
-\index{decode@{decode}!QAESEncryption@{Q\-A\-E\-S\-Encryption}}
-\subsubsection[{decode}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Byte\-Array Q\-A\-E\-S\-Encryption\-::decode (
+\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!decode@{decode}}
+\index{decode@{decode}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}
+\subsubsection[{\texorpdfstring{decode(const Q\+Byte\+Array \&raw\+Text, const Q\+Byte\+Array \&key, const Q\+Byte\+Array \&iv=\+N\+U\+L\+L)}{decode(const QByteArray &rawText, const QByteArray &key, const QByteArray &iv=NULL)}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Byte\+Array Q\+A\+E\+S\+Encryption\+::decode (
 \begin{DoxyParamCaption}
-\item[{const Q\-Byte\-Array \&}]{raw\-Text, }
-\item[{const Q\-Byte\-Array \&}]{key, }
-\item[{const Q\-Byte\-Array \&}]{iv = {\ttfamily NULL}}
+\item[{const Q\+Byte\+Array \&}]{raw\+Text, }
+\item[{const Q\+Byte\+Array \&}]{key, }
+\item[{const Q\+Byte\+Array \&}]{iv = {\ttfamily NULL}}
 \end{DoxyParamCaption}
-)}}\label{class_q_a_e_s_encryption_a58f972f2b66c2454edd5112495463bba}
+)}\hypertarget{class_q_a_e_s_encryption_a58f972f2b66c2454edd5112495463bba}{}\label{class_q_a_e_s_encryption_a58f972f2b66c2454edd5112495463bba}
 
 
-decode Decodes data with A\-E\-S 
+decode Decodes data with A\+ES 
 
 \begin{DoxyNote}{Note}
-Basically the non-\/static method of \hyperlink{class_q_a_e_s_encryption_af9baa154a06683049d941bd06ac698fd}{Q\-A\-E\-S\-Encryption\-::\-Decrypt}
+Basically the non-\/static method of \hyperlink{class_q_a_e_s_encryption_af9baa154a06683049d941bd06ac698fd}{Q\+A\+E\+S\+Encryption\+::\+Decrypt}
 \end{DoxyNote}
 
 \begin{DoxyParams}{Parameters}
-{\em raw\-Text} & Input data \\
+{\em raw\+Text} & Input data \\
 \hline
 {\em key} & Key \\
 \hline
-{\em iv} & I\-V vector \\
+{\em iv} & IV vector \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Returns decoded data 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See Also}
-\hyperlink{class_q_a_e_s_encryption_af9baa154a06683049d941bd06ac698fd}{Q\-A\-E\-S\-Encryption\-::\-Decrypt}, \hyperlink{class_q_a_e_s_encryption_a0c56eddd6f03e93b1f7faad464044d65}{Q\-A\-E\-S\-Encryption\-::encode} 
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_q_a_e_s_encryption_af9baa154a06683049d941bd06ac698fd}{Q\+A\+E\+S\+Encryption\+::\+Decrypt}, \hyperlink{class_q_a_e_s_encryption_a0c56eddd6f03e93b1f7faad464044d65}{Q\+A\+E\+S\+Encryption\+::encode} 
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{qaesencryption_8cpp_source_l00441}{441} of file \hyperlink{qaesencryption_8cpp_source}{qaesencryption.\-cpp}.
+Definition at line \hyperlink{qaesencryption_8cpp_source_l00441}{441} of file \hyperlink{qaesencryption_8cpp_source}{qaesencryption.\+cpp}.
 
 
 
-Here is the call graph for this function\-:
+Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -301,7 +300,7 @@ Here is the call graph for this function\-:
 
 
 
-Here is the caller graph for this function\-:
+Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -311,33 +310,33 @@ Here is the caller graph for this function\-:
 \end{figure}
 
 
-\hypertarget{class_q_a_e_s_encryption_af9baa154a06683049d941bd06ac698fd}{\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!Decrypt@{Decrypt}}
-\index{Decrypt@{Decrypt}!QAESEncryption@{Q\-A\-E\-S\-Encryption}}
-\subsubsection[{Decrypt}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Byte\-Array Q\-A\-E\-S\-Encryption\-::\-Decrypt (
+\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!Decrypt@{Decrypt}}
+\index{Decrypt@{Decrypt}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}
+\subsubsection[{\texorpdfstring{Decrypt(\+Q\+A\+E\+S\+Encryption\+::\+Aes level, Q\+A\+E\+S\+Encryption\+::\+Mode mode, const Q\+Byte\+Array \&raw\+Text, const Q\+Byte\+Array \&key, const Q\+Byte\+Array \&iv=\+N\+U\+L\+L, Q\+A\+E\+S\+Encryption\+::\+Padding padding=\+Q\+A\+E\+S\+Encryption\+::\+I\+S\+O)}{Decrypt(QAESEncryption::Aes level, QAESEncryption::Mode mode, const QByteArray &rawText, const QByteArray &key, const QByteArray &iv=NULL, QAESEncryption::Padding padding=QAESEncryption::ISO)}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Byte\+Array Q\+A\+E\+S\+Encryption\+::\+Decrypt (
 \begin{DoxyParamCaption}
-\item[{{\bf Q\-A\-E\-S\-Encryption\-::\-Aes}}]{level, }
-\item[{{\bf Q\-A\-E\-S\-Encryption\-::\-Mode}}]{mode, }
-\item[{const Q\-Byte\-Array \&}]{raw\-Text, }
-\item[{const Q\-Byte\-Array \&}]{key, }
-\item[{const Q\-Byte\-Array \&}]{iv = {\ttfamily NULL}, }
-\item[{{\bf Q\-A\-E\-S\-Encryption\-::\-Padding}}]{padding = {\ttfamily {\bf Q\-A\-E\-S\-Encryption\-::\-I\-S\-O}}}
+\item[{{\bf Q\+A\+E\+S\+Encryption\+::\+Aes}}]{level, }
+\item[{{\bf Q\+A\+E\+S\+Encryption\+::\+Mode}}]{mode, }
+\item[{const Q\+Byte\+Array \&}]{raw\+Text, }
+\item[{const Q\+Byte\+Array \&}]{key, }
+\item[{const Q\+Byte\+Array \&}]{iv = {\ttfamily NULL}, }
+\item[{{\bf Q\+A\+E\+S\+Encryption\+::\+Padding}}]{padding = {\ttfamily {\bf Q\+A\+E\+S\+Encryption\+::\+I\+SO}}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_q_a_e_s_encryption_af9baa154a06683049d941bd06ac698fd}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_q_a_e_s_encryption_af9baa154a06683049d941bd06ac698fd}{}\label{class_q_a_e_s_encryption_af9baa154a06683049d941bd06ac698fd}
 
 
 Decrypt Static decode function. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em level} & A\-E\-S level of encryption \\
+{\em level} & A\+ES level of encryption \\
 \hline
-{\em mode} & A\-E\-S mode \\
+{\em mode} & A\+ES mode \\
 \hline
-{\em raw\-Text} & Encrypted data \\
+{\em raw\+Text} & Encrypted data \\
 \hline
 {\em key} & Key for encrytion \\
 \hline
-{\em iv} & I\-V vector \\
+{\em iv} & IV vector \\
 \hline
 {\em padding} & Padding \\
 \hline
@@ -345,16 +344,16 @@ Decrypt Static decode function.
 \begin{DoxyReturn}{Returns}
 Returns Decrypted data 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See Also}
-\hyperlink{class_q_a_e_s_encryption_a58f972f2b66c2454edd5112495463bba}{Q\-A\-E\-S\-Encryption\-::decode}, \hyperlink{class_q_a_e_s_encryption_a43819eeb6a7cb29fbd3cb6ad640dcbdf}{Q\-A\-E\-S\-Encryption\-::\-Crypt} 
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_q_a_e_s_encryption_a58f972f2b66c2454edd5112495463bba}{Q\+A\+E\+S\+Encryption\+::decode}, \hyperlink{class_q_a_e_s_encryption_a43819eeb6a7cb29fbd3cb6ad640dcbdf}{Q\+A\+E\+S\+Encryption\+::\+Crypt} 
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{qaesencryption_8cpp_source_l00012}{12} of file \hyperlink{qaesencryption_8cpp_source}{qaesencryption.\-cpp}.
+Definition at line \hyperlink{qaesencryption_8cpp_source_l00012}{12} of file \hyperlink{qaesencryption_8cpp_source}{qaesencryption.\+cpp}.
 
 
 
-Here is the call graph for this function\-:
+Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -364,44 +363,44 @@ Here is the call graph for this function\-:
 \end{figure}
 
 
-\hypertarget{class_q_a_e_s_encryption_a0c56eddd6f03e93b1f7faad464044d65}{\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!encode@{encode}}
-\index{encode@{encode}!QAESEncryption@{Q\-A\-E\-S\-Encryption}}
-\subsubsection[{encode}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Byte\-Array Q\-A\-E\-S\-Encryption\-::encode (
+\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!encode@{encode}}
+\index{encode@{encode}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}
+\subsubsection[{\texorpdfstring{encode(const Q\+Byte\+Array \&raw\+Text, const Q\+Byte\+Array \&key, const Q\+Byte\+Array \&iv=\+N\+U\+L\+L)}{encode(const QByteArray &rawText, const QByteArray &key, const QByteArray &iv=NULL)}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Byte\+Array Q\+A\+E\+S\+Encryption\+::encode (
 \begin{DoxyParamCaption}
-\item[{const Q\-Byte\-Array \&}]{raw\-Text, }
-\item[{const Q\-Byte\-Array \&}]{key, }
-\item[{const Q\-Byte\-Array \&}]{iv = {\ttfamily NULL}}
+\item[{const Q\+Byte\+Array \&}]{raw\+Text, }
+\item[{const Q\+Byte\+Array \&}]{key, }
+\item[{const Q\+Byte\+Array \&}]{iv = {\ttfamily NULL}}
 \end{DoxyParamCaption}
-)}}\label{class_q_a_e_s_encryption_a0c56eddd6f03e93b1f7faad464044d65}
+)}\hypertarget{class_q_a_e_s_encryption_a0c56eddd6f03e93b1f7faad464044d65}{}\label{class_q_a_e_s_encryption_a0c56eddd6f03e93b1f7faad464044d65}
 
 
-encode Encodes data with A\-E\-S 
+encode Encodes data with A\+ES 
 
 \begin{DoxyNote}{Note}
-Basically the non-\/static method of \hyperlink{class_q_a_e_s_encryption_a43819eeb6a7cb29fbd3cb6ad640dcbdf}{Q\-A\-E\-S\-Encryption\-::\-Crypt}
+Basically the non-\/static method of \hyperlink{class_q_a_e_s_encryption_a43819eeb6a7cb29fbd3cb6ad640dcbdf}{Q\+A\+E\+S\+Encryption\+::\+Crypt}
 \end{DoxyNote}
 
 \begin{DoxyParams}{Parameters}
-{\em raw\-Text} & Input data \\
+{\em raw\+Text} & Input data \\
 \hline
 {\em key} & Key \\
 \hline
-{\em iv} & I\-V vector \\
+{\em iv} & IV vector \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Returns encoded data 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See Also}
-\hyperlink{class_q_a_e_s_encryption_a43819eeb6a7cb29fbd3cb6ad640dcbdf}{Q\-A\-E\-S\-Encryption\-::\-Crypt}, \hyperlink{class_q_a_e_s_encryption_a58f972f2b66c2454edd5112495463bba}{Q\-A\-E\-S\-Encryption\-::decode} 
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_q_a_e_s_encryption_a43819eeb6a7cb29fbd3cb6ad640dcbdf}{Q\+A\+E\+S\+Encryption\+::\+Crypt}, \hyperlink{class_q_a_e_s_encryption_a58f972f2b66c2454edd5112495463bba}{Q\+A\+E\+S\+Encryption\+::decode} 
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{qaesencryption_8cpp_source_l00391}{391} of file \hyperlink{qaesencryption_8cpp_source}{qaesencryption.\-cpp}.
+Definition at line \hyperlink{qaesencryption_8cpp_source_l00391}{391} of file \hyperlink{qaesencryption_8cpp_source}{qaesencryption.\+cpp}.
 
 
 
-Here is the call graph for this function\-:
+Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -411,24 +410,24 @@ Here is the call graph for this function\-:
 \end{figure}
 
 
-\hypertarget{class_q_a_e_s_encryption_a2112456e057e6dd886694348fbf202cd}{\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!Expand\-Key@{Expand\-Key}}
-\index{Expand\-Key@{Expand\-Key}!QAESEncryption@{Q\-A\-E\-S\-Encryption}}
-\subsubsection[{Expand\-Key}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Byte\-Array Q\-A\-E\-S\-Encryption\-::\-Expand\-Key (
+\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!Expand\+Key@{Expand\+Key}}
+\index{Expand\+Key@{Expand\+Key}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}
+\subsubsection[{\texorpdfstring{Expand\+Key(\+Q\+A\+E\+S\+Encryption\+::\+Aes level, Q\+A\+E\+S\+Encryption\+::\+Mode mode, const Q\+Byte\+Array \&key)}{ExpandKey(QAESEncryption::Aes level, QAESEncryption::Mode mode, const QByteArray &key)}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Byte\+Array Q\+A\+E\+S\+Encryption\+::\+Expand\+Key (
 \begin{DoxyParamCaption}
-\item[{{\bf Q\-A\-E\-S\-Encryption\-::\-Aes}}]{level, }
-\item[{{\bf Q\-A\-E\-S\-Encryption\-::\-Mode}}]{mode, }
-\item[{const Q\-Byte\-Array \&}]{key}
+\item[{{\bf Q\+A\+E\+S\+Encryption\+::\+Aes}}]{level, }
+\item[{{\bf Q\+A\+E\+S\+Encryption\+::\+Mode}}]{mode, }
+\item[{const Q\+Byte\+Array \&}]{key}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_q_a_e_s_encryption_a2112456e057e6dd886694348fbf202cd}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_q_a_e_s_encryption_a2112456e057e6dd886694348fbf202cd}{}\label{class_q_a_e_s_encryption_a2112456e057e6dd886694348fbf202cd}
 
 
-Expand\-Key Expands the key. 
+Expand\+Key Expands the key. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em level} & A\-E\-S level \\
+{\em level} & A\+ES level \\
 \hline
-{\em mode} & A\-E\-S Mode \\
+{\em mode} & A\+ES Mode \\
 \hline
 {\em key} & key \\
 \hline
@@ -436,16 +435,16 @@ Expand\-Key Expands the key.
 \begin{DoxyReturn}{Returns}
 Returns expanded key (I guess) 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See Also}
-\hyperlink{class_q_a_e_s_encryption_a5bfbb972f84a8376fceed648553c0912}{Q\-A\-E\-S\-Encryption\-::expand\-Key} 
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_q_a_e_s_encryption_a5bfbb972f84a8376fceed648553c0912}{Q\+A\+E\+S\+Encryption\+::expand\+Key} 
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{qaesencryption_8cpp_source_l00018}{18} of file \hyperlink{qaesencryption_8cpp_source}{qaesencryption.\-cpp}.
+Definition at line \hyperlink{qaesencryption_8cpp_source_l00018}{18} of file \hyperlink{qaesencryption_8cpp_source}{qaesencryption.\+cpp}.
 
 
 
-Here is the call graph for this function\-:
+Here is the call graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -455,19 +454,19 @@ Here is the call graph for this function\-:
 \end{figure}
 
 
-\hypertarget{class_q_a_e_s_encryption_a5bfbb972f84a8376fceed648553c0912}{\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!expand\-Key@{expand\-Key}}
-\index{expand\-Key@{expand\-Key}!QAESEncryption@{Q\-A\-E\-S\-Encryption}}
-\subsubsection[{expand\-Key}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Byte\-Array Q\-A\-E\-S\-Encryption\-::expand\-Key (
+\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!expand\+Key@{expand\+Key}}
+\index{expand\+Key@{expand\+Key}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}
+\subsubsection[{\texorpdfstring{expand\+Key(const Q\+Byte\+Array \&key)}{expandKey(const QByteArray &key)}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Byte\+Array Q\+A\+E\+S\+Encryption\+::expand\+Key (
 \begin{DoxyParamCaption}
-\item[{const Q\-Byte\-Array \&}]{key}
+\item[{const Q\+Byte\+Array \&}]{key}
 \end{DoxyParamCaption}
-)}}\label{class_q_a_e_s_encryption_a5bfbb972f84a8376fceed648553c0912}
+)}\hypertarget{class_q_a_e_s_encryption_a5bfbb972f84a8376fceed648553c0912}{}\label{class_q_a_e_s_encryption_a5bfbb972f84a8376fceed648553c0912}
 
 
-Expand\-Key Expands the key. 
+Expand\+Key Expands the key. 
 
 \begin{DoxyNote}{Note}
-Basically the non-\/static method of \hyperlink{class_q_a_e_s_encryption_a2112456e057e6dd886694348fbf202cd}{Q\-A\-E\-S\-Encryption\-::\-Expand\-Key}
+Basically the non-\/static method of \hyperlink{class_q_a_e_s_encryption_a2112456e057e6dd886694348fbf202cd}{Q\+A\+E\+S\+Encryption\+::\+Expand\+Key}
 \end{DoxyNote}
 
 \begin{DoxyParams}{Parameters}
@@ -477,16 +476,28 @@ Basically the non-\/static method of \hyperlink{class_q_a_e_s_encryption_a211245
 \begin{DoxyReturn}{Returns}
 Returns expanded key (I guess) 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See Also}
-\hyperlink{class_q_a_e_s_encryption_a2112456e057e6dd886694348fbf202cd}{Q\-A\-E\-S\-Encryption\-::\-Expand\-Key} 
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_q_a_e_s_encryption_a2112456e057e6dd886694348fbf202cd}{Q\+A\+E\+S\+Encryption\+::\+Expand\+Key} 
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{qaesencryption_8cpp_source_l00132}{132} of file \hyperlink{qaesencryption_8cpp_source}{qaesencryption.\-cpp}.
+Definition at line \hyperlink{qaesencryption_8cpp_source_l00132}{132} of file \hyperlink{qaesencryption_8cpp_source}{qaesencryption.\+cpp}.
 
 
 
-Here is the caller graph for this function\-:
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_q_a_e_s_encryption_a5bfbb972f84a8376fceed648553c0912_cgraph}
+\end{center}
+\end{figure}
+
+
+
+
+Here is the caller graph for this function\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -496,21 +507,21 @@ Here is the caller graph for this function\-:
 \end{figure}
 
 
-\hypertarget{class_q_a_e_s_encryption_abb2887bf5623a74053dd19627f3d3055}{\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!Remove\-Padding@{Remove\-Padding}}
-\index{Remove\-Padding@{Remove\-Padding}!QAESEncryption@{Q\-A\-E\-S\-Encryption}}
-\subsubsection[{Remove\-Padding}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Byte\-Array Q\-A\-E\-S\-Encryption\-::\-Remove\-Padding (
+\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!Remove\+Padding@{Remove\+Padding}}
+\index{Remove\+Padding@{Remove\+Padding}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}
+\subsubsection[{\texorpdfstring{Remove\+Padding(const Q\+Byte\+Array \&raw\+Text, Q\+A\+E\+S\+Encryption\+::\+Padding padding)}{RemovePadding(const QByteArray &rawText, QAESEncryption::Padding padding)}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Byte\+Array Q\+A\+E\+S\+Encryption\+::\+Remove\+Padding (
 \begin{DoxyParamCaption}
-\item[{const Q\-Byte\-Array \&}]{raw\-Text, }
-\item[{{\bf Q\-A\-E\-S\-Encryption\-::\-Padding}}]{padding}
+\item[{const Q\+Byte\+Array \&}]{raw\+Text, }
+\item[{{\bf Q\+A\+E\+S\+Encryption\+::\+Padding}}]{padding}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_q_a_e_s_encryption_abb2887bf5623a74053dd19627f3d3055}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_q_a_e_s_encryption_abb2887bf5623a74053dd19627f3d3055}{}\label{class_q_a_e_s_encryption_abb2887bf5623a74053dd19627f3d3055}
 
 
-Remove\-Padding Removes padding. 
+Remove\+Padding Removes padding. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em raw\-Text} & Input data \\
+{\em raw\+Text} & Input data \\
 \hline
 {\em padding} & Padding \\
 \hline
@@ -518,45 +529,45 @@ Remove\-Padding Removes padding.
 \begin{DoxyReturn}{Returns}
 Returns data with removed padding (I guess) 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See Also}
-\hyperlink{class_q_a_e_s_encryption_a4dc7e77485e5a3e63eebc99b9386c17b}{Q\-A\-E\-S\-Encryption\-::remove\-Padding} 
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_q_a_e_s_encryption_a4dc7e77485e5a3e63eebc99b9386c17b}{Q\+A\+E\+S\+Encryption\+::remove\+Padding} 
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{qaesencryption_8cpp_source_l00023}{23} of file \hyperlink{qaesencryption_8cpp_source}{qaesencryption.\-cpp}.
+Definition at line \hyperlink{qaesencryption_8cpp_source_l00023}{23} of file \hyperlink{qaesencryption_8cpp_source}{qaesencryption.\+cpp}.
 
-\hypertarget{class_q_a_e_s_encryption_a4dc7e77485e5a3e63eebc99b9386c17b}{\index{Q\-A\-E\-S\-Encryption@{Q\-A\-E\-S\-Encryption}!remove\-Padding@{remove\-Padding}}
-\index{remove\-Padding@{remove\-Padding}!QAESEncryption@{Q\-A\-E\-S\-Encryption}}
-\subsubsection[{remove\-Padding}]{\setlength{\rightskip}{0pt plus 5cm}Q\-Byte\-Array Q\-A\-E\-S\-Encryption\-::remove\-Padding (
+\index{Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}!remove\+Padding@{remove\+Padding}}
+\index{remove\+Padding@{remove\+Padding}!Q\+A\+E\+S\+Encryption@{Q\+A\+E\+S\+Encryption}}
+\subsubsection[{\texorpdfstring{remove\+Padding(const Q\+Byte\+Array \&raw\+Text)}{removePadding(const QByteArray &rawText)}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Byte\+Array Q\+A\+E\+S\+Encryption\+::remove\+Padding (
 \begin{DoxyParamCaption}
-\item[{const Q\-Byte\-Array \&}]{raw\-Text}
+\item[{const Q\+Byte\+Array \&}]{raw\+Text}
 \end{DoxyParamCaption}
-)}}\label{class_q_a_e_s_encryption_a4dc7e77485e5a3e63eebc99b9386c17b}
+)}\hypertarget{class_q_a_e_s_encryption_a4dc7e77485e5a3e63eebc99b9386c17b}{}\label{class_q_a_e_s_encryption_a4dc7e77485e5a3e63eebc99b9386c17b}
 
 
-Remove\-Padding Removes padding. 
+Remove\+Padding Removes padding. 
 
 \begin{DoxyNote}{Note}
-Basically the non-\/static method of \hyperlink{class_q_a_e_s_encryption_abb2887bf5623a74053dd19627f3d3055}{Q\-A\-E\-S\-Encryption\-::\-Remove\-Padding}
+Basically the non-\/static method of \hyperlink{class_q_a_e_s_encryption_abb2887bf5623a74053dd19627f3d3055}{Q\+A\+E\+S\+Encryption\+::\+Remove\+Padding}
 \end{DoxyNote}
 
 \begin{DoxyParams}{Parameters}
-{\em raw\-Text} & Input data \\
+{\em raw\+Text} & Input data \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
 Returns data with removed padding (I guess) 
 \end{DoxyReturn}
-\begin{DoxySeeAlso}{See Also}
-\hyperlink{class_q_a_e_s_encryption_abb2887bf5623a74053dd19627f3d3055}{Q\-A\-E\-S\-Encryption\-::\-Remove\-Padding} 
+\begin{DoxySeeAlso}{See also}
+\hyperlink{class_q_a_e_s_encryption_abb2887bf5623a74053dd19627f3d3055}{Q\+A\+E\+S\+Encryption\+::\+Remove\+Padding} 
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{qaesencryption_8cpp_source_l00490}{490} of file \hyperlink{qaesencryption_8cpp_source}{qaesencryption.\-cpp}.
+Definition at line \hyperlink{qaesencryption_8cpp_source_l00490}{490} of file \hyperlink{qaesencryption_8cpp_source}{qaesencryption.\+cpp}.
 
 
 
-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-\hyperlink{qaesencryption_8h}{qaesencryption.\-h}\item 
-\hyperlink{qaesencryption_8cpp}{qaesencryption.\-cpp}\end{DoxyCompactItemize}
+\hyperlink{qaesencryption_8h}{qaesencryption.\+h}\item 
+\hyperlink{qaesencryption_8cpp}{qaesencryption.\+cpp}\end{DoxyCompactItemize}

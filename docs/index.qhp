@@ -15,169 +15,23 @@
         <section title="JPHS use" ref="index.html#jphs-use" />
         <section title="License" ref="index.html#license" />
         <section title="Contact us" ref="index.html#contact" />
-      </section>
-      <section title="Namespaces">
-        <section title="Namespace List" ref="namespaces.html">
-          <section title="ErrorsDictSetup" ref="namespace_errors_dict_setup.html" />
-          <section title="Ui" ref="namespace_ui.html" />
-        </section>
-        <section title="Namespace Members" ref="namespacemembers.html">
-          <section title="All" ref="namespacemembers.html" />
-          <section title="Variables" ref="namespacemembers_vars.html" />
-        </section>
-      </section>
-      <section title="Classes">
-        <section title="Class List" ref="annotated.html">
-          <section title="ErrorsDictSetup" ref="namespace_errors_dict_setup.html" />
-          <section title="Ui" ref="namespace_ui.html" />
-          <section title="AboutPC" ref="class_about_p_c.html">
-            <section title="AboutPC" ref="class_about_p_c.html#a89341c4427d97da60acf15dc929ad8a6" />
-            <section title="~AboutPC" ref="class_about_p_c.html#a3cc0c4c81abc640d946003b078a47dd4" />
-            <section title="setVersion" ref="class_about_p_c.html#aa3815d4826d0c8d87122449537a0a4d5" />
+        <section title="Namespaces">
+          <section title="Namespace List" ref="namespaces.html">
+            <section title="ErrorsDictSetup" ref="namespace_errors_dict_setup.html" />
+            <section title="Ui" ref="namespace_ui.html" />
           </section>
-          <section title="ControllerPC" ref="class_controller_p_c.html">
-            <section title="ControllerPC" ref="class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" />
-            <section title="abortCircuit" ref="class_controller_p_c.html#a8814989f7be1214e06b2e720889066b0" />
-            <section title="runTests" ref="class_controller_p_c.html#aaa59fc90e1ef731eee4560ec87e43707" />
-            <section title="setJPHSDir" ref="class_controller_p_c.html#ac00d29685a7e5b780c01eb438e10f96d" />
-            <section title="version" ref="class_controller_p_c.html#a9eb43c34237d66751a6411e55cf5f55e" />
-            <section title="versionString" ref="class_controller_p_c.html#a0e63cca37d6ce2e660f3380400c2c5f3" />
-          </section>
-          <section title="EncryptDialog" ref="class_encrypt_dialog.html">
-            <section title="EncryptDialog" ref="class_encrypt_dialog.html#ab57e8b3a0d00c977e81f3b356657524e" />
-            <section title="~EncryptDialog" ref="class_encrypt_dialog.html#a466e283080f87ee50f172052e43e38b6" />
-            <section title="on_bitsSlider_valueChanged" ref="class_encrypt_dialog.html#ae5975a58b8ed8f7e423e5d5cc5f58dce" />
-            <section title="on_buttonBox_accepted" ref="class_encrypt_dialog.html#a9a998acd37db458eede31f4a9cb16b78" />
-            <section title="on_buttonBox_rejected" ref="class_encrypt_dialog.html#a43deb5fd2be501f4d03582a8ed49e9c2" />
-            <section title="on_fileButton_clicked" ref="class_encrypt_dialog.html#ac9817d3f11f44f4bb8d97a228fbdf8a5" />
-            <section title="zip" ref="class_encrypt_dialog.html#a2bff820a3df4ddc36ecb07ed74b7138a" />
-            <section title="bitsUsed" ref="class_encrypt_dialog.html#abf638fea37fbdbaba215954e2e239860" />
-            <section title="compr_data" ref="class_encrypt_dialog.html#a3e8998aa39696cbd1242f6420ef18143" />
-            <section title="data" ref="class_encrypt_dialog.html#acf3a8bbce90d99ef17fec093c35b1008" />
-            <section title="goodPercentage" ref="class_encrypt_dialog.html#a0c821b893cfddd7a6c07bbd270ba49e9" />
-            <section title="image" ref="class_encrypt_dialog.html#a739a0df1d28d06b28a3fd16e2bc16c73" />
-            <section title="inputFileName" ref="class_encrypt_dialog.html#a859b1bc2f032a247632b879bf8663d0b" />
-            <section title="key" ref="class_encrypt_dialog.html#a1afdef3c665fb0d0fae06d1df8e84951" />
-            <section title="size" ref="class_encrypt_dialog.html#a7fff26f838ab50f807744cd2c4bed033" />
-            <section title="success" ref="class_encrypt_dialog.html#ada4900bcd40894d9c098c65aa4066ac9" />
-            <section title="val" ref="class_encrypt_dialog.html#a3c9da51b5e9d98d702bcc4ed15405fd5" />
-          </section>
-          <section title="ModelPC" ref="class_model_p_c.html">
-            <section title="CryptMode" ref="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceb">
-              <section title="NotDefined" ref="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba287198790ac9799acd03c99d63a6faea" />
-              <section title="v1_3" ref="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba7612e38de7178170655a56ddcf96e12c" />
-              <section title="v1_4" ref="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba43138df6b33a6b2bf608768907f95abc" />
-              <section title="jphs_mode" ref="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba90ca32d3ccbb6be224cdfc33f7096eea" />
-            </section>
-            <section title="ModelPC" ref="class_model_p_c.html#ae12ebe65ec973c02a0de4850a7c1e31c" />
-            <section title="alert" ref="class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" />
-            <section title="alertView" ref="class_model_p_c.html#af0217a7ca5671e26090dc50a5dccdaf5" />
-            <section title="circuit" ref="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" />
-            <section title="decrypt" ref="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" />
-            <section title="decryptv1_3" ref="class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" />
-            <section title="decryptv1_4" ref="class_model_p_c.html#a7a1f7d491e1bde16936190b9e90896b0" />
-            <section title="encrypt" ref="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" />
-            <section title="encryptv1_4" ref="class_model_p_c.html#a4daefc3fb87a1f19172b9b20c987eb12" />
-            <section title="fail" ref="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" />
-            <section title="inject" ref="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" />
-            <section title="jphs" ref="class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" />
-            <section title="proccessPixelsv1_4" ref="class_model_p_c.html#a5cdb4d1d61ff62ee9d45b496a7dbf1fb" />
-            <section title="processPixel" ref="class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" />
-            <section title="saveData" ref="class_model_p_c.html#a0855107fb0ccc247cd9e893fae9bb08a" />
-            <section title="saveImage" ref="class_model_p_c.html#a41f5e2e8022679046e4d3fa1109025fa" />
-            <section title="setProgress" ref="class_model_p_c.html#afdcd80f0ed5062e145a71f09b0897547" />
-            <section title="unzip" ref="class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0" />
-            <section title="zip" ref="class_model_p_c.html#afebbbfa4b07deba4f68fc6dfb50f353f" />
-            <section title="defaultJPHSDir" ref="class_model_p_c.html#abd038306f14f22fb885a1697c96d6335" />
-            <section title="error" ref="class_model_p_c.html#a4e5a9c0ca1f06fe5bc478b6bf248c37c" />
-            <section title="success" ref="class_model_p_c.html#a945ffbbc44a832b953c191debd448f4c" />
-            <section title="version" ref="class_model_p_c.html#a5af48ab89e19be42a94c34ba00249401" />
-            <section title="versionString" ref="class_model_p_c.html#a5f426725ccf7eefd3c77ea8c720264c9" />
-          </section>
-          <section title="QAESEncryption" ref="class_q_a_e_s_encryption.html">
-            <section title="Aes" ref="class_q_a_e_s_encryption.html#abe48208f4f6c7d68e6a10b49b9d0b7bd">
-              <section title="AES_128" ref="class_q_a_e_s_encryption.html#abe48208f4f6c7d68e6a10b49b9d0b7bda0fa01cdf69e5537499ecfc6f96d6570a" />
-              <section title="AES_192" ref="class_q_a_e_s_encryption.html#abe48208f4f6c7d68e6a10b49b9d0b7bda7bd082b240582de6d5f4b8ea604e646b" />
-              <section title="AES_256" ref="class_q_a_e_s_encryption.html#abe48208f4f6c7d68e6a10b49b9d0b7bdacde97774ab1d4c609e04b0dd13a1e1f7" />
-            </section>
-            <section title="Mode" ref="class_q_a_e_s_encryption.html#ad3e031c49a3d56566379d75b40b7b255">
-              <section title="ECB" ref="class_q_a_e_s_encryption.html#ad3e031c49a3d56566379d75b40b7b255a4ca7f51778e2adf1f464164a0ba8e75e" />
-              <section title="CBC" ref="class_q_a_e_s_encryption.html#ad3e031c49a3d56566379d75b40b7b255a559bffc55d3599d0a172cc85aed98966" />
-              <section title="CFB" ref="class_q_a_e_s_encryption.html#ad3e031c49a3d56566379d75b40b7b255ae5e2e019df35c7d172fcd7f0ebec5e8e" />
-              <section title="OFB" ref="class_q_a_e_s_encryption.html#ad3e031c49a3d56566379d75b40b7b255a27e2f82decd94080893d61db4a8adcb3" />
-            </section>
-            <section title="Padding" ref="class_q_a_e_s_encryption.html#ab0a65cdea4eac21ef32530010d1b0247">
-              <section title="ZERO" ref="class_q_a_e_s_encryption.html#ab0a65cdea4eac21ef32530010d1b0247a0842d5191caeff6f871908fa7b9e8e7a" />
-              <section title="PKCS7" ref="class_q_a_e_s_encryption.html#ab0a65cdea4eac21ef32530010d1b0247a74a898410a12cbc5391b47daa04cbd69" />
-              <section title="ISO" ref="class_q_a_e_s_encryption.html#ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d" />
-            </section>
-            <section title="QAESEncryption" ref="class_q_a_e_s_encryption.html#aeac0ee8532e69e5d30b023fe38c30b3b" />
-            <section title="decode" ref="class_q_a_e_s_encryption.html#a58f972f2b66c2454edd5112495463bba" />
-            <section title="encode" ref="class_q_a_e_s_encryption.html#a0c56eddd6f03e93b1f7faad464044d65" />
-            <section title="expandKey" ref="class_q_a_e_s_encryption.html#a5bfbb972f84a8376fceed648553c0912" />
-            <section title="removePadding" ref="class_q_a_e_s_encryption.html#a4dc7e77485e5a3e63eebc99b9386c17b" />
-          </section>
-          <section title="ViewPC" ref="class_view_p_c.html">
-            <section title="ViewPC" ref="class_view_p_c.html#a33c96c61f61042319c66c19059836b7f" />
-            <section title="~ViewPC" ref="class_view_p_c.html#a91c51f5c1e6ed5ab12b410339f469b0f" />
-            <section title="abortCircuit" ref="class_view_p_c.html#ad7ba2fcf1d17862de15e32432823f7b0" />
-            <section title="abortModel" ref="class_view_p_c.html#aa652102ce6b5757b8eef830409c8cabf" />
-            <section title="alert" ref="class_view_p_c.html#a7c467169467789561078abc9d4fe57bd" />
-            <section title="decrypt" ref="class_view_p_c.html#a365df051360d557c7221474ad856e0af" />
-            <section title="encrypt" ref="class_view_p_c.html#a9d179ff85ed8b1ca0ff7fa495965b52d" />
-            <section title="inject" ref="class_view_p_c.html#a652c98014c2df32178d43a5a9612dd99" />
-            <section title="on_actionAbout_triggered" ref="class_view_p_c.html#a09a46da4d492eb3dde88f35dc58c997b" />
-            <section title="on_actionHelp_triggered" ref="class_view_p_c.html#a0d252ff4829260c6c76769fbd24b7cd7" />
-            <section title="on_fileButton_clicked" ref="class_view_p_c.html#a3b9b7a7be9702d8b160f257f1c74a776" />
-            <section title="on_startButton_clicked" ref="class_view_p_c.html#a456d75b7c5d3a089302a576e7359f1f4" />
-            <section title="requestKey" ref="class_view_p_c.html#a559c95675ec98b15451f3bca47033d9c" />
-            <section title="runTests" ref="class_view_p_c.html#a96a6c95728bf20c64d2a8fe978495395" />
-            <section title="saveData" ref="class_view_p_c.html#aaff156103970be7c777beedaf0020604" />
-            <section title="saveImage" ref="class_view_p_c.html#a7901ce10ffaaf2387bef1db7feea342d" />
-            <section title="setEncryptMode" ref="class_view_p_c.html#a5b48951efefdc0e3039c9a4bf185320b" />
-            <section title="setJPHSDir" ref="class_view_p_c.html#ae81085836c0c01bc9556a5b27eb8d19c" />
-            <section title="setProgress" ref="class_view_p_c.html#a9c32a1fdb6ead84e5ada8fba8860c7ed" />
-            <section title="setVersion" ref="class_view_p_c.html#ac05220df875b7c4f24405a5742476ebf" />
-            <section title="dialog" ref="class_view_p_c.html#a31abbb470fe329b44e6ffee202b903ca" />
-            <section title="errorsDict" ref="class_view_p_c.html#a26f90436aca32e5bad46f5e69a7e7e09" />
-            <section title="progressDialogClosed" ref="class_view_p_c.html#add8c82aa2b0b934212aa5bde9277ab36" />
+          <section title="Namespace Members" ref="namespacemembers.html">
+            <section title="All" ref="namespacemembers.html" />
+            <section title="Variables" ref="namespacemembers_vars.html" />
           </section>
         </section>
-        <section title="Class Index" ref="classes.html" />
-        <section title="Class Hierarchy" ref="hierarchy.html">
-          <section title="QDialog">
-            <section title="AboutPC" ref="class_about_p_c.html" />
-            <section title="EncryptDialog" ref="class_encrypt_dialog.html" />
-          </section>
-          <section title="QMainWindow">
-            <section title="ViewPC" ref="class_view_p_c.html" />
-          </section>
-          <section title="QObject">
-            <section title="ControllerPC" ref="class_controller_p_c.html" />
-            <section title="ModelPC" ref="class_model_p_c.html" />
-            <section title="QAESEncryption" ref="class_q_a_e_s_encryption.html" />
-          </section>
-        </section>
-        <section title="Class Members" ref="functions.html">
-          <section title="All" ref="functions.html" />
-          <section title="Functions" ref="functions_func.html" />
-          <section title="Variables" ref="functions_vars.html" />
-          <section title="Enumerations" ref="functions_enum.html" />
-          <section title="Enumerator" ref="functions_eval.html" />
-        </section>
-      </section>
-      <section title="Files">
-        <section title="File List" ref="files.html">
-          <section title="aboutpc.cpp" ref="aboutpc_8cpp.html" />
-          <section title="aboutpc.h" ref="aboutpc_8h.html">
+        <section title="Classes" ref="annotated.html">
+          <section title="Class List" ref="annotated.html">
             <section title="AboutPC" ref="class_about_p_c.html">
               <section title="AboutPC" ref="class_about_p_c.html#a89341c4427d97da60acf15dc929ad8a6" />
               <section title="~AboutPC" ref="class_about_p_c.html#a3cc0c4c81abc640d946003b078a47dd4" />
               <section title="setVersion" ref="class_about_p_c.html#aa3815d4826d0c8d87122449537a0a4d5" />
             </section>
-          </section>
-          <section title="controllerpc.cpp" ref="controllerpc_8cpp.html" />
-          <section title="controllerpc.h" ref="controllerpc_8h.html">
             <section title="ControllerPC" ref="class_controller_p_c.html">
               <section title="ControllerPC" ref="class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" />
               <section title="abortCircuit" ref="class_controller_p_c.html#a8814989f7be1214e06b2e720889066b0" />
@@ -186,9 +40,6 @@
               <section title="version" ref="class_controller_p_c.html#a9eb43c34237d66751a6411e55cf5f55e" />
               <section title="versionString" ref="class_controller_p_c.html#a0e63cca37d6ce2e660f3380400c2c5f3" />
             </section>
-          </section>
-          <section title="encryptdialog.cpp" ref="encryptdialog_8cpp.html" />
-          <section title="encryptdialog.h" ref="encryptdialog_8h.html">
             <section title="EncryptDialog" ref="class_encrypt_dialog.html">
               <section title="EncryptDialog" ref="class_encrypt_dialog.html#ab57e8b3a0d00c977e81f3b356657524e" />
               <section title="~EncryptDialog" ref="class_encrypt_dialog.html#a466e283080f87ee50f172052e43e38b6" />
@@ -208,19 +59,6 @@
               <section title="success" ref="class_encrypt_dialog.html#ada4900bcd40894d9c098c65aa4066ac9" />
               <section title="val" ref="class_encrypt_dialog.html#a3c9da51b5e9d98d702bcc4ed15405fd5" />
             </section>
-          </section>
-          <section title="ErrorsDict.json" ref="_errors_dict_8json.html" />
-          <section title="ErrorsDictSetup.py" ref="_errors_dict_setup_8py.html">
-            <section title="data" ref="_errors_dict_setup_8py.html#adf4c30d205d29df7343e26f7c62b0685" />
-            <section title="filename" ref="_errors_dict_setup_8py.html#a0c97c48fca0fdec3e730b9df1dbab9c7" />
-            <section title="input_data" ref="_errors_dict_setup_8py.html#a27081bed64a1fae4487e33cd53862a6f" />
-            <section title="raw" ref="_errors_dict_setup_8py.html#ad08a9cc68898a62eb6523550f54917cf" />
-          </section>
-          <section title="main.cpp" ref="main_8cpp.html">
-            <section title="main" ref="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" />
-          </section>
-          <section title="modelpc.cpp" ref="modelpc_8cpp.html" />
-          <section title="modelpc.h" ref="modelpc_8h.html">
             <section title="ModelPC" ref="class_model_p_c.html">
               <section title="CryptMode" ref="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceb">
                 <section title="NotDefined" ref="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba287198790ac9799acd03c99d63a6faea" />
@@ -253,12 +91,6 @@
               <section title="version" ref="class_model_p_c.html#a5af48ab89e19be42a94c34ba00249401" />
               <section title="versionString" ref="class_model_p_c.html#a5f426725ccf7eefd3c77ea8c720264c9" />
             </section>
-          </section>
-          <section title="qaesencryption.cpp" ref="qaesencryption_8cpp.html">
-            <section title="multiply" ref="qaesencryption_8cpp.html#adcc23c7a5520793f14710fff6ef23dfe" />
-            <section title="xTime" ref="qaesencryption_8cpp.html#a94a5c6f286db021d028ddc6f91a65f72" />
-          </section>
-          <section title="qaesencryption.h" ref="qaesencryption_8h.html">
             <section title="QAESEncryption" ref="class_q_a_e_s_encryption.html">
               <section title="Aes" ref="class_q_a_e_s_encryption.html#abe48208f4f6c7d68e6a10b49b9d0b7bd">
                 <section title="AES_128" ref="class_q_a_e_s_encryption.html#abe48208f4f6c7d68e6a10b49b9d0b7bda0fa01cdf69e5537499ecfc6f96d6570a" />
@@ -282,9 +114,6 @@
               <section title="expandKey" ref="class_q_a_e_s_encryption.html#a5bfbb972f84a8376fceed648553c0912" />
               <section title="removePadding" ref="class_q_a_e_s_encryption.html#a4dc7e77485e5a3e63eebc99b9386c17b" />
             </section>
-          </section>
-          <section title="viewpc.cpp" ref="viewpc_8cpp.html" />
-          <section title="viewpc.h" ref="viewpc_8h.html">
             <section title="ViewPC" ref="class_view_p_c.html">
               <section title="ViewPC" ref="class_view_p_c.html#a33c96c61f61042319c66c19059836b7f" />
               <section title="~ViewPC" ref="class_view_p_c.html#a91c51f5c1e6ed5ab12b410339f469b0f" />
@@ -311,19 +140,195 @@
               <section title="progressDialogClosed" ref="class_view_p_c.html#add8c82aa2b0b934212aa5bde9277ab36" />
             </section>
           </section>
+          <section title="Class Index" ref="classes.html" />
+          <section title="Class Hierarchy" ref="hierarchy.html">
+            <section title="QDialog">
+              <section title="AboutPC" ref="class_about_p_c.html" />
+              <section title="EncryptDialog" ref="class_encrypt_dialog.html" />
+            </section>
+            <section title="QMainWindow">
+              <section title="ViewPC" ref="class_view_p_c.html" />
+            </section>
+            <section title="QObject">
+              <section title="ControllerPC" ref="class_controller_p_c.html" />
+              <section title="ModelPC" ref="class_model_p_c.html" />
+              <section title="QAESEncryption" ref="class_q_a_e_s_encryption.html" />
+            </section>
+          </section>
+          <section title="Class Members" ref="functions.html">
+            <section title="All" ref="functions.html" />
+            <section title="Functions" ref="functions_func.html" />
+            <section title="Variables" ref="functions_vars.html" />
+            <section title="Enumerations" ref="functions_enum.html" />
+            <section title="Enumerator" ref="functions_eval.html" />
+          </section>
         </section>
-        <section title="File Members" ref="globals.html">
-          <section title="All" ref="globals.html" />
-          <section title="Functions" ref="globals_func.html" />
+        <section title="Files">
+          <section title="File List" ref="files.html">
+            <section title="aboutpc.cpp" ref="aboutpc_8cpp.html" />
+            <section title="aboutpc.h" ref="aboutpc_8h.html">
+              <section title="AboutPC" ref="class_about_p_c.html">
+                <section title="AboutPC" ref="class_about_p_c.html#a89341c4427d97da60acf15dc929ad8a6" />
+                <section title="~AboutPC" ref="class_about_p_c.html#a3cc0c4c81abc640d946003b078a47dd4" />
+                <section title="setVersion" ref="class_about_p_c.html#aa3815d4826d0c8d87122449537a0a4d5" />
+              </section>
+            </section>
+            <section title="controllerpc.cpp" ref="controllerpc_8cpp.html" />
+            <section title="controllerpc.h" ref="controllerpc_8h.html">
+              <section title="ControllerPC" ref="class_controller_p_c.html">
+                <section title="ControllerPC" ref="class_controller_p_c.html#afa6c92d67bf3b6531c42385fc5938003" />
+                <section title="abortCircuit" ref="class_controller_p_c.html#a8814989f7be1214e06b2e720889066b0" />
+                <section title="runTests" ref="class_controller_p_c.html#aaa59fc90e1ef731eee4560ec87e43707" />
+                <section title="setJPHSDir" ref="class_controller_p_c.html#ac00d29685a7e5b780c01eb438e10f96d" />
+                <section title="version" ref="class_controller_p_c.html#a9eb43c34237d66751a6411e55cf5f55e" />
+                <section title="versionString" ref="class_controller_p_c.html#a0e63cca37d6ce2e660f3380400c2c5f3" />
+              </section>
+            </section>
+            <section title="encryptdialog.cpp" ref="encryptdialog_8cpp.html" />
+            <section title="encryptdialog.h" ref="encryptdialog_8h.html">
+              <section title="EncryptDialog" ref="class_encrypt_dialog.html">
+                <section title="EncryptDialog" ref="class_encrypt_dialog.html#ab57e8b3a0d00c977e81f3b356657524e" />
+                <section title="~EncryptDialog" ref="class_encrypt_dialog.html#a466e283080f87ee50f172052e43e38b6" />
+                <section title="on_bitsSlider_valueChanged" ref="class_encrypt_dialog.html#ae5975a58b8ed8f7e423e5d5cc5f58dce" />
+                <section title="on_buttonBox_accepted" ref="class_encrypt_dialog.html#a9a998acd37db458eede31f4a9cb16b78" />
+                <section title="on_buttonBox_rejected" ref="class_encrypt_dialog.html#a43deb5fd2be501f4d03582a8ed49e9c2" />
+                <section title="on_fileButton_clicked" ref="class_encrypt_dialog.html#ac9817d3f11f44f4bb8d97a228fbdf8a5" />
+                <section title="zip" ref="class_encrypt_dialog.html#a2bff820a3df4ddc36ecb07ed74b7138a" />
+                <section title="bitsUsed" ref="class_encrypt_dialog.html#abf638fea37fbdbaba215954e2e239860" />
+                <section title="compr_data" ref="class_encrypt_dialog.html#a3e8998aa39696cbd1242f6420ef18143" />
+                <section title="data" ref="class_encrypt_dialog.html#acf3a8bbce90d99ef17fec093c35b1008" />
+                <section title="goodPercentage" ref="class_encrypt_dialog.html#a0c821b893cfddd7a6c07bbd270ba49e9" />
+                <section title="image" ref="class_encrypt_dialog.html#a739a0df1d28d06b28a3fd16e2bc16c73" />
+                <section title="inputFileName" ref="class_encrypt_dialog.html#a859b1bc2f032a247632b879bf8663d0b" />
+                <section title="key" ref="class_encrypt_dialog.html#a1afdef3c665fb0d0fae06d1df8e84951" />
+                <section title="size" ref="class_encrypt_dialog.html#a7fff26f838ab50f807744cd2c4bed033" />
+                <section title="success" ref="class_encrypt_dialog.html#ada4900bcd40894d9c098c65aa4066ac9" />
+                <section title="val" ref="class_encrypt_dialog.html#a3c9da51b5e9d98d702bcc4ed15405fd5" />
+              </section>
+            </section>
+            <section title="ErrorsDict.json" ref="_errors_dict_8json.html" />
+            <section title="ErrorsDictSetup.py" ref="_errors_dict_setup_8py.html">
+              <section title="data" ref="_errors_dict_setup_8py.html#af570460846fb9f0c91abd308a095dcdc" />
+              <section title="f" ref="_errors_dict_setup_8py.html#aadfab4e19ca2acd086062511d8ec75a8" />
+              <section title="filename" ref="_errors_dict_setup_8py.html#a0c97c48fca0fdec3e730b9df1dbab9c7" />
+              <section title="indent" ref="_errors_dict_setup_8py.html#a3c8f88b66a58f9c28e5d3bd66fa6191a" />
+              <section title="input_data" ref="_errors_dict_setup_8py.html#a82a4de99ebada6605cb7ca0598ef411e" />
+              <section title="key" ref="_errors_dict_setup_8py.html#a09c268098d09ffb8e5504f30fa6d5dd9" />
+              <section title="raw" ref="_errors_dict_setup_8py.html#a71f324cc110ab41d2a588f590fff7481" />
+              <section title="value" ref="_errors_dict_setup_8py.html#a4436d6af623cbe45d37493afe4de9461" />
+            </section>
+            <section title="main.cpp" ref="main_8cpp.html">
+              <section title="main" ref="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" />
+            </section>
+            <section title="modelpc.cpp" ref="modelpc_8cpp.html" />
+            <section title="modelpc.h" ref="modelpc_8h.html">
+              <section title="ModelPC" ref="class_model_p_c.html">
+                <section title="CryptMode" ref="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceb">
+                  <section title="NotDefined" ref="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba287198790ac9799acd03c99d63a6faea" />
+                  <section title="v1_3" ref="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba7612e38de7178170655a56ddcf96e12c" />
+                  <section title="v1_4" ref="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba43138df6b33a6b2bf608768907f95abc" />
+                  <section title="jphs_mode" ref="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba90ca32d3ccbb6be224cdfc33f7096eea" />
+                </section>
+                <section title="ModelPC" ref="class_model_p_c.html#ae12ebe65ec973c02a0de4850a7c1e31c" />
+                <section title="alert" ref="class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" />
+                <section title="alertView" ref="class_model_p_c.html#af0217a7ca5671e26090dc50a5dccdaf5" />
+                <section title="circuit" ref="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" />
+                <section title="decrypt" ref="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" />
+                <section title="decryptv1_3" ref="class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" />
+                <section title="decryptv1_4" ref="class_model_p_c.html#a7a1f7d491e1bde16936190b9e90896b0" />
+                <section title="encrypt" ref="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" />
+                <section title="encryptv1_4" ref="class_model_p_c.html#a4daefc3fb87a1f19172b9b20c987eb12" />
+                <section title="fail" ref="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" />
+                <section title="inject" ref="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" />
+                <section title="jphs" ref="class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" />
+                <section title="proccessPixelsv1_4" ref="class_model_p_c.html#a5cdb4d1d61ff62ee9d45b496a7dbf1fb" />
+                <section title="processPixel" ref="class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" />
+                <section title="saveData" ref="class_model_p_c.html#a0855107fb0ccc247cd9e893fae9bb08a" />
+                <section title="saveImage" ref="class_model_p_c.html#a41f5e2e8022679046e4d3fa1109025fa" />
+                <section title="setProgress" ref="class_model_p_c.html#afdcd80f0ed5062e145a71f09b0897547" />
+                <section title="unzip" ref="class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0" />
+                <section title="zip" ref="class_model_p_c.html#afebbbfa4b07deba4f68fc6dfb50f353f" />
+                <section title="defaultJPHSDir" ref="class_model_p_c.html#abd038306f14f22fb885a1697c96d6335" />
+                <section title="error" ref="class_model_p_c.html#a4e5a9c0ca1f06fe5bc478b6bf248c37c" />
+                <section title="success" ref="class_model_p_c.html#a945ffbbc44a832b953c191debd448f4c" />
+                <section title="version" ref="class_model_p_c.html#a5af48ab89e19be42a94c34ba00249401" />
+                <section title="versionString" ref="class_model_p_c.html#a5f426725ccf7eefd3c77ea8c720264c9" />
+              </section>
+            </section>
+            <section title="qaesencryption.cpp" ref="qaesencryption_8cpp.html">
+              <section title="multiply" ref="qaesencryption_8cpp.html#adcc23c7a5520793f14710fff6ef23dfe" />
+              <section title="xTime" ref="qaesencryption_8cpp.html#a94a5c6f286db021d028ddc6f91a65f72" />
+            </section>
+            <section title="qaesencryption.h" ref="qaesencryption_8h.html">
+              <section title="QAESEncryption" ref="class_q_a_e_s_encryption.html">
+                <section title="Aes" ref="class_q_a_e_s_encryption.html#abe48208f4f6c7d68e6a10b49b9d0b7bd">
+                  <section title="AES_128" ref="class_q_a_e_s_encryption.html#abe48208f4f6c7d68e6a10b49b9d0b7bda0fa01cdf69e5537499ecfc6f96d6570a" />
+                  <section title="AES_192" ref="class_q_a_e_s_encryption.html#abe48208f4f6c7d68e6a10b49b9d0b7bda7bd082b240582de6d5f4b8ea604e646b" />
+                  <section title="AES_256" ref="class_q_a_e_s_encryption.html#abe48208f4f6c7d68e6a10b49b9d0b7bdacde97774ab1d4c609e04b0dd13a1e1f7" />
+                </section>
+                <section title="Mode" ref="class_q_a_e_s_encryption.html#ad3e031c49a3d56566379d75b40b7b255">
+                  <section title="ECB" ref="class_q_a_e_s_encryption.html#ad3e031c49a3d56566379d75b40b7b255a4ca7f51778e2adf1f464164a0ba8e75e" />
+                  <section title="CBC" ref="class_q_a_e_s_encryption.html#ad3e031c49a3d56566379d75b40b7b255a559bffc55d3599d0a172cc85aed98966" />
+                  <section title="CFB" ref="class_q_a_e_s_encryption.html#ad3e031c49a3d56566379d75b40b7b255ae5e2e019df35c7d172fcd7f0ebec5e8e" />
+                  <section title="OFB" ref="class_q_a_e_s_encryption.html#ad3e031c49a3d56566379d75b40b7b255a27e2f82decd94080893d61db4a8adcb3" />
+                </section>
+                <section title="Padding" ref="class_q_a_e_s_encryption.html#ab0a65cdea4eac21ef32530010d1b0247">
+                  <section title="ZERO" ref="class_q_a_e_s_encryption.html#ab0a65cdea4eac21ef32530010d1b0247a0842d5191caeff6f871908fa7b9e8e7a" />
+                  <section title="PKCS7" ref="class_q_a_e_s_encryption.html#ab0a65cdea4eac21ef32530010d1b0247a74a898410a12cbc5391b47daa04cbd69" />
+                  <section title="ISO" ref="class_q_a_e_s_encryption.html#ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d" />
+                </section>
+                <section title="QAESEncryption" ref="class_q_a_e_s_encryption.html#aeac0ee8532e69e5d30b023fe38c30b3b" />
+                <section title="decode" ref="class_q_a_e_s_encryption.html#a58f972f2b66c2454edd5112495463bba" />
+                <section title="encode" ref="class_q_a_e_s_encryption.html#a0c56eddd6f03e93b1f7faad464044d65" />
+                <section title="expandKey" ref="class_q_a_e_s_encryption.html#a5bfbb972f84a8376fceed648553c0912" />
+                <section title="removePadding" ref="class_q_a_e_s_encryption.html#a4dc7e77485e5a3e63eebc99b9386c17b" />
+              </section>
+            </section>
+            <section title="viewpc.cpp" ref="viewpc_8cpp.html" />
+            <section title="viewpc.h" ref="viewpc_8h.html">
+              <section title="ViewPC" ref="class_view_p_c.html">
+                <section title="ViewPC" ref="class_view_p_c.html#a33c96c61f61042319c66c19059836b7f" />
+                <section title="~ViewPC" ref="class_view_p_c.html#a91c51f5c1e6ed5ab12b410339f469b0f" />
+                <section title="abortCircuit" ref="class_view_p_c.html#ad7ba2fcf1d17862de15e32432823f7b0" />
+                <section title="abortModel" ref="class_view_p_c.html#aa652102ce6b5757b8eef830409c8cabf" />
+                <section title="alert" ref="class_view_p_c.html#a7c467169467789561078abc9d4fe57bd" />
+                <section title="decrypt" ref="class_view_p_c.html#a365df051360d557c7221474ad856e0af" />
+                <section title="encrypt" ref="class_view_p_c.html#a9d179ff85ed8b1ca0ff7fa495965b52d" />
+                <section title="inject" ref="class_view_p_c.html#a652c98014c2df32178d43a5a9612dd99" />
+                <section title="on_actionAbout_triggered" ref="class_view_p_c.html#a09a46da4d492eb3dde88f35dc58c997b" />
+                <section title="on_actionHelp_triggered" ref="class_view_p_c.html#a0d252ff4829260c6c76769fbd24b7cd7" />
+                <section title="on_fileButton_clicked" ref="class_view_p_c.html#a3b9b7a7be9702d8b160f257f1c74a776" />
+                <section title="on_startButton_clicked" ref="class_view_p_c.html#a456d75b7c5d3a089302a576e7359f1f4" />
+                <section title="requestKey" ref="class_view_p_c.html#a559c95675ec98b15451f3bca47033d9c" />
+                <section title="runTests" ref="class_view_p_c.html#a96a6c95728bf20c64d2a8fe978495395" />
+                <section title="saveData" ref="class_view_p_c.html#aaff156103970be7c777beedaf0020604" />
+                <section title="saveImage" ref="class_view_p_c.html#a7901ce10ffaaf2387bef1db7feea342d" />
+                <section title="setEncryptMode" ref="class_view_p_c.html#a5b48951efefdc0e3039c9a4bf185320b" />
+                <section title="setJPHSDir" ref="class_view_p_c.html#ae81085836c0c01bc9556a5b27eb8d19c" />
+                <section title="setProgress" ref="class_view_p_c.html#a9c32a1fdb6ead84e5ada8fba8860c7ed" />
+                <section title="setVersion" ref="class_view_p_c.html#ac05220df875b7c4f24405a5742476ebf" />
+                <section title="dialog" ref="class_view_p_c.html#a31abbb470fe329b44e6ffee202b903ca" />
+                <section title="errorsDict" ref="class_view_p_c.html#a26f90436aca32e5bad46f5e69a7e7e09" />
+                <section title="progressDialogClosed" ref="class_view_p_c.html#add8c82aa2b0b934212aa5bde9277ab36" />
+              </section>
+            </section>
+          </section>
+          <section title="File Members" ref="globals.html">
+            <section title="All" ref="globals.html" />
+            <section title="Functions" ref="globals_func.html" />
+          </section>
         </section>
       </section>
-    </section>
-  </toc>
+    </toc>
     <keywords>
       <keyword name="filename" id="ErrorsDictSetup.py::filename" ref="_errors_dict_setup_8py.html#a0c97c48fca0fdec3e730b9df1dbab9c7" />
-      <keyword name="raw" id="ErrorsDictSetup.py::raw" ref="_errors_dict_setup_8py.html#ad08a9cc68898a62eb6523550f54917cf" />
-      <keyword name="data" id="ErrorsDictSetup.py::data" ref="_errors_dict_setup_8py.html#adf4c30d205d29df7343e26f7c62b0685" />
-      <keyword name="input_data" id="ErrorsDictSetup.py::input_data" ref="_errors_dict_setup_8py.html#a27081bed64a1fae4487e33cd53862a6f" />
+      <keyword name="raw" id="ErrorsDictSetup.py::raw" ref="_errors_dict_setup_8py.html#a71f324cc110ab41d2a588f590fff7481" />
+      <keyword name="data" id="ErrorsDictSetup.py::data" ref="_errors_dict_setup_8py.html#af570460846fb9f0c91abd308a095dcdc" />
+      <keyword name="input_data" id="ErrorsDictSetup.py::input_data" ref="_errors_dict_setup_8py.html#a82a4de99ebada6605cb7ca0598ef411e" />
+      <keyword name="key" id="ErrorsDictSetup.py::key" ref="_errors_dict_setup_8py.html#a09c268098d09ffb8e5504f30fa6d5dd9" />
+      <keyword name="value" id="ErrorsDictSetup.py::value" ref="_errors_dict_setup_8py.html#a4436d6af623cbe45d37493afe4de9461" />
+      <keyword name="f" id="ErrorsDictSetup.py::f" ref="_errors_dict_setup_8py.html#aadfab4e19ca2acd086062511d8ec75a8" />
+      <keyword name="indent" id="ErrorsDictSetup.py::indent" ref="_errors_dict_setup_8py.html#a3c8f88b66a58f9c28e5d3bd66fa6191a" />
       <keyword name="main" id="main.cpp::main" ref="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" />
       <keyword name="xTime" id="qaesencryption.cpp::xTime" ref="qaesencryption_8cpp.html#a94a5c6f286db021d028ddc6f91a65f72" />
       <keyword name="multiply" id="qaesencryption.cpp::multiply" ref="qaesencryption_8cpp.html#adcc23c7a5520793f14710fff6ef23dfe" />
@@ -434,9 +439,13 @@
       <keyword name="requestKey" id="ViewPC::requestKey" ref="class_view_p_c.html#a559c95675ec98b15451f3bca47033d9c" />
       <keyword name="ErrorsDictSetup" id="ErrorsDictSetup" ref="namespace_errors_dict_setup.html" />
       <keyword name="filename" id="ErrorsDictSetup::filename" ref="namespace_errors_dict_setup.html#a0c97c48fca0fdec3e730b9df1dbab9c7" />
-      <keyword name="raw" id="ErrorsDictSetup::raw" ref="namespace_errors_dict_setup.html#ad08a9cc68898a62eb6523550f54917cf" />
-      <keyword name="data" id="ErrorsDictSetup::data" ref="namespace_errors_dict_setup.html#adf4c30d205d29df7343e26f7c62b0685" />
-      <keyword name="input_data" id="ErrorsDictSetup::input_data" ref="namespace_errors_dict_setup.html#a27081bed64a1fae4487e33cd53862a6f" />
+      <keyword name="raw" id="ErrorsDictSetup::raw" ref="namespace_errors_dict_setup.html#a71f324cc110ab41d2a588f590fff7481" />
+      <keyword name="data" id="ErrorsDictSetup::data" ref="namespace_errors_dict_setup.html#af570460846fb9f0c91abd308a095dcdc" />
+      <keyword name="input_data" id="ErrorsDictSetup::input_data" ref="namespace_errors_dict_setup.html#a82a4de99ebada6605cb7ca0598ef411e" />
+      <keyword name="key" id="ErrorsDictSetup::key" ref="namespace_errors_dict_setup.html#a09c268098d09ffb8e5504f30fa6d5dd9" />
+      <keyword name="value" id="ErrorsDictSetup::value" ref="namespace_errors_dict_setup.html#a4436d6af623cbe45d37493afe4de9461" />
+      <keyword name="f" id="ErrorsDictSetup::f" ref="namespace_errors_dict_setup.html#aadfab4e19ca2acd086062511d8ec75a8" />
+      <keyword name="indent" id="ErrorsDictSetup::indent" ref="namespace_errors_dict_setup.html#a3c8f88b66a58f9c28e5d3bd66fa6191a" />
       <keyword name="Ui" id="Ui" ref="namespace_ui.html" />
     </keywords>
     <files>
@@ -454,30 +463,12 @@
       <file>bdwn.png</file>
       <file>sync_on.png</file>
       <file>sync_off.png</file>
-      <file>unlocked.png</file>
-      <file>unlocked.png</file>
-      <file>ftv2blank.png</file>
-      <file>ftv2doc.png</file>
-      <file>ftv2folderclosed.png</file>
-      <file>ftv2folderopen.png</file>
-      <file>ftv2ns.png</file>
-      <file>ftv2mo.png</file>
-      <file>ftv2cl.png</file>
-      <file>ftv2lastnode.png</file>
-      <file>ftv2link.png</file>
-      <file>ftv2mlastnode.png</file>
-      <file>ftv2mnode.png</file>
-      <file>ftv2node.png</file>
-      <file>ftv2plastnode.png</file>
-      <file>ftv2pnode.png</file>
-      <file>ftv2vertline.png</file>
-      <file>ftv2splitbar.png</file>
       <file>doxygen.css</file>
-      <file>/search/mag_sel.png</file>
-      <file>/search/search_l.png</file>
-      <file>/search/search_m.png</file>
-      <file>/search/search_r.png</file>
-      <file>/search/close.png</file>
+      <file>search/search_l.png</file>
+      <file>search/search_m.png</file>
+      <file>search/search_r.png</file>
+      <file>search/close.png</file>
+      <file>search/mag_sel.png</file>
       <file>search/search.css</file>
       <file>search/search.js</file>
       <file>aboutpc_8cpp_source.html</file>
@@ -537,6 +528,8 @@
       <file>qaesencryption_8cpp__incl.png</file>
       <file>qaesencryption_8cpp_adcc23c7a5520793f14710fff6ef23dfe_cgraph.png</file>
       <file>qaesencryption_8cpp_adcc23c7a5520793f14710fff6ef23dfe_cgraph.png</file>
+      <file>qaesencryption_8cpp_adcc23c7a5520793f14710fff6ef23dfe_icgraph.png</file>
+      <file>qaesencryption_8cpp_adcc23c7a5520793f14710fff6ef23dfe_icgraph.png</file>
       <file>qaesencryption_8cpp_a94a5c6f286db021d028ddc6f91a65f72_icgraph.png</file>
       <file>qaesencryption_8cpp_a94a5c6f286db021d028ddc6f91a65f72_icgraph.png</file>
       <file>qaesencryption_8h.html</file>
@@ -679,6 +672,8 @@
       <file>class_q_a_e_s_encryption_a0c56eddd6f03e93b1f7faad464044d65_cgraph.png</file>
       <file>class_q_a_e_s_encryption_a2112456e057e6dd886694348fbf202cd_cgraph.png</file>
       <file>class_q_a_e_s_encryption_a2112456e057e6dd886694348fbf202cd_cgraph.png</file>
+      <file>class_q_a_e_s_encryption_a5bfbb972f84a8376fceed648553c0912_cgraph.png</file>
+      <file>class_q_a_e_s_encryption_a5bfbb972f84a8376fceed648553c0912_cgraph.png</file>
       <file>class_q_a_e_s_encryption_a5bfbb972f84a8376fceed648553c0912_icgraph.png</file>
       <file>class_q_a_e_s_encryption_a5bfbb972f84a8376fceed648553c0912_icgraph.png</file>
       <file>class_q_a_e_s_encryption-members.html</file>
@@ -689,6 +684,8 @@
       <file>class_view_p_c__coll__graph.png</file>
       <file>class_view_p_c_a33c96c61f61042319c66c19059836b7f_cgraph.png</file>
       <file>class_view_p_c_a33c96c61f61042319c66c19059836b7f_cgraph.png</file>
+      <file>class_view_p_c_a91c51f5c1e6ed5ab12b410339f469b0f_cgraph.png</file>
+      <file>class_view_p_c_a91c51f5c1e6ed5ab12b410339f469b0f_cgraph.png</file>
       <file>class_view_p_c_ad7ba2fcf1d17862de15e32432823f7b0_icgraph.png</file>
       <file>class_view_p_c_ad7ba2fcf1d17862de15e32432823f7b0_icgraph.png</file>
       <file>class_view_p_c_aa652102ce6b5757b8eef830409c8cabf_icgraph.png</file>
@@ -709,10 +706,16 @@
       <file>class_view_p_c_a559c95675ec98b15451f3bca47033d9c_cgraph.png</file>
       <file>class_view_p_c_a559c95675ec98b15451f3bca47033d9c_icgraph.png</file>
       <file>class_view_p_c_a559c95675ec98b15451f3bca47033d9c_icgraph.png</file>
+      <file>class_view_p_c_a96a6c95728bf20c64d2a8fe978495395_icgraph.png</file>
+      <file>class_view_p_c_a96a6c95728bf20c64d2a8fe978495395_icgraph.png</file>
       <file>class_view_p_c_aaff156103970be7c777beedaf0020604_cgraph.png</file>
       <file>class_view_p_c_aaff156103970be7c777beedaf0020604_cgraph.png</file>
       <file>class_view_p_c_a7901ce10ffaaf2387bef1db7feea342d_cgraph.png</file>
       <file>class_view_p_c_a7901ce10ffaaf2387bef1db7feea342d_cgraph.png</file>
+      <file>class_view_p_c_a5b48951efefdc0e3039c9a4bf185320b_icgraph.png</file>
+      <file>class_view_p_c_a5b48951efefdc0e3039c9a4bf185320b_icgraph.png</file>
+      <file>class_view_p_c_ae81085836c0c01bc9556a5b27eb8d19c_icgraph.png</file>
+      <file>class_view_p_c_ae81085836c0c01bc9556a5b27eb8d19c_icgraph.png</file>
       <file>class_view_p_c_a9c32a1fdb6ead84e5ada8fba8860c7ed_cgraph.png</file>
       <file>class_view_p_c_a9c32a1fdb6ead84e5ada8fba8860c7ed_cgraph.png</file>
       <file>class_view_p_c_ac05220df875b7c4f24405a5742476ebf_icgraph.png</file>
@@ -723,11 +726,7 @@
       <file>graph_legend.png</file>
       <file>graph_legend.html</file>
       <file>dir_cd1471d333ee889e1fea5aa170113706.html</file>
-      <file>dir_cd1471d333ee889e1fea5aa170113706_dep.png</file>
-      <file>dir_cd1471d333ee889e1fea5aa170113706_dep.png</file>
       <file>dir_9f351d46ce3cc29445a41dc3a31e6919.html</file>
-      <file>dir_9f351d46ce3cc29445a41dc3a31e6919_dep.png</file>
-      <file>dir_9f351d46ce3cc29445a41dc3a31e6919_dep.png</file>
       <file>index.html</file>
       <file>dot_mainpage.png</file>
       <file>dot_mainpage.png</file>
@@ -736,6 +735,10 @@
       <file>namespacemembers.html</file>
       <file>namespacemembers.html</file>
       <file>namespacemembers.html</file>
+      <file>namespacemembers.html</file>
+      <file>namespacemembers.html</file>
+      <file>namespacemembers_vars.html</file>
+      <file>namespacemembers_vars.html</file>
       <file>namespacemembers_vars.html</file>
       <file>namespacemembers_vars.html</file>
       <file>namespacemembers_vars.html</file>

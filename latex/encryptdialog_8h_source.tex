@@ -1,10 +1,9 @@
-\hypertarget{encryptdialog_8h_source}{\section{encryptdialog.\-h}
-}
+\hypertarget{encryptdialog_8h_source}{}\section{encryptdialog.\+h}
 
 \begin{DoxyCode}
 00001 \textcolor{preprocessor}{#ifndef ENCRYPTDIALOG\_H}
-00002 \textcolor{preprocessor}{}\textcolor{preprocessor}{#define ENCRYPTDIALOG\_H}
-00003 \textcolor{preprocessor}{}
+00002 \textcolor{preprocessor}{#define ENCRYPTDIALOG\_H}
+00003 
 00004 \textcolor{preprocessor}{#include <QDialog>}
 00005 \textcolor{preprocessor}{#include <QFileDialog>}
 00006 \textcolor{preprocessor}{#include <QImage>}
@@ -14,38 +13,38 @@
 00010 \textcolor{preprocessor}{#include <\hyperlink{qaesencryption_8h}{aes/qaesencryption.h}>}
 00011 \textcolor{preprocessor}{#include <QCryptographicHash>}
 00012 
-00013 \textcolor{keyword}{namespace }Ui \{
+00013 \textcolor{keyword}{namespace }\hyperlink{namespace_ui}{Ui} \{
 00014 \textcolor{keyword}{class }\hyperlink{class_encrypt_dialog}{EncryptDialog};
 00015 \}
-\hypertarget{encryptdialog_8h_source_l00021}{}\hyperlink{class_encrypt_dialog}{00021} \textcolor{keyword}{class }\hyperlink{class_encrypt_dialog}{EncryptDialog} : \textcolor{keyword}{public} QDialog
+\hypertarget{encryptdialog_8h_source.tex_l00021}{}\hyperlink{class_encrypt_dialog}{00021} \textcolor{keyword}{class }\hyperlink{class_encrypt_dialog}{EncryptDialog} : \textcolor{keyword}{public} QDialog
 00022 \{
 00023     Q\_OBJECT
 00024 
 00025 \textcolor{keyword}{public}:
-00026     \textcolor{keyword}{explicit} \hyperlink{class_encrypt_dialog_ab57e8b3a0d00c977e81f3b356657524e}{EncryptDialog}(QByteArray \_data, QWidget *parent = 0);
-00027     \hyperlink{class_encrypt_dialog_a466e283080f87ee50f172052e43e38b6}{~EncryptDialog}();
+00026     \textcolor{keyword}{explicit} \hyperlink{class_encrypt_dialog}{EncryptDialog}(QByteArray \_data, QWidget *parent = 0);
+00027     ~\hyperlink{class_encrypt_dialog}{EncryptDialog}();
 00028 
 00029 \textcolor{keyword}{public} slots:
-00030     \textcolor{keywordtype}{void} \hyperlink{class_encrypt_dialog_ac9817d3f11f44f4bb8d97a228fbdf8a5}{on\_fileButton\_clicked}();
+00030     \textcolor{keywordtype}{void} on\_fileButton\_clicked();
 00031 
-00032     \textcolor{keywordtype}{void} \hyperlink{class_encrypt_dialog_a9a998acd37db458eede31f4a9cb16b78}{on\_buttonBox\_accepted}();
+00032     \textcolor{keywordtype}{void} on\_buttonBox\_accepted();
 00033 
-00034     \textcolor{keywordtype}{void} \hyperlink{class_encrypt_dialog_a43deb5fd2be501f4d03582a8ed49e9c2}{on\_buttonBox\_rejected}();
+00034     \textcolor{keywordtype}{void} on\_buttonBox\_rejected();
 00035 
-00036     \textcolor{keywordtype}{void} \hyperlink{class_encrypt_dialog_ae5975a58b8ed8f7e423e5d5cc5f58dce}{on\_bitsSlider\_valueChanged}(\textcolor{keywordtype}{int} value);
+00036     \textcolor{keywordtype}{void} on\_bitsSlider\_valueChanged(\textcolor{keywordtype}{int} \hyperlink{namespace_errors_dict_setup_a4436d6af623cbe45d37493afe4de9461}{value});
 00037 
 00038 \textcolor{keyword}{public}:
-\hypertarget{encryptdialog_8h_source_l00042}{}\hyperlink{class_encrypt_dialog_acf3a8bbce90d99ef17fec093c35b1008}{00042}     QByteArray \hyperlink{class_encrypt_dialog_acf3a8bbce90d99ef17fec093c35b1008}{data};
-\hypertarget{encryptdialog_8h_source_l00046}{}\hyperlink{class_encrypt_dialog_ada4900bcd40894d9c098c65aa4066ac9}{00046}     \textcolor{keywordtype}{bool} \hyperlink{class_encrypt_dialog_ada4900bcd40894d9c098c65aa4066ac9}{success};
-\hypertarget{encryptdialog_8h_source_l00050}{}\hyperlink{class_encrypt_dialog_a3e8998aa39696cbd1242f6420ef18143}{00050}     QByteArray \hyperlink{class_encrypt_dialog_a3e8998aa39696cbd1242f6420ef18143}{compr\_data};
-\hypertarget{encryptdialog_8h_source_l00054}{}\hyperlink{class_encrypt_dialog_a859b1bc2f032a247632b879bf8663d0b}{00054}     QString \hyperlink{class_encrypt_dialog_a859b1bc2f032a247632b879bf8663d0b}{inputFileName};
-\hypertarget{encryptdialog_8h_source_l00058}{}\hyperlink{class_encrypt_dialog_a7fff26f838ab50f807744cd2c4bed033}{00058}     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \hyperlink{class_encrypt_dialog_a7fff26f838ab50f807744cd2c4bed033}{size};
-\hypertarget{encryptdialog_8h_source_l00062}{}\hyperlink{class_encrypt_dialog_a1afdef3c665fb0d0fae06d1df8e84951}{00062}     QString \hyperlink{class_encrypt_dialog_a1afdef3c665fb0d0fae06d1df8e84951}{key};
-\hypertarget{encryptdialog_8h_source_l00066}{}\hyperlink{class_encrypt_dialog_a0c821b893cfddd7a6c07bbd270ba49e9}{00066}     \textcolor{keywordtype}{bool} \hyperlink{class_encrypt_dialog_a0c821b893cfddd7a6c07bbd270ba49e9}{goodPercentage};
-\hypertarget{encryptdialog_8h_source_l00070}{}\hyperlink{class_encrypt_dialog_a3c9da51b5e9d98d702bcc4ed15405fd5}{00070}     \textcolor{keywordtype}{int} \hyperlink{class_encrypt_dialog_a3c9da51b5e9d98d702bcc4ed15405fd5}{val};
-\hypertarget{encryptdialog_8h_source_l00075}{}\hyperlink{class_encrypt_dialog_abf638fea37fbdbaba215954e2e239860}{00075}     \textcolor{keywordtype}{int} \hyperlink{class_encrypt_dialog_abf638fea37fbdbaba215954e2e239860}{bitsUsed};
-\hypertarget{encryptdialog_8h_source_l00079}{}\hyperlink{class_encrypt_dialog_a739a0df1d28d06b28a3fd16e2bc16c73}{00079}     QImage \hyperlink{class_encrypt_dialog_a739a0df1d28d06b28a3fd16e2bc16c73}{image};
-00080     QByteArray \hyperlink{class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a}{zip}();
+\hypertarget{encryptdialog_8h_source.tex_l00042}{}\hyperlink{class_encrypt_dialog_acf3a8bbce90d99ef17fec093c35b1008}{00042}     QByteArray \hyperlink{class_encrypt_dialog_acf3a8bbce90d99ef17fec093c35b1008}{data};
+\hypertarget{encryptdialog_8h_source.tex_l00046}{}\hyperlink{class_encrypt_dialog_ada4900bcd40894d9c098c65aa4066ac9}{00046}     \textcolor{keywordtype}{bool} \hyperlink{class_encrypt_dialog_ada4900bcd40894d9c098c65aa4066ac9}{success};
+\hypertarget{encryptdialog_8h_source.tex_l00050}{}\hyperlink{class_encrypt_dialog_a3e8998aa39696cbd1242f6420ef18143}{00050}     QByteArray \hyperlink{class_encrypt_dialog_a3e8998aa39696cbd1242f6420ef18143}{compr\_data};
+\hypertarget{encryptdialog_8h_source.tex_l00054}{}\hyperlink{class_encrypt_dialog_a859b1bc2f032a247632b879bf8663d0b}{00054}     QString \hyperlink{class_encrypt_dialog_a859b1bc2f032a247632b879bf8663d0b}{inputFileName};
+\hypertarget{encryptdialog_8h_source.tex_l00058}{}\hyperlink{class_encrypt_dialog_a7fff26f838ab50f807744cd2c4bed033}{00058}     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} \hyperlink{class_encrypt_dialog_a7fff26f838ab50f807744cd2c4bed033}{size};
+\hypertarget{encryptdialog_8h_source.tex_l00062}{}\hyperlink{class_encrypt_dialog_a1afdef3c665fb0d0fae06d1df8e84951}{00062}     QString \hyperlink{class_encrypt_dialog_a1afdef3c665fb0d0fae06d1df8e84951}{key};
+\hypertarget{encryptdialog_8h_source.tex_l00066}{}\hyperlink{class_encrypt_dialog_a0c821b893cfddd7a6c07bbd270ba49e9}{00066}     \textcolor{keywordtype}{bool} \hyperlink{class_encrypt_dialog_a0c821b893cfddd7a6c07bbd270ba49e9}{goodPercentage};
+\hypertarget{encryptdialog_8h_source.tex_l00070}{}\hyperlink{class_encrypt_dialog_a3c9da51b5e9d98d702bcc4ed15405fd5}{00070}     \textcolor{keywordtype}{int} \hyperlink{class_encrypt_dialog_a3c9da51b5e9d98d702bcc4ed15405fd5}{val};
+\hypertarget{encryptdialog_8h_source.tex_l00075}{}\hyperlink{class_encrypt_dialog_abf638fea37fbdbaba215954e2e239860}{00075}     \textcolor{keywordtype}{int} \hyperlink{class_encrypt_dialog_abf638fea37fbdbaba215954e2e239860}{bitsUsed};
+\hypertarget{encryptdialog_8h_source.tex_l00079}{}\hyperlink{class_encrypt_dialog_a739a0df1d28d06b28a3fd16e2bc16c73}{00079}     QImage \hyperlink{class_encrypt_dialog_a739a0df1d28d06b28a3fd16e2bc16c73}{image};
+00080     QByteArray zip();
 00081 \textcolor{keyword}{private}:
 00082     Ui::EncryptDialog *ui;
 00083     \textcolor{keywordtype}{void} alert(QString text);

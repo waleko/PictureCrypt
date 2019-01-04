@@ -1,6 +1,5 @@
-\hypertarget{qaesencryption_8cpp}{\section{qaesencryption.\-cpp}
-\label{qaesencryption_8cpp}\index{qaesencryption.\-cpp@{qaesencryption.\-cpp}}
-}
+\hypertarget{qaesencryption_8cpp_source}{}\section{qaesencryption.\+cpp}
+\label{qaesencryption_8cpp_source}\index{qaesencryption.\+cpp@{qaesencryption.\+cpp}}
 
 \begin{DoxyCode}
 00001 \textcolor{preprocessor}{#include "\hyperlink{qaesencryption_8h}{qaesencryption.h}"}
@@ -8,30 +7,30 @@
 00003 \textcolor{comment}{/*}
 00004 \textcolor{comment}{ * Static Functions}
 00005 \textcolor{comment}{ * */}
-\hypertarget{qaesencryption_8cpp_source_l00006}{}\hyperlink{class_q_a_e_s_encryption_a43819eeb6a7cb29fbd3cb6ad640dcbdf}{00006} QByteArray \hyperlink{class_q_a_e_s_encryption_a43819eeb6a7cb29fbd3cb6ad640dcbdf}{QAESEncryption::Crypt}(\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{QAESEncryption::Aes} level, 
+\hypertarget{qaesencryption_8cpp_source.tex_l00006}{}\hyperlink{class_q_a_e_s_encryption_a43819eeb6a7cb29fbd3cb6ad640dcbdf}{00006} QByteArray \hyperlink{class_q_a_e_s_encryption_a43819eeb6a7cb29fbd3cb6ad640dcbdf}{QAESEncryption::Crypt}(\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{QAESEncryption::Aes} level, 
       \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{QAESEncryption::Mode} mode, \textcolor{keyword}{const} QByteArray &rawText,
-00007                                  \textcolor{keyword}{const} QByteArray &key, \textcolor{keyword}{const} QByteArray &iv, 
+00007                                  \textcolor{keyword}{const} QByteArray &\hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key}, \textcolor{keyword}{const} QByteArray &iv, 
       \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{QAESEncryption::Padding} padding)
 00008 \{
 00009     \textcolor{keywordflow}{return} \hyperlink{class_q_a_e_s_encryption_aeac0ee8532e69e5d30b023fe38c30b3b}{QAESEncryption}(level, mode, padding).encode(rawText, key, iv);
 00010 \}
 00011 
-\hypertarget{qaesencryption_8cpp_source_l00012}{}\hyperlink{class_q_a_e_s_encryption_af9baa154a06683049d941bd06ac698fd}{00012} QByteArray \hyperlink{class_q_a_e_s_encryption_af9baa154a06683049d941bd06ac698fd}{QAESEncryption::Decrypt}(\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{QAESEncryption::Aes} level, 
+\hypertarget{qaesencryption_8cpp_source.tex_l00012}{}\hyperlink{class_q_a_e_s_encryption_af9baa154a06683049d941bd06ac698fd}{00012} QByteArray \hyperlink{class_q_a_e_s_encryption_af9baa154a06683049d941bd06ac698fd}{QAESEncryption::Decrypt}(\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{QAESEncryption::Aes} level, 
       \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{QAESEncryption::Mode} mode, \textcolor{keyword}{const} QByteArray &rawText,
-00013                                    \textcolor{keyword}{const} QByteArray &key, \textcolor{keyword}{const} QByteArray &iv, 
+00013                                    \textcolor{keyword}{const} QByteArray &\hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key}, \textcolor{keyword}{const} QByteArray &iv, 
       \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{QAESEncryption::Padding} padding)
 00014 \{
 00015      \textcolor{keywordflow}{return} \hyperlink{class_q_a_e_s_encryption_aeac0ee8532e69e5d30b023fe38c30b3b}{QAESEncryption}(level, mode, padding).decode(rawText, key, iv);
 00016 \}
 00017 
-\hypertarget{qaesencryption_8cpp_source_l00018}{}\hyperlink{class_q_a_e_s_encryption_a2112456e057e6dd886694348fbf202cd}{00018} QByteArray \hyperlink{class_q_a_e_s_encryption_a2112456e057e6dd886694348fbf202cd}{QAESEncryption::ExpandKey}(
+\hypertarget{qaesencryption_8cpp_source.tex_l00018}{}\hyperlink{class_q_a_e_s_encryption_a2112456e057e6dd886694348fbf202cd}{00018} QByteArray \hyperlink{class_q_a_e_s_encryption_a2112456e057e6dd886694348fbf202cd}{QAESEncryption::ExpandKey}(
       \hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{QAESEncryption::Aes} level, \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{QAESEncryption::Mode} mode, \textcolor{keyword}{const} 
-      QByteArray &key)
+      QByteArray &\hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key})
 00019 \{
 00020      \textcolor{keywordflow}{return} \hyperlink{class_q_a_e_s_encryption_aeac0ee8532e69e5d30b023fe38c30b3b}{QAESEncryption}(level, mode).expandKey(key);
 00021 \}
 00022 
-\hypertarget{qaesencryption_8cpp_source_l00023}{}\hyperlink{class_q_a_e_s_encryption_abb2887bf5623a74053dd19627f3d3055}{00023} QByteArray \hyperlink{class_q_a_e_s_encryption_abb2887bf5623a74053dd19627f3d3055}{QAESEncryption::RemovePadding}(\textcolor{keyword}{const} QByteArray &rawText, 
+\hypertarget{qaesencryption_8cpp_source.tex_l00023}{}\hyperlink{class_q_a_e_s_encryption_abb2887bf5623a74053dd19627f3d3055}{00023} QByteArray \hyperlink{class_q_a_e_s_encryption_abb2887bf5623a74053dd19627f3d3055}{QAESEncryption::RemovePadding}(\textcolor{keyword}{const} QByteArray &rawText, 
       \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{QAESEncryption::Padding} padding)
 00024 \{
 00025     QByteArray ret(rawText);
@@ -62,11 +61,11 @@
 00050 \textcolor{comment}{ * Inline Functions}
 00051 \textcolor{comment}{ * */}
 00052 
-\hypertarget{qaesencryption_8cpp_source_l00053}{}\hyperlink{qaesencryption_8cpp_a94a5c6f286db021d028ddc6f91a65f72}{00053} \textcolor{keyword}{inline} quint8 \hyperlink{qaesencryption_8cpp_a94a5c6f286db021d028ddc6f91a65f72}{xTime}(quint8 x)\{
+\hypertarget{qaesencryption_8cpp_source.tex_l00053}{}\hyperlink{qaesencryption_8cpp_a94a5c6f286db021d028ddc6f91a65f72}{00053} \textcolor{keyword}{inline} quint8 \hyperlink{qaesencryption_8cpp_a94a5c6f286db021d028ddc6f91a65f72}{xTime}(quint8 x)\{
 00054   \textcolor{keywordflow}{return} ((x<<1) ^ (((x>>7) & 1) * 0x1b));
 00055 \}
 00056 
-\hypertarget{qaesencryption_8cpp_source_l00057}{}\hyperlink{qaesencryption_8cpp_adcc23c7a5520793f14710fff6ef23dfe}{00057} \textcolor{keyword}{inline} quint8 \hyperlink{qaesencryption_8cpp_adcc23c7a5520793f14710fff6ef23dfe}{multiply}(quint8 x, quint8 y)\{
+\hypertarget{qaesencryption_8cpp_source.tex_l00057}{}\hyperlink{qaesencryption_8cpp_adcc23c7a5520793f14710fff6ef23dfe}{00057} \textcolor{keyword}{inline} quint8 \hyperlink{qaesencryption_8cpp_adcc23c7a5520793f14710fff6ef23dfe}{multiply}(quint8 x, quint8 y)\{
 00058   \textcolor{keywordflow}{return} (((y & 1) * x) ^ ((y>>1 & 1) * \hyperlink{qaesencryption_8cpp_a94a5c6f286db021d028ddc6f91a65f72}{xTime}(x)) ^ ((y>>2 & 1) * \hyperlink{qaesencryption_8cpp_a94a5c6f286db021d028ddc6f91a65f72}{xTime}(
       \hyperlink{qaesencryption_8cpp_a94a5c6f286db021d028ddc6f91a65f72}{xTime}(x))) ^ ((y>>3 & 1)
 00059             * \hyperlink{qaesencryption_8cpp_a94a5c6f286db021d028ddc6f91a65f72}{xTime}(\hyperlink{qaesencryption_8cpp_a94a5c6f286db021d028ddc6f91a65f72}{xTime}(\hyperlink{qaesencryption_8cpp_a94a5c6f286db021d028ddc6f91a65f72}{xTime}(x)))) ^ ((y>>4 & 1) * \hyperlink{qaesencryption_8cpp_a94a5c6f286db021d028ddc6f91a65f72}{xTime}(
@@ -78,7 +77,7 @@
 00064 \textcolor{comment}{ * */}
 00065 
 00066 
-\hypertarget{qaesencryption_8cpp_source_l00067}{}\hyperlink{class_q_a_e_s_encryption_aeac0ee8532e69e5d30b023fe38c30b3b}{00067} \hyperlink{class_q_a_e_s_encryption_aeac0ee8532e69e5d30b023fe38c30b3b}{QAESEncryption::QAESEncryption}(\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{Aes} level, \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{Mode} mode,
+\hypertarget{qaesencryption_8cpp_source.tex_l00067}{}\hyperlink{class_q_a_e_s_encryption_aeac0ee8532e69e5d30b023fe38c30b3b}{00067} \hyperlink{class_q_a_e_s_encryption_aeac0ee8532e69e5d30b023fe38c30b3b}{QAESEncryption::QAESEncryption}(\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{Aes} level, \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{Mode} mode,
 00068                                \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{Padding} padding)
 00069     : m\_nb(4), m\_blocklen(16), m\_level(level), m\_mode(mode), m\_padding(padding)
 00070 \{
@@ -143,7 +142,8 @@
 00129     \textcolor{keywordflow}{return} QByteArray(size, 0x00);
 00130 \}
 00131 
-\hypertarget{qaesencryption_8cpp_source_l00132}{}\hyperlink{class_q_a_e_s_encryption_a5bfbb972f84a8376fceed648553c0912}{00132} QByteArray \hyperlink{class_q_a_e_s_encryption_a5bfbb972f84a8376fceed648553c0912}{QAESEncryption::expandKey}(\textcolor{keyword}{const} QByteArray &key)
+\hypertarget{qaesencryption_8cpp_source.tex_l00132}{}\hyperlink{class_q_a_e_s_encryption_a5bfbb972f84a8376fceed648553c0912}{00132} QByteArray \hyperlink{class_q_a_e_s_encryption_a5bfbb972f84a8376fceed648553c0912}{QAESEncryption::expandKey}(\textcolor{keyword}{const} QByteArray &
+      \hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key})
 00133 \{
 00134   \textcolor{keywordtype}{int} i, k;
 00135   quint8 tempa[4]; \textcolor{comment}{// Used for the column/row operations}
@@ -275,7 +275,7 @@
 00261 \textcolor{comment}{// MixColumns function mixes the columns of the state matrix.}
 00262 \textcolor{comment}{// The method used to multiply may be difficult to understand for the inexperienced.}
 00263 \textcolor{comment}{// Please use the references to gain more information.}
-00264 \textcolor{keywordtype}{void} \hyperlink{class_q_a_e_s_encryption}{QAESEncryption}::invMixColumns()
+00264 \textcolor{keywordtype}{void} QAESEncryption::invMixColumns()
 00265 \{
 00266   QByteArray::iterator it = m\_state->begin();
 00267   quint8 a,b,c,d;
@@ -406,8 +406,8 @@
 00388     \textcolor{keywordflow}{return} output;
 00389 \}
 00390 
-\hypertarget{qaesencryption_8cpp_source_l00391}{}\hyperlink{class_q_a_e_s_encryption_a0c56eddd6f03e93b1f7faad464044d65}{00391} QByteArray \hyperlink{class_q_a_e_s_encryption_a0c56eddd6f03e93b1f7faad464044d65}{QAESEncryption::encode}(\textcolor{keyword}{const} QByteArray &rawText, \textcolor{keyword}{const} QByteArray &key, \textcolor{keyword}{
-      const} QByteArray &iv)
+\hypertarget{qaesencryption_8cpp_source.tex_l00391}{}\hyperlink{class_q_a_e_s_encryption_a0c56eddd6f03e93b1f7faad464044d65}{00391} QByteArray \hyperlink{class_q_a_e_s_encryption_a0c56eddd6f03e93b1f7faad464044d65}{QAESEncryption::encode}(\textcolor{keyword}{const} QByteArray &rawText, \textcolor{keyword}{const} QByteArray &
+      \hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key}, \textcolor{keyword}{const} QByteArray &iv)
 00392 \{
 00393     \textcolor{keywordflow}{if} (m\_mode >= \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a559bffc55d3599d0a172cc85aed98966}{CBC} && (iv.isNull() || iv.size() != m\_blocklen))
 00394        \textcolor{keywordflow}{return} QByteArray();
@@ -457,8 +457,8 @@
 00438     \textcolor{keywordflow}{return} ret;
 00439 \}
 00440 
-\hypertarget{qaesencryption_8cpp_source_l00441}{}\hyperlink{class_q_a_e_s_encryption_a58f972f2b66c2454edd5112495463bba}{00441} QByteArray \hyperlink{class_q_a_e_s_encryption_a58f972f2b66c2454edd5112495463bba}{QAESEncryption::decode}(\textcolor{keyword}{const} QByteArray &rawText, \textcolor{keyword}{const} QByteArray &key, \textcolor{keyword}{
-      const} QByteArray &iv)
+\hypertarget{qaesencryption_8cpp_source.tex_l00441}{}\hyperlink{class_q_a_e_s_encryption_a58f972f2b66c2454edd5112495463bba}{00441} QByteArray \hyperlink{class_q_a_e_s_encryption_a58f972f2b66c2454edd5112495463bba}{QAESEncryption::decode}(\textcolor{keyword}{const} QByteArray &rawText, \textcolor{keyword}{const} QByteArray &
+      \hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key}, \textcolor{keyword}{const} QByteArray &iv)
 00442 \{
 00443     \textcolor{keywordflow}{if} (m\_mode >= \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a559bffc55d3599d0a172cc85aed98966}{CBC} && (iv.isNull() || iv.size() != m\_blocklen))
 00444        \textcolor{keywordflow}{return} QByteArray();
@@ -507,7 +507,7 @@
 00487     \textcolor{keywordflow}{return} ret;
 00488 \}
 00489 
-\hypertarget{qaesencryption_8cpp_source_l00490}{}\hyperlink{class_q_a_e_s_encryption_a4dc7e77485e5a3e63eebc99b9386c17b}{00490} QByteArray \hyperlink{class_q_a_e_s_encryption_a4dc7e77485e5a3e63eebc99b9386c17b}{QAESEncryption::removePadding}(\textcolor{keyword}{const} QByteArray &rawText)
+\hypertarget{qaesencryption_8cpp_source.tex_l00490}{}\hyperlink{class_q_a_e_s_encryption_a4dc7e77485e5a3e63eebc99b9386c17b}{00490} QByteArray \hyperlink{class_q_a_e_s_encryption_a4dc7e77485e5a3e63eebc99b9386c17b}{QAESEncryption::removePadding}(\textcolor{keyword}{const} QByteArray &rawText)
 00491 \{
 00492     QByteArray ret(rawText);
 00493     \textcolor{keywordflow}{switch} (m\_padding)

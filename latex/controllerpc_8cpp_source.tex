@@ -1,10 +1,9 @@
-\hypertarget{controllerpc_8cpp_source}{\section{controllerpc.\-cpp}
-}
+\hypertarget{controllerpc_8cpp_source}{}\section{controllerpc.\+cpp}
 
 \begin{DoxyCode}
 00001 \textcolor{preprocessor}{#include "\hyperlink{controllerpc_8h}{controllerpc.h}"}
 00002 
-\hypertarget{controllerpc_8cpp_source_l00009}{}\hyperlink{class_controller_p_c_afa6c92d67bf3b6531c42385fc5938003}{00009} \hyperlink{class_controller_p_c_afa6c92d67bf3b6531c42385fc5938003}{ControllerPC::ControllerPC}()
+\hypertarget{controllerpc_8cpp_source.tex_l00009}{}\hyperlink{class_controller_p_c_afa6c92d67bf3b6531c42385fc5938003}{00009} \hyperlink{class_controller_p_c_afa6c92d67bf3b6531c42385fc5938003}{ControllerPC::ControllerPC}()
 00010 \{
 00011     \textcolor{comment}{// Layer creation}
 00012     view = \textcolor{keyword}{new} \hyperlink{class_view_p_c}{ViewPC}();
@@ -31,18 +30,18 @@
 00031     connect(model, SIGNAL(saveImage(QImage*)), view, SLOT(saveImage(QImage*)));
 00032     connect(model, SIGNAL(setProgress(\textcolor{keywordtype}{int})), view, SLOT(setProgress(\textcolor{keywordtype}{int})));
 00033 \}
-\hypertarget{controllerpc_8cpp_source_l00038}{}\hyperlink{class_controller_p_c_a8814989f7be1214e06b2e720889066b0}{00038} \textcolor{keywordtype}{void} \hyperlink{class_controller_p_c_a8814989f7be1214e06b2e720889066b0}{ControllerPC::abortCircuit}()
+\hypertarget{controllerpc_8cpp_source.tex_l00038}{}\hyperlink{class_controller_p_c_a8814989f7be1214e06b2e720889066b0}{00038} \textcolor{keywordtype}{void} \hyperlink{class_controller_p_c_a8814989f7be1214e06b2e720889066b0}{ControllerPC::abortCircuit}()
 00039 \{
 00040     model->\hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{success} = \textcolor{keyword}{false};
 00041 \}
-\hypertarget{controllerpc_8cpp_source_l00045}{}\hyperlink{class_controller_p_c_aaa59fc90e1ef731eee4560ec87e43707}{00045} \textcolor{keywordtype}{void} \hyperlink{class_controller_p_c_aaa59fc90e1ef731eee4560ec87e43707}{ControllerPC::runTests}()
+\hypertarget{controllerpc_8cpp_source.tex_l00045}{}\hyperlink{class_controller_p_c_aaa59fc90e1ef731eee4560ec87e43707}{00045} \textcolor{keywordtype}{void} \hyperlink{class_controller_p_c_aaa59fc90e1ef731eee4560ec87e43707}{ControllerPC::runTests}()
 00046 \{
 00047     \textcolor{comment}{// FIXME remove all of this mess and use QtTest}
 00048     QMessageBox o;
 00049     o.setText(\textcolor{stringliteral}{"No tests, sorry. Use 'make tests'"});
 00050     o.exec();
 00051 \}
-\hypertarget{controllerpc_8cpp_source_l00056}{}\hyperlink{class_controller_p_c_ac00d29685a7e5b780c01eb438e10f96d}{00056} \textcolor{keywordtype}{void} \hyperlink{class_controller_p_c_ac00d29685a7e5b780c01eb438e10f96d}{ControllerPC::setJPHSDir}(QString dir)
+\hypertarget{controllerpc_8cpp_source.tex_l00056}{}\hyperlink{class_controller_p_c_ac00d29685a7e5b780c01eb438e10f96d}{00056} \textcolor{keywordtype}{void} \hyperlink{class_controller_p_c_ac00d29685a7e5b780c01eb438e10f96d}{ControllerPC::setJPHSDir}(QString dir)
 00057 \{
 00058     model->\hyperlink{class_model_p_c_abd038306f14f22fb885a1697c96d6335}{defaultJPHSDir} = dir;
 00059 \}

@@ -1,45 +1,46 @@
-\hypertarget{qaesencryption_8h}{\section{qaesencryption.\-h}
-\label{qaesencryption_8h}\index{qaesencryption.\-h@{qaesencryption.\-h}}
-}
+\hypertarget{qaesencryption_8h_source}{}\section{qaesencryption.\+h}
+\label{qaesencryption_8h_source}\index{qaesencryption.\+h@{qaesencryption.\+h}}
 
 \begin{DoxyCode}
 00001 \textcolor{preprocessor}{#ifndef QAESENCRYPTION\_H}
-00002 \textcolor{preprocessor}{}\textcolor{preprocessor}{#define QAESENCRYPTION\_H}
-00003 \textcolor{preprocessor}{}
+00002 \textcolor{preprocessor}{#define QAESENCRYPTION\_H}
+00003 
 00004 \textcolor{preprocessor}{#include <QObject>}
 00005 \textcolor{preprocessor}{#include <QByteArray>}
 00006 
-\hypertarget{qaesencryption_8h_source_l00014}{}\hyperlink{class_q_a_e_s_encryption}{00014} \textcolor{keyword}{class }\hyperlink{class_q_a_e_s_encryption}{QAESEncryption} : \textcolor{keyword}{public} QObject
+\hypertarget{qaesencryption_8h_source.tex_l00014}{}\hyperlink{class_q_a_e_s_encryption}{00014} \textcolor{keyword}{class }\hyperlink{class_q_a_e_s_encryption}{QAESEncryption} : \textcolor{keyword}{public} QObject
 00015 \{
 00016     Q\_OBJECT
 00017 \textcolor{keyword}{public}:
-\hypertarget{qaesencryption_8h_source_l00027}{}\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{00027}     \textcolor{keyword}{enum} \hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{Aes} \{
-\hypertarget{qaesencryption_8h_source_l00028}{}\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bda0fa01cdf69e5537499ecfc6f96d6570a}{00028}         \hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bda0fa01cdf69e5537499ecfc6f96d6570a}{AES\_128},
-\hypertarget{qaesencryption_8h_source_l00029}{}\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bda7bd082b240582de6d5f4b8ea604e646b}{00029}         \hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bda7bd082b240582de6d5f4b8ea604e646b}{AES\_192},
-\hypertarget{qaesencryption_8h_source_l00030}{}\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bdacde97774ab1d4c609e04b0dd13a1e1f7}{00030}         \hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bdacde97774ab1d4c609e04b0dd13a1e1f7}{AES\_256}
+\hypertarget{qaesencryption_8h_source.tex_l00027}{}\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{00027}     \textcolor{keyword}{enum} \hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{Aes} \{
+\hypertarget{qaesencryption_8h_source.tex_l00028}{}\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bda0fa01cdf69e5537499ecfc6f96d6570a}{00028}         \hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bda0fa01cdf69e5537499ecfc6f96d6570a}{AES\_128},
+\hypertarget{qaesencryption_8h_source.tex_l00029}{}\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bda7bd082b240582de6d5f4b8ea604e646b}{00029}         \hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bda7bd082b240582de6d5f4b8ea604e646b}{AES\_192},
+\hypertarget{qaesencryption_8h_source.tex_l00030}{}\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bdacde97774ab1d4c609e04b0dd13a1e1f7}{00030}         \hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bdacde97774ab1d4c609e04b0dd13a1e1f7}{AES\_256}
 00031     \};
-\hypertarget{qaesencryption_8h_source_l00040}{}\hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{00040}     \textcolor{keyword}{enum} \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{Mode} \{
-\hypertarget{qaesencryption_8h_source_l00041}{}\hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a4ca7f51778e2adf1f464164a0ba8e75e}{00041}         \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a4ca7f51778e2adf1f464164a0ba8e75e}{ECB},
-\hypertarget{qaesencryption_8h_source_l00042}{}\hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a559bffc55d3599d0a172cc85aed98966}{00042}         \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a559bffc55d3599d0a172cc85aed98966}{CBC},
-\hypertarget{qaesencryption_8h_source_l00043}{}\hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255ae5e2e019df35c7d172fcd7f0ebec5e8e}{00043}         \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255ae5e2e019df35c7d172fcd7f0ebec5e8e}{CFB},
-\hypertarget{qaesencryption_8h_source_l00044}{}\hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a27e2f82decd94080893d61db4a8adcb3}{00044}         \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a27e2f82decd94080893d61db4a8adcb3}{OFB}
+\hypertarget{qaesencryption_8h_source.tex_l00040}{}\hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{00040}     \textcolor{keyword}{enum} \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{Mode} \{
+\hypertarget{qaesencryption_8h_source.tex_l00041}{}\hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a4ca7f51778e2adf1f464164a0ba8e75e}{00041}         \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a4ca7f51778e2adf1f464164a0ba8e75e}{ECB},
+\hypertarget{qaesencryption_8h_source.tex_l00042}{}\hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a559bffc55d3599d0a172cc85aed98966}{00042}         \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a559bffc55d3599d0a172cc85aed98966}{CBC},
+\hypertarget{qaesencryption_8h_source.tex_l00043}{}\hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255ae5e2e019df35c7d172fcd7f0ebec5e8e}{00043}         \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255ae5e2e019df35c7d172fcd7f0ebec5e8e}{CFB},
+\hypertarget{qaesencryption_8h_source.tex_l00044}{}\hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a27e2f82decd94080893d61db4a8adcb3}{00044}         \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a27e2f82decd94080893d61db4a8adcb3}{OFB}
 00045     \};
 00046 
-\hypertarget{qaesencryption_8h_source_l00055}{}\hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{00055}     \textcolor{keyword}{enum} \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{Padding} \{
-\hypertarget{qaesencryption_8h_source_l00056}{}\hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a0842d5191caeff6f871908fa7b9e8e7a}{00056}       \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a0842d5191caeff6f871908fa7b9e8e7a}{ZERO},
-\hypertarget{qaesencryption_8h_source_l00057}{}\hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a74a898410a12cbc5391b47daa04cbd69}{00057}       \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a74a898410a12cbc5391b47daa04cbd69}{PKCS7},
-\hypertarget{qaesencryption_8h_source_l00058}{}\hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{00058}       \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{ISO}
+\hypertarget{qaesencryption_8h_source.tex_l00055}{}\hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{00055}     \textcolor{keyword}{enum} \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{Padding} \{
+\hypertarget{qaesencryption_8h_source.tex_l00056}{}\hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a0842d5191caeff6f871908fa7b9e8e7a}{00056}       \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a0842d5191caeff6f871908fa7b9e8e7a}{ZERO},
+\hypertarget{qaesencryption_8h_source.tex_l00057}{}\hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a74a898410a12cbc5391b47daa04cbd69}{00057}       \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a74a898410a12cbc5391b47daa04cbd69}{PKCS7},
+\hypertarget{qaesencryption_8h_source.tex_l00058}{}\hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{00058}       \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{ISO}
 00059     \};
 00071     \textcolor{keyword}{static} QByteArray \hyperlink{class_q_a_e_s_encryption_a43819eeb6a7cb29fbd3cb6ad640dcbdf}{Crypt}(\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{QAESEncryption::Aes} level, 
-      \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{QAESEncryption::Mode} mode, \textcolor{keyword}{const} QByteArray &rawText, \textcolor{keyword}{const} QByteArray &key,
+      \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{QAESEncryption::Mode} mode, \textcolor{keyword}{const} QByteArray &rawText, \textcolor{keyword}{const} QByteArray &
+      \hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key},
 00072                             \textcolor{keyword}{const} QByteArray &iv = NULL, \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{QAESEncryption::Padding} 
       padding = \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{QAESEncryption::ISO});
 00084     \textcolor{keyword}{static} QByteArray \hyperlink{class_q_a_e_s_encryption_af9baa154a06683049d941bd06ac698fd}{Decrypt}(\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{QAESEncryption::Aes} level, 
-      \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{QAESEncryption::Mode} mode, \textcolor{keyword}{const} QByteArray &rawText, \textcolor{keyword}{const} QByteArray &key,
+      \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{QAESEncryption::Mode} mode, \textcolor{keyword}{const} QByteArray &rawText, \textcolor{keyword}{const} QByteArray &
+      \hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key},
 00085                               \textcolor{keyword}{const} QByteArray &iv = NULL, 
       \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{QAESEncryption::Padding} padding = \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{QAESEncryption::ISO});
 00094     \textcolor{keyword}{static} QByteArray \hyperlink{class_q_a_e_s_encryption_a2112456e057e6dd886694348fbf202cd}{ExpandKey}(\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bd}{QAESEncryption::Aes} level, 
-      \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{QAESEncryption::Mode} mode, \textcolor{keyword}{const} QByteArray &key);
+      \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{QAESEncryption::Mode} mode, \textcolor{keyword}{const} QByteArray &\hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key});
 00102     \textcolor{keyword}{static} QByteArray \hyperlink{class_q_a_e_s_encryption_abb2887bf5623a74053dd19627f3d3055}{RemovePadding}(\textcolor{keyword}{const} QByteArray &rawText, 
       \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{QAESEncryption::Padding} padding);
 00103 
@@ -47,10 +48,12 @@
       \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255}{QAESEncryption::Mode} mode,
 00105                    \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247}{QAESEncryption::Padding} padding = 
       \hyperlink{class_q_a_e_s_encryption_ab0a65cdea4eac21ef32530010d1b0247a4fb686e6a16d4242ff35311d2e7c422d}{QAESEncryption::ISO});
-00116     QByteArray \hyperlink{class_q_a_e_s_encryption_a0c56eddd6f03e93b1f7faad464044d65}{encode}(\textcolor{keyword}{const} QByteArray &rawText, \textcolor{keyword}{const} QByteArray &key, \textcolor{keyword}{const} QByteArray &iv = NULL);
-00127     QByteArray \hyperlink{class_q_a_e_s_encryption_a58f972f2b66c2454edd5112495463bba}{decode}(\textcolor{keyword}{const} QByteArray &rawText, \textcolor{keyword}{const} QByteArray &key, \textcolor{keyword}{const} QByteArray &iv = NULL);
+00116     QByteArray \hyperlink{class_q_a_e_s_encryption_a0c56eddd6f03e93b1f7faad464044d65}{encode}(\textcolor{keyword}{const} QByteArray &rawText, \textcolor{keyword}{const} QByteArray &\hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key}, \textcolor{keyword}{const} QByteArray &iv = 
+      NULL);
+00127     QByteArray \hyperlink{class_q_a_e_s_encryption_a58f972f2b66c2454edd5112495463bba}{decode}(\textcolor{keyword}{const} QByteArray &rawText, \textcolor{keyword}{const} QByteArray &\hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key}, \textcolor{keyword}{const} QByteArray &iv = 
+      NULL);
 00136     QByteArray \hyperlink{class_q_a_e_s_encryption_a4dc7e77485e5a3e63eebc99b9386c17b}{removePadding}(\textcolor{keyword}{const} QByteArray &rawText);
-00145     QByteArray \hyperlink{class_q_a_e_s_encryption_a5bfbb972f84a8376fceed648553c0912}{expandKey}(\textcolor{keyword}{const} QByteArray &key);
+00145     QByteArray \hyperlink{class_q_a_e_s_encryption_a5bfbb972f84a8376fceed648553c0912}{expandKey}(\textcolor{keyword}{const} QByteArray &\hyperlink{namespace_errors_dict_setup_a09c268098d09ffb8e5504f30fa6d5dd9}{key});
 00146 
 00147 signals:
 00148 
