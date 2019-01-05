@@ -87,7 +87,20 @@
    <item>
     <widget class="QLabel" name="label_4">
      <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;PictureCrypt is a project made exclusively by Alex Kovrigin (waleko)&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;and website alexkovrigin.me&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Provided under Unlicense&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;Resources used:&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Icons used are Circle Icons by Nick Roach provided under GPL v3.0&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;And icons from alex.unaux.com&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;QAESEncryption Class from bricke https://github.com/bricke/Qt-AES&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;provided under Unlicense&lt;br/&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;(C) Alex Kovigin 2018&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;PictureCrypt is an open-source project made exclusively by Alex Kovrigin (waleko) and website https://www.alexkovrigin.me&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Provided under Unlicense.&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;Resources used:&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Icons used are 'Circle Icons' by Nick Roach provided under GPL v3.0.&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;QAESEncryption Class from bricke provided under Unlicense.&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Fonts used are 'MS Shell Dlg 2' and 'Gotham'.&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;© Alex Kovrigin 2018-2019&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
      </property>
     </widget>
    </item>
@@ -126,8 +139,14 @@
          <pointsize>14</pointsize>
         </font>
        </property>
+       <property name="locale">
+        <locale language="English" country="UnitedStates"/>
+       </property>
        <property name="text">
         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;By Alex Kovrigin (waleko)&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
        </property>
       </widget>
      </item>

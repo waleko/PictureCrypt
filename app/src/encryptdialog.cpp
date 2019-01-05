@@ -31,7 +31,7 @@ EncryptDialog::~EncryptDialog()
 void EncryptDialog::alert(QString text)
 {
     QMessageBox t;
-    t.setWindowTitle("Message");
+    t.setWindowTitle(tr("Message"));
     t.setIcon(QMessageBox::Warning);
     t.setWindowIcon(QIcon(":/mail.png"));
     t.setText(text);
@@ -82,7 +82,7 @@ void EncryptDialog::on_fileButton_clicked()
 void EncryptDialog::on_buttonBox_accepted()
 {
     if(!goodPercentage) {
-        alert("Your encoding percentage is over 70% which is a bit ambiguous :(");
+        alert(tr("Your encoding percentage is over 70% which is a bit ambiguous."));
         success = false;
         return;
     }

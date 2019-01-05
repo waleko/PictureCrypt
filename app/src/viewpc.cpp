@@ -43,7 +43,7 @@ void ViewPC::on_fileButton_clicked()
     else
         inputFileName = QFileDialog::getOpenFileName(this, tr("Select file"), "/untitled.png", tr("PNG files (*.png);;All Files (*)"));
     // Display the file name
-    ui->fileLabel->setText(inputFileName.isEmpty() ? "File not chosen" : inputFileName);
+    ui->fileLabel->setText(inputFileName.isEmpty() ? tr("File not chosen") : inputFileName);
 }
 /*!
  * \brief ViewPC::on_startButton_clicked Slot to be called, when Start Button is pressed.
@@ -142,7 +142,7 @@ void ViewPC::alert(QString message, bool isWarning)
         box.setIcon(QMessageBox::Information);
     box.setText(message);
     box.setWindowIcon(QIcon(":/icons/mail.png"));
-    box.setWindowTitle("Message");
+    box.setWindowTitle(tr("Message"));
     box.exec();
 }
 /*!
@@ -193,10 +193,10 @@ void ViewPC::setProgress(int val)
 {
     if(val < 0) {
         // Create dialog
-        dialog = new QProgressDialog("Cryption in progress.", "Cancel", 0, 100);
+        dialog = new QProgressDialog(tr("Cryption in progress."), tr("Cancel"), 0, 100);
         connect(dialog, SIGNAL(canceled()), this, SLOT(abortCircuit()));
         progressDialogClosed = false;
-        dialog->setWindowTitle("Processing");
+        dialog->setWindowTitle(tr("Processing"));
         dialog->setWindowIcon(QIcon(":/icons/loading.png"));
         dialog->show();
     }
@@ -233,10 +233,10 @@ void ViewPC::setEncryptMode(bool encr)
     ui->text->setText("");
     ui->text->setEnabled(encr);
     isEncrypt = encr;
-    ui->startButton->setText(encr ? "Continue configuration" : "Start decryption");
-    ui->enLabel1->setText(encr ? "Type in the text for encryption:" : "Text input isn't supported in decryption mode");
+    ui->startButton->setText(encr ? tr("Continue configuration") : tr("Start decryption"));
+    ui->enLabel1->setText(encr ? tr("Type in the text for encryption:") : tr("Text input isn't supported in decryption mode"));
     ui->enLabel1->setEnabled(encr);
-    ui->enLabel2->setText(encr ? "Or use the file dialog to choose a file:" : "Choose a file for decryption:");
+    ui->enLabel2->setText(encr ? tr("Or use the file dialog to choose a file:") : tr("Choose a file for decryption:"));
     ui->comboBox->setEnabled(encr);
 }
 /*!
@@ -255,7 +255,7 @@ void ViewPC::setVersion(QString version)
 QString ViewPC::requestKey()
 {
     bool ok;
-    QString text = QInputDialog::getText(this, tr("QInputDialog::getText()"),
+    QString text = QInputDialog::getText(this, tr("Dialog"),
                                          tr("Enter the keyphrase:"), QLineEdit::Normal,
                                          QDir::home().dirName(), &ok);
     if(text.isEmpty() && ok) {
@@ -292,44 +292,30 @@ void ViewPC::on_actionHelp_triggered()
  */
 void ViewPC::setupErrorsDict()
 {
-    QString locale = QLocale::system().name().left(2);
-    QString folderName = "values-" + locale;
-    QString defaultPath = "://res/values/errors.xml";
-    QString path = "://res/" + folderName + "/errors.xml";
-    if(locale == "en")
-        path = defaultPath;
-
-    QFileInfo foo(path);
-    if(!foo.exists() || !foo.isFile()) {
-        path = defaultPath;
-        qDebug() << locale + " unsupported. Switching to en";
-    }
-
-    QFile file(path);
-    if(!file.open(QFile::ReadOnly | QFile::Text)) {
-        alert("Cannot open config file!");
-        return;
-    }
-    QByteArray readData = file.readAll();
-    file.close();
-    QDomDocument doc;
-    doc.setContent(readData);
-
-    QDomElement root = doc.documentElement();
-    QDomElement Component = root.firstChild().toElement();
-
-    // Loop while there is a child
-    while(!Component.isNull())
-    {
-        // Check if the child tag name is string
-        if (Component.tagName() == "string")
-        {
-            QString name = Component.attribute("name", "no name");
-            QString value = Component.firstChild().toText().data();
-            errorsDict[name] = value;
-        }
-        Component = Component.nextSibling().toElement();
-    }
+    errorsDict["no_data"] = tr("No data given!");
+    errorsDict["muchdata"] = tr("Data size is too big (must be less than 15MB)!");
+    errorsDict["nullimage"] = tr("Invalid / null image!");
+    errorsDict["bigimage"] = tr("Image is too big!");
+    errorsDict["bitsWrong"] = tr("bitsUsed parameter is wrong!");
+    errorsDict["no_key"] = tr("No key given!");
+    errorsDict["big_key"] = tr("Given key is too big!");
+    errorsDict["undefined_mode"] = tr("Undefined mode is only available when decrypting!");
+    errorsDict["wrongmode"] = tr("Given mode isn't available!");
+    errorsDict["inject-v1.4"] = tr("ModelPC::inject() isn't available with v1.4 (advanced) mode");
+    errorsDict["all_modes_fail"] = tr("Given image isn't encrypted by this app (all modes have failed) or is damaged!");
+    errorsDict["nojphs"] = tr("JPHS is not installed!");
+    errorsDict["bitsBufferFail"] = tr("bitsBufferFail (holy crap, contact me or submit a bug)");
+    errorsDict["point_visited_twice"] = tr("One point visited twice (holy crap, contact me or submit a bug)");
+    errorsDict["bigdata"] = tr("Too much data for this image!");
+    errorsDict["veriffail"] = tr("Given image isn't encrypted with this mode or is damaged!");
+    errorsDict["noreaddata"] = tr("No data to read from image!");
+    errorsDict["new_version"] = tr("Version of the image is newer than yours (update!!!)");
+    errorsDict["old_version"] = tr("Version of the image is older than yours");
+    errorsDict["no_input_file"] = tr("No file given!");
+    errorsDict["open_file_fail"] = tr("Cannot open file!");
+    errorsDict["save_file_fail"] = tr("Cannot save file!");
+    errorsDict["decryption_completed"] = tr("Decryption completed!");
+    errorsDict["encryption_completed"] = tr("Encryption completed!");
 }
 
 void ViewPC::on_actionJPHS_path_triggered()

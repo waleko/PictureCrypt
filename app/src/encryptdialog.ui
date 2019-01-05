@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>332</width>
-    <height>285</height>
+    <width>452</width>
+    <height>309</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,6 +16,9 @@
   <property name="windowIcon">
    <iconset resource="resource.qrc">
     <normaloff>:/icons/image.png</normaloff>:/icons/image.png</iconset>
+  </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_4">
    <item>
@@ -73,6 +76,13 @@
           <widget class="QLineEdit" name="keyLine"/>
          </item>
         </layout>
+       </item>
+       <item>
+        <widget class="Line" name="line_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
        </item>
        <item>
         <layout class="QVBoxLayout" name="verticalLayout">
@@ -158,8 +168,14 @@
          </item>
          <item>
           <widget class="QLabel" name="label_7">
+           <property name="lineWidth">
+            <number>1</number>
+           </property>
            <property name="text">
             <string>Adviced percentage is &lt;10%, &gt;70% will be rejected</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
            </property>
           </widget>
          </item>

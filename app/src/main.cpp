@@ -1,6 +1,7 @@
 #include "controllerpc.h"
 #include <QApplication>
 #include <QTranslator>
+#include <QLocale>
 /*!
  * \mainpage PictureCrypt
  * Project made using QT Creator in C++
@@ -117,17 +118,14 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
-    QTranslator qtTranslator;
-    qtTranslator.load("qt_" + QLocale::system().name(),
-            QLibraryInfo::location(QLibraryInfo::TranslationsPath));
-    a.installTranslator(&qtTranslator);
 
-    QTranslator myappTranslator;
-    myappTranslator.load("myapp_" + QLocale::system().name());
-    a.installTranslator(&myappTranslator);
-
+    QTranslator translator;
+    if (translator.load(QLocale(), QLatin1String("picturecrypt"), QLatin1String("_"), QLatin1String(":/translations"))) {
+        a.installTranslator(&translator);
+    } else {
+        qDebug() << "[!!!] cannot load translator " << QLocale::system().name() << " check content of translations.qrc";
+    }
 
     ControllerPC w;
-
     return a.exec();
 }
