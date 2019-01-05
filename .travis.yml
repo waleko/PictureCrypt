@@ -25,15 +25,14 @@ install:
 #before_script:
 #  - cd src
 script:
-  - bash ./scripts/build.sh
-  - cd tests
-  - ./tests
-  - cd ..
+  - sh scripts/build.sh
+  - sh scripts/test.sh
+#  - 
 #  - bash ./scripts/clean.sh
 
 before_deploy:
   - cd src/doxy
-  - bash ../../scripts/deploy.sh
+  - sh ../../scripts/deploy.sh
 #  - cd ../..
 #  - pip install --user awscli
 #  - aws s3 sync s3://mxe-qt/ mxe --region us-west-1 > s3.log
