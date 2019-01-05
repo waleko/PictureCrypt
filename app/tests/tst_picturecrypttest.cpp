@@ -117,6 +117,7 @@ private slots:
         QTest::newRow("ok_advanced_1") << read("://test_files/longtext.txt")
                                      << QImage("://test_files/bigpicture.jpg")
                                      << "ok" << 2 << "roger dodger" << 8;
+
     }
     void test_undefined_decrypt()
     {
