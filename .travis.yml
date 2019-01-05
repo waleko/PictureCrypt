@@ -26,10 +26,13 @@ install:
 #  - cd src
 script:
   - bash ./scripts/build.sh
+  - cd tests
+  - ./tests
+  - cd ..
 #  - bash ./scripts/clean.sh
-  - cd src/doxy
 
 before_deploy:
+  - cd src/doxy
   - bash ../../scripts/deploy.sh
 #  - cd ../..
 #  - pip install --user awscli
