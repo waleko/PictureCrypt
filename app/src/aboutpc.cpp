@@ -18,5 +18,5 @@ AboutPC::~AboutPC()
  */
 void AboutPC::setVersion(QString version)
 {
-    ui->versionLabel->setText("Version " + version);
+    ui->versionLabel->setText(tr("Version ") + version);
 }

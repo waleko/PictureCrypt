@@ -174,4 +174,4 @@
 \contentsline {section}{\numberline {8.25}viewpc.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h File Reference}{100}{section.8.25}
 \contentsline {subsection}{\numberline {8.25.1}Detailed Description}{101}{subsection.8.25.1}
 \contentsline {section}{\numberline {8.26}viewpc.\discretionary {\unhbox \voidb@x \hbox {\relax \fontsize {7}{8}\selectfont $\leftarrow \joinrel \rhook $}}{}{}h}{101}{section.8.26}
-\contentsline {chapter}{Index}{103}{section*.141}
+\contentsline {chapter}{Index}{103}{section*.140}

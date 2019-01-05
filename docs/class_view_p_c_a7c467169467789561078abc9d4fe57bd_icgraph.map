@@ -1,8 +1,6 @@
 <map id="ViewPC::alert" name="ViewPC::alert">
-<area shape="rect" id="node2" href="$class_view_p_c.html#a456d75b7c5d3a089302a576e7359f1f4" title="ViewPC::on_startButton_clicked Slot to be called, when Start Button is pressed. " alt="" coords="373,44,536,85"/>
-<area shape="rect" id="node3" href="$class_view_p_c.html#aaff156103970be7c777beedaf0020604" title="ViewPC::saveData Slot to be called to save data using QFileDialog. " alt="" coords="173,30,308,56"/>
-<area shape="rect" id="node4" href="$class_view_p_c.html#a7901ce10ffaaf2387bef1db7feea342d" title="ViewPC::saveImage Slot to be called to save image using QFileDialog. " alt="" coords="169,80,312,107"/>
-<area shape="rect" id="node5" href="$class_view_p_c.html#a559c95675ec98b15451f3bca47033d9c" title="ViewPC::requestKey Request keyphrase from user using InputDialog. " alt="" coords="169,131,313,158"/>
-<area shape="rect" id="node6" href="$class_view_p_c.html#a89236a0bb8760f02e984b85a8571934c" title="ViewPC::setupErrorsDict Setups errorsDict from strings.xml. " alt="" coords="156,182,325,208"/>
-<area shape="rect" id="node7" href="$class_view_p_c.html#a33c96c61f61042319c66c19059836b7f" title="ViewPC::ViewPC" alt="" coords="391,182,518,208"/>
+<area shape="rect" id="node2" href="$class_view_p_c.html#a456d75b7c5d3a089302a576e7359f1f4" title="ViewPC::on_startButton_clicked Slot to be called, when Start Button is pressed. " alt="" coords="348,46,511,87"/>
+<area shape="rect" id="node3" href="$class_view_p_c.html#aaff156103970be7c777beedaf0020604" title="ViewPC::saveData Slot to be called to save data using QFileDialog. " alt="" coords="161,28,295,54"/>
+<area shape="rect" id="node4" href="$class_view_p_c.html#a7901ce10ffaaf2387bef1db7feea342d" title="ViewPC::saveImage Slot to be called to save image using QFileDialog. " alt="" coords="157,78,299,105"/>
+<area shape="rect" id="node5" href="$class_view_p_c.html#a559c95675ec98b15451f3bca47033d9c" title="ViewPC::requestKey Request keyphrase from user using InputDialog. " alt="" coords="156,129,300,156"/>
 </map>

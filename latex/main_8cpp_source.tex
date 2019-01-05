@@ -4,21 +4,21 @@
 00001 \textcolor{preprocessor}{#include "\hyperlink{controllerpc_8h}{controllerpc.h}"}
 00002 \textcolor{preprocessor}{#include <QApplication>}
 00003 \textcolor{preprocessor}{#include <QTranslator>}
-\hypertarget{main_8cpp_source.tex_l00117}{}\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{00117} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[])
-00118 \{
-00119     QApplication a(argc, argv);
-00120     QTranslator qtTranslator;
-00121     qtTranslator.load(\textcolor{stringliteral}{"qt\_"} + QLocale::system().name(),
-00122             QLibraryInfo::location(QLibraryInfo::TranslationsPath));
-00123     a.installTranslator(&qtTranslator);
-00124 
-00125     QTranslator myappTranslator;
-00126     myappTranslator.load(\textcolor{stringliteral}{"myapp\_"} + QLocale::system().name());
-00127     a.installTranslator(&myappTranslator);
+00004 \textcolor{preprocessor}{#include <QLocale>}
+\hypertarget{main_8cpp_source.tex_l00118}{}\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{00118} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[])
+00119 \{
+00120     QApplication a(argc, argv);
+00121 
+00122     QTranslator translator;
+00123     \textcolor{keywordflow}{if} (translator.load(QLocale(), QLatin1String(\textcolor{stringliteral}{"picturecrypt"}), QLatin1String(\textcolor{stringliteral}{"\_"}), QLatin1String(\textcolor{stringliteral}{"
+      :/translations"}))) \{
+00124         a.installTranslator(&translator);
+00125     \} \textcolor{keywordflow}{else} \{
+00126         qDebug() << \textcolor{stringliteral}{"[!!!] cannot load translator "} << QLocale::system().name() << \textcolor{stringliteral}{" check content of
+       translations.qrc"};
+00127     \}
 00128 
-00129 
-00130     \hyperlink{class_controller_p_c}{ControllerPC} w;
-00131 
-00132     \textcolor{keywordflow}{return} a.exec();
-00133 \}
+00129     \hyperlink{class_controller_p_c}{ControllerPC} w;
+00130     \textcolor{keywordflow}{return} a.exec();
+00131 \}
 \end{DoxyCode}
