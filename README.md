@@ -14,45 +14,65 @@ Get the binary files at [latest release page](https://github.com/waleko/PictureC
 Or download latest **UNSTABLE** binary file for linux [here](https://github.com/waleko/PictureCrypt/raw/gh-pages/src/build/Release/PictureCrypt)
 
 ## External use
-ModelPC class can be used externally (without UI)
+You can use ModelPC class separately from everything else, except for QAESEncryption (so /aes folder)
+### Use API
 ```
+// Includes
 #include <modelpc.h>
-#include <testpc.h>
-#include <QByteArray>
 #include <QImage>
+#include <QByteArray>
+#include <QString>
+#include <QDebug> // just for showcase
 
-...
+// Basic setup
+QByteArray data("some_file.txt");
+QImage *image = new QImage("some_big_enough_image.jpg");
+QString key = "some_password";
+int bitsUsed = 1; // must be from 1 to 8
 
-// Testing the ModelPC
-if(TestPC::Test())
-	return;
-ModelPC * model = new ModelPC();
+// Encrypting
+QString error1, error2;
+QImage *normal_resultImage = ModelPC::Encrypt(data, image, 1, key, bitsUsed, &error1);
+QImage *advanced_resultImage = ModelPC::Encrypt(data, image, 2, key, bitsUsed /* not really used here, so put here any number from 1 to 8*/, &error2);
 
-// Embedding
-QImage * resultImage = model->start(QByteArray data, // Data to be embedded
-									QImage *image, // Image for embedding
-									int mode, // Mode of embedding
-									QString key = "", // Key for extra-encryption (is required, if not given, error will show up)
-									int bitsUsed = 8, // Bits per Byte used (better explaination ModelPC::bitsUsed)
-									QString *error = nullptr); // Error output, if everything is ok, error will be "ok"
-if(*error != "ok")
-	return;
-// Note *error is just a code of error (like "muchdata", dictionary of error codes is also available on github.
+// Decrypting with given mode
+QString error3, error4, error5, error6;
+QByteArray output_normal = ModelPC::Decrypt(normal_resultImage, key, 1, &error3);
+QByteArray output_advanced = ModelPC::Decrypt(advanced_resultImage, key, 2, &error4);
 
-// De-embedding
-QByteArray output = model->decrypt(QImage * image, // Image with hidden data
-									 QString key = "" // Key for extra-encryption
-								   QString *_error = nullptr); // Error output
-if(data == output)
-	qDebug() << "Great success!";
+// Decrypting without given mode
+// PictureCrypt can detect the mode of the image and adapt.
+QByteArray output_normal_undefined = ModelPC::Decrypt(normal_resultImage, key, 0, &error5);
+QByteArray output_advanced_undefined = ModelPC::Decrypt(advanced_resultImage, key, 0, &error6);
+
+// Check
+bool data_good =
+		data == output_normal &&
+		data == output_advanced &&
+		data == output_normal_undefined &&
+		data == output_advanced_undefined;
+bool no_errors =
+		error1 == "ok" &&
+		error2 == "ok" &&
+		error3 == "ok" &&
+		error4 == "ok" &&
+		error5 == "ok" &&
+		error6 == "ok";
+if(data_good && no_errors)
+	qDebug() << "PASS";
 else
-	qDebug() << "Fiasco :(";
+	qDebug() << "FAIL";
+
 ```
+### Tests
+PictureCrypt comes with QT tests ready
+#### Run tests
+* Run them directly from IDE (e.g. Qt Creator)
 
 ## Available modes of embedding
 * 0 - Not Defined, used for decryption, so it auto-detects (invalid on encryption as you must select the encryption type).
-* **1** - v1.3, only one available on versions 1.3+, pretty basic, but stable.
-* 2 - v1.4, advanced encryption mode, available on versions v1.4+.
+* 1 - v1.3, only one available on versions 1.3+, pretty basic.
+* **2** - v1.4, advanced encryption mode, available on versions v1.4+ (works a lot longer than v1.3, can work for >40s on slow machines).
 * 3 - JPHS, requires manually installed JPHS and specified directory (not currently available).
 
 ## Documentation
