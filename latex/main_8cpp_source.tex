@@ -3,11 +3,22 @@
 \begin{DoxyCode}
 00001 \textcolor{preprocessor}{#include "\hyperlink{controllerpc_8h}{controllerpc.h}"}
 00002 \textcolor{preprocessor}{#include <QApplication>}
-\hypertarget{main_8cpp_source.tex_l00116}{}\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{00116} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[])
-00117 \{
-00118     QApplication a(argc, argv);
-00119     \hyperlink{class_controller_p_c}{ControllerPC} w;
-00120 
-00121     \textcolor{keywordflow}{return} a.exec();
-00122 \}
+00003 \textcolor{preprocessor}{#include <QTranslator>}
+\hypertarget{main_8cpp_source.tex_l00117}{}\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{00117} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[])
+00118 \{
+00119     QApplication a(argc, argv);
+00120     QTranslator qtTranslator;
+00121     qtTranslator.load(\textcolor{stringliteral}{"qt\_"} + QLocale::system().name(),
+00122             QLibraryInfo::location(QLibraryInfo::TranslationsPath));
+00123     a.installTranslator(&qtTranslator);
+00124 
+00125     QTranslator myappTranslator;
+00126     myappTranslator.load(\textcolor{stringliteral}{"myapp\_"} + QLocale::system().name());
+00127     a.installTranslator(&myappTranslator);
+00128 
+00129 
+00130     \hyperlink{class_controller_p_c}{ControllerPC} w;
+00131 
+00132     \textcolor{keywordflow}{return} a.exec();
+00133 \}
 \end{DoxyCode}
