@@ -26,7 +26,9 @@ install:
 #  - cd src
 script:
   - sh scripts/build.sh
-  - sh scripts/test.sh
+  - cd tests
+  - QT_QPA_PLATFORM=offscreen make check > testing.log
+  - cd ..
 #  - 
 #  - bash ./scripts/clean.sh
 
