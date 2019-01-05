@@ -7,7 +7,7 @@ cd src
 sh ../scripts/clean.sh
 
 cd ../tests
-sh ../scripts/clean.sh
+# sh ../scripts/clean.sh
 
 cd ..
 sh scripts/clean.sh
