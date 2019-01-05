@@ -48,12 +48,12 @@ private slots:
         QTest::newRow("ok_advanced_1") << read("://test_files/longtext.txt")
                                      << QImage("://test_files/bigpicture.jpg")
                                      << "ok" << 2 << "roger dodger" << 8;
-        QTest::newRow("muchdata_normal_8") << read("://test_files/longtext.txt")
+        QTest::newRow("bigdata_normal_8") << read("://test_files/longtext.txt")
                                      << QImage("://test_files/tinypicture.png")
-                                     << "muchdata" << 1 << "qwerty" << 1;
-        QTest::newRow("muchdata_advanced_8") << read("://test_files/longtext.txt")
+                                     << "bigdata" << 1 << "qwerty" << 1;
+        QTest::newRow("bigdata_advanced_8") << read("://test_files/longtext.txt")
                                      << QImage("://test_files/tinypicture.png")
-                                     << "muchdata" << 2 << "banana" << 1;
+                                     << "bigdata" << 2 << "banana" << 1;
         QTest::newRow("nodata_normal_8") << QByteArray("")
                                      << QImage("://test_files/bigpicture.png")
                                      << "nodata" << 1 << "pths" << 1;

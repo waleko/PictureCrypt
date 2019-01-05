@@ -15,7 +15,7 @@ sudo apt-get install -y qt511-meta-minimal
 sudo apt-get install -y g++-6
 
   # Some random opengl related stuff adviced by a chinese
-sudo apt install mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev
+sudo apt install -y mesa-common-dev libgl1-mesa-dev libglu1-mesa-dev
   
   # Install doxy + graphviz
 sudo apt-get install -y doxygen
