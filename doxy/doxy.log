@@ -11,6 +11,7 @@ Searching for files in directory /home/travis/build/waleko/PictureCrypt/app/src
 Searching for files in directory /home/travis/build/waleko/PictureCrypt/app/src/aes
 Searching for files in directory /home/travis/build/waleko/PictureCrypt/app/src/build
 Searching for files in directory /home/travis/build/waleko/PictureCrypt/app/src/build/Release
+Searching for files in directory /home/travis/build/waleko/PictureCrypt/app/src/fonts
 Searching for files in directory /home/travis/build/waleko/PictureCrypt/app/src/icons
 Searching for files in directory /home/travis/build/waleko/PictureCrypt/app/src/translations
 Reading and parsing tag files
@@ -481,5 +482,5 @@ Patching output file 40/43
 Patching output file 41/43
 Patching output file 42/43
 Patching output file 43/43
-lookup cache used 351/65536 hits=3139 misses=354
+lookup cache used 351/65536 hits=3131 misses=354
 finished...

@@ -47,7 +47,8 @@ FORMS += \
 
 RESOURCES += \
     resource.qrc \
-    translations.qrc
+    translations.qrc \
+    fonts.qrc
 
 CONFIG(debug, debug|release) {
     DESTDIR         = $$OUT_PWD/build/Debug

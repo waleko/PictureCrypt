@@ -140,16 +140,22 @@ An image-steganography project
 <h4 id="run-tests">Run tests</h4>
 <ul>
 <li>Run them directly from IDE (e.g. Qt Creator)</li>
-<li>Run with 'make' ```bash # Go to tests directory cd app/tests</li>
+<li>Run with 'make'</li>
 </ul>
-<h1 id="install-required-packages">Install required packages</h1>
-<p>bash ../scripts/install.sh</p>
-<h1 id="build-tests">Build tests</h1>
-<p>bash ../scripts/build.sh</p>
-<h1 id="run-tests-1">Run tests</h1>
-<p>QT_QPA_PLATFORM=offscreen make check</p>
-<h1 id="clean-optional">Clean (optional)</h1>
-<p>bash ../scripts/clean.sh ```</p>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># Go to tests directory</span>
+<span class="kw">cd</span> app/tests
+
+<span class="co"># Install required packages</span>
+<span class="kw">bash</span> ../scripts/install.sh
+
+<span class="co"># Build tests</span>
+<span class="kw">bash</span> ../scripts/build.sh
+
+<span class="co"># Run tests</span>
+<span class="ot">QT_QPA_PLATFORM=</span>offscreen <span class="kw">make</span> check
+
+<span class="co"># Clean (optional)</span>
+<span class="kw">bash</span> ../scripts/clean.sh</code></pre></div>
 <h2 id="available-modes-of-encrypting">Available modes of encrypting</h2>
 <ul>
 <li>0 - Not Defined, used for decryption, so it auto-detects (invalid on encryption as you must select the encryption type).</li>
@@ -189,6 +195,7 @@ An image-steganography project
 <ul>
 <li><a href="https://github.com/bricke/Qt-AES">QAESEncryption</a> by <a href="https://github.com/bricke/">bricke</a> (provided under <a href="https://unlicense.org/">UNLICENSE</a>)</li>
 <li>'Circle Icons' by Nick Roach provided under GPL v3.0.</li>
+<li>'MS Shell Dlg 2' font used and 'Montserrat' font used under the SIL Open Font License.</li>
 </ul>
 <h2 id="contact">Contact</h2>
 <p>Question or suggestions are welcome! Email me <script type="text/javascript">
@@ -196,7 +203,7 @@ An image-steganography project
 h='&#x67;&#x6d;&#x61;&#x69;&#108;&#46;&#x63;&#x6f;&#x6d;';a='&#64;';n='&#x61;&#46;&#x6b;&#x6f;&#118;&#114;&#x69;&#x67;&#x69;&#110;&#48;';e=n+a+h;
 document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'" clas'+'s="em' + 'ail">'+e+'<\/'+'a'+'>');
 // -->
-</script><noscript>&#x61;&#46;&#x6b;&#x6f;&#118;&#114;&#x69;&#x67;&#x69;&#110;&#48;&#32;&#x61;&#116;&#32;&#x67;&#x6d;&#x61;&#x69;&#108;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;</noscript> or visit my site https://alexkovrigin.me</p>
+</script><noscript>&#x61;&#46;&#x6b;&#x6f;&#118;&#114;&#x69;&#x67;&#x69;&#110;&#48;&#32;&#x61;&#116;&#32;&#x67;&#x6d;&#x61;&#x69;&#108;&#32;&#100;&#x6f;&#116;&#32;&#x63;&#x6f;&#x6d;</noscript> or visit <a href="https://alexkovrigin.me">my site</a></p>
 <h2 id="license">License</h2>
 <p>This software is provided under the <a href="http://unlicense.org/">UNLICENSE</a></p>
 </body>

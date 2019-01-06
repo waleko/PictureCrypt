@@ -202,10 +202,10 @@
     \subitem {version}, \hyperpage{44}
     \subitem {version\+String}, \hyperpage{44}
     \subitem {zip}, \hyperpage{43}
-  \item {modelpc.\+cpp}, \hyperpage{73}
-  \item {modelpc.\+h}, \hyperpage{83}, \hyperpage{85}
+  \item {modelpc.\+cpp}, \hyperpage{73, 74}
+  \item {modelpc.\+h}, \hyperpage{84, 85}
   \item {multiply}
-    \subitem {qaesencryption.\+cpp}, \hyperpage{86}
+    \subitem {qaesencryption.\+cpp}, \hyperpage{87}
 
   \indexspace
 
@@ -271,7 +271,7 @@
     \subitem {remove\+Padding}, \hyperpage{53}
     \subitem {Z\+E\+RO}, \hyperpage{47}
   \item {qaesencryption.\+cpp}, \hyperpage{86, 87}
-    \subitem {multiply}, \hyperpage{86}
+    \subitem {multiply}, \hyperpage{87}
     \subitem {x\+Time}, \hyperpage{87}
   \item {qaesencryption.\+h}, \hyperpage{93, 94}
 
@@ -355,8 +355,8 @@
     \subitem {set\+Version}, \hyperpage{63}
     \subitem {setup\+Errors\+Dict}, \hyperpage{63}
     \subitem {View\+PC}, \hyperpage{55}
-  \item {viewpc.\+cpp}, \hyperpage{96}
-  \item {viewpc.\+h}, \hyperpage{100, 101}
+  \item {viewpc.\+cpp}, \hyperpage{96, 97}
+  \item {viewpc.\+h}, \hyperpage{100}, \hyperpage{102}
 
   \indexspace
 
