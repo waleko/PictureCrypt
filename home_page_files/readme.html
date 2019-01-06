@@ -59,7 +59,8 @@ An image-steganography project
 <h2 id="download">Download</h2>
 <p>Get the binary files at <a href="https://github.com/waleko/PictureCrypt/releases/latest">latest release page</a> Or download latest <strong>UNSTABLE</strong> binary file for Linux <a href="https://github.com/waleko/PictureCrypt/raw/gh-pages/src/build/Release/PictureCrypt">here</a></p>
 <h2 id="external-use">External use</h2>
-<p>You can use ModelPC class separately from everything else, except for QAESEncryption (so /aes folder) ### Use API</p>
+<p>You can use ModelPC class separately from everything else, except for QAESEncryption (so /aes folder)</p>
+<h3 id="use-api">Use API</h3>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Includes</span>
 <span class="ot">#include &quot;modelpc.h&quot;</span>
 <span class="ot">#include &lt;QImage&gt;</span>
@@ -135,21 +136,20 @@ An image-steganography project
 <span class="kw">else</span>
     <span class="fu">qDebug</span>() &lt;&lt; <span class="st">&quot;FAIL&quot;</span>;</code></pre></div>
 <h3 id="tests">Tests</h3>
-<p>PictureCrypt comes with QT tests ready #### Run tests * Run them directly from IDE (e.g. Qt Creator) * Run with 'make'</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># Go to tests directory</span>
-<span class="kw">cd</span> app/tests
-
-<span class="co"># Install required packages</span>
-<span class="kw">bash</span> ../scripts/install.sh
-
-<span class="co"># Build tests</span>
-<span class="kw">bash</span> ../scripts/build.sh
-
-<span class="co"># Run tests</span>
-<span class="ot">QT_QPA_PLATFORM=</span>offscreen <span class="kw">make</span> check
-
-<span class="co"># Clean (optional)</span>
-<span class="kw">bash</span> ../scripts/clean.sh</code></pre></div>
+<p>PictureCrypt comes with QT tests ready</p>
+<h4 id="run-tests">Run tests</h4>
+<ul>
+<li>Run them directly from IDE (e.g. Qt Creator)</li>
+<li>Run with 'make' ```bash # Go to tests directory cd app/tests</li>
+</ul>
+<h1 id="install-required-packages">Install required packages</h1>
+<p>bash ../scripts/install.sh</p>
+<h1 id="build-tests">Build tests</h1>
+<p>bash ../scripts/build.sh</p>
+<h1 id="run-tests-1">Run tests</h1>
+<p>QT_QPA_PLATFORM=offscreen make check</p>
+<h1 id="clean-optional">Clean (optional)</h1>
+<p>bash ../scripts/clean.sh ```</p>
 <h2 id="available-modes-of-encrypting">Available modes of encrypting</h2>
 <ul>
 <li>0 - Not Defined, used for decryption, so it auto-detects (invalid on encryption as you must select the encryption type).</li>
