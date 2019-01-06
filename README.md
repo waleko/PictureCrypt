@@ -1,28 +1,40 @@
-# PictureCrypt
-Make your pictures crypted.
+<p align="center">
+  <a href="https://alexkovrigin.me/PictureCrypt">
+    <img alt="PictureCrypt" src="./app/src/icons/unlocked.png">
+  </a>
+</p>
 
-[![Build Status](https://travis-ci.com/waleko/PictureCrypt.svg?branch=master)](https://travis-ci.com/waleko/PictureCrypt)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/0c1f3e2bd51c4feebf5a4ce9d2692660)](https://app.codacy.com/app/waleko/PictureCrypt?utm_source=github.com&utm_medium=referral&utm_content=waleko/PictureCrypt&utm_campaign=Badge_Grade_Dashboard)
+<p align="center">
+  An image-steganography project
+</p>
+
+<p align="center">
+  <a href="https://travis-ci.com/waleko/PictureCrypt"><img alt="Build Status" src="https://travis-ci.com/waleko/PictureCrypt.svg?branch=master"></a>
+  <a class="badge-align" href="https://www.codacy.com/app/waleko/PictureCrypt?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=waleko/PictureCrypt&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/c9106eb67e164d7d87de6d92448a3355"/></a>
+  <a href="https://gitter.im/waleko/PictureCrypt"><img src="https://badges.gitter.im/waleko/PictureCrypt.png"/></a>
+</p>
 
 ## About
-A simple steganography project which hides data in images
+A simple steganography project which hides data in images.
 This project is built using MVC pattern and features GUI.
 [Qt](https://qt.io) and [QAESEncryption](https://github.com/bricke/Qt-AES) by [bricke](https://github.com/bricke) were used.
 
 ## Download
 Get the binary files at [latest release page](https://github.com/waleko/PictureCrypt/releases/latest)
-Or download latest **UNSTABLE** binary file for linux [here](https://github.com/waleko/PictureCrypt/raw/gh-pages/src/build/Release/PictureCrypt)
+Or download latest **UNSTABLE** binary file for Linux [here](https://github.com/waleko/PictureCrypt/raw/gh-pages/src/build/Release/PictureCrypt)
 
 ## External use
 You can use ModelPC class separately from everything else, except for QAESEncryption (so /aes folder)
 ### Use API
-```
+```cpp
 // Includes
 #include <modelpc.h>
 #include <QImage>
 #include <QByteArray>
 #include <QString>
 #include <QDebug> // just for showcase
+
+...
 
 // Basic setup
 QByteArray data("some_file.txt");
@@ -32,53 +44,114 @@ int bitsUsed = 1; // must be from 1 to 8
 
 // Encrypting
 QString error1, error2;
-QImage *normal_resultImage = ModelPC::Encrypt(data, image, 1, key, bitsUsed, &error1);
-QImage *advanced_resultImage = ModelPC::Encrypt(data, image, 2, key, bitsUsed /* not really used here, so put here any number from 1 to 8*/, &error2);
+QImage *normal_resultImage = ModelPC::Encrypt(
+        data,
+        image,
+        1,
+        key,
+        bitsUsed,
+        &error1);
+QImage *advanced_resultImage = ModelPC::Encrypt(
+        data,
+        image,
+        2, key,
+        bitsUsed /* not really used here, so put here any number from 1 to 8*/,
+        &error2);
 
 // Decrypting with given mode
 QString error3, error4, error5, error6;
-QByteArray output_normal = ModelPC::Decrypt(normal_resultImage, key, 1, &error3);
-QByteArray output_advanced = ModelPC::Decrypt(advanced_resultImage, key, 2, &error4);
+QByteArray output_normal = ModelPC::Decrypt(
+        normal_resultImage,
+        key,
+        1,
+        &error3);
+QByteArray output_advanced = ModelPC::Decrypt(
+        advanced_resultImage,
+        key,
+        2,
+        &error4);
 
 // Decrypting without given mode
 // PictureCrypt can detect the mode of the image and adapt.
-QByteArray output_normal_undefined = ModelPC::Decrypt(normal_resultImage, key, 0, &error5);
-QByteArray output_advanced_undefined = ModelPC::Decrypt(advanced_resultImage, key, 0, &error6);
+QByteArray output_normal_undefined = ModelPC::Decrypt(
+        normal_resultImage,
+        key,
+        0,
+        &error5);
+QByteArray output_advanced_undefined = ModelPC::Decrypt(
+        advanced_resultImage,
+        key,
+        0,
+        &error6);
 
-// Check
+// Check (better testing with [running tests](#run-tests)
 bool data_good =
-		data == output_normal &&
-		data == output_advanced &&
-		data == output_normal_undefined &&
-		data == output_advanced_undefined;
+        data == output_normal &&
+        data == output_advanced &&
+        data == output_normal_undefined &&
+        data == output_advanced_undefined;
 bool no_errors =
-		error1 == "ok" &&
-		error2 == "ok" &&
-		error3 == "ok" &&
-		error4 == "ok" &&
-		error5 == "ok" &&
-		error6 == "ok";
+        error1 == "ok" &&
+        error2 == "ok" &&
+        error3 == "ok" &&
+        error4 == "ok" &&
+        error5 == "ok" &&
+        error6 == "ok";
 if(data_good && no_errors)
-	qDebug() << "PASS";
+    qDebug() << "PASS";
 else
-	qDebug() << "FAIL";
+    qDebug() << "FAIL";
 
 ```
 ### Tests
 PictureCrypt comes with QT tests ready
 #### Run tests
 * Run them directly from IDE (e.g. Qt Creator)
+* Run with 'make'
+```bash
+# Go to tests directory
+cd app/tests
 
-## Available modes of embedding
+# Install required packages
+bash ../scripts/install.sh
+
+# Build tests
+bash ../scripts/build.sh
+
+# Run tests
+QT_QPA_PLATFORM=offscreen make check
+
+# Clean (optional)
+bash ../scripts/clean.sh
+```
+
+## Available modes of encrypting
 * 0 - Not Defined, used for decryption, so it auto-detects (invalid on encryption as you must select the encryption type).
 * 1 - v1.3, only one available on versions 1.3+, pretty basic.
-* **2** - v1.4, advanced encryption mode, available on versions v1.4+ (works a lot longer than v1.3, can work for >40s on slow machines).
+* **2** - v1.4, advanced (preferred) encryption mode, available on versions v1.4+ (works a lot longer than v1.3, can work for >40s on slow machines).
 * 3 - JPHS, requires manually installed JPHS and specified directory (not currently available).
 
 ## Documentation
-Doxygen documentation available [here](https://alexkovrigin.me/PictureCrypt)
+* HTML documentation available [here](https://alexkovrigin.me/PictureCrypt)
+* PDF documentation available [here](https://github.com/waleko/PictureCrypt/raw/gh-pages/refman.pdf)
 
-PDF documentation available [here](https://github.com/waleko/PictureCrypt/raw/gh-pages/refman.pdf)
+## Continuous integration
+Continuous integration is fulfilled via Travis CI platform. [link](https://travis-ci.com/waleko/PictureCrypt)
+
+## Help translate this project
+If you'd like to translate PictureCrypt to your language here are steps to do so:
+* Install QT and QT Linguist with it
+* Clone the project.
+* Go to PictureCrypt/app/src/
+* Add a filename to TRANSLATIONS in app/src/src.pro file. Filename must be 'picturecrypt_<your language>.ts' (e.g. 'picturecrypt_fr.ts')
+* Run `lupdate src.pro`, it will generate that .ts file. If there is an error: "Maybe you forgot to set your environment?" Go to Project (on the left-hand side) ->(expand) Build environment -> Open terminal and run `lupdate src.pro`.
+* Go to translations/
+* Run `linguist picturecrypt_<your language>.ts`. The Qt Linguist will appear, where you can translate given text from English (there are a couple of html entries, just edit their text part). **If you don't translate the whole thing, your work will be still appreciated!**
+* Either go to File -> Compile or run `lrelease picturecrypt_<your language>.ts`.
+* Add your picturecrypt_<your language>.ts to app/src/translations.qrc resource file.
+* Create a pull request in GitHub with your work.
+
+If you have any trouble, [contact me](#contact) and I will sincerely try to help you as I really don't think, that anyone will decide to help me translate. 😔
 
 ## Dependencies
 * [qtcore](https://doc.qt.io/qt-5.11/qtcore-index.html)
@@ -87,10 +160,11 @@ PDF documentation available [here](https://github.com/waleko/PictureCrypt/raw/gh
 
 ## Works of other people used in this project
  * [QAESEncryption](https://github.com/bricke/Qt-AES) by [bricke](https://github.com/bricke/) (provided under [UNLICENSE](https://unlicense.org/))
+ * 'Circle Icons' by Nick Roach provided under GPL v3.0.
 
 ## Contact
 Question or suggestions are welcome!
-Email me a.kovrigin0@gmail.com or visit my site https://alexkovrigin.me
+Email me [a.kovrigin0@gmail.com](mailto:a.kovrigin0@gmail.com) or visit my site https://alexkovrigin.me
 
 ## License
 This software is provided under the [UNLICENSE](http://unlicense.org/)
