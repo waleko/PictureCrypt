@@ -23,4 +23,4 @@ sudo apt-get install -y doxygen-doc
 sudo apt-get install -y doxygen-latex
 sudo apt-get install -y doxygen-gui
 sudo apt-get install -y graphviz
-sudo apt-get install -y markdown
+sudo apt-get install -y pandoc
