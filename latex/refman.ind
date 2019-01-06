@@ -25,7 +25,7 @@
     \subitem {About\+PC}, \hyperpage{16}
     \subitem {set\+Version}, \hyperpage{16}
   \item {aboutpc.\+cpp}, \hyperpage{65}
-  \item {aboutpc.\+h}, \hyperpage{66}
+  \item {aboutpc.\+h}, \hyperpage{66, 67}
   \item {Aes}
     \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{46}
   \item {alert}
@@ -56,7 +56,7 @@
     \subitem {version}, \hyperpage{19}
     \subitem {version\+String}, \hyperpage{19}
   \item {controllerpc.\+cpp}, \hyperpage{67}
-  \item {controllerpc.\+h}, \hyperpage{68}
+  \item {controllerpc.\+h}, \hyperpage{68, 69}
   \item {Crypt}
     \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{47}
   \item {Crypt\+Mode}
@@ -113,7 +113,7 @@
     \subitem {val}, \hyperpage{25}
     \subitem {zip}, \hyperpage{23}
   \item {encryptdialog.\+cpp}, \hyperpage{69}
-  \item {encryptdialog.\+h}, \hyperpage{70}
+  \item {encryptdialog.\+h}, \hyperpage{70}, \hyperpage{72}
   \item {encryptv1\+\_\+4}
     \subitem {Model\+PC}, \hyperpage{36}
   \item {error}
@@ -165,7 +165,7 @@
 
   \item {main}
     \subitem {main.\+cpp}, \hyperpage{73}
-  \item {main.\+cpp}, \hyperpage{72}
+  \item {main.\+cpp}, \hyperpage{72, 73}
     \subitem {main}, \hyperpage{73}
   \item {Mode}
     \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{46}
@@ -203,7 +203,7 @@
     \subitem {version\+String}, \hyperpage{44}
     \subitem {zip}, \hyperpage{43}
   \item {modelpc.\+cpp}, \hyperpage{73}
-  \item {modelpc.\+h}, \hyperpage{83}
+  \item {modelpc.\+h}, \hyperpage{83}, \hyperpage{85}
   \item {multiply}
     \subitem {qaesencryption.\+cpp}, \hyperpage{86}
 
@@ -356,7 +356,7 @@
     \subitem {setup\+Errors\+Dict}, \hyperpage{63}
     \subitem {View\+PC}, \hyperpage{55}
   \item {viewpc.\+cpp}, \hyperpage{96}
-  \item {viewpc.\+h}, \hyperpage{100}
+  \item {viewpc.\+h}, \hyperpage{100, 101}
 
   \indexspace
 

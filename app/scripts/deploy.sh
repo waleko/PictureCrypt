@@ -3,11 +3,11 @@
 echo ":: doxygen running"
 # Doxygen running
 doxygen Doxyfile > doxy.log
-# Move pre-made index from doxy to root
-mv index.html ../../../index.html
 # Generate html readme for home page
-cd ../../..
-markdown README.md > readme.html
+cd ..
+markdown README.md > doxy/home_page/home_page_files/readme.html
+# Move generated website to /
+mv doxy/home_page/* ./
 # Generate pdf from tex
 cd latex
 make
