@@ -29,9 +29,33 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;Resources used:&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Icons used are &apos;Circle Icons&apos; by Nick Roach provided under GPL v3.0.&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;QAESEncryption Class from bricke provided under Unlicense.&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Fonts used are &apos;MS Shell Dlg 2&apos; and &apos;Gotham&apos;.&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&apos;MS Shell Dlg 2&apos; font used and &apos;Montserrat&apos; font used under the SIL Open Font License.&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;© Alex Kovrigin 2018-2019&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;PictureCrypt ist ein Open-Source-Projekt, das ausschließlich von Alex Kovrigin (waleko) und der Website https://www.alexkovrigin.me erstellt wurde&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Verschafft unter Unlicense.&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;Verwendete Ressourcen:&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Verwendete Symbole sind &quot;Circle Icons&quot; von Nick Roach, die unter GPL v3.0 verschafft werden.&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;QAESEncryption Klasse von bricke verschafft unter Unlicense.&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Verwendete Schriftarten &apos;MS Shell Dlg 2&apos; und &apos;Montserrat&apos; unter the SIL Open Font License.&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;© Alex Kovrigin 2018-2019&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;PictureCrypt is an open-source project made exclusively by Alex Kovrigin (waleko) and website https://www.alexkovrigin.me&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Provided under Unlicense.&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;Resources used:&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Icons used are &apos;Circle Icons&apos; by Nick Roach provided under GPL v3.0.&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;QAESEncryption Class from bricke provided under Unlicense.&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Fonts used are &apos;MS Shell Dlg 2&apos; and &apos;Gotham&apos;.&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;© Alex Kovrigin 2018-2019&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="vanished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -169,55 +193,55 @@ p, li { white-space: pre-wrap; }
         <translation>Geben Sie den Text für die Verschlüsselung ein:</translation>
     </message>
     <message>
-        <location filename="../viewpc.ui" line="110"/>
+        <location filename="../viewpc.ui" line="113"/>
         <location filename="../viewpc.cpp" line="239"/>
         <source>Or use the file dialog to choose a file:</source>
         <translation>Oder wählen Sie die Datei:</translation>
     </message>
     <message>
-        <location filename="../viewpc.ui" line="119"/>
+        <location filename="../viewpc.ui" line="122"/>
         <location filename="../viewpc.cpp" line="46"/>
         <source>File not chosen</source>
         <translation>Datei wurde nicht ausgewählt</translation>
     </message>
     <message>
-        <location filename="../viewpc.ui" line="139"/>
+        <location filename="../viewpc.ui" line="142"/>
         <source>Choose File</source>
         <translation>Datei wählen</translation>
     </message>
     <message>
-        <location filename="../viewpc.ui" line="155"/>
+        <location filename="../viewpc.ui" line="158"/>
         <location filename="../viewpc.cpp" line="236"/>
         <source>Continue configuration</source>
         <translation>Konfiguration fortsetzen</translation>
     </message>
     <message>
-        <location filename="../viewpc.ui" line="174"/>
+        <location filename="../viewpc.ui" line="177"/>
         <source>Menu</source>
         <translation>Menü</translation>
     </message>
     <message>
-        <location filename="../viewpc.ui" line="181"/>
+        <location filename="../viewpc.ui" line="184"/>
         <source>Configure</source>
         <translation>Konfigurieren</translation>
     </message>
     <message>
-        <location filename="../viewpc.ui" line="194"/>
+        <location filename="../viewpc.ui" line="197"/>
         <source>About</source>
         <translation>Über uns</translation>
     </message>
     <message>
-        <location filename="../viewpc.ui" line="199"/>
+        <location filename="../viewpc.ui" line="202"/>
         <source>Online Documentation</source>
         <translation>Online-Dokumentation</translation>
     </message>
     <message>
-        <location filename="../viewpc.ui" line="204"/>
+        <location filename="../viewpc.ui" line="207"/>
         <source>JPHS directory</source>
         <translation>JPHS-Verzeichnis</translation>
     </message>
     <message>
-        <location filename="../viewpc.ui" line="209"/>
+        <location filename="../viewpc.ui" line="212"/>
         <source>Run tests</source>
         <translation>Tests ausführen</translation>
     </message>

@@ -104,12 +104,14 @@ else
     qDebug() << "FAIL";
 
 ```
+
 ### Tests
 PictureCrypt comes with QT tests ready
 
 #### Run tests
 * Run them directly from IDE (e.g. Qt Creator)
 * Run with 'make'
+
 ```bash
 # Go to tests directory
 cd app/tests
@@ -164,10 +166,11 @@ If you have any trouble, [contact me](#contact) and I will sincerely try to help
 ## Works of other people used in this project
  * [QAESEncryption](https://github.com/bricke/Qt-AES) by [bricke](https://github.com/bricke/) (provided under [UNLICENSE](https://unlicense.org/))
  * 'Circle Icons' by Nick Roach provided under GPL v3.0.
+ * 'MS Shell Dlg 2' font used and 'Montserrat' font used under the SIL Open Font License.
 
 ## Contact
 Question or suggestions are welcome!
-Email me [a.kovrigin0@gmail.com](mailto:a.kovrigin0@gmail.com) or visit my site https://alexkovrigin.me
+Email me [a.kovrigin0@gmail.com](mailto:a.kovrigin0@gmail.com) or visit [my site](https://alexkovrigin.me)
 
 ## License
 This software is provided under the [UNLICENSE](http://unlicense.org/)
