@@ -25,6 +25,7 @@ Or download latest **UNSTABLE** binary file for Linux [here](https://github.com/
 
 ## External use
 You can use ModelPC class separately from everything else, except for QAESEncryption (so /aes folder)
+
 ### Use API
 ```cpp
 // Includes
@@ -105,6 +106,7 @@ else
 ```
 ### Tests
 PictureCrypt comes with QT tests ready
+
 #### Run tests
 * Run them directly from IDE (e.g. Qt Creator)
 * Run with 'make'
