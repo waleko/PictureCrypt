@@ -140,6 +140,7 @@ Continuous integration is fulfilled via Travis CI platform. [link](https://travi
 
 ## Help translate this project
 If you'd like to translate PictureCrypt to your language here are steps to do so:
+
 * Install QT and QT Linguist with it
 * Clone the project.
 * Go to PictureCrypt/app/src/
