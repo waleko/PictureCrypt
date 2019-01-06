@@ -29,7 +29,7 @@ script:
   - cd tests
   - QT_QPA_PLATFORM=offscreen make check
   - cd ..
-#  - 
+#  -
 #  - bash ./scripts/clean.sh
 
 before_deploy:

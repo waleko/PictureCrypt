@@ -28,7 +28,7 @@ You can use ModelPC class separately from everything else, except for QAESEncryp
 ### Use API
 ```cpp
 // Includes
-#include <modelpc.h>
+#include "modelpc.h"
 #include <QImage>
 #include <QByteArray>
 #include <QString>
@@ -40,7 +40,7 @@ You can use ModelPC class separately from everything else, except for QAESEncryp
 QByteArray data("some_file.txt");
 QImage *image = new QImage("some_big_enough_image.jpg");
 QString key = "some_password";
-int bitsUsed = 1; // must be from 1 to 8
+int bitsUsed = 3; // must be from 1 to 8
 
 // Encrypting
 QString error1, error2;
