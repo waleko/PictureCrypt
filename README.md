@@ -9,6 +9,7 @@
 </p>
 <p align="center">
   <a href="https://travis-ci.com/waleko/PictureCrypt"><img alt="Build Status" src="https://travis-ci.com/waleko/PictureCrypt.svg?branch=master"></a>
+  <a href="https://ci.appveyor.com/project/waleko/picturecrypt/branch/master"><img src="https://ci.appveyor.com/api/projects/status/qc0syxtjax4wnud7/branch/master?svg=true"/></a>
   <a class="badge-align" href="https://www.codacy.com/app/waleko/PictureCrypt?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=waleko/PictureCrypt&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/c9106eb67e164d7d87de6d92448a3355"/></a>
   <a href="https://gitter.im/waleko/PictureCrypt"><img src="https://badges.gitter.im/waleko/PictureCrypt.png"/></a>
 </p>
@@ -143,7 +144,7 @@ bash ../scripts/clean.sh
 * PDF documentation available [here](https://github.com/waleko/PictureCrypt/raw/gh-pages/refman.pdf)
 
 ## Continuous integration
-Continuous integration is fulfilled via Travis CI platform. [link](https://travis-ci.com/waleko/PictureCrypt)
+Continuous integration is fulfilled via [Travis CI](https://travis-ci.com/waleko/PictureCrypt) and [AppVeyor](https://ci.appveyor.com/project/waleko/picturecrypt) platform.
 
 ## Internationalization
 ### Languages
