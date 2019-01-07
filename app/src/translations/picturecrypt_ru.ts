@@ -167,7 +167,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../encryptdialog.cpp" line="60"/>
         <source>Images (*.png *.xpm *.jpg *.jpeg)</source>
-        <translation>Изображения</translation>
+        <translation>Изображения (*.png *.xpm *.jpg *.jpeg)</translation>
     </message>
     <message>
         <location filename="../encryptdialog.cpp" line="85"/>

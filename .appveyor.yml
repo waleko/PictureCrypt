@@ -1,0 +1,18 @@
+branches:
+  except:
+    - gh-pages
+
+install:
+  - set QTDIR=C:\Qt\5.5\mingw492_32
+  - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
+
+before_build:
+  - cd app
+
+build_script:
+  - sh: sh scripts/build.sh
+
+test_script:
+  - cd tests
+  - QT_QPA_PLATFORM=offscreen make check
+  - sh: sh ../scripts/clean.sh

@@ -54,12 +54,15 @@ An image-steganography project
 <p align="center">
 <a href="https://travis-ci.com/waleko/PictureCrypt"><img alt="Build Status" src="https://travis-ci.com/waleko/PictureCrypt.svg?branch=master"></a> <a class="badge-align" href="https://www.codacy.com/app/waleko/PictureCrypt?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=waleko/PictureCrypt&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/c9106eb67e164d7d87de6d92448a3355"/></a> <a href="https://gitter.im/waleko/PictureCrypt"><img src="https://badges.gitter.im/waleko/PictureCrypt.png"/></a>
 </p>
+<p align="center">
+<img src="https://alexkovrigin.me/data/picturecrypt-screenshot.jpg"/>
+</p>
 <h2 id="about">About</h2>
-<p>A simple steganography project which hides data in images. This project is built using MVC pattern and features GUI. <a href="https://qt.io">Qt</a> and <a href="https://github.com/bricke/Qt-AES">QAESEncryption</a> by <a href="https://github.com/bricke">bricke</a> were used.</p>
+<p>A simple cross-platform steganography project which hides data in images. This project is built using MVC pattern and features GUI. <a href="https://qt.io">Qt</a> and <a href="https://github.com/bricke/Qt-AES">QAESEncryption</a> by <a href="https://github.com/bricke">bricke</a> were used.</p>
 <h2 id="download">Download</h2>
 <p>Get the binary files at <a href="https://github.com/waleko/PictureCrypt/releases/latest">latest release page</a> Or download latest <strong>UNSTABLE</strong> binary file for Linux <a href="https://github.com/waleko/PictureCrypt/raw/gh-pages/src/build/Release/PictureCrypt">here</a></p>
 <h2 id="external-use">External use</h2>
-<p>You can use ModelPC class separately from everything else, except for QAESEncryption (so /aes folder)</p>
+<p>You can use ModelPC class separately from everything else, <strong>except for QAESEncryption</strong> (so /aes folder)</p>
 <h3 id="use-api">Use API</h3>
 <div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Includes</span>
 <span class="ot">#include &quot;modelpc.h&quot;</span>
@@ -170,7 +173,15 @@ An image-steganography project
 </ul>
 <h2 id="continuous-integration">Continuous integration</h2>
 <p>Continuous integration is fulfilled via Travis CI platform. <a href="https://travis-ci.com/waleko/PictureCrypt">link</a></p>
-<h2 id="help-translate-this-project">Help translate this project</h2>
+<h2 id="internationalization">Internationalization</h2>
+<h3 id="languages">Languages</h3>
+<p>This project is available in multiple languages thanks to awesome QT Linguist Platform. Currently we have:</p>
+<ul>
+<li>English (default)</li>
+<li>Russian</li>
+<li>German</li>
+</ul>
+<h3 id="help-translating">Help translating</h3>
 <p>If you'd like to translate PictureCrypt to your language here are steps to do so:</p>
 <ul>
 <li>Install QT and QT Linguist with it</li>
