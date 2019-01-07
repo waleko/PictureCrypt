@@ -47,11 +47,10 @@ test_script:
   - copy "%QTDIR%\bin\libstdc++-6.dll" . /y
   - copy "%QTDIR%\bin\libwinpthread-1.dll" . /y
   - ps: .\tests.exe -xunitxml -nocrashhandler -o ../tests.xml
-  # - ps: .\tests.exe -xunitxml > ../tests.xml
   - cd ..
 
-# on_finish:
-#   - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\tests.xml))
+on_finish:
+  - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\tests.xml))
 
 artifacts:
   - path: app/deploy/debug
@@ -70,4 +69,4 @@ deploy:
   bucket: waleko-acacia
   region: eu-north-1
   folder: appveyor
-  artifact: PictureCrypt-debug, PictureCrypt-release
+  artifact: PictureCrypt-debug, PictureCrypt-release, tests
