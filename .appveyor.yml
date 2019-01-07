@@ -21,7 +21,7 @@ build_script:
   - cd ..
   - mkdir deploy
   - tree /f
-  - copy "./src/build/Release/PictureCrypt.exe" "./deploy/PictureCrypt.exe"
+  - copy "C:\projects\picturecrypt\app\src\build\Release\PictureCrypt.exe" "C:\projects\picturecrypt\app\deploy\PictureCrypt.exe"
   - cd deploy
   - windeployqt.exe --release PictureCrypt.exe
 
