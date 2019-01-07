@@ -14,5 +14,5 @@ build_script:
 
 test_script:
   - cd tests
-  - QT_QPA_PLATFORM=offscreen make check
+  - sh: QT_QPA_PLATFORM=offscreen make check
   - sh: sh ../scripts/clean.sh
