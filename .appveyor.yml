@@ -21,19 +21,29 @@ build_script:
 
   - cd ..
   - mkdir deploy
-  - copy "C:\projects\picturecrypt\app\src\build\Release\PictureCrypt.exe" "C:\projects\picturecrypt\app\deploy\PictureCrypt.exe"
   - cd deploy
+  - mkdir debug
+  - mkdir release
+  - copy "C:\projects\picturecrypt\app\src\build\Debug\PictureCrypt.exe" "C:\projects\picturecrypt\app\deploy\debug\PictureCrypt.exe"
+  - copy "C:\projects\picturecrypt\app\src\build\Release\PictureCrypt.exe" "C:\projects\picturecrypt\app\deploy\release\PictureCrypt.exe"
+  - cd deploy
+  - cd debug
+  - windeployqt.exe --debug PictureCrypt.exe
+  - cd ../release
   - windeployqt.exe --release PictureCrypt.exe
+  - cd ../..
+  - tree /f
 
 before_test:
-  - cd ../tests
+  - cd tests
   - qmake.exe C:\projects\picturecrypt\app\tests\tests.pro -spec win32-g++ "QMAKE_CXXFLAGS += -std=c++0x" "QT += gui" "QT += core" "QT += widgets" "QT += testlib" "QT += xml" "DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900"
   - C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe
 
 test_script:
   - cd release
-  - ./tests.exe -xunitxml > ../../../tests.xml
-  - cd ../../..
+  - dir
+  - .\tests.exe -xunitxml > ../../tests.xml
+  - cd ../..
 
 on_finish:
   # upload results to AppVeyor
@@ -41,8 +51,10 @@ on_finish:
   - $wc.UploadFile("https://ci.appveyor.com/api/testresults/xunit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\tests.xml))
 
 artifacts:
-  - path: app/deploy
-    name: PictureCrypt
+  - path: app/deploy/debug
+    name: PictureCrypt-debug
+  - path: app/deploy/release
+    name: PictureCrypt-release
 
 deploy:
   provider: S3
@@ -53,4 +65,4 @@ deploy:
   bucket: waleko-acacia
   region: eu-west-1
   folder: appveyor
-  artifact: PictureCrypt
+  artifact: PictureCrypt-debug, PictureCrypt-release
