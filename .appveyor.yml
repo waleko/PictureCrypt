@@ -33,7 +33,6 @@ build_script:
   - copy "%QTDIR%\bin\libstdc++-6.dll" . /y
   - copy "%QTDIR%\bin\libwinpthread-1.dll" . /y
   - cd ../..
-  - tree /f
 
 before_test:
   - cd tests
@@ -49,7 +48,7 @@ test_script:
   - .\tests.exe -xunitxml -tickcounter -o testresults.xml
 
 on_finish:
-  - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/xunit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\testresults.xml))
+  - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\testresults.xml))
 
 artifacts:
   - path: app/deploy/debug
