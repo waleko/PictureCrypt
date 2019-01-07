@@ -41,7 +41,7 @@ before_test:
 test_script:
   - cd release
   - dir
-  - .\tests.exe -xunitxml
+  # - .\tests.exe -xunitxml
   # - .\tests.exe -xunitxml > ../../tests.xml
   - cd ../..
 
@@ -53,6 +53,8 @@ artifacts:
     name: PictureCrypt-debug
   - path: app/deploy/release
     name: PictureCrypt-release
+  - path: app/tests
+    name: tests
 
 deploy:
   provider: S3
