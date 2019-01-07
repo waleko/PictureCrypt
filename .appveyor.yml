@@ -6,41 +6,31 @@ branches:
 install:
   - set QTDIR=C:\Qt\5.11.2\mingw53_32
   - set PATH=C:\MinGW\bin;%QTDIR%/bin;;%PATH%
-
 before_build:
   - cd app
+  - mkdir deploy
 
 build_script:
   # - sed -i "QMAKE_CXXFLAGS += -std=c++0x"/"QT += gui"/"QT += core"/"QT += widgets"/"QT += testlib"/"QT += xml"/"DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900" PictureCrypt.pro
   # - sed -i "s/CONFIG += c++11/QMAKE_CXXFLAGS += -std=gnu++0x/g" PictureCrypt.pro
   # - qmake "QMAKE_CXXFLAGS += -std=c++0x" "QT += gui" "QT += core" "QT += widgets" "QT += testlib" "QT += xml" "DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900" # -r -spec win32-g++
-  - qmake.exe C:\projects\picturecrypt\app\PictureCrypt.pro -spec win32-g++ "CONFIG+=debug" && C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe qmake_all
-  - mingw32-make.exe all
-  - sh: sh ../scripts/clean.sh
-
-  - mkdir deploy
-  - cd deploy
-  - mkdir PictureCrypt
-  - mkdir tests
-
-  - cd ../src
-  - sh: sh ../scripts/clean.sh
-
-  - cd ../tests
+  - cd src
+  - qmake.exe C:\projects\picturecrypt\app\src\src.pro -spec win32-g++ "CONFIG+=debug" && C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe all
+  - mingw32-make.exe clean -j8
   - sh: sh ../scripts/clean.sh
 
   - cd ..
-  - move src/src.exe deploy/PictureCrypt/PictureCrypt.exe
-  - move tests/tests.exe deploy/tests/tests.exe
-
-  - cd deploy/PictureCrypt
+  - move src/build/Debug/PictureCrypt.exe deploy/PictureCrypt.exe
+  - cd deploy
   - windeployqt.exe --release PictureCrypt.exe
 
+before_test:
   - cd ../tests
-  - windeployqt.exe --release tests.exe
+  - qmake.exe C:\projects\picturecrypt\app\tests\tests.pro -spec win32-g++ "CONFIG+=debug"
 
 test_script:
-  - ./tests.exe -xunitxml > tests.xml
+  - C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe check > ../tests.xml
+  - cd ..
 
 on_finish:
 - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path ./tests.xml))
