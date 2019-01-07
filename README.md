@@ -7,15 +7,18 @@
 <p align="center">
   An image-steganography project
 </p>
-
 <p align="center">
   <a href="https://travis-ci.com/waleko/PictureCrypt"><img alt="Build Status" src="https://travis-ci.com/waleko/PictureCrypt.svg?branch=master"></a>
   <a class="badge-align" href="https://www.codacy.com/app/waleko/PictureCrypt?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=waleko/PictureCrypt&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/c9106eb67e164d7d87de6d92448a3355"/></a>
   <a href="https://gitter.im/waleko/PictureCrypt"><img src="https://badges.gitter.im/waleko/PictureCrypt.png"/></a>
 </p>
 
+<p align="center">
+  <img src="https://alexkovrigin.me/data/picturecrypt-screenshot.jpg"/>
+</p>
+
 ## About
-A simple steganography project which hides data in images.
+A simple cross-platform steganography project which hides data in images.
 This project is built using MVC pattern and features GUI.
 [Qt](https://qt.io) and [QAESEncryption](https://github.com/bricke/Qt-AES) by [bricke](https://github.com/bricke) were used.
 
@@ -24,7 +27,7 @@ Get the binary files at [latest release page](https://github.com/waleko/PictureC
 Or download latest **UNSTABLE** binary file for Linux [here](https://github.com/waleko/PictureCrypt/raw/gh-pages/src/build/Release/PictureCrypt)
 
 ## External use
-You can use ModelPC class separately from everything else, except for QAESEncryption (so /aes folder)
+You can use ModelPC class separately from everything else, **except for QAESEncryption** (so /aes folder)
 
 ### Use API
 ```cpp
@@ -142,7 +145,16 @@ bash ../scripts/clean.sh
 ## Continuous integration
 Continuous integration is fulfilled via Travis CI platform. [link](https://travis-ci.com/waleko/PictureCrypt)
 
-## Help translate this project
+## Internationalization
+### Languages
+This project is available in multiple languages thanks to awesome QT Linguist Platform.
+Currently we have:
+
+- English (default)
+- Russian
+- German
+
+### Help translating
 If you'd like to translate PictureCrypt to your language here are steps to do so:
 
 * Install QT and QT Linguist with it
