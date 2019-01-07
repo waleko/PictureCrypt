@@ -37,7 +37,7 @@ build_script:
 
 before_test:
   - cd tests
-  - qmake.exe C:\projects\picturecrypt\app\tests\tests.pro -spec win32-g++
+  - qmake.exe C:\projects\picturecrypt\app\tests\tests.pro -spec win32-g++ "QMAKE_CXXFLAGS += -std=c++0x" "DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900"
   - C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe
 
 test_script:
