@@ -41,13 +41,12 @@ before_test:
 test_script:
   - cd release
   - dir
-  - .\tests.exe -xunitxml > ../../tests.xml
+  - .\tests.exe -xunitxml
+  # - .\tests.exe -xunitxml > ../../tests.xml
   - cd ../..
 
-on_finish:
-  # upload results to AppVeyor
-  - $wc = New-Object 'System.Net.WebClient'
-  - $wc.UploadFile("https://ci.appveyor.com/api/testresults/xunit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\tests.xml))
+# on_finish:
+#   - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\tests.xml))
 
 artifacts:
   - path: app/deploy/debug
