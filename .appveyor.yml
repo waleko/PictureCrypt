@@ -19,7 +19,9 @@ build_script:
   - mingw32-make.exe clean -j8
   - sh: sh ../scripts/clean.sh
 
+  - dir
   - cd ..
+  - dir
   - move src/build/Debug/PictureCrypt.exe deploy/PictureCrypt.exe
   - cd deploy
   - windeployqt.exe --release PictureCrypt.exe
