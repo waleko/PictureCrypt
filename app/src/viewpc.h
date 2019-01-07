@@ -19,7 +19,6 @@
 #include <aboutpc.h>
 
 #include <QLocale>
-#include <QtXml>
 
 namespace Ui {
 class ViewPC;
