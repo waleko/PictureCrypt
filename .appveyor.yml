@@ -41,7 +41,7 @@ before_test:
 test_script:
   - cd release
   - dir
-  - ps: .\tests.exe -xunitxml
+  - ps: .\tests.exe -xunitxml -nocrashhandler -o ../tests.xml
   # - ps: .\tests.exe -xunitxml > ../tests.xml
   - cd ..
 
