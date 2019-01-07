@@ -8,7 +8,6 @@ install:
   - set PATH=C:\MinGW\bin;%QTDIR%/bin;;%PATH%
 before_build:
   - cd app
-  - mkdir deploy
 
 build_script:
   # - sed -i "QMAKE_CXXFLAGS += -std=c++0x"/"QT += gui"/"QT += core"/"QT += widgets"/"QT += testlib"/"QT += xml"/"DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900" PictureCrypt.pro
@@ -19,9 +18,10 @@ build_script:
   - mingw32-make.exe clean -j8
   - sh: sh ../scripts/clean.sh
 
-  - tree /f
+  # - tree /f
   - cd ..
-  - move src/build/Debug/PictureCrypt.exe deploy
+  - mkdir deploy
+  - move "C:/projects/picturecrypt/app/src/build/Debug/PictureCrypt.exe" "C:/projects/picturecrypt/app/deploy"
   - cd deploy
   - windeployqt.exe --release PictureCrypt.exe
 
