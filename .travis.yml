@@ -9,6 +9,7 @@ os:
 branches:
   except:
     - gh-pages
+    - appveyor
 
 env:
   global:
