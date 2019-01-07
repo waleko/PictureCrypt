@@ -41,9 +41,9 @@ before_test:
 test_script:
   - cd release
   - dir
-  # - .\tests.exe -xunitxml
-  # - .\tests.exe -xunitxml > ../../tests.xml
-  - cd ../..
+  - ps: .\tests.exe -xunitxml
+  # - ps: .\tests.exe -xunitxml > ../tests.xml
+  - cd ..
 
 # on_finish:
 #   - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\tests.xml))
@@ -63,6 +63,6 @@ deploy:
   secret_access_key:
     secure: aTO7A/REbTL5m27x2H72Gq7Lljf8WQ3EE6NWCVHtkTDvERvs99vePDyi6GkV2gVl
   bucket: waleko-acacia
-  region: eu-west-1
+  region: eu-north-1
   folder: appveyor
   artifact: PictureCrypt-debug, PictureCrypt-release
