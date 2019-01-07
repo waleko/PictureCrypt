@@ -4,8 +4,8 @@ branches:
     - gh-pages
 
 install:
-  - set QTDIR=C:\Qt\5.11.2\mingw53_32
-  - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
+  - set QTDIR=C:/Qt/5.11.2/mingw53_32
+  - set PATH=%PATH%;%QTDIR%/bin;C:/MinGW/bin
 
 before_build:
   - cd app
@@ -13,8 +13,8 @@ before_build:
 build_script:
   # - sed -i "QMAKE_CXXFLAGS += -std=c++0x"/"QT += gui"/"QT += core"/"QT += widgets"/"QT += testlib"/"QT += xml"/"DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900" PictureCrypt.pro
   # - sed -i "s/CONFIG += c++11/QMAKE_CXXFLAGS += -std=gnu++0x/g" PictureCrypt.pro
-  - sh: qmake "QMAKE_CXXFLAGS += -std=c++0x" "QT += gui" "QT += core" "QT += widgets" "QT += testlib" "QT += xml" "DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900"
-  - sh: mingw32-make all
+  - qmake "QMAKE_CXXFLAGS += -std=c++0x" "QT += gui" "QT += core" "QT += widgets" "QT += testlib" "QT += xml" "DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900"
+  - mingw32-make all
   - sh: sh ../scripts/clean.sh
 
   - mkdir deploy
@@ -33,10 +33,10 @@ build_script:
   - move tests/tests.exe deploy/tests/tests.exe
 
   - cd deploy/PictureCrypt
-  - sh: windeployqt --release PictureCrypt.exe
+  - windeployqt --release PictureCrypt.exe
 
   - cd ../tests
-  - sh: windeployqt --release tests.exe
+  - windeployqt --release tests.exe
 
 test_script:
   - ./tests.exe -xunitxml > tests.xml
