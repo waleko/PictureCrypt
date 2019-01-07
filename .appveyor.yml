@@ -37,20 +37,19 @@ build_script:
 
 before_test:
   - cd tests
-  - qmake.exe C:\projects\picturecrypt\app\tests\tests.pro -spec win32-g++ "QMAKE_CXXFLAGS += -std=c++0x" "DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900"
+  - qmake.exe C:\projects\picturecrypt\app\tests\tests.pro -spec win32-g++
   - C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe
-
-test_script:
   - cd release
   - dir
   - windeployqt.exe --release tests.exe
   - copy "%QTDIR%\bin\libstdc++-6.dll" . /y
   - copy "%QTDIR%\bin\libwinpthread-1.dll" . /y
-  - ps: .\tests.exe -xunitxml -nocrashhandler -o ../tests.xml
-  - cd ..
+
+test_script:
+  - .\tests.exe -xunitxml -tickcounter -o testresults.xml
 
 on_finish:
-  - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/xunit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\tests.xml))
+  - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/xunit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\testresults.xml))
 
 artifacts:
   - path: app/deploy/debug
