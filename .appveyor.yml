@@ -19,7 +19,7 @@ build_script:
   - mingw32-make.exe clean -j8
   - sh: sh ../scripts/clean.sh
 
-  - tree /f > tree.txt
+  - tree /f
   - cd ..
   - move src/build/Debug/PictureCrypt.exe deploy
   - cd deploy
