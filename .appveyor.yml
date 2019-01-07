@@ -5,7 +5,7 @@ branches:
 
 install:
   - set QTDIR=C:\Qt\5.11.2\mingw53_32
-  - set PATH=C:\MinGW\bin;%QTDIR%/bin;;%PATH%
+  - set PATH=C:\MinGW\bin;%QTDIR%/bin;%PATH%
 before_build:
   - cd app
 
@@ -30,6 +30,8 @@ build_script:
   - windeployqt.exe --debug PictureCrypt.exe
   - cd ../release
   - windeployqt.exe --release PictureCrypt.exe
+  - copy "%QTDIR%\bin\libstdc++-6.dll" . /y
+  - copy "%QTDIR%\bin\libwinpthread-1.dll" . /y
   - cd ../..
   - tree /f
 
@@ -41,6 +43,9 @@ before_test:
 test_script:
   - cd release
   - dir
+  - windeployqt.exe --release tests.exe
+  - copy "%QTDIR%\bin\libstdc++-6.dll" . /y
+  - copy "%QTDIR%\bin\libwinpthread-1.dll" . /y
   - ps: .\tests.exe -xunitxml -nocrashhandler -o ../tests.xml
   # - ps: .\tests.exe -xunitxml > ../tests.xml
   - cd ..
