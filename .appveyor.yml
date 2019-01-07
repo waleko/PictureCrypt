@@ -14,7 +14,7 @@ build_script:
   # - sed -i "QMAKE_CXXFLAGS += -std=c++0x"/"QT += gui"/"QT += core"/"QT += widgets"/"QT += testlib"/"QT += xml"/"DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900" PictureCrypt.pro
   # - sed -i "s/CONFIG += c++11/QMAKE_CXXFLAGS += -std=gnu++0x/g" PictureCrypt.pro
   - sh: qmake "QMAKE_CXXFLAGS += -std=c++0x" "QT += gui" "QT += core" "QT += widgets" "QT += testlib" "QT += xml" "DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900"
-  - mingw32-make all
+  - sh: mingw32-make all
   - sh: sh ../scripts/clean.sh
 
   - mkdir deploy
@@ -33,10 +33,10 @@ build_script:
   - move tests/tests.exe deploy/tests/tests.exe
 
   - cd deploy/PictureCrypt
-  - windeployqt --release PictureCrypt.exe
+  - sh: windeployqt --release PictureCrypt.exe
 
   - cd ../tests
-  - windeployqt --release tests.exe
+  - sh: windeployqt --release tests.exe
 
 test_script:
   - ./tests.exe -xunitxml > tests.xml
