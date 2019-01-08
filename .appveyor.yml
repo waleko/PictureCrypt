@@ -82,5 +82,4 @@ deploy:
       secure: vJoiMyshYBAzJ7waxTOetHOX7g7D3eDzfxnRV6UwijE2gTfCfldarR6JM6hyIfoI
     artifact: setup, PictureCrypt-release, PictureCrypt-debug
     draft: true
-    on:
-      branch: release
+    message: /\[release\]/

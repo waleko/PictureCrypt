@@ -198,12 +198,12 @@ An image-steganography project
 <li>Install QT and QT Linguist with it</li>
 <li>Clone the project.</li>
 <li>Go to PictureCrypt/app/src/</li>
-<li>Add a filename to TRANSLATIONS in app/src/src.pro file. Filename must be 'picturecrypt_<your language>.ts' (e.g. 'picturecrypt_fr.ts')</li>
+<li>Add a filename to TRANSLATIONS in app/src/src.pro file. Filename must be 'picturecrypt_{your language}.ts' (e.g. 'picturecrypt_fr.ts')</li>
 <li>Run <code>lupdate src.pro</code>, it will generate that .ts file. If there is an error: &quot;Maybe you forgot to set your environment?&quot; Go to Project (on the left-hand side) -&gt;(expand) Build environment -&gt; Open terminal and run <code>lupdate src.pro</code>.</li>
 <li>Go to translations/</li>
-<li>Run <code>linguist picturecrypt_&lt;your language&gt;.ts</code>. The Qt Linguist will appear, where you can translate given text from English (there are a couple of html entries, just edit their text part). <strong>If you don't translate the whole thing, your work will be still appreciated!</strong></li>
-<li>Either go to File -&gt; Compile or run <code>lrelease picturecrypt_&lt;your language&gt;.ts</code>.</li>
-<li>Add your picturecrypt_<your language>.ts to app/src/translations.qrc resource file.</li>
+<li>Run <code>linguist picturecrypt_{your language}.ts</code>. The Qt Linguist will appear, where you can translate given text from English (there are a couple of html entries, just edit their text part). <strong>If you don't translate the whole thing, your work will be still appreciated!</strong></li>
+<li>Either go to File -&gt; Compile or run <code>lrelease picturecrypt_{your language}.ts</code>.</li>
+<li>Add your picturecrypt_{your language}.ts to app/src/translations.qrc resource file.</li>
 <li>Create a pull request in GitHub with your work.</li>
 </ul>
 <p>If you have any trouble, <a href="#contact">contact me</a> and I will sincerely try to help you as I really don't think, that anyone will decide to help me translate. 😔</p>
