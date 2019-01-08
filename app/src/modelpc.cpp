@@ -556,6 +556,7 @@ void ModelPC::processPixel(QPoint pos, QVector<QPoint> *were, bool isEncrypt)
  * \brief ModelPC::encryptv1_4 Encrypts and injects data to image used in v1.4+
  * \param image Image for injecting
  * \param data Data for embedding
+ * \param key Key of encryption
  */
 void ModelPC::encryptv1_4(QImage *image, QByteArray data, QString key)
 {
