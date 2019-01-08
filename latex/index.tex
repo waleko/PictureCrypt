@@ -9,5 +9,94 @@ You can use \hyperlink{class_model_p_c}{Model\+PC} class separately from View an
 
 \hyperlink{modelpc_8cpp}{modelpc.\+cpp} \hyperlink{modelpc_8h}{modelpc.\+h} \hyperlink{qaesencryption_8cpp}{aes/qaesencryption.\+cpp} \hyperlink{qaesencryption_8h}{aes/qaesencryption.\+h}
 
-Then you can just {\ttfamily \#include \char`\"{}modelpc.\+h\char`\"{}} and use A\+PI.\hypertarget{index_use_api}{}\section{A\+PI}\label{index_use_api}
-Here is are the most important methods\+: \hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{Model\+P\+C\+::encrypt} \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{Model\+P\+C\+::decrypt}
+Then you can just {\ttfamily \#include \char`\"{}modelpc.\+h\char`\"{}} and use A\+PI.\hypertarget{index_use_api}{}\subsection{A\+PI}\label{index_use_api}
+Here is are the most important methods\+: \hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{Model\+P\+C\+::encrypt} \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{Model\+P\+C\+::decrypt}\hypertarget{index_Showcase}{}\subsubsection{Showcase}\label{index_Showcase}
+
+\begin{DoxyCode}
+\textcolor{comment}{// Includes}
+\textcolor{preprocessor}{#include "\hyperlink{modelpc_8h}{modelpc.h}"}
+\textcolor{preprocessor}{#include <QImage>}
+\textcolor{preprocessor}{#include <QByteArray>}
+\textcolor{preprocessor}{#include <QString>}
+\textcolor{preprocessor}{#include <QDebug>} \textcolor{comment}{// just for showcase}
+
+...
+
+\textcolor{comment}{// Basic setup}
+QByteArray data(\textcolor{stringliteral}{"some\_file.txt"});
+QImage *image = \textcolor{keyword}{new} QImage(\textcolor{stringliteral}{"some\_big\_enough\_image.jpg"});
+QString key = \textcolor{stringliteral}{"some\_password"};
+\textcolor{keywordtype}{int} bitsUsed = 3; \textcolor{comment}{// must be from 1 to 8}
+
+\textcolor{comment}{// Encrypting}
+QString error1, error2;
+QImage *normal\_resultImage = \hyperlink{class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd}{ModelPC::Encrypt}(
+        data,
+        image,
+        1,
+        key,
+        bitsUsed,
+        &error1);
+QImage *advanced\_resultImage = \hyperlink{class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd}{ModelPC::Encrypt}(
+        data,
+        image,
+        2, key,
+        bitsUsed \textcolor{comment}{/* not really used here, so put here any number from 1 to 8*/},
+        &error2);
+
+\textcolor{comment}{// Decrypting with given mode}
+QString error3, error4, error5, error6;
+QByteArray output\_normal = \hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{ModelPC::Decrypt}(
+        normal\_resultImage,
+        key,
+        1,
+        &error3);
+QByteArray output\_advanced = \hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{ModelPC::Decrypt}(
+        advanced\_resultImage,
+        key,
+        2,
+        &error4);
+
+\textcolor{comment}{// Decrypting without given mode}
+\textcolor{comment}{// PictureCrypt can detect the mode of the image and adapt.}
+QByteArray output\_normal\_undefined = \hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{ModelPC::Decrypt}(
+        normal\_resultImage,
+        key,
+        0,
+        &error5);
+QByteArray output\_advanced\_undefined = \hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{ModelPC::Decrypt}(
+        advanced\_resultImage,
+        key,
+        0,
+        &error6);
+
+\textcolor{comment}{// Check (better testing with [running tests](#run-tests)}
+\textcolor{keywordtype}{bool} data\_good =
+        data == output\_normal &&
+        data == output\_advanced &&
+        data == output\_normal\_undefined &&
+        data == output\_advanced\_undefined;
+\textcolor{keywordtype}{bool} no\_errors =
+        error1 == \textcolor{stringliteral}{"ok"} &&
+        error2 == \textcolor{stringliteral}{"ok"} &&
+        error3 == \textcolor{stringliteral}{"ok"} &&
+        error4 == \textcolor{stringliteral}{"ok"} &&
+        error5 == \textcolor{stringliteral}{"ok"} &&
+        error6 == \textcolor{stringliteral}{"ok"};
+\textcolor{keywordflow}{if}(data\_good && no\_errors)
+    qDebug() << \textcolor{stringliteral}{"PASS"};
+\textcolor{keywordflow}{else}
+    qDebug() << \textcolor{stringliteral}{"FAIL"};
+\end{DoxyCode}
+\hypertarget{index_license}{}\section{License}\label{index_license}
+This software is provided under the \href{http://unlicense.org}{\tt U\+N\+L\+I\+C\+E\+N\+SE}\hypertarget{index_contact}{}\section{Contact us}\label{index_contact}
+Visit my site\+: \href{https://www.alexkovrigin.me}{\tt https\+://www.\+alexkovrigin.\+me}
+
+Email me at \href{mailto:a.kovrigin0@gmail.com}{\tt a.\+kovrigin0@gmail.\+com}
+
+\begin{DoxyAuthor}{Author}
+Alex Kovrigin (waleko) 
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+Alex Kovrigin 2018  
+\end{DoxyCopyright}

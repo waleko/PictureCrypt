@@ -22,12 +22,12 @@ You can use ModelPC class separately from View and Control layer. You will need 
 
 Then you can just `#include "modelpc.h"` and use API.
 
-\section use_api API
+\subsection use_api API
 Here is are the most important methods:
 * ModelPC::encrypt
 * ModelPC::decrypt
 
-\section3 Showcase
+\subsubsection Showcase
 
 \code{.cpp}
 // Includes

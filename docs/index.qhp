@@ -8,8 +8,11 @@
       <section title="PictureCrypt 1.4.0" ref="index.html">
         <section title="About" ref="index.html#about" />
         <section title="Structure of the project" ref="index.html#structure" />
-        <section title="External use" ref="index.html#ext-use" />
-        <section title="API" ref="index.html#use_api" />
+        <section title="External use" ref="index.html#ext-use">
+          <section title="API" ref="index.html#use_api">
+            <section title="Showcase" ref="index.html#Showcase" />
+          </section>
+        </section>
         <section title="License" ref="index.html#license" />
         <section title="Contact us" ref="index.html#contact" />
         <section title="Namespaces">
