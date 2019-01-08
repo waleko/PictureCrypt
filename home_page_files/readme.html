@@ -65,12 +65,12 @@ An image-steganography project
 <h4 id="windows">Windows:</h4>
 <ul>
 <li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/PictureCrypt-setup.exe"><strong>EXE with release</strong></a> (~ 22 MB)</li>
-<li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/PictureCrypt-debug.zip">Zip Debug</a> (~ 190 MB)</li>
-<li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/PictureCrypt-release.zip">Zip Release</a> (~ 21 MB)</li>
+<li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/deploy/PictureCrypt-debug.zip">Zip Debug</a> (~ 190 MB)</li>
+<li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/deploy/PictureCrypt-release.zip">Zip Release</a> (~ 21 MB)</li>
 </ul>
 <h4 id="linux">Linux:</h4>
 <ul>
-<li><a href="https://github.com/waleko/PictureCrypt/raw/gh-pages/src/build/Release/PictureCrypt">Binary</a> (~ 10 MB)</li>
+<li><a href="https://github.com/waleko/PictureCrypt/raw/gh-pages/app/src/build/Release/PictureCrypt">Binary</a> (~ 10 MB)</li>
 </ul>
 <h2 id="external-use">External use</h2>
 <p>You can use ModelPC class separately from everything else, <strong>except for QAESEncryption</strong> (so /aes folder)</p>
@@ -150,7 +150,7 @@ An image-steganography project
 <span class="kw">else</span>
     <span class="fu">qDebug</span>() &lt;&lt; <span class="st">&quot;FAIL&quot;</span>;</code></pre></div>
 <h3 id="tests">Tests</h3>
-<p>PictureCrypt comes with QT tests ready</p>
+<p>PictureCrypt comes with Qt Test project. It can be found at 'app/tests'</p>
 <h4 id="run-tests">Run tests</h4>
 <ul>
 <li>Run them directly from IDE (e.g. Qt Creator)</li>
@@ -179,11 +179,11 @@ An image-steganography project
 </ul>
 <h2 id="documentation">Documentation</h2>
 <ul>
-<li>HTML documentation available <a href="https://alexkovrigin.me/PictureCrypt">here</a></li>
+<li>HTML documentation available <a href="docs">here</a></li>
 <li>PDF documentation available <a href="https://github.com/waleko/PictureCrypt/raw/gh-pages/refman.pdf">here</a></li>
 </ul>
 <h2 id="continuous-integration">Continuous integration</h2>
-<p>Continuous integration is fulfilled via <a href="https://travis-ci.com/waleko/PictureCrypt">Travis CI</a> and <a href="https://ci.appveyor.com/project/waleko/picturecrypt">AppVeyor</a> platform.</p>
+<p>Continuous integration is fulfilled via <a href="https://travis-ci.com/waleko/PictureCrypt">Travis CI</a> for Linux and <a href="https://ci.appveyor.com/project/waleko/picturecrypt">AppVeyor</a> for Windows.</p>
 <h2 id="internationalization">Internationalization</h2>
 <h3 id="languages">Languages</h3>
 <p>This project is available in multiple languages thanks to awesome QT Linguist Platform. Currently we have:</p>
