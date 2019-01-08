@@ -75,8 +75,9 @@ signals:
      * \param image Image to be encrypted into
      * \param mode Mode of encryption
      * \param key Key of encryption
+     * \param bitsUsed Bits used per byte
      */
-    void encrypt(QByteArray data, QImage *image, int mode, QString key);
+    void encrypt(QByteArray data, QImage *image, int mode, QString key, int bitsUsed);
     /*!
      * \brief inject Signal calling ModelPC::inject
      * \param data Data to write

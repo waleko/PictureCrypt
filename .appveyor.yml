@@ -66,12 +66,21 @@ artifacts:
     name: setup
 
 deploy:
-  provider: S3
-  access_key_id:
-    secure: KROVK6x7RsvQ5v9onhcQ65toKcMpimgVKfA9SSVWEG8=
-  secret_access_key:
-    secure: aTO7A/REbTL5m27x2H72Gq7Lljf8WQ3EE6NWCVHtkTDvERvs99vePDyi6GkV2gVl
-  bucket: waleko-acacia
-  region: eu-north-1
-  folder: appveyor
-  artifact: PictureCrypt-debug, PictureCrypt-release, tests, setup
+  - provider: S3
+    access_key_id:
+      secure: KROVK6x7RsvQ5v9onhcQ65toKcMpimgVKfA9SSVWEG8=
+    secret_access_key:
+      secure: aTO7A/REbTL5m27x2H72Gq7Lljf8WQ3EE6NWCVHtkTDvERvs99vePDyi6GkV2gVl
+    bucket: waleko-acacia
+    region: eu-north-1
+    folder: appveyor
+    artifact: PictureCrypt-debug, PictureCrypt-release, tests, setup
+  - provider: GitHub
+    release: PictureCrypt-v$(appveyor_build_version)
+    description: 'PictureCrypt's new version'
+    auth_token:
+      secure: vJoiMyshYBAzJ7waxTOetHOX7g7D3eDzfxnRV6UwijE2gTfCfldarR6JM6hyIfoI
+    artifact: setup, PictureCrypt-release, PictureCrypt-debug
+    draft: true
+    on:
+      branch: release

@@ -41,7 +41,7 @@ QByteArray ModelPC::Decrypt(QImage *image, QString key, int _mode, QString *_err
  * Isn't used in PictureCrypt, but used can be used in other - custom projects.
  * \param data Data for embedding
  * \param image Image for embedding
- * \param mode Mode for embedding
+ * \param _mode Mode for embedding
  * \param key Key for extra encryption
  * \param _bitsUsed Bits per byte (see ModelPC::bitsUsed)
  * \param _error Error output
@@ -130,7 +130,7 @@ QImage * ModelPC::encrypt(QByteArray data, QImage * image, int _mode, QString ke
  * \brief ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started.
  * \param encr_data Data to be inserted to an image.
  * \param image Image to be inserted in.
- * \param mode Mode of encryption
+ * \param _mode Mode of encryption
  * \param _bitsUsed Bits per byte used
  * \param _error Error output
  * \return Returns image with embedded data.

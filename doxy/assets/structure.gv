@@ -1,0 +1,39 @@
+digraph Structure
+{
+	node [style=invis]
+	{
+	  {view; controller; model}
+	}
+	node [shape=box, style=filled, color=tan1]
+	{
+	  {rank = same; view; ViewPC; EncryptDialog; AboutPC}
+	}
+	node [shape=box, style=filled, color=olivedrab1]
+	{
+	  {rank = same;controller;  ControllerPC}
+	}
+	node [shape=box, style=filled, color=pink]
+	{
+	  {rank = same; model; ModelPC; QAESEncryption}
+	}
+
+	view -> controller[style=invis]
+	controller -> model[style=invis]
+
+	ViewPC[URL="\ref ViewPC"]
+	EncryptDialog[URL="\ref EncryptDialog"]
+	AboutPC[URL="\ref AboutPC"]
+
+	ControllerPC[URL="\ref ControllerPC"]
+
+	ModelPC[URL="\ref ModelPC"]
+	QAESEncryption[URL="\ref QAESEncryption"]
+
+	ViewPC -> EncryptDialog[color=tan1]
+	ViewPC -> AboutPC[color=tan1]
+
+	ModelPC -> QAESEncryption[color=pink]
+
+	ControllerPC -> ViewPC[color=olivedrab1]
+	ControllerPC -> ModelPC[color=olivedrab1]
+}

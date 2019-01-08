@@ -101,14 +101,7 @@ void ViewPC::on_startButton_clicked()
         QByteArray hash = QCryptographicHash::hash(data, QCryptographicHash::Sha256);
         encr_data = hash + encr_data;
 
-        switch (selectedMode) {
-        case 1:
-            emit inject(encr_data, &dialog->image, selectedMode, dialog->bitsUsed);
-            break;
-        case 2:
-            emit encrypt(data, &dialog->image, selectedMode, dialog->key);
-            break;
-        }
+        emit encrypt(data, &dialog->image, selectedMode, dialog->key, dialog->bitsUsed);
     }
     else
     {
