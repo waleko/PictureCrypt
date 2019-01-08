@@ -29,11 +29,11 @@ Or download latest potentially **UNSTABLE** files:
 ### Links
 #### Windows:
 * [**EXE with release**](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/PictureCrypt-setup.exe) (~ 22 MB)
-* [Zip Debug](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/PictureCrypt-debug.zip) (~ 190 MB)
-* [Zip Release](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/PictureCrypt-release.zip) (~ 21 MB)
+* [Zip Debug](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/deploy/PictureCrypt-debug.zip) (~ 190 MB)
+* [Zip Release](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/deploy/PictureCrypt-release.zip) (~ 21 MB)
 
 #### Linux:
-* [Binary](https://github.com/waleko/PictureCrypt/raw/gh-pages/src/build/Release/PictureCrypt) (~ 10 MB)
+* [Binary](https://github.com/waleko/PictureCrypt/raw/gh-pages/app/src/build/Release/PictureCrypt) (~ 10 MB)
 
 ## External use
 You can use ModelPC class separately from everything else, **except for QAESEncryption** (so /aes folder)
@@ -118,7 +118,7 @@ else
 ```
 
 ### Tests
-PictureCrypt comes with QT tests ready
+PictureCrypt comes with Qt Test project. It can be found at 'app/tests'
 
 #### Run tests
 * Run them directly from IDE (e.g. Qt Creator)
@@ -148,11 +148,11 @@ bash ../scripts/clean.sh
 * 3 - JPHS, requires manually installed JPHS and specified directory (not currently available).
 
 ## Documentation
-* HTML documentation available [here](https://alexkovrigin.me/PictureCrypt)
+* HTML documentation available [here](docs)
 * PDF documentation available [here](https://github.com/waleko/PictureCrypt/raw/gh-pages/refman.pdf)
 
 ## Continuous integration
-Continuous integration is fulfilled via [Travis CI](https://travis-ci.com/waleko/PictureCrypt) and [AppVeyor](https://ci.appveyor.com/project/waleko/picturecrypt) platform.
+Continuous integration is fulfilled via [Travis CI](https://travis-ci.com/waleko/PictureCrypt) for Linux and [AppVeyor](https://ci.appveyor.com/project/waleko/picturecrypt) for Windows.
 
 ## Internationalization
 ### Languages
