@@ -169,12 +169,12 @@ If you'd like to translate PictureCrypt to your language here are steps to do so
 * Install QT and QT Linguist with it
 * Clone the project.
 * Go to PictureCrypt/app/src/
-* Add a filename to TRANSLATIONS in app/src/src.pro file. Filename must be 'picturecrypt_<your language>.ts' (e.g. 'picturecrypt_fr.ts')
+* Add a filename to TRANSLATIONS in app/src/src.pro file. Filename must be 'picturecrypt_{your language}.ts' (e.g. 'picturecrypt_fr.ts')
 * Run `lupdate src.pro`, it will generate that .ts file. If there is an error: "Maybe you forgot to set your environment?" Go to Project (on the left-hand side) ->(expand) Build environment -> Open terminal and run `lupdate src.pro`.
 * Go to translations/
-* Run `linguist picturecrypt_<your language>.ts`. The Qt Linguist will appear, where you can translate given text from English (there are a couple of html entries, just edit their text part). **If you don't translate the whole thing, your work will be still appreciated!**
-* Either go to File -> Compile or run `lrelease picturecrypt_<your language>.ts`.
-* Add your picturecrypt_<your language>.ts to app/src/translations.qrc resource file.
+* Run `linguist picturecrypt_{your language}.ts`. The Qt Linguist will appear, where you can translate given text from English (there are a couple of html entries, just edit their text part). **If you don't translate the whole thing, your work will be still appreciated!**
+* Either go to File -> Compile or run `lrelease picturecrypt_{your language}.ts`.
+* Add your picturecrypt_{your language}.ts to app/src/translations.qrc resource file.
 * Create a pull request in GitHub with your work.
 
 If you have any trouble, [contact me](#contact) and I will sincerely try to help you as I really don't think, that anyone will decide to help me translate. 😔
