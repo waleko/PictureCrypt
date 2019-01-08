@@ -12,8 +12,9 @@ You can read more about project at the [home page](../)
 As written earlier this project is structured with MVC pattern. Here is a small graph showing the basic structure.
 \dotfile structure.gv
 
-\section ext-use
+\section ext-use External use
 You can use ModelPC class separately from View and Control layer. You will need four files:
+
 * modelpc.cpp
 * modelpc.h
 * aes/qaesencryption.cpp
@@ -21,13 +22,13 @@ You can use ModelPC class separately from View and Control layer. You will need 
 
 Then you can just `#include "modelpc.h"` and use API.
 
-\section2 api API
+\section2 use_api API
 Here is are the most important methods:
 * ModelPC::encrypt
 * ModelPC::decrypt
 
 \section3 Showcase
-```cpp
+\code{.cpp}
 // Includes
 #include "modelpc.h"
 #include <QImage>
