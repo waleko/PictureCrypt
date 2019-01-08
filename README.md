@@ -25,6 +25,7 @@ This project is built on [Qt Platform](https://qt.io) using MVC pattern and feat
 ## Download
 Get stable binary files at [latest release page](https://github.com/waleko/PictureCrypt/releases/latest)
 Or download latest potentially **UNSTABLE** files:
+
 ### Links
 #### Windows:
 * [**EXE with release**](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/PictureCrypt-setup.exe) (~ 22 MB)

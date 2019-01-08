@@ -15,17 +15,21 @@ As written earlier this project is structured with MVC pattern. Here is a small 
 \section ext-use External use
 You can use ModelPC class separately from View and Control layer. You will need four files:
 
-* modelpc.cpp
-* modelpc.h
-* aes/qaesencryption.cpp
-* aes/qaesencryption.h
+<ul>
+<li> modelpc.cpp
+<li> modelpc.h
+<li> aes/qaesencryption.cpp
+<li> aes/qaesencryption.h
+</ul>
 
 Then you can just `#include "modelpc.h"` and use API.
 
 \subsection use_api API
 Here is are the most important methods:
-* ModelPC::encrypt
-* ModelPC::decrypt
+<ul>
+<li> ModelPC::Encrypt
+<li> ModelPC::Decrypt
+</ul>
 
 \subsubsection Showcase
 

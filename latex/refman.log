@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.8)  8 JAN 2019 20:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2019.1.8)  8 JAN 2019 20:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1236,21 +1236,28 @@ Package pdftex.def Info: dot_structure.pdf used on input line 5.
 
 
  <./dot_structure.pdf>]
+LaTeX Font Info:    Try loading font information for TS1+phv on input line 12.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
+File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
+)
+LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 12.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 12.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 18.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 10.79993pt on input line 12.
+(Font)              scaled to size 10.79993pt on input line 18.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 10.79993pt on input line 12.
+(Font)              scaled to size 10.79993pt on input line 18.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 8.99994pt on input line 13.
+(Font)              scaled to size 8.99994pt on input line 23.
  [2]
-Underfull \hbox (badness 10000) detected at line 97
+Underfull \hbox (badness 10000) detected at line 107
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 100
+Underfull \hbox (badness 10000) detected at line 110
 [][][]
  []
 
@@ -1279,7 +1286,7 @@ Chapter 6.
 ]
 Chapter 7.
 (./class_about_p_c.tex
-<class_about_p_c__inherit__graph.pdf, id=1111, 136.51pt x 156.585pt>
+<class_about_p_c__inherit__graph.pdf, id=1109, 136.51pt x 156.585pt>
 File: class_about_p_c__inherit__graph.pdf Graphic file (type pdf)
 
 <use class_about_p_c__inherit__graph.pdf>
@@ -1287,20 +1294,13 @@ Package pdftex.def Info: class_about_p_c__inherit__graph.pdf used on input line
  19.
 (pdftex.def)             Requested size: 136.0pt x 156.00879pt.
 
-<class_about_p_c__coll__graph.pdf, id=1112, 136.51pt x 156.585pt>
+<class_about_p_c__coll__graph.pdf, id=1110, 136.51pt x 156.585pt>
 File: class_about_p_c__coll__graph.pdf Graphic file (type pdf)
 
 <use class_about_p_c__coll__graph.pdf>
 Package pdftex.def Info: class_about_p_c__coll__graph.pdf used on input line 29
 .
 (pdftex.def)             Requested size: 136.0pt x 156.00879pt.
-LaTeX Font Info:    Try loading font information for TS1+phv on input line 35.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1phv.fd
-File: ts1phv.fd 2001/06/04 scalable font definitions for TS1/phv.
-)
-LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 35.
  [15 <./class_about_p_c__inherit__graph.pdf> <./class_about_p_c__coll__graph.pd
 f
 
@@ -1331,7 +1331,7 @@ LaTeX Font Warning: Font shape `T1/pcr/bc/n' undefined
 (Font)              using `T1/pcr/m/n' instead on input line 57.
 
 
-<class_about_p_c_aa3815d4826d0c8d87122449537a0a4d5_icgraph.pdf, id=1146, 352.31
+<class_about_p_c_aa3815d4826d0c8d87122449537a0a4d5_icgraph.pdf, id=1144, 352.31
 625pt x 111.41624pt>
 File: class_about_p_c_aa3815d4826d0c8d87122449537a0a4d5_icgraph.pdf Graphic fil
 e (type pdf)
@@ -1342,7 +1342,7 @@ aph.pdf used on input line 103.
 (pdftex.def)             Requested size: 350.0pt x 110.68323pt.
  [16 <./class_about_p_c_aa3815d4826d0c8d87122449537a0a4d5_icgraph.pdf>])
 (./class_controller_p_c.tex
-<class_controller_p_c__inherit__graph.pdf, id=1174, 153.57375pt x 156.585pt>
+<class_controller_p_c__inherit__graph.pdf, id=1172, 153.57375pt x 156.585pt>
 File: class_controller_p_c__inherit__graph.pdf Graphic file (type pdf)
 
 <use class_controller_p_c__inherit__graph.pdf>
@@ -1350,7 +1350,7 @@ Package pdftex.def Info: class_controller_p_c__inherit__graph.pdf used on input
  line 19.
 (pdftex.def)             Requested size: 153.0pt x 156.00879pt.
 
-<class_controller_p_c__coll__graph.pdf, id=1175, 153.57375pt x 156.585pt>
+<class_controller_p_c__coll__graph.pdf, id=1173, 153.57375pt x 156.585pt>
 File: class_controller_p_c__coll__graph.pdf Graphic file (type pdf)
 
 <use class_controller_p_c__coll__graph.pdf>
@@ -1373,7 +1373,7 @@ Underfull \hbox (badness 10000) detected at line 77
  []
 
 
-<class_controller_p_c_afa6c92d67bf3b6531c42385fc5938003_cgraph.pdf, id=1221, 38
+<class_controller_p_c_afa6c92d67bf3b6531c42385fc5938003_cgraph.pdf, id=1219, 38
 3.4325pt x 176.66pt>
 File: class_controller_p_c_afa6c92d67bf3b6531c42385fc5938003_cgraph.pdf Graphic
  file (type pdf)
@@ -1384,7 +1384,7 @@ _cgraph.pdf used on input line 91.
 (pdftex.def)             Requested size: 350.0pt x 161.26492pt.
 
 [18 <./class_controller_p_c_afa6c92d67bf3b6531c42385fc5938003_cgraph.pdf>]
-<class_controller_p_c_a8814989f7be1214e06b2e720889066b0_icgraph.pdf, id=1248, 3
+<class_controller_p_c_a8814989f7be1214e06b2e720889066b0_icgraph.pdf, id=1246, 3
 81.425pt x 100.375pt>
 File: class_controller_p_c_a8814989f7be1214e06b2e720889066b0_icgraph.pdf Graphi
 c file (type pdf)
@@ -1394,7 +1394,7 @@ Package pdftex.def Info: class_controller_p_c_a8814989f7be1214e06b2e720889066b0
 _icgraph.pdf used on input line 121.
 (pdftex.def)             Requested size: 350.0pt x 92.1087pt.
 
-<class_controller_p_c_ac00d29685a7e5b780c01eb438e10f96d_icgraph.pdf, id=1252, 3
+<class_controller_p_c_ac00d29685a7e5b780c01eb438e10f96d_icgraph.pdf, id=1250, 3
 83.4325pt x 100.375pt>
 File: class_controller_p_c_ac00d29685a7e5b780c01eb438e10f96d_icgraph.pdf Graphi
 c file (type pdf)
@@ -1411,7 +1411,7 @@ pdfTeX warning: pdflatex (file ./class_controller_p_c_ac00d29685a7e5b780c01eb43
 8e10f96d_icgraph.pdf): PDF inclusion: multiple pdfs with page group included in
  a single page
 >]) (./class_encrypt_dialog.tex
-<class_encrypt_dialog__inherit__graph.pdf, id=1281, 158.5925pt x 156.585pt>
+<class_encrypt_dialog__inherit__graph.pdf, id=1279, 158.5925pt x 156.585pt>
 File: class_encrypt_dialog__inherit__graph.pdf Graphic file (type pdf)
 
 <use class_encrypt_dialog__inherit__graph.pdf>
@@ -1419,7 +1419,7 @@ Package pdftex.def Info: class_encrypt_dialog__inherit__graph.pdf used on input
  line 19.
 (pdftex.def)             Requested size: 158.0pt x 156.01357pt.
 
-<class_encrypt_dialog__coll__graph.pdf, id=1282, 158.5925pt x 156.585pt>
+<class_encrypt_dialog__coll__graph.pdf, id=1280, 158.5925pt x 156.585pt>
 File: class_encrypt_dialog__coll__graph.pdf Graphic file (type pdf)
 
 <use class_encrypt_dialog__coll__graph.pdf>
@@ -1452,7 +1452,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 100.
 
 
-<class_encrypt_dialog_ab57e8b3a0d00c977e81f3b356657524e_cgraph.pdf, id=1358, 72
+<class_encrypt_dialog_ab57e8b3a0d00c977e81f3b356657524e_cgraph.pdf, id=1356, 72
 5.71124pt x 100.375pt>
 File: class_encrypt_dialog_ab57e8b3a0d00c977e81f3b356657524e_cgraph.pdf Graphic
  file (type pdf)
@@ -1479,7 +1479,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 168.
 
 
-<class_encrypt_dialog_a9a998acd37db458eede31f4a9cb16b78_cgraph.pdf, id=1367, 70
+<class_encrypt_dialog_a9a998acd37db458eede31f4a9cb16b78_cgraph.pdf, id=1365, 70
 6.64pt x 111.41624pt>
 File: class_encrypt_dialog_a9a998acd37db458eede31f4a9cb16b78_cgraph.pdf Graphic
  file (type pdf)
@@ -1517,7 +1517,7 @@ Underfull \hbox (badness 10000) detected at line 233
  []
 
 
-<class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a_cgraph.pdf, id=1396, 54
+<class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a_cgraph.pdf, id=1394, 54
 3.02875pt x 100.375pt>
 File: class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a_cgraph.pdf Graphic
  file (type pdf)
@@ -1527,7 +1527,7 @@ Package pdftex.def Info: class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a
 _cgraph.pdf used on input line 247.
 (pdftex.def)             Requested size: 350.0pt x 64.69771pt.
 
-<class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a_icgraph.pdf, id=1397, 3
+<class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a_icgraph.pdf, id=1395, 3
 60.34625pt x 150.5625pt>
 File: class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a_icgraph.pdf Graphi
 c file (type pdf)
@@ -1558,7 +1558,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `subscript' on input line 283.
 
 [24]) (./class_model_p_c.tex
-<class_model_p_c__inherit__graph.pdf, id=1464, 137.51375pt x 156.585pt>
+<class_model_p_c__inherit__graph.pdf, id=1462, 137.51375pt x 156.585pt>
 File: class_model_p_c__inherit__graph.pdf Graphic file (type pdf)
 
 <use class_model_p_c__inherit__graph.pdf>
@@ -1566,7 +1566,7 @@ Package pdftex.def Info: class_model_p_c__inherit__graph.pdf used on input line
  19.
 (pdftex.def)             Requested size: 137.0pt x 156.01357pt.
 
-<class_model_p_c__coll__graph.pdf, id=1465, 137.51375pt x 156.585pt>
+<class_model_p_c__coll__graph.pdf, id=1463, 137.51375pt x 156.585pt>
 File: class_model_p_c__coll__graph.pdf Graphic file (type pdf)
 
 <use class_model_p_c__coll__graph.pdf>
@@ -3467,7 +3467,7 @@ exmf-dist/fonts/type1/urw/helvetic/uhvbo8ac.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/helvetic/uhvro8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/u
 tmr8a.pfb>
-Output written on refman.pdf (113 pages, 639638 bytes).
+Output written on refman.pdf (113 pages, 639784 bytes).
 PDF statistics:
  4262 PDF objects out of 4296 (max. 8388607)
  3889 compressed objects within 39 object streams
