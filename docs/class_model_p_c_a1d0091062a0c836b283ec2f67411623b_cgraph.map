@@ -1,6 +1,5 @@
 <map id="ModelPC::circuit" name="ModelPC::circuit">
 <area shape="rect" id="node2" href="$class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="172,5,331,32"/>
 <area shape="rect" id="node3" href="$class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="379,31,480,57"/>
-<area shape="rect" id="node4" href="$class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. " alt="" coords="528,5,637,32"/>
-<area shape="rect" id="node5" href="$mainpage_8dox.html#a8bceae478e38c215e869968270c33543" title="qDebug" alt="" coords="549,56,616,83"/>
+<area shape="rect" id="node4" href="$class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. " alt="" coords="528,31,637,57"/>
 </map>

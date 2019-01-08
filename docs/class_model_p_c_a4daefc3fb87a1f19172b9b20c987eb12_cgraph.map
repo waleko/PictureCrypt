@@ -1,9 +1,8 @@
 <map id="ModelPC::encryptv1_4" name="ModelPC::encryptv1_4">
 <area shape="rect" id="node2" href="$class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="258,5,359,32"/>
-<area shape="rect" id="node4" href="$mainpage_8dox.html#a8bceae478e38c215e869968270c33543" title="qDebug" alt="" coords="505,56,571,83"/>
-<area shape="rect" id="node5" href="$class_model_p_c.html#afebbbfa4b07deba4f68fc6dfb50f353f" title="ModelPC::zip Zip function, copy of EncryptDialog::zip Used for ModelPC in custom projects, other than PictureCrypt. " alt="" coords="258,107,359,133"/>
-<area shape="rect" id="node8" href="$class_model_p_c.html#a5cdb4d1d61ff62ee9d45b496a7dbf1fb" title="ModelPC::proccessPixelsv1_4 Hides (or retrieves) data to/from pixels. " alt="" coords="208,157,409,184"/>
+<area shape="rect" id="node4" href="$class_model_p_c.html#afebbbfa4b07deba4f68fc6dfb50f353f" title="ModelPC::zip Zip function, copy of EncryptDialog::zip Used for ModelPC in custom projects, other than PictureCrypt. " alt="" coords="258,56,359,83"/>
+<area shape="rect" id="node7" href="$class_model_p_c.html#a5cdb4d1d61ff62ee9d45b496a7dbf1fb" title="ModelPC::proccessPixelsv1_4 Hides (or retrieves) data to/from pixels. " alt="" coords="208,107,409,133"/>
 <area shape="rect" id="node3" href="$class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. " alt="" coords="483,5,593,32"/>
-<area shape="rect" id="node6" href="$class_q_a_e_s_encryption.html#a43819eeb6a7cb29fbd3cb6ad640dcbdf" title="Crypt Static encode function. " alt="" coords="457,107,619,133"/>
-<area shape="rect" id="node7" href="$class_q_a_e_s_encryption.html#aeac0ee8532e69e5d30b023fe38c30b3b" title="QAESEncryption::QAESEncryption" alt="" coords="667,107,895,133"/>
+<area shape="rect" id="node5" href="$class_q_a_e_s_encryption.html#a43819eeb6a7cb29fbd3cb6ad640dcbdf" title="Crypt Static encode function. " alt="" coords="457,56,619,83"/>
+<area shape="rect" id="node6" href="$class_q_a_e_s_encryption.html#aeac0ee8532e69e5d30b023fe38c30b3b" title="QAESEncryption::QAESEncryption" alt="" coords="667,56,895,83"/>
 </map>

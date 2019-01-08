@@ -19,7 +19,7 @@
 00012 
 00013     \textcolor{keywordflow}{foreach}(\textcolor{keyword}{const} QString &font, fonts) \{
 00014         \textcolor{keywordflow}{if}(QFontDatabase::addApplicationFont(\textcolor{stringliteral}{":/fonts/"} + font) == -1)
-00015             \hyperlink{mainpage_8dox_a8bceae478e38c215e869968270c33543}{qDebug}() << \textcolor{stringliteral}{"Error loading font: "} + font;
+00015             qDebug() << \textcolor{stringliteral}{"Error loading font: "} + font;
 00016     \}
 00017 
 00018     QTranslator translator;
@@ -27,7 +27,7 @@
       :/translations"}))) \{
 00020         a.installTranslator(&translator);
 00021     \} \textcolor{keywordflow}{else} \{
-00022         \hyperlink{mainpage_8dox_a8bceae478e38c215e869968270c33543}{qDebug}() << \textcolor{stringliteral}{"[!!!] cannot load translator "} << QLocale::system().name() << \textcolor{stringliteral}{" check content of
+00022         qDebug() << \textcolor{stringliteral}{"[!!!] cannot load translator "} << QLocale::system().name() << \textcolor{stringliteral}{" check content of
        translations.qrc"};
 00023     \}
 00024 

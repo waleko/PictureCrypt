@@ -255,7 +255,7 @@
 00288         \hyperlink{class_model_p_c_a9079a101d83672aa48fd2dbac797de40}{alert}(message, \textcolor{keyword}{true});
 00289         emit \hyperlink{class_model_p_c_afdcd80f0ed5062e145a71f09b0897547}{setProgress}(101);
 00290     \}
-00291     \hyperlink{mainpage_8dox_a8bceae478e38c215e869968270c33543}{qDebug}() << \textcolor{stringliteral}{"[Debug] !!! fail() - "} << message;
+00291     qDebug() << \textcolor{stringliteral}{"[Debug] !!! fail() - "} << message;
 00292 \}
 \hypertarget{modelpc_8cpp_source.tex_l00298}{}\hyperlink{class_model_p_c_a8bee0255c09449868c7e6097afaaf0cd}{00298} \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a8bee0255c09449868c7e6097afaaf0cd}{ModelPC::jphs}(QImage *image, QByteArray *data)
 00299 \{
@@ -533,7 +533,7 @@
 00591     \hyperlink{class_model_p_c_a5cdb4d1d61ff62ee9d45b496a7dbf1fb}{proccessPixelsv1\_4}(image, &heavy\_data, pass\_rand, \textcolor{keyword}{true}, were);
 00592     emit \hyperlink{class_model_p_c_afdcd80f0ed5062e145a71f09b0897547}{setProgress}(101);
 00593     QTime \textcolor{keyword}{final} = QTime::currentTime();
-00594     \hyperlink{mainpage_8dox_a8bceae478e38c215e869968270c33543}{qDebug}() << \textcolor{stringliteral}{"[Debug] Finished encrypting in "} << st.msecsTo(\textcolor{keyword}{final}) << \textcolor{stringliteral}{" msecs."};
+00594     qDebug() << \textcolor{stringliteral}{"[Debug] Finished encrypting in "} << st.msecsTo(\textcolor{keyword}{final}) << \textcolor{stringliteral}{" msecs."};
 00595 \}
 00596 
 \hypertarget{modelpc_8cpp_source.tex_l00603}{}\hyperlink{class_model_p_c_a7a1f7d491e1bde16936190b9e90896b0}{00603} QByteArray \hyperlink{class_model_p_c_a7a1f7d491e1bde16936190b9e90896b0}{ModelPC::decryptv1\_4}(QImage *image, QString key)
@@ -586,7 +586,7 @@
 00649     QByteArray unzipped = \hyperlink{class_model_p_c_a6da88f166785a49f73b22c169f956fd0}{unzip}(heavy\_data, pass\_rand);
 00650     emit \hyperlink{class_model_p_c_afdcd80f0ed5062e145a71f09b0897547}{setProgress}(101);
 00651     QTime \textcolor{keyword}{final} = QTime::currentTime();
-00652     \hyperlink{mainpage_8dox_a8bceae478e38c215e869968270c33543}{qDebug}() << \textcolor{stringliteral}{"[Debug] Finished decrypting in "} << st.msecsTo(\textcolor{keyword}{final}) << \textcolor{stringliteral}{" msecs."};
+00652     qDebug() << \textcolor{stringliteral}{"[Debug] Finished decrypting in "} << st.msecsTo(\textcolor{keyword}{final}) << \textcolor{stringliteral}{" msecs."};
 00653     \textcolor{keywordflow}{return} unzipped;
 00654 \}
 \hypertarget{modelpc_8cpp_source.tex_l00664}{}\hyperlink{class_model_p_c_a5cdb4d1d61ff62ee9d45b496a7dbf1fb}{00664} \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a5cdb4d1d61ff62ee9d45b496a7dbf1fb}{ModelPC::proccessPixelsv1\_4}(QImage *image, QByteArray* data, QByteArray key
