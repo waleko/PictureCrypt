@@ -1,18 +1,86 @@
+image: Visual Studio 2015
 branches:
   except:
     - gh-pages
 
 install:
-  - set QTDIR=C:\Qt\5.5\mingw492_32
-  - set PATH=%PATH%;%QTDIR%\bin;C:\MinGW\bin
-
+  - set QTDIR=C:\Qt\5.11.2\mingw53_32
+  - ps: $exePath = "$($env:USERPROFILE)\nsis-2.46-setup.exe"
+  - ps: (New-Object Net.WebClient).DownloadFile('http://ufpr.dl.sourceforge.net/project/nsis/NSIS%202/2.46/nsis-2.46-setup.exe', $exePath)
+  - ps: cmd /c start /wait $exePath /S /D=C:\nsis
+  - set PATH=C:\nsis;C:\MinGW\bin;%QTDIR%/bin;%PATH%
 before_build:
   - cd app
 
 build_script:
-  - sh: sh scripts/build.sh
+  # - sed -i "QMAKE_CXXFLAGS += -std=c++0x"/"QT += gui"/"QT += core"/"QT += widgets"/"QT += testlib"/"QT += xml"/"DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900" PictureCrypt.pro
+  # - sed -i "s/CONFIG += c++11/QMAKE_CXXFLAGS += -std=gnu++0x/g" PictureCrypt.pro
+  # - qmake "QMAKE_CXXFLAGS += -std=c++0x" "QT += gui" "QT += core" "QT += widgets" "QT += testlib" "QT += xml" "DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900" # -r -spec win32-g++
+  - cd src
+  - qmake.exe C:\projects\picturecrypt\app\src\src.pro -spec win32-g++
+  - C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe all
+  - C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe clean -j8
+  - sh: sh ../scripts/clean.sh
+
+  - cd ..
+  - mkdir deploy
+  - cd deploy
+  - mkdir debug
+  - mkdir release
+  - copy "C:\projects\picturecrypt\app\src\build\Debug\PictureCrypt.exe" "C:\projects\picturecrypt\app\deploy\debug\PictureCrypt.exe"
+  - copy "C:\projects\picturecrypt\app\src\build\Release\PictureCrypt.exe" "C:\projects\picturecrypt\app\deploy\release\PictureCrypt.exe
+  - cd debug
+  - windeployqt.exe --debug PictureCrypt.exe
+  - cd ../release
+  - windeployqt.exe --release PictureCrypt.exe
+  - copy "%QTDIR%\bin\libstdc++-6.dll" . /y
+  - copy "%QTDIR%\bin\libwinpthread-1.dll" . /y
+  - cd ../..
+
+  - makensis.exe .\scripts\PictureCrypt.nsi
+
+before_test:
+  - cd tests
+  - qmake.exe C:\projects\picturecrypt\app\tests\tests.pro -spec win32-g++
+  - C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe
+  - cd release
+  - dir
+  - windeployqt.exe --release tests.exe
+  - copy "%QTDIR%\bin\libstdc++-6.dll" . /y
+  - copy "%QTDIR%\bin\libwinpthread-1.dll" . /y
 
 test_script:
-  - cd tests
-  - QT_QPA_PLATFORM=offscreen make check
-  - sh: sh ../scripts/clean.sh
+  - .\tests.exe -xunitxml -tickcounter -o testresults.xml
+
+on_finish:
+  - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\testresults.xml))
+
+artifacts:
+  - path: app/deploy/debug
+    name: PictureCrypt-debug
+  - path: app/deploy/release
+    name: PictureCrypt-release
+  - path: app/tests
+    name: tests
+  - path: app/PictureCrypt-setup.exe
+    name: setup
+
+deploy:
+  - provider: S3
+    access_key_id:
+      secure: KROVK6x7RsvQ5v9onhcQ65toKcMpimgVKfA9SSVWEG8=
+    secret_access_key:
+      secure: aTO7A/REbTL5m27x2H72Gq7Lljf8WQ3EE6NWCVHtkTDvERvs99vePDyi6GkV2gVl
+    bucket: waleko-acacia
+    region: eu-north-1
+    folder: appveyor
+    artifact: PictureCrypt-debug, PictureCrypt-release, tests, setup
+  - provider: GitHub
+    release: PictureCrypt-v$($env:APPVEYOR_BUILD_VERSION)
+    description: 'PictureCrypt v$($env:APPVEYOR_BUILD_VERSION)'
+    auth_token:
+      secure: vJoiMyshYBAzJ7waxTOetHOX7g7D3eDzfxnRV6UwijE2gTfCfldarR6JM6hyIfoI
+    artifact: setup, PictureCrypt-release, PictureCrypt-debug
+    draft: true
+    on:
+      branch: release

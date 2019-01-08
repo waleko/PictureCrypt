@@ -147,9 +147,9 @@ Public Slots</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
-<tr class="memitem:a9d179ff85ed8b1ca0ff7fa495965b52d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view_p_c.html#a9d179ff85ed8b1ca0ff7fa495965b52d">encrypt</a> (QByteArray data, QImage *image, int mode, QString key)</td></tr>
-<tr class="memdesc:a9d179ff85ed8b1ca0ff7fa495965b52d"><td class="mdescLeft">&#160;</td><td class="mdescRight">encrypt Signal calling <a class="el" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st...">ModelPC::encrypt</a>  <a href="#a9d179ff85ed8b1ca0ff7fa495965b52d">More...</a><br /></td></tr>
-<tr class="separator:a9d179ff85ed8b1ca0ff7fa495965b52d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaab3c809a069aed248ef7100daabf8ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view_p_c.html#aaab3c809a069aed248ef7100daabf8ee">encrypt</a> (QByteArray data, QImage *image, int mode, QString key, int bitsUsed)</td></tr>
+<tr class="memdesc:aaab3c809a069aed248ef7100daabf8ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">encrypt Signal calling <a class="el" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st...">ModelPC::encrypt</a>  <a href="#aaab3c809a069aed248ef7100daabf8ee">More...</a><br /></td></tr>
+<tr class="separator:aaab3c809a069aed248ef7100daabf8ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a652c98014c2df32178d43a5a9612dd99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view_p_c.html#a652c98014c2df32178d43a5a9612dd99">inject</a> (QByteArray data, QImage *image, int mode, int bitsUsed)</td></tr>
 <tr class="memdesc:a652c98014c2df32178d43a5a9612dd99"><td class="mdescLeft">&#160;</td><td class="mdescRight">inject Signal calling <a class="el" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::inject</a>  <a href="#a652c98014c2df32178d43a5a9612dd99">More...</a><br /></td></tr>
 <tr class="separator:a652c98014c2df32178d43a5a9612dd99"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -211,7 +211,7 @@ Protected Member Functions</h2></td></tr>
 <div class="textblock"><p>The <a class="el" href="class_view_p_c.html" title="The ViewPC class View layer of the app. Controls EncryptDialog and ProgressDialog. ">ViewPC</a> class View layer of the app. Controls <a class="el" href="class_encrypt_dialog.html" title="The EncryptDialog class Class to get the image and key to store secret info. ">EncryptDialog</a> and ProgressDialog. </p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_controller_p_c.html" title="The ControllerPC class Controller class, which controls View and Model layers. ">ControllerPC</a>, <a class="el" href="class_model_p_c.html" title="The ModelPC class Model Layer of the app. Main class that does the work of PictureCrypt logic Control...">ModelPC</a>, <a class="el" href="class_encrypt_dialog.html" title="The EncryptDialog class Class to get the image and key to store secret info. ">EncryptDialog</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="viewpc_8h_source.html#l00036">36</a> of file <a class="el" href="viewpc_8h_source.html">viewpc.h</a>.</p>
+<p>Definition at line <a class="el" href="viewpc_8h_source.html#l00035">35</a> of file <a class="el" href="viewpc_8h_source.html">viewpc.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a33c96c61f61042319c66c19059836b7f"></a>
 <div class="memitem">
@@ -302,7 +302,7 @@ Here is the call graph for this function:</div>
 
 <p><a class="el" href="class_view_p_c.html#ad7ba2fcf1d17862de15e32432823f7b0" title="ViewPC::abortCircuit Slot to close ProgressDialog (ViewPC::dialog) ">ViewPC::abortCircuit</a> Slot to close ProgressDialog (<a class="el" href="class_view_p_c.html#a31abbb470fe329b44e6ffee202b903ca" title="dialog ProgressDialog used. ">ViewPC::dialog</a>) </p>
 
-<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00218">218</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00211">211</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -393,7 +393,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00132">132</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00125">125</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -471,7 +471,7 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a9d179ff85ed8b1ca0ff7fa495965b52d"></a>
+<a class="anchor" id="aaab3c809a069aed248ef7100daabf8ee"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -500,7 +500,13 @@ Here is the caller graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">QString&#160;</td>
-          <td class="paramname"><em>key</em>&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>bitsUsed</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -522,6 +528,7 @@ Here is the caller graph for this function:</div>
     <tr><td class="paramname">image</td><td>Image to be encrypted into </td></tr>
     <tr><td class="paramname">mode</td><td>Mode of encryption </td></tr>
     <tr><td class="paramname">key</td><td>Key of encryption </td></tr>
+    <tr><td class="paramname">bitsUsed</td><td>Bits used per byte </td></tr>
   </table>
   </dd>
 </dl>
@@ -529,8 +536,8 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_view_p_c_a9d179ff85ed8b1ca0ff7fa495965b52d_icgraph.png" border="0" usemap="#class_view_p_c_a9d179ff85ed8b1ca0ff7fa495965b52d_icgraph" alt=""/></div>
-<map name="class_view_p_c_a9d179ff85ed8b1ca0ff7fa495965b52d_icgraph" id="class_view_p_c_a9d179ff85ed8b1ca0ff7fa495965b52d_icgraph">
+<div class="center"><img src="class_view_p_c_aaab3c809a069aed248ef7100daabf8ee_icgraph.png" border="0" usemap="#class_view_p_c_aaab3c809a069aed248ef7100daabf8ee_icgraph" alt=""/></div>
+<map name="class_view_p_c_aaab3c809a069aed248ef7100daabf8ee_icgraph" id="class_view_p_c_aaab3c809a069aed248ef7100daabf8ee_icgraph">
 <area shape="rect" id="node2" href="class_view_p_c.html#a456d75b7c5d3a089302a576e7359f1f4" title="ViewPC::on_startButton_clicked Slot to be called, when Start Button is pressed. " alt="" coords="175,5,337,47"/>
 </map>
 </div>
@@ -593,16 +600,6 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p><div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_view_p_c_a652c98014c2df32178d43a5a9612dd99_icgraph.png" border="0" usemap="#class_view_p_c_a652c98014c2df32178d43a5a9612dd99_icgraph" alt=""/></div>
-<map name="class_view_p_c_a652c98014c2df32178d43a5a9612dd99_icgraph" id="class_view_p_c_a652c98014c2df32178d43a5a9612dd99_icgraph">
-<area shape="rect" id="node2" href="class_view_p_c.html#a456d75b7c5d3a089302a576e7359f1f4" title="ViewPC::on_startButton_clicked Slot to be called, when Start Button is pressed. " alt="" coords="163,5,325,47"/>
-</map>
-</div>
-</p>
-
 </div>
 </div>
 <a class="anchor" id="a09a46da4d492eb3dde88f35dc58c997b"></a>
@@ -628,7 +625,7 @@ Here is the caller graph for this function:</div>
 
 <p><a class="el" href="class_view_p_c.html#a09a46da4d492eb3dde88f35dc58c997b" title="ViewPC::on_actionAbout_triggered Opens about page. ">ViewPC::on_actionAbout_triggered</a> Opens about page. </p>
 
-<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00275">275</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00268">268</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -665,7 +662,7 @@ Here is the call graph for this function:</div>
 
 <p><a class="el" href="class_view_p_c.html#a0d252ff4829260c6c76769fbd24b7cd7" title="ViewPC::on_actionHelp_triggered Opens online documentation. ">ViewPC::on_actionHelp_triggered</a> Opens online documentation. </p>
 
-<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00285">285</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00278">278</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
 
 </div>
 </div>
@@ -721,7 +718,7 @@ Here is the call graph for this function:</div>
 <h1><a class="anchor" id="encrypting"></a>
 Encrypting</h1>
 <p>If Encrypting mode is active the data from text browser or from file from file selector will be opened and checked in size. </p><dl class="section note"><dt>Note</dt><dd>File size limit is 16MB</dd></dl>
-<p>Then the <a class="el" href="class_encrypt_dialog.html" title="The EncryptDialog class Class to get the image and key to store secret info. ">EncryptDialog</a> opens and image and key is selected. Then the <a class="el" href="class_view_p_c.html#a9d179ff85ed8b1ca0ff7fa495965b52d" title="encrypt Signal calling ModelPC::encrypt ">ViewPC::encrypt</a> signal is called to start <a class="el" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st...">ModelPC::encrypt</a> </p>
+<p>Then the <a class="el" href="class_encrypt_dialog.html" title="The EncryptDialog class Class to get the image and key to store secret info. ">EncryptDialog</a> opens and image and key is selected. Then the <a class="el" href="class_view_p_c.html#aaab3c809a069aed248ef7100daabf8ee" title="encrypt Signal calling ModelPC::encrypt ">ViewPC::encrypt</a> signal is called to start <a class="el" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st...">ModelPC::encrypt</a> </p>
 <h1><a class="anchor" id="decrypting"></a>
 Decrypting</h1>
 <p>Else, the image from file selector is transmitted to <a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> </p>
@@ -765,7 +762,7 @@ Here is the call graph for this function:</div>
 <p><a class="el" href="class_view_p_c.html#a559c95675ec98b15451f3bca47033d9c" title="ViewPC::requestKey Request keyphrase from user using InputDialog. ">ViewPC::requestKey</a> Request keyphrase from user using InputDialog. </p>
 <dl class="section return"><dt>Returns</dt><dd>Returns keyphrase </dd></dl>
 
-<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00255">255</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00248">248</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -820,7 +817,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st...">ModelPC::encrypt</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00153">153</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00146">146</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -865,7 +862,7 @@ Here is the call graph for this function:</div>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00174">174</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00167">167</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -909,7 +906,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00231">231</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00224">224</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -997,7 +994,7 @@ Here is the caller graph for this function:</div>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="class_view_p_c.html#ad7ba2fcf1d17862de15e32432823f7b0" title="ViewPC::abortCircuit Slot to close ProgressDialog (ViewPC::dialog) ">ViewPC::abortCircuit()</a>, <a class="el" href="class_model_p_c.html#afdcd80f0ed5062e145a71f09b0897547" title="setProgress Signal to be called to set progress of ProgressDialog. ">ModelPC::setProgress()</a> </dd></dl>
 
-<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00192">192</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00185">185</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
@@ -1034,7 +1031,7 @@ Here is the call graph for this function:</div>
 
 <p><a class="el" href="class_view_p_c.html#a89236a0bb8760f02e984b85a8571934c" title="ViewPC::setupErrorsDict Setups errorsDict from strings.xml. ">ViewPC::setupErrorsDict</a> Setups errorsDict from strings.xml. </p>
 
-<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00293">293</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00286">286</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -1078,7 +1075,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 
-<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00246">246</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
+<p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00239">239</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>

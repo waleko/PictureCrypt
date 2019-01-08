@@ -49,7 +49,7 @@ void \hyperlink{class_view_p_c_ac05220df875b7c4f24405a5742476ebf}{set\+Version} 
 \subsection*{Signals}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{class_view_p_c_a9d179ff85ed8b1ca0ff7fa495965b52d}{encrypt} (Q\+Byte\+Array data, Q\+Image $\ast$image, int mode, Q\+String key)
+void \hyperlink{class_view_p_c_aaab3c809a069aed248ef7100daabf8ee}{encrypt} (Q\+Byte\+Array data, Q\+Image $\ast$image, int mode, Q\+String key, int bits\+Used)
 \begin{DoxyCompactList}\small\item\em encrypt Signal calling \hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{Model\+P\+C\+::encrypt} \end{DoxyCompactList}\item 
 void \hyperlink{class_view_p_c_a652c98014c2df32178d43a5a9612dd99}{inject} (Q\+Byte\+Array data, Q\+Image $\ast$image, int mode, int bits\+Used)
 \begin{DoxyCompactList}\small\item\em inject Signal calling \hyperlink{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10}{Model\+P\+C\+::inject} \end{DoxyCompactList}\item 
@@ -103,7 +103,7 @@ The \hyperlink{class_view_p_c}{View\+PC} class View layer of the app. Controls \
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{viewpc_8h_source_l00036}{36} of file \hyperlink{viewpc_8h_source}{viewpc.\+h}.
+Definition at line \hyperlink{viewpc_8h_source_l00035}{35} of file \hyperlink{viewpc_8h_source}{viewpc.\+h}.
 
 
 
@@ -174,7 +174,7 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00218}{218} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00211}{211} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 
 
@@ -232,7 +232,7 @@ Here is the caller graph for this function\+:
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00132}{132} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00125}{125} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 
 
@@ -290,9 +290,10 @@ Here is the caller graph for this function\+:
 \item[{Q\+Byte\+Array}]{data, }
 \item[{Q\+Image $\ast$}]{image, }
 \item[{int}]{mode, }
-\item[{Q\+String}]{key}
+\item[{Q\+String}]{key, }
+\item[{int}]{bits\+Used}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [signal]}}\hypertarget{class_view_p_c_a9d179ff85ed8b1ca0ff7fa495965b52d}{}\label{class_view_p_c_a9d179ff85ed8b1ca0ff7fa495965b52d}
+)\hspace{0.3cm}{\ttfamily [signal]}}\hypertarget{class_view_p_c_aaab3c809a069aed248ef7100daabf8ee}{}\label{class_view_p_c_aaab3c809a069aed248ef7100daabf8ee}
 
 
 encrypt Signal calling \hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{Model\+P\+C\+::encrypt} 
@@ -307,6 +308,8 @@ encrypt Signal calling \hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298
 \hline
 {\em key} & Key of encryption \\
 \hline
+{\em bits\+Used} & Bits used per byte \\
+\hline
 \end{DoxyParams}
 
 
@@ -315,7 +318,7 @@ Here is the caller graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=329pt]{class_view_p_c_a9d179ff85ed8b1ca0ff7fa495965b52d_icgraph}
+\includegraphics[width=329pt]{class_view_p_c_aaab3c809a069aed248ef7100daabf8ee_icgraph}
 \end{center}
 \end{figure}
 
@@ -345,18 +348,6 @@ inject Signal calling \hyperlink{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f
 {\em bits\+Used} & Bits used per byte \\
 \hline
 \end{DoxyParams}
-
-
-Here is the caller graph for this function\+:
-\nopagebreak
-\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[width=320pt]{class_view_p_c_a652c98014c2df32178d43a5a9612dd99_icgraph}
-\end{center}
-\end{figure}
-
-
 \index{View\+PC@{View\+PC}!on\+\_\+action\+About\+\_\+triggered@{on\+\_\+action\+About\+\_\+triggered}}
 \index{on\+\_\+action\+About\+\_\+triggered@{on\+\_\+action\+About\+\_\+triggered}!View\+PC@{View\+PC}}
 \subsubsection[{\texorpdfstring{on\+\_\+action\+About\+\_\+triggered}{on_actionAbout_triggered}}]{\setlength{\rightskip}{0pt plus 5cm}void View\+P\+C\+::on\+\_\+action\+About\+\_\+triggered (
@@ -370,7 +361,7 @@ Here is the caller graph for this function\+:
 
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00275}{275} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00268}{268} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 
 
@@ -397,7 +388,7 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00285}{285} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00278}{278} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 \index{View\+PC@{View\+PC}!on\+\_\+file\+Button\+\_\+clicked@{on\+\_\+file\+Button\+\_\+clicked}}
 \index{on\+\_\+file\+Button\+\_\+clicked@{on\+\_\+file\+Button\+\_\+clicked}!View\+PC@{View\+PC}}
@@ -429,7 +420,7 @@ Definition at line \hyperlink{viewpc_8cpp_source_l00038}{38} of file \hyperlink{
 If Encrypting mode is active the data from text browser or from file from file selector will be opened and checked in size. \begin{DoxyNote}{Note}
 File size limit is 16\+MB
 \end{DoxyNote}
-Then the \hyperlink{class_encrypt_dialog}{Encrypt\+Dialog} opens and image and key is selected. Then the \hyperlink{class_view_p_c_a9d179ff85ed8b1ca0ff7fa495965b52d}{View\+P\+C\+::encrypt} signal is called to start \hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{Model\+P\+C\+::encrypt} \hypertarget{class_view_p_c_decrypting}{}\subsection{Decrypting}\label{class_view_p_c_decrypting}
+Then the \hyperlink{class_encrypt_dialog}{Encrypt\+Dialog} opens and image and key is selected. Then the \hyperlink{class_view_p_c_aaab3c809a069aed248ef7100daabf8ee}{View\+P\+C\+::encrypt} signal is called to start \hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{Model\+P\+C\+::encrypt} \hypertarget{class_view_p_c_decrypting}{}\subsection{Decrypting}\label{class_view_p_c_decrypting}
 Else, the image from file selector is transmitted to \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{Model\+P\+C\+::decrypt} 
 
 Definition at line \hyperlink{viewpc_8cpp_source_l00060}{60} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
@@ -462,7 +453,7 @@ Returns keyphrase
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00255}{255} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00248}{248} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 
 
@@ -509,7 +500,7 @@ Here is the caller graph for this function\+:
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00153}{153} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00146}{146} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 
 
@@ -544,7 +535,7 @@ Here is the call graph for this function\+:
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00174}{174} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00167}{167} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 
 
@@ -576,7 +567,7 @@ Here is the call graph for this function\+:
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00231}{231} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00224}{224} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 
 
@@ -639,7 +630,7 @@ Here is the caller graph for this function\+:
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00192}{192} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00185}{185} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 
 
@@ -666,7 +657,7 @@ Here is the call graph for this function\+:
 
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00293}{293} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00286}{286} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 
 
@@ -698,7 +689,7 @@ Here is the caller graph for this function\+:
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{viewpc_8cpp_source_l00246}{246} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
+Definition at line \hyperlink{viewpc_8cpp_source_l00239}{239} of file \hyperlink{viewpc_8cpp_source}{viewpc.\+cpp}.
 
 
 

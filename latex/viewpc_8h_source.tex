@@ -23,49 +23,48 @@
 00019 \textcolor{preprocessor}{#include <\hyperlink{aboutpc_8h}{aboutpc.h}>}
 00020 
 00021 \textcolor{preprocessor}{#include <QLocale>}
-00022 \textcolor{preprocessor}{#include <QtXml>}
-00023 
-00024 \textcolor{keyword}{namespace }\hyperlink{namespace_ui}{Ui} \{
-00025 \textcolor{keyword}{class }\hyperlink{class_view_p_c}{ViewPC};
-00026 \}
-\hypertarget{viewpc_8h_source.tex_l00036}{}\hyperlink{class_view_p_c}{00036} \textcolor{keyword}{class }\hyperlink{class_view_p_c}{ViewPC} : \textcolor{keyword}{public} QMainWindow
-00037 \{
-00038     Q\_OBJECT
-00039 
-00040 \textcolor{keyword}{public}:
-00041     \textcolor{keyword}{explicit} \hyperlink{class_view_p_c}{ViewPC}(QWidget *parent = \textcolor{keyword}{nullptr});
-00042     ~\hyperlink{class_view_p_c}{ViewPC}();
-00043 \textcolor{keyword}{private} slots:
-00044     \textcolor{keywordtype}{void} on\_encryptMode\_clicked();
-00045 
-00046     \textcolor{keywordtype}{void} on\_decryptMode\_clicked();
-00047 
-00048     \textcolor{keywordtype}{void} on\_actionJPHS\_path\_triggered();
-00049 
-00050     \textcolor{keywordtype}{void} on\_comboBox\_currentIndexChanged(\textcolor{keywordtype}{int} index);
-00051 
-00052     \textcolor{keywordtype}{void} on\_text\_textChanged();
-00053 
-00054 \textcolor{keyword}{protected} slots:
-00055     \textcolor{keywordtype}{void} on\_fileButton\_clicked();
-00056 
-00057     \textcolor{keywordtype}{void} on\_startButton\_clicked();
-00058 
-00059     \textcolor{keywordtype}{void} on\_actionAbout\_triggered();
-00060 
-00061     \textcolor{keywordtype}{void} on\_actionHelp\_triggered();
-00062 
-00063     \textcolor{keywordtype}{void} setupErrorsDict();
-00064 \textcolor{keyword}{public} slots:
-00065     \textcolor{keywordtype}{void} alert(QString message, \textcolor{keywordtype}{bool} isWarning = \textcolor{keyword}{false});
-00066     \textcolor{keywordtype}{void} saveData(QByteArray Edata);
-00067     \textcolor{keywordtype}{void} saveImage(QImage *image);
-00068     \textcolor{keywordtype}{void} setProgress(\textcolor{keywordtype}{int} val);
-00069     \textcolor{keywordtype}{void} abortCircuit();
-00070     \textcolor{keywordtype}{void} setEncryptMode(\textcolor{keywordtype}{bool} encr);
-00071     \textcolor{keywordtype}{void} setVersion(QString version);
-00072 signals:
-00080     \textcolor{keywordtype}{void} encrypt(QByteArray data, QImage *image, \textcolor{keywordtype}{int} mode, QString key);
+00022 
+00023 \textcolor{keyword}{namespace }\hyperlink{namespace_ui}{Ui} \{
+00024 \textcolor{keyword}{class }\hyperlink{class_view_p_c}{ViewPC};
+00025 \}
+\hypertarget{viewpc_8h_source.tex_l00035}{}\hyperlink{class_view_p_c}{00035} \textcolor{keyword}{class }\hyperlink{class_view_p_c}{ViewPC} : \textcolor{keyword}{public} QMainWindow
+00036 \{
+00037     Q\_OBJECT
+00038 
+00039 \textcolor{keyword}{public}:
+00040     \textcolor{keyword}{explicit} \hyperlink{class_view_p_c}{ViewPC}(QWidget *parent = \textcolor{keyword}{nullptr});
+00041     ~\hyperlink{class_view_p_c}{ViewPC}();
+00042 \textcolor{keyword}{private} slots:
+00043     \textcolor{keywordtype}{void} on\_encryptMode\_clicked();
+00044 
+00045     \textcolor{keywordtype}{void} on\_decryptMode\_clicked();
+00046 
+00047     \textcolor{keywordtype}{void} on\_actionJPHS\_path\_triggered();
+00048 
+00049     \textcolor{keywordtype}{void} on\_comboBox\_currentIndexChanged(\textcolor{keywordtype}{int} index);
+00050 
+00051     \textcolor{keywordtype}{void} on\_text\_textChanged();
+00052 
+00053 \textcolor{keyword}{protected} slots:
+00054     \textcolor{keywordtype}{void} on\_fileButton\_clicked();
+00055 
+00056     \textcolor{keywordtype}{void} on\_startButton\_clicked();
+00057 
+00058     \textcolor{keywordtype}{void} on\_actionAbout\_triggered();
+00059 
+00060     \textcolor{keywordtype}{void} on\_actionHelp\_triggered();
+00061 
+00062     \textcolor{keywordtype}{void} setupErrorsDict();
+00063 \textcolor{keyword}{public} slots:
+00064     \textcolor{keywordtype}{void} alert(QString message, \textcolor{keywordtype}{bool} isWarning = \textcolor{keyword}{false});
+00065     \textcolor{keywordtype}{void} saveData(QByteArray Edata);
+00066     \textcolor{keywordtype}{void} saveImage(QImage *image);
+00067     \textcolor{keywordtype}{void} setProgress(\textcolor{keywordtype}{int} val);
+00068     \textcolor{keywordtype}{void} abortCircuit();
+00069     \textcolor{keywordtype}{void} setEncryptMode(\textcolor{keywordtype}{bool} encr);
+00070     \textcolor{keywordtype}{void} setVersion(QString version);
+00071 signals:
+00080     \textcolor{keywordtype}{void} encrypt(QByteArray data, QImage *image, \textcolor{keywordtype}{int} mode, QString key, \textcolor{keywordtype}{int} bitsUsed);
 00088     \textcolor{keywordtype}{void} inject(QByteArray data, QImage * image, \textcolor{keywordtype}{int} mode, \textcolor{keywordtype}{int} bitsUsed);
 00096     \textcolor{keywordtype}{void} decrypt(QImage * \_image, QString key, \textcolor{keywordtype}{int} mode);
 00100     \textcolor{keywordtype}{void} abortModel();

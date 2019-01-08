@@ -43,8 +43,6 @@ enum \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceb}{Crypt\+Mode} 
 \item 
 Q\+Image $\ast$ \hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{encrypt} (Q\+Byte\+Array data, Q\+Image $\ast$image, int \+\_\+mode, Q\+String key=\char`\"{}\char`\"{}, int \+\_\+bits\+Used=8, Q\+String $\ast$\+\_\+error=nullptr)
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{Model\+P\+C\+::encrypt} Slot to zip and inject data and provide it with some extra stuff After completion start standard \hyperlink{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10}{Model\+P\+C\+::inject} Isn\textquotesingle{}t used in Picture\+Crypt, but used can be used in other -\/ custom projects. \end{DoxyCompactList}\item 
-Q\+Image $\ast$ \hyperlink{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10}{inject} (Q\+Byte\+Array encr\+\_\+data, Q\+Image $\ast$image, int \+\_\+mode, int \+\_\+bits\+Used=8, Q\+String $\ast$\+\_\+error=nullptr)
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10}{Model\+P\+C\+::inject} Slot to be called when encrypt mode in \hyperlink{class_view_p_c}{View\+PC} is selected and started. \end{DoxyCompactList}\item 
 Q\+Byte\+Array \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{decrypt} (Q\+Image $\ast$image, Q\+String key, int \+\_\+mode=0, Q\+String $\ast$\+\_\+error=nullptr)
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{Model\+P\+C\+::decrypt} Slot to be called when decrypt mode in \hyperlink{class_view_p_c}{View\+PC} is selected and started. \end{DoxyCompactList}\item 
 void \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail} (Q\+String message)
@@ -74,8 +72,6 @@ Q\+Byte\+Array \hyperlink{class_model_p_c_a6da88f166785a49f73b22c169f956fd0}{unz
 \item 
 static Q\+Image $\ast$ \hyperlink{class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd}{Encrypt} (Q\+Byte\+Array data, Q\+Image $\ast$image, int \+\_\+mode, Q\+String key=\char`\"{}\char`\"{}, int \+\_\+bits\+Used=8, Q\+String $\ast$\+\_\+error=nullptr)
 \item 
-static Q\+Image $\ast$ \hyperlink{class_model_p_c_ac17e68e6aab134621b0d151d74acdc82}{Inject} (Q\+Byte\+Array encr\+\_\+data, Q\+Image $\ast$image, int \+\_\+mode, int \+\_\+bits\+Used=8, Q\+String $\ast$\+\_\+error=nullptr)
-\item 
 static Q\+Byte\+Array \hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{Decrypt} (Q\+Image $\ast$image, Q\+String key, int \+\_\+mode=0, Q\+String $\ast$\+\_\+error=nullptr)
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
@@ -89,6 +85,11 @@ Q\+String \hyperlink{class_model_p_c_a5f426725ccf7eefd3c77ea8c720264c9}{version\
 \begin{DoxyCompactList}\small\item\em version\+String Version as string \end{DoxyCompactList}\item 
 Q\+String \hyperlink{class_model_p_c_abd038306f14f22fb885a1697c96d6335}{default\+J\+P\+H\+S\+Dir}
 \begin{DoxyCompactList}\small\item\em default\+J\+P\+H\+S\+Dir Default J\+P\+HS directory \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Slots}
+\begin{DoxyCompactItemize}
+\item 
+Q\+Image $\ast$ \hyperlink{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10}{inject} (Q\+Byte\+Array encr\+\_\+data, Q\+Image $\ast$image, int \+\_\+mode, int \+\_\+bits\+Used=8, Q\+String $\ast$\+\_\+error=nullptr)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10}{Model\+P\+C\+::inject} Slot to be called when encrypt mode in \hyperlink{class_view_p_c}{View\+PC} is selected and started. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -108,6 +109,11 @@ void \hyperlink{class_model_p_c_a5cdb4d1d61ff62ee9d45b496a7dbf1fb}{proccess\+Pix
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_model_p_c_a5cdb4d1d61ff62ee9d45b496a7dbf1fb}{Model\+P\+C\+::proccess\+Pixelsv1\+\_\+4} Hides (or retrieves) data to/from pixels. \end{DoxyCompactList}\item 
 Q\+Byte\+Array \hyperlink{class_model_p_c_afebbbfa4b07deba4f68fc6dfb50f353f}{zip} (Q\+Byte\+Array data, Q\+Byte\+Array key)
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_model_p_c_afebbbfa4b07deba4f68fc6dfb50f353f}{Model\+P\+C\+::zip} Zip function, copy of \hyperlink{class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a}{Encrypt\+Dialog\+::zip} Used for \hyperlink{class_model_p_c}{Model\+PC} in custom projects, other than Picture\+Crypt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Q\+Image $\ast$ \hyperlink{class_model_p_c_ac17e68e6aab134621b0d151d74acdc82}{Inject} (Q\+Byte\+Array encr\+\_\+data, Q\+Image $\ast$image, int \+\_\+mode, int \+\_\+bits\+Used=8, Q\+String $\ast$\+\_\+error=nullptr)
+\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -211,7 +217,7 @@ Here is the caller graph for this function\+:
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{modelpc_8cpp_source_l00940}{940} of file \hyperlink{modelpc_8cpp_source}{modelpc.\+cpp}.
+Definition at line \hyperlink{modelpc_8cpp_source_l00941}{941} of file \hyperlink{modelpc_8cpp_source}{modelpc.\+cpp}.
 
 
 
@@ -409,7 +415,7 @@ Returns obtained data
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{modelpc_8cpp_source_l00777}{777} of file \hyperlink{modelpc_8cpp_source}{modelpc.\+cpp}.
+Definition at line \hyperlink{modelpc_8cpp_source_l00778}{778} of file \hyperlink{modelpc_8cpp_source}{modelpc.\+cpp}.
 
 
 
@@ -459,7 +465,7 @@ Returns obtained data
 \end{DoxyReturn}
 
 
-Definition at line \hyperlink{modelpc_8cpp_source_l00602}{602} of file \hyperlink{modelpc_8cpp_source}{modelpc.\+cpp}.
+Definition at line \hyperlink{modelpc_8cpp_source_l00603}{603} of file \hyperlink{modelpc_8cpp_source}{modelpc.\+cpp}.
 
 
 
@@ -535,7 +541,7 @@ Here is the call graph for this function\+:
 \hline
 {\em image} & Image for embedding \\
 \hline
-{\em mode} & Mode for embedding \\
+{\em \+\_\+mode} & Mode for embedding \\
 \hline
 {\em key} & Key for extra encryption \\
 \hline
@@ -585,10 +591,12 @@ Here is the call graph for this function\+:
 \hline
 {\em data} & Data for embedding \\
 \hline
+{\em key} & Key of encryption \\
+\hline
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{modelpc_8cpp_source_l00560}{560} of file \hyperlink{modelpc_8cpp_source}{modelpc.\+cpp}.
+Definition at line \hyperlink{modelpc_8cpp_source_l00561}{561} of file \hyperlink{modelpc_8cpp_source}{modelpc.\+cpp}.
 
 
 
@@ -668,7 +676,7 @@ Here is the caller graph for this function\+:
 \item[{int}]{\+\_\+bits\+Used = {\ttfamily 8}, }
 \item[{Q\+String $\ast$}]{\+\_\+error = {\ttfamily nullptr}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_model_p_c_ac17e68e6aab134621b0d151d74acdc82}{}\label{class_model_p_c_ac17e68e6aab134621b0d151d74acdc82}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{class_model_p_c_ac17e68e6aab134621b0d151d74acdc82}{}\label{class_model_p_c_ac17e68e6aab134621b0d151d74acdc82}
 
 
 Definition at line \hyperlink{modelpc_8cpp_source_l00029}{29} of file \hyperlink{modelpc_8cpp_source}{modelpc.\+cpp}.
@@ -695,7 +703,7 @@ Here is the call graph for this function\+:
 \item[{int}]{\+\_\+bits\+Used = {\ttfamily 8}, }
 \item[{Q\+String $\ast$}]{\+\_\+error = {\ttfamily nullptr}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10}{}\label{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10}
+)\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [slot]}}\hypertarget{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10}{}\label{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10}
 
 
 \hyperlink{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10}{Model\+P\+C\+::inject} Slot to be called when encrypt mode in \hyperlink{class_view_p_c}{View\+PC} is selected and started. 
@@ -706,7 +714,7 @@ Here is the call graph for this function\+:
 \hline
 {\em image} & Image to be inserted in. \\
 \hline
-{\em mode} & Mode of encryption \\
+{\em \+\_\+mode} & Mode of encryption \\
 \hline
 {\em \+\_\+bits\+Used} & Bits per byte used \\
 \hline
@@ -827,7 +835,7 @@ Here is the caller graph for this function\+:
 \end{DoxyParams}
 
 
-Definition at line \hyperlink{modelpc_8cpp_source_l00663}{663} of file \hyperlink{modelpc_8cpp_source}{modelpc.\+cpp}.
+Definition at line \hyperlink{modelpc_8cpp_source_l00664}{664} of file \hyperlink{modelpc_8cpp_source}{modelpc.\+cpp}.
 
 
 
@@ -1005,7 +1013,7 @@ Returns data
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{modelpc_8cpp_source_l00879}{879} of file \hyperlink{modelpc_8cpp_source}{modelpc.\+cpp}.
+Definition at line \hyperlink{modelpc_8cpp_source_l00880}{880} of file \hyperlink{modelpc_8cpp_source}{modelpc.\+cpp}.
 
 
 
@@ -1058,7 +1066,7 @@ Model\+P\+C\+::start, \hyperlink{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f
 \end{DoxySeeAlso}
 
 
-Definition at line \hyperlink{modelpc_8cpp_source_l00896}{896} of file \hyperlink{modelpc_8cpp_source}{modelpc.\+cpp}.
+Definition at line \hyperlink{modelpc_8cpp_source_l00897}{897} of file \hyperlink{modelpc_8cpp_source}{modelpc.\+cpp}.
 
 
 
@@ -1096,7 +1104,7 @@ default\+J\+P\+H\+S\+Dir Default J\+P\+HS directory
 
 
 
-Definition at line \hyperlink{modelpc_8h_source_l00094}{94} of file \hyperlink{modelpc_8h_source}{modelpc.\+h}.
+Definition at line \hyperlink{modelpc_8h_source_l00092}{92} of file \hyperlink{modelpc_8h_source}{modelpc.\+h}.
 
 \index{Model\+PC@{Model\+PC}!error@{error}}
 \index{error@{error}!Model\+PC@{Model\+PC}}
@@ -1118,7 +1126,7 @@ success Flag that true by default, but in case of error or cancelling of Progres
 
 
 
-Definition at line \hyperlink{modelpc_8h_source_l00082}{82} of file \hyperlink{modelpc_8h_source}{modelpc.\+h}.
+Definition at line \hyperlink{modelpc_8h_source_l00080}{80} of file \hyperlink{modelpc_8h_source}{modelpc.\+h}.
 
 \index{Model\+PC@{Model\+PC}!version@{version}}
 \index{version@{version}!Model\+PC@{Model\+PC}}
@@ -1129,7 +1137,7 @@ version Version of the class
 
 
 
-Definition at line \hyperlink{modelpc_8h_source_l00086}{86} of file \hyperlink{modelpc_8h_source}{modelpc.\+h}.
+Definition at line \hyperlink{modelpc_8h_source_l00084}{84} of file \hyperlink{modelpc_8h_source}{modelpc.\+h}.
 
 \index{Model\+PC@{Model\+PC}!version\+String@{version\+String}}
 \index{version\+String@{version\+String}!Model\+PC@{Model\+PC}}
@@ -1140,7 +1148,7 @@ version\+String Version as string
 
 
 
-Definition at line \hyperlink{modelpc_8h_source_l00090}{90} of file \hyperlink{modelpc_8h_source}{modelpc.\+h}.
+Definition at line \hyperlink{modelpc_8h_source_l00088}{88} of file \hyperlink{modelpc_8h_source}{modelpc.\+h}.
 
 
 

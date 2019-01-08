@@ -4,12 +4,13 @@
 #
 #-------------------------------------------------
 
-QT       += core gui xml
+QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = PictureCrypt
 TEMPLATE = app
+CONFIG -= console
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings
@@ -60,3 +61,7 @@ CONFIG(debug, debug|release) {
 TRANSLATIONS +=  \
     translations/picturecrypt_ru.ts \
     translations/picturecrypt_de.ts
+
+# Some random stuff that helps CI
+QMAKE_CXXFLAGS += -std=c++0x
+DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900

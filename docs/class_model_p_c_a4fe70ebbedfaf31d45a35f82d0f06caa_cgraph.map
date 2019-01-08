@@ -1,11 +1,12 @@
 <map id="ModelPC::decryptv1_3" name="ModelPC::decryptv1_3">
-<area shape="rect" id="node2" href="$class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="640,5,741,32"/>
-<area shape="rect" id="node4" href="$class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="208,31,327,57"/>
-<area shape="rect" id="node6" href="$class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0" title="ModelPC::unzip Unzip data from ModelPC::decrypt. Just mirrored EncryptDialog::zip. " alt="" coords="210,81,325,108"/>
+<area shape="rect" id="node2" href="$class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="640,44,741,71"/>
+<area shape="rect" id="node5" href="$class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="208,69,327,96"/>
+<area shape="rect" id="node7" href="$class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0" title="ModelPC::unzip Unzip data from ModelPC::decrypt. Just mirrored EncryptDialog::zip. " alt="" coords="210,120,325,147"/>
 <area shape="rect" id="node3" href="$class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. " alt="" coords="836,5,945,32"/>
-<area shape="rect" id="node5" href="$class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="381,56,539,83"/>
-<area shape="rect" id="node7" href="$class_q_a_e_s_encryption.html#a58f972f2b66c2454edd5112495463bba" title="decode Decodes data with AES " alt="" coords="375,107,545,133"/>
-<area shape="rect" id="node8" href="$class_q_a_e_s_encryption.html#a5bfbb972f84a8376fceed648553c0912" title="ExpandKey Expands the key. " alt="" coords="593,107,788,133"/>
-<area shape="rect" id="node9" href="$qaesencryption_8cpp.html#a94a5c6f286db021d028ddc6f91a65f72" title="xTime" alt="" coords="993,107,1052,133"/>
-<area shape="rect" id="node10" href="$qaesencryption_8cpp.html#adcc23c7a5520793f14710fff6ef23dfe" title="multiply" alt="" coords="857,132,924,159"/>
+<area shape="rect" id="node4" href="$mainpage_8dox.html#a8bceae478e38c215e869968270c33543" title="qDebug" alt="" coords="857,56,924,83"/>
+<area shape="rect" id="node6" href="$class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="381,95,539,121"/>
+<area shape="rect" id="node8" href="$class_q_a_e_s_encryption.html#a58f972f2b66c2454edd5112495463bba" title="decode Decodes data with AES " alt="" coords="375,145,545,172"/>
+<area shape="rect" id="node9" href="$class_q_a_e_s_encryption.html#a5bfbb972f84a8376fceed648553c0912" title="ExpandKey Expands the key. " alt="" coords="593,145,788,172"/>
+<area shape="rect" id="node10" href="$qaesencryption_8cpp.html#a94a5c6f286db021d028ddc6f91a65f72" title="xTime" alt="" coords="993,145,1052,172"/>
+<area shape="rect" id="node11" href="$qaesencryption_8cpp.html#adcc23c7a5520793f14710fff6ef23dfe" title="multiply" alt="" coords="857,171,924,197"/>
 </map>

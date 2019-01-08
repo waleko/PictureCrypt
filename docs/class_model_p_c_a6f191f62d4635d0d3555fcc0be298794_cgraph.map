@@ -1,13 +1,14 @@
 <map id="ModelPC::encrypt" name="ModelPC::encrypt">
-<area shape="rect" id="node2" href="$class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="905,90,1006,116"/>
-<area shape="rect" id="node4" href="$class_model_p_c.html#afebbbfa4b07deba4f68fc6dfb50f353f" title="ModelPC::zip Zip function, copy of EncryptDialog::zip Used for ModelPC in custom projects, other than PictureCrypt. " alt="" coords="433,318,534,344"/>
-<area shape="rect" id="node7" href="$class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="200,160,315,187"/>
-<area shape="rect" id="node11" href="$class_model_p_c.html#a4daefc3fb87a1f19172b9b20c987eb12" title="ModelPC::encryptv1_4 Encrypts and injects data to image used in v1.4+. " alt="" coords="180,223,335,250"/>
-<area shape="rect" id="node3" href="$class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. " alt="" coords="1117,90,1227,116"/>
-<area shape="rect" id="node5" href="$class_q_a_e_s_encryption.html#a43819eeb6a7cb29fbd3cb6ad640dcbdf" title="Crypt Static encode function. " alt="" coords="632,318,793,344"/>
-<area shape="rect" id="node6" href="$class_q_a_e_s_encryption.html#aeac0ee8532e69e5d30b023fe38c30b3b" title="QAESEncryption::QAESEncryption" alt="" coords="841,318,1069,344"/>
-<area shape="rect" id="node8" href="$class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="424,115,543,142"/>
-<area shape="rect" id="node10" href="$class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="659,166,767,192"/>
-<area shape="rect" id="node9" href="$class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="633,64,792,91"/>
-<area shape="rect" id="node12" href="$class_model_p_c.html#a5cdb4d1d61ff62ee9d45b496a7dbf1fb" title="ModelPC::proccessPixelsv1_4 Hides (or retrieves) data to/from pixels. " alt="" coords="383,267,584,294"/>
+<area shape="rect" id="node2" href="$class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="905,85,1006,112"/>
+<area shape="rect" id="node5" href="$class_model_p_c.html#afebbbfa4b07deba4f68fc6dfb50f353f" title="ModelPC::zip Zip function, copy of EncryptDialog::zip Used for ModelPC in custom projects, other than PictureCrypt. " alt="" coords="433,338,534,365"/>
+<area shape="rect" id="node8" href="$class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="200,110,315,137"/>
+<area shape="rect" id="node12" href="$class_model_p_c.html#a4daefc3fb87a1f19172b9b20c987eb12" title="ModelPC::encryptv1_4 Encrypts and injects data to image used in v1.4+. " alt="" coords="180,237,335,264"/>
+<area shape="rect" id="node3" href="$class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. " alt="" coords="1117,85,1227,112"/>
+<area shape="rect" id="node4" href="$mainpage_8dox.html#a8bceae478e38c215e869968270c33543" title="qDebug" alt="" coords="1139,186,1205,213"/>
+<area shape="rect" id="node6" href="$class_q_a_e_s_encryption.html#a43819eeb6a7cb29fbd3cb6ad640dcbdf" title="Crypt Static encode function. " alt="" coords="632,338,793,365"/>
+<area shape="rect" id="node7" href="$class_q_a_e_s_encryption.html#aeac0ee8532e69e5d30b023fe38c30b3b" title="QAESEncryption::QAESEncryption" alt="" coords="841,338,1069,365"/>
+<area shape="rect" id="node9" href="$class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="424,85,543,112"/>
+<area shape="rect" id="node11" href="$class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="659,136,767,162"/>
+<area shape="rect" id="node10" href="$class_model_p_c.html#a1171f9fe1550133dc9053a46b4e5bcfd" title="ModelPC::processPixel Processes every pixel. Reads its contains or writes data. " alt="" coords="633,85,792,112"/>
+<area shape="rect" id="node13" href="$class_model_p_c.html#a5cdb4d1d61ff62ee9d45b496a7dbf1fb" title="ModelPC::proccessPixelsv1_4 Hides (or retrieves) data to/from pixels. " alt="" coords="383,288,584,314"/>
 </map>

@@ -30,34 +30,33 @@
 \hypertarget{modelpc_8h_source.tex_l00038}{}\hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba43138df6b33a6b2bf608768907f95abc}{00038}     \textcolor{keyword}{enum} \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceb}{CryptMode} \{\hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba287198790ac9799acd03c99d63a6faea}{NotDefined}, \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba7612e38de7178170655a56ddcf96e12c}{v1\_3}, \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba43138df6b33a6b2bf608768907f95abc}{v1\_4}, \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba90ca32d3ccbb6be224cdfc33f7096eea}{jphs\_mode}\};
 00039     \textcolor{keyword}{static} QImage *\hyperlink{class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd}{Encrypt}(QByteArray data, QImage *image, \textcolor{keywordtype}{int} \_mode, QString key = \textcolor{stringliteral}{""}, \textcolor{keywordtype}{int} 
       \_bitsUsed = 8, QString *\_error = \textcolor{keyword}{nullptr});
-00040     \textcolor{keyword}{static} QImage *\hyperlink{class_model_p_c_ac17e68e6aab134621b0d151d74acdc82}{Inject}(QByteArray encr\_data, QImage * image, \textcolor{keywordtype}{int} \_mode, \textcolor{keywordtype}{int} \_bitsUsed = 8, QString
-       *\_error = \textcolor{keyword}{nullptr});
-00041     \textcolor{keyword}{static} QByteArray \hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{Decrypt}(QImage * image, QString key, \textcolor{keywordtype}{int} \_mode = 0, QString *\_error = \textcolor{keyword}{nullptr})
+00040     \textcolor{keyword}{static} QByteArray \hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{Decrypt}(QImage * image, QString key, \textcolor{keywordtype}{int} \_mode = 0, QString *\_error = \textcolor{keyword}{nullptr})
       ;
-00042 
-00043 signals:
-00050     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_af0217a7ca5671e26090dc50a5dccdaf5}{alertView}(QString messageCode, \textcolor{keywordtype}{bool} isWarning);
-00055     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a0855107fb0ccc247cd9e893fae9bb08a}{saveData}(QByteArray data);
-00060     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a41f5e2e8022679046e4d3fa1109025fa}{saveImage}(QImage *image);
-00066     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_afdcd80f0ed5062e145a71f09b0897547}{setProgress}(\textcolor{keywordtype}{int} val);
-00067 
-00068 \textcolor{keyword}{public} slots:
-00069     QImage *\hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{encrypt}(QByteArray data, QImage *image, \textcolor{keywordtype}{int} \_mode, QString key = \textcolor{stringliteral}{""}, \textcolor{keywordtype}{int} \_bitsUsed = 8, 
+00041 
+00042 signals:
+00049     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_af0217a7ca5671e26090dc50a5dccdaf5}{alertView}(QString messageCode, \textcolor{keywordtype}{bool} isWarning);
+00054     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a0855107fb0ccc247cd9e893fae9bb08a}{saveData}(QByteArray data);
+00059     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a41f5e2e8022679046e4d3fa1109025fa}{saveImage}(QImage *image);
+00065     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_afdcd80f0ed5062e145a71f09b0897547}{setProgress}(\textcolor{keywordtype}{int} val);
+00066 
+00067 \textcolor{keyword}{public} slots:
+00068     QImage *\hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{encrypt}(QByteArray data, QImage *image, \textcolor{keywordtype}{int} \_mode, QString key = \textcolor{stringliteral}{""}, \textcolor{keywordtype}{int} \_bitsUsed = 8, 
       QString *\_error = \textcolor{keyword}{nullptr});
-00070     QImage *\hyperlink{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10}{inject}(QByteArray encr\_data, QImage * image, \textcolor{keywordtype}{int} \_mode, \textcolor{keywordtype}{int} \_bitsUsed = 8, QString *
-      \_error = \textcolor{keyword}{nullptr});
-00071     QByteArray \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{decrypt}(QImage * image, QString key, \textcolor{keywordtype}{int} \_mode = 0, QString *\_error = \textcolor{keyword}{nullptr});
-00072     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(QString message);
-00073     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a9079a101d83672aa48fd2dbac797de40}{alert}(QString message, \textcolor{keywordtype}{bool} isWarning = \textcolor{keyword}{false});
-00074 
-00075 \textcolor{keyword}{public}:
-00076     QByteArray \hyperlink{class_model_p_c_a6da88f166785a49f73b22c169f956fd0}{unzip}(QByteArray data, QByteArray key);
-00077 
-\hypertarget{modelpc_8h_source.tex_l00082}{}\hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{00082}     \textcolor{keywordtype}{bool} \hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{success};
-\hypertarget{modelpc_8h_source.tex_l00086}{}\hyperlink{class_model_p_c_a5af48ab89e19be42a94c34ba00249401}{00086}     \textcolor{keywordtype}{long} \hyperlink{class_model_p_c_a5af48ab89e19be42a94c34ba00249401}{version};
-\hypertarget{modelpc_8h_source.tex_l00090}{}\hyperlink{class_model_p_c_a5f426725ccf7eefd3c77ea8c720264c9}{00090}     QString \hyperlink{class_model_p_c_a5f426725ccf7eefd3c77ea8c720264c9}{versionString};
-\hypertarget{modelpc_8h_source.tex_l00094}{}\hyperlink{class_model_p_c_abd038306f14f22fb885a1697c96d6335}{00094}     QString \hyperlink{class_model_p_c_abd038306f14f22fb885a1697c96d6335}{defaultJPHSDir};
-00095 \textcolor{keyword}{protected}:
+00069     QByteArray \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{decrypt}(QImage * image, QString key, \textcolor{keywordtype}{int} \_mode = 0, QString *\_error = \textcolor{keyword}{nullptr});
+00070     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(QString message);
+00071     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a9079a101d83672aa48fd2dbac797de40}{alert}(QString message, \textcolor{keywordtype}{bool} isWarning = \textcolor{keyword}{false});
+00072 
+00073 \textcolor{keyword}{public}:
+00074     QByteArray \hyperlink{class_model_p_c_a6da88f166785a49f73b22c169f956fd0}{unzip}(QByteArray data, QByteArray key);
+00075 
+\hypertarget{modelpc_8h_source.tex_l00080}{}\hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{00080}     \textcolor{keywordtype}{bool} \hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{success};
+\hypertarget{modelpc_8h_source.tex_l00084}{}\hyperlink{class_model_p_c_a5af48ab89e19be42a94c34ba00249401}{00084}     \textcolor{keywordtype}{long} \hyperlink{class_model_p_c_a5af48ab89e19be42a94c34ba00249401}{version};
+\hypertarget{modelpc_8h_source.tex_l00088}{}\hyperlink{class_model_p_c_a5f426725ccf7eefd3c77ea8c720264c9}{00088}     QString \hyperlink{class_model_p_c_a5f426725ccf7eefd3c77ea8c720264c9}{versionString};
+\hypertarget{modelpc_8h_source.tex_l00092}{}\hyperlink{class_model_p_c_abd038306f14f22fb885a1697c96d6335}{00092}     QString \hyperlink{class_model_p_c_abd038306f14f22fb885a1697c96d6335}{defaultJPHSDir};
+00093 \textcolor{keyword}{protected}:
+00094     \textcolor{keyword}{static} QImage *\hyperlink{class_model_p_c_ac17e68e6aab134621b0d151d74acdc82}{Inject}(QByteArray encr\_data, QImage * image, \textcolor{keywordtype}{int} \_mode, \textcolor{keywordtype}{int} \_bitsUsed = 8, QString
+       *\_error = \textcolor{keyword}{nullptr});
+00095 
 00096     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a1d0091062a0c836b283ec2f67411623b}{circuit}(QImage * image, QByteArray * data, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} countBytes);
 00097     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a8bee0255c09449868c7e6097afaaf0cd}{jphs}(QImage * image, QByteArray * data);
 00098     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a1171f9fe1550133dc9053a46b4e5bcfd}{processPixel}(QPoint pos, QVector<QPoint> *were, \textcolor{keywordtype}{bool} isEncrypt);
@@ -92,7 +91,10 @@
 00129 
 00130     \textcolor{keywordtype}{void} setError(QString word);
 00131     QByteArray GetRandomBytes(\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} count = 32);
-00132 \};
-00133 
-00134 \textcolor{preprocessor}{#endif // MODELPC\_H}
+00132 \textcolor{keyword}{protected} slots:
+00133     QImage *\hyperlink{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10}{inject}(QByteArray encr\_data, QImage * image, \textcolor{keywordtype}{int} \_mode, \textcolor{keywordtype}{int} \_bitsUsed = 8, QString *
+      \_error = \textcolor{keyword}{nullptr});
+00134 \};
+00135 
+00136 \textcolor{preprocessor}{#endif // MODELPC\_H}
 \end{DoxyCode}

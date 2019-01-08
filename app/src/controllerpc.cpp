@@ -19,8 +19,7 @@ ControllerPC::ControllerPC()
     view->show();
 
     // Layers Connection
-    connect(view, SIGNAL(encrypt(QByteArray, QImage*, int, QString)), model, SLOT(encrypt(QByteArray, QImage*, int, QString)));
-    connect(view, SIGNAL(inject(QByteArray,QImage*,int, int)), model, SLOT(inject(QByteArray,QImage*, int, int)));
+    connect(view, SIGNAL(encrypt(QByteArray, QImage*, int, QString, int)), model, SLOT(encrypt(QByteArray, QImage*, int, QString, int)));
     connect(view, SIGNAL(decrypt(QImage*,QString,int)), model, SLOT(decrypt(QImage*, QString, int)));
     connect(view, SIGNAL(abortModel()), this, SLOT(abortCircuit()));
     connect(view, SIGNAL(setJPHSDir(QString)), this, SLOT(setJPHSDir(QString)));

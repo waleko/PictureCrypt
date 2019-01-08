@@ -7,30 +7,31 @@
 00003 \textcolor{preprocessor}{#include <QTranslator>}
 00004 \textcolor{preprocessor}{#include <QLocale>}
 00005 \textcolor{preprocessor}{#include <QFontDatabase>}
-\hypertarget{main_8cpp_source.tex_l00119}{}\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{00119} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[])
-00120 \{
-00121     QApplication a(argc, argv);
-00122 
-00123     QList<QString> fonts = \{ \textcolor{stringliteral}{"Montserrat-Black.ttf"}, \textcolor{stringliteral}{"Montserrat-BlackItalic.ttf"}, \textcolor{stringliteral}{"Montserrat-Bold.ttf"}, \textcolor{stringliteral}{"
+00006 
+\hypertarget{main_8cpp_source.tex_l00007}{}\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{00007} \textcolor{keywordtype}{int} \hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}(\textcolor{keywordtype}{int} argc, \textcolor{keywordtype}{char} *argv[])
+00008 \{
+00009     QApplication a(argc, argv);
+00010 
+00011     QList<QString> fonts = \{ \textcolor{stringliteral}{"Montserrat-Black.ttf"}, \textcolor{stringliteral}{"Montserrat-BlackItalic.ttf"}, \textcolor{stringliteral}{"Montserrat-Bold.ttf"}, \textcolor{stringliteral}{"
       Montserrat-BoldItalic.ttf"}, \textcolor{stringliteral}{"Montserrat-Medium.ttf"}, \textcolor{stringliteral}{"Montserrat-MediumItalic.ttf"}, \textcolor{stringliteral}{"Montserrat-Regular.ttf"}
       , \textcolor{stringliteral}{"Montserrat-Italic.ttf"}, \textcolor{stringliteral}{"Montserrat-Light.ttf"}, \textcolor{stringliteral}{"Montserrat-LightItalic.ttf"}, \textcolor{stringliteral}{"Montserrat-Thin.ttf"}, \textcolor{stringliteral}{"
       Montserrat-ThinItalic.ttf"} \};
-00124 
-00125     \textcolor{keywordflow}{foreach}(\textcolor{keyword}{const} QString &font, fonts) \{
-00126         \textcolor{keywordflow}{if}(QFontDatabase::addApplicationFont(\textcolor{stringliteral}{":/fonts/"} + font) == -1)
-00127             qDebug() << \textcolor{stringliteral}{"Error loading font: "} + font;
-00128     \}
-00129 
-00130     QTranslator translator;
-00131     \textcolor{keywordflow}{if} (translator.load(QLocale(), QLatin1String(\textcolor{stringliteral}{"picturecrypt"}), QLatin1String(\textcolor{stringliteral}{"\_"}), QLatin1String(\textcolor{stringliteral}{"
+00012 
+00013     \textcolor{keywordflow}{foreach}(\textcolor{keyword}{const} QString &font, fonts) \{
+00014         \textcolor{keywordflow}{if}(QFontDatabase::addApplicationFont(\textcolor{stringliteral}{":/fonts/"} + font) == -1)
+00015             \hyperlink{mainpage_8dox_a8bceae478e38c215e869968270c33543}{qDebug}() << \textcolor{stringliteral}{"Error loading font: "} + font;
+00016     \}
+00017 
+00018     QTranslator translator;
+00019     \textcolor{keywordflow}{if} (translator.load(QLocale(), QLatin1String(\textcolor{stringliteral}{"picturecrypt"}), QLatin1String(\textcolor{stringliteral}{"\_"}), QLatin1String(\textcolor{stringliteral}{"
       :/translations"}))) \{
-00132         a.installTranslator(&translator);
-00133     \} \textcolor{keywordflow}{else} \{
-00134         qDebug() << \textcolor{stringliteral}{"[!!!] cannot load translator "} << QLocale::system().name() << \textcolor{stringliteral}{" check content of
+00020         a.installTranslator(&translator);
+00021     \} \textcolor{keywordflow}{else} \{
+00022         \hyperlink{mainpage_8dox_a8bceae478e38c215e869968270c33543}{qDebug}() << \textcolor{stringliteral}{"[!!!] cannot load translator "} << QLocale::system().name() << \textcolor{stringliteral}{" check content of
        translations.qrc"};
-00135     \}
-00136 
-00137     \hyperlink{class_controller_p_c}{ControllerPC} w;
-00138     \textcolor{keywordflow}{return} a.exec();
-00139 \}
+00023     \}
+00024 
+00025     \hyperlink{class_controller_p_c}{ControllerPC} w;
+00026     \textcolor{keywordflow}{return} a.exec();
+00027 \}
 \end{DoxyCode}
