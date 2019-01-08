@@ -76,8 +76,8 @@ deploy:
     folder: appveyor
     artifact: PictureCrypt-debug, PictureCrypt-release, tests, setup
   - provider: GitHub
-    release: PictureCrypt-v$(appveyor_build_version)
-    description: 'PictureCrypt's new version'
+    release: PictureCrypt-v$($env:APPVEYOR_BUILD_VERSION)
+    description: 'PictureCrypt v$($env:APPVEYOR_BUILD_VERSION)'
     auth_token:
       secure: vJoiMyshYBAzJ7waxTOetHOX7g7D3eDzfxnRV6UwijE2gTfCfldarR6JM6hyIfoI
     artifact: setup, PictureCrypt-release, PictureCrypt-debug
