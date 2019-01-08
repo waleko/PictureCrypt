@@ -6,6 +6,11 @@
     <filterAttribute>doxygen</filterAttribute>
     <toc>
       <section title="PictureCrypt 1.4.0" ref="index.html">
+        <section title="About" ref="index.html#about" />
+        <section title="Structure of the project" ref="index.html#structure" />
+        <section title="External use" ref="index.html#ext-use" />
+        <section title="License" ref="index.html#license" />
+        <section title="Contact us" ref="index.html#contact" />
         <section title="Namespaces">
           <section title="Namespace List" ref="namespaces.html">
             <section title="Ui" ref="namespace_ui.html" />
@@ -681,6 +686,8 @@
       <file>dir_a8f641299cfea9f7461c2df1141b7786_dep.png</file>
       <file>dir_000001_000002.html</file>
       <file>index.html</file>
+      <file>dot_structure.png</file>
+      <file>dot_structure.png</file>
       <file>namespaces.html</file>
       <file>annotated.html</file>
       <file>classes.html</file>

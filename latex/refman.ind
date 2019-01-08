@@ -1,375 +1,375 @@
 \begin{theindex}
 
   \item {$\sim$\+About\+PC}
-    \subitem {About\+PC}, \hyperpage{12}
+    \subitem {About\+PC}, \hyperpage{14}
   \item {$\sim$\+Encrypt\+Dialog}
-    \subitem {Encrypt\+Dialog}, \hyperpage{18}
+    \subitem {Encrypt\+Dialog}, \hyperpage{20}
   \item {$\sim$\+View\+PC}
-    \subitem {View\+PC}, \hyperpage{51}
+    \subitem {View\+PC}, \hyperpage{53}
 
   \indexspace
 
   \item {A\+E\+S\+\_\+128}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{42}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{44}
   \item {A\+E\+S\+\_\+192}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{42}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{44}
   \item {A\+E\+S\+\_\+256}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{42}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{44}
   \item {abort\+Circuit}
-    \subitem {Controller\+PC}, \hyperpage{15}
-    \subitem {View\+PC}, \hyperpage{52}
+    \subitem {Controller\+PC}, \hyperpage{17}
+    \subitem {View\+PC}, \hyperpage{54}
   \item {abort\+Model}
-    \subitem {View\+PC}, \hyperpage{52}
-  \item {About\+PC}, \hyperpage{11}
-    \subitem {$\sim$\+About\+PC}, \hyperpage{12}
-    \subitem {About\+PC}, \hyperpage{12}
-    \subitem {set\+Version}, \hyperpage{12}
-  \item {aboutpc.\+cpp}, \hyperpage{61}
-  \item {aboutpc.\+h}, \hyperpage{62, 63}
+    \subitem {View\+PC}, \hyperpage{54}
+  \item {About\+PC}, \hyperpage{13}
+    \subitem {$\sim$\+About\+PC}, \hyperpage{14}
+    \subitem {About\+PC}, \hyperpage{14}
+    \subitem {set\+Version}, \hyperpage{14}
+  \item {aboutpc.\+cpp}, \hyperpage{63}
+  \item {aboutpc.\+h}, \hyperpage{64, 65}
   \item {Aes}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{42}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{44}
   \item {alert}
-    \subitem {Model\+PC}, \hyperpage{25}
-    \subitem {View\+PC}, \hyperpage{52}
+    \subitem {Model\+PC}, \hyperpage{27}
+    \subitem {View\+PC}, \hyperpage{54}
   \item {alert\+View}
-    \subitem {Model\+PC}, \hyperpage{26}
+    \subitem {Model\+PC}, \hyperpage{28}
 
   \indexspace
 
   \item {bits\+Used}
-    \subitem {Encrypt\+Dialog}, \hyperpage{20}
+    \subitem {Encrypt\+Dialog}, \hyperpage{22}
 
   \indexspace
 
   \item {C\+BC}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{43}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{45}
   \item {C\+FB}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{43}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{45}
   \item {circuit}
-    \subitem {Model\+PC}, \hyperpage{26}
+    \subitem {Model\+PC}, \hyperpage{28}
   \item {compr\+\_\+data}
-    \subitem {Encrypt\+Dialog}, \hyperpage{20}
-  \item {Controller\+PC}, \hyperpage{13}
-    \subitem {abort\+Circuit}, \hyperpage{15}
-    \subitem {Controller\+PC}, \hyperpage{14}
-    \subitem {set\+J\+P\+H\+S\+Dir}, \hyperpage{15}
-    \subitem {version}, \hyperpage{15}
-    \subitem {version\+String}, \hyperpage{15}
-  \item {controllerpc.\+cpp}, \hyperpage{63}
-  \item {controllerpc.\+h}, \hyperpage{64, 65}
+    \subitem {Encrypt\+Dialog}, \hyperpage{22}
+  \item {Controller\+PC}, \hyperpage{15}
+    \subitem {abort\+Circuit}, \hyperpage{17}
+    \subitem {Controller\+PC}, \hyperpage{16}
+    \subitem {set\+J\+P\+H\+S\+Dir}, \hyperpage{17}
+    \subitem {version}, \hyperpage{17}
+    \subitem {version\+String}, \hyperpage{17}
+  \item {controllerpc.\+cpp}, \hyperpage{65}
+  \item {controllerpc.\+h}, \hyperpage{66, 67}
   \item {Crypt}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{43}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{45}
   \item {Crypt\+Mode}
-    \subitem {Model\+PC}, \hyperpage{24}
+    \subitem {Model\+PC}, \hyperpage{26}
 
   \indexspace
 
   \item {data}
-    \subitem {Encrypt\+Dialog}, \hyperpage{20}
+    \subitem {Encrypt\+Dialog}, \hyperpage{22}
   \item {decode}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{44}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{46}
   \item {Decrypt}
-    \subitem {Model\+PC}, \hyperpage{27}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{45}
-  \item {decrypt}
-    \subitem {Model\+PC}, \hyperpage{27}
-    \subitem {View\+PC}, \hyperpage{53}
-  \item {decryptv1\+\_\+3}
     \subitem {Model\+PC}, \hyperpage{29}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{47}
+  \item {decrypt}
+    \subitem {Model\+PC}, \hyperpage{29}
+    \subitem {View\+PC}, \hyperpage{55}
+  \item {decryptv1\+\_\+3}
+    \subitem {Model\+PC}, \hyperpage{31}
   \item {decryptv1\+\_\+4}
-    \subitem {Model\+PC}, \hyperpage{30}
+    \subitem {Model\+PC}, \hyperpage{32}
   \item {default\+J\+P\+H\+S\+Dir}
-    \subitem {Model\+PC}, \hyperpage{40}
+    \subitem {Model\+PC}, \hyperpage{42}
   \item {dialog}
-    \subitem {View\+PC}, \hyperpage{60}
+    \subitem {View\+PC}, \hyperpage{62}
 
   \indexspace
 
   \item {E\+CB}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{43}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{45}
   \item {encode}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{46}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{48}
   \item {Encrypt}
-    \subitem {Model\+PC}, \hyperpage{31}
+    \subitem {Model\+PC}, \hyperpage{33}
   \item {encrypt}
-    \subitem {Model\+PC}, \hyperpage{31}
-    \subitem {View\+PC}, \hyperpage{53}
-  \item {Encrypt\+Dialog}, \hyperpage{16}
-    \subitem {$\sim$\+Encrypt\+Dialog}, \hyperpage{18}
-    \subitem {bits\+Used}, \hyperpage{20}
-    \subitem {compr\+\_\+data}, \hyperpage{20}
-    \subitem {data}, \hyperpage{20}
-    \subitem {Encrypt\+Dialog}, \hyperpage{18}
-    \subitem {good\+Percentage}, \hyperpage{20}
-    \subitem {image}, \hyperpage{20}
-    \subitem {input\+File\+Name}, \hyperpage{20}
-    \subitem {key}, \hyperpage{20}
-    \subitem {on\+\_\+bits\+Slider\+\_\+value\+Changed}, \hyperpage{18}
-    \subitem {on\+\_\+button\+Box\+\_\+accepted}, \hyperpage{18}
-    \subitem {on\+\_\+button\+Box\+\_\+rejected}, \hyperpage{19}
-    \subitem {on\+\_\+file\+Button\+\_\+clicked}, \hyperpage{19}
-    \subitem {size}, \hyperpage{20}
-    \subitem {success}, \hyperpage{21}
-    \subitem {val}, \hyperpage{21}
-    \subitem {zip}, \hyperpage{19}
-  \item {encryptdialog.\+cpp}, \hyperpage{65}
-  \item {encryptdialog.\+h}, \hyperpage{66}, \hyperpage{68}
+    \subitem {Model\+PC}, \hyperpage{33}
+    \subitem {View\+PC}, \hyperpage{55}
+  \item {Encrypt\+Dialog}, \hyperpage{18}
+    \subitem {$\sim$\+Encrypt\+Dialog}, \hyperpage{20}
+    \subitem {bits\+Used}, \hyperpage{22}
+    \subitem {compr\+\_\+data}, \hyperpage{22}
+    \subitem {data}, \hyperpage{22}
+    \subitem {Encrypt\+Dialog}, \hyperpage{20}
+    \subitem {good\+Percentage}, \hyperpage{22}
+    \subitem {image}, \hyperpage{22}
+    \subitem {input\+File\+Name}, \hyperpage{22}
+    \subitem {key}, \hyperpage{22}
+    \subitem {on\+\_\+bits\+Slider\+\_\+value\+Changed}, \hyperpage{20}
+    \subitem {on\+\_\+button\+Box\+\_\+accepted}, \hyperpage{20}
+    \subitem {on\+\_\+button\+Box\+\_\+rejected}, \hyperpage{21}
+    \subitem {on\+\_\+file\+Button\+\_\+clicked}, \hyperpage{21}
+    \subitem {size}, \hyperpage{22}
+    \subitem {success}, \hyperpage{23}
+    \subitem {val}, \hyperpage{23}
+    \subitem {zip}, \hyperpage{21}
+  \item {encryptdialog.\+cpp}, \hyperpage{67}
+  \item {encryptdialog.\+h}, \hyperpage{68}, \hyperpage{70}
   \item {encryptv1\+\_\+4}
-    \subitem {Model\+PC}, \hyperpage{32}
+    \subitem {Model\+PC}, \hyperpage{34}
   \item {error}
-    \subitem {Model\+PC}, \hyperpage{40}
+    \subitem {Model\+PC}, \hyperpage{42}
   \item {errors\+Dict}
-    \subitem {View\+PC}, \hyperpage{60}
+    \subitem {View\+PC}, \hyperpage{62}
   \item {Expand\+Key}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{47}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{49}
   \item {expand\+Key}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{47}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{49}
 
   \indexspace
 
   \item {fail}
-    \subitem {Model\+PC}, \hyperpage{32}
+    \subitem {Model\+PC}, \hyperpage{34}
 
   \indexspace
 
   \item {good\+Percentage}
-    \subitem {Encrypt\+Dialog}, \hyperpage{20}
+    \subitem {Encrypt\+Dialog}, \hyperpage{22}
 
   \indexspace
 
   \item {I\+SO}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{43}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{45}
   \item {image}
-    \subitem {Encrypt\+Dialog}, \hyperpage{20}
+    \subitem {Encrypt\+Dialog}, \hyperpage{22}
   \item {Inject}
-    \subitem {Model\+PC}, \hyperpage{33}
+    \subitem {Model\+PC}, \hyperpage{35}
   \item {inject}
-    \subitem {Model\+PC}, \hyperpage{34}
-    \subitem {View\+PC}, \hyperpage{54}
+    \subitem {Model\+PC}, \hyperpage{36}
+    \subitem {View\+PC}, \hyperpage{56}
   \item {input\+File\+Name}
-    \subitem {Encrypt\+Dialog}, \hyperpage{20}
+    \subitem {Encrypt\+Dialog}, \hyperpage{22}
 
   \indexspace
 
   \item {jphs}
-    \subitem {Model\+PC}, \hyperpage{35}
+    \subitem {Model\+PC}, \hyperpage{37}
   \item {jphs\+\_\+mode}
-    \subitem {Model\+PC}, \hyperpage{24}
+    \subitem {Model\+PC}, \hyperpage{26}
 
   \indexspace
 
   \item {key}
-    \subitem {Encrypt\+Dialog}, \hyperpage{20}
+    \subitem {Encrypt\+Dialog}, \hyperpage{22}
 
   \indexspace
 
   \item {main}
-    \subitem {main.\+cpp}, \hyperpage{69}
-  \item {main.\+cpp}, \hyperpage{68, 69}
-    \subitem {main}, \hyperpage{69}
-  \item {mainpage.\+dox}, \hyperpage{69}
+    \subitem {main.\+cpp}, \hyperpage{71}
+  \item {main.\+cpp}, \hyperpage{70, 71}
+    \subitem {main}, \hyperpage{71}
+  \item {mainpage.\+dox}, \hyperpage{71}
   \item {Mode}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{42}
-  \item {Model\+PC}, \hyperpage{21}
-    \subitem {alert}, \hyperpage{25}
-    \subitem {alert\+View}, \hyperpage{26}
-    \subitem {circuit}, \hyperpage{26}
-    \subitem {Crypt\+Mode}, \hyperpage{24}
-    \subitem {Decrypt}, \hyperpage{27}
-    \subitem {decrypt}, \hyperpage{27}
-    \subitem {decryptv1\+\_\+3}, \hyperpage{29}
-    \subitem {decryptv1\+\_\+4}, \hyperpage{30}
-    \subitem {default\+J\+P\+H\+S\+Dir}, \hyperpage{40}
-    \subitem {Encrypt}, \hyperpage{31}
-    \subitem {encrypt}, \hyperpage{31}
-    \subitem {encryptv1\+\_\+4}, \hyperpage{32}
-    \subitem {error}, \hyperpage{40}
-    \subitem {fail}, \hyperpage{32}
-    \subitem {Inject}, \hyperpage{33}
-    \subitem {inject}, \hyperpage{34}
-    \subitem {jphs}, \hyperpage{35}
-    \subitem {jphs\+\_\+mode}, \hyperpage{24}
-    \subitem {Model\+PC}, \hyperpage{24}
-    \subitem {Not\+Defined}, \hyperpage{24}
-    \subitem {proccess\+Pixelsv1\+\_\+4}, \hyperpage{35}
-    \subitem {process\+Pixel}, \hyperpage{36}
-    \subitem {save\+Data}, \hyperpage{37}
-    \subitem {save\+Image}, \hyperpage{37}
-    \subitem {set\+Progress}, \hyperpage{37}
-    \subitem {success}, \hyperpage{40}
-    \subitem {unzip}, \hyperpage{38}
-    \subitem {v1\+\_\+3}, \hyperpage{24}
-    \subitem {v1\+\_\+4}, \hyperpage{24}
-    \subitem {version}, \hyperpage{40}
-    \subitem {version\+String}, \hyperpage{40}
-    \subitem {zip}, \hyperpage{39}
-  \item {modelpc.\+cpp}, \hyperpage{69, 70}
-  \item {modelpc.\+h}, \hyperpage{80, 81}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{44}
+  \item {Model\+PC}, \hyperpage{23}
+    \subitem {alert}, \hyperpage{27}
+    \subitem {alert\+View}, \hyperpage{28}
+    \subitem {circuit}, \hyperpage{28}
+    \subitem {Crypt\+Mode}, \hyperpage{26}
+    \subitem {Decrypt}, \hyperpage{29}
+    \subitem {decrypt}, \hyperpage{29}
+    \subitem {decryptv1\+\_\+3}, \hyperpage{31}
+    \subitem {decryptv1\+\_\+4}, \hyperpage{32}
+    \subitem {default\+J\+P\+H\+S\+Dir}, \hyperpage{42}
+    \subitem {Encrypt}, \hyperpage{33}
+    \subitem {encrypt}, \hyperpage{33}
+    \subitem {encryptv1\+\_\+4}, \hyperpage{34}
+    \subitem {error}, \hyperpage{42}
+    \subitem {fail}, \hyperpage{34}
+    \subitem {Inject}, \hyperpage{35}
+    \subitem {inject}, \hyperpage{36}
+    \subitem {jphs}, \hyperpage{37}
+    \subitem {jphs\+\_\+mode}, \hyperpage{26}
+    \subitem {Model\+PC}, \hyperpage{26}
+    \subitem {Not\+Defined}, \hyperpage{26}
+    \subitem {proccess\+Pixelsv1\+\_\+4}, \hyperpage{37}
+    \subitem {process\+Pixel}, \hyperpage{38}
+    \subitem {save\+Data}, \hyperpage{39}
+    \subitem {save\+Image}, \hyperpage{39}
+    \subitem {set\+Progress}, \hyperpage{39}
+    \subitem {success}, \hyperpage{42}
+    \subitem {unzip}, \hyperpage{40}
+    \subitem {v1\+\_\+3}, \hyperpage{26}
+    \subitem {v1\+\_\+4}, \hyperpage{26}
+    \subitem {version}, \hyperpage{42}
+    \subitem {version\+String}, \hyperpage{42}
+    \subitem {zip}, \hyperpage{41}
+  \item {modelpc.\+cpp}, \hyperpage{71, 72}
+  \item {modelpc.\+h}, \hyperpage{82, 83}
   \item {multiply}
-    \subitem {qaesencryption.\+cpp}, \hyperpage{83}
+    \subitem {qaesencryption.\+cpp}, \hyperpage{85}
 
   \indexspace
 
   \item {Not\+Defined}
-    \subitem {Model\+PC}, \hyperpage{24}
+    \subitem {Model\+PC}, \hyperpage{26}
 
   \indexspace
 
   \item {O\+FB}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{43}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{45}
   \item {on\+\_\+action\+About\+\_\+triggered}
-    \subitem {View\+PC}, \hyperpage{54}
+    \subitem {View\+PC}, \hyperpage{56}
   \item {on\+\_\+action\+Help\+\_\+triggered}
-    \subitem {View\+PC}, \hyperpage{55}
+    \subitem {View\+PC}, \hyperpage{57}
   \item {on\+\_\+bits\+Slider\+\_\+value\+Changed}
-    \subitem {Encrypt\+Dialog}, \hyperpage{18}
+    \subitem {Encrypt\+Dialog}, \hyperpage{20}
   \item {on\+\_\+button\+Box\+\_\+accepted}
-    \subitem {Encrypt\+Dialog}, \hyperpage{18}
+    \subitem {Encrypt\+Dialog}, \hyperpage{20}
   \item {on\+\_\+button\+Box\+\_\+rejected}
-    \subitem {Encrypt\+Dialog}, \hyperpage{19}
+    \subitem {Encrypt\+Dialog}, \hyperpage{21}
   \item {on\+\_\+file\+Button\+\_\+clicked}
-    \subitem {Encrypt\+Dialog}, \hyperpage{19}
-    \subitem {View\+PC}, \hyperpage{55}
+    \subitem {Encrypt\+Dialog}, \hyperpage{21}
+    \subitem {View\+PC}, \hyperpage{57}
   \item {on\+\_\+start\+Button\+\_\+clicked}
-    \subitem {View\+PC}, \hyperpage{55}
+    \subitem {View\+PC}, \hyperpage{57}
 
   \indexspace
 
   \item {P\+K\+C\+S7}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{43}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{45}
   \item {Padding}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{43}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{45}
   \item {proccess\+Pixelsv1\+\_\+4}
-    \subitem {Model\+PC}, \hyperpage{35}
+    \subitem {Model\+PC}, \hyperpage{37}
   \item {process\+Pixel}
-    \subitem {Model\+PC}, \hyperpage{36}
+    \subitem {Model\+PC}, \hyperpage{38}
   \item {progress\+Dialog\+Closed}
-    \subitem {View\+PC}, \hyperpage{60}
+    \subitem {View\+PC}, \hyperpage{62}
 
   \indexspace
 
-  \item {Q\+A\+E\+S\+Encryption}, \hyperpage{41}
-    \subitem {A\+E\+S\+\_\+128}, \hyperpage{42}
-    \subitem {A\+E\+S\+\_\+192}, \hyperpage{42}
-    \subitem {A\+E\+S\+\_\+256}, \hyperpage{42}
-    \subitem {Aes}, \hyperpage{42}
-    \subitem {C\+BC}, \hyperpage{43}
-    \subitem {C\+FB}, \hyperpage{43}
-    \subitem {Crypt}, \hyperpage{43}
-    \subitem {decode}, \hyperpage{44}
-    \subitem {Decrypt}, \hyperpage{45}
-    \subitem {E\+CB}, \hyperpage{43}
-    \subitem {encode}, \hyperpage{46}
-    \subitem {Expand\+Key}, \hyperpage{47}
-    \subitem {expand\+Key}, \hyperpage{47}
-    \subitem {I\+SO}, \hyperpage{43}
-    \subitem {Mode}, \hyperpage{42}
-    \subitem {O\+FB}, \hyperpage{43}
-    \subitem {P\+K\+C\+S7}, \hyperpage{43}
-    \subitem {Padding}, \hyperpage{43}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{43}
-    \subitem {Remove\+Padding}, \hyperpage{48}
-    \subitem {remove\+Padding}, \hyperpage{49}
-    \subitem {Z\+E\+RO}, \hyperpage{43}
-  \item {qaesencryption.\+cpp}, \hyperpage{82, 83}
-    \subitem {multiply}, \hyperpage{83}
-    \subitem {x\+Time}, \hyperpage{83}
-  \item {qaesencryption.\+h}, \hyperpage{89, 90}
+  \item {Q\+A\+E\+S\+Encryption}, \hyperpage{43}
+    \subitem {A\+E\+S\+\_\+128}, \hyperpage{44}
+    \subitem {A\+E\+S\+\_\+192}, \hyperpage{44}
+    \subitem {A\+E\+S\+\_\+256}, \hyperpage{44}
+    \subitem {Aes}, \hyperpage{44}
+    \subitem {C\+BC}, \hyperpage{45}
+    \subitem {C\+FB}, \hyperpage{45}
+    \subitem {Crypt}, \hyperpage{45}
+    \subitem {decode}, \hyperpage{46}
+    \subitem {Decrypt}, \hyperpage{47}
+    \subitem {E\+CB}, \hyperpage{45}
+    \subitem {encode}, \hyperpage{48}
+    \subitem {Expand\+Key}, \hyperpage{49}
+    \subitem {expand\+Key}, \hyperpage{49}
+    \subitem {I\+SO}, \hyperpage{45}
+    \subitem {Mode}, \hyperpage{44}
+    \subitem {O\+FB}, \hyperpage{45}
+    \subitem {P\+K\+C\+S7}, \hyperpage{45}
+    \subitem {Padding}, \hyperpage{45}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{45}
+    \subitem {Remove\+Padding}, \hyperpage{50}
+    \subitem {remove\+Padding}, \hyperpage{51}
+    \subitem {Z\+E\+RO}, \hyperpage{45}
+  \item {qaesencryption.\+cpp}, \hyperpage{84, 85}
+    \subitem {multiply}, \hyperpage{85}
+    \subitem {x\+Time}, \hyperpage{85}
+  \item {qaesencryption.\+h}, \hyperpage{91, 92}
 
   \indexspace
 
   \item {Remove\+Padding}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{48}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{50}
   \item {remove\+Padding}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{49}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{51}
   \item {request\+Key}
-    \subitem {View\+PC}, \hyperpage{56}
+    \subitem {View\+PC}, \hyperpage{58}
 
   \indexspace
 
   \item {save\+Data}
-    \subitem {Model\+PC}, \hyperpage{37}
-    \subitem {View\+PC}, \hyperpage{56}
+    \subitem {Model\+PC}, \hyperpage{39}
+    \subitem {View\+PC}, \hyperpage{58}
   \item {save\+Image}
-    \subitem {Model\+PC}, \hyperpage{37}
-    \subitem {View\+PC}, \hyperpage{57}
+    \subitem {Model\+PC}, \hyperpage{39}
+    \subitem {View\+PC}, \hyperpage{59}
   \item {set\+Encrypt\+Mode}
-    \subitem {View\+PC}, \hyperpage{57}
+    \subitem {View\+PC}, \hyperpage{59}
   \item {set\+J\+P\+H\+S\+Dir}
-    \subitem {Controller\+PC}, \hyperpage{15}
-    \subitem {View\+PC}, \hyperpage{58}
+    \subitem {Controller\+PC}, \hyperpage{17}
+    \subitem {View\+PC}, \hyperpage{60}
   \item {set\+Progress}
-    \subitem {Model\+PC}, \hyperpage{37}
-    \subitem {View\+PC}, \hyperpage{58}
+    \subitem {Model\+PC}, \hyperpage{39}
+    \subitem {View\+PC}, \hyperpage{60}
   \item {set\+Version}
-    \subitem {About\+PC}, \hyperpage{12}
-    \subitem {View\+PC}, \hyperpage{59}
+    \subitem {About\+PC}, \hyperpage{14}
+    \subitem {View\+PC}, \hyperpage{61}
   \item {setup\+Errors\+Dict}
-    \subitem {View\+PC}, \hyperpage{59}
+    \subitem {View\+PC}, \hyperpage{61}
   \item {size}
-    \subitem {Encrypt\+Dialog}, \hyperpage{20}
+    \subitem {Encrypt\+Dialog}, \hyperpage{22}
   \item {success}
-    \subitem {Encrypt\+Dialog}, \hyperpage{21}
-    \subitem {Model\+PC}, \hyperpage{40}
+    \subitem {Encrypt\+Dialog}, \hyperpage{23}
+    \subitem {Model\+PC}, \hyperpage{42}
 
   \indexspace
 
-  \item {Ui}, \hyperpage{9}
+  \item {Ui}, \hyperpage{11}
   \item {unzip}
-    \subitem {Model\+PC}, \hyperpage{38}
+    \subitem {Model\+PC}, \hyperpage{40}
 
   \indexspace
 
   \item {v1\+\_\+3}
-    \subitem {Model\+PC}, \hyperpage{24}
+    \subitem {Model\+PC}, \hyperpage{26}
   \item {v1\+\_\+4}
-    \subitem {Model\+PC}, \hyperpage{24}
+    \subitem {Model\+PC}, \hyperpage{26}
   \item {val}
-    \subitem {Encrypt\+Dialog}, \hyperpage{21}
+    \subitem {Encrypt\+Dialog}, \hyperpage{23}
   \item {version}
-    \subitem {Controller\+PC}, \hyperpage{15}
-    \subitem {Model\+PC}, \hyperpage{40}
+    \subitem {Controller\+PC}, \hyperpage{17}
+    \subitem {Model\+PC}, \hyperpage{42}
   \item {version\+String}
-    \subitem {Controller\+PC}, \hyperpage{15}
-    \subitem {Model\+PC}, \hyperpage{40}
-  \item {View\+PC}, \hyperpage{49}
-    \subitem {$\sim$\+View\+PC}, \hyperpage{51}
-    \subitem {abort\+Circuit}, \hyperpage{52}
-    \subitem {abort\+Model}, \hyperpage{52}
-    \subitem {alert}, \hyperpage{52}
-    \subitem {decrypt}, \hyperpage{53}
-    \subitem {dialog}, \hyperpage{60}
-    \subitem {encrypt}, \hyperpage{53}
-    \subitem {errors\+Dict}, \hyperpage{60}
-    \subitem {inject}, \hyperpage{54}
-    \subitem {on\+\_\+action\+About\+\_\+triggered}, \hyperpage{54}
-    \subitem {on\+\_\+action\+Help\+\_\+triggered}, \hyperpage{55}
-    \subitem {on\+\_\+file\+Button\+\_\+clicked}, \hyperpage{55}
-    \subitem {on\+\_\+start\+Button\+\_\+clicked}, \hyperpage{55}
-    \subitem {progress\+Dialog\+Closed}, \hyperpage{60}
-    \subitem {request\+Key}, \hyperpage{56}
-    \subitem {save\+Data}, \hyperpage{56}
-    \subitem {save\+Image}, \hyperpage{57}
-    \subitem {set\+Encrypt\+Mode}, \hyperpage{57}
-    \subitem {set\+J\+P\+H\+S\+Dir}, \hyperpage{58}
-    \subitem {set\+Progress}, \hyperpage{58}
-    \subitem {set\+Version}, \hyperpage{59}
-    \subitem {setup\+Errors\+Dict}, \hyperpage{59}
-    \subitem {View\+PC}, \hyperpage{51}
-  \item {viewpc.\+cpp}, \hyperpage{92, 93}
-  \item {viewpc.\+h}, \hyperpage{96, 97}
+    \subitem {Controller\+PC}, \hyperpage{17}
+    \subitem {Model\+PC}, \hyperpage{42}
+  \item {View\+PC}, \hyperpage{51}
+    \subitem {$\sim$\+View\+PC}, \hyperpage{53}
+    \subitem {abort\+Circuit}, \hyperpage{54}
+    \subitem {abort\+Model}, \hyperpage{54}
+    \subitem {alert}, \hyperpage{54}
+    \subitem {decrypt}, \hyperpage{55}
+    \subitem {dialog}, \hyperpage{62}
+    \subitem {encrypt}, \hyperpage{55}
+    \subitem {errors\+Dict}, \hyperpage{62}
+    \subitem {inject}, \hyperpage{56}
+    \subitem {on\+\_\+action\+About\+\_\+triggered}, \hyperpage{56}
+    \subitem {on\+\_\+action\+Help\+\_\+triggered}, \hyperpage{57}
+    \subitem {on\+\_\+file\+Button\+\_\+clicked}, \hyperpage{57}
+    \subitem {on\+\_\+start\+Button\+\_\+clicked}, \hyperpage{57}
+    \subitem {progress\+Dialog\+Closed}, \hyperpage{62}
+    \subitem {request\+Key}, \hyperpage{58}
+    \subitem {save\+Data}, \hyperpage{58}
+    \subitem {save\+Image}, \hyperpage{59}
+    \subitem {set\+Encrypt\+Mode}, \hyperpage{59}
+    \subitem {set\+J\+P\+H\+S\+Dir}, \hyperpage{60}
+    \subitem {set\+Progress}, \hyperpage{60}
+    \subitem {set\+Version}, \hyperpage{61}
+    \subitem {setup\+Errors\+Dict}, \hyperpage{61}
+    \subitem {View\+PC}, \hyperpage{53}
+  \item {viewpc.\+cpp}, \hyperpage{94, 95}
+  \item {viewpc.\+h}, \hyperpage{98, 99}
 
   \indexspace
 
   \item {x\+Time}
-    \subitem {qaesencryption.\+cpp}, \hyperpage{83}
+    \subitem {qaesencryption.\+cpp}, \hyperpage{85}
 
   \indexspace
 
   \item {Z\+E\+RO}
-    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{43}
+    \subitem {Q\+A\+E\+S\+Encryption}, \hyperpage{45}
   \item {zip}
-    \subitem {Encrypt\+Dialog}, \hyperpage{19}
-    \subitem {Model\+PC}, \hyperpage{39}
+    \subitem {Encrypt\+Dialog}, \hyperpage{21}
+    \subitem {Model\+PC}, \hyperpage{41}
 
 \end{theindex}
