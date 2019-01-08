@@ -104,7 +104,7 @@ if(data_good && no_errors)
 else
     qDebug() << "FAIL";
 
-```
+\endcode
 
 \section license License
 This software is provided under the [UNLICENSE](http://unlicense.org)
@@ -117,4 +117,4 @@ Email me at a.kovrigin0@gmail.com
 \author Alex Kovrigin (waleko)
 \copyright Alex Kovrigin 2018
 ![gravatar](https://avatars2.githubusercontent.com/u/24986722?s=100)
- */
+*/
