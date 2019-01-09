@@ -277,7 +277,7 @@ void ViewPC::on_actionAbout_triggered()
  */
 void ViewPC::on_actionHelp_triggered()
 {
-    QUrl docLink("https://alexkovrigin.me/PictureCrypt/docs");
+    QUrl docLink("https://picturecrypt.alexkovrigin.me");
     QDesktopServices::openUrl(docLink);
 }
 /*!
