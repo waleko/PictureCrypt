@@ -258,11 +258,4 @@ DeleteRegKey ${REG_ROOT} "${REG_APP_PATH}"
 DeleteRegKey ${REG_ROOT} "${UNINSTALL_PATH}"
 SectionEnd
 
-nsExec::Exec 'echo %PATH% | find "C:\Program Files\PictureCrypt-console"'
-Pop $0   ; gets result code
-
-${If} $0 = 0
-    nsExec::Exec 'setx PATH=%PATH%;C:\Program Files\PictureCrypt-console'
-${EndIf}
-
 ######################################################################
