@@ -52,6 +52,8 @@ build_script:
   - copy "%QTDIR%\bin\libwinpthread-1.dll" . /y
   - cd ../..
 
+  - makensis.exe .\scripts\PictureCrypt-console.nsi
+
 before_test:
   - cd tests
   - qmake.exe C:\projects\picturecrypt\app\tests\tests.pro -spec win32-g++
@@ -79,6 +81,8 @@ artifacts:
     name: setup
   - path: app/deploy/console
     name: console
+  - path: app/PictureCrypt-console-setup.exe
+    name: console-setup
 
 deploy:
   - provider: S3
@@ -89,12 +93,12 @@ deploy:
     bucket: waleko-acacia
     region: eu-north-1
     folder: appveyor
-    artifact: PictureCrypt-debug, PictureCrypt-release, tests, setup
-  - provider: GitHub
-    release: PictureCrypt-v$($env:APPVEYOR_BUILD_VERSION)
-    description: 'PictureCrypt v$($env:APPVEYOR_BUILD_VERSION)'
-    auth_token:
-      secure: vJoiMyshYBAzJ7waxTOetHOX7g7D3eDzfxnRV6UwijE2gTfCfldarR6JM6hyIfoI
-    artifact: setup, PictureCrypt-release, PictureCrypt-debug, console
-    draft: true
-    message: /\[release\]/
+    artifact: PictureCrypt-debug, PictureCrypt-release, tests, setup, console, console-setup
+  # - provider: GitHub
+  #   release: PictureCrypt-v$($env:APPVEYOR_BUILD_VERSION)
+  #   description: 'PictureCrypt v$($env:APPVEYOR_BUILD_VERSION)'
+  #   auth_token:
+  #     secure: vJoiMyshYBAzJ7waxTOetHOX7g7D3eDzfxnRV6UwijE2gTfCfldarR6JM6hyIfoI
+  #   artifact: setup, PictureCrypt-release, PictureCrypt-debug, console, console-setup
+  #   draft: true
+  #   message: /\[release\]/
