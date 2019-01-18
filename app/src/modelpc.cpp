@@ -9,7 +9,7 @@
 ModelPC::ModelPC()
 {
     // Version control
-    versionString = "1.4.0.dev-beta";
+    versionString = "1.4.1";
 
     auto ver = versionString.split(".");
     version = ver[0].toInt() * qPow(2, 16) + ver[1].toInt() * qPow(2, 8) + ver[2].toInt();
@@ -287,8 +287,8 @@ void ModelPC::fail(QString message)
         *error = message;
         alert(message, true);
         emit setProgress(101);
+        qDebug() << "[Debug] !!! fail() - " << message;
     }
-    qDebug() << "[Debug] !!! fail() - " << message;
 }
 /*!
  * \brief ModelPC::jphs JPHS function to use jphide and jpseek (currently under development)

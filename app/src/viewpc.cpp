@@ -249,8 +249,8 @@ QString ViewPC::requestKey()
 {
     bool ok;
     QString text = QInputDialog::getText(this, tr("Dialog"),
-                                         tr("Enter the keyphrase:"), QLineEdit::Normal,
-                                         QDir::home().dirName(), &ok);
+                                         tr("Enter the keyphrase:"), QLineEdit::Password,
+                                         "", &ok);
     if(text.isEmpty() && ok) {
         alert("no_key", true);
         return QString();
