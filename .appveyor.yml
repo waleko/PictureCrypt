@@ -39,6 +39,18 @@ build_script:
 
   - makensis.exe .\scripts\PictureCrypt.nsi
 
+  - cd console
+  - qmake.exe C:\projects\picturecrypt\app\console\console.pro -spec win32-g++
+  - C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe
+  - cd ../deploy
+  - mkdir console
+  - copy "C:\projects\picturecrypt\app\console\picturecrypt.exe" "C:\projects\picturecrypt\app\deploy\console\picturecrypt.exe"
+  - cd console
+  - windeployqt.exe --release picturecrypt.exe
+  - copy "%QTDIR%\bin\libstdc++-6.dll" . /y
+  - copy "%QTDIR%\bin\libwinpthread-1.dll" . /y
+  - cd ../..
+
 before_test:
   - cd tests
   - qmake.exe C:\projects\picturecrypt\app\tests\tests.pro -spec win32-g++
@@ -64,6 +76,8 @@ artifacts:
     name: tests
   - path: app/PictureCrypt-setup.exe
     name: setup
+  - path: app/deploy/console
+    name: console
 
 deploy:
   - provider: S3
@@ -80,6 +94,6 @@ deploy:
     description: 'PictureCrypt v$($env:APPVEYOR_BUILD_VERSION)'
     auth_token:
       secure: vJoiMyshYBAzJ7waxTOetHOX7g7D3eDzfxnRV6UwijE2gTfCfldarR6JM6hyIfoI
-    artifact: setup, PictureCrypt-release, PictureCrypt-debug
+    artifact: setup, PictureCrypt-release, PictureCrypt-debug, console
     draft: true
     message: /\[release\]/

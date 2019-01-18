@@ -204,8 +204,8 @@
 00249 \{
 00250     \textcolor{keywordtype}{bool} ok;
 00251     QString text = QInputDialog::getText(\textcolor{keyword}{this}, tr(\textcolor{stringliteral}{"Dialog"}),
-00252                                          tr(\textcolor{stringliteral}{"Enter the keyphrase:"}), QLineEdit::Normal,
-00253                                          QDir::home().dirName(), &ok);
+00252                                          tr(\textcolor{stringliteral}{"Enter the keyphrase:"}), QLineEdit::Password,
+00253                                          \textcolor{stringliteral}{""}, &ok);
 00254     \textcolor{keywordflow}{if}(text.isEmpty() && ok) \{
 00255         \hyperlink{class_view_p_c_a7c467169467789561078abc9d4fe57bd}{alert}(\textcolor{stringliteral}{"no\_key"}, \textcolor{keyword}{true});
 00256         \textcolor{keywordflow}{return} QString();
