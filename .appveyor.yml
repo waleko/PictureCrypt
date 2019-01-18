@@ -42,9 +42,10 @@ build_script:
   - cd console
   - qmake.exe C:\projects\picturecrypt\app\console\console.pro -spec win32-g++
   - C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe
+  - tree -f
   - cd ../deploy
   - mkdir console
-  - copy "C:\projects\picturecrypt\app\console\picturecrypt.exe" "C:\projects\picturecrypt\app\deploy\console\picturecrypt.exe"
+  - copy "C:\projects\picturecrypt\app\console\picturecrypt.exe" "C:\projects\picturecrypt\app\deploy\console\release\picturecrypt.exe"
   - cd console
   - windeployqt.exe --release picturecrypt.exe
   - copy "%QTDIR%\bin\libstdc++-6.dll" . /y
