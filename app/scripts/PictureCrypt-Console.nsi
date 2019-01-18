@@ -7,7 +7,7 @@
 !define APP_NAME "PictureCrypt-Console"
 !define COMP_NAME "Alex Kovrigin"
 !define WEB_SITE "https://alexkovrigin.me"
-!define VERSION "1.4.1"
+!define VERSION "0.1.4.1"
 !define COPYRIGHT "Alex Kovrigin � 2019"
 !define DESCRIPTION "An image-steganography project"
 !define LICENSE_TXT "C:\projects\picturecrypt\LICENSE"
