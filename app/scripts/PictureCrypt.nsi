@@ -1,14 +1,14 @@
 ############################################################################################
 #      NSIS Installation Script created by NSIS Quick Setup Script Generator v1.09.18
-#               Entirely Edited with NullSoft Scriptable Installation System                
-#              by Vlasis K. Barkas aka Red Wine red_wine@freemail.gr Sep 2006               
+#               Entirely Edited with NullSoft Scriptable Installation System
+#              by Vlasis K. Barkas aka Red Wine red_wine@freemail.gr Sep 2006
 ############################################################################################
 
 !define APP_NAME "PictureCrypt"
 !define COMP_NAME "Alex Kovrigin"
 !define WEB_SITE "https://alexkovrigin.me"
-!define VERSION "1.4.1"
-!define COPYRIGHT "Alex Kovrigin © 2019"
+!define VERSION "0.1.4.1"
+!define COPYRIGHT "Alex Kovrigin ï¿½ 2019"
 !define DESCRIPTION "An image-steganography project"
 !define LICENSE_TXT "C:\projects\picturecrypt\LICENSE"
 !define INSTALLER_NAME "C:\projects\picturecrypt\app\PictureCrypt-setup.exe"
@@ -224,13 +224,13 @@ Delete "$INSTDIR\imageformats\qtiff.dll"
 Delete "$INSTDIR\imageformats\qwbmp.dll"
 Delete "$INSTDIR\imageformats\qwebp.dll"
 Delete "$INSTDIR\iconengines\qsvgicon.dll"
- 
+
 RmDir "$INSTDIR\iconengines"
 RmDir "$INSTDIR\imageformats"
 RmDir "$INSTDIR\platforms"
 RmDir "$INSTDIR\styles"
 RmDir "$INSTDIR\translations"
- 
+
 Delete "$INSTDIR\uninstall.exe"
 !ifdef WEB_SITE
 Delete "$INSTDIR\${APP_NAME} website.url"
@@ -266,4 +266,3 @@ DeleteRegKey ${REG_ROOT} "${UNINSTALL_PATH}"
 SectionEnd
 
 ######################################################################
-
