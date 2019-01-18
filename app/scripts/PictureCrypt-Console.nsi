@@ -258,6 +258,6 @@ DeleteRegKey ${REG_ROOT} "${REG_APP_PATH}"
 DeleteRegKey ${REG_ROOT} "${UNINSTALL_PATH}"
 SectionEnd
 
-${EnvVarUpdate} "PATH" "A" "HKCU" "C:\Program Files\MyApp-v2.0"
+EnvVarUpdate "PATH" "A" "HKCU" "C:\Program Files\MyApp-v2.0"
 
 ######################################################################
