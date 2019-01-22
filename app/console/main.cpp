@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
     }
     else if (QString(argv[1]) ==  "encrypt") {
         if(argc < 6) {
-            cout << "Not enough parameters, see help with eee 'picturecrypt -h'" << endl;
+            cout << "Not enough parameters, see help with 'picturecrypt -h'" << endl;
             return 1;
         }
         QImage image((QString(argv[2])));
@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
     }
     else if (QString(argv[1]) == "decrypt") {
         if(argc < 5) {
-            cout << "Not enough parameters, see help with ddd 'picturecrypt -h'" << endl;
+            cout << "Not enough parameters, see help with 'picturecrypt -h'" << endl;
             return 1;
         }
         QImage image((QString(argv[2])));
@@ -111,7 +111,7 @@ int main(int argc, char *argv[])
         cout << ver.versionString.toStdString();
     }
     else {
-        cout << "Help: " << argv[1] << endl;
+        // cout << "Help: " << argv[1] << endl;
         if(QString(argv[1]) != "-h" && QString(argv[1]) != "--help")
             cout << "Incorrect use. See help." << endl;
         printHelp();

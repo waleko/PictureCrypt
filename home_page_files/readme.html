@@ -58,19 +58,21 @@ An image-steganography project
 <img src="https://alexkovrigin.me/data/picturecrypt-screenshot.jpg"/>
 </p>
 <h2 id="about">About</h2>
-<p>A simple cross-platform steganography project which hides data in images. This project is built on <a href="https://qt.io">Qt Platform</a> using MVC pattern and features GUI.</p>
+<p>A simple cross-platform steganography project which hides data in images. This project is built on <a href="https://qt.io">Qt Platform</a> using MVC pattern and features GUI and console interface.</p>
 <h2 id="download">Download</h2>
 <p>Get stable binary files at <a href="https://github.com/waleko/PictureCrypt/releases/latest">latest release page</a> Or download latest potentially <strong>UNSTABLE</strong> files:</p>
 <h3 id="links">Links</h3>
 <h4 id="windows">Windows:</h4>
 <ul>
 <li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/PictureCrypt-setup.exe"><strong>EXE with release</strong></a> (~ 22 MB)</li>
+<li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/deploy/console.zip"><strong>Zip with console</strong></a> (~ 21 MB)</li>
 <li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/deploy/PictureCrypt-debug.zip">Zip Debug</a> (~ 190 MB)</li>
 <li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/deploy/PictureCrypt-release.zip">Zip Release</a> (~ 21 MB)</li>
+<li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/PictureCrypt-console-setup.exe">Exe with console</a> (~ 19 MB)</li>
 </ul>
 <h4 id="linux">Linux:</h4>
 <ul>
-<li><a href="https://github.com/waleko/PictureCrypt/raw/gh-pages/app/src/build/Release/PictureCrypt">Binary</a> (~ 10 MB)</li>
+<li><a href="https://github.com/waleko/PictureCrypt/raw/gh-pages/app/src/build/Release/PictureCrypt">Binary of release</a> (<strong>doesn't work without QT</strong>) (~ 10 MB)</li>
 </ul>
 <h2 id="external-use">External use</h2>
 <p>You can use ModelPC class separately from everything else, <strong>except for QAESEncryption</strong> (so /aes folder)</p>
@@ -149,6 +151,23 @@ An image-steganography project
     <span class="fu">qDebug</span>() &lt;&lt; <span class="st">&quot;PASS&quot;</span>;
 <span class="kw">else</span>
     <span class="fu">qDebug</span>() &lt;&lt; <span class="st">&quot;FAIL&quot;</span>;</code></pre></div>
+<h3 id="console-use">Console use</h3>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">picturecrypt</span> -h
+<span class="kw">Usage</span>:
+  <span class="kw">picturecrypt</span> encrypt <span class="kw">&lt;</span>image<span class="kw">&gt;</span> <span class="kw">&lt;</span>input file<span class="kw">&gt;</span> <span class="kw">&lt;</span>key<span class="kw">&gt;</span> <span class="kw">&lt;</span>output<span class="kw">&gt;</span> [options]
+  <span class="kw">picturecrypt</span> decrypt <span class="kw">&lt;</span>image<span class="kw">&gt;</span> <span class="kw">&lt;</span>key<span class="kw">&gt;</span> <span class="kw">&lt;</span>output<span class="kw">&gt;</span> [options]
+  <span class="kw">picturecrypt</span> (-h <span class="kw">|</span> <span class="kw">--help</span>)
+  <span class="kw">picturecrypt</span> --version
+
+<span class="kw">Options</span>:
+  <span class="kw">-h</span> --help    Show this screen.
+  <span class="kw">--version</span>    Show version.
+  <span class="kw">-m</span> --mode    Mode of cryption.
+  <span class="kw">-b</span>           Encryption bitsUsed parameter.
+$ <span class="kw">picturecrypt</span> --version
+<span class="kw">1.4.1</span>
+$ <span class="kw">picturecrypt</span> encrypt original.jpg data.txt somekey result.png
+$ <span class="kw">picturecrypt</span> decrypt result.png somekey output.txt</code></pre></div>
 <h3 id="tests">Tests</h3>
 <p>PictureCrypt comes with Qt Test project. It can be found at 'app/tests'</p>
 <h4 id="run-tests">Run tests</h4>
