@@ -20,7 +20,7 @@
 
 ## About
 A simple cross-platform steganography project which hides data in images.
-This project is built on [Qt Platform](https://qt.io) using MVC pattern and features GUI.
+This project is built on [Qt Platform](https://qt.io) using MVC pattern and features GUI and console interface.
 
 ## Download
 Get stable binary files at [latest release page](https://github.com/waleko/PictureCrypt/releases/latest)
@@ -29,11 +29,13 @@ Or download latest potentially **UNSTABLE** files:
 ### Links
 #### Windows:
 * [**EXE with release**](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/PictureCrypt-setup.exe) (~ 22 MB)
+* [**Zip with console**](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/deploy/console.zip) (~ 21 MB)
 * [Zip Debug](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/deploy/PictureCrypt-debug.zip) (~ 190 MB)
 * [Zip Release](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/deploy/PictureCrypt-release.zip) (~ 21 MB)
+* [Exe with console](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/PictureCrypt-console-setup.exe) (~ 19 MB)
 
 #### Linux:
-* [Binary](https://github.com/waleko/PictureCrypt/raw/gh-pages/app/src/build/Release/PictureCrypt) (~ 10 MB)
+* [Binary of release](https://github.com/waleko/PictureCrypt/raw/gh-pages/app/src/build/Release/PictureCrypt) (**doesn't work without QT**) (~ 10 MB)
 
 ## External use
 You can use ModelPC class separately from everything else, **except for QAESEncryption** (so /aes folder)
@@ -115,6 +117,26 @@ if(data_good && no_errors)
 else
     qDebug() << "FAIL";
 
+```
+
+### Console use
+```bash
+$ picturecrypt -h
+Usage:
+  picturecrypt encrypt <image> <input file> <key> <output> [options]
+  picturecrypt decrypt <image> <key> <output> [options]
+  picturecrypt (-h | --help)
+  picturecrypt --version
+
+Options:
+  -h --help    Show this screen.
+  --version    Show version.
+  -m --mode    Mode of cryption.
+  -b           Encryption bitsUsed parameter.
+$ picturecrypt --version
+1.4.1
+$ picturecrypt encrypt original.jpg data.txt somekey result.png
+$ picturecrypt decrypt result.png somekey output.txt
 ```
 
 ### Tests
