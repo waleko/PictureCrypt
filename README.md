@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  <img src="https://waleko.github.com/data/picturecrypt-screenshot.jpg"/>
+  <img src="https://waleko.github.io/data/picturecrypt-screenshot.jpg"/>
 </p>
 
 ## About
