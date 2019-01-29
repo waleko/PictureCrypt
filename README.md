@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  <img src="https://alexkovrigin.me/data/picturecrypt-screenshot.jpg"/>
+  <img src="https://waleko.github.com/data/picturecrypt-screenshot.jpg"/>
 </p>
 
 ## About
@@ -194,8 +194,8 @@ If you'd like to translate PictureCrypt to your language here are steps to do so
 * Add a filename to TRANSLATIONS in app/src/src.pro file. Filename must be 'picturecrypt_{your language}.ts' (e.g. 'picturecrypt_fr.ts')
 * Run `lupdate src.pro`, it will generate that .ts file. If there is an error: "Maybe you forgot to set your environment?" Go to Project (on the left-hand side) ->(expand) Build environment -> Open terminal and run `lupdate src.pro`.
 * Go to translations/
-* Run `linguist picturecrypt_{your language}.ts`. The Qt Linguist will appear, where you can translate given text from English (there are a couple of html entries, just edit their text part). **If you don't translate the whole thing, your work will be still appreciated!**
-* Either go to File -> Compile or run `lrelease picturecrypt_{your language}.ts`.
+* Run `linguist picturecrypt_{your language}.ts`. The Qt Linguist will appear, where you can translate given text from English (there are a couple of html entries, just edit its text part). **If you don't translate the whole thing, your work will be still appreciated!**
+* Either go to 'File -> Compile' or run `lrelease picturecrypt_{your language}.ts`.
 * Add your picturecrypt_{your language}.ts to app/src/translations.qrc resource file.
 * Create a pull request in GitHub with your work.
 
@@ -212,8 +212,8 @@ If you have any trouble, [contact me](#contact) and I will sincerely try to help
  * 'MS Shell Dlg 2' font used and 'Montserrat' font used under the SIL Open Font License.
 
 ## Contact
-Question or suggestions are welcome!
-Email me [a.kovrigin0@gmail.com](mailto:a.kovrigin0@gmail.com) or visit [my site](https://alexkovrigin.me)
+Questions and suggestions are welcome!
+Email me [a.kovrigin0@gmail.com](mailto:a.kovrigin0@gmail.com) or telegram me at [waleko](https://t.me/waleko)
 
 ## License
 This software is provided under the [UNLICENSE](http://unlicense.org/)
