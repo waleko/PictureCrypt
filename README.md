@@ -213,7 +213,7 @@ If you have any trouble, [contact me](#contact) and I will sincerely try to help
 
 ## Contact
 Questions and suggestions are welcome!
-Email me [a.kovrigin0@gmail.com](mailto:a.kovrigin0@gmail.com) or telegram me at [waleko](https://t.me/waleko)
+Email me a.kovrigin0@gmail.com or telegram me at [waleko](https://t.me/waleko)
 
 ## License
 This software is provided under the [UNLICENSE](http://unlicense.org/)
