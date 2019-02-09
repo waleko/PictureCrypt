@@ -1,3 +1,3 @@
 TEMPLATE = subdirs
-SUBDIRS = src tests \
+SUBDIRS = app tests \
     console

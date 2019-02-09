@@ -17,7 +17,7 @@ build_script:
   # - sed -i "s/CONFIG += c++11/QMAKE_CXXFLAGS += -std=gnu++0x/g" PictureCrypt.pro
   # - qmake "QMAKE_CXXFLAGS += -std=c++0x" "QT += gui" "QT += core" "QT += widgets" "QT += testlib" "QT += xml" "DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900" # -r -spec win32-g++
   - cd src
-  - qmake.exe C:\projects\picturecrypt\app\src\src.pro -spec win32-g++
+  - qmake.exe C:\projects\picturecrypt\src\app\app.pro -spec win32-g++
   - C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe all
   - C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe clean -j8
   - sh: sh ../scripts/clean.sh
@@ -27,8 +27,8 @@ build_script:
   - cd deploy
   - mkdir debug
   - mkdir release
-  - copy "C:\projects\picturecrypt\app\src\build\Debug\PictureCrypt.exe" "C:\projects\picturecrypt\app\deploy\debug\PictureCrypt.exe"
-  - copy "C:\projects\picturecrypt\app\src\build\Release\PictureCrypt.exe" "C:\projects\picturecrypt\app\deploy\release\PictureCrypt.exe
+  - copy "C:\projects\picturecrypt\src\app\build\Debug\PictureCrypt.exe" "C:\projects\picturecrypt\src\deploy\debug\PictureCrypt.exe"
+  - copy "C:\projects\picturecrypt\src\app\build\Release\PictureCrypt.exe" "C:\projects\picturecrypt\src\deploy\release\PictureCrypt.exe
   - cd debug
   - windeployqt.exe --debug PictureCrypt.exe
   - cd ../release
@@ -40,12 +40,12 @@ build_script:
   - makensis.exe .\scripts\PictureCrypt.nsi
 
   - cd console
-  - qmake.exe C:\projects\picturecrypt\app\console\console.pro -spec win32-g++
+  - qmake.exe C:\projects\picturecrypt\src\console\console.pro -spec win32-g++
   - C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe
   - tree . -f
   - cd ../deploy
   - mkdir console
-  - copy "C:\projects\picturecrypt\app\console\release\picturecrypt.exe" "C:\projects\picturecrypt\app\deploy\console\picturecrypt.exe"
+  - copy "C:\projects\picturecrypt\src\console\release\picturecrypt.exe" "C:\projects\picturecrypt\src\deploy\console\picturecrypt.exe"
   - cd console
   - windeployqt.exe --release picturecrypt.exe
   - copy "%QTDIR%\bin\libstdc++-6.dll" . /y
@@ -56,7 +56,7 @@ build_script:
 
 before_test:
   - cd tests
-  - qmake.exe C:\projects\picturecrypt\app\tests\tests.pro -spec win32-g++
+  - qmake.exe C:\projects\picturecrypt\src\tests\tests.pro -spec win32-g++
   - C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe
   - cd release
   - dir
@@ -71,17 +71,17 @@ on_finish:
   - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\testresults.xml))
 
 artifacts:
-  - path: app/deploy/debug
+  - path: src/deploy/debug
     name: PictureCrypt-debug
-  - path: app/deploy/release
+  - path: src/deploy/release
     name: PictureCrypt-release
-  - path: app/tests
+  - path: src/tests
     name: tests
-  - path: app/PictureCrypt-setup.exe
+  - path: src/PictureCrypt-setup.exe
     name: setup
-  - path: app/deploy/console
+  - path: src/deploy/console
     name: console
-  - path: app/PictureCrypt-console-setup.exe
+  - path: src/PictureCrypt-console-setup.exe
     name: console-setup
 
 deploy:
