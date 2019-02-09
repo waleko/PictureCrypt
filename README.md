@@ -32,14 +32,14 @@ Or download latest potentially **UNSTABLE** files:
 
 ### Links
 #### Windows:
-* [**EXE with release**](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/PictureCrypt-setup.exe) (~ 22 MB)
-* [**Zip with console**](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/deploy/console.zip) (~ 21 MB)
-* [Zip Debug](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/deploy/PictureCrypt-debug.zip) (~ 190 MB)
-* [Zip Release](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/deploy/PictureCrypt-release.zip) (~ 21 MB)
-* [Exe with console](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/PictureCrypt-console-setup.exe) (~ 19 MB)
+* [**EXE with release**](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/PictureCrypt-setup.exe) (~ 22 MB)
+* [**Zip with console**](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/deploy/console.zip) (~ 21 MB)
+* [Zip Debug](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/deploy/PictureCrypt-debug.zip) (~ 190 MB)
+* [Zip Release](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/deploy/PictureCrypt-release.zip) (~ 21 MB)
+* [Exe with console](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/PictureCrypt-console-setup.exe) (~ 19 MB)
 
 #### Linux:
-* [Binary of release](https://github.com/waleko/PictureCrypt/raw/gh-pages/app/src/build/Release/PictureCrypt) (**doesn't work without QT**) (~ 10 MB)
+* [Binary of release](https://github.com/waleko/PictureCrypt/raw/gh-pages/src/app/build/Release/PictureCrypt) (**doesn't work without QT**) (~ 10 MB)
 
 ## External use
 You can use ModelPC class separately from everything else, **except for QAESEncryption** (so /aes folder)
