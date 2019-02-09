@@ -1,0 +1,97 @@
+\hypertarget{encryptdialog_8cpp_source}{}\section{encryptdialog.\+cpp}
+\label{encryptdialog_8cpp_source}\index{encryptdialog.\+cpp@{encryptdialog.\+cpp}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#include "\hyperlink{encryptdialog_8h}{encryptdialog.h}"}
+00002 \textcolor{preprocessor}{#include "ui\_encryptdialog.h"}
+\hypertarget{encryptdialog_8cpp_source.tex_l00009}{}\hyperlink{class_encrypt_dialog_ab57e8b3a0d00c977e81f3b356657524e}{00009} \hyperlink{class_encrypt_dialog_ab57e8b3a0d00c977e81f3b356657524e}{EncryptDialog::EncryptDialog}(QByteArray \_data, QWidget *parent) :
+00010     QDialog(parent),
+00011     ui(new \hyperlink{namespace_ui}{Ui}::\hyperlink{class_encrypt_dialog}{EncryptDialog})
+00012 \{
+00013     ui->setupUi(\textcolor{keyword}{this});
+00014     \hyperlink{class_encrypt_dialog_acf3a8bbce90d99ef17fec093c35b1008}{data} = \_data;
+00015     \hyperlink{class_encrypt_dialog_ada4900bcd40894d9c098c65aa4066ac9}{success} = \textcolor{keyword}{false};
+00016     \textcolor{comment}{// UI setup}
+00017     ui->totalBytes->setText(QString::number(\hyperlink{class_encrypt_dialog_acf3a8bbce90d99ef17fec093c35b1008}{data}.size()));
+00018     \hyperlink{class_encrypt_dialog_a1afdef3c665fb0d0fae06d1df8e84951}{key} = \textcolor{stringliteral}{""};
+00019     \hyperlink{class_encrypt_dialog_a3e8998aa39696cbd1242f6420ef18143}{compr\_data} = \hyperlink{class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a}{zip}();
+00020     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} compr\_data\_size = \hyperlink{class_encrypt_dialog_a3e8998aa39696cbd1242f6420ef18143}{compr\_data}.size();
+00021     ui->zippedBytes->setText(QString::number(compr\_data\_size));
+00022     \hyperlink{class_encrypt_dialog_a0c821b893cfddd7a6c07bbd270ba49e9}{goodPercentage} = \textcolor{keyword}{false};
+00023     \hyperlink{class_encrypt_dialog_abf638fea37fbdbaba215954e2e239860}{bitsUsed} = 8;
+00024 \}
+00025 
+\hypertarget{encryptdialog_8cpp_source.tex_l00026}{}\hyperlink{class_encrypt_dialog_a466e283080f87ee50f172052e43e38b6}{00026} \hyperlink{class_encrypt_dialog_a466e283080f87ee50f172052e43e38b6}{EncryptDialog::~EncryptDialog}()
+00027 \{
+00028     \textcolor{keyword}{delete} ui;
+00029 \}
+00030 
+00031 \textcolor{keywordtype}{void} EncryptDialog::alert(QString text)
+00032 \{
+00033     QMessageBox t;
+00034     t.setWindowTitle(tr(\textcolor{stringliteral}{"Message"}));
+00035     t.setIcon(QMessageBox::Warning);
+00036     t.setWindowIcon(QIcon(\textcolor{stringliteral}{":/mail.png"}));
+00037     t.setText(text);
+00038     t.exec();
+00039 \}
+\hypertarget{encryptdialog_8cpp_source.tex_l00046}{}\hyperlink{class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a}{00046} QByteArray \hyperlink{class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a}{EncryptDialog::zip}()
+00047 \{
+00048     \textcolor{comment}{// Zip}
+00049     QByteArray c\_data = qCompress(\hyperlink{class_encrypt_dialog_acf3a8bbce90d99ef17fec093c35b1008}{data}, 9);
+00050     \textcolor{comment}{// Encryption}
+00051     QByteArray hashKey = QCryptographicHash::hash(\hyperlink{class_encrypt_dialog_a1afdef3c665fb0d0fae06d1df8e84951}{key}.toUtf8(), QCryptographicHash::Sha256);
+00052     \textcolor{keywordflow}{return} \hyperlink{class_q_a_e_s_encryption_a43819eeb6a7cb29fbd3cb6ad640dcbdf}{QAESEncryption::Crypt}(\hyperlink{class_q_a_e_s_encryption_abe48208f4f6c7d68e6a10b49b9d0b7bdacde97774ab1d4c609e04b0dd13a1e1f7}{QAESEncryption::AES\_256}, 
+      \hyperlink{class_q_a_e_s_encryption_ad3e031c49a3d56566379d75b40b7b255a4ca7f51778e2adf1f464164a0ba8e75e}{QAESEncryption::ECB}, c\_data, hashKey);
+00053 \}
+\hypertarget{encryptdialog_8cpp_source.tex_l00057}{}\hyperlink{class_encrypt_dialog_ac9817d3f11f44f4bb8d97a228fbdf8a5}{00057} \textcolor{keywordtype}{void} \hyperlink{class_encrypt_dialog_ac9817d3f11f44f4bb8d97a228fbdf8a5}{EncryptDialog::on\_fileButton\_clicked}()
+00058 \{
+00059     \textcolor{comment}{// Selet file}
+00060     \hyperlink{class_encrypt_dialog_a859b1bc2f032a247632b879bf8663d0b}{inputFileName} = QFileDialog::getOpenFileName(\textcolor{keyword}{this}, tr(\textcolor{stringliteral}{"Open File"}), \textcolor{stringliteral}{"/"}, tr(\textcolor{stringliteral}{"Images (*.png
+       *.xpm *.jpg *.jpeg)"}));
+00061     ui->fileLabel->setText(\hyperlink{class_encrypt_dialog_a859b1bc2f032a247632b879bf8663d0b}{inputFileName});
+00062     \textcolor{comment}{// Open image}
+00063     QImage img(\hyperlink{class_encrypt_dialog_a859b1bc2f032a247632b879bf8663d0b}{inputFileName});
+00064     \hyperlink{class_encrypt_dialog_a739a0df1d28d06b28a3fd16e2bc16c73}{image} = img;
+00065     \textcolor{comment}{// Get size}
+00066     \hyperlink{class_encrypt_dialog_a7fff26f838ab50f807744cd2c4bed033}{size} = img.width() * img.height();
+00067     \textcolor{comment}{// UI setup}
+00068     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} compr\_data\_size = \hyperlink{class_encrypt_dialog_a3e8998aa39696cbd1242f6420ef18143}{compr\_data}.size();
+00069     ui->zippedBytes->setText(QString::number(compr\_data\_size));
+00070     \textcolor{keywordflow}{if}(\hyperlink{class_encrypt_dialog_a859b1bc2f032a247632b879bf8663d0b}{inputFileName}.isEmpty()) \{
+00071         ui->percentage->setText(\textcolor{stringliteral}{""});
+00072         \textcolor{keywordflow}{return};
+00073     \}
+00074     \textcolor{keywordtype}{double} perc = (compr\_data\_size + 14) * 100 / (\hyperlink{class_encrypt_dialog_a7fff26f838ab50f807744cd2c4bed033}{size} * 3) * \hyperlink{class_encrypt_dialog_abf638fea37fbdbaba215954e2e239860}{bitsUsed} / 8;
+00075     ui->percentage->setText(QString::number(perc) + \textcolor{stringliteral}{"%"});
+00076     \hyperlink{class_encrypt_dialog_a0c821b893cfddd7a6c07bbd270ba49e9}{goodPercentage} = perc < 70;
+00077 \}
+\hypertarget{encryptdialog_8cpp_source.tex_l00082}{}\hyperlink{class_encrypt_dialog_a9a998acd37db458eede31f4a9cb16b78}{00082} \textcolor{keywordtype}{void} \hyperlink{class_encrypt_dialog_a9a998acd37db458eede31f4a9cb16b78}{EncryptDialog::on\_buttonBox\_accepted}()
+00083 \{
+00084     \textcolor{keywordflow}{if}(!\hyperlink{class_encrypt_dialog_a0c821b893cfddd7a6c07bbd270ba49e9}{goodPercentage}) \{
+00085         alert(tr(\textcolor{stringliteral}{"Your encoding percentage is over 70% which is a bit ambiguous."}));
+00086         \hyperlink{class_encrypt_dialog_ada4900bcd40894d9c098c65aa4066ac9}{success} = \textcolor{keyword}{false};
+00087         \textcolor{keywordflow}{return};
+00088     \}
+00089     \textcolor{comment}{// Final zip}
+00090     \hyperlink{class_encrypt_dialog_a1afdef3c665fb0d0fae06d1df8e84951}{key} = ui->keyLine->text();
+00091     \hyperlink{class_encrypt_dialog_a3e8998aa39696cbd1242f6420ef18143}{compr\_data} = \hyperlink{class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a}{zip}();
+00092     \hyperlink{class_encrypt_dialog_ada4900bcd40894d9c098c65aa4066ac9}{success} = \textcolor{keyword}{true};
+00093     close();
+00094 \}
+\hypertarget{encryptdialog_8cpp_source.tex_l00098}{}\hyperlink{class_encrypt_dialog_a43deb5fd2be501f4d03582a8ed49e9c2}{00098} \textcolor{keywordtype}{void} \hyperlink{class_encrypt_dialog_a43deb5fd2be501f4d03582a8ed49e9c2}{EncryptDialog::on\_buttonBox\_rejected}()
+00099 \{
+00100     \hyperlink{class_encrypt_dialog_ada4900bcd40894d9c098c65aa4066ac9}{success} = \textcolor{keyword}{false};
+00101     close();
+00102 \}
+\hypertarget{encryptdialog_8cpp_source.tex_l00107}{}\hyperlink{class_encrypt_dialog_ae5975a58b8ed8f7e423e5d5cc5f58dce}{00107} \textcolor{keywordtype}{void} \hyperlink{class_encrypt_dialog_ae5975a58b8ed8f7e423e5d5cc5f58dce}{EncryptDialog::on\_bitsSlider\_valueChanged}(\textcolor{keywordtype}{int} value)
+00108 \{
+00109     \hyperlink{class_encrypt_dialog_abf638fea37fbdbaba215954e2e239860}{bitsUsed} = value;
+00110     ui->bitsUsedLbl->setText(QString::number(value));
+00111     \textcolor{keywordflow}{if}(ui->percentage->text().isEmpty())
+00112         \textcolor{keywordflow}{return};
+00113     \textcolor{keywordtype}{double} perc = (\hyperlink{class_encrypt_dialog_a3e8998aa39696cbd1242f6420ef18143}{compr\_data}.size() + 14) * 100 / (\hyperlink{class_encrypt_dialog_a7fff26f838ab50f807744cd2c4bed033}{size} * 3) * 8 / 
+      \hyperlink{class_encrypt_dialog_abf638fea37fbdbaba215954e2e239860}{bitsUsed};
+00114     ui->percentage->setText(QString::number(perc) + \textcolor{stringliteral}{"%"});
+00115 \}
+\end{DoxyCode}

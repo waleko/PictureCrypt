@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.11"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PictureCrypt: Main Page</title>
+<title>PictureCrypt: PictureCrypt</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link rel="icon" href="unlocked.png" type="image/png"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -36,7 +36,7 @@
   <td id="projectlogo"><img alt="Logo" src="unlocked.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">PictureCrypt
-   &#160;<span id="projectnumber">1.4.0</span>
+   &#160;<span id="projectnumber">1.4.1</span>
    </div>
    <div id="projectbrief">An image-steganography project</div>
   </td>
@@ -52,6 +52,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li class="current"><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="namespaces.html"><span>Namespaces</span></a></li>
+      <li><a href="annotated.html"><span>Classes</span></a></li>
+      <li><a href="files.html"><span>Files</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -87,10 +90,63 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="headertitle">
-<div class="title">PictureCrypt Documentation</div>  </div>
+<div class="title">PictureCrypt </div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><p>Project made using QT Creator in C++</p>
+<h1><a class="anchor" id="about"></a>
+About</h1>
+<p>A simple cross-platform steganography project which hides data in images. This project is built using MVC pattern and features GUI. <a href="https://qt.io">Qt</a> and <a href="https://github.com/bricke/Qt-AES">QAESEncryption</a> by <a href="https://github.com/bricke">bricke</a> were used. You can read more about project at the <a href="../">home page</a></p>
+<h1><a class="anchor" id="structure"></a>
+Structure of the project</h1>
+<p>As written earlier this project is structured with MVC pattern. Here is a small graph showing the basic structure. <div class="dotgraph">
+<img src="dot_structure.png" alt="dot_structure.png" border="0" usemap="#dot_structure.map"/>
+<map name="dot_structure.map" id="dot_structure.map"><area shape="rect" id="node4" href="class_view_p_c.html" title="ViewPC" alt="" coords="166,38,249,86"/>
+<area shape="rect" id="node5" href="class_encrypt_dialog.html" title="EncryptDialog" alt="" coords="388,38,516,86"/>
+<area shape="rect" id="node6" href="class_about_p_c.html" title="AboutPC" alt="" coords="274,38,363,86"/>
+<area shape="rect" id="node7" href="class_controller_p_c.html" title="ControllerPC" alt="" coords="148,134,267,182"/>
+<area shape="rect" id="node8" href="class_model_p_c.html" title="ModelPC" alt="" coords="162,230,254,278"/>
+<area shape="rect" id="node9" href="class_q_a_e_s_encryption.html" title="QAESEncryption" alt="" coords="278,230,428,278"/>
+</map>
+</div>
+</p>
+<h1><a class="anchor" id="ext-use"></a>
+External use</h1>
+<p>You can use <a class="el" href="class_model_p_c.html" title="The ModelPC class Model Layer of the app. Main class that does the work of PictureCrypt logic Control...">ModelPC</a> class separately from View and Control layer. You will need four files:</p>
+<ul>
+<li>
+<a class="el" href="modelpc_8cpp.html">modelpc.cpp</a> </li>
+<li>
+<a class="el" href="modelpc_8h.html">modelpc.h</a> </li>
+<li>
+<a class="el" href="qaesencryption_8cpp.html">aes/qaesencryption.cpp</a> </li>
+<li>
+<a class="el" href="qaesencryption_8h.html">aes/qaesencryption.h</a> </li>
+</ul>
+<p>Then you can just <code>#include "modelpc.h"</code> and use API.</p>
+<h2><a class="anchor" id="use_api"></a>
+API</h2>
+<p>Here is are the most important methods: </p><ul>
+<li>
+<a class="el" href="class_model_p_c.html#a271cf9285e32df58ffbfc918e6482bbd">ModelPC::Encrypt</a> </li>
+<li>
+<a class="el" href="class_model_p_c.html#a902abaea4f07995b48c0f2fea6eceb7c">ModelPC::Decrypt</a> </li>
+</ul>
+<h3><a class="anchor" id="Showcase"></a>
+Showcase</h3>
+<div class="fragment"><div class="line"><span class="comment">// Includes</span></div><div class="line"><span class="preprocessor">#include &quot;<a class="code" href="modelpc_8h.html">modelpc.h</a>&quot;</span></div><div class="line"><span class="preprocessor">#include &lt;QImage&gt;</span></div><div class="line"><span class="preprocessor">#include &lt;QByteArray&gt;</span></div><div class="line"><span class="preprocessor">#include &lt;QString&gt;</span></div><div class="line"><span class="preprocessor">#include &lt;QDebug&gt;</span> <span class="comment">// just for showcase</span></div><div class="line"></div><div class="line">...</div><div class="line"></div><div class="line"><span class="comment">// Basic setup</span></div><div class="line">QByteArray data(<span class="stringliteral">&quot;some_file.txt&quot;</span>);</div><div class="line">QImage *image = <span class="keyword">new</span> QImage(<span class="stringliteral">&quot;some_big_enough_image.jpg&quot;</span>);</div><div class="line">QString key = <span class="stringliteral">&quot;some_password&quot;</span>;</div><div class="line"><span class="keywordtype">int</span> bitsUsed = 3; <span class="comment">// must be from 1 to 8</span></div><div class="line"></div><div class="line"><span class="comment">// Encrypting</span></div><div class="line">QString error1, error2;</div><div class="line">QImage *normal_resultImage = <a class="code" href="class_model_p_c.html#a271cf9285e32df58ffbfc918e6482bbd">ModelPC::Encrypt</a>(</div><div class="line">        data,</div><div class="line">        image,</div><div class="line">        1,</div><div class="line">        key,</div><div class="line">        bitsUsed,</div><div class="line">        &amp;error1);</div><div class="line">QImage *advanced_resultImage = <a class="code" href="class_model_p_c.html#a271cf9285e32df58ffbfc918e6482bbd">ModelPC::Encrypt</a>(</div><div class="line">        data,</div><div class="line">        image,</div><div class="line">        2, key,</div><div class="line">        bitsUsed <span class="comment">/* not really used here, so put here any number from 1 to 8*/</span>,</div><div class="line">        &amp;error2);</div><div class="line"></div><div class="line"><span class="comment">// Decrypting with given mode</span></div><div class="line">QString error3, error4, error5, error6;</div><div class="line">QByteArray output_normal = <a class="code" href="class_model_p_c.html#a902abaea4f07995b48c0f2fea6eceb7c">ModelPC::Decrypt</a>(</div><div class="line">        normal_resultImage,</div><div class="line">        key,</div><div class="line">        1,</div><div class="line">        &amp;error3);</div><div class="line">QByteArray output_advanced = <a class="code" href="class_model_p_c.html#a902abaea4f07995b48c0f2fea6eceb7c">ModelPC::Decrypt</a>(</div><div class="line">        advanced_resultImage,</div><div class="line">        key,</div><div class="line">        2,</div><div class="line">        &amp;error4);</div><div class="line"></div><div class="line"><span class="comment">// Decrypting without given mode</span></div><div class="line"><span class="comment">// PictureCrypt can detect the mode of the image and adapt.</span></div><div class="line">QByteArray output_normal_undefined = <a class="code" href="class_model_p_c.html#a902abaea4f07995b48c0f2fea6eceb7c">ModelPC::Decrypt</a>(</div><div class="line">        normal_resultImage,</div><div class="line">        key,</div><div class="line">        0,</div><div class="line">        &amp;error5);</div><div class="line">QByteArray output_advanced_undefined = <a class="code" href="class_model_p_c.html#a902abaea4f07995b48c0f2fea6eceb7c">ModelPC::Decrypt</a>(</div><div class="line">        advanced_resultImage,</div><div class="line">        key,</div><div class="line">        0,</div><div class="line">        &amp;error6);</div><div class="line"></div><div class="line"><span class="comment">// Check (better testing with [running tests](#run-tests)</span></div><div class="line"><span class="keywordtype">bool</span> data_good =</div><div class="line">        data == output_normal &amp;&amp;</div><div class="line">        data == output_advanced &amp;&amp;</div><div class="line">        data == output_normal_undefined &amp;&amp;</div><div class="line">        data == output_advanced_undefined;</div><div class="line"><span class="keywordtype">bool</span> no_errors =</div><div class="line">        error1 == <span class="stringliteral">&quot;ok&quot;</span> &amp;&amp;</div><div class="line">        error2 == <span class="stringliteral">&quot;ok&quot;</span> &amp;&amp;</div><div class="line">        error3 == <span class="stringliteral">&quot;ok&quot;</span> &amp;&amp;</div><div class="line">        error4 == <span class="stringliteral">&quot;ok&quot;</span> &amp;&amp;</div><div class="line">        error5 == <span class="stringliteral">&quot;ok&quot;</span> &amp;&amp;</div><div class="line">        error6 == <span class="stringliteral">&quot;ok&quot;</span>;</div><div class="line"><span class="keywordflow">if</span>(data_good &amp;&amp; no_errors)</div><div class="line">    qDebug() &lt;&lt; <span class="stringliteral">&quot;PASS&quot;</span>;</div><div class="line"><span class="keywordflow">else</span></div><div class="line">    qDebug() &lt;&lt; <span class="stringliteral">&quot;FAIL&quot;</span>;</div></div><!-- fragment --><h1><a class="anchor" id="license"></a>
+License</h1>
+<p>This software is provided under the MIT License</p>
+<h1><a class="anchor" id="contact"></a>
+Contact us</h1>
+<p>Visit my site: <a href="https://www.alexkovrigin.me">https://www.alexkovrigin.me</a></p>
+<p>Email me at <a href="#" onclick="location.href='mai'+'lto:'+'a.k'+'ov'+'rig'+'in'+'0@g'+'ma'+'il.'+'co'+'m'; return false;">a.kov<span style="display: none;">.nosp@m.</span>rigi<span style="display: none;">.nosp@m.</span>n0@gm<span style="display: none;">.nosp@m.</span>ail.<span style="display: none;">.nosp@m.</span>com</a></p>
+<dl class="section author"><dt>Author</dt><dd>Alexander Kovrigin (waleko) </dd></dl>
+<dl class="section copyright"><dt>Copyright</dt><dd>Alexander Kovrigin 2019 <div class="image">
+<img src="https://avatars2.githubusercontent.com/u/24986722?s=100"  alt="gravatar"/>
+</div>
+ </dd></dl>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -1,0 +1,100 @@
+\hypertarget{modelpc_8h_source}{}\section{modelpc.\+h}
+\label{modelpc_8h_source}\index{modelpc.\+h@{modelpc.\+h}}
+
+\begin{DoxyCode}
+00001 \textcolor{preprocessor}{#ifndef MODELPC\_H}
+00002 \textcolor{preprocessor}{#define MODELPC\_H}
+00003 
+00004 \textcolor{preprocessor}{#include <QObject>}
+00005 \textcolor{preprocessor}{#include <QImage>}
+00006 \textcolor{preprocessor}{#include <QByteArray>}
+00007 \textcolor{preprocessor}{#include <QColor>}
+00008 \textcolor{preprocessor}{#include <QPoint>}
+00009 \textcolor{preprocessor}{#include <QVector>}
+00010 \textcolor{preprocessor}{#include <QProcess>}
+00011 \textcolor{preprocessor}{#include <QTime>}
+00012 \textcolor{preprocessor}{#include <QFileInfo>}
+00013 \textcolor{preprocessor}{#include <QtGui>}
+00014 \textcolor{preprocessor}{#include <QtCore/QRandomGenerator>}
+00015 \textcolor{preprocessor}{#include <QPair>}
+00016 
+00017 \textcolor{preprocessor}{#include "\hyperlink{qaesencryption_8h}{aes/qaesencryption.h}"}
+00018 \textcolor{preprocessor}{#include <QCryptographicHash>}
+00019 
+00020 
+\hypertarget{modelpc_8h_source.tex_l00033}{}\hyperlink{class_model_p_c}{00033} \textcolor{keyword}{class }\hyperlink{class_model_p_c}{ModelPC} : \textcolor{keyword}{public} QObject
+00034 \{
+00035     Q\_OBJECT
+00036 \textcolor{keyword}{public}:
+00037     \hyperlink{class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c}{ModelPC}();
+\hypertarget{modelpc_8h_source.tex_l00038}{}\hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba43138df6b33a6b2bf608768907f95abc}{00038}     \textcolor{keyword}{enum} \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceb}{CryptMode} \{\hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba287198790ac9799acd03c99d63a6faea}{NotDefined}, \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba7612e38de7178170655a56ddcf96e12c}{v1\_3}, \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba43138df6b33a6b2bf608768907f95abc}{v1\_4}, \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba90ca32d3ccbb6be224cdfc33f7096eea}{jphs\_mode}\};
+00039     \textcolor{keyword}{static} QImage *\hyperlink{class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd}{Encrypt}(QByteArray data, QImage *image, \textcolor{keywordtype}{int} \_mode, QString key = \textcolor{stringliteral}{""}, \textcolor{keywordtype}{int} 
+      \_bitsUsed = 8, QString *\_error = \textcolor{keyword}{nullptr});
+00040     \textcolor{keyword}{static} QByteArray \hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{Decrypt}(QImage * image, QString key, \textcolor{keywordtype}{int} \_mode = 0, QString *\_error = \textcolor{keyword}{nullptr})
+      ;
+00041 
+00042 signals:
+00049     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_af0217a7ca5671e26090dc50a5dccdaf5}{alertView}(QString messageCode, \textcolor{keywordtype}{bool} isWarning);
+00054     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a0855107fb0ccc247cd9e893fae9bb08a}{saveData}(QByteArray data);
+00059     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a41f5e2e8022679046e4d3fa1109025fa}{saveImage}(QImage *image);
+00065     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_afdcd80f0ed5062e145a71f09b0897547}{setProgress}(\textcolor{keywordtype}{int} val);
+00066 
+00067 \textcolor{keyword}{public} slots:
+00068     QImage *\hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{encrypt}(QByteArray data, QImage *image, \textcolor{keywordtype}{int} \_mode, QString key = \textcolor{stringliteral}{""}, \textcolor{keywordtype}{int} \_bitsUsed = 8, 
+      QString *\_error = \textcolor{keyword}{nullptr});
+00069     QByteArray \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{decrypt}(QImage * image, QString key, \textcolor{keywordtype}{int} \_mode = 0, QString *\_error = \textcolor{keyword}{nullptr});
+00070     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(QString message);
+00071     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a9079a101d83672aa48fd2dbac797de40}{alert}(QString message, \textcolor{keywordtype}{bool} isWarning = \textcolor{keyword}{false});
+00072 
+00073 \textcolor{keyword}{public}:
+00074     QByteArray \hyperlink{class_model_p_c_a6da88f166785a49f73b22c169f956fd0}{unzip}(QByteArray data, QByteArray key);
+00075 
+\hypertarget{modelpc_8h_source.tex_l00080}{}\hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{00080}     \textcolor{keywordtype}{bool} \hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{success};
+\hypertarget{modelpc_8h_source.tex_l00084}{}\hyperlink{class_model_p_c_a5af48ab89e19be42a94c34ba00249401}{00084}     \textcolor{keywordtype}{long} \hyperlink{class_model_p_c_a5af48ab89e19be42a94c34ba00249401}{version};
+\hypertarget{modelpc_8h_source.tex_l00088}{}\hyperlink{class_model_p_c_a5f426725ccf7eefd3c77ea8c720264c9}{00088}     QString \hyperlink{class_model_p_c_a5f426725ccf7eefd3c77ea8c720264c9}{versionString};
+\hypertarget{modelpc_8h_source.tex_l00092}{}\hyperlink{class_model_p_c_abd038306f14f22fb885a1697c96d6335}{00092}     QString \hyperlink{class_model_p_c_abd038306f14f22fb885a1697c96d6335}{defaultJPHSDir};
+00093 \textcolor{keyword}{protected}:
+00094     \textcolor{keyword}{static} QImage *\hyperlink{class_model_p_c_ac17e68e6aab134621b0d151d74acdc82}{Inject}(QByteArray encr\_data, QImage * image, \textcolor{keywordtype}{int} \_mode, \textcolor{keywordtype}{int} \_bitsUsed = 8, QString
+       *\_error = \textcolor{keyword}{nullptr});
+00095 
+00096     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a1d0091062a0c836b283ec2f67411623b}{circuit}(QImage * image, QByteArray * data, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} \textcolor{keywordtype}{int} countBytes);
+00097     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a8bee0255c09449868c7e6097afaaf0cd}{jphs}(QImage * image, QByteArray * data);
+00098     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a1171f9fe1550133dc9053a46b4e5bcfd}{processPixel}(QPoint pos, QVector<QPoint> *were, \textcolor{keywordtype}{bool} isEncrypt);
+00099     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a4daefc3fb87a1f19172b9b20c987eb12}{encryptv1\_4}(QImage *image, QByteArray data, QString key);
+00100     QByteArray \hyperlink{class_model_p_c_a4fe70ebbedfaf31d45a35f82d0f06caa}{decryptv1\_3}(QImage * image, QString key);
+00101     QByteArray \hyperlink{class_model_p_c_a7a1f7d491e1bde16936190b9e90896b0}{decryptv1\_4}(QImage * image, QString key);
+00102     \textcolor{keywordtype}{void} \hyperlink{class_model_p_c_a5cdb4d1d61ff62ee9d45b496a7dbf1fb}{proccessPixelsv1\_4}(QImage *image, QByteArray* data, QByteArray key, \textcolor{keywordtype}{bool} 
+      isEncrypt, QVector<QPair<QPoint, QPair<int, int> > > *were, \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} size = -1);
+00103     QByteArray \hyperlink{class_model_p_c_afebbbfa4b07deba4f68fc6dfb50f353f}{zip}(QByteArray data, QByteArray key);
+00104 
+\hypertarget{modelpc_8h_source.tex_l00108}{}\hyperlink{class_model_p_c_a4e5a9c0ca1f06fe5bc478b6bf248c37c}{00108}     QString * \hyperlink{class_model_p_c_a4e5a9c0ca1f06fe5bc478b6bf248c37c}{error};
+00109 \textcolor{keyword}{private}:
+00110     \textcolor{keywordtype}{int} bitsUsed;
+00111     \textcolor{keywordtype}{bool} fileExists(QString path);
+00112     QByteArray bytes(\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} n);
+00113     \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} mod(\textcolor{keywordtype}{int} input);
+00114     QByteArray ver\_byte;
+00115     QColor RGBbytes(\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} byte);
+00116     QString generateVersionString(\textcolor{keywordtype}{long} ver);
+00117     uint randSeed();
+00118     \textcolor{keywordtype}{bool} isTry = \textcolor{keyword}{false};
+00119 
+00120     QByteArray * circuitData;
+00121     QImage * circuitImage;
+00122     \textcolor{keywordtype}{long} \textcolor{keywordtype}{long} circuitCountBytes;
+00123     \textcolor{keywordtype}{long} cur;
+00124     \textcolor{keywordtype}{bool} mustGoOn(\textcolor{keywordtype}{bool} isEncrypt);
+00125 
+00126     QVector <bool> bitsBuffer;
+00127     \textcolor{keywordtype}{long} pop(\textcolor{keywordtype}{int} bits = -1);
+00128     \textcolor{keywordtype}{void} push(\textcolor{keywordtype}{int} data, \textcolor{keywordtype}{int} bits = -1);
+00129 
+00130     \textcolor{keywordtype}{void} setError(QString word);
+00131     QByteArray GetRandomBytes(\textcolor{keywordtype}{long} \textcolor{keywordtype}{long} count = 32);
+00132 \textcolor{keyword}{protected} slots:
+00133     QImage *\hyperlink{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10}{inject}(QByteArray encr\_data, QImage * image, \textcolor{keywordtype}{int} \_mode, \textcolor{keywordtype}{int} \_bitsUsed = 8, QString *
+      \_error = \textcolor{keyword}{nullptr});
+00134 \};
+00135 
+00136 \textcolor{preprocessor}{#endif // MODELPC\_H}
+\end{DoxyCode}

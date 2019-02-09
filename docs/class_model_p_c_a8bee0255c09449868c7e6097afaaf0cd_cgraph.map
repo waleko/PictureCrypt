@@ -1,0 +1,4 @@
+<map id="ModelPC::jphs" name="ModelPC::jphs">
+<area shape="rect" id="node2" href="$class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="161,5,263,32"/>
+<area shape="rect" id="node3" href="$class_model_p_c.html#a9079a101d83672aa48fd2dbac797de40" title="ModelPC::alert Function emits signal ModelPC::alertView and calls ViewPC::alert. " alt="" coords="311,5,420,32"/>
+</map>
