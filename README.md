@@ -194,7 +194,7 @@ If you'd like to translate PictureCrypt to your language here are steps to do so
 
 * Install QT and QT Linguist with it
 * Clone the project.
-* Go to PictureCrypt/app/src/
+* Go to PictureCrypt/src/app/
 * Add a filename to TRANSLATIONS in app/src/src.pro file. Filename must be 'picturecrypt_{your language}.ts' (e.g. 'picturecrypt_fr.ts')
 * Run `lupdate src.pro`, it will generate that .ts file. If there is an error: "Maybe you forgot to set your environment?" Go to Project (on the left-hand side) ->(expand) Build environment -> Open terminal and run `lupdate src.pro`.
 * Go to translations/
