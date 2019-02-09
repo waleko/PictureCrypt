@@ -1,8 +1,0 @@
-<map id="QAESEncryption::Crypt" name="QAESEncryption::Crypt">
-<area shape="rect" id="node2" href="$class_encrypt_dialog.html#a2bff820a3df4ddc36ecb07ed74b7138a" title="EncryptDialog::zip Zipping algorithm It copresses the data and then compresses it using qCompress() ..." alt="" coords="215,64,344,91"/>
-<area shape="rect" id="node5" href="$class_model_p_c.html#afebbbfa4b07deba4f68fc6dfb50f353f" title="ModelPC::zip Zip function, copy of EncryptDialog::zip Used for ModelPC in custom projects, other than PictureCrypt. " alt="" coords="229,123,330,149"/>
-<area shape="rect" id="node3" href="$class_encrypt_dialog.html#ab57e8b3a0d00c977e81f3b356657524e" title="EncryptDialog::EncryptDialog Constructor of the class. Input data is saved here and some variables ar..." alt="" coords="392,5,587,32"/>
-<area shape="rect" id="node4" href="$class_encrypt_dialog.html#a9a998acd37db458eede31f4a9cb16b78" title="EncryptDialog::on_buttonBox_accepted Slot to start the encryption. Successful closing of the app..." alt="" coords="405,57,574,98"/>
-<area shape="rect" id="node6" href="$class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="635,148,761,175"/>
-<area shape="rect" id="node7" href="$class_model_p_c.html#a4daefc3fb87a1f19172b9b20c987eb12" title="ModelPC::encryptv1_4 Encrypts and injects data to image used in v1.4+. " alt="" coords="412,173,567,200"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="ViewPC::abortModel" name="ViewPC::abortModel">
-<area shape="rect" id="node2" href="$class_view_p_c.html#ad7ba2fcf1d17862de15e32432823f7b0" title="ViewPC::abortCircuit Slot to close ProgressDialog (ViewPC::dialog) " alt="" coords="196,5,341,32"/>
-<area shape="rect" id="node3" href="$class_view_p_c.html#a9c32a1fdb6ead84e5ada8fba8860c7ed" title="ViewPC::setProgress Slot to set the value of the ProgressDialog (ViewPC::dialog). ..." alt="" coords="389,5,537,32"/>
-</map>

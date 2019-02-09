@@ -1,4 +1,0 @@
-<map id="EncryptDialog::zip" name="EncryptDialog::zip">
-<area shape="rect" id="node2" href="$class_encrypt_dialog.html#ab57e8b3a0d00c977e81f3b356657524e" title="EncryptDialog::EncryptDialog Constructor of the class. Input data is saved here and some variables ar..." alt="" coords="183,5,377,32"/>
-<area shape="rect" id="node3" href="$class_encrypt_dialog.html#a9a998acd37db458eede31f4a9cb16b78" title="EncryptDialog::on_buttonBox_accepted Slot to start the encryption. Successful closing of the app..." alt="" coords="195,57,365,98"/>
-</map>

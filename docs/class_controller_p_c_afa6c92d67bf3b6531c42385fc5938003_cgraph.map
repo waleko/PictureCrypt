@@ -1,5 +1,0 @@
-<map id="ControllerPC::ControllerPC" name="ControllerPC::ControllerPC">
-<area shape="rect" id="node2" href="$class_view_p_c.html#ac05220df875b7c4f24405a5742476ebf" title="ViewPC::setVersion Set the version of the app from ControllerPC. " alt="" coords="251,5,391,32"/>
-<area shape="rect" id="node3" href="$class_controller_p_c.html#a8814989f7be1214e06b2e720889066b0" title="ControllerPC::abortCircuit Slot to be called when ProgressDialog in ViewPC is closed. It flags ModelPC to stop. " alt="" coords="235,56,407,83"/>
-<area shape="rect" id="node4" href="$class_controller_p_c.html#ac00d29685a7e5b780c01eb438e10f96d" title="ControllerPC::setJPHSDir Sets JPHS default dir. " alt="" coords="233,107,408,133"/>
-</map>

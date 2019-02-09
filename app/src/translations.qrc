@@ -1,6 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>translations/picturecrypt_ru.qm</file>
-        <file>translations/picturecrypt_de.qm</file>
-    </qresource>
-</RCC>
