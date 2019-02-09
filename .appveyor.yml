@@ -10,13 +10,13 @@ install:
   - ps: cmd /c start /wait $exePath /S /D=C:\nsis
   - set PATH=C:\nsis;C:\MinGW\bin;%QTDIR%/bin;%PATH%
 before_build:
-  - cd app
+  - cd src
 
 build_script:
   # - sed -i "QMAKE_CXXFLAGS += -std=c++0x"/"QT += gui"/"QT += core"/"QT += widgets"/"QT += testlib"/"QT += xml"/"DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900" PictureCrypt.pro
   # - sed -i "s/CONFIG += c++11/QMAKE_CXXFLAGS += -std=gnu++0x/g" PictureCrypt.pro
   # - qmake "QMAKE_CXXFLAGS += -std=c++0x" "QT += gui" "QT += core" "QT += widgets" "QT += testlib" "QT += xml" "DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900" # -r -spec win32-g++
-  - cd src
+  - cd app
   - qmake.exe C:\projects\picturecrypt\src\app\app.pro -spec win32-g++
   - C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe all
   - C:/Qt/Tools/mingw530_32/bin/mingw32-make.exe clean -j8
