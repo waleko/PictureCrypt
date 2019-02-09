@@ -35,7 +35,7 @@ script:
 
 before_deploy:
   - cd ../doxy
-  - sh ../app/scripts/deploy.sh
+  - sh ../src/scripts/deploy.sh
 #  - cd ../..
 #  - pip install --user awscli
 #  - aws s3 sync s3://mxe-qt/ mxe --region us-west-1 > s3.log
