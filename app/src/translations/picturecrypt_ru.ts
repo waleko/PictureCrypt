@@ -25,13 +25,37 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;PictureCrypt is an open-source project made exclusively by Alex Kovrigin (waleko) and website https://www.alexkovrigin.me&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Provided under the MIT License.&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;Resources used:&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Icons used are &apos;Circle Icons&apos; by Nick Roach provided under GPL v3.0.&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;QAESEncryption Class from bricke provided under Unlicense.&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&apos;MS Shell Dlg 2&apos; font used and &apos;Montserrat&apos; font used under the SIL Open Font License.&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;© Alexander Kovrigin 2019&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&apos;PictureCrypt&apos; - это &quot;open-source&quot; проект, выполненный исключительно Александром Ковригиным (waleko) и сайтом https://www.alexkovrigin.me&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Представлена под лицензией MIT&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;Использованные ресурсы:&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Иконки &apos;Circle Icons&apos; от Nick Roach представлены под лицензией GPL v3.0.&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Класс QAESEncryption от bricke представлен под лицензией Unlicense.&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Использованные шрифты &apos;MS Shell Dlg 2&apos; и &apos;Montserrat&apos; под лицензией SIL Open Font License&apos;&apos;.&lt;/p&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;© Alexander Kovrigin 2019&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;PictureCrypt is an open-source project made exclusively by Alex Kovrigin (waleko) and website https://www.alexkovrigin.me&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Provided under Unlicense.&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;Resources used:&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Icons used are &apos;Circle Icons&apos; by Nick Roach provided under GPL v3.0.&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;QAESEncryption Class from bricke provided under Unlicense.&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&apos;MS Shell Dlg 2&apos; font used and &apos;Montserrat&apos; font used under the SIL Open Font License.&lt;/p&gt;
 &lt;p align=&quot;center&quot; style=&quot; margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;© Alex Kovrigin 2018-2019&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="vanished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;MS Shell Dlg 2&apos;; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -125,32 +149,32 @@ p, li { white-space: pre-wrap; }
         <translation>Кодовая фраза:</translation>
     </message>
     <message>
-        <location filename="../encryptdialog.ui" line="94"/>
+        <location filename="../encryptdialog.ui" line="98"/>
         <source>Total Bytes</source>
         <translation>Всего байт</translation>
     </message>
     <message>
-        <location filename="../encryptdialog.ui" line="125"/>
+        <location filename="../encryptdialog.ui" line="129"/>
         <source>Zipped Bytes</source>
         <translation>Байт после сжатия</translation>
     </message>
     <message>
-        <location filename="../encryptdialog.ui" line="156"/>
+        <location filename="../encryptdialog.ui" line="160"/>
         <source>Percentage of used pixels</source>
         <translation>Процент использованных пикселей</translation>
     </message>
     <message>
-        <location filename="../encryptdialog.ui" line="175"/>
+        <location filename="../encryptdialog.ui" line="179"/>
         <source>Adviced percentage is &lt;10%, &gt;70% will be rejected</source>
         <translation>Рекомендуется &lt;10%, &gt;70% будет отклонено</translation>
     </message>
     <message>
-        <location filename="../encryptdialog.ui" line="187"/>
+        <location filename="../encryptdialog.ui" line="191"/>
         <source>Bits per byte</source>
         <translation>Использовать бит в байте</translation>
     </message>
     <message>
-        <location filename="../encryptdialog.ui" line="216"/>
+        <location filename="../encryptdialog.ui" line="220"/>
         <source>8</source>
         <translation></translation>
     </message>
@@ -216,13 +240,13 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../viewpc.ui" line="93"/>
-        <location filename="../viewpc.cpp" line="237"/>
+        <location filename="../viewpc.cpp" line="230"/>
         <source>Type in the text for encryption:</source>
         <translation>Введите текст для шифрации:</translation>
     </message>
     <message>
         <location filename="../viewpc.ui" line="113"/>
-        <location filename="../viewpc.cpp" line="239"/>
+        <location filename="../viewpc.cpp" line="232"/>
         <source>Or use the file dialog to choose a file:</source>
         <translation>Или выберите файл:</translation>
     </message>
@@ -239,7 +263,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <location filename="../viewpc.ui" line="158"/>
-        <location filename="../viewpc.cpp" line="236"/>
+        <location filename="../viewpc.cpp" line="229"/>
         <source>Continue configuration</source>
         <translation>Продолжить настройку</translation>
     </message>
@@ -290,187 +314,187 @@ p, li { white-space: pre-wrap; }
         <translation>PNG файлы (*.png);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="145"/>
+        <location filename="../viewpc.cpp" line="138"/>
         <source>Message</source>
         <translation>Сообщение</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="156"/>
+        <location filename="../viewpc.cpp" line="149"/>
         <source>Save File</source>
         <translation>Сохранить файл</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="158"/>
+        <location filename="../viewpc.cpp" line="151"/>
         <source>Text(*.txt);;All files (*)</source>
         <translation>Текст(*.txt);;Все файлы (*)</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="177"/>
+        <location filename="../viewpc.cpp" line="170"/>
         <source>Save Image</source>
         <translation>Сохранить изображение</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="179"/>
+        <location filename="../viewpc.cpp" line="172"/>
         <source>Images(*.png)</source>
         <translation>Изображения(*.png)</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="196"/>
+        <location filename="../viewpc.cpp" line="189"/>
         <source>Cryption in progress.</source>
         <translation>Идёт шифрование.</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="196"/>
+        <location filename="../viewpc.cpp" line="189"/>
         <source>Cancel</source>
         <translation>Отмена</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="199"/>
+        <location filename="../viewpc.cpp" line="192"/>
         <source>Processing</source>
         <translation>Обработка</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="236"/>
+        <location filename="../viewpc.cpp" line="229"/>
         <source>Start decryption</source>
         <translation>Начать дешифрацию</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="237"/>
+        <location filename="../viewpc.cpp" line="230"/>
         <source>Text input isn&apos;t supported in decryption mode</source>
         <translation>Текстовый ввод не доступен в режиме дешифрации</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="239"/>
+        <location filename="../viewpc.cpp" line="232"/>
         <source>Choose a file for decryption:</source>
         <translation>Выберите файл для дешифрации:</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="258"/>
+        <location filename="../viewpc.cpp" line="251"/>
         <source>Dialog</source>
         <translation>Диалог</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="259"/>
+        <location filename="../viewpc.cpp" line="252"/>
         <source>Enter the keyphrase:</source>
         <translation>Введите кодовую фразу:</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="295"/>
+        <location filename="../viewpc.cpp" line="288"/>
         <source>No data given!</source>
         <translation>Данные не введены!</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="296"/>
+        <location filename="../viewpc.cpp" line="289"/>
         <source>Data size is too big (must be less than 15MB)!</source>
         <translation>Размер данных очень большой (должен быть менбше 15МБ)!</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="297"/>
+        <location filename="../viewpc.cpp" line="290"/>
         <source>Invalid / null image!</source>
         <translation>Некорректное / нулевое изображение!</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="298"/>
+        <location filename="../viewpc.cpp" line="291"/>
         <source>Image is too big!</source>
         <translation>Размер изображения слишком большой!</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="299"/>
+        <location filename="../viewpc.cpp" line="292"/>
         <source>bitsUsed parameter is wrong!</source>
         <translation>Параметр &apos;bitsUsed&apos; неправилен!</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="300"/>
+        <location filename="../viewpc.cpp" line="293"/>
         <source>No key given!</source>
         <translation>Ключ не дан!</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="301"/>
+        <location filename="../viewpc.cpp" line="294"/>
         <source>Given key is too big!</source>
         <translation>Данный ключ слишком большой!</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="302"/>
+        <location filename="../viewpc.cpp" line="295"/>
         <source>Undefined mode is only available when decrypting!</source>
         <translation>Неопределённый режим доступен только во время дешифрации!</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="303"/>
+        <location filename="../viewpc.cpp" line="296"/>
         <source>Given mode isn&apos;t available!</source>
         <translation>Данный режим не доступен!</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="304"/>
+        <location filename="../viewpc.cpp" line="297"/>
         <source>ModelPC::inject() isn&apos;t available with v1.4 (advanced) mode</source>
         <translation>ModelPC::inject() не доступна с режимом v1.4 (продвинутый)</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="305"/>
+        <location filename="../viewpc.cpp" line="298"/>
         <source>Given image isn&apos;t encrypted by this app (all modes have failed) or is damaged!</source>
         <translation>Данное изображение не зашифровано этой программмой (все режимы провалились) или повреждено!</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="306"/>
+        <location filename="../viewpc.cpp" line="299"/>
         <source>JPHS is not installed!</source>
         <translation>JPHS не установлен!</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="307"/>
+        <location filename="../viewpc.cpp" line="300"/>
         <source>bitsBufferFail (holy crap, contact me or submit a bug)</source>
         <translation>bitsBufferFail (критическая ошибка, свяжитеесь со мной или сообщите о баге)</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="308"/>
+        <location filename="../viewpc.cpp" line="301"/>
         <source>One point visited twice (holy crap, contact me or submit a bug)</source>
         <translation>Точка посещена дважды (критическая ошибка, свяжитесь со мной или сообщите о баге)</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="309"/>
+        <location filename="../viewpc.cpp" line="302"/>
         <source>Too much data for this image!</source>
         <translation>Слишком много данных для этого изображения!</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="310"/>
+        <location filename="../viewpc.cpp" line="303"/>
         <source>Given image isn&apos;t encrypted with this mode or is damaged!</source>
         <translation>Данное изображение не зашифровано этим режимом или поврежден!</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="311"/>
+        <location filename="../viewpc.cpp" line="304"/>
         <source>No data to read from image!</source>
         <translation>Данные, полученные из изображения, пустые!</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="312"/>
+        <location filename="../viewpc.cpp" line="305"/>
         <source>Version of the image is newer than yours (update!!!)</source>
         <translation>Версия шифрации изображения новей, чем ваша. Обновитесь</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="313"/>
+        <location filename="../viewpc.cpp" line="306"/>
         <source>Version of the image is older than yours</source>
         <translation>Версия шифрации изображения старей, чем ваша</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="314"/>
+        <location filename="../viewpc.cpp" line="307"/>
         <source>No file given!</source>
         <translation>Файл не дан!</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="315"/>
+        <location filename="../viewpc.cpp" line="308"/>
         <source>Cannot open file!</source>
         <translation>Невозможно открыть файл!</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="316"/>
+        <location filename="../viewpc.cpp" line="309"/>
         <source>Cannot save file!</source>
         <translation>Невозможно сохранить файл!</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="317"/>
+        <location filename="../viewpc.cpp" line="310"/>
         <source>Decryption completed!</source>
         <translation>Дешифрация завершена!</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="318"/>
+        <location filename="../viewpc.cpp" line="311"/>
         <source>Encryption completed!</source>
         <translation>Шифрация завершена!</translation>
     </message>
@@ -479,7 +503,7 @@ p, li { white-space: pre-wrap; }
         <translation type="vanished">Невозможно открыть конфигурационный файл!</translation>
     </message>
     <message>
-        <location filename="../viewpc.cpp" line="323"/>
+        <location filename="../viewpc.cpp" line="316"/>
         <source>Open JPHS folder</source>
         <translation>Открыть папку с JPHS</translation>
     </message>
