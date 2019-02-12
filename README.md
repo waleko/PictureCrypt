@@ -66,15 +66,16 @@ QString error1, error2;
 QImage *normal_resultImage = ModelPC::Encrypt(
         data,
         image,
-        1,
+        1, // normal mode
         key,
         bitsUsed,
         &error1);
 QImage *advanced_resultImage = ModelPC::Encrypt(
         data,
         image,
-        2, key,
-        bitsUsed /* not really used here, so put here any number from 1 to 8*/,
+        2, // advanced mode
+        key,
+        bitsUsed, // not really used here, so put here any number from 1 to 8
         &error2);
 
 // Decrypting with given mode
@@ -82,12 +83,12 @@ QString error3, error4, error5, error6;
 QByteArray output_normal = ModelPC::Decrypt(
         normal_resultImage,
         key,
-        1,
+        1, // normal
         &error3);
 QByteArray output_advanced = ModelPC::Decrypt(
         advanced_resultImage,
         key,
-        2,
+        2, // advanced
         &error4);
 
 // Decrypting without given mode
@@ -95,15 +96,15 @@ QByteArray output_advanced = ModelPC::Decrypt(
 QByteArray output_normal_undefined = ModelPC::Decrypt(
         normal_resultImage,
         key,
-        0,
+        0, // auto-detect mode
         &error5);
 QByteArray output_advanced_undefined = ModelPC::Decrypt(
         advanced_resultImage,
         key,
-        0,
+        0, // auto-detect mode
         &error6);
 
-// Check (better testing with [running tests](#run-tests)
+// Check (better testing with running tests [See section 'Run tests'])
 bool data_good =
         data == output_normal &&
         data == output_advanced &&
@@ -147,12 +148,12 @@ $ picturecrypt decrypt result.png somekey output.txt
 PictureCrypt comes with Qt Test project. It can be found at 'app/tests'
 
 #### Run tests
-* Run them directly from IDE (e.g. Qt Creator)
+* Run them directly from IDE (e.g. Qt Creator) with target tests
 * Run with 'make'
 
 ```bash
 # Go to tests directory
-cd app/tests
+cd src/tests
 
 # Install required packages
 bash ../scripts/install.sh
@@ -168,10 +169,10 @@ bash ../scripts/clean.sh
 ```
 
 ## Available modes of encrypting
-* 0 - Not Defined, used for decryption, so it auto-detects (invalid on encryption as you must select the encryption type).
+* 0 - Auto-detect, used for decryption, so it auto-detects (invalid on encryption as you must select the encryption type).
 * 1 - v1.3, only one available on versions 1.3+, pretty basic.
 * **2** - v1.4, advanced (preferred) encryption mode, available on versions v1.4+ (works a lot longer than v1.3, can work for >40s on slow machines).
-* 3 - JPHS, requires manually installed JPHS and specified directory (not currently available).
+* 3 - JPHS, requires manually installed JPHS and specified directory **(not currently available)**.
 
 ## Documentation
 * HTML documentation available [here](docs)

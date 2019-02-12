@@ -97,15 +97,16 @@ An image-steganography project
 <span class="ot">QImage</span> *normal_resultImage = ModelPC::Encrypt(
         data,
         image,
-        <span class="dv">1</span>,
+        <span class="dv">1</span>, <span class="co">// normal mode</span>
         key,
         bitsUsed,
         &amp;error1);
 <span class="ot">QImage</span> *advanced_resultImage = ModelPC::Encrypt(
         data,
         image,
-        <span class="dv">2</span>, key,
-        bitsUsed <span class="co">/* not really used here, so put here any number from 1 to 8*/</span>,
+        <span class="dv">2</span>, <span class="co">// advanced mode</span>
+        key,
+        bitsUsed, <span class="co">// not really used here, so put here any number from 1 to 8</span>
         &amp;error2);
 
 <span class="co">// Decrypting with given mode</span>
@@ -113,12 +114,12 @@ An image-steganography project
 <span class="ot">QByteArray</span> output_normal = ModelPC::Decrypt(
         normal_resultImage,
         key,
-        <span class="dv">1</span>,
+        <span class="dv">1</span>, <span class="co">// normal</span>
         &amp;error3);
 <span class="ot">QByteArray</span> output_advanced = ModelPC::Decrypt(
         advanced_resultImage,
         key,
-        <span class="dv">2</span>,
+        <span class="dv">2</span>, <span class="co">// advanced</span>
         &amp;error4);
 
 <span class="co">// Decrypting without given mode</span>
@@ -126,15 +127,15 @@ An image-steganography project
 <span class="ot">QByteArray</span> output_normal_undefined = ModelPC::Decrypt(
         normal_resultImage,
         key,
-        <span class="dv">0</span>,
+        <span class="dv">0</span>, <span class="co">// auto-detect mode</span>
         &amp;error5);
 <span class="ot">QByteArray</span> output_advanced_undefined = ModelPC::Decrypt(
         advanced_resultImage,
         key,
-        <span class="dv">0</span>,
+        <span class="dv">0</span>, <span class="co">// auto-detect mode</span>
         &amp;error6);
 
-<span class="co">// Check (better testing with [running tests](#run-tests)</span>
+<span class="co">// Check (better testing with running tests [See section &#39;Run tests&#39;])</span>
 <span class="dt">bool</span> data_good =
         data == output_normal &amp;&amp;
         data == output_advanced &amp;&amp;
@@ -172,11 +173,11 @@ $ <span class="kw">picturecrypt</span> decrypt result.png somekey output.txt</co
 <p>PictureCrypt comes with Qt Test project. It can be found at 'app/tests'</p>
 <h4 id="run-tests">Run tests</h4>
 <ul>
-<li>Run them directly from IDE (e.g. Qt Creator)</li>
+<li>Run them directly from IDE (e.g. Qt Creator) with target tests</li>
 <li>Run with 'make'</li>
 </ul>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># Go to tests directory</span>
-<span class="kw">cd</span> app/tests
+<span class="kw">cd</span> src/tests
 
 <span class="co"># Install required packages</span>
 <span class="kw">bash</span> ../scripts/install.sh
@@ -191,10 +192,10 @@ $ <span class="kw">picturecrypt</span> decrypt result.png somekey output.txt</co
 <span class="kw">bash</span> ../scripts/clean.sh</code></pre></div>
 <h2 id="available-modes-of-encrypting">Available modes of encrypting</h2>
 <ul>
-<li>0 - Not Defined, used for decryption, so it auto-detects (invalid on encryption as you must select the encryption type).</li>
+<li>0 - Auto-detect, used for decryption, so it auto-detects (invalid on encryption as you must select the encryption type).</li>
 <li>1 - v1.3, only one available on versions 1.3+, pretty basic.</li>
 <li><strong>2</strong> - v1.4, advanced (preferred) encryption mode, available on versions v1.4+ (works a lot longer than v1.3, can work for &gt;40s on slow machines).</li>
-<li>3 - JPHS, requires manually installed JPHS and specified directory (not currently available).</li>
+<li>3 - JPHS, requires manually installed JPHS and specified directory <strong>(not currently available)</strong>.</li>
 </ul>
 <h2 id="documentation">Documentation</h2>
 <ul>
