@@ -4,7 +4,7 @@ branches:
     - gh-pages
 
 install:
-  - set QTDIR=C:\Qt\5.11.2\mingw53_32
+  - set QTDIR=C:\Qt\5.11.3\mingw53_32
   - ps: $exePath = "$($env:USERPROFILE)\nsis-2.46-setup.exe"
   - ps: (New-Object Net.WebClient).DownloadFile('http://ufpr.dl.sourceforge.net/project/nsis/NSIS%202/2.46/nsis-2.46-setup.exe', $exePath)
   - ps: cmd /c start /wait $exePath /S /D=C:\nsis
