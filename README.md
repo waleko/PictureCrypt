@@ -10,11 +10,11 @@
 <p align="center">
   <a href="https://travis-ci.com/waleko/PictureCrypt"><img alt="Build Status" src="https://travis-ci.com/waleko/PictureCrypt.svg?branch=master"></a>
   <a href="https://ci.appveyor.com/project/waleko/picturecrypt/branch/master"><img src="https://ci.appveyor.com/api/projects/status/qc0syxtjax4wnud7/branch/master?svg=true"/></a>
-  <img alt="undefined" src="https://img.shields.io/appveyor/tests/waleko/PictureCrypt/master.svg?style=flat">
+  <a href="https://ci.appveyor.com/project/waleko/picturecrypt/branch/master/tests"><img alt="undefined" src="https://img.shields.io/appveyor/tests/waleko/PictureCrypt/master.svg?style=flat"></a>
   <a class="badge-align" href="https://www.codacy.com/app/waleko/PictureCrypt?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=waleko/PictureCrypt&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/c9106eb67e164d7d87de6d92448a3355"/></a>
   <a href="https://github.com/waleko/PictureCrypt/releases/latest"><img alt="Release" src="https://img.shields.io/github/release/waleko/PictureCrypt.svg?style=flat"></a>
   <a href="https://waleko.github.io/PictureCrypt/docs"><img alt="Documentation" src="https://img.shields.io/badge/docs-available-brightgreen.svg"></a>
-  <img alt="License" src="https://img.shields.io/github/license/waleko/PictureCrypt.svg?style=flat">
+  <a href="https://github.com/waleko/PictureCrypt/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/waleko/PictureCrypt.svg?style=flat"></a>
   <a href="https://gitter.im/PictureCrypt/community"><img src="https://badges.gitter.im/waleko/PictureCrypt.png"/></a>
 </p>
 
