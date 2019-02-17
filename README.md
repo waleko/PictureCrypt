@@ -176,7 +176,7 @@ bash ../scripts/clean.sh
 
 ## Documentation
 * HTML documentation available [here](docs)
-* PDF documentation available [here](https://github.com/waleko/PictureCrypt/raw/gh-pages/refman.pdf)
+* PDF documentation available [here](https://github.com/waleko/PictureCrypt/raw/gh-pages/PictureCrypt-docs.pdf)
 
 ## Continuous integration
 Continuous integration is fulfilled via [Travis CI](https://travis-ci.com/waleko/PictureCrypt) for Linux and [AppVeyor](https://ci.appveyor.com/project/waleko/picturecrypt) for Windows.
