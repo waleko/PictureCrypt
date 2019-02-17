@@ -17,7 +17,7 @@ env:
     - PATH=$HOME/.local/bin:$PATH
 
 install:
-  - cd src
+  - cd app
   - sh ./scripts/install.sh
     # Setup qt
   - source /opt/qt511/bin/qt511-env.sh
