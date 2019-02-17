@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://alexkovrigin.me/PictureCrypt">
-    <img alt="PictureCrypt" src="./app/src/icons/unlocked.png">
+    <img alt="PictureCrypt" src="./src/app/icons/unlocked.png">
   </a>
 </p>
 
@@ -10,11 +10,11 @@
 <p align="center">
   <a href="https://travis-ci.com/waleko/PictureCrypt"><img alt="Build Status" src="https://travis-ci.com/waleko/PictureCrypt.svg?branch=master"></a>
   <a href="https://ci.appveyor.com/project/waleko/picturecrypt/branch/master"><img src="https://ci.appveyor.com/api/projects/status/qc0syxtjax4wnud7/branch/master?svg=true"/></a>
-  <img alt="Tests" src="https://img.shields.io/appveyor/tests/waleko/PictureCrypt.svg?compact_message&style=flat">
+  <a href="https://ci.appveyor.com/project/waleko/picturecrypt/branch/master/tests"><img alt="undefined" src="https://img.shields.io/appveyor/tests/waleko/PictureCrypt/master.svg?style=flat"></a>
   <a class="badge-align" href="https://www.codacy.com/app/waleko/PictureCrypt?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=waleko/PictureCrypt&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/c9106eb67e164d7d87de6d92448a3355"/></a>
   <a href="https://github.com/waleko/PictureCrypt/releases/latest"><img alt="Release" src="https://img.shields.io/github/release/waleko/PictureCrypt.svg?style=flat"></a>
   <a href="https://waleko.github.io/PictureCrypt/docs"><img alt="Documentation" src="https://img.shields.io/badge/docs-available-brightgreen.svg"></a>
-  <img alt="License" src="https://img.shields.io/github/license/waleko/PictureCrypt.svg?style=flat">
+  <a href="https://github.com/waleko/PictureCrypt/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/waleko/PictureCrypt.svg?style=flat"></a>
   <a href="https://gitter.im/PictureCrypt/community"><img src="https://badges.gitter.im/waleko/PictureCrypt.png"/></a>
 </p>
 
@@ -32,14 +32,14 @@ Or download latest potentially **UNSTABLE** files:
 
 ### Links
 #### Windows:
-* [**EXE with release**](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/PictureCrypt-setup.exe) (~ 22 MB)
-* [**Zip with console**](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/deploy/console.zip) (~ 21 MB)
-* [Zip Debug](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/deploy/PictureCrypt-debug.zip) (~ 190 MB)
-* [Zip Release](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/deploy/PictureCrypt-release.zip) (~ 21 MB)
-* [Exe with console](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/app/PictureCrypt-console-setup.exe) (~ 19 MB)
+* [**EXE with release**](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/PictureCrypt-setup.exe) (~ 22 MB)
+* [**Zip with console**](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/deploy/console.zip) (~ 21 MB)
+* [Zip Debug](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/deploy/PictureCrypt-debug.zip) (~ 190 MB)
+* [Zip Release](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/deploy/PictureCrypt-release.zip) (~ 21 MB)
+* [Exe with console](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/PictureCrypt-console-setup.exe) (~ 19 MB)
 
 #### Linux:
-* [Binary of release](https://github.com/waleko/PictureCrypt/raw/gh-pages/app/src/build/Release/PictureCrypt) (**doesn't work without QT**) (~ 10 MB)
+* [Binary of release](https://github.com/waleko/PictureCrypt/raw/gh-pages/src/app/build/Release/PictureCrypt) (**doesn't work without QT**) (~ 10 MB)
 
 ## External use
 You can use ModelPC class separately from everything else, **except for QAESEncryption** (so /aes folder)
@@ -66,15 +66,16 @@ QString error1, error2;
 QImage *normal_resultImage = ModelPC::Encrypt(
         data,
         image,
-        1,
+        1, // normal mode
         key,
         bitsUsed,
         &error1);
 QImage *advanced_resultImage = ModelPC::Encrypt(
         data,
         image,
-        2, key,
-        bitsUsed /* not really used here, so put here any number from 1 to 8*/,
+        2, // advanced mode
+        key,
+        bitsUsed, // not really used here, so put here any number from 1 to 8
         &error2);
 
 // Decrypting with given mode
@@ -82,12 +83,12 @@ QString error3, error4, error5, error6;
 QByteArray output_normal = ModelPC::Decrypt(
         normal_resultImage,
         key,
-        1,
+        1, // normal
         &error3);
 QByteArray output_advanced = ModelPC::Decrypt(
         advanced_resultImage,
         key,
-        2,
+        2, // advanced
         &error4);
 
 // Decrypting without given mode
@@ -95,15 +96,15 @@ QByteArray output_advanced = ModelPC::Decrypt(
 QByteArray output_normal_undefined = ModelPC::Decrypt(
         normal_resultImage,
         key,
-        0,
+        0, // auto-detect mode
         &error5);
 QByteArray output_advanced_undefined = ModelPC::Decrypt(
         advanced_resultImage,
         key,
-        0,
+        0, // auto-detect mode
         &error6);
 
-// Check (better testing with [running tests](#run-tests)
+// Check (better testing with running tests [See section 'Run tests'])
 bool data_good =
         data == output_normal &&
         data == output_advanced &&
@@ -147,12 +148,12 @@ $ picturecrypt decrypt result.png somekey output.txt
 PictureCrypt comes with Qt Test project. It can be found at 'app/tests'
 
 #### Run tests
-* Run them directly from IDE (e.g. Qt Creator)
+* Run them directly from IDE (e.g. Qt Creator) with target tests
 * Run with 'make'
 
 ```bash
 # Go to tests directory
-cd app/tests
+cd src/tests
 
 # Install required packages
 bash ../scripts/install.sh
@@ -168,10 +169,10 @@ bash ../scripts/clean.sh
 ```
 
 ## Available modes of encrypting
-* 0 - Not Defined, used for decryption, so it auto-detects (invalid on encryption as you must select the encryption type).
+* 0 - Auto-detect, used for decryption, so it auto-detects (invalid on encryption as you must select the encryption type).
 * 1 - v1.3, only one available on versions 1.3+, pretty basic.
 * **2** - v1.4, advanced (preferred) encryption mode, available on versions v1.4+ (works a lot longer than v1.3, can work for >40s on slow machines).
-* 3 - JPHS, requires manually installed JPHS and specified directory (not currently available).
+* 3 - JPHS, requires manually installed JPHS and specified directory **(not currently available)**.
 
 ## Documentation
 * HTML documentation available [here](docs)
@@ -194,7 +195,7 @@ If you'd like to translate PictureCrypt to your language here are steps to do so
 
 * Install QT and QT Linguist with it
 * Clone the project.
-* Go to PictureCrypt/app/src/
+* Go to PictureCrypt/src/app/
 * Add a filename to TRANSLATIONS in app/src/src.pro file. Filename must be 'picturecrypt_{your language}.ts' (e.g. 'picturecrypt_fr.ts')
 * Run `lupdate src.pro`, it will generate that .ts file. If there is an error: "Maybe you forgot to set your environment?" Go to Project (on the left-hand side) ->(expand) Build environment -> Open terminal and run `lupdate src.pro`.
 * Go to translations/

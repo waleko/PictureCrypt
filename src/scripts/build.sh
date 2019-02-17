@@ -3,7 +3,7 @@
 qmake "QMAKE_CXXFLAGS += -std=c++0x" "QT += gui" "QT += core" "QT += widgets" "QT += testlib" "QT += xml" "DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x040900"
 make all
 
-cd src
+cd app
 sh ../scripts/clean.sh
 
 cd ../tests
