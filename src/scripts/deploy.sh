@@ -11,4 +11,4 @@ mv doxy/home_page/* ./
 # Generate pdf from tex
 cd latex
 make
-mv refman.pdf ../refman.pdf
+mv refman.pdf ../PictureCrypt-docs.pdf
