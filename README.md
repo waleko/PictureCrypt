@@ -223,4 +223,4 @@ Email me a.kovrigin0@gmail.com or telegram me at [waleko](https://t.me/waleko)
 ## License
 This software is provided under the MIT License.
 
-Copyright (c) 2019 Alexander Kovrigin
+Copyright © 2019 Alexander Kovrigin
