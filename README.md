@@ -25,21 +25,26 @@
 ## About
 A simple cross-platform steganography project which hides data in images.
 This project is built on [Qt Platform](https://qt.io) using MVC pattern and features GUI and console interface.
+Project repository is available at [GitHub](https://github.com/waleko/PictureCrypt)
 
 ## Download
 Get stable binary files at [latest release page](https://github.com/waleko/PictureCrypt/releases/latest)
-Or download latest potentially **UNSTABLE** files:
+Or download latest **POTENTIALY UNSTABLE** files:
 
 ### Links
-#### Windows:
-* [**EXE with release**](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/PictureCrypt-setup.exe) (~ 22 MB)
+#### Frequently used:
+##### Windows:
+* [**Exe with release**](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/PictureCrypt-setup.exe) (~ 22 MB)
 * [**Zip with console**](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/deploy/console.zip) (~ 21 MB)
+
+##### Linux:
+* [Binary of release](https://github.com/waleko/PictureCrypt/raw/gh-pages/src/app/build/Release/PictureCrypt) (**doesn't work without QT**) (~ 10 MB)
+
+#### Rarely used
+##### Windows
 * [Zip Debug](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/deploy/PictureCrypt-debug.zip) (~ 190 MB)
 * [Zip Release](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/deploy/PictureCrypt-release.zip) (~ 21 MB)
 * [Exe with console](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/PictureCrypt-console-setup.exe) (~ 19 MB)
-
-#### Linux:
-* [Binary of release](https://github.com/waleko/PictureCrypt/raw/gh-pages/src/app/build/Release/PictureCrypt) (**doesn't work without QT**) (~ 10 MB)
 
 ## External use
 You can use ModelPC class separately from everything else, **except for QAESEncryption** (so /aes folder)
@@ -145,7 +150,7 @@ $ picturecrypt decrypt result.png somekey output.txt
 ```
 
 ### Tests
-PictureCrypt comes with Qt Test project. It can be found at 'app/tests'
+PictureCrypt comes with Qt Test project. It can be found at 'src/tests'
 
 #### Run tests
 * Run them directly from IDE (e.g. Qt Creator) with target tests
@@ -169,8 +174,8 @@ bash ../scripts/clean.sh
 ```
 
 ## Available modes of encrypting
-* 0 - Auto-detect, used for decryption, so it auto-detects (invalid on encryption as you must select the encryption type).
-* 1 - v1.3, only one available on versions 1.3+, pretty basic.
+* 0 - Auto-detect, used for decryption, so it auto-detects (invalid at encryption as you must select the encryption type).
+* 1 - v1.3, only available on versions 1.3+, **not really secure**.
 * **2** - v1.4, advanced (preferred) encryption mode, available on versions v1.4+ (works a lot longer than v1.3, can work for >40s on slow machines).
 * 3 - JPHS, requires manually installed JPHS and specified directory **(not currently available)**.
 
@@ -198,12 +203,12 @@ If you'd like to translate PictureCrypt to your language here are steps to do so
 * Install QT and QT Linguist with it
 * Clone the project.
 * Go to PictureCrypt/src/app/
-* Add a filename to TRANSLATIONS in app/src/src.pro file. Filename must be 'picturecrypt_{your language}.ts' (e.g. 'picturecrypt_fr.ts')
+* Add a filename to TRANSLATIONS in src/app/app.pro file. Filename must be 'picturecrypt_{your language}.ts' (e.g. 'picturecrypt_fr.ts')
 * Run `lupdate src.pro`, it will generate that .ts file. If there is an error: "Maybe you forgot to set your environment?" Go to Project (on the left-hand side) ->(expand) Build environment -> Open terminal and run `lupdate src.pro`.
 * Go to translations/
 * Run `linguist picturecrypt_{your language}.ts`. The Qt Linguist will appear, where you can translate given text from English (there are a couple of html entries, just edit its text part). **If you don't translate the whole thing, your work will be still appreciated!**
 * Either go to 'File -> Compile' or run `lrelease picturecrypt_{your language}.ts`.
-* Add your picturecrypt_{your language}.ts to app/src/translations.qrc resource file.
+* Add your picturecrypt_{your language}.ts to src/app/translations.qrc resource file.
 * Create a pull request in GitHub with your work.
 
 If you have any trouble, [contact me](#contact) and I will sincerely try to help you as I really don't think, that anyone will decide to help me translate. 😔

@@ -6,7 +6,7 @@ Project made using QT Creator in C++
 A simple cross-platform steganography project which hides data in images.
 This project is built using MVC pattern and features GUI.
 [Qt](https://qt.io) and [QAESEncryption](https://github.com/bricke/Qt-AES) by [bricke](https://github.com/bricke) were used.
-You can read more about project at the [home page](../)
+You can read more about project at the [home page](waleko.github.io/PictureCrypt)
 
 \section structure Structure of the project
 As written earlier this project is structured with MVC pattern. Here is a small graph showing the basic structure.
