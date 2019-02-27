@@ -58,21 +58,26 @@ An image-steganography project
 <img src="https://waleko.github.io/data/picturecrypt-screenshot.jpg"/>
 </p>
 <h2 id="about">About</h2>
-<p>A simple cross-platform steganography project which hides data in images. This project is built on <a href="https://qt.io">Qt Platform</a> using MVC pattern and features GUI and console interface.</p>
+<p>A simple cross-platform steganography project which hides data in images. This project is built on <a href="https://qt.io">Qt Platform</a> using MVC pattern and features GUI and console interface. Project repository is available at <a href="https://github.com/waleko/PictureCrypt">GitHub</a></p>
 <h2 id="download">Download</h2>
-<p>Get stable binary files at <a href="https://github.com/waleko/PictureCrypt/releases/latest">latest release page</a> Or download latest potentially <strong>UNSTABLE</strong> files:</p>
+<p>Get stable binary files at <a href="https://github.com/waleko/PictureCrypt/releases/latest">latest release page</a> Or download latest <strong>POTENTIALY UNSTABLE</strong> files:</p>
 <h3 id="links">Links</h3>
-<h4 id="windows">Windows:</h4>
+<h4 id="frequently-used">Frequently used:</h4>
+<h5 id="windows">Windows:</h5>
 <ul>
-<li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/PictureCrypt-setup.exe"><strong>EXE with release</strong></a> (~ 22 MB)</li>
+<li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/PictureCrypt-setup.exe"><strong>Exe with release</strong></a> (~ 22 MB)</li>
 <li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/deploy/console.zip"><strong>Zip with console</strong></a> (~ 21 MB)</li>
+</ul>
+<h5 id="linux">Linux:</h5>
+<ul>
+<li><a href="https://github.com/waleko/PictureCrypt/raw/gh-pages/src/app/build/Release/PictureCrypt">Binary of release</a> (<strong>doesn't work without QT</strong>) (~ 10 MB)</li>
+</ul>
+<h4 id="rarely-used">Rarely used</h4>
+<h5 id="windows-1">Windows</h5>
+<ul>
 <li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/deploy/PictureCrypt-debug.zip">Zip Debug</a> (~ 190 MB)</li>
 <li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/deploy/PictureCrypt-release.zip">Zip Release</a> (~ 21 MB)</li>
 <li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/PictureCrypt-console-setup.exe">Exe with console</a> (~ 19 MB)</li>
-</ul>
-<h4 id="linux">Linux:</h4>
-<ul>
-<li><a href="https://github.com/waleko/PictureCrypt/raw/gh-pages/src/app/build/Release/PictureCrypt">Binary of release</a> (<strong>doesn't work without QT</strong>) (~ 10 MB)</li>
 </ul>
 <h2 id="external-use">External use</h2>
 <p>You can use ModelPC class separately from everything else, <strong>except for QAESEncryption</strong> (so /aes folder)</p>
@@ -170,7 +175,7 @@ $ <span class="kw">picturecrypt</span> --version
 $ <span class="kw">picturecrypt</span> encrypt original.jpg data.txt somekey result.png
 $ <span class="kw">picturecrypt</span> decrypt result.png somekey output.txt</code></pre></div>
 <h3 id="tests">Tests</h3>
-<p>PictureCrypt comes with Qt Test project. It can be found at 'app/tests'</p>
+<p>PictureCrypt comes with Qt Test project. It can be found at 'src/tests'</p>
 <h4 id="run-tests">Run tests</h4>
 <ul>
 <li>Run them directly from IDE (e.g. Qt Creator) with target tests</li>
@@ -192,8 +197,8 @@ $ <span class="kw">picturecrypt</span> decrypt result.png somekey output.txt</co
 <span class="kw">bash</span> ../scripts/clean.sh</code></pre></div>
 <h2 id="available-modes-of-encrypting">Available modes of encrypting</h2>
 <ul>
-<li>0 - Auto-detect, used for decryption, so it auto-detects (invalid on encryption as you must select the encryption type).</li>
-<li>1 - v1.3, only one available on versions 1.3+, pretty basic.</li>
+<li>0 - Auto-detect, used for decryption, so it auto-detects (invalid at encryption as you must select the encryption type).</li>
+<li>1 - v1.3, only available on versions 1.3+, <strong>not really secure</strong>.</li>
 <li><strong>2</strong> - v1.4, advanced (preferred) encryption mode, available on versions v1.4+ (works a lot longer than v1.3, can work for &gt;40s on slow machines).</li>
 <li>3 - JPHS, requires manually installed JPHS and specified directory <strong>(not currently available)</strong>.</li>
 </ul>
@@ -219,12 +224,12 @@ $ <span class="kw">picturecrypt</span> decrypt result.png somekey output.txt</co
 <li>Install QT and QT Linguist with it</li>
 <li>Clone the project.</li>
 <li>Go to PictureCrypt/src/app/</li>
-<li>Add a filename to TRANSLATIONS in app/src/src.pro file. Filename must be 'picturecrypt_{your language}.ts' (e.g. 'picturecrypt_fr.ts')</li>
+<li>Add a filename to TRANSLATIONS in src/app/app.pro file. Filename must be 'picturecrypt_{your language}.ts' (e.g. 'picturecrypt_fr.ts')</li>
 <li>Run <code>lupdate src.pro</code>, it will generate that .ts file. If there is an error: &quot;Maybe you forgot to set your environment?&quot; Go to Project (on the left-hand side) -&gt;(expand) Build environment -&gt; Open terminal and run <code>lupdate src.pro</code>.</li>
 <li>Go to translations/</li>
 <li>Run <code>linguist picturecrypt_{your language}.ts</code>. The Qt Linguist will appear, where you can translate given text from English (there are a couple of html entries, just edit its text part). <strong>If you don't translate the whole thing, your work will be still appreciated!</strong></li>
 <li>Either go to 'File -&gt; Compile' or run <code>lrelease picturecrypt_{your language}.ts</code>.</li>
-<li>Add your picturecrypt_{your language}.ts to app/src/translations.qrc resource file.</li>
+<li>Add your picturecrypt_{your language}.ts to src/app/translations.qrc resource file.</li>
 <li>Create a pull request in GitHub with your work.</li>
 </ul>
 <p>If you have any trouble, <a href="#contact">contact me</a> and I will sincerely try to help you as I really don't think, that anyone will decide to help me translate. 😔</p>
