@@ -6,7 +6,7 @@
 
 !define APP_NAME "PictureCrypt"
 !define COMP_NAME "Alex Kovrigin"
-!define WEB_SITE "https://alexkovrigin.me"
+!define WEB_SITE "https://picturecrypt.alexkovrigin.me"
 !define VERSION "0.1.4.1"
 !define COPYRIGHT "Alex Kovrigin � 2019"
 !define DESCRIPTION "An image-steganography project"
