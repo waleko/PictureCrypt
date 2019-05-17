@@ -26,26 +26,26 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        main.cpp \
-        viewpc.cpp \
+    main.cpp \
     controllerpc.cpp \
-    modelpc.cpp \
-    encryptdialog.cpp \
-    aboutpc.cpp \
-    aes/qaesencryption.cpp
+    view/viewpc.cpp \
+    view/encryptdialog.cpp \
+    view/aboutpc.cpp \
+    model/modelpc.cpp \
+    model/qaesencryption.cpp
 
 HEADERS += \
-        viewpc.h \
     controllerpc.h \
-    modelpc.h \
-    encryptdialog.h \
-    aboutpc.h \
-    aes/qaesencryption.h
+    view/viewpc.h \
+    view/encryptdialog.h \
+    view/aboutpc.h \
+    model/modelpc.h \
+    model/qaesencryption.h
 
 FORMS += \
-        viewpc.ui \
-    encryptdialog.ui \
-    aboutpc.ui
+    view/viewpc.ui \
+    view/encryptdialog.ui \
+    view/aboutpc.ui
 
 RESOURCES += \
     resource.qrc \

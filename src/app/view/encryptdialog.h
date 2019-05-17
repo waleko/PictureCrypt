@@ -7,7 +7,7 @@
 #include <QMessageBox>
 #include <QString>
 
-#include <aes/qaesencryption.h>
+#include "../model/qaesencryption.h"
 #include <QCryptographicHash>
 
 namespace Ui {

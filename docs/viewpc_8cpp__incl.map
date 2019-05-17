@@ -1,6 +1,6 @@
 <map id="viewpc.cpp" name="viewpc.cpp">
-<area shape="rect" id="node2" href="$viewpc_8h.html" title="viewpc.h" alt="" coords="708,80,783,107"/>
-<area shape="rect" id="node15" href="$encryptdialog_8h.html" title="encryptdialog.h" alt="" coords="533,155,643,181"/>
-<area shape="rect" id="node22" href="$aboutpc_8h.html" title="aboutpc.h" alt="" coords="667,155,746,181"/>
-<area shape="rect" id="node18" href="$qaesencryption_8h.html" title="aes/qaesencryption.h" alt="" coords="345,229,492,256"/>
+<area shape="rect" id="node2" href="$viewpc_8h.html" title="viewpc.h" alt="" coords="733,80,808,107"/>
+<area shape="rect" id="node15" href="$encryptdialog_8h.html" title="encryptdialog.h" alt="" coords="558,155,669,181"/>
+<area shape="rect" id="node22" href="$aboutpc_8h.html" title="aboutpc.h" alt="" coords="693,155,771,181"/>
+<area shape="rect" id="node18" href="$qaesencryption_8h.html" title="../model/qaesencryption.h" alt="" coords="345,229,517,256"/>
 </map>

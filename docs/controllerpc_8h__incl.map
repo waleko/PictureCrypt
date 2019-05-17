@@ -1,7 +1,7 @@
 <map id="controllerpc.h" name="controllerpc.h">
-<area shape="rect" id="node6" href="$modelpc_8h.html" title="modelpc.h" alt="" coords="676,155,759,181"/>
-<area shape="rect" id="node20" href="$viewpc_8h.html" title="viewpc.h" alt="" coords="1342,80,1416,107"/>
-<area shape="rect" id="node18" href="$qaesencryption_8h.html" title="aes/qaesencryption.h" alt="" coords="1051,229,1198,256"/>
-<area shape="rect" id="node27" href="$encryptdialog_8h.html" title="encryptdialog.h" alt="" coords="1324,155,1434,181"/>
-<area shape="rect" id="node30" href="$aboutpc_8h.html" title="aboutpc.h" alt="" coords="1458,155,1537,181"/>
+<area shape="rect" id="node6" href="$modelpc_8h.html" title="model/modelpc.h" alt="" coords="612,155,733,181"/>
+<area shape="rect" id="node20" href="$viewpc_8h.html" title="view/viewpc.h" alt="" coords="1301,80,1406,107"/>
+<area shape="rect" id="node18" href="$qaesencryption_8h.html" title="qaesencryption.h" alt="" coords="1050,229,1172,256"/>
+<area shape="rect" id="node27" href="$encryptdialog_8h.html" title="encryptdialog.h" alt="" coords="1298,155,1409,181"/>
+<area shape="rect" id="node30" href="$aboutpc_8h.html" title="aboutpc.h" alt="" coords="1433,155,1512,181"/>
 </map>
