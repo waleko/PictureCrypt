@@ -5,7 +5,7 @@
 
 trigger:
   branches:
-    except:
+    exclude:
       - gh-pages
       - appveyor
 
@@ -44,3 +44,4 @@ stages:
       steps:
         - cd src/doxy
         - sh ../src/scripts/deploy.sh
+      
