@@ -9,9 +9,6 @@ trigger:
       - gh-pages
       - appveyor
 
-pool:
-  vmImage: 'Ubuntu-16.04'
-
 stages:
   - stage: Install and Build
     jobs:
