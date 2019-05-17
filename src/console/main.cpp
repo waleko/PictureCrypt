@@ -4,7 +4,7 @@
 #include <QString>
 #include <bits/stdc++.h>
 #include <QFile>
-#include "../app/modelpc.h"
+#include "../app/model/modelpc.h"
 
 using namespace std;
 /*!

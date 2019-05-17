@@ -14,9 +14,9 @@
 #include <QInputDialog>
 #include <QtMath>
 
-#include <encryptdialog.h>
+#include "encryptdialog.h"
 #include <QProgressDialog>
-#include <aboutpc.h>
+#include "aboutpc.h"
 
 #include <QLocale>
 

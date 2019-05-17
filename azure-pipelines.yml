@@ -4,12 +4,43 @@
 # https://docs.microsoft.com/azure/devops/pipelines/apps/c-cpp/gcc
 
 trigger:
-- master
+  branches:
+    except:
+      - gh-pages
+      - appveyor
 
 pool:
   vmImage: 'Ubuntu-16.04'
 
-steps:
-- script: |
-    make
-  displayName: 'make'
+stages:
+  - stage: Install and Build
+    jobs:
+    - job: Install and Build on Linux
+      pool:
+        vmImage: ubuntu-16.04
+      steps:
+      - export PATH="$HOME/.local/bin:$PATH"
+      - cd src
+      - sh ./scripts/install.sh
+        # Setup qt
+      - source /opt/qt511/bin/qt511-env.sh
+      - export QTHOME=/opt/qt511
+      # Build
+      - sh scripts/build.sh
+  - stage: Test
+    jobs:
+    - job: Test on Linux
+      pool:
+        vmImage: ubuntu-16.04
+      steps:
+         - cd src/tests
+         - QT_QPA_PLATFORM=offscreen make check
+         - cd ..
+  - stage: Deploy
+    jobs:
+    - job: Deploy Linux
+      pool:
+        vmImage: ubuntu-16.04
+      steps:
+        - cd src/doxy
+        - sh ../src/scripts/deploy.sh

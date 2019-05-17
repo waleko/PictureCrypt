@@ -9,16 +9,15 @@ TEMPLATE = app
 
 SOURCES += \
     tst_picturecrypttest.cpp \
-    ../app/modelpc.cpp \
-    ../app/aes/qaesencryption.cpp
+    ../app/model/modelpc.cpp \
+    ../app/model/qaesencryption.cpp
 
 HEADERS += \
-    ../app/modelpc.h \
-    ../app/aes/qaesencryption.h
+    ../app/model/modelpc.h \
+    ../app/model/qaesencryption.h
 
 INCLUDEPATH += \
-    ../app \
-    ../app/aes
+    ../app/model
 
 RESOURCES += \
     resource.qrc

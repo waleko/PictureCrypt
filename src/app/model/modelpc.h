@@ -14,7 +14,7 @@
 #include <QtCore/QRandomGenerator>
 #include <QPair>
 
-#include "aes/qaesencryption.h"
+#include "qaesencryption.h"
 #include <QCryptographicHash>
 
 

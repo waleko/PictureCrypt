@@ -17,16 +17,15 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     main.cpp \
-    ../app/modelpc.cpp \
-    ../app/aes/qaesencryption.cpp
+    ../app/model/modelpc.cpp \
+    ../app/model/qaesencryption.cpp
 
 HEADERS += \
-    ../app/modelpc.h \
-    ../app/aes/qaesencryption.h
+    ../app/model/modelpc.h \
+    ../app/model/qaesencryption.h
 
 INCLUDEPATH += \
-    ../app \
-    ../app/aes
+    ../app/model
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin

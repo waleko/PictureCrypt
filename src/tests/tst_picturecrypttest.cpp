@@ -5,8 +5,8 @@
 #include <QObject>
 #include <QString>
 
-#include "../app/modelpc.h"
-#include "../app/modelpc.cpp"
+#include "../app/model/modelpc.h"
+#include "../app/model/modelpc.cpp"
 
 // add necessary includes here
 

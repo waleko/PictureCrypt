@@ -6,8 +6,8 @@
 #include <QThread>
 #include <QMessageBox>
 
-#include <modelpc.h>
-#include <viewpc.h>
+#include "model/modelpc.h"
+#include "view/viewpc.h"
 /*! \file controllerpc.h
  * Header of ControllerPC class
  * \sa ControllerPC, ModelPC, ViewPC
