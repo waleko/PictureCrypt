@@ -16,23 +16,23 @@ stages:
       pool:
         vmImage: ubuntu-16.04
       steps:
-      - export PATH="$HOME/.local/bin:$PATH"
-      - cd src
-      - sh ./scripts/install.sh
+        - export PATH="$HOME/.local/bin:$PATH"
+        - cd src
+        - sh ./scripts/install.sh
         # Setup qt
-      - source /opt/qt511/bin/qt511-env.sh
-      - export QTHOME=/opt/qt511
-      # Build
-      - sh scripts/build.sh
+        - source /opt/qt511/bin/qt511-env.sh
+        - export QTHOME=/opt/qt511
+        # Build
+        - sh scripts/build.sh
   - stage: Test
     jobs:
     - job: Test on Linux
       pool:
         vmImage: ubuntu-16.04
       steps:
-         - cd src/tests
-         - QT_QPA_PLATFORM=offscreen make check
-         - cd ..
+        - cd src/tests
+        - QT_QPA_PLATFORM=offscreen make check
+        - cd ..
   - stage: Deploy
     jobs:
     - job: Deploy Linux
