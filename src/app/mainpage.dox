@@ -4,22 +4,21 @@ Project made using QT Creator in C++
 
 \section about About
 A simple cross-platform steganography project which hides data in images.
-This project is built using MVC pattern and features GUI.
-[Qt](https://qt.io) and [QAESEncryption](https://github.com/bricke/Qt-AES) by [bricke](https://github.com/bricke) were used.
+This project was built using amazing [Qt Framework](https://qt.io) and [QAESEncryption](https://github.com/bricke/Qt-AES) by [bricke](https://github.com/bricke).
 You can read more about project at the [home page](waleko.github.io/PictureCrypt)
 
 \section structure Structure of the project
-As written earlier this project is structured with MVC pattern. Here is a small graph showing the basic structure.
+MVC pattern used. Here is a simple project scheme, showing main classes.
 \dotfile structure.gv
 
 \section ext-use External use
-You can use ModelPC class separately from View and Control layer. You will need four files:
+You can use ModelPC class separately from View and Control layer. You will need just the src/app/model folder, so these four files:
 
 <ul>
 <li> modelpc.cpp
 <li> modelpc.h
-<li> aes/qaesencryption.cpp
-<li> aes/qaesencryption.h
+<li> qaesencryption.cpp
+<li> qaesencryption.h
 </ul>
 
 Then you can just `#include "modelpc.h"` and use API.
@@ -62,7 +61,7 @@ QImage *advanced_resultImage = ModelPC::Encrypt(
         data,
         image,
         2, key,
-        bitsUsed /* not really used here, so put here any number from 1 to 8*/,
+        bitsUsed, /* not really used here, so put here any number from 1 to 8*/
         &error2);
 
 // Decrypting with given mode

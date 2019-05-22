@@ -47,7 +47,7 @@ Or download latest **POTENTIALY UNSTABLE** files:
 * [Exe with console](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/PictureCrypt-console-setup.exe) (~ 19 MB)
 
 ## External use
-You can use ModelPC class separately from everything else, **except for QAESEncryption** (so /aes folder)
+You can use ModelPC class separately from everything else, but **you will need QAESEncryption class as well**. So you can just get src/app/model folder
 
 ### Use API
 ```cpp
