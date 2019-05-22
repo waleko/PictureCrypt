@@ -10,26 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="55120e6d-afb3-487b-bef4-834272714bed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../azure-pipelines.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../azure-pipelines.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/aboutpc.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/aboutpc.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/aboutpc.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/aboutpc.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/aboutpc.ui" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/aboutpc.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/aes/qaesencryption.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/qaesencryption.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/aes/qaesencryption.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/qaesencryption.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/app.pro" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.pro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllerpc.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllerpc.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/encryptdialog.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/encryptdialog.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/encryptdialog.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/encryptdialog.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/encryptdialog.ui" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/encryptdialog.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modelpc.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/modelpc.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/modelpc.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/modelpc.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/viewpc.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/viewpc.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/viewpc.h" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/viewpc.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/viewpc.ui" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/viewpc.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/console/console.pro" beforeDir="false" afterPath="$PROJECT_DIR$/console/console.pro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/console/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/console/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/tests.pro" beforeDir="false" afterPath="$PROJECT_DIR$/tests/tests.pro" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/tst_picturecrypttest.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/tst_picturecrypttest.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/translations/picturecrypt_de.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/translations/picturecrypt_de.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/translations/picturecrypt_ru.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/translations/picturecrypt_ru.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,12 +23,12 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/app.pro">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+            <state relative-caret-position="833">
+              <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -54,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/tests.pro">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+            <state relative-caret-position="459">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
             </state>
           </provider>
         </entry>
@@ -124,6 +106,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -159,24 +142,20 @@
       <option name="presentableId" value="Default" />
       <updated>1558099530177</updated>
       <workItem from="1558099536623" duration="565000" />
+      <workItem from="1558111538979" duration="15000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="565000" />
+    <option name="totallyTimeSpent" value="580000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25302014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="TypeScript" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -184,10 +163,15 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="TypeScript" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,6 +184,13 @@
     <entry file="file://$PROJECT_DIR$/console/main.cpp">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/app.pro">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="14" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/console/console.pro">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -207,17 +198,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/app.pro">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="49" column="14" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/tests.pro">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+        <state relative-caret-position="459">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>

@@ -1,18 +1,18 @@
 Project made using QT Creator in C++\hypertarget{index_about}{}\section{About}\label{index_about}
-A simple cross-\/platform steganography project which hides data in images. This project is built using M\+VC pattern and features G\+UI. \href{https://qt.io}{\tt Qt} and \href{https://github.com/bricke/Qt-AES}{\tt Q\+A\+E\+S\+Encryption} by \href{https://github.com/bricke}{\tt bricke} were used. You can read more about project at the \href{waleko.github.io/PictureCrypt}{\tt home page}\hypertarget{index_structure}{}\section{Structure of the project}\label{index_structure}
-As written earlier this project is structured with M\+VC pattern. Here is a small graph showing the basic structure. 
+A simple cross-\/platform steganography project which hides data in images. This project was built using amazing \href{https://qt.io}{\tt Qt Framework} and \href{https://github.com/bricke/Qt-AES}{\tt Q\+A\+E\+S\+Encryption} by \href{https://github.com/bricke}{\tt bricke}. You can read more about project at the \href{waleko.github.io/PictureCrypt}{\tt home page}\hypertarget{index_structure}{}\section{Structure of the project}\label{index_structure}
+M\+VC pattern used. Here is a simple project scheme, showing main classes. 
 \begin{DoxyImageNoCaption}
   \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{dot_structure}}
 \end{DoxyImageNoCaption}
 \hypertarget{index_ext-use}{}\section{External use}\label{index_ext-use}
-You can use \hyperlink{class_model_p_c}{Model\+PC} class separately from View and Control layer. You will need four files\+:
+You can use \hyperlink{class_model_p_c}{Model\+PC} class separately from View and Control layer. You will need just the src/app/model folder, so these four files\+:
 
 
 \begin{DoxyItemize}
 \item \hyperlink{modelpc_8cpp}{modelpc.\+cpp} 
 \item \hyperlink{modelpc_8h}{modelpc.\+h} 
-\item aes/qaesencryption.\+cpp 
-\item aes/qaesencryption.\+h 
+\item \hyperlink{qaesencryption_8cpp}{qaesencryption.\+cpp} 
+\item \hyperlink{qaesencryption_8h}{qaesencryption.\+h} 
 \end{DoxyItemize}
 
 Then you can just {\ttfamily \#include \char`\"{}modelpc.\+h\char`\"{}} and use A\+PI.\hypertarget{index_use_api}{}\subsection{A\+PI}\label{index_use_api}
@@ -51,7 +51,7 @@ QImage *advanced\_resultImage = \hyperlink{class_model_p_c_a271cf9285e32df58ffbf
         data,
         image,
         2, key,
-        bitsUsed \textcolor{comment}{/* not really used here, so put here any number from 1 to 8*/},
+        bitsUsed, \textcolor{comment}{/* not really used here, so put here any number from 1 to 8*/}
         &error2);
 
 \textcolor{comment}{// Decrypting with given mode}
