@@ -100,59 +100,59 @@ An image-steganography project
 <span class="co">// Encrypting</span>
 <span class="ot">QString</span> error1, error2;
 <span class="ot">QImage</span> *normal_resultImage = ModelPC::Encrypt(
-        data,
-        image,
-        <span class="dv">1</span>, <span class="co">// normal mode</span>
-        key,
-        bitsUsed,
-        &amp;error1);
+    data,
+    image,
+    <span class="dv">1</span>, <span class="co">// normal mode</span>
+    key,
+    bitsUsed,
+    &amp;error1);
 <span class="ot">QImage</span> *advanced_resultImage = ModelPC::Encrypt(
-        data,
-        image,
-        <span class="dv">2</span>, <span class="co">// advanced mode</span>
-        key,
-        bitsUsed, <span class="co">// not really used here, so put here any number from 1 to 8</span>
-        &amp;error2);
+    data,
+    image,
+    <span class="dv">2</span>, <span class="co">// advanced mode</span>
+    key,
+    bitsUsed, <span class="co">// not really used here, so put here any number from 1 to 8</span>
+    &amp;error2);
 
 <span class="co">// Decrypting with given mode</span>
 <span class="ot">QString</span> error3, error4, error5, error6;
 <span class="ot">QByteArray</span> output_normal = ModelPC::Decrypt(
-        normal_resultImage,
-        key,
-        <span class="dv">1</span>, <span class="co">// normal</span>
-        &amp;error3);
+    normal_resultImage,
+    key,
+    <span class="dv">1</span>, <span class="co">// normal</span>
+    &amp;error3);
 <span class="ot">QByteArray</span> output_advanced = ModelPC::Decrypt(
-        advanced_resultImage,
-        key,
-        <span class="dv">2</span>, <span class="co">// advanced</span>
-        &amp;error4);
+    advanced_resultImage,
+    key,
+    <span class="dv">2</span>, <span class="co">// advanced</span>
+    &amp;error4);
 
 <span class="co">// Decrypting without given mode</span>
 <span class="co">// PictureCrypt can detect the mode of the image and adapt.</span>
 <span class="ot">QByteArray</span> output_normal_undefined = ModelPC::Decrypt(
-        normal_resultImage,
-        key,
-        <span class="dv">0</span>, <span class="co">// auto-detect mode</span>
-        &amp;error5);
+    normal_resultImage,
+    key,
+    <span class="dv">0</span>, <span class="co">// auto-detect mode</span>
+    &amp;error5);
 <span class="ot">QByteArray</span> output_advanced_undefined = ModelPC::Decrypt(
-        advanced_resultImage,
-        key,
-        <span class="dv">0</span>, <span class="co">// auto-detect mode</span>
-        &amp;error6);
+    advanced_resultImage,
+    key,
+    <span class="dv">0</span>, <span class="co">// auto-detect mode</span>
+    &amp;error6);
 
 <span class="co">// Check (better testing with running tests [See section &#39;Run tests&#39;])</span>
 <span class="dt">bool</span> data_good =
-        data == output_normal &amp;&amp;
-        data == output_advanced &amp;&amp;
-        data == output_normal_undefined &amp;&amp;
-        data == output_advanced_undefined;
+    data == output_normal &amp;&amp;
+    data == output_advanced &amp;&amp;
+    data == output_normal_undefined &amp;&amp;
+    data == output_advanced_undefined;
 <span class="dt">bool</span> no_errors =
-        error1 == <span class="st">&quot;ok&quot;</span> &amp;&amp;
-        error2 == <span class="st">&quot;ok&quot;</span> &amp;&amp;
-        error3 == <span class="st">&quot;ok&quot;</span> &amp;&amp;
-        error4 == <span class="st">&quot;ok&quot;</span> &amp;&amp;
-        error5 == <span class="st">&quot;ok&quot;</span> &amp;&amp;
-        error6 == <span class="st">&quot;ok&quot;</span>;
+    error1 == <span class="st">&quot;ok&quot;</span> &amp;&amp;
+    error2 == <span class="st">&quot;ok&quot;</span> &amp;&amp;
+    error3 == <span class="st">&quot;ok&quot;</span> &amp;&amp;
+    error4 == <span class="st">&quot;ok&quot;</span> &amp;&amp;
+    error5 == <span class="st">&quot;ok&quot;</span> &amp;&amp;
+    error6 == <span class="st">&quot;ok&quot;</span>;
 <span class="kw">if</span>(data_good &amp;&amp; no_errors)
     <span class="fu">qDebug</span>() &lt;&lt; <span class="st">&quot;PASS&quot;</span>;
 <span class="kw">else</span>

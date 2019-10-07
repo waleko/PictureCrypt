@@ -69,59 +69,59 @@ int bitsUsed = 3; // must be from 1 to 8
 // Encrypting
 QString error1, error2;
 QImage *normal_resultImage = ModelPC::Encrypt(
-        data,
-        image,
-        1, // normal mode
-        key,
-        bitsUsed,
-        &error1);
+    data,
+    image,
+    1, // normal mode
+    key,
+    bitsUsed,
+    &error1);
 QImage *advanced_resultImage = ModelPC::Encrypt(
-        data,
-        image,
-        2, // advanced mode
-        key,
-        bitsUsed, // not really used here, so put here any number from 1 to 8
-        &error2);
+    data,
+    image,
+    2, // advanced mode
+    key,
+    bitsUsed, // not really used here, so put here any number from 1 to 8
+    &error2);
 
 // Decrypting with given mode
 QString error3, error4, error5, error6;
 QByteArray output_normal = ModelPC::Decrypt(
-        normal_resultImage,
-        key,
-        1, // normal
-        &error3);
+    normal_resultImage,
+    key,
+    1, // normal
+    &error3);
 QByteArray output_advanced = ModelPC::Decrypt(
-        advanced_resultImage,
-        key,
-        2, // advanced
-        &error4);
+    advanced_resultImage,
+    key,
+    2, // advanced
+    &error4);
 
 // Decrypting without given mode
 // PictureCrypt can detect the mode of the image and adapt.
 QByteArray output_normal_undefined = ModelPC::Decrypt(
-        normal_resultImage,
-        key,
-        0, // auto-detect mode
-        &error5);
+    normal_resultImage,
+    key,
+    0, // auto-detect mode
+    &error5);
 QByteArray output_advanced_undefined = ModelPC::Decrypt(
-        advanced_resultImage,
-        key,
-        0, // auto-detect mode
-        &error6);
+    advanced_resultImage,
+    key,
+    0, // auto-detect mode
+    &error6);
 
 // Check (better testing with running tests [See section 'Run tests'])
 bool data_good =
-        data == output_normal &&
-        data == output_advanced &&
-        data == output_normal_undefined &&
-        data == output_advanced_undefined;
+    data == output_normal &&
+    data == output_advanced &&
+    data == output_normal_undefined &&
+    data == output_advanced_undefined;
 bool no_errors =
-        error1 == "ok" &&
-        error2 == "ok" &&
-        error3 == "ok" &&
-        error4 == "ok" &&
-        error5 == "ok" &&
-        error6 == "ok";
+    error1 == "ok" &&
+    error2 == "ok" &&
+    error3 == "ok" &&
+    error4 == "ok" &&
+    error5 == "ok" &&
+    error6 == "ok";
 if(data_good && no_errors)
     qDebug() << "PASS";
 else
