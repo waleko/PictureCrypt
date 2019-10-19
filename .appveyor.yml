@@ -84,16 +84,17 @@ artifacts:
   - path: src/PictureCrypt-console-setup.exe
     name: console-setup
 
-deploy:
-  - provider: S3
-    access_key_id:
-      secure: KROVK6x7RsvQ5v9onhcQ65toKcMpimgVKfA9SSVWEG8=
-    secret_access_key:
-      secure: aTO7A/REbTL5m27x2H72Gq7Lljf8WQ3EE6NWCVHtkTDvERvs99vePDyi6GkV2gVl
-    bucket: waleko-acacia
-    region: eu-north-1
-    folder: appveyor
-    artifact: PictureCrypt-debug, PictureCrypt-release, tests, setup, console, console-setup
+# deploy:
+#   - provider: S3
+#     access_key_id:
+#       secure: KROVK6x7RsvQ5v9onhcQ65toKcMpimgVKfA9SSVWEG8=
+#     secret_access_key:
+#       secure: aTO7A/REbTL5m27x2H72Gq7Lljf8WQ3EE6NWCVHtkTDvERvs99vePDyi6GkV2gVl
+#     bucket: waleko-acacia
+#     region: eu-north-1
+#     folder: appveyor
+#     artifact: PictureCrypt-debug, PictureCrypt-release, tests, setup, console, console-setup
+
   # - provider: GitHub
   #   release: PictureCrypt-v$($env:APPVEYOR_BUILD_VERSION)
   #   description: 'PictureCrypt v$($env:APPVEYOR_BUILD_VERSION)'
