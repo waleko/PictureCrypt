@@ -13,17 +13,17 @@ install:
   - ps: (New-Object Net.WebClient).DownloadFile('http://ufpr.dl.sourceforge.net/project/nsis/NSIS%202/2.46/nsis-2.46-setup.exe', $exePath)
   - ps: cmd /c start /wait $exePath /S /D=C:\nsis
   - set PATH=C:\nsis;C:\MinGW\bin;%QTDIR%/bin;%PATH%
-- ps: >-
-    $zipPath = "$env:APPVEYOR_BUILD_FOLDER\gsutil.zip"
+  - ps: >-
+      $zipPath = "$env:APPVEYOR_BUILD_FOLDER\gsutil.zip"
 
-    (New-Object System.Net.WebClient).DownloadFile('https://pub.storage.googleapis.com/gsutil.zip', $zipPath)
+      (New-Object System.Net.WebClient).DownloadFile('https://pub.storage.googleapis.com/gsutil.zip', $zipPath)
 
-    7z x $zipPath -y | Out-Null
-    
-    $bytes = [System.Convert]::FromBase64String($env:boto)
-        
-    [System.IO.File]::WriteAllBytes("$env:USERPROFILE\.boto", $bytes)   
- 
+      7z x $zipPath -y | Out-Null
+      
+      $bytes = [System.Convert]::FromBase64String($env:boto)
+          
+      [System.IO.File]::WriteAllBytes("$env:USERPROFILE\.boto", $bytes)   
+  
 
 before_build:
   - cd src
