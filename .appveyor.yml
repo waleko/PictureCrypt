@@ -16,6 +16,8 @@ install:
   - ps: >-
       $zipPath = "$env:APPVEYOR_BUILD_FOLDER\gsutil.zip"
 
+      $gsutilPath = "$env:APPVEYOR_BUILD_FOLDER"
+
       (New-Object System.Net.WebClient).DownloadFile('https://pub.storage.googleapis.com/gsutil.zip', $zipPath)
 
       7z x $zipPath -y | Out-Null
@@ -84,6 +86,7 @@ test_script:
   - .\tests.exe -xunitxml -tickcounter -o testresults.xml
 
 on_finish:
+  - ps: cd C:\projects\picturecrypt\src\tests\release
   - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\testresults.xml))
 
 artifacts:
@@ -101,7 +104,8 @@ artifacts:
     name: console-setup
 
 deploy_script:
-- ps: $artifacts.values | Where-Object { $_.path -like '*.exe' } | ForEach-Object {.\gsutil\gsutil -o "Credentials:gs_service_key_file=$env:USERPROFILE\service.json" -o "default_project_id=waleko-personal" cp $_.path gs://waleko-personal.appspot.com}
+- ps: cd $gsutilPath
+- ps: $artifacts.values | Where-Object { $_.path -like '*.exe' } | ForEach-Object {.\gsutil\gsutil -o "Credentials:gs_service_key_file=$env:USERPROFILE\service.json" cp $_.path gs://waleko-personal.appspot.com}
 - ps: Write-Host "Please ignore NativeCommandError above, this is because gsutil writes output to stdErr" -foregroundcolor Green
 
 # deploy:
