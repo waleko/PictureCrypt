@@ -18,9 +18,11 @@ Project repository is available at [GitHub](https://github.com/waleko/PictureCry
     <projectUrl>https://picturecrypt.alexkovrigin.me</projectUrl>
     <packageSourceUrl>https://github.com/waleko/PictureCrypt</packageSourceUrl>
     <projectSourceUrl>https://github.com/waleko/PictureCrypt</projectSourceUrl>
+    <iconUrl>https://picturecrypt.alexkovrigin.me/src/app/icons/unlocked.png</iconUrl>
     <tags>steganography qt5 qt cipher image-steganography</tags>
     <copyright>Copyright (c) 2020 Alexander Kovrigin</copyright>
     <licenseUrl>https://github.com/waleko/PictureCrypt/blob/master/LICENSE</licenseUrl>
+    <docsUrl>https://picturecrypt.alexkovrigin.me/docs</docsUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
   </metadata>
 </package>
