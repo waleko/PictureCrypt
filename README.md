@@ -12,11 +12,22 @@
   <a href="https://ci.appveyor.com/project/waleko/picturecrypt/branch/master"><img src="https://ci.appveyor.com/api/projects/status/qc0syxtjax4wnud7/branch/master?svg=true"/></a>
   <a href="https://ci.appveyor.com/project/waleko/picturecrypt/branch/master/tests"><img alt="undefined" src="https://img.shields.io/appveyor/tests/waleko/PictureCrypt/master.svg?style=flat"></a>
   <a class="badge-align" href="https://www.codacy.com/app/waleko/PictureCrypt?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=waleko/PictureCrypt&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/c9106eb67e164d7d87de6d92448a3355"/></a>
-  <a href="https://github.com/waleko/PictureCrypt/releases/latest"><img alt="Release" src="https://img.shields.io/github/release/waleko/PictureCrypt.svg?style=flat"></a>
+  <img alt="Chocolatey Version" src="https://img.shields.io/chocolatey/v/picturecrypt">
   <a href="https://waleko.github.io/PictureCrypt/docs"><img alt="Documentation" src="https://img.shields.io/badge/docs-available-brightgreen.svg"></a>
   <a href="https://github.com/waleko/PictureCrypt/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/waleko/PictureCrypt.svg?style=flat"></a>
   <a href="https://gitter.im/PictureCrypt/community"><img src="https://badges.gitter.im/waleko/PictureCrypt.png"/></a>
 </p>
+
+
+```cpp
+// Encryption
+QByteArray message("secret meeting today at 6pm");
+QImage *image = new QImage("saint_petersburg.jpg");
+QImage *image_to_send = ModelPC::Encrypt(message, image, "codephrase");
+
+// Decryption
+QByteArray incoming_message = ModelPC::Decrypt(image_to_send, "codephrase"); // secret meeting today at 6pm
+```
 
 <p align="center">
   <img src="https://waleko.github.io/data/picturecrypt-screenshot.jpg"/>
@@ -46,7 +57,7 @@ Or download latest **POTENTIALY UNSTABLE** files:
 * [Zip Release](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/deploy/PictureCrypt-release.zip) (~ 21 MB)
 * [Exe with console](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/PictureCrypt-console-setup.exe) (~ 19 MB)
 
-## External use
+## Use outside the project
 You can use ModelPC class separately from everything else, but **you will need QAESEncryption class as well**. So you can just get src/app/model folder
 
 ### Use API
