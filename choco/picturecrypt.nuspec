@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>picturecrypt</id>
+    <title>PictureCrypt</title>
+    <version>1.0</version>
+    <authors>Alexander Kovrigin</authors>
+    <owners>Alexander Kovrigin</owners>
+    <summary>Image-steganography project</summary>
+    <description>
+
+PictureCrypt is a simple cross-platform steganography project which hides data in images.
+This project is built on [Qt Platform](https://qt.io) using MVC pattern and features GUI and console interface.
+Project repository is available at [GitHub](https://github.com/waleko/PictureCrypt)
+
+    </description>
+    <projectUrl>https://picturecrypt.alexkovrigin.me</projectUrl>
+    <packageSourceUrl>https://github.com/waleko/PictureCrypt</packageSourceUrl>
+    <projectSourceUrl>https://github.com/waleko/PictureCrypt</projectSourceUrl>
+    <iconUrl>https://picturecrypt.alexkovrigin.me/src/app/icons/unlocked.png</iconUrl>
+    <tags>steganography qt5 qt cipher image-steganography</tags>
+    <copyright>Copyright (c) 2020 Alexander Kovrigin</copyright>
+    <licenseUrl>https://github.com/waleko/PictureCrypt/blob/master/LICENSE</licenseUrl>
+    <docsUrl>https://picturecrypt.alexkovrigin.me/docs</docsUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+  </metadata>
+</package>

@@ -5,7 +5,7 @@ branches:
 
 environment:
   gsu_json:
-    secure: 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
+    secure: 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
 
 install:
   - set QTDIR=C:\Qt\5.11.3\mingw53_32
@@ -24,8 +24,7 @@ install:
       
       $bytes = [System.Convert]::FromBase64String($env:gsu_json)
           
-      [System.IO.File]::WriteAllBytes("$env:USERPROFILE\service.json", $bytes)   
-  
+      [System.IO.File]::WriteAllBytes("$env:USERPROFILE\service.json", $bytes)  
 
 before_build:
   - cd src
@@ -85,9 +84,16 @@ before_test:
 test_script:
   - .\tests.exe -xunitxml -tickcounter -o testresults.xml
 
-on_finish:
-  - ps: cd C:\projects\picturecrypt\src\tests\release
-  - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\testresults.xml))
+after_test:
+    # upload to gcs
+  - ps: cd $gsutilPath
+  - ps: $artifacts.values | Where-Object { $_.path -like '*.exe' } | ForEach-Object {.\gsutil\gsutil -o "Credentials:gs_service_key_file=$env:USERPROFILE\service.json" cp $_.path gs://waleko-personal.appspot.com}
+  - ps: Write-Host "Please ignore NativeCommandError above, this is because gsutil writes output to stdErr" -foregroundcolor Green
+    # chocolatey
+  - ps: cd C:\projects\picturecrypt\choco
+  - ps: cp C:\projects\picturecrypt\src\PictureCrypt-setup.exe .
+  - ps: (Get-Content '.\picturecrypt.nuspec' -Raw).Replace("<version>1.0</version>", "<version>$($env:APPVEYOR_BUILD_VERSION)</version>") | Out-File '.\picturecrypt.nuspec'
+  - ps: choco pack
 
 artifacts:
   - path: src/deploy/debug
@@ -102,28 +108,17 @@ artifacts:
     name: console
   - path: src/PictureCrypt-console-setup.exe
     name: console-setup
+  - path: choco/*.nupkg
+    name: nuget
 
-deploy_script:
-- ps: cd $gsutilPath
-- ps: $artifacts.values | Where-Object { $_.path -like '*.exe' } | ForEach-Object {.\gsutil\gsutil -o "Credentials:gs_service_key_file=$env:USERPROFILE\service.json" cp $_.path gs://waleko-personal.appspot.com}
-- ps: Write-Host "Please ignore NativeCommandError above, this is because gsutil writes output to stdErr" -foregroundcolor Green
+deploy:
+- provider: NuGet
+  server: https://push.chocolatey.org
+  api_key:
+    secure: qCqP5gD9wcT+PU3UtS1cuyndUrjO4q2Ne907JSNt5MW2k5qyKfejqVD4pUQ8YCf+
+  artifact: nuget
 
-# deploy:
-#   - provider: S3
-#     access_key_id:
-#       secure: KROVK6x7RsvQ5v9onhcQ65toKcMpimgVKfA9SSVWEG8=
-#     secret_access_key:
-#       secure: aTO7A/REbTL5m27x2H72Gq7Lljf8WQ3EE6NWCVHtkTDvERvs99vePDyi6GkV2gVl
-#     bucket: waleko-acacia
-#     region: eu-north-1
-#     folder: appveyor
-#     artifact: PictureCrypt-debug, PictureCrypt-release, tests, setup, console, console-setup
-
-  # - provider: GitHub
-  #   release: PictureCrypt-v$($env:APPVEYOR_BUILD_VERSION)
-  #   description: 'PictureCrypt v$($env:APPVEYOR_BUILD_VERSION)'
-  #   auth_token:
-  #     secure: vJoiMyshYBAzJ7waxTOetHOX7g7D3eDzfxnRV6UwijE2gTfCfldarR6JM6hyIfoI
-  #   artifact: setup, PictureCrypt-release, PictureCrypt-debug, console, console-setup
-  #   draft: true
-  #   message: /\[release\]/
+on_finish:
+  # upload test results
+  - ps: cd C:\projects\picturecrypt\src\tests\release
+  - ps: (new-object net.webclient).UploadFile("https://ci.appveyor.com/api/testresults/junit/$($env:APPVEYOR_JOB_ID)", (Resolve-Path .\testresults.xml))
