@@ -27,7 +27,6 @@ install:
       $bytes = [System.Convert]::FromBase64String($env:gsu_json)
           
       [System.IO.File]::WriteAllBytes("$env:USERPROFILE\service.json", $bytes)  
-  - ps: Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1')) 
 
 before_build:
   - cd src
