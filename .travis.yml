@@ -4,7 +4,6 @@ dist: xenial
 sudo: required
 os:
   - linux
-#  - windows
 
 branches:
   except:
@@ -13,34 +12,18 @@ branches:
 
 env:
   global:
-    # include $HOME/.local/bin for `aws`
     - PATH=$HOME/.local/bin:$PATH
 
 install:
-  - cd src
-  - sh ./scripts/install.sh
-    # Setup qt
-  - source /opt/qt511/bin/qt511-env.sh
-  - export QTHOME=/opt/qt511
-
+  - sh ci/linux/install.sh
 #before_script:
 #  - cd src
 script:
-  - sh scripts/build.sh
-  - cd tests
-  - QT_QPA_PLATFORM=offscreen make check
-  - cd ..
-#  -
-#  - bash ./scripts/clean.sh
+  - sh ci/linux/build.sh
+  - sh ci/linux/test.sh
 
 before_deploy:
-  - cd ../doxy
-  - sh ../src/scripts/deploy.sh
-#  - cd ../..
-#  - pip install --user awscli
-#  - aws s3 sync s3://mxe-qt/ mxe --region us-west-1 > s3.log
-#  - cd src
-#  - sh ./../scripts/deploy_windows.sh
+  - sh ci/linux/doxy.sh
 
 deploy:
   - provider: pages
@@ -49,9 +32,3 @@ deploy:
     keep-history: true
     on:
       branch: master
-#  - provider: s3
-#    access_key_id: $AWS_ACCESS_KEY_ID
-#    secret_access_key: $AWS_SECRET_ACCESS_KEY
-#    bucket: waleko-cedar
-#    skip_cleanup: true
-#    region: us-west-1

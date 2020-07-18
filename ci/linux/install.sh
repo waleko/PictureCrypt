@@ -11,6 +11,10 @@ sudo apt-get install -y qt511-meta-minimal
 #sudo apt-get install -y qt511base
 #sudo apt-get install -y qt5-dev-tools
 
+# setup qt
+source /opt/qt511/bin/qt511-env.sh
+export QTHOME=/opt/qt511
+
   # Install g++
 sudo apt-get install -y g++-6
 
