@@ -16,6 +16,9 @@ env:
 
 install:
   - sh ci/linux/install.sh
+   # setup qt
+  - source /opt/qt511/bin/qt511-env.sh
+  - export QTHOME=/opt/qt511
 #before_script:
 #  - cd src
 script:
