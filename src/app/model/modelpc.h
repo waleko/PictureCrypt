@@ -36,8 +36,8 @@ class ModelPC : public QObject
 public:
     ModelPC();
     enum CryptMode {NotDefined, v1_3, v1_4, jphs_mode};
-    static QImage *Encrypt(QByteArray data, QImage *image, int _mode, QString key = "", int _bitsUsed = 8, QString *_error = nullptr);
-    static QByteArray Decrypt(QImage * image, QString key, int _mode = 0, QString *_error = nullptr);
+    static QImage *Encrypt(QByteArray data, QImage *image, CryptMode _mode, QString key = "", int _bitsUsed = 8, QString *_error = nullptr);
+    static QByteArray Decrypt(QImage * image, QString key, CryptMode _mode = NotDefined, QString *_error = nullptr);
 
 signals:
     /*!
@@ -65,8 +65,8 @@ signals:
     void setProgress(int val);
 
 public slots:
-    QImage *encrypt(QByteArray data, QImage *image, int _mode, QString key = "", int _bitsUsed = 8, QString *_error = nullptr);
-    QByteArray decrypt(QImage * image, QString key, int _mode = 0, QString *_error = nullptr);
+    QImage *encrypt(QByteArray data, QImage *image, CryptMode _mode, QString key = "", int _bitsUsed = 8, QString *_error = nullptr);
+    QByteArray decrypt(QImage * image, QString key, CryptMode _mode = NotDefined, QString *_error = nullptr);
     void fail(QString message);
     void alert(QString message, bool isWarning = false);
 
@@ -91,7 +91,7 @@ public:
      */
     QString defaultJPHSDir;
 protected:
-    static QImage *Inject(QByteArray encr_data, QImage * image, int _mode, int _bitsUsed = 8, QString *_error = nullptr);
+    static QImage *Inject(QByteArray encr_data, QImage * image, CryptMode _mode, int _bitsUsed = 8, QString *_error = nullptr);
 
     void circuit(QImage * image, QByteArray * data, long long int countBytes);
     void jphs(QImage * image, QByteArray * data);
@@ -130,7 +130,7 @@ private:
     void setError(QString word);
     QByteArray GetRandomBytes(long long count = 32);
 protected slots:
-    QImage *inject(QByteArray encr_data, QImage * image, int _mode, int _bitsUsed = 8, QString *_error = nullptr);
+    QImage *inject(QByteArray encr_data, QImage * image, CryptMode _mode, int _bitsUsed = 8, QString *_error = nullptr);
 };
 
 #endif // MODELPC_H

@@ -26,7 +26,7 @@ QImage *image = new QImage("saint_petersburg.jpg");
 QImage *image_to_send = ModelPC::Encrypt(message, image, "codephrase");
 
 // Decryption
-QByteArray incoming_message = ModelPC::Decrypt(image_to_send, "codephrase"); // secret meeting today at 6pm
+QByteArray incoming_message = ModelPC::Decrypt(image_to_send, "codephrase"); // "secret meeting today at 6pm"
 ```
 
 <p align="center">
@@ -57,90 +57,8 @@ Or download latest **POTENTIALY UNSTABLE** files:
 * [Zip Release](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/deploy/PictureCrypt-release.zip) (~ 21 MB)
 * [Exe with console](https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/PictureCrypt-console-setup.exe) (~ 19 MB)
 
-## Use outside the project
-You can use ModelPC class separately from everything else, but **you will need QAESEncryption class as well**. So you can just get src/app/model folder
 
-### Use API
-```cpp
-// Includes
-#include "modelpc.h"
-#include <QImage>
-#include <QByteArray>
-#include <QString>
-#include <QDebug> // just for showcase
-
-...
-
-// Basic setup
-QByteArray data("some_file.txt");
-QImage *image = new QImage("some_big_enough_image.jpg");
-QString key = "some_password";
-int bitsUsed = 3; // must be from 1 to 8
-
-// Encrypting
-QString error1, error2;
-QImage *normal_resultImage = ModelPC::Encrypt(
-    data,
-    image,
-    1, // normal mode
-    key,
-    bitsUsed,
-    &error1);
-QImage *advanced_resultImage = ModelPC::Encrypt(
-    data,
-    image,
-    2, // advanced mode
-    key,
-    bitsUsed, // not really used here, so put here any number from 1 to 8
-    &error2);
-
-// Decrypting with given mode
-QString error3, error4, error5, error6;
-QByteArray output_normal = ModelPC::Decrypt(
-    normal_resultImage,
-    key,
-    1, // normal
-    &error3);
-QByteArray output_advanced = ModelPC::Decrypt(
-    advanced_resultImage,
-    key,
-    2, // advanced
-    &error4);
-
-// Decrypting without given mode
-// PictureCrypt can detect the mode of the image and adapt.
-QByteArray output_normal_undefined = ModelPC::Decrypt(
-    normal_resultImage,
-    key,
-    0, // auto-detect mode
-    &error5);
-QByteArray output_advanced_undefined = ModelPC::Decrypt(
-    advanced_resultImage,
-    key,
-    0, // auto-detect mode
-    &error6);
-
-// Check (better testing with running tests [See section 'Run tests'])
-bool data_good =
-    data == output_normal &&
-    data == output_advanced &&
-    data == output_normal_undefined &&
-    data == output_advanced_undefined;
-bool no_errors =
-    error1 == "ok" &&
-    error2 == "ok" &&
-    error3 == "ok" &&
-    error4 == "ok" &&
-    error5 == "ok" &&
-    error6 == "ok";
-if(data_good && no_errors)
-    qDebug() << "PASS";
-else
-    qDebug() << "FAIL";
-
-```
-
-### Console use
+## Console use
 ```bash
 $ picturecrypt -h
 Usage:
@@ -160,34 +78,10 @@ $ picturecrypt encrypt original.jpg data.txt somekey result.png
 $ picturecrypt decrypt result.png somekey output.txt
 ```
 
-### Tests
-PictureCrypt comes with Qt Test project. It can be found at 'src/tests'
-
-#### Run tests
-* Run them directly from IDE (e.g. Qt Creator) with target tests
-* Run with 'make'
-
-```bash
-# Go to tests directory
-cd src/tests
-
-# Install required packages
-bash ../scripts/install.sh
-
-# Build tests
-bash ../scripts/build.sh
-
-# Run tests
-QT_QPA_PLATFORM=offscreen make check
-
-# Clean (optional)
-bash ../scripts/clean.sh
-```
-
 ## Available modes of encrypting
 * 0 - Auto-detect, used for decryption, so it auto-detects (invalid at encryption as you must select the encryption type).
 * 1 - v1.3, only available on versions 1.3+, **not really secure**.
-* **2** - v1.4, advanced (preferred) encryption mode, available on versions v1.4+ (works a lot longer than v1.3, can work for >40s on slow machines).
+* **2** - v1.4, advanced (default) encryption mode, available on versions v1.4+ (works a lot longer than v1.3, can work for >40s on slow machines).
 * 3 - JPHS, requires manually installed JPHS and specified directory **(not currently available)**.
 
 ## Documentation
