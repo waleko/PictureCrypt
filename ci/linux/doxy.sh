@@ -1,5 +1,7 @@
 #!/bin/bash
 
+cd doxy
+
 echo ":: doxygen running"
 # Doxygen running
 doxygen Doxyfile > doxy.log
@@ -12,3 +14,5 @@ mv doxy/home_page/* ./
 cd latex
 make
 mv refman.pdf ../PictureCrypt-docs.pdf
+
+cd ..
