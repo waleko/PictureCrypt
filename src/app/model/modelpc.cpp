@@ -48,7 +48,7 @@ QByteArray ModelPC::Decrypt(QImage *image, QString key, CryptMode _mode, QString
  * \return Returns image with embedded data
  * \sa ModelPC::inject
  */
-QImage * ModelPC::encrypt(QByteArray data, QImage * image, CryptMode _mode, QString key, int _bitsUsed, QString *_error)
+QImage * ModelPC::encrypt(QByteArray data, QImage * image, int _mode, QString key, int _bitsUsed, QString *_error)
 {
     success = true;
     CryptMode mode = CryptMode(_mode);
@@ -86,7 +86,7 @@ QImage * ModelPC::encrypt(QByteArray data, QImage * image, CryptMode _mode, QStr
         fail("bigkey");
         return nullptr;
     }
-    if(mode == CryptMode::NotDefined) {
+    if(mode == CryptMode::Unspecified) {
         fail("undefined_mode");
         return nullptr;
     }
@@ -136,7 +136,7 @@ QImage * ModelPC::encrypt(QByteArray data, QImage * image, CryptMode _mode, QStr
  * \return Returns image with embedded data.
  * \sa ViewPC::on_startButton_clicked, ModelPC::decrypt, ModelPC::circuit, ModelPC::start
  */
-QImage * ModelPC::inject(QByteArray encr_data, QImage * image, CryptMode _mode, int _bitsUsed, QString *_error)
+QImage * ModelPC::inject(QByteArray encr_data, QImage * image, int _mode, int _bitsUsed, QString *_error)
 {
     success = true;
     CryptMode mode = CryptMode(_mode);
@@ -168,7 +168,7 @@ QImage * ModelPC::inject(QByteArray encr_data, QImage * image, CryptMode _mode, 
         fail("bitsWrong");
         return nullptr;
     }
-    if(mode == CryptMode::NotDefined) {
+    if(mode == CryptMode::Unspecified) {
         fail("undefined_mode");
         return nullptr;
     }
@@ -209,7 +209,7 @@ QImage * ModelPC::inject(QByteArray encr_data, QImage * image, CryptMode _mode, 
  * \return Returns decrypted data
  * \sa ViewPC::on_startButton_clicked, ModelPC::inject, ModelPC::circuit
  */
-QByteArray ModelPC::decrypt(QImage * image, QString key, CryptMode _mode, QString *_error)
+QByteArray ModelPC::decrypt(QImage * image, QString key, int _mode, QString *_error)
 {
     success = true;
     CryptMode mode = CryptMode(_mode);
@@ -242,7 +242,7 @@ QByteArray ModelPC::decrypt(QImage * image, QString key, CryptMode _mode, QStrin
     case jphs_mode:
         // TODO add jphs support
     break;
-    case NotDefined:
+    case Unspecified:
         isTry = true;
 
         // v1_3

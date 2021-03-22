@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-  An image-steganography project
+  An image steganography project
 </p>
 <p align="center">
   <a href="https://travis-ci.com/waleko/PictureCrypt"><img alt="Build Status" src="https://travis-ci.com/waleko/PictureCrypt.svg?branch=master"></a>
@@ -34,7 +34,7 @@ QByteArray incoming_message = ModelPC::Decrypt(image_to_send, "password1"); // "
 </p>
 
 ## About
-A simple cross-platform steganography project which hides data in images.
+A simple educational cross-platform steganography project that hides data in images.
 This project is built on [Qt Platform](https://qt.io) using MVC pattern and features GUI and console interface.
 Project repository is available at [GitHub](https://github.com/waleko/PictureCrypt)
 
@@ -74,9 +74,8 @@ $ picturecrypt decrypt result.png somekey output.txt
 
 ## Available modes of encrypting
 * 0 - Auto-detect, used for decryption, so it auto-detects (invalid at encryption as you must select the encryption type).
-* 1 - v1.3, only available on versions 1.3+, **not really secure**.
-* **2** - v1.4, advanced (default) encryption mode, available on versions v1.4+ (works a lot longer than v1.3, can work for >40s on slow machines).
-* 3 - JPHS, requires manually installed JPHS and specified directory **(not currently available)**.
+* 1 - v1.3, only available on versions 1.3+, **not secure**.
+* **2** - v1.4, advanced (default) encryption mode, available on versions v1.4+
 
 ## Documentation
 * [HTML documentation](docs)
@@ -89,8 +88,9 @@ Continuous integration is fulfilled via [Travis CI](https://travis-ci.com/waleko
 
 ## i18n
 ### Languages
-This project is available in multiple languages thanks to awesome QT Linguist Platform.
-Currently we have:
+This project is available in multiple languages thanks to the Qt Linguist Platform.
+
+Available languages:
 
 - English (default)
 - Russian
@@ -99,16 +99,16 @@ Currently we have:
 ### Help translating
 If you would like to translate PictureCrypt to your language here are the steps to do so:
 
-* Install QT and QT Linguist with it
+* Install Qt and Qt Linguist with it
 * Clone the project.
 * Go to PictureCrypt/src/app/
-* Add a filename to TRANSLATIONS in src/app/app.pro file. Filename must be 'picturecrypt_{your language}.ts' (e.g. 'picturecrypt_fr.ts')
-* Run `lupdate src.pro`, it will generate that .ts file. If there is an error: "Maybe you forgot to set your environment?" Go to Project (on the left-hand side) ->(expand) Build environment -> Open terminal and run `lupdate src.pro`.
+* Add a filename to `TRANSLATIONS` in src/app/app.pro file. Filename must be 'picturecrypt_{your language}.ts' (e.g. 'picturecrypt_fr.ts')
+* Run `lupdate src.pro`, it will generate that .ts file. An error may occur: "Maybe you forgot to set your environment?" To solve it go to Project (on the left-hand side) ->(expand) Build environment -> Open terminal and run `lupdate src.pro`.
 * Go to translations/
-* Run `linguist picturecrypt_{your language}.ts`. The Qt Linguist will appear, where you can translate given text from English (there are a couple of html entries, just edit its text part). **If you don't translate the whole thing, your work will be still appreciated!**
+* Run `linguist picturecrypt_{your language}.ts`. The Qt Linguist will appear, where you can translate given text from English (there are a couple of html entries, just edit its text part).
 * Either go to 'File -> Compile' or run `lrelease picturecrypt_{your language}.ts`.
 * Add your picturecrypt_{your language}.ts to src/app/translations.qrc resource file.
-* Create a pull request in GitHub with your work.
+* Create a pull request with your work.
 
 ## Dependencies
 * [qtcore](https://doc.qt.io/qt-5.11/qtcore-index.html)
@@ -117,7 +117,7 @@ If you would like to translate PictureCrypt to your language here are the steps 
 
 ## Works of other people used in this project
  * [QAESEncryption](https://github.com/bricke/Qt-AES) by [bricke](https://github.com/bricke/) (provided under [unlicense](https://unlicense.org/))
- * 'Circle Icons' by Nick Roach provided under GPL v3.0.
+ * 'Circle Icons' by Nick Roach provided under [GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.html).
  * 'MS Shell Dlg 2' font used and 'Montserrat' font used under the SIL Open Font License.
 
 ## Contact
