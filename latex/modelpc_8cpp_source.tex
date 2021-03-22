@@ -8,7 +8,7 @@
 \hypertarget{modelpc_8cpp_source.tex_l00009}{}\hyperlink{class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c}{00009} \hyperlink{class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c}{ModelPC::ModelPC}()
 00010 \{
 00011     \textcolor{comment}{// Version control}
-00012     \hyperlink{class_model_p_c_a5f426725ccf7eefd3c77ea8c720264c9}{versionString} = \textcolor{stringliteral}{"1.4.1"};
+00012     \hyperlink{class_model_p_c_a5f426725ccf7eefd3c77ea8c720264c9}{versionString} = \textcolor{stringliteral}{"1.4.2"};
 00013 
 00014     \textcolor{keyword}{auto} ver = \hyperlink{class_model_p_c_a5f426725ccf7eefd3c77ea8c720264c9}{versionString}.split(\textcolor{stringliteral}{"."});
 00015     \hyperlink{class_model_p_c_a5af48ab89e19be42a94c34ba00249401}{version} = ver[0].toInt() * qPow(2, 16) + ver[1].toInt() * qPow(2, 8) + ver[2].toInt();
@@ -20,19 +20,20 @@
 00021     qsrand(randSeed());
 00022 \}
 00023 
-\hypertarget{modelpc_8cpp_source.tex_l00024}{}\hyperlink{class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd}{00024} QImage *\hyperlink{class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd}{ModelPC::Encrypt}(QByteArray data, QImage *image, \textcolor{keywordtype}{int} \_mode, QString key, \textcolor{keywordtype}{int} 
-      \_bitsUsed, QString *\_error)
+\hypertarget{modelpc_8cpp_source.tex_l00024}{}\hyperlink{class_model_p_c_aad427b77cf44b5dadc5523ea03272c85}{00024} QImage *\hyperlink{class_model_p_c_aad427b77cf44b5dadc5523ea03272c85}{ModelPC::Encrypt}(QByteArray data, QImage *image, 
+      \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceb}{CryptMode} \_mode, QString key, \textcolor{keywordtype}{int} \_bitsUsed, QString *\_error)
 00025 \{
 00026     \textcolor{keywordflow}{return} \hyperlink{class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c}{ModelPC}().encrypt(data, image, \_mode, key, \_bitsUsed, \_error);
 00027 \}
 00028 
-\hypertarget{modelpc_8cpp_source.tex_l00029}{}\hyperlink{class_model_p_c_ac17e68e6aab134621b0d151d74acdc82}{00029} QImage *\hyperlink{class_model_p_c_ac17e68e6aab134621b0d151d74acdc82}{ModelPC::Inject}(QByteArray encr\_data, QImage *image, \textcolor{keywordtype}{int} \_mode, \textcolor{keywordtype}{int} \_bitsUsed, 
-      QString *\_error)
+\hypertarget{modelpc_8cpp_source.tex_l00029}{}\hyperlink{class_model_p_c_a11c3709b87ca83bce474d377f35660ac}{00029} QImage *\hyperlink{class_model_p_c_a11c3709b87ca83bce474d377f35660ac}{ModelPC::Inject}(QByteArray encr\_data, QImage *image, 
+      \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceb}{CryptMode} \_mode, \textcolor{keywordtype}{int} \_bitsUsed, QString *\_error)
 00030 \{
 00031     \textcolor{keywordflow}{return} \hyperlink{class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c}{ModelPC}().inject(encr\_data, image, \_mode, \_bitsUsed, \_error);
 00032 \}
 00033 
-\hypertarget{modelpc_8cpp_source.tex_l00034}{}\hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{00034} QByteArray \hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{ModelPC::Decrypt}(QImage *image, QString key, \textcolor{keywordtype}{int} \_mode, QString *\_error)
+\hypertarget{modelpc_8cpp_source.tex_l00034}{}\hyperlink{class_model_p_c_afbca3c9c9b7d92f3a5cc81510ef06cc3}{00034} QByteArray \hyperlink{class_model_p_c_afbca3c9c9b7d92f3a5cc81510ef06cc3}{ModelPC::Decrypt}(QImage *image, QString key, 
+      \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceb}{CryptMode} \_mode, QString *\_error)
 00035 \{
 00036     \textcolor{keywordflow}{return} \hyperlink{class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c}{ModelPC}().decrypt(image, key, \_mode, \_error);
 00037 \}
@@ -75,7 +76,7 @@
 00086         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"bigkey"});
 00087         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
 00088     \}
-00089     \textcolor{keywordflow}{if}(mode == CryptMode::NotDefined) \{
+00089     \textcolor{keywordflow}{if}(mode == CryptMode::Unspecified) \{
 00090         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"undefined\_mode"});
 00091         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
 00092     \}
@@ -148,7 +149,7 @@
 00168         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"bitsWrong"});
 00169         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
 00170     \}
-00171     \textcolor{keywordflow}{if}(mode == CryptMode::NotDefined) \{
+00171     \textcolor{keywordflow}{if}(mode == CryptMode::Unspecified) \{
 00172         \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail}(\textcolor{stringliteral}{"undefined\_mode"});
 00173         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
 00174     \}
@@ -180,7 +181,7 @@
 00200     \textcolor{keywordflow}{else}
 00201         \textcolor{keywordflow}{return} \textcolor{keyword}{nullptr};
 00202 \}
-\hypertarget{modelpc_8cpp_source.tex_l00212}{}\hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{00212} QByteArray \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{ModelPC::decrypt}(QImage * image, QString key, \textcolor{keywordtype}{int} \_mode, QString *\_error)
+\hypertarget{modelpc_8cpp_source.tex_l00212}{}\hyperlink{class_model_p_c_a69ea58f4455f8536c4be1d3f44424a60}{00212} QByteArray \hyperlink{class_model_p_c_a69ea58f4455f8536c4be1d3f44424a60}{ModelPC::decrypt}(QImage * image, QString key, \textcolor{keywordtype}{int} \_mode, QString *\_error)
 00213 \{
 00214     \hyperlink{class_model_p_c_a945ffbbc44a832b953c191debd448f4c}{success} = \textcolor{keyword}{true};
 00215     \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceb}{CryptMode} mode = \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceb}{CryptMode}(\_mode);
@@ -213,7 +214,7 @@
 00242     \textcolor{keywordflow}{case} \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba90ca32d3ccbb6be224cdfc33f7096eea}{jphs\_mode}:
 00243         \textcolor{comment}{// TODO add jphs support}
 00244     \textcolor{keywordflow}{break};
-00245     \textcolor{keywordflow}{case} \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba287198790ac9799acd03c99d63a6faea}{NotDefined}:
+00245     \textcolor{keywordflow}{case} \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba56028870bb6c96c44e7ba33b82d39598}{Unspecified}:
 00246         isTry = \textcolor{keyword}{true};
 00247 
 00248         \textcolor{comment}{// v1\_3}

@@ -135,7 +135,7 @@ Collaboration diagram for ModelPC:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a296dd7afe3e1c49b3da25fd644fe4ceb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceb">CryptMode</a> { <a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba287198790ac9799acd03c99d63a6faea">NotDefined</a>, 
+<tr class="memitem:a296dd7afe3e1c49b3da25fd644fe4ceb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceb">CryptMode</a> { <a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba56028870bb6c96c44e7ba33b82d39598">Unspecified</a>, 
 <a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba7612e38de7178170655a56ddcf96e12c">v1_3</a>, 
 <a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba43138df6b33a6b2bf608768907f95abc">v1_4</a>, 
 <a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba90ca32d3ccbb6be224cdfc33f7096eea">jphs_mode</a>
@@ -147,9 +147,9 @@ Public Slots</h2></td></tr>
 <tr class="memitem:a6f191f62d4635d0d3555fcc0be298794"><td class="memItemLeft" align="right" valign="top">QImage *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794">encrypt</a> (QByteArray data, QImage *image, int _mode, QString key=&quot;&quot;, int _bitsUsed=8, QString *_error=nullptr)</td></tr>
 <tr class="memdesc:a6f191f62d4635d0d3555fcc0be298794"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st...">ModelPC::encrypt</a> Slot to zip and inject data and provide it with some extra stuff After completion start standard <a class="el" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::inject</a> Isn't used in PictureCrypt, but used can be used in other - custom projects.  <a href="#a6f191f62d4635d0d3555fcc0be298794">More...</a><br /></td></tr>
 <tr class="separator:a6f191f62d4635d0d3555fcc0be298794"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5995215a34a1e1f504035715a8013809"><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809">decrypt</a> (QImage *image, QString key, int _mode=0, QString *_error=nullptr)</td></tr>
-<tr class="memdesc:a5995215a34a1e1f504035715a8013809"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> Slot to be called when decrypt mode in <a class="el" href="class_view_p_c.html" title="The ViewPC class View layer of the app. Controls EncryptDialog and ProgressDialog. ">ViewPC</a> is selected and started.  <a href="#a5995215a34a1e1f504035715a8013809">More...</a><br /></td></tr>
-<tr class="separator:a5995215a34a1e1f504035715a8013809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a69ea58f4455f8536c4be1d3f44424a60"><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60">decrypt</a> (QImage *image, QString key, int _mode=<a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba56028870bb6c96c44e7ba33b82d39598">Unspecified</a>, QString *_error=nullptr)</td></tr>
+<tr class="memdesc:a69ea58f4455f8536c4be1d3f44424a60"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> Slot to be called when decrypt mode in <a class="el" href="class_view_p_c.html" title="The ViewPC class View layer of the app. Controls EncryptDialog and ProgressDialog. ">ViewPC</a> is selected and started.  <a href="#a69ea58f4455f8536c4be1d3f44424a60">More...</a><br /></td></tr>
+<tr class="separator:a69ea58f4455f8536c4be1d3f44424a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47464b59b7e37fcee25e55475708aabd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd">fail</a> (QString message)</td></tr>
 <tr class="memdesc:a47464b59b7e37fcee25e55475708aabd"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. ">ModelPC::fail</a> Slot to stop execution of cryption.  <a href="#a47464b59b7e37fcee25e55475708aabd">More...</a><br /></td></tr>
 <tr class="separator:a47464b59b7e37fcee25e55475708aabd"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,7 +163,7 @@ Signals</h2></td></tr>
 <tr class="memdesc:af0217a7ca5671e26090dc50a5dccdaf5"><td class="mdescLeft">&#160;</td><td class="mdescRight">alertView Signal to be called to create MessageBox.  <a href="#af0217a7ca5671e26090dc50a5dccdaf5">More...</a><br /></td></tr>
 <tr class="separator:af0217a7ca5671e26090dc50a5dccdaf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0855107fb0ccc247cd9e893fae9bb08a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a0855107fb0ccc247cd9e893fae9bb08a">saveData</a> (QByteArray data)</td></tr>
-<tr class="memdesc:a0855107fb0ccc247cd9e893fae9bb08a"><td class="mdescLeft">&#160;</td><td class="mdescRight">saveData Signal to be called to save data from <a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>.  <a href="#a0855107fb0ccc247cd9e893fae9bb08a">More...</a><br /></td></tr>
+<tr class="memdesc:a0855107fb0ccc247cd9e893fae9bb08a"><td class="mdescLeft">&#160;</td><td class="mdescRight">saveData Signal to be called to save data from <a class="el" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>.  <a href="#a0855107fb0ccc247cd9e893fae9bb08a">More...</a><br /></td></tr>
 <tr class="separator:a0855107fb0ccc247cd9e893fae9bb08a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41f5e2e8022679046e4d3fa1109025fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a41f5e2e8022679046e4d3fa1109025fa">saveImage</a> (QImage *image)</td></tr>
 <tr class="memdesc:a41f5e2e8022679046e4d3fa1109025fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">saveImage Signal to be called to save image from <a class="el" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st...">ModelPC::encrypt</a>.  <a href="#a41f5e2e8022679046e4d3fa1109025fa">More...</a><br /></td></tr>
@@ -178,15 +178,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae12ebe65ec973c02a0de4850a7c1e31c"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#ae12ebe65ec973c02a0de4850a7c1e31c" title="ModelPC::ModelPC Constructor Unit tests are run here. ">ModelPC::ModelPC</a> Constructor Unit tests are run here.  <a href="#ae12ebe65ec973c02a0de4850a7c1e31c">More...</a><br /></td></tr>
 <tr class="separator:ae12ebe65ec973c02a0de4850a7c1e31c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6da88f166785a49f73b22c169f956fd0"><td class="memItemLeft" align="right" valign="top">QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0">unzip</a> (QByteArray data, QByteArray key)</td></tr>
-<tr class="memdesc:a6da88f166785a49f73b22c169f956fd0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0" title="ModelPC::unzip Unzip data from ModelPC::decrypt. Just mirrored EncryptDialog::zip. ">ModelPC::unzip</a> Unzip data from <a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>. Just mirrored <a class="el" href="class_encrypt_dialog.html#a2bff820a3df4ddc36ecb07ed74b7138a" title="EncryptDialog::zip Zipping algorithm It copresses the data and then compresses it using qCompress() ...">EncryptDialog::zip</a>.  <a href="#a6da88f166785a49f73b22c169f956fd0">More...</a><br /></td></tr>
+<tr class="memdesc:a6da88f166785a49f73b22c169f956fd0"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0" title="ModelPC::unzip Unzip data from ModelPC::decrypt. Just mirrored EncryptDialog::zip. ">ModelPC::unzip</a> Unzip data from <a class="el" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>. Just mirrored <a class="el" href="class_encrypt_dialog.html#a2bff820a3df4ddc36ecb07ed74b7138a" title="EncryptDialog::zip Zipping algorithm It copresses the data and then compresses it using qCompress() ...">EncryptDialog::zip</a>.  <a href="#a6da88f166785a49f73b22c169f956fd0">More...</a><br /></td></tr>
 <tr class="separator:a6da88f166785a49f73b22c169f956fd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a271cf9285e32df58ffbfc918e6482bbd"><td class="memItemLeft" align="right" valign="top">static QImage *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a271cf9285e32df58ffbfc918e6482bbd">Encrypt</a> (QByteArray data, QImage *image, int _mode, QString key=&quot;&quot;, int _bitsUsed=8, QString *_error=nullptr)</td></tr>
-<tr class="separator:a271cf9285e32df58ffbfc918e6482bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a902abaea4f07995b48c0f2fea6eceb7c"><td class="memItemLeft" align="right" valign="top">static QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a902abaea4f07995b48c0f2fea6eceb7c">Decrypt</a> (QImage *image, QString key, int _mode=0, QString *_error=nullptr)</td></tr>
-<tr class="separator:a902abaea4f07995b48c0f2fea6eceb7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad427b77cf44b5dadc5523ea03272c85"><td class="memItemLeft" align="right" valign="top">static QImage *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#aad427b77cf44b5dadc5523ea03272c85">Encrypt</a> (QByteArray data, QImage *image, <a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceb">CryptMode</a> _mode, QString key=&quot;&quot;, int _bitsUsed=8, QString *_error=nullptr)</td></tr>
+<tr class="separator:aad427b77cf44b5dadc5523ea03272c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbca3c9c9b7d92f3a5cc81510ef06cc3"><td class="memItemLeft" align="right" valign="top">static QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#afbca3c9c9b7d92f3a5cc81510ef06cc3">Decrypt</a> (QImage *image, QString key, <a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceb">CryptMode</a> _mode=<a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba56028870bb6c96c44e7ba33b82d39598">Unspecified</a>, QString *_error=nullptr)</td></tr>
+<tr class="separator:afbca3c9c9b7d92f3a5cc81510ef06cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -238,8 +238,8 @@ Protected Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
 Static Protected Member Functions</h2></td></tr>
-<tr class="memitem:ac17e68e6aab134621b0d151d74acdc82"><td class="memItemLeft" align="right" valign="top">static QImage *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#ac17e68e6aab134621b0d151d74acdc82">Inject</a> (QByteArray encr_data, QImage *image, int _mode, int _bitsUsed=8, QString *_error=nullptr)</td></tr>
-<tr class="separator:ac17e68e6aab134621b0d151d74acdc82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11c3709b87ca83bce474d377f35660ac"><td class="memItemLeft" align="right" valign="top">static QImage *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_model_p_c.html#a11c3709b87ca83bce474d377f35660ac">Inject</a> (QByteArray encr_data, QImage *image, <a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceb">CryptMode</a> _mode, int _bitsUsed=8, QString *_error=nullptr)</td></tr>
+<tr class="separator:a11c3709b87ca83bce474d377f35660ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -264,7 +264,7 @@ Protected Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a296dd7afe3e1c49b3da25fd644fe4ceba287198790ac9799acd03c99d63a6faea"></a>NotDefined&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="a296dd7afe3e1c49b3da25fd644fe4ceba56028870bb6c96c44e7ba33b82d39598"></a>Unspecified&#160;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="a296dd7afe3e1c49b3da25fd644fe4ceba7612e38de7178170655a56ddcf96e12c"></a>v1_3&#160;</td><td class="fielddoc">
 </td></tr>
@@ -302,9 +302,9 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c_icgraph.png" border="0" usemap="#class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c_icgraph" alt=""/></div>
 <map name="class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c_icgraph" id="class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c_icgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#a271cf9285e32df58ffbfc918e6482bbd" title="ModelPC::Encrypt" alt="" coords="193,5,322,32"/>
-<area shape="rect" id="node3" href="class_model_p_c.html#ac17e68e6aab134621b0d151d74acdc82" title="ModelPC::Inject" alt="" coords="199,56,315,83"/>
-<area shape="rect" id="node4" href="class_model_p_c.html#a902abaea4f07995b48c0f2fea6eceb7c" title="ModelPC::Decrypt" alt="" coords="192,107,323,133"/>
+<area shape="rect" id="node2" href="class_model_p_c.html#aad427b77cf44b5dadc5523ea03272c85" title="ModelPC::Encrypt" alt="" coords="193,5,322,32"/>
+<area shape="rect" id="node3" href="class_model_p_c.html#a11c3709b87ca83bce474d377f35660ac" title="ModelPC::Inject" alt="" coords="199,56,315,83"/>
+<area shape="rect" id="node4" href="class_model_p_c.html#afbca3c9c9b7d92f3a5cc81510ef06cc3" title="ModelPC::Decrypt" alt="" coords="192,107,323,133"/>
 </map>
 </div>
 </p>
@@ -364,7 +364,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node2" href="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="163,195,264,222"/>
 <area shape="rect" id="node3" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="924,94,1051,121"/>
 <area shape="rect" id="node4" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="741,94,856,121"/>
-<area shape="rect" id="node5" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="924,347,1051,374"/>
+<area shape="rect" id="node5" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="924,347,1051,374"/>
 <area shape="rect" id="node6" href="class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="542,94,650,121"/>
 <area shape="rect" id="node7" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="537,170,655,197"/>
 <area shape="rect" id="node8" href="class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="721,297,876,323"/>
@@ -428,7 +428,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node3" href="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="349,195,451,222"/>
 <area shape="rect" id="node4" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="1111,94,1237,121"/>
 <area shape="rect" id="node5" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="928,94,1043,121"/>
-<area shape="rect" id="node6" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="1111,347,1237,374"/>
+<area shape="rect" id="node6" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="1111,347,1237,374"/>
 <area shape="rect" id="node7" href="class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="729,94,837,121"/>
 <area shape="rect" id="node8" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="723,170,842,197"/>
 <area shape="rect" id="node9" href="class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="908,297,1063,323"/>
@@ -512,14 +512,14 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node2" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="192,5,307,32"/>
 <area shape="rect" id="node4" href="class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="172,56,327,83"/>
 <area shape="rect" id="node3" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="375,5,501,32"/>
-<area shape="rect" id="node5" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="375,56,501,83"/>
+<area shape="rect" id="node5" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="375,56,501,83"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a902abaea4f07995b48c0f2fea6eceb7c"></a>
+<a class="anchor" id="afbca3c9c9b7d92f3a5cc81510ef06cc3"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -541,8 +541,8 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>_mode</em> = <code>0</code>, </td>
+          <td class="paramtype"><a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceb">CryptMode</a>&#160;</td>
+          <td class="paramname"><em>_mode</em> = <code><a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba56028870bb6c96c44e7ba33b82d39598">Unspecified</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -568,8 +568,8 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c_cgraph.png" border="0" usemap="#class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c_cgraph" alt=""/></div>
-<map name="class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c_cgraph" id="class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c_cgraph">
+<div class="center"><img src="class_model_p_c_afbca3c9c9b7d92f3a5cc81510ef06cc3_cgraph.png" border="0" usemap="#class_model_p_c_afbca3c9c9b7d92f3a5cc81510ef06cc3_cgraph" alt=""/></div>
+<map name="class_model_p_c_afbca3c9c9b7d92f3a5cc81510ef06cc3_cgraph" id="class_model_p_c_afbca3c9c9b7d92f3a5cc81510ef06cc3_cgraph">
 <area shape="rect" id="node2" href="class_model_p_c.html#ae12ebe65ec973c02a0de4850a7c1e31c" title="ModelPC::ModelPC Constructor Unit tests are run here. " alt="" coords="184,5,323,32"/>
 </map>
 </div>
@@ -577,7 +577,7 @@ Here is the call graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="a5995215a34a1e1f504035715a8013809"></a>
+<a class="anchor" id="a69ea58f4455f8536c4be1d3f44424a60"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -600,7 +600,7 @@ Here is the call graph for this function:</div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>_mode</em> = <code>0</code>, </td>
+          <td class="paramname"><em>_mode</em> = <code><a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceba56028870bb6c96c44e7ba33b82d39598">Unspecified</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -621,7 +621,7 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> Slot to be called when decrypt mode in <a class="el" href="class_view_p_c.html" title="The ViewPC class View layer of the app. Controls EncryptDialog and ProgressDialog. ">ViewPC</a> is selected and started. </p>
+<p><a class="el" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> Slot to be called when decrypt mode in <a class="el" href="class_view_p_c.html" title="The ViewPC class View layer of the app. Controls EncryptDialog and ProgressDialog. ">ViewPC</a> is selected and started. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">image</td><td>Image to be decrypted. </td></tr>
@@ -639,8 +639,8 @@ Here is the call graph for this function:</div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_model_p_c_a5995215a34a1e1f504035715a8013809_cgraph.png" border="0" usemap="#class_model_p_c_a5995215a34a1e1f504035715a8013809_cgraph" alt=""/></div>
-<map name="class_model_p_c_a5995215a34a1e1f504035715a8013809_cgraph" id="class_model_p_c_a5995215a34a1e1f504035715a8013809_cgraph">
+<div class="center"><img src="class_model_p_c_a69ea58f4455f8536c4be1d3f44424a60_cgraph.png" border="0" usemap="#class_model_p_c_a69ea58f4455f8536c4be1d3f44424a60_cgraph" alt=""/></div>
+<map name="class_model_p_c_a69ea58f4455f8536c4be1d3f44424a60_cgraph" id="class_model_p_c_a69ea58f4455f8536c4be1d3f44424a60_cgraph">
 <area shape="rect" id="node2" href="class_model_p_c.html#a47464b59b7e37fcee25e55475708aabd" title="ModelPC::fail Slot to stop execution of cryption. " alt="" coords="897,37,999,64"/>
 <area shape="rect" id="node4" href="class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="180,63,335,89"/>
 <area shape="rect" id="node12" href="class_model_p_c.html#a7a1f7d491e1bde16936190b9e90896b0" title="ModelPC::decryptv1_4 Decrypts data from image in v1.4+. " alt="" coords="180,139,335,165"/>
@@ -726,7 +726,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model_p_c_a4fe70ebbedfaf31d45a35f82d0f06caa_icgraph.png" border="0" usemap="#class_model_p_c_a4fe70ebbedfaf31d45a35f82d0f06caa_icgraph" alt=""/></div>
 <map name="class_model_p_c_a4fe70ebbedfaf31d45a35f82d0f06caa_icgraph" id="class_model_p_c_a4fe70ebbedfaf31d45a35f82d0f06caa_icgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="208,5,335,32"/>
+<area shape="rect" id="node2" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="208,5,335,32"/>
 </map>
 </div>
 </p>
@@ -799,14 +799,14 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model_p_c_a7a1f7d491e1bde16936190b9e90896b0_icgraph.png" border="0" usemap="#class_model_p_c_a7a1f7d491e1bde16936190b9e90896b0_icgraph" alt=""/></div>
 <map name="class_model_p_c_a7a1f7d491e1bde16936190b9e90896b0_icgraph" id="class_model_p_c_a7a1f7d491e1bde16936190b9e90896b0_icgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="208,5,335,32"/>
+<area shape="rect" id="node2" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="208,5,335,32"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a271cf9285e32df58ffbfc918e6482bbd"></a>
+<a class="anchor" id="aad427b77cf44b5dadc5523ea03272c85"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -828,7 +828,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceb">CryptMode</a>&#160;</td>
           <td class="paramname"><em>_mode</em>, </td>
         </tr>
         <tr>
@@ -867,8 +867,8 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd_cgraph.png" border="0" usemap="#class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd_cgraph" alt=""/></div>
-<map name="class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd_cgraph" id="class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd_cgraph">
+<div class="center"><img src="class_model_p_c_aad427b77cf44b5dadc5523ea03272c85_cgraph.png" border="0" usemap="#class_model_p_c_aad427b77cf44b5dadc5523ea03272c85_cgraph" alt=""/></div>
+<map name="class_model_p_c_aad427b77cf44b5dadc5523ea03272c85_cgraph" id="class_model_p_c_aad427b77cf44b5dadc5523ea03272c85_cgraph">
 <area shape="rect" id="node2" href="class_model_p_c.html#ae12ebe65ec973c02a0de4850a7c1e31c" title="ModelPC::ModelPC Constructor Unit tests are run here. " alt="" coords="183,5,321,32"/>
 </map>
 </div>
@@ -1097,7 +1097,7 @@ Here is the caller graph for this function:</div>
 <map name="class_model_p_c_a47464b59b7e37fcee25e55475708aabd_icgraph" id="class_model_p_c_a47464b59b7e37fcee25e55475708aabd_icgraph">
 <area shape="rect" id="node2" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="767,94,893,121"/>
 <area shape="rect" id="node3" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="584,94,699,121"/>
-<area shape="rect" id="node4" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="767,347,893,374"/>
+<area shape="rect" id="node4" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="767,347,893,374"/>
 <area shape="rect" id="node5" href="class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="385,94,493,121"/>
 <area shape="rect" id="node6" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. " alt="" coords="379,170,498,197"/>
 <area shape="rect" id="node7" href="class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="564,297,719,323"/>
@@ -1110,7 +1110,7 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
-<a class="anchor" id="ac17e68e6aab134621b0d151d74acdc82"></a>
+<a class="anchor" id="a11c3709b87ca83bce474d377f35660ac"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1132,7 +1132,7 @@ Here is the caller graph for this function:</div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype"><a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceb">CryptMode</a>&#160;</td>
           <td class="paramname"><em>_mode</em>, </td>
         </tr>
         <tr>
@@ -1165,8 +1165,8 @@ Here is the caller graph for this function:</div>
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_model_p_c_ac17e68e6aab134621b0d151d74acdc82_cgraph.png" border="0" usemap="#class_model_p_c_ac17e68e6aab134621b0d151d74acdc82_cgraph" alt=""/></div>
-<map name="class_model_p_c_ac17e68e6aab134621b0d151d74acdc82_cgraph" id="class_model_p_c_ac17e68e6aab134621b0d151d74acdc82_cgraph">
+<div class="center"><img src="class_model_p_c_a11c3709b87ca83bce474d377f35660ac_cgraph.png" border="0" usemap="#class_model_p_c_a11c3709b87ca83bce474d377f35660ac_cgraph" alt=""/></div>
+<map name="class_model_p_c_a11c3709b87ca83bce474d377f35660ac_cgraph" id="class_model_p_c_a11c3709b87ca83bce474d377f35660ac_cgraph">
 <area shape="rect" id="node2" href="class_model_p_c.html#ae12ebe65ec973c02a0de4850a7c1e31c" title="ModelPC::ModelPC Constructor Unit tests are run here. " alt="" coords="169,5,308,32"/>
 </map>
 </div>
@@ -1236,7 +1236,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns image with embedded data. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_view_p_c.html#a456d75b7c5d3a089302a576e7359f1f4" title="ViewPC::on_startButton_clicked Slot to be called, when Start Button is pressed. ">ViewPC::on_startButton_clicked</a>, <a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>, <a class="el" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. ">ModelPC::circuit</a>, ModelPC::start </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_view_p_c.html#a456d75b7c5d3a089302a576e7359f1f4" title="ViewPC::on_startButton_clicked Slot to be called, when Start Button is pressed. ">ViewPC::on_startButton_clicked</a>, <a class="el" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>, <a class="el" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. ">ModelPC::circuit</a>, ModelPC::start </dd></dl>
 
 <p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00139">139</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
 
@@ -1412,7 +1412,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node2" href="class_model_p_c.html#a4daefc3fb87a1f19172b9b20c987eb12" title="ModelPC::encryptv1_4 Encrypts and injects data to image used in v1.4+. " alt="" coords="255,5,409,32"/>
 <area shape="rect" id="node4" href="class_model_p_c.html#a7a1f7d491e1bde16936190b9e90896b0" title="ModelPC::decryptv1_4 Decrypts data from image in v1.4+. " alt="" coords="255,56,409,83"/>
 <area shape="rect" id="node3" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="457,5,584,32"/>
-<area shape="rect" id="node5" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="457,56,584,83"/>
+<area shape="rect" id="node5" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="457,56,584,83"/>
 </map>
 </div>
 </p>
@@ -1489,7 +1489,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node3" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="399,5,513,32"/>
 <area shape="rect" id="node5" href="class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="379,56,533,83"/>
 <area shape="rect" id="node4" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="581,5,708,32"/>
-<area shape="rect" id="node6" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="581,56,708,83"/>
+<area shape="rect" id="node6" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="581,56,708,83"/>
 </map>
 </div>
 </p>
@@ -1518,7 +1518,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>saveData Signal to be called to save data from <a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>. </p>
+<p>saveData Signal to be called to save data from <a class="el" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>Data to be saved. </td></tr>
@@ -1531,7 +1531,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_model_p_c_a0855107fb0ccc247cd9e893fae9bb08a_icgraph.png" border="0" usemap="#class_model_p_c_a0855107fb0ccc247cd9e893fae9bb08a_icgraph" alt=""/></div>
 <map name="class_model_p_c_a0855107fb0ccc247cd9e893fae9bb08a_icgraph" id="class_model_p_c_a0855107fb0ccc247cd9e893fae9bb08a_icgraph">
-<area shape="rect" id="node2" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="193,5,320,32"/>
+<area shape="rect" id="node2" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="193,5,320,32"/>
 </map>
 </div>
 </p>
@@ -1625,7 +1625,7 @@ Here is the caller graph for this function:</div>
 <area shape="rect" id="node12" href="class_model_p_c.html#a5cdb4d1d61ff62ee9d45b496a7dbf1fb" title="ModelPC::proccessPixelsv1_4 Hides (or retrieves) data to/from pixels. " alt="" coords="208,387,409,414"/>
 <area shape="rect" id="node3" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st..." alt="" coords="1033,336,1160,363"/>
 <area shape="rect" id="node4" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. " alt="" coords="851,235,965,262"/>
-<area shape="rect" id="node5" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="1033,184,1160,211"/>
+<area shape="rect" id="node5" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="1033,184,1160,211"/>
 <area shape="rect" id="node6" href="class_model_p_c.html#a8bee0255c09449868c7e6097afaaf0cd" title="ModelPC::jphs JPHS function to use jphide and jpseek (currently under development) ..." alt="" coords="669,235,777,262"/>
 <area shape="rect" id="node8" href="class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="831,134,985,160"/>
 </map>
@@ -1658,7 +1658,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0" title="ModelPC::unzip Unzip data from ModelPC::decrypt. Just mirrored EncryptDialog::zip. ">ModelPC::unzip</a> Unzip data from <a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>. Just mirrored <a class="el" href="class_encrypt_dialog.html#a2bff820a3df4ddc36ecb07ed74b7138a" title="EncryptDialog::zip Zipping algorithm It copresses the data and then compresses it using qCompress() ...">EncryptDialog::zip</a>. </p>
+<p><a class="el" href="class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0" title="ModelPC::unzip Unzip data from ModelPC::decrypt. Just mirrored EncryptDialog::zip. ">ModelPC::unzip</a> Unzip data from <a class="el" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>. Just mirrored <a class="el" href="class_encrypt_dialog.html#a2bff820a3df4ddc36ecb07ed74b7138a" title="EncryptDialog::zip Zipping algorithm It copresses the data and then compresses it using qCompress() ...">EncryptDialog::zip</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>Data to be decrypted. </td></tr>
@@ -1667,7 +1667,7 @@ Here is the caller graph for this function:</div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns data </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_encrypt_dialog.html#a2bff820a3df4ddc36ecb07ed74b7138a" title="EncryptDialog::zip Zipping algorithm It copresses the data and then compresses it using qCompress() ...">EncryptDialog::zip</a>, <a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>, <a class="el" href="class_model_p_c.html#afebbbfa4b07deba4f68fc6dfb50f353f" title="ModelPC::zip Zip function, copy of EncryptDialog::zip Used for ModelPC in custom projects, other than PictureCrypt. ">ModelPC::zip</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_encrypt_dialog.html#a2bff820a3df4ddc36ecb07ed74b7138a" title="EncryptDialog::zip Zipping algorithm It copresses the data and then compresses it using qCompress() ...">EncryptDialog::zip</a>, <a class="el" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>, <a class="el" href="class_model_p_c.html#afebbbfa4b07deba4f68fc6dfb50f353f" title="ModelPC::zip Zip function, copy of EncryptDialog::zip Used for ModelPC in custom projects, other than PictureCrypt. ">ModelPC::zip</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="modelpc_8cpp_source.html#l00880">880</a> of file <a class="el" href="modelpc_8cpp_source.html">modelpc.cpp</a>.</p>
 
@@ -1691,7 +1691,7 @@ Here is the caller graph for this function:</div>
 <map name="class_model_p_c_a6da88f166785a49f73b22c169f956fd0_icgraph" id="class_model_p_c_a6da88f166785a49f73b22c169f956fd0_icgraph">
 <area shape="rect" id="node2" href="class_model_p_c.html#a7a1f7d491e1bde16936190b9e90896b0" title="ModelPC::decryptv1_4 Decrypts data from image in v1.4+. " alt="" coords="168,5,323,32"/>
 <area shape="rect" id="node4" href="class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="168,56,323,83"/>
-<area shape="rect" id="node3" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="371,31,497,57"/>
+<area shape="rect" id="node3" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="371,31,497,57"/>
 </map>
 </div>
 </p>

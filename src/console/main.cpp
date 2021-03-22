@@ -7,115 +7,131 @@
 #include "../app/model/modelpc.h"
 
 using namespace std;
-/*!
- * \brief printHelp Shows help
- */
-void printHelp() {
-    cout << "Usage:\n"
-            "  picturecrypt encrypt <image> <input file> <key> <output> [options]\n"
-            "  picturecrypt decrypt <image> <key> <output> [options]\n"
-            "  picturecrypt (-h | --help)\n"
-            "  picturecrypt --version\n\n"
-            "Options:\n"
-            "  -h --help    Show this screen.\n"
-            "  --version    Show version.\n"
-            "  -m --mode    Mode of cryption.\n"
-            "  -b           Encryption bitsUsed parameter.\n";
+
+int parserEncrypt(QCommandLineParser& parser, QCoreApplication& app)
+{
+    parser.addPositionalArgument("image", QCoreApplication::translate("main", "Source image for embedding."));
+    parser.addPositionalArgument("source", QCoreApplication::translate("main", "Source file to be hidden."));
+    parser.addPositionalArgument("key", QCoreApplication::translate("main", "Key for encryption"));
+    parser.addPositionalArgument("destination", QCoreApplication::translate("main", "Destination image file."));
+
+    // An option with a value
+    QCommandLineOption modeOption(QStringList() << "m" << "mode",
+            QCoreApplication::translate("main", "Mode for encryption.")); // FIXME
+    modeOption.setDefaultValue("2");
+    parser.addOption(modeOption);
+
+    QCommandLineOption bitsOption(QStringList() << "b" << "bitsUsed",
+            QCoreApplication::translate("main", "Bits used for mode 1 of encryption")); // FIXME
+    bitsOption.setDefaultValue("8");
+    parser.addOption(bitsOption);
+
+    // Process the actual command line arguments given by the user
+    parser.process(app);
+
+    const QStringList args = parser.positionalArguments();
+    QImage image(args.at(0));
+    if(image.isNull()) {
+        qCritical() << "Image path is invalid!\n";
+        return 1;
+    }
+    QFile file(args.at(1));
+    if(!file.open(QFile::ReadOnly)) {
+        cout << "Cannot open input data!" << endl;
+        return 1;
+    }
+    QString key(args.at(2));
+    QString outPath(args.at(3));
+
+    int mode = parser.value(modeOption).toInt();
+    int bitsUsed = parser.value(bitsOption).toInt();
+    QString error;
+    QImage *ret = ModelPC::Encrypt(file.readAll(), &image, ModelPC::CryptMode(mode), key, bitsUsed, &error);
+    if(error != "ok") {
+        qCritical() << "Cannot proceed! Error code: " << error << endl;
+        return 1;
+    }
+    if(!ret->save(outPath)) {
+        qCritical() << "Output path is incorrect" << endl;
+        return 1;
+    }
+    return 0;
 }
-/*!
- * \brief main Main PictureCrypt function
- * \param argc Parameters count
- * \param argv Parameters array
- * \return Returns exit code
- */
+
+int parserDecrypt(QCommandLineParser& parser, QCoreApplication& app)
+{
+    parser.addPositionalArgument("image", QCoreApplication::translate("main", "Source image for embedding."));
+    parser.addPositionalArgument("key", QCoreApplication::translate("main", "Key for encryption"));
+    parser.addPositionalArgument("destination", QCoreApplication::translate("main", "Destination decrypted file."));
+
+    // An option with a value
+    QCommandLineOption modeOption(QStringList() << "m" << "mode",
+            QCoreApplication::translate("main", "Mode for encryption.")); // FIXME
+    modeOption.setDefaultValue("0");
+    parser.addOption(modeOption);
+
+    // Process the actual command line arguments given by the user
+    parser.process(app);
+
+    const QStringList args = parser.positionalArguments();
+    QImage image(args.at(0));
+    if(image.isNull()) {
+        qCritical() << "Image path is invalid!\n";
+        return 1;
+    }
+    QString key(args.at(1));
+    QString outPath(args.at(2));
+
+    int mode = parser.value(modeOption).toInt();
+    QString error;
+    QByteArray data = ModelPC::Decrypt(&image, key, ModelPC::CryptMode(mode), &error);
+    if(error != "ok") {
+        qCritical() << "Cannot proceed! Error code: " << error << endl;
+        return 1;
+    }
+    QFile writeFile(outPath);
+    if (!writeFile.open(QIODevice::WriteOnly))
+    {
+        cout << "Output path is incorrect" << endl;
+        return 1;
+    }
+    writeFile.write(data);
+    writeFile.close();
+    return 0;
+}
+
 int main(int argc, char *argv[])
 {
-    // QCoreApplication a(argc, argv);
-    if (argc <= 1) {
-        printHelp();
-    }
-    else if (QString(argv[1]) ==  "encrypt") {
-        if(argc < 6) {
-            cout << "Not enough parameters, see help with 'picturecrypt -h'" << endl;
-            return 1;
-        }
-        QImage image((QString(argv[2])));
-        if(image.isNull()) {
-            cout << "Image path is invalid!" << endl;
-            return 2;
-        }
-        QFile file((QString(argv[3])));
-        if(!file.open(QFile::ReadOnly)) {
-            cout << "Cannot open input data!" << endl;
-            return 3;
-        }
-        QString key(argv[4]);
-        QString outPath(argv[5]);
+    QCoreApplication app(argc, argv);
+    QCoreApplication::setApplicationName("picturecrypt");
+    QCoreApplication::setApplicationVersion(ModelPC().versionString);
 
-        int mode = 2;
-        int bitsUsed = 8;
-        for(int i = 6; i < argc; i++)
-        {
-            if((QString(argv[i]) == "-m" || QString(argv[i]) == "--mode") && i + 1 != argc)
-                mode = QString(argv[++i]).toInt();
-            else if((QString(argv[i]) == "-b" || QString(argv[i]) == "--bitsUsed") && i + 1 != argc)
-                bitsUsed = QString(argv[++i]).toInt();
-        }
-        QString error;
-        QImage *ret = ModelPC::Encrypt(file.readAll(), &image, mode, key, bitsUsed, &error);
-        if(error != "ok") {
-            cout << "Critical error: " << error.toStdString() << endl;
-            return 4;
-        }
-        if(!ret->save(outPath)) {
-            cout << "Output path is incorrect!" << endl;
-            return 5;
-        }
-    }
-    else if (QString(argv[1]) == "decrypt") {
-        if(argc < 5) {
-            cout << "Not enough parameters, see help with 'picturecrypt -h'" << endl;
-            return 1;
-        }
-        QImage image((QString(argv[2])));
-        if(image.isNull()) {
-            cout << "Image path is invalid!" << endl;
-            return 2;
-        }
-        QString key(argv[3]);
-        QString outPath(argv[4]);
-        int mode = 0;
-        for(int i = 5; i < argc; i++)
-        {
-            if((QString(argv[i]) == "-m" || QString(argv[i]) == "--mode") && i + 1 != argc)
-                mode = QString(argv[++i]).toInt();
-        }
-        QString error;
-        QByteArray data = ModelPC::Decrypt(&image, key, mode, &error);
-        if(error != "ok") {
-            cout << "Critical error: " << error.toStdString() << endl;
-            return 4;
-        }
+    QCommandLineParser parser;
+    parser.setApplicationDescription("Image steganography utility");
+    parser.addHelpOption();
+    parser.addVersionOption();
 
-        QFile writeFile(outPath);
-        if (!writeFile.open(QIODevice::WriteOnly))
-        {
-            cout << "Output path is incorrect!" << endl;
-            return 5;
-        }
-        writeFile.write(data);
-        writeFile.close();
+    if (argc < 2) {
+        qCritical() << "No command was provided. See help with --help"; // FIXME
+        return 1;
     }
-    else if(QString(argv[1]) == "--version") {
-        ModelPC ver;
-        cout << ver.versionString.toStdString();
-    }
+    QString command = argv[1];
+    if (command == "encrypt")
+        return parserEncrypt(parser, app);
+    else if (command == "decrypt")
+        return parserDecrypt(parser, app);
     else {
-        // cout << "Help: " << argv[1] << endl;
-        if(QString(argv[1]) != "-h" && QString(argv[1]) != "--help")
-            cout << "Incorrect use. See help." << endl;
-        printHelp();
+        bool isHelp = command == "-?" || command == "--help" || command == "-h";
+        cout << isHelp << endl;
+        if (isHelp) {
+            cout << parser.helpText().toStdString() << endl;
+            cout << "Commands:\n"
+                    "  encrypt         Hides file contents inside an image.\n"
+                    "  decrypt         Retrieves file contents from an image.\n";
+            return 0;
+        } else {
+            qCritical() << "No such command: " << command << ". See help with --help"; // FIXME
+            return 1;
+        }
     }
-
-    return 0;
 }

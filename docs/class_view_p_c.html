@@ -162,7 +162,7 @@ Signals</h2></td></tr>
 <tr class="memdesc:a652c98014c2df32178d43a5a9612dd99"><td class="mdescLeft">&#160;</td><td class="mdescRight">inject Signal calling <a class="el" href="class_model_p_c.html#aada6a04d81ada8f2b4ba18108c8d6f10" title="ModelPC::inject Slot to be called when encrypt mode in ViewPC is selected and started. ">ModelPC::inject</a>  <a href="#a652c98014c2df32178d43a5a9612dd99">More...</a><br /></td></tr>
 <tr class="separator:a652c98014c2df32178d43a5a9612dd99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a365df051360d557c7221474ad856e0af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view_p_c.html#a365df051360d557c7221474ad856e0af">decrypt</a> (QImage *_image, QString key, int mode)</td></tr>
-<tr class="memdesc:a365df051360d557c7221474ad856e0af"><td class="mdescLeft">&#160;</td><td class="mdescRight">decrypt Signal calling <a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>  <a href="#a365df051360d557c7221474ad856e0af">More...</a><br /></td></tr>
+<tr class="memdesc:a365df051360d557c7221474ad856e0af"><td class="mdescLeft">&#160;</td><td class="mdescRight">decrypt Signal calling <a class="el" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>  <a href="#a365df051360d557c7221474ad856e0af">More...</a><br /></td></tr>
 <tr class="separator:a365df051360d557c7221474ad856e0af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa652102ce6b5757b8eef830409c8cabf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_view_p_c.html#aa652102ce6b5757b8eef830409c8cabf">abortModel</a> ()</td></tr>
 <tr class="memdesc:aa652102ce6b5757b8eef830409c8cabf"><td class="mdescLeft">&#160;</td><td class="mdescRight">abortModel Signal calling to stop <a class="el" href="class_model_p_c.html#a1d0091062a0c836b283ec2f67411623b" title="ModelPC::circuit The brain of the app. Via special circuit stores data in image. ">ModelPC::circuit</a>  <a href="#aa652102ce6b5757b8eef830409c8cabf">More...</a><br /></td></tr>
@@ -456,7 +456,7 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p>decrypt Signal calling <a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> </p>
+<p>decrypt Signal calling <a class="el" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_image</td><td>Image for decryption </td></tr>
@@ -465,7 +465,7 @@ Here is the caller graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>, <a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceb">ModelPC::CryptMode</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a>, <a class="el" href="class_model_p_c.html#a296dd7afe3e1c49b3da25fd644fe4ceb">ModelPC::CryptMode</a> </dd></dl>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -729,7 +729,7 @@ Encrypting</h1>
 <p>Then the <a class="el" href="class_encrypt_dialog.html" title="The EncryptDialog class Class to get the image and key to store secret info. ">EncryptDialog</a> opens and image and key is selected. Then the <a class="el" href="class_view_p_c.html#aaab3c809a069aed248ef7100daabf8ee" title="encrypt Signal calling ModelPC::encrypt ">ViewPC::encrypt</a> signal is called to start <a class="el" href="class_model_p_c.html#a6f191f62d4635d0d3555fcc0be298794" title="ModelPC::encrypt Slot to zip and inject data and provide it with some extra stuff After completion st...">ModelPC::encrypt</a> </p>
 <h1><a class="anchor" id="decrypting"></a>
 Decrypting</h1>
-<p>Else, the image from file selector is transmitted to <a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> </p>
+<p>Else, the image from file selector is transmitted to <a class="el" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> </p>
 
 <p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00060">60</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
 
@@ -868,7 +868,7 @@ Here is the call graph for this function:</div>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. ">ModelPC::decrypt</a> </dd></dl>
 
 <p>Definition at line <a class="el" href="viewpc_8cpp_source.html#l00167">167</a> of file <a class="el" href="viewpc_8cpp_source.html">viewpc.cpp</a>.</p>
 

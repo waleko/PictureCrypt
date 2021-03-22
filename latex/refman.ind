@@ -190,13 +190,13 @@
     \subitem {jphs}, \hyperpage{39}
     \subitem {jphs\+\_\+mode}, \hyperpage{28}
     \subitem {Model\+PC}, \hyperpage{28}
-    \subitem {Not\+Defined}, \hyperpage{28}
     \subitem {proccess\+Pixelsv1\+\_\+4}, \hyperpage{39}
     \subitem {process\+Pixel}, \hyperpage{40}
     \subitem {save\+Data}, \hyperpage{41}
     \subitem {save\+Image}, \hyperpage{41}
     \subitem {set\+Progress}, \hyperpage{41}
     \subitem {success}, \hyperpage{44}
+    \subitem {Unspecified}, \hyperpage{28}
     \subitem {unzip}, \hyperpage{42}
     \subitem {v1\+\_\+3}, \hyperpage{28}
     \subitem {v1\+\_\+4}, \hyperpage{28}
@@ -207,11 +207,6 @@
   \item {modelpc.\+h}, \hyperpage{84, 85}
   \item {multiply}
     \subitem {qaesencryption.\+cpp}, \hyperpage{87}
-
-  \indexspace
-
-  \item {Not\+Defined}
-    \subitem {Model\+PC}, \hyperpage{28}
 
   \indexspace
 
@@ -315,6 +310,8 @@
   \indexspace
 
   \item {Ui}, \hyperpage{13}
+  \item {Unspecified}
+    \subitem {Model\+PC}, \hyperpage{28}
   \item {unzip}
     \subitem {Model\+PC}, \hyperpage{42}
 

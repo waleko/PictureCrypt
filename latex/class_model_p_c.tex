@@ -32,7 +32,7 @@ Collaboration diagram for Model\+PC\+:
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceb}{Crypt\+Mode} \{ \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba287198790ac9799acd03c99d63a6faea}{Not\+Defined}, 
+enum \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceb}{Crypt\+Mode} \{ \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba56028870bb6c96c44e7ba33b82d39598}{Unspecified}, 
 \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba7612e38de7178170655a56ddcf96e12c}{v1\+\_\+3}, 
 \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba43138df6b33a6b2bf608768907f95abc}{v1\+\_\+4}, 
 \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba90ca32d3ccbb6be224cdfc33f7096eea}{jphs\+\_\+mode}
@@ -43,8 +43,8 @@ enum \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceb}{Crypt\+Mode} 
 \item 
 Q\+Image $\ast$ \hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{encrypt} (Q\+Byte\+Array data, Q\+Image $\ast$image, int \+\_\+mode, Q\+String key=\char`\"{}\char`\"{}, int \+\_\+bits\+Used=8, Q\+String $\ast$\+\_\+error=nullptr)
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{Model\+P\+C\+::encrypt} Slot to zip and inject data and provide it with some extra stuff After completion start standard \hyperlink{class_model_p_c_aada6a04d81ada8f2b4ba18108c8d6f10}{Model\+P\+C\+::inject} Isn\textquotesingle{}t used in Picture\+Crypt, but used can be used in other -\/ custom projects. \end{DoxyCompactList}\item 
-Q\+Byte\+Array \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{decrypt} (Q\+Image $\ast$image, Q\+String key, int \+\_\+mode=0, Q\+String $\ast$\+\_\+error=nullptr)
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{Model\+P\+C\+::decrypt} Slot to be called when decrypt mode in \hyperlink{class_view_p_c}{View\+PC} is selected and started. \end{DoxyCompactList}\item 
+Q\+Byte\+Array \hyperlink{class_model_p_c_a69ea58f4455f8536c4be1d3f44424a60}{decrypt} (Q\+Image $\ast$image, Q\+String key, int \+\_\+mode=\hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba56028870bb6c96c44e7ba33b82d39598}{Unspecified}, Q\+String $\ast$\+\_\+error=nullptr)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_model_p_c_a69ea58f4455f8536c4be1d3f44424a60}{Model\+P\+C\+::decrypt} Slot to be called when decrypt mode in \hyperlink{class_view_p_c}{View\+PC} is selected and started. \end{DoxyCompactList}\item 
 void \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{fail} (Q\+String message)
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_model_p_c_a47464b59b7e37fcee25e55475708aabd}{Model\+P\+C\+::fail} Slot to stop execution of cryption. \end{DoxyCompactList}\item 
 void \hyperlink{class_model_p_c_a9079a101d83672aa48fd2dbac797de40}{alert} (Q\+String message, bool is\+Warning=false)
@@ -55,7 +55,7 @@ void \hyperlink{class_model_p_c_a9079a101d83672aa48fd2dbac797de40}{alert} (Q\+St
 void \hyperlink{class_model_p_c_af0217a7ca5671e26090dc50a5dccdaf5}{alert\+View} (Q\+String message\+Code, bool is\+Warning)
 \begin{DoxyCompactList}\small\item\em alert\+View Signal to be called to create Message\+Box. \end{DoxyCompactList}\item 
 void \hyperlink{class_model_p_c_a0855107fb0ccc247cd9e893fae9bb08a}{save\+Data} (Q\+Byte\+Array data)
-\begin{DoxyCompactList}\small\item\em save\+Data Signal to be called to save data from \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{Model\+P\+C\+::decrypt}. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em save\+Data Signal to be called to save data from \hyperlink{class_model_p_c_a69ea58f4455f8536c4be1d3f44424a60}{Model\+P\+C\+::decrypt}. \end{DoxyCompactList}\item 
 void \hyperlink{class_model_p_c_a41f5e2e8022679046e4d3fa1109025fa}{save\+Image} (Q\+Image $\ast$image)
 \begin{DoxyCompactList}\small\item\em save\+Image Signal to be called to save image from \hyperlink{class_model_p_c_a6f191f62d4635d0d3555fcc0be298794}{Model\+P\+C\+::encrypt}. \end{DoxyCompactList}\item 
 void \hyperlink{class_model_p_c_afdcd80f0ed5062e145a71f09b0897547}{set\+Progress} (int val)
@@ -66,13 +66,13 @@ void \hyperlink{class_model_p_c_afdcd80f0ed5062e145a71f09b0897547}{set\+Progress
 \hyperlink{class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c}{Model\+PC} ()
 \begin{DoxyCompactList}\small\item\em \hyperlink{class_model_p_c_ae12ebe65ec973c02a0de4850a7c1e31c}{Model\+P\+C\+::\+Model\+PC} Constructor Unit tests are run here. \end{DoxyCompactList}\item 
 Q\+Byte\+Array \hyperlink{class_model_p_c_a6da88f166785a49f73b22c169f956fd0}{unzip} (Q\+Byte\+Array data, Q\+Byte\+Array key)
-\begin{DoxyCompactList}\small\item\em \hyperlink{class_model_p_c_a6da88f166785a49f73b22c169f956fd0}{Model\+P\+C\+::unzip} Unzip data from \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{Model\+P\+C\+::decrypt}. Just mirrored \hyperlink{class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a}{Encrypt\+Dialog\+::zip}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_model_p_c_a6da88f166785a49f73b22c169f956fd0}{Model\+P\+C\+::unzip} Unzip data from \hyperlink{class_model_p_c_a69ea58f4455f8536c4be1d3f44424a60}{Model\+P\+C\+::decrypt}. Just mirrored \hyperlink{class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a}{Encrypt\+Dialog\+::zip}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static Q\+Image $\ast$ \hyperlink{class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd}{Encrypt} (Q\+Byte\+Array data, Q\+Image $\ast$image, int \+\_\+mode, Q\+String key=\char`\"{}\char`\"{}, int \+\_\+bits\+Used=8, Q\+String $\ast$\+\_\+error=nullptr)
+static Q\+Image $\ast$ \hyperlink{class_model_p_c_aad427b77cf44b5dadc5523ea03272c85}{Encrypt} (Q\+Byte\+Array data, Q\+Image $\ast$image, \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceb}{Crypt\+Mode} \+\_\+mode, Q\+String key=\char`\"{}\char`\"{}, int \+\_\+bits\+Used=8, Q\+String $\ast$\+\_\+error=nullptr)
 \item 
-static Q\+Byte\+Array \hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{Decrypt} (Q\+Image $\ast$image, Q\+String key, int \+\_\+mode=0, Q\+String $\ast$\+\_\+error=nullptr)
+static Q\+Byte\+Array \hyperlink{class_model_p_c_afbca3c9c9b7d92f3a5cc81510ef06cc3}{Decrypt} (Q\+Image $\ast$image, Q\+String key, \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceb}{Crypt\+Mode} \+\_\+mode=\hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba56028870bb6c96c44e7ba33b82d39598}{Unspecified}, Q\+String $\ast$\+\_\+error=nullptr)
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -112,7 +112,7 @@ Q\+Byte\+Array \hyperlink{class_model_p_c_afebbbfa4b07deba4f68fc6dfb50f353f}{zip
 \subsection*{Static Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-static Q\+Image $\ast$ \hyperlink{class_model_p_c_ac17e68e6aab134621b0d151d74acdc82}{Inject} (Q\+Byte\+Array encr\+\_\+data, Q\+Image $\ast$image, int \+\_\+mode, int \+\_\+bits\+Used=8, Q\+String $\ast$\+\_\+error=nullptr)
+static Q\+Image $\ast$ \hyperlink{class_model_p_c_a11c3709b87ca83bce474d377f35660ac}{Inject} (Q\+Byte\+Array encr\+\_\+data, Q\+Image $\ast$image, \hyperlink{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceb}{Crypt\+Mode} \+\_\+mode, int \+\_\+bits\+Used=8, Q\+String $\ast$\+\_\+error=nullptr)
 \end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
@@ -143,8 +143,8 @@ Definition at line \hyperlink{modelpc_8h_source_l00033}{33} of file \hyperlink{m
 \begin{Desc}
 \item[Enumerator]\par
 \begin{description}
-\index{Not\+Defined@{Not\+Defined}!Model\+PC@{Model\+PC}}\index{Model\+PC@{Model\+PC}!Not\+Defined@{Not\+Defined}}\item[{\em 
-Not\+Defined\hypertarget{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba287198790ac9799acd03c99d63a6faea}{}\label{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba287198790ac9799acd03c99d63a6faea}
+\index{Unspecified@{Unspecified}!Model\+PC@{Model\+PC}}\index{Model\+PC@{Model\+PC}!Unspecified@{Unspecified}}\item[{\em 
+Unspecified\hypertarget{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba56028870bb6c96c44e7ba33b82d39598}{}\label{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba56028870bb6c96c44e7ba33b82d39598}
 }]\index{v1\+\_\+3@{v1\+\_\+3}!Model\+PC@{Model\+PC}}\index{Model\+PC@{Model\+PC}!v1\+\_\+3@{v1\+\_\+3}}\item[{\em 
 v1\+\_\+3\hypertarget{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba7612e38de7178170655a56ddcf96e12c}{}\label{class_model_p_c_a296dd7afe3e1c49b3da25fd644fe4ceba7612e38de7178170655a56ddcf96e12c}
 }]\index{v1\+\_\+4@{v1\+\_\+4}!Model\+PC@{Model\+PC}}\index{Model\+PC@{Model\+PC}!v1\+\_\+4@{v1\+\_\+4}}\item[{\em 
@@ -320,14 +320,14 @@ Here is the caller graph for this function\+:
 
 \index{Model\+PC@{Model\+PC}!Decrypt@{Decrypt}}
 \index{Decrypt@{Decrypt}!Model\+PC@{Model\+PC}}
-\subsubsection[{\texorpdfstring{Decrypt(\+Q\+Image $\ast$image, Q\+String key, int \+\_\+mode=0, Q\+String $\ast$\+\_\+error=nullptr)}{Decrypt(QImage *image, QString key, int _mode=0, QString *_error=nullptr)}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Byte\+Array Model\+P\+C\+::\+Decrypt (
+\subsubsection[{\texorpdfstring{Decrypt(\+Q\+Image $\ast$image, Q\+String key, Crypt\+Mode \+\_\+mode=\+Unspecified, Q\+String $\ast$\+\_\+error=nullptr)}{Decrypt(QImage *image, QString key, CryptMode _mode=Unspecified, QString *_error=nullptr)}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Byte\+Array Model\+P\+C\+::\+Decrypt (
 \begin{DoxyParamCaption}
 \item[{Q\+Image $\ast$}]{image, }
 \item[{Q\+String}]{key, }
-\item[{int}]{\+\_\+mode = {\ttfamily 0}, }
+\item[{{\bf Crypt\+Mode}}]{\+\_\+mode = {\ttfamily {\bf Unspecified}}, }
 \item[{Q\+String $\ast$}]{\+\_\+error = {\ttfamily nullptr}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{}\label{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_model_p_c_afbca3c9c9b7d92f3a5cc81510ef06cc3}{}\label{class_model_p_c_afbca3c9c9b7d92f3a5cc81510ef06cc3}
 
 
 Definition at line \hyperlink{modelpc_8cpp_source_l00034}{34} of file \hyperlink{modelpc_8cpp_source}{modelpc.\+cpp}.
@@ -339,7 +339,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=318pt]{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c_cgraph}
+\includegraphics[width=318pt]{class_model_p_c_afbca3c9c9b7d92f3a5cc81510ef06cc3_cgraph}
 \end{center}
 \end{figure}
 
@@ -350,13 +350,13 @@ Here is the call graph for this function\+:
 \begin{DoxyParamCaption}
 \item[{Q\+Image $\ast$}]{image, }
 \item[{Q\+String}]{key, }
-\item[{int}]{\+\_\+mode = {\ttfamily 0}, }
+\item[{int}]{\+\_\+mode = {\ttfamily {\bf Unspecified}}, }
 \item[{Q\+String $\ast$}]{\+\_\+error = {\ttfamily nullptr}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{class_model_p_c_a5995215a34a1e1f504035715a8013809}{}\label{class_model_p_c_a5995215a34a1e1f504035715a8013809}
+)\hspace{0.3cm}{\ttfamily [slot]}}\hypertarget{class_model_p_c_a69ea58f4455f8536c4be1d3f44424a60}{}\label{class_model_p_c_a69ea58f4455f8536c4be1d3f44424a60}
 
 
-\hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{Model\+P\+C\+::decrypt} Slot to be called when decrypt mode in \hyperlink{class_view_p_c}{View\+PC} is selected and started. 
+\hyperlink{class_model_p_c_a69ea58f4455f8536c4be1d3f44424a60}{Model\+P\+C\+::decrypt} Slot to be called when decrypt mode in \hyperlink{class_view_p_c}{View\+PC} is selected and started. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -386,7 +386,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=350pt]{class_model_p_c_a5995215a34a1e1f504035715a8013809_cgraph}
+\includegraphics[width=350pt]{class_model_p_c_a69ea58f4455f8536c4be1d3f44424a60_cgraph}
 \end{center}
 \end{figure}
 
@@ -493,16 +493,16 @@ Here is the caller graph for this function\+:
 
 \index{Model\+PC@{Model\+PC}!Encrypt@{Encrypt}}
 \index{Encrypt@{Encrypt}!Model\+PC@{Model\+PC}}
-\subsubsection[{\texorpdfstring{Encrypt(\+Q\+Byte\+Array data, Q\+Image $\ast$image, int \+\_\+mode, Q\+String key="""", int \+\_\+bits\+Used=8, Q\+String $\ast$\+\_\+error=nullptr)}{Encrypt(QByteArray data, QImage *image, int _mode, QString key="", int _bitsUsed=8, QString *_error=nullptr)}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Image $\ast$ Model\+P\+C\+::\+Encrypt (
+\subsubsection[{\texorpdfstring{Encrypt(\+Q\+Byte\+Array data, Q\+Image $\ast$image, Crypt\+Mode \+\_\+mode, Q\+String key="""", int \+\_\+bits\+Used=8, Q\+String $\ast$\+\_\+error=nullptr)}{Encrypt(QByteArray data, QImage *image, CryptMode _mode, QString key="", int _bitsUsed=8, QString *_error=nullptr)}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Image $\ast$ Model\+P\+C\+::\+Encrypt (
 \begin{DoxyParamCaption}
 \item[{Q\+Byte\+Array}]{data, }
 \item[{Q\+Image $\ast$}]{image, }
-\item[{int}]{\+\_\+mode, }
+\item[{{\bf Crypt\+Mode}}]{\+\_\+mode, }
 \item[{Q\+String}]{key = {\ttfamily \char`\"{}\char`\"{}}, }
 \item[{int}]{\+\_\+bits\+Used = {\ttfamily 8}, }
 \item[{Q\+String $\ast$}]{\+\_\+error = {\ttfamily nullptr}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd}{}\label{class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{class_model_p_c_aad427b77cf44b5dadc5523ea03272c85}{}\label{class_model_p_c_aad427b77cf44b5dadc5523ea03272c85}
 
 
 Definition at line \hyperlink{modelpc_8cpp_source_l00024}{24} of file \hyperlink{modelpc_8cpp_source}{modelpc.\+cpp}.
@@ -514,7 +514,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=317pt]{class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd_cgraph}
+\includegraphics[width=317pt]{class_model_p_c_aad427b77cf44b5dadc5523ea03272c85_cgraph}
 \end{center}
 \end{figure}
 
@@ -668,15 +668,15 @@ Here is the caller graph for this function\+:
 
 \index{Model\+PC@{Model\+PC}!Inject@{Inject}}
 \index{Inject@{Inject}!Model\+PC@{Model\+PC}}
-\subsubsection[{\texorpdfstring{Inject(\+Q\+Byte\+Array encr\+\_\+data, Q\+Image $\ast$image, int \+\_\+mode, int \+\_\+bits\+Used=8, Q\+String $\ast$\+\_\+error=nullptr)}{Inject(QByteArray encr_data, QImage *image, int _mode, int _bitsUsed=8, QString *_error=nullptr)}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Image $\ast$ Model\+P\+C\+::\+Inject (
+\subsubsection[{\texorpdfstring{Inject(\+Q\+Byte\+Array encr\+\_\+data, Q\+Image $\ast$image, Crypt\+Mode \+\_\+mode, int \+\_\+bits\+Used=8, Q\+String $\ast$\+\_\+error=nullptr)}{Inject(QByteArray encr_data, QImage *image, CryptMode _mode, int _bitsUsed=8, QString *_error=nullptr)}}]{\setlength{\rightskip}{0pt plus 5cm}Q\+Image $\ast$ Model\+P\+C\+::\+Inject (
 \begin{DoxyParamCaption}
 \item[{Q\+Byte\+Array}]{encr\+\_\+data, }
 \item[{Q\+Image $\ast$}]{image, }
-\item[{int}]{\+\_\+mode, }
+\item[{{\bf Crypt\+Mode}}]{\+\_\+mode, }
 \item[{int}]{\+\_\+bits\+Used = {\ttfamily 8}, }
 \item[{Q\+String $\ast$}]{\+\_\+error = {\ttfamily nullptr}}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{class_model_p_c_ac17e68e6aab134621b0d151d74acdc82}{}\label{class_model_p_c_ac17e68e6aab134621b0d151d74acdc82}
+)\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}\hypertarget{class_model_p_c_a11c3709b87ca83bce474d377f35660ac}{}\label{class_model_p_c_a11c3709b87ca83bce474d377f35660ac}
 
 
 Definition at line \hyperlink{modelpc_8cpp_source_l00029}{29} of file \hyperlink{modelpc_8cpp_source}{modelpc.\+cpp}.
@@ -688,7 +688,7 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=307pt]{class_model_p_c_ac17e68e6aab134621b0d151d74acdc82_cgraph}
+\includegraphics[width=307pt]{class_model_p_c_a11c3709b87ca83bce474d377f35660ac_cgraph}
 \end{center}
 \end{figure}
 
@@ -725,7 +725,7 @@ Here is the call graph for this function\+:
 Returns image with embedded data. 
 \end{DoxyReturn}
 \begin{DoxySeeAlso}{See also}
-\hyperlink{class_view_p_c_a456d75b7c5d3a089302a576e7359f1f4}{View\+P\+C\+::on\+\_\+start\+Button\+\_\+clicked}, \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{Model\+P\+C\+::decrypt}, \hyperlink{class_model_p_c_a1d0091062a0c836b283ec2f67411623b}{Model\+P\+C\+::circuit}, Model\+P\+C\+::start 
+\hyperlink{class_view_p_c_a456d75b7c5d3a089302a576e7359f1f4}{View\+P\+C\+::on\+\_\+start\+Button\+\_\+clicked}, \hyperlink{class_model_p_c_a69ea58f4455f8536c4be1d3f44424a60}{Model\+P\+C\+::decrypt}, \hyperlink{class_model_p_c_a1d0091062a0c836b283ec2f67411623b}{Model\+P\+C\+::circuit}, Model\+P\+C\+::start 
 \end{DoxySeeAlso}
 
 
@@ -908,7 +908,7 @@ Here is the caller graph for this function\+:
 )\hspace{0.3cm}{\ttfamily [signal]}}\hypertarget{class_model_p_c_a0855107fb0ccc247cd9e893fae9bb08a}{}\label{class_model_p_c_a0855107fb0ccc247cd9e893fae9bb08a}
 
 
-save\+Data Signal to be called to save data from \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{Model\+P\+C\+::decrypt}. 
+save\+Data Signal to be called to save data from \hyperlink{class_model_p_c_a69ea58f4455f8536c4be1d3f44424a60}{Model\+P\+C\+::decrypt}. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -996,7 +996,7 @@ Here is the caller graph for this function\+:
 )}\hypertarget{class_model_p_c_a6da88f166785a49f73b22c169f956fd0}{}\label{class_model_p_c_a6da88f166785a49f73b22c169f956fd0}
 
 
-\hyperlink{class_model_p_c_a6da88f166785a49f73b22c169f956fd0}{Model\+P\+C\+::unzip} Unzip data from \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{Model\+P\+C\+::decrypt}. Just mirrored \hyperlink{class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a}{Encrypt\+Dialog\+::zip}. 
+\hyperlink{class_model_p_c_a6da88f166785a49f73b22c169f956fd0}{Model\+P\+C\+::unzip} Unzip data from \hyperlink{class_model_p_c_a69ea58f4455f8536c4be1d3f44424a60}{Model\+P\+C\+::decrypt}. Just mirrored \hyperlink{class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a}{Encrypt\+Dialog\+::zip}. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -1009,7 +1009,7 @@ Here is the caller graph for this function\+:
 Returns data 
 \end{DoxyReturn}
 \begin{DoxySeeAlso}{See also}
-\hyperlink{class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a}{Encrypt\+Dialog\+::zip}, \hyperlink{class_model_p_c_a5995215a34a1e1f504035715a8013809}{Model\+P\+C\+::decrypt}, \hyperlink{class_model_p_c_afebbbfa4b07deba4f68fc6dfb50f353f}{Model\+P\+C\+::zip} 
+\hyperlink{class_encrypt_dialog_a2bff820a3df4ddc36ecb07ed74b7138a}{Encrypt\+Dialog\+::zip}, \hyperlink{class_model_p_c_a69ea58f4455f8536c4be1d3f44424a60}{Model\+P\+C\+::decrypt}, \hyperlink{class_model_p_c_afebbbfa4b07deba4f68fc6dfb50f353f}{Model\+P\+C\+::zip} 
 \end{DoxySeeAlso}
 
 

@@ -9,7 +9,7 @@
 ModelPC::ModelPC()
 {
     // Version control
-    versionString = "1.4.1";
+    versionString = "1.4.2";
 
     auto ver = versionString.split(".");
     version = ver[0].toInt() * qPow(2, 16) + ver[1].toInt() * qPow(2, 8) + ver[2].toInt();
@@ -21,17 +21,17 @@ ModelPC::ModelPC()
     qsrand(randSeed());
 }
 
-QImage *ModelPC::Encrypt(QByteArray data, QImage *image, int _mode, QString key, int _bitsUsed, QString *_error)
+QImage *ModelPC::Encrypt(QByteArray data, QImage *image, CryptMode _mode, QString key, int _bitsUsed, QString *_error)
 {
     return ModelPC().encrypt(data, image, _mode, key, _bitsUsed, _error);
 }
 
-QImage *ModelPC::Inject(QByteArray encr_data, QImage *image, int _mode, int _bitsUsed, QString *_error)
+QImage *ModelPC::Inject(QByteArray encr_data, QImage *image, CryptMode _mode, int _bitsUsed, QString *_error)
 {
     return ModelPC().inject(encr_data, image, _mode, _bitsUsed, _error);
 }
 
-QByteArray ModelPC::Decrypt(QImage *image, QString key, int _mode, QString *_error)
+QByteArray ModelPC::Decrypt(QImage *image, QString key, CryptMode _mode, QString *_error)
 {
     return ModelPC().decrypt(image, key, _mode, _error);
 }
@@ -86,7 +86,7 @@ QImage * ModelPC::encrypt(QByteArray data, QImage * image, int _mode, QString ke
         fail("bigkey");
         return nullptr;
     }
-    if(mode == CryptMode::NotDefined) {
+    if(mode == CryptMode::Unspecified) {
         fail("undefined_mode");
         return nullptr;
     }
@@ -168,7 +168,7 @@ QImage * ModelPC::inject(QByteArray encr_data, QImage * image, int _mode, int _b
         fail("bitsWrong");
         return nullptr;
     }
-    if(mode == CryptMode::NotDefined) {
+    if(mode == CryptMode::Unspecified) {
         fail("undefined_mode");
         return nullptr;
     }
@@ -242,7 +242,7 @@ QByteArray ModelPC::decrypt(QImage * image, QString key, int _mode, QString *_er
     case jphs_mode:
         // TODO add jphs support
     break;
-    case NotDefined:
+    case Unspecified:
         isTry = true;
 
         // v1_3

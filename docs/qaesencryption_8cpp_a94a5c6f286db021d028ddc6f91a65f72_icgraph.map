@@ -6,5 +6,5 @@
 <area shape="rect" id="node6" href="$class_model_p_c.html#a6da88f166785a49f73b22c169f956fd0" title="ModelPC::unzip Unzip data from ModelPC::decrypt. Just mirrored EncryptDialog::zip. " alt="" coords="688,56,803,83"/>
 <area shape="rect" id="node7" href="$class_model_p_c.html#a7a1f7d491e1bde16936190b9e90896b0" title="ModelPC::decryptv1_4 Decrypts data from image in v1.4+. " alt="" coords="851,31,1005,57"/>
 <area shape="rect" id="node9" href="$class_model_p_c.html#a4fe70ebbedfaf31d45a35f82d0f06caa" title="ModelPC::decryptv1_3 Decrytps data from image in v1.3. " alt="" coords="851,81,1005,108"/>
-<area shape="rect" id="node8" href="$class_model_p_c.html#a5995215a34a1e1f504035715a8013809" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="1053,56,1180,83"/>
+<area shape="rect" id="node8" href="$class_model_p_c.html#a69ea58f4455f8536c4be1d3f44424a60" title="ModelPC::decrypt Slot to be called when decrypt mode in ViewPC is selected and started. " alt="" coords="1053,56,1180,83"/>
 </map>

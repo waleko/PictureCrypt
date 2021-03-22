@@ -82,9 +82,9 @@ private slots:
         // Error outputs
         QString error1, error2;
         // Embedding
-        QImage * retImage = ModelPC::Encrypt(data, &image, mode, key, bitsUsed, &error1);
+        QImage * retImage = ModelPC::Encrypt(data, &image, ModelPC::CryptMode(mode), key, bitsUsed, &error1);
         // De-embedding
-        QByteArray output = ModelPC::Decrypt(retImage, key, mode, &error2);
+        QByteArray output = ModelPC::Decrypt(retImage, key, ModelPC::CryptMode(mode), &error2);
 
         // Success of error outputs
         bool er1 = error1 == expected;
@@ -131,9 +131,9 @@ private slots:
         // Error outputs
         QString error1, error2;
         // Embedding
-        QImage * retImage = ModelPC::Encrypt(data, &image, mode, key, bitsUsed, &error1);
+        QImage * retImage = ModelPC::Encrypt(data, &image, ModelPC::CryptMode(mode), key, bitsUsed, &error1);
         // De-embedding
-        QByteArray output = ModelPC::Decrypt(retImage, key, 0, &error2);
+        QByteArray output = ModelPC::Decrypt(retImage, key, ModelPC::CryptMode::Unspecified, &error2);
 
         // Success of error outputs
         bool er1 = error1 == expected;
@@ -148,7 +148,7 @@ private slots:
     void test_all_modes_fail()
     {
         QString error;
-        QByteArray output = ModelPC::Decrypt(new QImage("://test_files/bigpicture.jpg"), "wow, such code", 0, &error);
+        QByteArray output = ModelPC::Decrypt(new QImage("://test_files/bigpicture.jpg"), "wow, such code", ModelPC::CryptMode::Unspecified, &error);
         QCOMPARE(error, "all_modes_fail");
     }
     void test_veriffail_data()
@@ -185,9 +185,9 @@ private slots:
         // Error outputs
         QString error1, error2;
         // Embedding
-        QImage * retImage = ModelPC::Encrypt(data, &image, mode, key, bitsUsed, &error1);
+        QImage * retImage = ModelPC::Encrypt(data, &image, ModelPC::CryptMode(mode), key, bitsUsed, &error1);
         // De-embedding
-        QByteArray output = ModelPC::Decrypt(retImage, key + ", btw, I love cookies with tea. :D", mode, &error2);
+        QByteArray output = ModelPC::Decrypt(retImage, key + ", btw, I love cookies with tea. :D", ModelPC::CryptMode(mode), &error2);
 
         QCOMPARE(error1, "ok");
         QCOMPARE(error2, "veriffail");

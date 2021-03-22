@@ -18,8 +18,8 @@ You can use \hyperlink{class_model_p_c}{Model\+PC} class separately from View an
 Then you can just {\ttfamily \#include \char`\"{}modelpc.\+h\char`\"{}} and use A\+PI.\hypertarget{index_use_api}{}\subsection{A\+PI}\label{index_use_api}
 Here is are the most important methods\+: 
 \begin{DoxyItemize}
-\item \hyperlink{class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd}{Model\+P\+C\+::\+Encrypt} 
-\item \hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{Model\+P\+C\+::\+Decrypt} 
+\item \hyperlink{class_model_p_c_aad427b77cf44b5dadc5523ea03272c85}{Model\+P\+C\+::\+Encrypt} 
+\item \hyperlink{class_model_p_c_afbca3c9c9b7d92f3a5cc81510ef06cc3}{Model\+P\+C\+::\+Decrypt} 
 \end{DoxyItemize}\hypertarget{index_Showcase}{}\subsubsection{Showcase}\label{index_Showcase}
 
 \begin{DoxyCode}
@@ -40,14 +40,14 @@ QString key = \textcolor{stringliteral}{"some\_password"};
 
 \textcolor{comment}{// Encrypting}
 QString error1, error2;
-QImage *normal\_resultImage = \hyperlink{class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd}{ModelPC::Encrypt}(
+QImage *normal\_resultImage = \hyperlink{class_model_p_c_aad427b77cf44b5dadc5523ea03272c85}{ModelPC::Encrypt}(
     data,
     image,
     1, \textcolor{comment}{// normal mode}
     key,
     bitsUsed,
     &error1);
-QImage *advanced\_resultImage = \hyperlink{class_model_p_c_a271cf9285e32df58ffbfc918e6482bbd}{ModelPC::Encrypt}(
+QImage *advanced\_resultImage = \hyperlink{class_model_p_c_aad427b77cf44b5dadc5523ea03272c85}{ModelPC::Encrypt}(
     data,
     image,
     2, \textcolor{comment}{// advanced mode}
@@ -57,12 +57,12 @@ QImage *advanced\_resultImage = \hyperlink{class_model_p_c_a271cf9285e32df58ffbf
 
 \textcolor{comment}{// Decrypting with given mode}
 QString error3, error4, error5, error6;
-QByteArray output\_normal = \hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{ModelPC::Decrypt}(
+QByteArray output\_normal = \hyperlink{class_model_p_c_afbca3c9c9b7d92f3a5cc81510ef06cc3}{ModelPC::Decrypt}(
     normal\_resultImage,
     key,
     1, \textcolor{comment}{// normal}
     &error3);
-QByteArray output\_advanced = \hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{ModelPC::Decrypt}(
+QByteArray output\_advanced = \hyperlink{class_model_p_c_afbca3c9c9b7d92f3a5cc81510ef06cc3}{ModelPC::Decrypt}(
     advanced\_resultImage,
     key,
     2, \textcolor{comment}{// advanced}
@@ -70,12 +70,12 @@ QByteArray output\_advanced = \hyperlink{class_model_p_c_a902abaea4f07995b48c0f2
 
 \textcolor{comment}{// Decrypting without given mode}
 \textcolor{comment}{// PictureCrypt can detect the mode of the image and adapt.}
-QByteArray output\_normal\_undefined = \hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{ModelPC::Decrypt}(
+QByteArray output\_normal\_undefined = \hyperlink{class_model_p_c_afbca3c9c9b7d92f3a5cc81510ef06cc3}{ModelPC::Decrypt}(
     normal\_resultImage,
     key,
     0, \textcolor{comment}{// auto-detect mode}
     &error5);
-QByteArray output\_advanced\_undefined = \hyperlink{class_model_p_c_a902abaea4f07995b48c0f2fea6eceb7c}{ModelPC::Decrypt}(
+QByteArray output\_advanced\_undefined = \hyperlink{class_model_p_c_afbca3c9c9b7d92f3a5cc81510ef06cc3}{ModelPC::Decrypt}(
     advanced\_resultImage,
     key,
     0, \textcolor{comment}{// auto-detect mode}

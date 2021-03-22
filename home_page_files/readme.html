@@ -49,115 +49,37 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <a href="https://alexkovrigin.me/PictureCrypt"> <img alt="PictureCrypt" src="./src/app/icons/unlocked.png"> </a>
 </p>
 <p align="center">
-An image-steganography project
+An image steganography project
 </p>
 <p align="center">
-<a href="https://travis-ci.com/waleko/PictureCrypt"><img alt="Build Status" src="https://travis-ci.com/waleko/PictureCrypt.svg?branch=master"></a> <a href="https://ci.appveyor.com/project/waleko/picturecrypt/branch/master"><img src="https://ci.appveyor.com/api/projects/status/qc0syxtjax4wnud7/branch/master?svg=true"/></a> <a href="https://ci.appveyor.com/project/waleko/picturecrypt/branch/master/tests"><img alt="undefined" src="https://img.shields.io/appveyor/tests/waleko/PictureCrypt/master.svg?style=flat"></a> <a class="badge-align" href="https://www.codacy.com/app/waleko/PictureCrypt?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=waleko/PictureCrypt&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/c9106eb67e164d7d87de6d92448a3355"/></a> <a href="https://github.com/waleko/PictureCrypt/releases/latest"><img alt="Release" src="https://img.shields.io/github/release/waleko/PictureCrypt.svg?style=flat"></a> <a href="https://waleko.github.io/PictureCrypt/docs"><img alt="Documentation" src="https://img.shields.io/badge/docs-available-brightgreen.svg"></a> <a href="https://github.com/waleko/PictureCrypt/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/waleko/PictureCrypt.svg?style=flat"></a> <a href="https://gitter.im/PictureCrypt/community"><img src="https://badges.gitter.im/waleko/PictureCrypt.png"/></a>
+<a href="https://travis-ci.com/waleko/PictureCrypt"><img alt="Build Status" src="https://travis-ci.com/waleko/PictureCrypt.svg?branch=master"></a> <a href="https://ci.appveyor.com/project/waleko/picturecrypt/branch/master"><img src="https://ci.appveyor.com/api/projects/status/qc0syxtjax4wnud7/branch/master?svg=true"/></a> <a href="https://ci.appveyor.com/project/waleko/picturecrypt/branch/master/tests"><img alt="undefined" src="https://img.shields.io/appveyor/tests/waleko/PictureCrypt/master.svg?style=flat"></a> <a class="badge-align" href="https://www.codacy.com/app/waleko/PictureCrypt?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=waleko/PictureCrypt&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/c9106eb67e164d7d87de6d92448a3355"/></a> <img alt="Chocolatey Version" src="https://img.shields.io/chocolatey/v/picturecrypt"> <a href="https://waleko.github.io/PictureCrypt/docs"><img alt="Documentation" src="https://img.shields.io/badge/docs-available-brightgreen.svg"></a> <a href="https://github.com/waleko/PictureCrypt/blob/master/LICENSE"><img alt="License" src="https://img.shields.io/github/license/waleko/PictureCrypt.svg?style=flat"></a> <a href="https://gitter.im/PictureCrypt/community"><img src="https://badges.gitter.im/waleko/PictureCrypt.png"/></a>
 </p>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Encryption</span>
+<span class="ot">QByteArray</span> message(<span class="st">&quot;secret&quot;</span>);
+<span class="ot">QImage</span> *image = <span class="kw">new</span> <span class="ot">QImage</span>(<span class="st">&quot;./images/sunset.jpg&quot;</span>);
+<span class="ot">QImage</span> *image_to_send = ModelPC::Encrypt(message, image, <span class="st">&quot;password1&quot;</span>);
+
+<span class="co">// Decryption</span>
+<span class="ot">QByteArray</span> incoming_message = ModelPC::Decrypt(image_to_send, <span class="st">&quot;password1&quot;</span>); <span class="co">// &quot;secret&quot;</span></code></pre></div>
 <p align="center">
 <img src="https://waleko.github.io/data/picturecrypt-screenshot.jpg"/>
 </p>
 <h2 id="about">About</h2>
-<p>A simple cross-platform steganography project which hides data in images. This project is built on <a href="https://qt.io">Qt Platform</a> using MVC pattern and features GUI and console interface. Project repository is available at <a href="https://github.com/waleko/PictureCrypt">GitHub</a></p>
+<p>A simple educational cross-platform steganography project that hides data in images. This project is built on <a href="https://qt.io">Qt Platform</a> using MVC pattern and features GUI and console interface. Project repository is available at <a href="https://github.com/waleko/PictureCrypt">GitHub</a></p>
 <h2 id="download">Download</h2>
-<p>Get stable binary files at <a href="https://github.com/waleko/PictureCrypt/releases/latest">latest release page</a> Or download latest <strong>POTENTIALY UNSTABLE</strong> files:</p>
+<p>Get stable binary files at <a href="https://github.com/waleko/PictureCrypt/releases/latest">latest release page</a> Or download latest <strong>potentially unstable</strong> files:</p>
 <h3 id="links">Links</h3>
-<h4 id="frequently-used">Frequently used:</h4>
 <h5 id="windows">Windows:</h5>
 <ul>
 <li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/PictureCrypt-setup.exe"><strong>Exe with release</strong></a> (~ 22 MB)</li>
 <li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/deploy/console.zip"><strong>Zip with console</strong></a> (~ 21 MB)</li>
+<li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/PictureCrypt-console-setup.exe">Exe with console</a> (~ 19 MB)</li>
 </ul>
 <h5 id="linux">Linux:</h5>
 <ul>
-<li><a href="https://github.com/waleko/PictureCrypt/raw/gh-pages/src/app/build/Release/PictureCrypt">Binary of release</a> (<strong>doesn't work without QT</strong>) (~ 10 MB)</li>
+<li><a href="https://github.com/waleko/PictureCrypt/raw/gh-pages/src/app/build/Release/PictureCrypt">Binary of release</a> (<strong>Qt not included</strong>) (~ 10 MB)</li>
 </ul>
-<h4 id="rarely-used">Rarely used</h4>
-<h5 id="windows-1">Windows</h5>
-<ul>
-<li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/deploy/PictureCrypt-debug.zip">Zip Debug</a> (~ 190 MB)</li>
-<li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/deploy/PictureCrypt-release.zip">Zip Release</a> (~ 21 MB)</li>
-<li><a href="https://ci.appveyor.com/api/projects/waleko/picturecrypt/artifacts/src/PictureCrypt-console-setup.exe">Exe with console</a> (~ 19 MB)</li>
-</ul>
-<h2 id="external-use">External use</h2>
-<p>You can use ModelPC class separately from everything else, but <strong>you will need QAESEncryption class as well</strong>. So you can just get src/app/model folder</p>
-<h3 id="use-api">Use API</h3>
-<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="co">// Includes</span>
-<span class="ot">#include &quot;modelpc.h&quot;</span>
-<span class="ot">#include &lt;QImage&gt;</span>
-<span class="ot">#include &lt;QByteArray&gt;</span>
-<span class="ot">#include &lt;QString&gt;</span>
-<span class="ot">#include &lt;QDebug&gt; </span><span class="co">// just for showcase</span>
-
-...
-
-<span class="co">// Basic setup</span>
-<span class="ot">QByteArray</span> data(<span class="st">&quot;some_file.txt&quot;</span>);
-<span class="ot">QImage</span> *image = <span class="kw">new</span> <span class="ot">QImage</span>(<span class="st">&quot;some_big_enough_image.jpg&quot;</span>);
-<span class="ot">QString</span> key = <span class="st">&quot;some_password&quot;</span>;
-<span class="dt">int</span> bitsUsed = <span class="dv">3</span>; <span class="co">// must be from 1 to 8</span>
-
-<span class="co">// Encrypting</span>
-<span class="ot">QString</span> error1, error2;
-<span class="ot">QImage</span> *normal_resultImage = ModelPC::Encrypt(
-    data,
-    image,
-    <span class="dv">1</span>, <span class="co">// normal mode</span>
-    key,
-    bitsUsed,
-    &amp;error1);
-<span class="ot">QImage</span> *advanced_resultImage = ModelPC::Encrypt(
-    data,
-    image,
-    <span class="dv">2</span>, <span class="co">// advanced mode</span>
-    key,
-    bitsUsed, <span class="co">// not really used here, so put here any number from 1 to 8</span>
-    &amp;error2);
-
-<span class="co">// Decrypting with given mode</span>
-<span class="ot">QString</span> error3, error4, error5, error6;
-<span class="ot">QByteArray</span> output_normal = ModelPC::Decrypt(
-    normal_resultImage,
-    key,
-    <span class="dv">1</span>, <span class="co">// normal</span>
-    &amp;error3);
-<span class="ot">QByteArray</span> output_advanced = ModelPC::Decrypt(
-    advanced_resultImage,
-    key,
-    <span class="dv">2</span>, <span class="co">// advanced</span>
-    &amp;error4);
-
-<span class="co">// Decrypting without given mode</span>
-<span class="co">// PictureCrypt can detect the mode of the image and adapt.</span>
-<span class="ot">QByteArray</span> output_normal_undefined = ModelPC::Decrypt(
-    normal_resultImage,
-    key,
-    <span class="dv">0</span>, <span class="co">// auto-detect mode</span>
-    &amp;error5);
-<span class="ot">QByteArray</span> output_advanced_undefined = ModelPC::Decrypt(
-    advanced_resultImage,
-    key,
-    <span class="dv">0</span>, <span class="co">// auto-detect mode</span>
-    &amp;error6);
-
-<span class="co">// Check (better testing with running tests [See section &#39;Run tests&#39;])</span>
-<span class="dt">bool</span> data_good =
-    data == output_normal &amp;&amp;
-    data == output_advanced &amp;&amp;
-    data == output_normal_undefined &amp;&amp;
-    data == output_advanced_undefined;
-<span class="dt">bool</span> no_errors =
-    error1 == <span class="st">&quot;ok&quot;</span> &amp;&amp;
-    error2 == <span class="st">&quot;ok&quot;</span> &amp;&amp;
-    error3 == <span class="st">&quot;ok&quot;</span> &amp;&amp;
-    error4 == <span class="st">&quot;ok&quot;</span> &amp;&amp;
-    error5 == <span class="st">&quot;ok&quot;</span> &amp;&amp;
-    error6 == <span class="st">&quot;ok&quot;</span>;
-<span class="kw">if</span>(data_good &amp;&amp; no_errors)
-    <span class="fu">qDebug</span>() &lt;&lt; <span class="st">&quot;PASS&quot;</span>;
-<span class="kw">else</span>
-    <span class="fu">qDebug</span>() &lt;&lt; <span class="st">&quot;FAIL&quot;</span>;</code></pre></div>
-<h3 id="console-use">Console use</h3>
+<h2 id="console-use">Console use</h2>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash">$ <span class="kw">picturecrypt</span> -h
 <span class="kw">Usage</span>:
   <span class="kw">picturecrypt</span> encrypt <span class="kw">&lt;</span>image<span class="kw">&gt;</span> <span class="kw">&lt;</span>input file<span class="kw">&gt;</span> <span class="kw">&lt;</span>key<span class="kw">&gt;</span> <span class="kw">&lt;</span>output<span class="kw">&gt;</span> [options]
@@ -174,65 +96,43 @@ $ <span class="kw">picturecrypt</span> --version
 <span class="kw">1.4.1</span>
 $ <span class="kw">picturecrypt</span> encrypt original.jpg data.txt somekey result.png
 $ <span class="kw">picturecrypt</span> decrypt result.png somekey output.txt</code></pre></div>
-<h3 id="tests">Tests</h3>
-<p>PictureCrypt comes with Qt Test project. It can be found at 'src/tests'</p>
-<h4 id="run-tests">Run tests</h4>
-<ul>
-<li>Run them directly from IDE (e.g. Qt Creator) with target tests</li>
-<li>Run with 'make'</li>
-</ul>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="co"># Go to tests directory</span>
-<span class="kw">cd</span> src/tests
-
-<span class="co"># Install required packages</span>
-<span class="kw">bash</span> ../scripts/install.sh
-
-<span class="co"># Build tests</span>
-<span class="kw">bash</span> ../scripts/build.sh
-
-<span class="co"># Run tests</span>
-<span class="ot">QT_QPA_PLATFORM=</span>offscreen <span class="kw">make</span> check
-
-<span class="co"># Clean (optional)</span>
-<span class="kw">bash</span> ../scripts/clean.sh</code></pre></div>
 <h2 id="available-modes-of-encrypting">Available modes of encrypting</h2>
 <ul>
 <li>0 - Auto-detect, used for decryption, so it auto-detects (invalid at encryption as you must select the encryption type).</li>
-<li>1 - v1.3, only available on versions 1.3+, <strong>not really secure</strong>.</li>
-<li><strong>2</strong> - v1.4, advanced (preferred) encryption mode, available on versions v1.4+ (works a lot longer than v1.3, can work for &gt;40s on slow machines).</li>
-<li>3 - JPHS, requires manually installed JPHS and specified directory <strong>(not currently available)</strong>.</li>
+<li>1 - v1.3, only available on versions 1.3+, <strong>not secure</strong>.</li>
+<li><strong>2</strong> - v1.4, advanced (default) encryption mode, available on versions v1.4+</li>
 </ul>
 <h2 id="documentation">Documentation</h2>
 <ul>
 <li><a href="docs">HTML documentation</a></li>
 <li><a href="https://github.com/waleko/PictureCrypt/raw/gh-pages/PictureCrypt-docs.pdf">PDF documentation available</a></li>
 </ul>
-<p>Documentation was generated by <a href="http://doxygen.nl">Doxygen</a></p>
-<h2 id="continuous-integration">Continuous integration</h2>
+<p>Documentation generated by <a href="http://doxygen.nl">Doxygen</a></p>
+<h2 id="cicd">CI/CD</h2>
 <p>Continuous integration is fulfilled via <a href="https://travis-ci.com/waleko/PictureCrypt">Travis CI</a> for Linux and <a href="https://ci.appveyor.com/project/waleko/picturecrypt">AppVeyor</a> for Windows.</p>
-<h2 id="internationalization">Internationalization</h2>
+<h2 id="i18n">i18n</h2>
 <h3 id="languages">Languages</h3>
-<p>This project is available in multiple languages thanks to awesome QT Linguist Platform. Currently we have:</p>
+<p>This project is available in multiple languages thanks to the Qt Linguist Platform.</p>
+<p>Available languages:</p>
 <ul>
 <li>English (default)</li>
 <li>Russian</li>
 <li>German</li>
 </ul>
 <h3 id="help-translating">Help translating</h3>
-<p>If you'd like to translate PictureCrypt to your language here are steps to do so:</p>
+<p>If you would like to translate PictureCrypt to your language here are the steps to do so:</p>
 <ul>
-<li>Install QT and QT Linguist with it</li>
+<li>Install Qt and Qt Linguist with it</li>
 <li>Clone the project.</li>
 <li>Go to PictureCrypt/src/app/</li>
-<li>Add a filename to TRANSLATIONS in src/app/app.pro file. Filename must be 'picturecrypt_{your language}.ts' (e.g. 'picturecrypt_fr.ts')</li>
-<li>Run <code>lupdate src.pro</code>, it will generate that .ts file. If there is an error: &quot;Maybe you forgot to set your environment?&quot; Go to Project (on the left-hand side) -&gt;(expand) Build environment -&gt; Open terminal and run <code>lupdate src.pro</code>.</li>
+<li>Add a filename to <code>TRANSLATIONS</code> in src/app/app.pro file. Filename must be 'picturecrypt_{your language}.ts' (e.g. 'picturecrypt_fr.ts')</li>
+<li>Run <code>lupdate src.pro</code>, it will generate that .ts file. An error may occur: &quot;Maybe you forgot to set your environment?&quot; To solve it go to Project (on the left-hand side) -&gt;(expand) Build environment -&gt; Open terminal and run <code>lupdate src.pro</code>.</li>
 <li>Go to translations/</li>
-<li>Run <code>linguist picturecrypt_{your language}.ts</code>. The Qt Linguist will appear, where you can translate given text from English (there are a couple of html entries, just edit its text part). <strong>If you don't translate the whole thing, your work will be still appreciated!</strong></li>
+<li>Run <code>linguist picturecrypt_{your language}.ts</code>. The Qt Linguist will appear, where you can translate given text from English (there are a couple of html entries, just edit its text part).</li>
 <li>Either go to 'File -&gt; Compile' or run <code>lrelease picturecrypt_{your language}.ts</code>.</li>
 <li>Add your picturecrypt_{your language}.ts to src/app/translations.qrc resource file.</li>
-<li>Create a pull request in GitHub with your work.</li>
+<li>Create a pull request with your work.</li>
 </ul>
-<p>If you have any trouble, <a href="#contact">contact me</a> and I will sincerely try to help you as I really don't think, that anyone will decide to help me translate. 😔</p>
 <h2 id="dependencies">Dependencies</h2>
 <ul>
 <li><a href="https://doc.qt.io/qt-5.11/qtcore-index.html">qtcore</a></li>
@@ -241,14 +141,14 @@ $ <span class="kw">picturecrypt</span> decrypt result.png somekey output.txt</co
 </ul>
 <h2 id="works-of-other-people-used-in-this-project">Works of other people used in this project</h2>
 <ul>
-<li><a href="https://github.com/bricke/Qt-AES">QAESEncryption</a> by <a href="https://github.com/bricke/">bricke</a> (provided under <a href="https://unlicense.org/">UNLICENSE</a>)</li>
-<li>'Circle Icons' by Nick Roach provided under GPL v3.0.</li>
+<li><a href="https://github.com/bricke/Qt-AES">QAESEncryption</a> by <a href="https://github.com/bricke/">bricke</a> (provided under <a href="https://unlicense.org/">unlicense</a>)</li>
+<li>'Circle Icons' by Nick Roach provided under <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL v3.0</a>.</li>
 <li>'MS Shell Dlg 2' font used and 'Montserrat' font used under the SIL Open Font License.</li>
 </ul>
 <h2 id="contact">Contact</h2>
 <p>Questions and suggestions are welcome! Email me a.kovrigin0@gmail.com or telegram me at <a href="https://t.me/waleko">waleko</a></p>
 <h2 id="license">License</h2>
 <p>This software is provided under the MIT License.</p>
-<p>Copyright © 2020 Alexander Kovrigin</p>
+<p>Copyright © 2021 Alexander Kovrigin</p>
 </body>
 </html>
