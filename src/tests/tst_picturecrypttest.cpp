@@ -133,7 +133,7 @@ private slots:
         // Embedding
         QImage * retImage = ModelPC::Encrypt(data, &image, ModelPC::CryptMode(mode), key, bitsUsed, &error1);
         // De-embedding
-        QByteArray output = ModelPC::Decrypt(retImage, key, ModelPC::CryptMode::NotDefined, &error2);
+        QByteArray output = ModelPC::Decrypt(retImage, key, ModelPC::CryptMode::Unspecified, &error2);
 
         // Success of error outputs
         bool er1 = error1 == expected;
@@ -148,7 +148,7 @@ private slots:
     void test_all_modes_fail()
     {
         QString error;
-        QByteArray output = ModelPC::Decrypt(new QImage("://test_files/bigpicture.jpg"), "wow, such code", ModelPC::CryptMode::NotDefined, &error);
+        QByteArray output = ModelPC::Decrypt(new QImage("://test_files/bigpicture.jpg"), "wow, such code", ModelPC::CryptMode::Unspecified, &error);
         QCOMPARE(error, "all_modes_fail");
     }
     void test_veriffail_data()
