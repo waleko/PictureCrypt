@@ -8,7 +8,7 @@
   An image steganography tool
 </p>
 <p align="center">
-  <a href="https://travis-ci.com/waleko/PictureCrypt"><img alt="Build Status" src="https://travis-ci.com/waleko/PictureCrypt.svg?branch=master"></a>
+  <a href="https://travis-ci.com/github/waleko/PictureCrypt"><img alt="Build Status" src="https://travis-ci.com/waleko/PictureCrypt.svg?branch=master"></a>
   <a href="https://ci.appveyor.com/project/waleko/picturecrypt/branch/master"><img src="https://ci.appveyor.com/api/projects/status/qc0syxtjax4wnud7/branch/master?svg=true"/></a>
   <a href="https://ci.appveyor.com/project/waleko/picturecrypt/branch/master/tests"><img alt="undefined" src="https://img.shields.io/appveyor/tests/waleko/PictureCrypt/master.svg?style=flat"></a>
   <!--<a class="badge-align" href="https://www.codacy.com/app/waleko/PictureCrypt?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=waleko/PictureCrypt&amp;utm_campaign=Badge_Grade"><img src="https://api.codacy.com/project/badge/Grade/c9106eb67e164d7d87de6d92448a3355"/></a>-->
