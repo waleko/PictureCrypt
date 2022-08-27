@@ -122,9 +122,9 @@ If you would like to translate PictureCrypt to your language here are the steps 
 
 ## Contact
 Questions and suggestions are welcome!
-Email me a.kovrigin0@gmail.com or telegram me at [waleko](https://t.me/waleko)
+Email me inbox@alexkovrigin.me or telegram me at [waleko](https://t.me/waleko)
 
 ## License
-This software [MIT licensed](./LICENSE).
+This software is [MIT licensed](./LICENSE).
 
 Copyright © 2021 Alexander Kovrigin
